@@ -10,6 +10,8 @@
 #include <fstream>
 #include <algorithm>
 #include "porter2_stemmer-master/porter2_stemmer.h"
+#include "avltree.h"
+#include "word.h"
 
 using namespace std;
 using namespace PoDoFo;
@@ -17,16 +19,16 @@ using namespace Porter2Stemmer;
 
 class ParsedPDF {
     private:
-        vector<string> words;
+        AvlTree<Word> words;
+        AvlTree<string> stopWords;
     public:
         ParsedPDF(const char*);
         void formatString(string&);
         void clearPunctuation(string&);
-        vector<string> readStopWords();
-        void removeStopWords();
-        void stemWords();
-        void getFinalWords();
-        void printContents();
+        void readStopWords();
+        //void stemWords();
+        //void getFinalWords();
+        //void printContents();
 };
 
 #endif // PARSEDPDF_H

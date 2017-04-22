@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
                 cout << filePath << endl;
 
                 ParsedPDF pdf(filePath);
-                pdf.getFinalWords();
+                //pdf.getFinalWords();
                 pdf.printContents();
             }
         }

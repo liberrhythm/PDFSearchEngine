@@ -16,7 +16,9 @@ ParsedPDF::ParsedPDF(const char* pdfName) {
                     for (size_t j = 0; j < a.GetSize(); j++) {
                         if (a[j].IsString()) {
                             string str(a[j].GetString().GetString());
-                            words.push_back(str);
+                            string fileName(pdfName);
+                            Word newWord(str, pdfName);
+                            words.insert(newWord);
                         }
                     }
                 }
@@ -42,7 +44,8 @@ void ParsedPDF::clearPunctuation(string& str) {
     }
 }
 
-vector<string> ParsedPDF::readStopWords() {
+void ParsedPDF::readStopWords() {
+
     ifstream inFile;
     inFile.open("StopWords", ios::in);
 
@@ -51,20 +54,18 @@ vector<string> ParsedPDF::readStopWords() {
         exit(EXIT_FAILURE);
     }
 
-    vector<string> stopWords;
     string wrd;
     inFile >> wrd;
 
     while (!inFile.eof()) {
-        stopWords.push_back(wrd);
+        stopWords.insert(wrd);
         inFile >> wrd;
     }
 
     inFile.close();
-    return stopWords;
-}
 
-void ParsedPDF::removeStopWords() {
+    //don't need this code
+    /*
     vector<string> stopWords = readStopWords();
     for (int i = 0; i < stopWords.size(); i++) {
         for (int j = 0; j < words.size(); j++) {
@@ -74,8 +75,10 @@ void ParsedPDF::removeStopWords() {
             }
         }
     }
+    */
 }
 
+/*
 void ParsedPDF::stemWords() {
     for (string& wrd: words) {
         trim(wrd);
@@ -88,7 +91,7 @@ void ParsedPDF::getFinalWords() {
         formatString(str);
         clearPunctuation(str);
     }
-    removeStopWords();
+    //removeStopWords();
     //stemWords();
 }
 
@@ -97,3 +100,4 @@ void ParsedPDF::printContents() {
         cout << str << endl;
     }
 }
+*/
