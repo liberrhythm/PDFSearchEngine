@@ -1,6 +1,38 @@
 #include "parsedpdf.h"
 
-ParsedPDF::ParsedPDF(const char* pdfName) {
+ParsedPDF::ParsedPDF(const char* files) {
+    DIR* corpus;
+    struct dirent* dir;
+    char filePath[4096];
+
+    while ((corpus = opendir(files)) == nullptr) {
+        fprintf(stderr, "Could not open directory: %s\n", files);
+        exit(-1);
+    }
+
+    getStopWords();
+
+    while ((dir = readdir(corpus)) != nullptr) {
+        if (strncmp(dir->d_name, "..", 2) != 0 && strncmp(dir->d_name, ".", 1) != 0) {
+            string fileName = dir->d_name;
+            string fileType = fileName.substr(fileName.length()-4, fileName.length());
+            if (fileType == ".pdf") {
+                cout << dir->d_name << endl;
+                strncpy(filePath, files, 4095);
+                strncat(filePath, "/", 4095);
+                strncat(filePath, dir->d_name, 4095);
+
+                cout << filePath << endl;
+
+                readPDF(filePath);
+            }
+        }
+    }
+
+    closedir(corpus);
+}
+
+void ParsedPDF::readPDF(const char* pdfName) {
     PoDoFo::PdfMemDocument pdf(pdfName);
 
     for (int i = 0; i < pdf.GetPageCount(); i++) {
@@ -18,7 +50,9 @@ ParsedPDF::ParsedPDF(const char* pdfName) {
                             string str(a[j].GetString().GetString());
                             string fileName(pdfName);
                             Word newWord(str, pdfName);
-                            words.insert(newWord);
+                            if (!stopWords.contains(newWord.getText())) {
+                                words.insert(newWord);
+                            }
                         }
                     }
                 }
@@ -27,45 +61,13 @@ ParsedPDF::ParsedPDF(const char* pdfName) {
     }
 }
 
-void ParsedPDF::formatString(string& str) {
-    locale loc;
-    for (string::size_type i = 0; i < str.length(); i++) {
-        str[i] = tolower(str[i], loc);
-    }
+void ParsedPDF::getStopWords() {
+    StopWords s;
+    stopWords = s.getStopTree();
 }
 
-void ParsedPDF::clearPunctuation(string& str) {
-    for (int i = 0; i < str.length(); i++) {
-        if (str[i] < 97 || str[i] > 122) { //if char is not a letter
-            if (str[i] != 39 || str[i] != 45) { //apostrophe and hyphen
-                str.erase(i, 1);
-            }
-        }
-    }
-}
-
-void ParsedPDF::readStopWords() {
-
-    ifstream inFile;
-    inFile.open("StopWords", ios::in);
-
-    if (!inFile) {
-        cerr << "Stop words file could not be opened" << endl;
-        exit(EXIT_FAILURE);
-    }
-
-    string wrd;
-    inFile >> wrd;
-
-    while (!inFile.eof()) {
-        stopWords.insert(wrd);
-        inFile >> wrd;
-    }
-
-    inFile.close();
-
-    //don't need this code
-    /*
+/*
+void ParsedPDF::removeStopWords(const vector<string>& stopWords) {
     vector<string> stopWords = readStopWords();
     for (int i = 0; i < stopWords.size(); i++) {
         for (int j = 0; j < words.size(); j++) {
@@ -75,29 +77,11 @@ void ParsedPDF::readStopWords() {
             }
         }
     }
-    */
-}
-
-/*
-void ParsedPDF::stemWords() {
-    for (string& wrd: words) {
-        trim(wrd);
-        stem(wrd);
-    }
-}
-
-void ParsedPDF::getFinalWords() {
-    for (string& str: words) {
-        formatString(str);
-        clearPunctuation(str);
-    }
-    //removeStopWords();
-    //stemWords();
-}
-
-void ParsedPDF::printContents() {
-    for (string str: words) {
-        cout << str << endl;
-    }
 }
 */
+
+void ParsedPDF::printWords() {
+    words.printInOrder();
+}
+
+

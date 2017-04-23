@@ -4,14 +4,14 @@
 #include <iostream>
 #include <podofo/podofo.h>
 #include <string>
-#include <vector>
-#include <istream>
-#include <locale>
 #include <fstream>
-#include <algorithm>
-#include "porter2_stemmer-master/porter2_stemmer.h"
+#include <istream>
+#include <stdio.h>
+#include <sys/types.h>
+#include <dirent.h>
 #include "avltree.h"
 #include "word.h"
+#include "stopwords.h"
 
 using namespace std;
 using namespace PoDoFo;
@@ -23,12 +23,11 @@ class ParsedPDF {
         AvlTree<string> stopWords;
     public:
         ParsedPDF(const char*);
-        void formatString(string&);
-        void clearPunctuation(string&);
-        void readStopWords();
-        //void stemWords();
-        //void getFinalWords();
-        //void printContents();
+        void readPDF(const char*);
+        void getStopWords();
+        void printWords();
+
+        //void removeStopWords(const vector<string>&);
 };
 
 #endif // PARSEDPDF_H
