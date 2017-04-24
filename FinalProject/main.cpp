@@ -10,8 +10,8 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
     ParsedPDF pdfFiles(argv[1]);
-    pdfFiles.printWords();
-
+    //pdfFiles.printWords();
+    pdfFiles.requestSearch();
     return 0;
 }
 

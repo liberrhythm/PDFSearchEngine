@@ -73,7 +73,7 @@ public:
     bool isEmpty();
     bool contains(T);
 
-    T find(T);
+    T& find(T);
     T findMin();
     T findMax();
 
@@ -95,7 +95,7 @@ private:
     void doubleWithRightChild(Node<T>*&);
     void doubleWithLeftChild( Node<T>*&);
 
-    T find(T, Node<T>*);
+    T& find(T, Node<T>*);
     Node<T>* findMax(Node<T>*);
     Node<T>* findMin(Node<T>*);
 
@@ -165,7 +165,7 @@ AvlTree<T>::Node<T>* AvlTree<T>::copy(Node<T>*& node)
 }
 
 template<class T>
-T AvlTree<T>::find(T data)
+T& AvlTree<T>::find(T data)
 {
 
     return find(data, root);
@@ -173,7 +173,7 @@ T AvlTree<T>::find(T data)
 }
 
 template<class T>
-T AvlTree<T>::find(T data, Node<T>* node)
+T& AvlTree<T>::find(T data, Node<T>* node)
 {
     //might need to throw and exception
 

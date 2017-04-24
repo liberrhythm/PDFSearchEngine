@@ -4,6 +4,10 @@ Word::Word() {
     text = "";
 }
 
+Word::Word(string wrd) {
+    text = wrd;
+}
+
 Word::Word(string wrd, string file) {
     text = wrd;
     formatString();

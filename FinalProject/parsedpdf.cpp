@@ -57,7 +57,13 @@ void ParsedPDF::readPDF(const char* pdfName) {
                                     }
                                     else {
                                         Word existingWord = words.find(newWord);
-                                        if (find(existingWord.getFiles().begin(), existingWord.getFiles().end(), fileName) != existingWord.getFiles().end()) {
+                                        bool pdfFound = false;
+                                        for (string file: existingWord.getFiles()) {
+                                            if (file == fileName) {
+                                                pdfFound = true;
+                                            }
+                                        }
+                                        if (pdfFound == false) {
                                             words.find(newWord).getFiles().push_back(fileName);
                                         }
                                     }
@@ -94,4 +100,13 @@ void ParsedPDF::printWords() {
     words.printInOrder();
 }
 
+void ParsedPDF::requestSearch(){
+    searcher se;
 
+    string first="year";
+    string second="vol";
+
+
+    se.receiveRequest(words, first);
+    se.receiveRequest(words, second);
+}

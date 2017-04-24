@@ -13,6 +13,7 @@
 #include "avltree.h"
 #include "word.h"
 #include "stopwords.h"
+#include "searcher.h"
 
 using namespace std;
 using namespace PoDoFo;
@@ -27,6 +28,7 @@ class ParsedPDF {
         void readPDF(const char*);
         void getStopWords();
         void printWords();
+        void requestSearch();
 
         //void removeStopWords(const vector<string>&);
 };

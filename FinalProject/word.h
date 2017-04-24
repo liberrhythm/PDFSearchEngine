@@ -20,6 +20,7 @@ class Word {
         vector<string> fileNames;
     public:
         Word();
+        Word(string);
         Word(string, string);
         string getText();
         void addFile(string);
