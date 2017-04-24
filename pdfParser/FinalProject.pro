@@ -5,9 +5,7 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     parsedpdf.cpp \
-    ../build-FinalProject-Desktop_Qt_5_8_0_GCC_64bit-Debug/porter2_stemmer-master/porter2_stemmer.cpp \
     word.cpp \
-    ../avlTree/avltest.cpp \
     stopwords.cpp
 
 LIBS += -lpodofo
@@ -19,9 +17,6 @@ DISTFILES += \
 
 HEADERS += \
     parsedpdf.h \
-    ../build-FinalProject-Desktop_Qt_5_8_0_GCC_64bit-Debug/porter2_stemmer-master/porter2_stemmer.h \
     word.h \
-    ../avlTree/avltree.h \
-    ../avlTree/catch.hpp \
     avltree.h \
     stopwords.h

@@ -1,3 +1,4 @@
+#define CATCH_CONFIG_RUNNER
 #include <iostream>
 #include <podofo/podofo.h>
 #include <string>

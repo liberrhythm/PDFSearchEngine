@@ -15,7 +15,7 @@
 
 using namespace std;
 using namespace PoDoFo;
-using namespace Porter2Stemmer;
+//using namespace Porter2Stemmer;
 
 class ParsedPDF {
     private:

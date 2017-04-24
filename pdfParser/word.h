@@ -6,7 +6,7 @@
 #include <ostream>
 #include <fstream>
 #include <algorithm>
-#include "porter2_stemmer-master/porter2_stemmer.h"
+//#include "porter2_stemmer-master/porter2_stemmer.h"
 
 using namespace std;
 

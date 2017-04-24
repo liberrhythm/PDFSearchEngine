@@ -17,12 +17,12 @@ ParsedPDF::ParsedPDF(const char* files) {
             string fileName = dir->d_name;
             string fileType = fileName.substr(fileName.length()-4, fileName.length());
             if (fileType == ".pdf") {
-                cout << dir->d_name << endl;
+                //cout << dir->d_name << endl;
                 strncpy(filePath, files, 4095);
                 strncat(filePath, "/", 4095);
                 strncat(filePath, dir->d_name, 4095);
 
-                cout << filePath << endl;
+                //cout << filePath << endl;
 
                 readPDF(filePath);
             }
@@ -50,6 +50,7 @@ void ParsedPDF::readPDF(const char* pdfName) {
                             string str(a[j].GetString().GetString());
                             string fileName(pdfName);
                             Word newWord(str, pdfName);
+                            cout<<str<<endl;
                             if (!stopWords.contains(newWord.getText())) {
                                 words.insert(newWord);
                             }
@@ -59,6 +60,7 @@ void ParsedPDF::readPDF(const char* pdfName) {
             }
         }
     }
+    //printWords();
 }
 
 void ParsedPDF::getStopWords() {
@@ -81,6 +83,7 @@ void ParsedPDF::removeStopWords(const vector<string>& stopWords) {
 */
 
 void ParsedPDF::printWords() {
+    cout<<"in print words"<<endl;
     words.printInOrder();
 }
 
