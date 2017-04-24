@@ -103,8 +103,8 @@ void ParsedPDF::printWords() {
 void ParsedPDF::requestSearch(){
     searcher se;
 
-    string first="year";
-    string second="vol";
+    string first="variable";
+    string second="banana";
 
 
     se.receiveRequest(words, first);

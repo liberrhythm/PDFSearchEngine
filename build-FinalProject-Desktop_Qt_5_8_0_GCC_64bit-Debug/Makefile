@@ -558,7 +558,8 @@ main.o: ../FinalProject/main.cpp ../FinalProject/parsedpdf.h \
 		../FinalProject/porter2_stemmer.h \
 		../FinalProject/util/string_view.h \
 		../FinalProject/util/hash.h \
-		../FinalProject/stopwords.h
+		../FinalProject/stopwords.h \
+		../FinalProject/searcher.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../FinalProject/main.cpp
 
 parsedpdf.o: ../FinalProject/parsedpdf.cpp ../FinalProject/parsedpdf.h \
@@ -567,7 +568,8 @@ parsedpdf.o: ../FinalProject/parsedpdf.cpp ../FinalProject/parsedpdf.h \
 		../FinalProject/porter2_stemmer.h \
 		../FinalProject/util/string_view.h \
 		../FinalProject/util/hash.h \
-		../FinalProject/stopwords.h
+		../FinalProject/stopwords.h \
+		../FinalProject/searcher.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o parsedpdf.o ../FinalProject/parsedpdf.cpp
 
 word.o: ../FinalProject/word.cpp ../FinalProject/word.h \

@@ -186,7 +186,7 @@ T& AvlTree<T>::find(T data, Node<T>* node)
         else
             return node->data;
     }
-    throw out_of_range("Element requested does is not in Tree");
+    //throw out_of_range("Element requested is not in the specified coprus");
 
 }
 
