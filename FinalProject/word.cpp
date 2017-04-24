@@ -53,7 +53,7 @@ void Word::formatString() {
 }
 
 void Word::clearPunctuation() {
-    for (int i = 0; i < text.length(); i++) {
+    for (unsigned int i = 0; i < text.length(); i++) {
         if (text[i] < 97 || text[i] > 122) { //if char is not a letter
             if (text[i] != 39 || text[i] != 45) { //apostrophe and hyphen
                 text.erase(i, 1);
@@ -70,6 +70,10 @@ void Word::stemWord() {
 */
 
 ostream& operator<<(ostream& output, const Word& wrd) {
-    output << wrd.text;
+    output << wrd.text << endl;
+    for (string file: wrd.fileNames) {
+        output << file << " ";
+    }
+    output << endl;
     return output;
 }
