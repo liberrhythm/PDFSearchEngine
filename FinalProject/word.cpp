@@ -4,10 +4,6 @@ Word::Word() {
     text = "";
 }
 
-Word::Word(string wrd) {
-    text = wrd;
-}
-
 Word::Word(string wrd, string file) {
     text = wrd;
     formatString();
@@ -57,11 +53,10 @@ void Word::formatString() {
 }
 
 void Word::clearPunctuation() {
-    for (unsigned int i = 0; i < text.length(); i++) {
-        if (text[i] < 97 || text[i] > 122) { //if char is not a letter
-            if (text[i] != 39 || text[i] != 45) { //apostrophe and hyphen
-                text.erase(i, 1);
-            }
+    for (unsigned int i = 0, len = text.size(); i < len; i++) {
+        if (text[i] < 97 || text[i] > 122 || ispunct(text[i])) {
+            text.erase(i--, 1);
+            len = text.size();
         }
     }
 }
@@ -74,10 +69,11 @@ void Word::stemWord() {
 */
 
 ostream& operator<<(ostream& output, const Word& wrd) {
-    output << wrd.text << endl;
-    for (string file: wrd.fileNames) {
-        output << file << " ";
+    output << wrd.text;
+    /*
+    for (string str: wrd.fileNames) {
+        output << str << endl;
     }
-    output << endl;
+    */
     return output;
 }

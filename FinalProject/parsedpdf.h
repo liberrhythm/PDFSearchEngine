@@ -4,16 +4,19 @@
 #include <iostream>
 #include <podofo/podofo.h>
 #include <string>
+#include <stack>
 #include <fstream>
 #include <istream>
 #include <stdio.h>
+#include <stdlib.h>
+#include <cstdio>
 #include <sys/types.h>
 #include <dirent.h>
 #include <algorithm>
 #include "avltree.h"
+#include "searcher.h"
 #include "word.h"
 #include "stopwords.h"
-#include "searcher.h"
 
 using namespace std;
 using namespace PoDoFo;
@@ -26,11 +29,11 @@ class ParsedPDF {
     public:
         ParsedPDF(const char*);
         void readPDF(const char*);
+        void extractText(PdfMemDocument*, PdfPage*, const char*);
         void getStopWords();
+        void addWord(string, const char*);
         void printWords();
         void requestSearch();
-
-        //void removeStopWords(const vector<string>&);
 };
 
 #endif // PARSEDPDF_H

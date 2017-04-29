@@ -67,12 +67,18 @@ void ParsedPDF::extractText(PdfMemDocument* pdf, PdfPage* page, const char* pdfN
     PdfContentsTokenizer tokenizer(page);
     stack<PdfVariant> stack;
 
-    bool bTextBlock = false;
-
+    double dCurPosX     = 0.0;
+    double dCurPosY     = 0.0;
+    double dCurFontSize = 0.0;
+    bool   bTextBlock   = false;
+    PdfFont* pCurFont   = nullptr;
+    
     while (tokenizer.ReadNext(type, token, var)) {
         if (type == ePdfContentsType_Keyword ) {
             if (strcmp(token, "l") == 0 || strcmp(token, "m") == 0) {
+                dCurPosX = stack.top().GetReal();
                 stack.pop();
+                dCurPosY = stack.top().GetReal();
                 stack.pop();
             }
             else if (strcmp(token, "BT" ) == 0) {
@@ -85,7 +91,25 @@ void ParsedPDF::extractText(PdfMemDocument* pdf, PdfPage* page, const char* pdfN
             }
 
             if (bTextBlock) {
-                if (strcmp(token, "Tj") == 0 || strcmp(token, "'") == 0) {
+                if( strcmp( pszToken, "Tf" ) == 0 ) {
+                    dCurFontSize = stack.top().GetReal();
+                    stack.pop();
+                    PdfName fontName = stack.top().GetName();
+                    PdfObject* pFont = pPage->GetFromResources( PdfName("Font"), fontName );
+                    if( !pFont )
+                    {
+                        PODOFO_RAISE_ERROR_INFO( ePdfError_InvalidHandle, "Cannot create font!" );
+                    }
+
+                    pCurFont = pDocument->GetFont( pFont );
+                    if( !pCurFont )
+                    {
+                        fprintf( stderr, "WARNING: Unable to create font for object %i %i R\n",
+                                 pFont->Reference().ObjectNumber(),
+                                 pFont->Reference().GenerationNumber() );
+                    }
+                }
+                else if (strcmp(token, "Tj") == 0 || strcmp(token, "'") == 0) {
                     string str(stack.top().GetString().GetString());
                     addWord(str, pdfName);
                     stack.pop();

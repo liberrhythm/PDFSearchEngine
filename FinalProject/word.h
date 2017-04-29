@@ -7,6 +7,7 @@
 #include <fstream>
 #include <algorithm>
 #include <cstring>
+#include <cctype>
 #include "porter2_stemmer.h"
 
 using namespace std;
@@ -20,7 +21,6 @@ class Word {
         vector<string> fileNames;
     public:
         Word();
-        Word(string);
         Word(string, string);
         string getText();
         void addFile(string);
