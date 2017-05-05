@@ -1,0 +1,1845 @@
+Journal of Small Business Management 2006 44(1), pp. 45–63
+
+Proclivity for Improvisation as a Predictor of
+Entrepreneurial Intentions
+by Keith M. Hmieleski and Andrew C. Corbett
+
+This study examines the relationship between improvisation and entrepreneurial
+intentions. Of specific interest is whether or not a proclivity for improvisation explains
+any variance in entrepreneurial intentions beyond what is accounted for by other
+relevant individual difference measures. Using a sample of 430 college students,
+entrepreneurial intentions are found to be significantly associated with measures
+of personality, motivation, cognitive style, social models, and improvisation. The
+strongest relationship is found between entrepreneurial intentions and improvisation. The results of hierarchical regression show that improvisation accounts for a
+significant amount of variance in entrepreneurial intention above and beyond what
+is accounted for by the other variables.
+
+Introduction
+There is a growing view in the literature that entrepreneurship research
+should be centered around the process
+through which individuals identify and
+exploit opportunities to create future
+goods and services (Venkataraman
+1997). This process has been primarily
+described as a strategically planned
+sequence of opportunity identification
+followed by evaluation and execution
+(Shane and Venkataraman 2000). This
+rational model is an appropriate starting
+point for investigating entrepreneurial
+action, but fails to fully elucidate how
+
+entrepreneurs behave within the highly
+uncertain, novel, and turbulent environments in which they often operate
+(Baron 1998).
+This gap has been filled to some
+degree by research that has considered
+how entrepreneurs use cognitive biases
+and heuristics (Busenitz and Barney
+1997). According to this body of work,
+when information for rational decisionmaking is unavailable and time pressure
+is high, entrepreneurs use familiar
+mental shortcuts to make decisions. In
+conjunction with the strategic planning
+view, these complementary perspectives
+
+Keith Hmieleski is assistant professor in the M. J. Neeley School of Business at Texas Christian University. His research interests include the leadership, optimal experience, motivation,
+and decision-making of entrepreneurs.
+Andrew Corbett is assistant professor in the Lally School of Management & Technology at
+Rensselaer Polytechnic Institute. His research interests include cognition within the process of
+entrepreneurship and the role of individuals within strategic renewal.
+
+HMIELESKI AND CORBETT
+
+45
+
+suggest that entrepreneurs develop and
+enact plans when adequate resources are
+available and follow pre-scripted routines when rational planning is not possible. We suggest that both of these views
+are correct within certain boundary
+conditions—such as when resources are
+available for planning or when a heuristic is available for making a quick decision. But through what process do
+entrepreneurs act when there is no time
+for planning and no available heuristic to
+follow?
+A recent study by Baker, Miner, and
+Eesley (2003) points out that these conditions, in which neither strategic planning nor heuristics and biases are
+feasible, are markedly common throughout the entrepreneurial process. The
+authors examined the nascent activities
+of 68 firms through interviews with
+their founders and employees, and the
+collection of public documents. Contrary to the utility maximization model
+of entrepreneurial action (Shane and
+Venkataraman 2000), none of the firms
+in the study behaved in a manner that
+was primarily strategically planned.
+Further, many of the firms lacked the
+background to have formed heuristics
+to fall back upon during the uncertain
+conditions through which they navigated. Instead, the authors described
+the behavior of these firms as being
+characteristic of improvisation. This is to
+say that the norm for these new ventures was to extemporaneously compose and execute novel solutions to the
+problems and opportunities that they
+encountered.
+Baker, Miner, and Eesley (2003)
+demonstrate that improvisation is often
+an elemental factor in the founding of
+new firms and that it is also useful in the
+exploitation of opportunity. The authors
+note, however, that their study was
+exploratory, inductive, and designed to
+focus only on generating hypotheses
+about improvisation and firm founding.
+Baker and his colleagues call for further
+
+46
+
+research to test the role of improvisation
+in entrepreneurship. The current study
+heeds this call by first developing a conceptual framework for improvisation and
+then testing hypotheses regarding the
+role of improvisation within the process
+of entrepreneurship.
+
+Improvisation and
+Entrepreneurship
+Improvisation can extend current
+entrepreneurship theory by providing a
+framework for explaining how entrepreneurs deviate from both strategic plans
+and cognitive biases and heuristics in
+order to exploit opportunities in the
+moment, as they arise. We suggest that
+entrepreneurial action occurs in at least
+four different ways, depending on the
+novelty of the situation and the resource
+constraints of the individual or firm (see
+Figure 1). For example, when information and time are abundant, strategic
+planning is likely to occur. On occasions
+when time and information are both
+limited, but the entrepreneur has moderate familiarity with the problem or
+opportunity, then cognitive heuristics
+and biases are likely to be available and
+employed. When resources are abundant, but the novelty of the situation is
+very high, the entrepreneur can afford
+to take a trial-and-error approach—and
+likely will need to in order to gather
+further information. Finally, when
+resource constraints are prohibitive and
+the entrepreneur finds himself/herself
+faced with a novel problem or opportunity, then improvisation appears to be
+the most reasonable course of action. In
+this instance, the entrepreneur has only
+one opportunity to “get it right.” Constraints on time and resources do not
+allow for planning or trial-and-error,
+and the extreme novelty makes the
+use of heuristics and biases untenable.
+Under these conditions, however, existing strategic plans and/or cognitive
+biases and heuristics can serve as useful
+referents to be deviated from (or impro-
+
+JOURNAL OF SMALL BUSINESS MANAGEMENT
+
+Figure 1
+Entrepreneurial Action under Varying Degrees of Novelty
+and Resource Constraints
+Resource Constraints
+
+Novelty
+
+Low
+
+High
+
+High
+
+Trial-and-Error
+
+Improvisation
+
+Low
+
+Strategic Planning
+
+Heuristics and Biases
+
+vised on) during an improvisational
+episode.
+The improvisation process occurs in
+the following manner. First, an individual
+is presented with a problem (which in
+the context of entrepreneurship, might
+be viewed as an opportunity). Next, the
+individual compares the problem to
+others that he/she has previously faced
+and selects a referent based on past
+experience. A referent is a plan or strategy for reacting to the environment
+(Hmieleski and Corbett 2003). It can be
+as formal as a published standard operating procedure or as informal as a cognitive bias or heuristic (Busenitz and
+Barney 1997). After identifying the referent, the decision-maker considers its
+feasibility given the constraints that
+characterize the problem (for example,
+the available resources). If the referent is
+feasible and appears to have a high probability of success, then it should be
+followed. Otherwise, the actor should
+improvise by either extending or reconfiguring the referent to construct a novel
+course of action. This entire process
+occurs extemporaneously, such that the
+individual is assessing probabilities and
+
+formulating strategy while acting out the
+solution. The extemporaneous nature of
+the improvisation process suggests that
+cognitive heuristics and biases are likely
+to be the most commonly employed
+referents.
+The use of cognitive heuristics and
+biases during the improvisation process
+raises the often asked question of
+whether entrepreneurs tend to prefer
+heuristic rather than systematic thinking
+(Baron and Ward 2004). Certainly, empirical findings demonstrating a positive
+relationship between individuals’ proclivity for improvisation and entrepreneurial intentions would suggest that
+entrepreneurs might indeed lean toward
+heuristic thinking more so than others.
+An analogous discussion is offered by
+Levi-Strauss (1966, pp. 16–17) in his comparison of bricoleurs and craftsmen. He
+describes bricoleurs as individuals who
+use “devious means” (that is, novel
+processes) to recombine resources that
+are available at hand to accomplish their
+work. In contrast, he illustrates how
+craftsmen restrict themselves to a subset
+of resources or tools that are used to
+accomplish their tasks, with little devia-
+
+HMIELESKI AND CORBETT
+
+47
+
+tion. In this vein, entrepreneurs might be
+considered bricoleurs—relying heavily
+on improvisation, versus corporate managers, for example—who, like craftsmen,
+rely more heavily on traditional tools
+and/or strategies.
+Aside from the Baker, Miner, and
+Eesley (2003) article, there appears to be
+little published research directly investigating the role of improvisation in entrepreneurship. A similar gap in the
+mainstream
+management
+literature
+seems to exist in regard to individual
+level work on improvisation. There have,
+however, been noteworthy investigations
+of improvisation at the group and organizational levels. Eisenhardt and Tabrizi
+(1995) conducted a study contrasting
+rational versus improvisational processes
+of new product development. Their
+findings suggest that a real-time, handson approach to product development
+tends to be more effective than rational, efficiency-oriented approaches
+—especially for uncertain products and
+when speed is of the essence. Brown
+and Eisenhardt (1997) examined continuous change processes within large
+technology-oriented firms and found that
+those organizations most successful at
+change tend to have a greater capacity
+for improvisation. These organizations
+provide enough flexibility for their
+workers to leverage their improvisation
+competencies, but are not so unstructured as to allow their operations to
+become unmanageable. Moorman and
+Miner (1998) found that environmental
+turbulence tends to have a positive influence on the incidence of improvisation,
+organizational memory tends to have a
+negative influence on the incidence of
+improvisation, and that environmental
+turbulence, real-time information flow
+and organizational memory tend to have
+a positive effect on the effectiveness of
+improvisation. Additional research conducted by Miner, Bassoff, and Moorman
+(2001) indicates that improvisation can
+be accepted and incorporated into
+
+48
+
+formal organizational activities, such that
+organizations may be able to plan for
+improvisation by creating opportunities
+for improvisation and supporting the
+improvisation process.
+In regard to entrepreneurship, two
+important points can be drawn from
+these studies. First, improvisation seems
+to be an effective behavioral strategy for
+dealing with change, particularly in
+dynamic conditions—such as those in
+which new ventures operating in highgrowth industries commonly face.
+Second, it appears that improvisational
+activities can be incorporated into specific work processes, as well as an organization’s culture. Thus, entrepreneurs
+might consider actively managing the
+degree to which their firms improvise,
+and do so in accordance with the
+demands of their environment. As
+improvisation appears to be an important behavioral strategy for navigating
+the entrepreneurial process, we seek to
+determine the extent to which nascent
+entrepreneurs tend to have a proclivity
+for improvisational behavior.
+
+Entrepreneurial Intentions
+As a first step toward investigating the
+improvisational tendencies of entrepreneurs, we set out to examine how
+improvisation relates to entrepreneurial
+intentions (Bird 1988). Specifically, we
+seek to determine whether or not individuals exhibiting a proclivity for
+improvisation display a tendency toward
+self-selecting themselves into the field of
+entrepreneurship. To this end, a measure
+of improvisation is developed and contrasted with other relevant individual
+difference measures in regard to the
+dependent measure of intent to start a
+new business.
+Entrepreneurial intentions, for the
+purposes of the current study, are
+defined as intentions toward starting a
+high-growth business. We adopt a highgrowth perspective for three reasons.
+The primary rationale being that high-
+
+JOURNAL OF SMALL BUSINESS MANAGEMENT
+
+growth start-ups operate in turbulent
+environments (Venkataraman et al.
+1990). This type of environment is
+characterized by factors such as time
+pressure and novelty, which demand frequent improvisation as a requirement for
+survival. A secondary reason is that highgrowth ventures are a primary creator of
+new jobs (Reynolds et al. 2002). Thus,
+new knowledge relating to the process
+of creating high-growth ventures is likely
+to have important societal implications.
+Finally, small businesses, which are
+content to maintain the status quo, are
+fundamentally different from highgrowth ventures in terms of innovation,
+strategic orientation, and propensity for
+bearing risk (Carland et al. 1984).
+Accordingly, the characteristics of the
+founders for each type of business (lowgrowth and high-growth) are likely to be
+substantially different (Stewart et al.
+1998). In the following sections, we
+outline hypotheses that consider the
+association of entrepreneurial intentions
+with measures of improvisation, personality, motivation, cognitive style, and
+social models.
+Considering the centrality of improvisation
+within
+the
+entrepreneurial
+process, we expect to find a positive relationship between one’s propensity for
+improvising and extent of entrepreneurial intentions. Thus, we suspect that
+improvisational individuals tend to seek
+out entrepreneurial opportunities, in
+part, as a pathway to act upon their
+natural inclination to improvise.
+H1: The greater the proclivity for improvisation, the greater will be the intent
+to start a high-growth business.
+
+Personality
+Recently, there has been a resurgence
+of individual differences research in
+organizational behavior, which has, in
+part, been spawned by investigations of
+the five fundamental dimensions of personality known as “The Big Five” (for
+
+example, Hogan and Holland 2003;
+Hurtz and Donovan 2000; Judge and
+Bono 2000). Advocates of this perspective claim that most individual differences can be traced back to variations in
+standing across these five dimensions—
+extraversion, contentiousness, agreeableness, emotional stability, and openness.
+With few exceptions (Ciavarella et al.
+2004; Singh, De Noble, and Kalousova
+2002; Wooten, Timmerman, and Folger
+1999), entrepreneurship researchers
+have ignored The Big Five, instead
+opting for the use of less theoretically
+and psychometrically sound measures,
+such as locus of control (Chen, Greene,
+and Crick 1998) and risk-taking propensity (Brockhaus 1980). This fact might
+partially explain why much of the entrepreneurship literature on individual differences is either contradictory and/or
+inconclusive. Therefore, in order to
+further the field of entrepreneurship and
+validate our research in the eyes of those
+working in complementary fields, it is
+important that we demonstrate that our
+constructs
+and
+measures
+provide
+explanatory value beyond those that
+have longer and validated histories of
+use in other domains. In this vein, we
+anticipate that improvisation will provide
+explanatory value in regard to entrepreneurial intentions beyond that which is
+accounted for by The Big Five.
+H2: Proclivity for improvisation will
+account for a significant amount of
+variance in entrepreneurial intentions beyond that which is accounted
+for by personality.
+
+Motivation
+A firm cannot easily exist without
+employees to carry out the day-to-day
+operations that define its purpose. Thus,
+an essential aspect of any organization is
+the active and persistent effort of its
+workers (Baron 1991). Research on
+worker motivation has primarily focused
+on factors that initiate and sustain the
+
+HMIELESKI AND CORBETT
+
+49
+
+behavior of individuals and groups
+within organizations (Ambrose and Kulik
+1999). Measures of self-efficacy (Chen,
+Greene, and Crick 1998), locus of control
+(Gilad 1982), need for autonomy (Cromie
+1987), risk-taking (Brockhaus 1980) tolerance for ambiguity (Begley and Boyd
+1987) have pervaded the literature in
+regard to entrepreneurial motivation
+(Shane, Locke, and Collins 2003; Vecchio
+2003). Similar to our previous hypotheses, it is also necessary that new constructs within our own field show
+explanatory value beyond those that are
+more commonly used in entrepreneurship research. To this end, we seek to
+determine whether or not improvisation
+provides explanatory value in regard to
+entrepreneurial intentions beyond that
+which is accounted for by commonly
+investigated correlates of entrepreneurial
+motivation.
+H3: Proclivity for improvisation will
+account for a significant amount of
+variance in entrepreneurial intentions beyond that which is accounted
+for by motivation.
+
+Cognitive Style
+A recent trend in the entrepreneurship
+literature is to consider the variety of
+ways in which entrepreneurs process
+information (Baron 2004). The different
+ways that individuals react to stimuli in
+various environments comprise the field
+of cognitive styles research. Within the
+cognitive styles literature, research pertaining to innovation, intuition, and
+learning are likely to be of particular relevance to entrepreneurship (Allison and
+Hayes 1996; Eison and Pollio 1990;
+Kirton and Pender 1982). For example,
+Corbett (2005) suggests that the manner
+in which individuals cognitively process
+information is related to their ability to
+identify and exploit opportunities. A
+follow-up empirical study supports this
+assertion by showing a relationship
+between cognition and the discovery of
+
+50
+
+entrepreneurial opportunities (Corbett,
+forthcoming). Here, we seek to determine whether or not improvisation adds
+any explanatory value in regard to entrepreneurial intentions beyond that which
+is accounted for by these aspects of cognitive style.
+H4: Proclivity for improvisation will
+account for a significant amount of
+variance in entrepreneurial intentions beyond that which is accounted
+for by cognitive style.
+
+Social Models
+Social models have been shown to be
+a consistent and strong predictor of
+entrepreneurial
+intentions
+(Hisrich
+1990). This is to say that individuals who
+have family members and/or close
+friends who are entrepreneurs tend to,
+on average, be more likely to start their
+own business than those who have not
+benefited from the same level of exposure to entrepreneurship. This appears to
+be, in part, due to the lower barriers to
+entry into entrepreneurship that these
+individuals tend to experience through
+the opportunity that they possess to capitalize on their close ties with entrepreneurs (Greve and Salaff 2003). Thus, we
+seek to determine whether or not
+improvisation adds any explanatory
+value in regard to entrepreneurial intention beyond that which is accounted for
+by entrepreneurial social models.
+H5: Proclivity for improvisation will
+account for a significant amount of
+variance in entrepreneurial intentions beyond that which is accounted
+for by the individual’s entrepreneurial social models.
+
+Cumulative Test
+As an overall test, we are curious to
+determine whether or not improvisation
+explains any variance in entrepreneurial
+intentions when personality, motivation,
+
+JOURNAL OF SMALL BUSINESS MANAGEMENT
+
+cognitive style, and social models are
+simultaneously controlled for.
+H6: Proclivity for improvisation will
+account for a significant amount of
+variance in entrepreneurial intentions beyond that which is accounted
+for by personality, motivation, cognitive style, and entrepreneurial social
+models.
+
+Method
+Participants
+Five hundred and ninety undergraduate students participated in the study.
+One hundred and sixty of these participants were subsequently eliminated
+because their scores on the dependent
+measure, entrepreneurial intentions,
+varied by more than 25 percent between
+Part 1 and Part 2 of the study. Thus, the
+eliminated participants either did not
+attentively complete each portion of
+the study or did not have a clear view
+regarding the extent of their intentions
+to start a new business. The resulting
+sample consisted of 430 participants
+(322 males and 108 females). The mean
+age was 20 (S.D. = 1.50) years old. The
+ethnic composition of the sample
+included Caucasians (n = 322), Asians
+(n = 58), Hispanics (n = 19), African
+Americans (n = 15), and Native Americans (n = 2). Fourteen of the participants
+failed to report their ethnicity. Twentyeight of the participants had started
+their own business, 74 had worked for a
+start-up, and 37 had taken a course in
+entrepreneurship.
+
+Measures
+Improvisation. A 27-item instrument
+was developed as a part of the current
+study in order to measure one’s proclivity for improvising. The instrument contains three scales, each comprised of
+nine items. The first dimension relates to
+creativity and bricolage (alpha = 0.89),
+and was partly adapted from Tierney,
+Farmer, and Graen (1999) following the
+
+work of Vera (2002). This dimension represents the extent to which individuals
+are able to produce novel solutions
+under constrained conditions by recombining available resources. Individuals
+high in this dimension are likely to seek
+out opportunities to display their ingenuity. The second dimension relates to
+the ability to function and excel under
+pressure-filled and stressful environments (alpha = 0.83). This dimension
+represents the ability of individuals to
+excel in uncertain and rapidly changing
+environments. Individuals who are high
+in this dimension tend to rise to the occasion and perform best under pressure.
+The final dimension relates to spontaneity and persistence (alpha = 0.70), and
+was partly adapted from Unger and
+Kernan (1983) and Moorman and Miner
+(1998) following the work of Vera (2002).
+This dimension represents the actionorientation and determination of individuals toward achieving goals and solving
+problems in the moment. Individuals
+who are high in this dimension tend to
+prefer action rather than analysis and are
+highly focused on the problem at hand.
+These individuals are opportunistic and
+act with a killer instinct. The threedimensional structure of the measure
+was confirmed using principal components factor analysis. These dimensions
+are aggregated to form a total score representing an individual’s overall proclivity for improvisation (alpha = 0.87). Thus,
+a high score represents a preference
+toward improvisational action. A threeweek test–retest of the measure produced a correlation coefficient of .85 for
+the total scale. The three-factor confirmatory principal components matrix
+along with each item can be viewed in
+Table 1.
+Personality. The International Personality Item Pool (IPIP) (Goldberg 1999) was
+used to measure the five facets of personality. The IPIP measures the same
+domain constructs as the NEO-PI-R
+
+HMIELESKI AND CORBETT
+
+51
+
+Table 1
+Confirmatory Principal Components Matrix of
+Improvisation Items Using Varimax Rotation
+Item
+
+I am inventive.
+I serve as a good role model for
+creativity.
+I demonstrate originality in my work.
+I am creative when asked to work with
+limited resources.
+I identify ways in which resources can
+be recombined to produce novel
+products.
+I find new uses for existing methods or
+equipment.
+I think outside of the box.
+I take risks in terms of producing new
+ideas in completing projects.
+I identify opportunities for new services/
+products.
+I perform better under time pressure.
+I need pressure in order to focus.
+I enjoy taking risks.
+I respond to problems in a “spur of the
+moment” way.
+I seek out pressure-filled environments.
+I wait until the last moment to complete
+projects.
+I live in the moment.
+I “think on my feet” when carrying out
+actions.
+I enjoy taking risks.
+I am not easily distracted.
+I am a persistent person.
+I don’t let past failures hinder future
+performance.
+I am action oriented.
+I am an optimist.
+I don’t easily get frustrated when things
+don’t go my way.
+During a catastrophe, I am likely to
+adopt a leadership role.
+Nothing is more important than the
+achievement of my goals.
+I am good at solving logic problems.
+
+52
+
+CreativityBricolage
+
+PressureStress
+
+ActionPersistence
+
+0.62
+0.68
+
+0.07
+0.13
+
+0.22
+0.12
+
+0.73
+0.80
+
+0.12
+0.07
+
+-0.02
+0.08
+
+0.63
+
+0.25
+
+0.29
+
+0.67
+
+0.21
+
+0.09
+
+0.69
+0.72
+
+0.11
+0.04
+
+0.13
+0.17
+
+0.69
+
+0.18
+
+0.17
+
+0.25
+0.04
+0.29
+0.22
+
+0.54
+0.74
+0.51
+0.53
+
+0.19
+-0.07
+0.36
+0.38
+
+0.19
+0.15
+
+0.69
+0.67
+
+0.29
+0.17
+
+0.09
+-0.02
+
+0.60
+0.72
+
+-0.39
+-0.25
+
+0.09
+0.25
+0.25
+-0.02
+
+0.60
+0.14
+0.31
+-0.20
+
+0.14
+0.45
+0.41
+0.62
+
+0.26
+0.08
+0.25
+
+0.04
+0.04
+0.27
+
+0.36
+0.55
+0.50
+
+0.24
+
+0.00
+
+0.44
+
+0.27
+
+0.11
+
+0.53
+
+-0.06
+
+0.06
+
+0.36
+
+JOURNAL OF SMALL BUSINESS MANAGEMENT
+
+(Costa and McCrae 1992), which is
+perhaps the most widely used and psychometrically sound commercially published personality inventory. The primary
+advantage of the IPIP is that it contains
+two-thirds less items, while maintaining
+acceptable psychometric properties. The
+five scales of the IPIP include a sevenitem measure of agreeableness—extent
+of friendliness and cooperation (alpha =
+0.74), 10-item measure of conscientiousness—extent of organization and persistence (alpha = 0.82), nine-item measure of
+extraversion—extent of outgoingness in
+social settings (alpha = 0.87), seven-item
+measure of openness—extent of desire to
+partake in a variety of experiences (alpha
+= 0.85), and eight-item measure of emotional stability—extent of insecurity and
+emotional distress (alpha = 0.85).
+Motivation. In this section we grouped
+five of the most commonly studied
+constructs relating to entrepreneurial
+motives. These constructs include selfefficacy, locus of control, need for autonomy, risk-taking, and tolerance for
+ambiguity.
+Self-efficacy was measured using the
+General Self-Efficacy Scale (Schwarzer
+1993). The instrument is comprised of 10
+items, which are added together to form
+an overall measure of general selfefficacy (alpha = 0.82). High scores represent the belief in an individual’s ability
+to produce high levels of performance in
+tasks undertaken in life. Specific measures of entrepreneurial self-efficacy, such
+as those developed by Chen, Greene, and
+Crick (1998) and De Noble, Jung, and
+Ehrlich (1999), comprised of items specific to managerial and entrepreneurial
+skills were considered. However, these
+instruments were considered inappropriate for use with our sample of undergraduates from technology related fields,
+because they were unlikely to have much
+exposures to the business related concepts in which the items within these
+measures are comprised.
+
+Levinson’s (1980) chance scale was
+used as a measure of locus of control.
+The scale is comprised of eight items that
+are added together to form a measure of
+the degree to which a person believes
+that chance influences his/her outcomes
+in life (alpha = 0.72). Positive scores represent an internal locus of control,
+whereas negative scores represent an
+external locus of control.
+Deci and Ryan’s (2000) Need for
+Autonomy Scale was used to measure the
+basic desire for an individual to exercise
+his/her free will. The scale is comprised
+of seven items that are aggregated to
+form a general measure of need for
+autonomy (alpha = 0.68). High scoring
+individuals have a preference for setting
+their own goals and agendas, and for
+seeking autonomous environments.
+The Risk Attitudes Inventory (Calvert
+1993) was used to measure the risktaking propensity of individuals. The
+scale is comprised of 15 items that are
+added to form an overall score of one’s
+risk-taking attitude (alpha = 0.57). High
+scores represent the extent to which
+people are willing to partake in events
+that have uncertain outcomes and for
+which the consequences of failure are
+meaningful.
+The Tolerance for Ambiguity Scale
+(Budner 1962) was used to measure the
+extent to which individuals are threatened by situations that are ambiguous,
+rapidly changing, and unpredictable. The
+scale is comprised of 16 items that are
+summed to form an overall score of one’s
+tolerance for ambiguity (alpha = 0.62).
+Individuals who score high on this
+measure tend to be comfortable working
+in complex environments and with
+limited information.
+Cognitive Style. The Cognitive Style
+Index Allison and Hayes, 1996) was used
+as a measure of how individuals think.
+The scale is comprised of 38 items that
+are summed to form an overall score of
+one’s cognitive style (alpha = 0.85). High
+
+HMIELESKI AND CORBETT
+
+53
+
+scores represent a left-brain or analyticalorientation, whereas low scores represent a right-brain or intuitive-orientation.
+The Kirton Adaptor Innovator Inventory (Kirton and Pender, 1982) was used
+to measure individual styles of defining
+and solving problems. The scale is comprised of 32 items that are added to form
+an overall score of one’s problem-solving
+style (alpha = 0.85). High scoring individuals have an innovative style, and
+tend to be independent thinkers and
+game changers. In contrast, low scoring
+individuals tend to have an adaptive
+style, such that they prefer working
+within the status quo.
+The Learning-Orientation/Grade-Orientation (LOGO) II Scale was used to
+assess the learning- and grade-oriented
+attitudes and behaviors of the participants (Eison and Pollio 1990). The LOGO
+II is comprised of two main 16-item
+scales, one representing grade-oriented
+attitudes and behaviors (GOT; alpha =
+0.76) and the other representing
+learning-oriented attitudes and behaviors
+(LOT; alpha = 0.76). Individuals scoring
+high on the LOT scale seek opportunities for learning outside of the classroom
+in order to fulfill their natural curiosity.
+Those who score high on the GOT scale
+structure their studies around the
+achievement of grades and material
+rewards.
+Social Models. We developed a fiveitem measure to assess the extent to
+which participants have social models
+who are entrepreneurs. The items ask
+whether or not the individual has an
+immediate family member who has
+started a business, has an immediate
+family member who is a successful entrepreneur, has a close friend who has
+started a business, has a close friend who
+is a successful entrepreneur, and knows
+many people who have started their own
+business (alpha = 0.86). High scores indicate that the individual has an extensive
+array of entrepreneurial social models.
+
+54
+
+Entrepreneurial Intentions. For this
+scale we used five items from Chen,
+Greene, and Crick (1998) to assess
+whether or not participants intend to
+start a new business. These items asked
+whether or not the individual is interested in starting a business, has considered a particular type of business to start,
+has begun planning for starting a business, is likely to try hard to start a business, and plans to start a business in the
+near future. In addition, we included five
+items that were created for the current
+study regarding the extent to which participants want to rapidly grow a new
+business. These items asked whether or
+not the individual would like to start a
+business that will grow rapidly, become
+an industry leader, have multiple locations, be listed on a major stock market,
+and become known internationally.
+Thus, the aggregate measure indicates
+the degree of intent to start a new
+high-growth business (alpha = 0.94). A
+three-week test–retest of the measure
+produced a correlation coefficient of 0.93
+for the total scale.
+
+Procedure
+The measures were compiled to form
+two separate surveys in order to minimize fatigue on the participants and to
+allow for a test–retest of the improvisation, social models, and entrepreneurial
+intensions measures. The first survey
+(Part I) was comprised of items pertaining to improvisation, personality, selfefficacy, need for autonomy, locus of
+control, entrepreneurial intentions, social
+models, and demographics. The second
+survey (Part II) contained the same items
+pertaining to improvisation, entrepreneurial intentions, and social models as
+well as items pertaining to cognitive
+style, tolerance for ambiguity, risk taking,
+and additional demographics. The
+second survey was administered three
+weeks after the first. Both surveys were
+paper-and-pencil, 10 pages long, and
+completed in class.
+
+JOURNAL OF SMALL BUSINESS MANAGEMENT
+
+Results
+Means, standard deviations, Bivariate
+Pearson correlation coefficients, and
+Cronbach’s coefficient alphas for all variables are shown in Table 2. The highest
+correlation between entrepreneurial
+intentions and the other variables was
+
+with improvisation, which accounted for
+20.3 percent ( p < .01) of the variance in
+participants’ intentions to start a new
+business (in support of H1).
+Hierarchical linear regression was
+used to test H2–6. In each analysis, the
+variable(s) for which we compared
+improvisation against were placed into
+
+Table 2
+Descriptive Statistics and Correlations for all Variablesa
+Measures
+
+Mean
+
+S.D.
+
+Improvisation
+Personality
+Agreeableness
+Conscientiousness
+Extraversion
+Openness
+Emotional Stability
+Motivation
+Self-Efficacy
+Locus of Control
+Need for Autonomy
+Tolerance for
+Ambiguity
+Risk-Taking
+Cognitive Style
+CSIb (IntuitiveAnalytical)
+KAIc (InnovatorAdaptor)
+LOGO II
+LearningOrientation
+GradeOrientation
+Social Models
+
+128.54 15.24
+
+Correlation w/
+Entrepreneurial
+Intentions
+
+Correlation w/
+Improvisation
+
+Alpha
+
+0.45**
+
+—
+
+0.87
+
+26.57
+34.50
+29.36
+24.62
+19.95
+
+4.22
+6.19
+6.82
+5.10
+6.30
+
+-0.10*
+-0.05
+0.18**
+0.06
+0.06
+
+0.07
+0.01
+0.44**
+0.22**
+0.33**
+
+0.73
+0.81
+0.87
+0.73
+0.85
+
+32.26
+2.69
+35.04
+49.21
+
+3.81
+8.50
+5.24
+8.11
+
+0.22**
+0.08
+0.01
+0.20**
+
+0.56**
+0.08
+0.25**
+0.35**
+
+0.82
+0.72
+0.68
+0.62
+
+54.30
+
+6.91
+
+0.19**
+
+0.41**
+
+0.57
+
+44.53 11.85
+
+0.26**
+
+0.42**
+
+0.85
+
+96.46 13.24
+
+0.28**
+
+0.49**
+
+0.85
+
+45.69
+
+7.61
+
+0.24**
+
+0.26**
+
+0.76
+
+43.75
+
+8.08
+
+0.06
+
+0.06
+
+0.76
+
+18.54
+
+8.67
+
+0.36**
+
+0.25**
+
+0.86
+
+a
+
+N = 430.
+CSI = cognitive style index.
+c
+KAI = Kirton adaptor innovator.
+*p < .05.
+**p < .01.
+b
+
+HMIELESKI AND CORBETT
+
+55
+
+the first block of the regression procedure, whereas improvisation was placed
+into a second block to test whether or
+not the construct accounts for any additional variance in entrepreneurial intentions. See Table 3 for results of the
+analyses.
+Personality. As shown in Table 3
+(model 1), improvisation accounted for
+
+an additional 17.1 percent ( p < .01) of
+variance in entrepreneurial intentions
+beyond the 5.4 percent ( p < .01) that was
+explained for by the five primary facets
+of personality (in support of H2).
+Motivation. As shown in Table 3
+(model 2), improvisation accounted for
+an additional 13.0 percent ( p < .01) of
+variance in entrepreneurial intentions
+
+Table 3
+Results of Hierarchical Regression Analysis†
+Models
+
+1
+
+2
+
+3
+
+4
+
+5
+
+Variables
+
+Entrepreneurial Intentions
+R2
+
+F of R2
+
+p of R2
+
+Overall R2
+
+Control Variable:
+Personalitya
+Improvisation
+
+0.054
+0.171
+
+4.822
+93.006
+
+0.000
+0.000
+
+0.054
+0.224
+
+Control Variable:
+Motivationb
+Improvisation
+
+0.098
+0.130
+
+9.162
+70.947
+
+0.000
+0.000
+
+0.098
+0.227
+
+Control Variable:
+Cognitive Stylec
+Improvisation
+
+0.133
+0.095
+
+16.348
+52.105
+
+0.000
+0.000
+
+0.133
+0.228
+
+Control Variable:
+Social Models
+Improvisation
+
+0.125
+0.141
+
+62.325
+82.118
+
+0.000
+0.000
+
+0.125
+0.268
+
+Control Variables:
+Personalitya
+Motivationb
+Cognitive Stylec
+Social Models
+Improvisation
+
+0.054
+0.074
+0.044
+0.073
+0.071
+
+4.822
+7.152
+5.459
+39.937
+42.164
+
+0.000
+0.000
+0.000
+0.000
+0.000
+
+0.054
+0.128
+0.172
+0.245
+0.315
+
+a
+Personality predictors = emotional stability, extraversion, agreeableness, contentiousness, openness.
+b
+Motivation predictors = self-efficacy, locus of control, need for autonomy, risk taking,
+tolerance for ambiguity.
+c
+Cognitive style predictors = intuitive-analytical, innovator-adaptor, learningorientation, grade-orientation.
+†
+Each of the regressions was also performed with only the significant variable, and
+the results were similar in each case to those listed here.
+
+56
+
+JOURNAL OF SMALL BUSINESS MANAGEMENT
+
+beyond the 9.8 percent ( p < .01) that was
+explained for by the measures of motivation (in support of H3).
+Cognitive Style. As shown in Table 3
+(model 3), improvisation accounted for
+an additional 9.5 percent ( p < .01) of
+variance in entrepreneurial intentions
+beyond the 13.3 percent ( p < .01) that
+was explained for by the measures of
+cognitive style (in support of H4).
+Social Models. As shown in Table 3
+(model 4), improvisation accounted for
+an additional 14.1 percent ( p < .01) of
+variance in entrepreneurial intentions
+beyond the 12.5 percent ( p < .01) that
+was explained for by social models (in
+support of H5).
+Cumulative Test. As shown in Table 3
+(model 5), improvisation accounted for
+an additional 7.1 percent ( p < .01) of
+variance in entrepreneurial intentions
+beyond the 24.5 percent ( p < .01) that
+was explained for by the combination of
+personality, motivation, cognitive style,
+and social models (in support of H6).
+Entrepreneurial Experience. As a supplementary analysis, we took a closer
+look at those participants who had some
+entrepreneurial experience. Proclivity for
+improvisation accounted for the following percentages of variance in entrepreneurial intentions: 10.2 percent (n = 28,
+p > .05) for those who had started a business, 28.1 percent (n = 74, p < .01) for
+those who had worked for a start-up,
+17.6 percent (n = 37, p < .01) for those
+who had taken a course in entrepreneurship, and 18.5 percent (n = 133,
+p < .01) overall for participants who had
+at least one of these three types of
+experience.
+
+Follow-Up Study
+Whereas some have criticized the use
+of students as subjects in behavioral research (Copeland, Francia, and
+
+Strawser 1973), there have also been
+studies that have shown that graduate
+students are good proxies for decisionmakers in business situations (Khera and
+Benson 1970). As such, we sampled 63
+(43 males and 20 females) MBA students
+in order to cross-validate our results.
+Their average age was 29 (S.D. = 4.86)
+years old. These participants were only
+asked to complete items related to their
+proclivity for improvisation, entrepreneurial intentions, and demographics.
+Fifteen had started their own business,
+18 had worked for a start-up, and 34 had
+taken a course in entrepreneurship.
+The results of the follow-up survey are
+consistent with our initial study. Proclivity for improvisation accounted for 15.2
+percent ( p < .01) of the variance in entrepreneurial intentions for this sample.
+Drilling down by entrepreneurial experience, proclivity for improvisation
+accounted for the following percentages
+of variance in entrepreneurial intentions:
+47.6 percent (n = 15, p < .01) for those
+who had started a business, 17.6 percent
+(n = 18, p < .01) for those who had
+worked for a start-up, 10.9 percent (n =
+34, p < .05) for those who had taken a
+course in entrepreneurship, and 12.3
+percent (n = 39, p < .05) overall for participants who had at least one of
+these three types of experience (see
+Table 4).
+As shown in Table 4, the follow-up
+study with MBA students generally supports the findings from the initial study
+using an undergraduate sample. There
+are, however, some notable differences
+between the amount of variance
+explained in entrepreneurial intentions
+by proclivity for improvisation between
+the undergraduate and MBA student
+samples across entrepreneurial experience. Perhaps most interesting is the difference among those who have started
+a business. For these individuals, the
+relationship between improvisation and
+entrepreneurial intentions was much
+greater for MBA students than for
+
+HMIELESKI AND CORBETT
+
+57
+
+Table 4
+Percent of Variance in Entrepreneurial Intentions
+Accounted for by Improvisation across Level of
+Entrepreneurial Experience and Sample
+Entrepreneurial Experience
+
+Percent Variance Explained
+
+Started a business
+Worked for a start-up
+Taken a course in entrepreneurship
+At least one of above three types of experience
+
+Undergraduates
+
+MBAs
+
+10.2 (28)
+28.1** (74)
+17.6** (37)
+18.5** (133)
+
+47.6** (15)
+17.6** (18)
+10.9* (34)
+12.3* (39)
+
+*p < 0.05.
+**p < 0.01.
+
+undergraduates. This may be an artifact
+of the experience of the MBA students,
+who are more likely to have started
+viable new ventures than less experienced undergraduates who are more
+likely to have started businesses as
+hobbies, experiencing fewer of the pressures that would require improvisational
+action. Conversely, a greater amount of
+variance in entrepreneurial intentions
+was accounted for by proclivity for
+improvisation by undergraduates as compared to MBA students among those who
+have worked for a start-up and those
+who have taken an entrepreneurship
+course. This suggests that entrepreneurship experts and practitioner might have
+a greater effect on the entrepreneurial
+intentions of undergraduate than their
+more “real world” experienced MBA
+student counterparts.
+
+Discussion
+As indicated by our results, it seems
+that improvisation is an important construct to consider in regard to entrepreneurial intentions in that it appears to
+add explanatory value above and beyond
+other significant predictors, such as
+
+58
+
+measures of personality, motivation,
+cognitive style, and social models that
+have been previously established in the
+literature. More specifically, our results
+suggest that nascent entrepreneurs, on
+average, exhibit a proclivity for improvisation. Important implications related to
+this point are briefly discussed below in
+terms of future research, education, and
+practice.
+Two forms of action have dominated
+the
+literature
+on
+entrepreneurial
+behavior—strategic planning (Shane and
+Venkataraman 2000) and cognitive
+heuristics and biases (Busenitz and
+Barney 1997). In the current article, we
+have suggested that improvisation is a
+third and equally important component
+in the entrepreneurial process. Earlier,
+we illustrated in a 2 ¥ 2 matrix the different types of entrepreneurial action
+that are likely to be appropriate when
+considering the novelty of the situation
+and level of resource constraints (see
+Figure 1). In light of our results, we
+wonder whether nascent entrepreneurs
+improvise in situations in which they
+should actually enact strategic plans or
+cognitive heuristics and biases (for
+
+JOURNAL OF SMALL BUSINESS MANAGEMENT
+
+example, when novelty and resource
+constraints are low). Our suspicion of
+excessive improvisation is consistent
+with research indicating that entrepreneurs suffer from a tendency to be overconfident (Cooper, Woo, and Dunkelberg
+1988), and could prove to be an elemental reason for the failure of some
+start-ups. Future research could make
+important contributions to our understanding of entrepreneurial behavior by
+investigating whether entrepreneurs do,
+in fact, overimprovise.
+The concept of intention implies
+planned behavior (Ajzen 1991). In other
+words, by saying that an individual
+intends to start a business, we are assuming that the individual intends to plan for
+the eventuality of starting a business. In
+fact, a portion of our measure of entrepreneurial intentions was the extent to
+which the individual had begun planning
+for the creation of a start-up. Conversely,
+the concept of improvisation implies
+deviation from a plan or, at an extreme,
+operating without a plan. Therefore,
+individuals who have a proclivity for
+improvisation might not “intend” to start
+a business, but may spontaneously
+undertake in the creation of a new
+venture if an opportunity to do so presents itself. Therefore, proclivity for
+improvisation might predict a greater
+proportion of variance in the actual decision to start a business than in entrepreneurial intentions. Future research can
+answer this question through longitudinally investigating the proclivity for
+improvising as a predictor of new
+venture creation.
+Since nascent entrepreneurs appear to
+exhibit a proclivity for improvisation and
+improvisation seems to play an important role in the entrepreneurial process
+(Baker, Miner, and Eesley 2003), it might
+prove worthwhile to consider how
+improvisation can be infused into entrepreneurship curriculums. For example,
+simulations and role-playing exercises
+might be used to help strengthen
+
+students’ improvisational capabilities.
+Further, capstone courses might focus on
+how to deviate from strategic plans in
+order to take advantage opportunities
+and solve problems as they arise.
+In regard to practice, entrepreneurs
+should develop a balance in the makeup
+of their founding teams with respect to
+improvisational competencies and inclinations. Teams should be neither too
+rigid so as to miss opportunities nor too
+improvisational to the point where their
+firms struggle to establish stability.
+Further, it is important for entrepreneurs
+to understand that they are less likely to
+be successful at improvising in domains
+in which they have little expertise
+(Crossan 1998). This is an important
+point for entrepreneurs to consider when
+assessing the level of risk associated with
+unique opportunities.
+
+Limitations
+In regard to the generalizability of our
+results, there are some limitations that
+are worthy of discussion. First is the use
+of a student sample. One could argue
+that our findings might have differed if
+we had considered an older and more
+experienced sample. We agree with this
+presumption, but also advocate the
+importance of studying the intentions
+of students who, through university
+incubator programs and the increased
+infusion of entrepreneurship across
+educational curriculums, experience
+increasingly lower barriers to starting
+their own businesses. Additionally, previous entrepreneurship research (Crant
+1996; Gartner 1989) has stated that using
+a student population may be more
+appropriate than using other samples
+when researching individual differences
+and vocational intentions. It is worthy to
+note that most of the participants in our
+sample were studying in technical fields
+(for example, biotechnology and nanotechnology), and clearly have the
+potential to start high-growth firms in
+emerging areas of industry. In fact, 28 of
+
+HMIELESKI AND CORBETT
+
+59
+
+the participants had already started their
+own firms and 74 had experience
+working
+for
+start-ups. Therefore,
+although perhaps narrow, our sampling
+frame represents an important population from which future entrepreneurs
+will spawn. In support of the generalizability of our results, we found a similar
+relationship between proclivity for
+improvisation and entrepreneurial intentions in a survey of older and more experienced MBA students. An additional
+limitation is the cross-section design of
+our study. Although, there is much evidence concerning intentions as a robust
+predictor of future behavior (Ajzen
+1991), a preferable design would adopt
+a longitudinal approach that follows up
+to see which participants actually start
+their own business.
+
+Conclusions
+The study of individual differences in
+entrepreneurship has met with inconclusive results, in part, because of the failure
+to link characteristics of individuals to
+the actual behavioral tendencies of entrepreneurs (Shaver and Scott 1991). This
+study attempted to bridge this gap by
+considering improvisation, a mode of
+action frequently engaged in by entrepreneurs (Baker, Miner, and Eesley
+2003), as an individual difference characteristic. Our findings indicate that
+proclivity for improvisation can provide
+additional information regarding why
+individuals intend to become entrepreneurs beyond that which can be found
+in measures of personality, motivation,
+cognitive style, and social models. The
+next step in this line of research is to
+investigate how proclivity for improvisation relates to actual firm founding and
+subsequent success at various stages of
+the entrepreneurial process.
+
+References
+Ajzen, I. (1991). “Theory of Planned
+Behavior,” Organizational Behavior
+
+60
+
+and Human Decision Processes 50,
+179–211.
+Allison, C. W., and J. Hayes (1996). “The
+Cognitive Style Index: A Measure of
+Intuition-Analysis for Organizational
+Research,” Journal of Management
+Studies 33, 119–135.
+Ambrose, M. L., and C. T. Kulik (1999).
+“Old Friends, New Faces: Motivation
+Research in the 1990’s,” Journal of
+Management 25, 231–292.
+Baker, T., A. Miner, and D. Eesley (2003).
+“Improvising
+Firms:
+Bricolage,
+Account Giving, and Improvisational
+Competency
+in
+the
+Founding
+Process,” Research Policy 32, 255–276.
+Baron, R. A., and T. B. Ward (2004).
+“Expanding the Entrepreneurial Cognitions Toolbox: Potential Contributions from the Field of Cognitive
+Science,” Entrepreneurship Theory &
+Practice 28(6), 553–573.
+Baron, R. A. (1991). “Motivation in Work
+Settings: Reflections on the Core of
+Organizational Research,” Motivation
+and Emotions 15, 1–43.
+——— (1998). “Cognitive Mechanisms in
+Entrepreneurship: Why and When
+Entrepreneurs Think Differently Than
+Other People,” Journal of Business
+Venturing 13, 275–294.
+——— (2004). “The Cognitive Perspective: A Valuable Tool for Answering
+Entrepreneurship’s Basic ‘Why’ Questions,” Journal of Business Venturing
+19(2), 221–239.
+Begley, T. M., and D. P. Boyd (1987). “A
+Comparison of Entrepreneurs and
+Managers of Small Business Firms,”
+Journal of Management 13, 99–108.
+Bird, B. J. (1988). “Implementing Entrepreneurial Ideas: The Case for Intentions,” Academy of Management
+Review 13(3), 442–453.
+Brockhaus, R. H. (1980). “Risk-Taking
+Propensity
+of
+Entrepreneurs,”
+Academy of Management Journal 23,
+509–520.
+Brown, S. L., and K. M. Eisenhardt
+(1997). “The Art of Continuous
+
+JOURNAL OF SMALL BUSINESS MANAGEMENT
+
+Change: Linking Complexity Theory
+and Time-Paced Evolution in Relentlessly Shifting Organizations,” Administrative Science Quarterly 42(1),
+1–34.
+Budner, S. (1962). “Intolerance of Ambiguity As a Personality Variable,”
+Journal of Personality 30, 29–50.
+Busenitz, L. W., and J. B. Barney (1997).
+“Differences Between Entrepreneurs
+and Managers in Large Organizations:
+Biases and Heuristics in Strategic
+Decision-Making,” Journal of Business
+Venturing 12, 9–30.
+Calvert, G. (1993). Highwire Management. Hoboken, New Jersey: JosseyBass.
+Carland, J. W., F. Hoy, W. R. Boulton, and
+J. C. Carland (1984). “Differentiating
+Entrepreneurs from Small Business
+Owners:
+A
+Conceptualization,”
+Academy of Management Review 9(2),
+354–359.
+Chen, C. C., P. G. Greene, and A. Crick
+(1998). “Does Entrepreneurial SelfEfficacy Distinguish Entrepreneurs
+from Managers?” Journal of Business
+Venturing 13, 295–316.
+Ciavarella, M. A., A. K. Buchholtz, C. M.
+Riordan, R. D. Gatewood, and G. S.
+Stokes (2004). “The Big Five and
+Venture Survival: Is There a Linkage?”
+Journal of Business Venturing 19(4),
+465–483.
+Cooper, A. C., C. Y. Woo, and W. C.
+Dunkelberg (1988). “Entrepreneurs’
+Perceived Chances for Success,”
+Journal of Business Venturing 3,
+97–108.
+Copeland, R. M., A. J. Francia, and R. H.
+Strawser (1973). “Students As Subjects
+in Behavioral Research,” Accounting
+Review 48, 365–372.
+Corbett, A. C. (2005). “Experiential Learning Within the Process of Opportunity
+Identification and Exploitation,” Entrepreneurship Theory & Practice 29(4),
+473–491.
+Corbett, A. C. (forthcoming). “Learning
+Asymmetries and the Discovery
+
+of Entrepreneurial Opportunities,”
+Journal of Business Venturing.
+Costa, P. T., and R. R. McCrae (1992).
+Revised NEO Personality Inventory
+(NEO-PI-R) and NEO Five-Factor
+Inventory (NEO-FFI) Professional
+Manual. Odessa, FL: Psychological
+Assessment Resources.
+Crant, J. M. (1996). “The Proactive Personality Scale as a Predictor of Entrepreneurial Intentions,” Journal of
+Small Business Management 34(3),
+42–49.
+Cromie, S. (1987). “Motivations of Aspiring Male and Female Entrepreneurs,”
+Journal of Occupational Behavior
+8(3), 251–261.
+Crossan, M. (1998). “Improvisation in
+Action,” Organization Science 9(5),
+593–599.
+De Noble, A. F., D. Jung, and S. B. Ehrlich
+(1999). “Entrepreneurial Self-Efficacy:
+The Development of a Measure and
+its Relationship to Entrepreneurial
+Action,” in Frontiers for Entrepreneurship Research. Ed. P. Reynolds, W.
+Bygrave, S. Manigart, C. Mason, G.
+Meyer, H. Sapienza, and K. Shaver.
+Wellsley, MA: Babson College.
+Deci, E. L., and R. M. Ryan (2000).
+“The ‘What’ and ‘Why’ of Goal
+Pursuits: Human Needs and the SelfDetermination of Behavior,” Psychological Inquiry 11, 227–268.
+Eisenhardt, K. M., and B. N. Tabrizi (1995).
+“Accelerating Adaptive Processes:
+Product Innovation in the Global
+Computer Industry,” Administrative
+Science Quarterly 40(1), 84–110.
+Eison, J., and H. R. Pollio (1990). LOGO
+II: A User’s Manual. Knoxville: Learning Research Center, University of
+Tennessee.
+Gartner, W. B. (1989). “Some Suggestions for Research on Entrepreneurial
+Traits and Characteristics,” Entrepreneurship Theory and Practice 14(1),
+27–37.
+Gilad, B. (1982). “On Encouraging Entrepreneurship: An Interdisciplinary
+
+HMIELESKI AND CORBETT
+
+61
+
+Analysis,” Journal of Behavioral Economics 11, 132–163.
+Goldberg, L. R. (1999). International Personality Item Pool: A Scientific Collaboratory for the Development of
+Advanced Measures of Personality
+and Other Individual Differences
+(Available online at http://ipip.ori.
+org/ipip/).
+Greve, A., and J. W. Salaff (2003). “Social
+Networks and Entrepreneurship,”
+Entrepreneurship Theory & Practice
+28(1), 1–22.
+Hisrich, R. D. (1990). “Entrepreneurship/Intrapreneurship,”
+American
+Psychologist 45(2), 209–222.
+Hmieleski, K. M., and A. C. Corbett
+(2003). “Improvisation As a Framework for Investigating Entrepreneurial
+Action,” in Academy of Management
+Best Paper Proceedings. Ed. D. H.
+Nagao. Briarcliff Manor, NY, F1–F6.
+Hogan, J., and B. Holland (2003). “Using
+Theory to Evaluate Personality and
+Job-Performance Relations: A Socioanalytic Perspective,” Journal of Applied
+Psychology 88(1), 100–112.
+Hurtz, G. M., and J. J. Donovan (2000).
+“Personality and Job Performance, The
+Big Five Revisited,” Journal of Applied
+Psychology 85(6), 869–879.
+Judge, T. A., and J. E. Bono (2000). “FiveFactor Model of Personality and Transformational Leadership,” Journal of
+Applied Psychology 85(5), 751–765.
+Khera, I. P., and J. D. Benson (1970). “Are
+Students Really Poor Substitutes for
+Businessmen in Behavioral Research?”
+Journal of Marketing Research 7,
+529–532.
+Kirton, M. J., and S. Pender (1982). “The
+Adaptation-Innovation
+Continuum,
+Occupational Type, and the Course
+Selection,” Psychological Reports 51,
+883–886.
+Levi-Strauss, C. (1966). The Savage Mind.
+Chicago: University of Chicago Press.
+Levinson, H. (1980). “Differentiating
+Among Internality, Powerful Others,
+and Chance,” in Research with the
+
+62
+
+Locus of Control Construct. Ed. H. M.
+Lefcourt. Vol. 1. New York: Academic
+Press, 15–63.
+Miner, A. S., P. Bassoff, and C. Moorman
+(2001). “Organizational Improvisation
+and Learning: A Field Study,” Administrative Science Quarterly 46, 304–
+337.
+Moorman, C., and A. S. Miner (1998).
+“The Convergence of Planning and
+Execution: Improvisation in New
+Product Development,” Journal of
+Marketing 61, 1–20.
+Reynolds, P. D., W. D. Bygrave, E. Autio,
+L. W. Cox, and M. Hay (2002). Global
+Entrepreneurship Monitor. Kansas
+City, MO: Ewing Marion Kauffman
+Foundation.
+Schwarzer, R. (1993). Measurement of
+Perceived Self-Efficacy: Psychometric
+Scales for Cross-cultural Research.
+Berlin, Germany: Freie Universität
+Berlin.
+Shane, S., E. Locke, and C. Collins (2003).
+“Entrepreneurial Motivation,” Human
+Resource Management Review 13(2),
+257–279.
+Shane, S., and S. Venkataraman (2000).
+“The Promise of Entrepreneurship As
+a Field of Research,” Academy of Management Review 25(1), 217–226.
+Shaver, K., and L. Scott (1991). “Person,
+Process, Choice: The Psychology of
+New Venture Creation,” Entrepreneurship Theory and Practice 16(2),
+23–45.
+Singh, G., A. F. De Noble, and L.
+Kalousova (2002). “The Big-Five Personality Factors and Entrepreneurial
+Intention,” Paper presented at the
+Kauffman Foundation Entrepreneurship Research Conference, Babson
+College, Boulder, CO.
+Stewart, W. H. Jr., W. E. Watson, J. C.
+Carland, and J. W. Carland (1998). “A
+Proclivity for Entrepreneurship: A
+Comparison of Entrepreneurs, Small
+Business Owners, and Corporate
+Managers,” Journal of Business Venturing 14(2), 189–214.
+
+JOURNAL OF SMALL BUSINESS MANAGEMENT
+
+Tierney, P., S. M. Farmer, and G. B.
+Graen (1999). “An Examination of
+Leadership and Employee Creativity:
+The Relevance of Traits and Relationships,” Personnel Psychology 52(3),
+591–620.
+Unger, L. S., and J. B. Kernan (1983). “On
+the Meaning of Leisure: An Investigation of Some Determinants of the
+Subjective Experience,” Journal of
+Consumer Research 9(4), 381–392.
+Vecchio, R. (2003). “Entrepreneurship
+and Leadership: Common Trends and
+Common Threads,” Human Resource
+Management Review 13(2), 303–327.
+Venkataraman, S., A. Van de Ven, J.
+Buckeye, and R. Hudson (1990).
+“Starting Up in a Turbulent Environment: A Process Model of Failure
+
+Among Firms with High Customer
+Dependence,” Journal of Business
+Venturing 5(5), 277–295.
+Venkataraman, S. (1997). “The Distinctive
+Domain
+of
+Entrepreneurship
+Research,” in Advances in Entrepreneurship, Firm Emergence and
+Growth. Eds. J. Katz and R. Brockhaus.
+Greenwich, CT: JAI Press, 119–138.
+Vera, D. M. (2002). Improvisation and its
+Impact on Performance. Unpublished
+Doctoral Thesis, University of Western
+Ontario.
+Wooten, K. C., T. A. Timmerman, and R.
+Folger (1999). “The Use of Personality
+and the Five-Factor Model to Predict
+New Business Ventures: From Outplacement to Start-Up,” Journal of
+Vocational Behavior 54(1), 82–101.
+
+HMIELESKI AND CORBETT
+
+63
+
+

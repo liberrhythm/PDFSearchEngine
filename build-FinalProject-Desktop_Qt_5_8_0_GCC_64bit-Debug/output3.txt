@@ -1,0 +1,373 @@
+Contemporary Educational Psychology 25, 82–91, (2000)
+doi:10.1006/ceps.1999.1016, available online at http://www.idealibrary.com on
+
+Self-Efficacy: An Essential Motive to Learn
+Barry J. Zimmerman
+Graduate School and University Center of City University of New York
+During the past two decades, self-efficacy has emerged as a highly effective predictor of students’ motivation and learning. As a performance-based measure of
+perceived capability, self-efficacy differs conceptually and psychometrically from
+related motivational constructs, such as outcome expectations, self-concept, or locus
+of control. Researchers have succeeded in verifying its discriminant validity as well
+as convergent validity in predicting common motivational outcomes, such as students’ activity choices, effort, persistence, and emotional reactions. Self-efficacy
+beliefs have been found to be sensitive to subtle changes in students’ performance
+context, to interact with self-regulated learning processes, and to mediate students’
+academic achievement.  2000 Academic Press
+
+Educators have long recognized that students’ beliefs about their academic
+capabilities play an essential role in their motivation to achieve, but selfconceptions regarding academic performance initially proved difficult to
+measure in a scientifically valid way. Initial efforts to study students’ selfbeliefs gave little attention to the role of environmental influences, such as
+specific features of performance contexts or domains of academic functioning. In the late 1970s, a number of researchers began to assess self-beliefs
+in a more task-specific way, and one of the most important of these efforts
+focused on self-efficacy. In 1977(a) Bandura proposed a theory of the origins,
+mediating mechanisms, and diverse effects of beliefs of personal efficacy,
+and he provided guidelines for measurement of self-efficacy beliefs for different domains of functioning. In the present article, I define self-efficacy
+and distinguish it from related conceptions in the literature, describe its role
+in academic motivation and learning (with special attention to students’ capabilities to regulate their own learning activities), and discuss its susceptibility
+to instruction and other social-cultural influences. Because of space limitations, I cite only key studies and do not consider other issues such as theoretiI express my gratitude to Frank Pajares and Manuel Martinez-Pons for their helpful comments on an earlier draft of this article.
+Address correspondence and reprint requests to Barry J. Zimmerman, Educational psychology Program, CUNY Graduate School, 365 Fifth Ave., New York, NY 10016-4309.
+82
+0361-476X/00 $35.00
+
+Copyright  2000 by Academic Press
+All rights of reproduction in any form reserved.
+
+SELF-EFFICACY BELIEFS
+
+83
+
+cal controversies or gender differences in self-efficacy. For comprehensive
+reviews of research on academic self-efficacy, I recommend Bandura (1997),
+Pajares (1996b, 1997), Schunk (1989), and Zimmerman (1995).
+SELF-EFFICACY AND ITS DIMENSIONS
+
+Before Bandura (1977a) introduced self-efficacy as a key component in
+social cognitive theory, he discussed human motivation primarily in terms
+of outcome expectations. However, during the treatment of phobic individuals with mastery modeling techniques, individual differences in generalization were found regardless of the fact that all subjects could successfully
+interact with the target of their fear (e.g., touch a snake or dog) without
+adverse consequences at the end of therapy. Although the subjects developed
+a strong outcome expectancy that proper techniques (e.g., for handling a
+snake or dog) would protect them from adverse consequences (such as biting), they still differed in their perceived capabilities to use the techniques
+outside the therapeutic setting. Bandura labeled this individual difference
+self-efficacy and sought to measure it using task-specific scales. Although
+self-efficacy and outcome expectations were both hypothesized to affect motivation, he suggested that self-efficacy would play a larger role because ‘‘the
+types of outcomes people anticipate depend largely on their judgments of
+how well they will be able to perform in given situations’’ (Bandura, 1986,
+p. 392).
+Bandura (1977a, 1997) formally defined perceived self-efficacy as personal judgments of one’s capabilities to organize and execute courses of
+action to attain designated goals, and he sought to assess its level, generality,
+and strength across activities and contexts. The level of self-efficacy refers
+to its dependence on the difficulty of a particular task, such as spelling words
+of increasing difficulty; generality pertains to the transferability of self-efficacy beliefs across activities, such as from algebra to statistics; strength of
+perceived efficacy is measured by the amount of one’s certainty about performing a given task. These properties of self-efficacy judgments are measured using questionnaire items that are task specific, vary in difficulty, and
+capture degrees of confidence (e.g., from 0 to 100%).
+With regard to their content, self-efficacy measures focus on performance
+capabilities rather than on personal qualities, such as one’s physical or psychological characteristics. Respondents judge their capabilities to fulfill
+given task demands, such as solving fraction problems in arithmetic, not who
+they are personally or how they feel about themselves in general. Self-efficacy beliefs are not a single disposition but rather are multidimensional in
+form and differ on the basis of the domain of functioning. For example,
+efficacy beliefs about performing on a history test may differ from beliefs
+about a biology examination. Self-efficacy measures are also designed to be
+
+84
+
+BARRY J. ZIMMERMAN
+
+sensitive to variations in performance context, such as learning in a noisy
+lounge compared to the quietude of the library. In addition, perceptions of
+efficacy depend on a mastery criterion of performance rather than on normative or other criteria. For example, students rate their certainty about solving
+a crossword puzzle of a particular difficulty level, not how well they expect
+to do on the puzzle in comparison to other students. Finally, self-efficacy
+judgments specifically refer to future functioning and are assessed before
+students perform the relevant activities. This antecedent property positions
+self-efficacy judgments to play a causal role in academic motivation.
+SELF-EFFICACY AND RELATED BELIEFS
+
+Self-efficacy beliefs differ conceptually and psychometrically from
+closely related constructs, such as outcome expectations, self-concept, and
+perceived control. The conceptual distinction that Bandura (1986) drew between academic self-efficacy and outcome expectancies was studied psychometrically in research on reading and writing achievement. Shell, Murphy,
+and Bruning (1989) measured self-efficacy in terms of perceived capability
+to perform various reading and writing activities, and they assessed outcome
+expectancies regarding the value of these activities in attaining various outcomes in employment, social pursuits, family life, education, and citizenship.
+Efficacy beliefs and outcome expectancies jointly predicted 32% of the variance in reading achievement, with perceived efficacy accounting for virtually
+all the variance. Only perceived self-efficacy was a significant predictor of
+writing achievement. These results not only show the discriminant validity
+of self-efficacy measures, they support Bandura’s contention that self-efficacy plays a larger role than outcome expectancies in motivation.
+One of closest constructs to self-efficacy is self-concept. The latter belief
+is a more general self-descriptive construct that incorporates many forms
+of self-knowledge and self-evaluative feelings (Marsh & Shavelson, 1985).
+Historically, self-concept was defined by phenomenologists (e.g., Rogers,
+1951) as a global perception of oneself and one’s self-esteem reactions to
+that self-perception, but this global measure of self-belief was not found to be
+related consistently to students’ academic performance (Hattie, 1992; Wylie,
+1968). Perhaps as a result, a number of theorists (e.g., Harter, 1978; Marsh &
+Shavelson, 1985) reconceptualized self-concept as a hierarchical construct,
+with a global self-concept at the apex of a self-hierarchy but added subcategories such as academic self-concept in the middle of the hierarchy and academic domain-specific self-concepts at the bottom. The latter self-concept
+measures emphasize self-esteem reactions by posing self-evaluative questions, such as ‘‘How good are you a in English?’’ By contrast, self-efficacy
+items focus exclusively on task-specific performance expectations, such as
+‘‘How certain are you that you can diagram this sentence?’’ Although prior
+task reactions and future performance expectations are often correlated,
+
+SELF-EFFICACY BELIEFS
+
+85
+
+Bandura (1997) notes it is possible conceptually to have high self-efficacy
+about a capability that one does not particularly esteem as well as the reverse.
+There is growing evidence that, although self-efficacy beliefs are correlated with domain-specific self-concepts, self-efficacy measures offer predictive advantages when a task is familiar and can be specified precisely.
+For example, Pajares and Miller (1994) used path analysis procedures to
+examine the predictive and mediational roles of these two constructs in mathematical problem solving by college students. Math self-efficacy was more
+predictive of problem solving than was math self-concept or, for that matter,
+perceived usefulness of mathematics, prior experience with mathematics, or
+gender. The effect of prior math experiences on math problem solving was
+mediated primarily by self-efficacy beliefs, but self-concept played a small
+but significant role. Thus, when self-concept and self-efficacy beliefs are
+both included in regression equations, self-efficacy beliefs display discriminant validity by independently predicting future academic achievement. Although self-efficacy questionnaire items should be adapted to specific tasks,
+the scope of these tasks can vary on the basis of the user’s intended purpose,
+ranging from proficiency in an academic domain (e.g., writing or mathematics) to proficiency in a subskill (e.g., grammar or fractions). This second
+criterion for developing self-efficacy measures involves their correspondence to the performance capability in question. Pajares (1996a) demonstrated that the predictiveness of self-efficacy measures increases as a function of both their specificity and correspondence to a skill. Thus, self-efficacy
+differs from self-concept in both its specificity and correspondence to varying performance tasks and contexts.
+Another closely associated construct to self-efficacy is perceived control,
+which emerged from research on locus of control (Rotter, 1966). Perceived
+control refers to general expectancies about whether outcomes are controlled
+by one’s behavior or by external forces, and it is theorized that an internal
+locus of control should support self-directed courses of action, whereas an
+external locus of control should discourage them. Locus-of-control scales
+are neither task nor domain specific in their item content but rather refer to
+general beliefs about the internality or externality of causality. Bandura
+(1986) has questioned the value of general control beliefs because students
+may feel anxious about controlling one type of subject matter or performance
+setting (e.g., solving mathematical problems in a limited time period) but
+not others. In support of this contention, Smith (1989) found that locus of
+control measures did not predict improvements in academic performance
+or reductions in anxiety in highly self-anxious students who underwent an
+intensive coping skills training program, but self-efficacy scales did predict
+such improvements.
+In summary, measures of self-efficacy are not only conceptually distinctive from closely associated constructs such as outcome expectancies, self-
+
+86
+
+BARRY J. ZIMMERMAN
+
+concept, and perceived control, they have discriminant validity in predicting
+a variety of academic outcomes.
+ROLE OF SELF-EFFICACY IN ACADEMIC MOTIVATION
+
+Self-efficacy beliefs have also shown convergent validity in influencing
+such key indices of academic motivation as choice of activities, level of
+effort, persistence, and emotional reactions. There is evidence (Bandura,
+1997) that self-efficacious students participate more readily, work harder,
+persist longer, and have fewer adverse emotional reactions when they encounter difficulties than do those who doubt their capabilities.
+In terms of choice of activities, self-efficacious students undertake difficult
+and challenging tasks more readily than do inefficacious students. Bandura
+and Schunk (1981) found that students’ mathematical self-efficacy beliefs
+were predictive of their choice of engaging in subtraction problems rather
+than in a different type of task: The higher the children’s sense of efficacy,
+the greater their choice of the arithmetic activity. Zimmerman and Kitsantas
+(1997; 1999) also found self-efficacy to be highly correlated with students’
+rated intrinsic interest in a motoric learning task as well as in a writing revision task. Furthermore, measures of self-efficacy correlate significantly with
+students’ choice of majors in college, success in course work, and perseverance (Hackett & Betz, 1989; Lent, Brown, & Larkin, 1984).
+Self-efficacy beliefs are predictive of two measures of students’ effort:
+rate of performance and expenditure of energy. For example, Schunk and
+colleagues found that perceived self-efficacy for learning correlates positively with students’ rate of solution of arithmetic problems (Schunk & Hanson, 1985; Schunk, Hanson, & Cox, 1987). Salomon (1984) has found that
+self-efficacy is positively related to self-rated mental effort and achievement
+during students’ learning from text material that was perceived as difficult.
+Regarding the effects of perceived self-efficacy on persistence, path analyses
+have shown that it influences students’ skill acquisition both directly and
+indirectly by increasing their persistence (Schunk, 1981). The direct effect
+indicates that perceived self-efficacy influences students’ methods of learning as well as their motivational processes. These results validate the mediational role that self-efficacy plays in motivating persistence and academic
+achievement. In a meta-analytic review of nearly 70 studies of persistence
+and rate measures of motivation, Multon, Brown, and Lent (1991) found a
+significant positive effect size of students’ self-efficacy beliefs.
+Student’s beliefs about their efficacy to manage academic task demands
+can also influence them emotionally by decreasing their stress, anxiety, and
+depression (Bandura, 1997). For example, Pajares and Kranzler (1995) have
+studied the relationship between self-efficacy and students’ anxiety reactions
+regarding mathematics. Although the two measures were negatively correlated, only self-efficacy was predictive of mathematics performance when
+
+SELF-EFFICACY BELIEFS
+
+87
+
+compared in a joint path analysis. There is also evidence that students’ performance in academically threatening situations depends more on efficacy
+beliefs than on anxiety arousal. Siegel, Galassi, and Ware (1985) found that
+self-efficacy beliefs are more predictive of math performance than is math
+anxiety. The strength of efficacy beliefs accounted for more than 13% of the
+variance in their final math grades, whereas math anxiety did not prove to
+be a significant predictor. These studies provide clear evidence of the discriminant and predictive validity of self-efficacy measures, and they suggest
+particular benefit if educators focus on fostering a positive sense of personal
+efficacy rather than merely diminishing scholastic anxiety.
+SELF-EFFICACY AND SELF-REGULATION OF LEARNING
+
+Self-efficacy beliefs also provide students with a sense of agency to motivate their learning through use of such self-regulatory processes as goal setting, self-monitoring, self-evaluation, and strategy use. For example, there
+is evidence (Zimmerman, Bandura, & Martinez-Pons, 1992) that the more
+capable students judge themselves to be, the more challenging the goals they
+embrace. When self-efficacy and personal goal setting from the beginning
+of a school term were used jointly to predict final course grades in high
+school social studies, they increased prediction by 31% over a measure of
+prior grades in social studies. Similarly, when self-efficacy and personal goal
+setting were compared with the verbal subscale of the Scholastic Aptitude
+Test, there was an increase of 35% in predicting college students’ final grades
+in a writing course (Zimmerman & Bandura, 1994). Although prior course
+grades and general measures of ability are considered exemplary predictors
+of achievement, these studies demonstrated that self-efficacy beliefs and goal
+setting add significantly to the predictiveness of these measures.
+The effects of efficacy beliefs on students’ self-monitoring was studied
+during concept learning (Bouffard-Bouchard, Parent, & Larivee, 1991). Efficacious students were better at monitoring their working time, more persistent, less likely to reject correct hypotheses prematurely, and better at solving
+conceptual problems than inefficacious students of equal ability. Self-efficacy beliefs also affect the self-evaluation standards students use to judge the
+outcomes of their self-monitoring. In a path analytic study (Zimmerman &
+Bandura, 1994), self-efficacy for writing beliefs significantly predicted college students’ personal standards for the quality of writing considered selfsatisfying as well as their goal setting and writing proficiency. Self-efficacy
+beliefs also motivate students’ use of learning strategies. With fifth, eighth,
+and eleventh grade students, there were developmental increases in perceived
+verbal and mathematical efficacy as well as strategy use, and there was a
+substantial relation (16 to 18% shared variance) between efficacy beliefs
+and strategy use across the three grade levels of schooling (Zimmerman &
+Martinez-Pons, 1990).
+
+88
+
+BARRY J. ZIMMERMAN
+
+The greater motivation and self-regulation of learning of self-efficacious
+students produces higher academic achievement according to a range of measures. Multon, Brown, and Lent (1991) found an overall effect size of .38,
+indicating that self-efficacy accounted for approximately 14% of the variance
+in students’ academic performance across a variety of student samples, experimental designs, and criterion measures. This represents further evidence
+of the convergent validity of self-efficacy beliefs.
+INSTRUCTIONAL AND SOCIAL INFLUENCES ON SELF-EFFICACY
+BELIEFS
+
+In contrast to trait measures of self-perceptions, self-efficacy indices focus
+on cognitive beliefs that are readily influenced by four types of experience:
+enactive attainment, vicarious experience, verbal persuasion, and physiological states. Enactive experiences are the most influential source of efficacy
+belief because they are predicated on the outcomes of personal experiences,
+whereas vicarious influences depend on an observer’s self-comparison with
+as well as outcomes attained by a model. If a model is viewed as more able
+or talented, observers will discount the relevance of the model’s performance
+outcomes for themselves. Verbal persuasion has an even more limited impact
+on students’ self-efficacy because outcomes are described, not directly witnessed, and thus depend on the credibility of the persuader. Finally, students
+base their self-efficacy judgments on their perceived physiological reactions,
+such as fatigue, stress, and other emotions that are often interpreted as indicators of physical incapability. Unlike self-beliefs assumed to have trait-like
+stability across time and setting, self-efficacy is assumed to be responsive
+to changes in personal context and outcomes, whether experienced directly,
+vicariously, verbally, or physiologically. As a result of this sensitivity, selfefficacy beliefs are studied as indicators of change during instructional interventions as well as indicators of initial individual differences.
+To facilitate improvements in perceived efficacy, researchers have trained
+students with learning and motivational deficiencies by modeling specific
+self-regulatory techniques, describing their form, and providing enactive
+feedback regarding their impact. For example, youngsters who observed an
+adult model the use a cognitive strategy had significantly higher levels of
+perceived efficacy and academic skills than youngsters who received didactic
+instruction (Schunk, 1981). Asking students to set proximal goals enhanced
+self-efficacy and skill development more effectively than asking them to set
+distal goals because the proximal attainments provide evidence of growing
+capability (Bandura & Schunk, 1981). Verbally encouraging students to set
+their own goals improved not only their efficacy beliefs and achievement
+but also their commitment to attaining the goals (Schunk, 1985). The frequency and immediacy of enactive feedback also created higher perceptions
+of personal efficacy (Schunk, 1983). When students were taught to attribute
+
+SELF-EFFICACY BELIEFS
+
+89
+
+their enactive feedback to effort, they perceived greater progress, maintained
+higher motivation, and reported greater efficacy for further learning (Schunk,
+1987). In these investigations, Schunk and his colleagues not only demonstrated the sensitivity of efficacy beliefs to instructional interventions, but
+also the mediational role of these beliefs in explaining changes in learners’
+self-regulation and achievement outcomes (Berry, 1987; Schunk, 1981).
+Self-efficacy beliefs increased prediction of academic outcomes as much as
+25% of the variance above instructional influences. Clearly, students’ selfefficacy beliefs are responsive to changes in instructional experience and
+play a causal role in students’ development and use of academic competencies.
+CONCLUSION
+
+Students’ self-perceptions of efficacy are distinctive from related motivational constructs because of their specificity and close correspondence to
+performance tasks. These cognitive beliefs differ conceptually and psychometrically from trait self-belief measures due to their sensitivity to variations
+in experience and task and situational context. Two decades of research have
+clearly established the validity of self-efficacy as a predictor of students’
+motivation and learning. Although self-efficacy correlates with other related
+constructs, it has also shown discriminant validity by its unique predictiveness of these outcomes when included in multiple regression analyses. It has
+shown convergent validity in predicting diverse forms of motivation, such
+as students’ activity choices, effort, persistence, and emotional reactions. Finally, when studied as a mediating variable in training studies, self-efficacy
+has proven to be responsive to improvements in students’ methods of learning (especially those involving greater self-regulation) and predictive of
+achievement outcomes. This empirical evidence of its role as a potent mediator of students’ learning and motivation confirms the historic wisdom of
+educators that students’ self-beliefs about academic capabilities do play an
+essential role in their motivation to achieve.
+REFERENCES
+Bandura, A. (1977a). Self-efficacy: Toward a unifying theory of behavior change. Psychological Review, 84, 191–215.
+Bandura, A. (1977b). Social learning theory. Englewood Cliffs, NJ: Prentice–Hall.
+Bandura, A. (1986). Social foundations of thought and action: A social cognitive theory. Englewood Cliffs, NJ: Prentice–Hall.
+Bandura, A. (1997). Self-efficacy: The exercise of control. New York: Freeman.
+Bandura, A., & Schunk, D. H. (1981). Cultivating competence, self-efficacy, and intrinsic
+interest through proximal self-motivation. Journal of Personality and Social Psychology,
+41, 586–598.
+
+90
+
+BARRY J. ZIMMERMAN
+
+Berry, J. M. (1987, September). A self-efficacy model of memory performance. Paper presented
+at the meeting of the American Psychological Association, New York.
+Bouffard-Bouchard, T., Parent, S., & Larivee, S. (1991). Influence of self-efficacy on selfregulation and performance among junior and senior high-school age students. International Journal of Behavioral Development, 14, 153–164.
+Hackett, G., & Betz, N. E. (1989). An exploration of the mathematics self-efficacy/mathematics performance correspondence. Journal for Research in Mathematics Education, 20,
+263–271.
+Harter, S. (1978). Effectance motivation reconsidered: Toward a developmental model. Human
+Development, 21, 34–64.
+Hattie, J. (1992). Self-concept. Hillsdale, NJ: Erlbaum.
+Lent, R. W., Brown, S. D., & Larking, K. C. (1984). Relation of self-efficacy expectations
+to academic achievement and persistence. Journal of Counseling Psychology, 31, 356–
+362.
+Marsh, H. W., & Shavelson, R. (1985). Self-concept: Its multifaceted, hierarchical structure.
+Educational Psychologist, 20, 107–123.
+Multon, K. D., Brown, S. D., & Lent, R. W. (1991). Relation of self-efficacy beliefs to academic outcomes: A meta-analytic investigation. Journal of Counseling Psychology, 18,
+30–38.
+Pajares, F. (1996a, April). Assessing self-efficacy beliefs and academic outcomes: The case for
+specificity and correspondence. Paper presented at the Annual Meeting of the American
+Educational Research Association, New York.
+Pajares, F. (1996b). Self-efficacy beliefs in academic settings. Review of Educational Research, 66, 543–578.
+Pajares, F., & Miller, M. D. (1994). Role of self-efficacy and self-concept beliefs in mathematical problem solving: A path analysis. Journal of Educational Psychology, 86, 193–203.
+Pajares, F., & Kranzler, J. (1995). Self-efficacy beliefs and general mental ability in mathematical problem-solving. Contemporary Educational Psychology, 20, 426–443.
+Rogers, C. R. (1951). Client-centered therapy: Its current practice, implications, and theory.
+Boston: Houghton, Mifflin.
+Rotter, J. B. (1966). Generalized expectancies for internal versus external control of reinforcement. Psychological Monographs, 80, 148–154.
+Salomon, G. (1984). Television is ‘‘easy’’ and print is ‘‘tough’’: The differential investment
+of mental effort in learning as a function of perceptions and attributions. Journal of Educational Psychology, 76, 647–658.
+Schunk, D. H. (1981). Modeling and attributional feedback effects on children’s achievement:
+A self-efficacy analysis. Journal of Educational Psychology, 74, 93–105.
+Schunk, D. H. (1983). Progress self-monitoring: Effects on children’s self-efficacy and
+achievement. Journal of Experimental Education, 51, 89–93.
+Schunk, D. H. (1985). Self-efficacy and classroom learning. Psychology in the Schools, 22,
+208–223.
+Schunk, D. H. (1987). Peer models and children’s behavioral change. Review of Educational
+Research, 57, 149–174.
+Schunk, D. H. (1989). Self-efficacy and achievement behaviors. Educational Psychology Review, 1, 173–208.
+Schunk, D. H., & Hanson, A. R. (1985). Peer models: Influence on children’s self-efficacy
+and achievement behaviors. Journal of Educational Psychology, 77, 313–322.
+
+SELF-EFFICACY BELIEFS
+
+91
+
+Schunk, D. H., Hanson, A. R., & Cox, P. D. (1987). Peer model attributes and children’s
+achievement behaviors. Journal of Educational Psychology, 79, 54–61.
+Shell, D. F., Murphy, C. C., & Bruning, R. H. (1989). Self-efficacy and outcome expectancy
+mechanisms in reading and writing achievement. Journal of Educational Psychology, 81,
+91–100.
+Siegel, R. G., Galassi, J. P., & Ware, W. B. (1985). A comparison of two models for predicting
+mathematics performance: Social learning versus math aptitude-anxiety. Journal of Counseling Psychology, 32, 531–538.
+Smith, R. E. (1989). Effects of coping skills training on generalized self-efficacy and locus
+of control. Journal of Personality and Social Psychology, 56, 228–233.
+Wylie, R. (1968). The present status of self-theory. In E. Borgotta & W. Lambert (Eds.),
+Handbook of personality theory and research (pp. 728–787). Chicago: Rand McNally.
+Zimmerman, B. J. (1995). Self-efficacy and educational development. In A. Bandura (Ed.),
+Self-efficacy in changing societies (pp. 202–231). New York: Cambridge Univ. Press.
+Zimmerman, B. J., & Bandura, A. (1994). Impact of self-regulatory influences on writing
+course attainment. American Educational Research Journal, 31, 845–862.
+Zimmerman, B. J., Bandura, A., & Martinez-Pons, M.. (1992). Self-motivation for academic
+attainment: The role of self-efficacy beliefs and personal goal setting. American Educational Research Journal, 29, 663–676.
+Zimmerman, B. J., & Kitsantas, A. (1997). Developmental phases in self-regulation: Shifting
+from process to outcome goals. Journal of Educational Psychology, 89, 29–36.
+Zimmerman, B. J., & Kitsantas, A. (1999). Acquiring writing revision skill: Shifting from
+process to outcome self-regulatory goals. Journal of Educational Psychology, 91, 1–10.
+Zimmerman, B. J., & Martinez-Pons, M. (1990). Student differences in self-regulated learning.
+Journal of Educational Psychology, 82, 51–59.
+
+The author has requested enhancement of the downloaded file. All in-text references underlined in blue are linked to publications on ResearchGate.
+
+

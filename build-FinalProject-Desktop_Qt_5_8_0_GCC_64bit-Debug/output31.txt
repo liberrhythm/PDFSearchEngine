@@ -1,0 +1,741 @@
+Factors Influencing the Self-Efficacy Beliefs
+of First-Year Engineering Students
+MICA A. HUTCHISON
+Department of Chemistry and Department of Engineering Education
+Purdue University
+
+DEBORAH K. FOLLMAN
+Department of Engineering Education
+Purdue University
+
+MELISSA SUMPTER
+Department of Chemistry
+Purdue University
+
+GEORGE M. BODNER
+Department of Chemistry
+Purdue University
+
+ABSTRACT
+A survey incorporating qualitative measures of student selfefficacy beliefs was administered to 1,387 first-year engineering
+students enrolled in ENGR 106, Engineering Problem-Solving
+and Computer Tools, at Purdue University. The survey was
+designed to identify factors related to students’ self-efficacy
+beliefs, their beliefs about their capabilities to perform the tasks
+necessary to achieve a desired outcome. Open-ended questions
+prompted students to list factors affecting their confidence in
+their ability to succeed in the course. Students were then asked to
+rank these factors based on the degree to which their self-efficacy
+beliefs were influenced. Gender trends emerged in student
+responses to factors that affect confidence in success. These
+trends are discussed in light of the categories identified by efficacy
+theorists as sources of self-efficacy beliefs. The results presented
+here provide a useful look at the first-year engineering experiences
+that influence students’ efficacy beliefs, an important consideration in explaining student achievement, persistence, and interest.
+Keywords: first-year experience, retention, self-efficacy
+
+I. INTRODUCTION
+A recent study by the National Science Board has reported that
+while the number of jobs in the U.S. economy requiring training in
+science and engineering is on the rise, the number of students receiving training in these fields is declining at a disturbing rate [1].
+These findings highlight the importance of addressing student
+recruitment in the fields of science and engineering. However,
+national trends indicate that taking steps toward increasing interest
+January 2006
+
+in the fields and boosting student enrollments in related programs
+is not enough. Retention rates in these fields are currently much too
+low, varying from 30 to 46 percent for women and 39 to 61 percent
+for their male counterparts, depending on the size and type of institution studied [2]. Science and engineering programs must therefore take action to retain more students if the demands for the
+workforce of the future are to be met. Particular attention needs to
+be paid to the retention of women in science and engineering because these data indicate that while retention is poor on the whole,
+the problem is accentuated among women.
+Numerous research studies [3–9] have taken as their main focus
+the issue of poor retention in science and engineering, with many of
+these placing particular emphasis on the role of self-efficacy beliefs.
+Introduced by Bandura [10] as a part of his social cognitive theory,
+self-efficacy beliefs are the thoughts or ideas people hold about their
+abilities to perform those tasks necessary to achieve a desired outcome. The construct of self-efficacy is often confused with the
+more general idea of self-confidence. Confidence refers to only the
+strength of a belief in one’s abilities. Efficacy is based on both a
+specified level of attainment and the strength of one’s belief that
+that level of attainment can be achieved [11]. This difference can be
+further understood by comparing the confidence statement, “I am
+confident in my mathematical abilities,” to the efficacy statement,
+“I am confident I can correctly solve calculus problems.” This confusion between confidence and efficacy extends to the literature
+where studies claiming to investigate confidence have also incorporated measures of efficacy. Here, any study that has employed the
+measurement of students’ efficacy beliefs will be referenced as an efficacy investigation. Confidence studies can further inform our investigation and therefore will be referred to here as well and identified accordingly.
+Self-efficacy can influence people’s behavior either positively or
+negatively, based on their perception of their abilities concerning a
+particular task. It influences the choices people make, the effort
+they put forth, and how long they persist in the face of obstacles and
+failure [12]. The efficacy beliefs of undergraduate students in
+science, technology, engineering, and mathematics (STEM) programs have been linked to their persistence [6, 8, 13–16], achievement [8, 13, 14, 16, 17], and interest [13, 16–19].
+Women have been shown to have strong reactions to efficacy
+beliefs. Many women who leave STEM programs have less
+confidence in their abilities than those who stay in the programs
+(“stayers”), despite earning similar grades [3, 4, 8, 20, 21]. Moreover, female stayers possess lower self-efficacy perceptions than
+their male colleagues [22–24]. Brainard and Carlin [3] noted that
+at least 25 percent of undergraduate women persisting in engineering and science programs most frequently cited “lack of self-confidence” as a barrier that challenged their persistence; by senior year,
+Journal of Engineering Education 39
+
+the percentage of women citing lack of confidence as a barrier nearly doubled to 44 percent. In a cross-institutional study (17 institutions), Besterfield-Sacre et al. [24] noted that at the end of their
+freshman year, female engineering students maintained lower
+confidence in their basic engineering knowledge and skills, problem-solving abilities, and overall engineering abilities than male
+engineering students.
+While the literature is rich in studies assessing students’ selfefficacy beliefs in the fields of science and engineering, it provides
+little, if any, insight into answering the question: What can be done
+to promote positive self-efficacy beliefs among students? The first
+step toward answering this question requires establishing how students arrive at their self-efficacy beliefs.
+Bandura [10] has defined four sources from which efficacy
+beliefs are developed: mastery experiences, vicarious experiences,
+social persuasions, and physiological states. Self-efficacy beliefs are
+shaped by mastery experiences through interpretation of one’s performances on particular tasks. Outcomes perceived as positive tend to
+raise students’ confidence in their corresponding abilities and therefore strengthen efficacy beliefs. Conversely, perceived negative outcomes lower confidence and so weaken associated efficacy beliefs.
+Both theory and research suggest that mastery experiences are the
+strongest influence on student self-efficacy beliefs [25, 26]. Vicarious
+experiences are slightly less influential; however, when individuals are
+unsure of their abilities in a certain area, or have no experience in the
+area, their beliefs may be influenced by their perceptions of the outcomes experienced by others who have performed similar tasks. As a
+result, efficacy beliefs can depend on the extent to which individuals
+see similarities between themselves and those whom they observe.
+The verbal judgments of others, called social persuasions by Bandura,
+can also influence self-efficacy beliefs. In traditionally male-dominated fields, studies have shown that vicarious experiences and social
+influences may play a dominant role in the formation of women’s
+self-efficacy beliefs [27–29]. Finally, physiological states associated
+with an action, such as anxiety, stress, fatigue, or other emotions, can
+also have an effect on individuals’ self-efficacy beliefs.
+To date, studies aimed at identifying the determinants of students’ efficacy beliefs have been primarily quantitative in nature.
+Researchers have hypothesized sources of college student selfefficacy beliefs, developed quantitative measures of these sources,
+and identified sources of significant increments in self-efficacy variation [10, 13, 18, 24, 30, 31]. Fewer qualitative studies of selfefficacy belief formation have been conducted. Zeldin and Pajares
+[28] used a case study methodology to investigate how the selfefficacy beliefs of women graduates succeeding in mathematicsrelated careers were developed and maintained. Lent et al. [32]
+employed a cognitive thought-listing technique to identify the factors affecting the mathematical self-efficacy beliefs of undergraduate students in an introductory psychology course. These studies
+had conflicting results, likely due to the different characteristics of
+the subjects employed and to different criterial tasks on which the
+efficacy judgments were based [24, 25, 33]. Qualitative studies of
+the influences contributing to the gender gap in computer science
+[6] and the influences leading undergraduates to switch from
+STEM majors into non-science majors [4] have helped elucidate
+factors contributing to students’ general self-confidence. However,
+these studies did not look at the specific construct of efficacy.
+As argued by self-efficacy theorists, a discovery-oriented, qualitative approach is required to better understand the sources and
+40
+
+Journal of Engineering Education
+
+cognitive processing of student self-efficacy beliefs [11, 34, 35].
+This study is designed to answer the questions: Which aspects of
+students’ first engineering course influence their self-efficacy beliefs,
+and how do these aspects vary by gender? Responding to an openended question incorporated in a Likert-scale questionnaire,
+students discussed factors they found particularly influential. Those
+factors most frequently cited as affecting students’ beliefs are described in detail and categorized using Bandura’s framework for
+sources of self-efficacy beliefs.
+
+II. RESEARCH DESIGN
+A. Theoretical Framework
+The choice of an appropriate theoretical framework is a vital step
+in the design of a qualitative research study [36]. The framework
+becomes the overarching guide for the design of the study’s data
+collection and analysis methods. This investigation was conducted
+with a phenomenographical focus. Phenomenography, developed
+in large part by Marton and co-workers, is a study of, “… the limited
+number of qualitatively different ways in which we experience,
+conceptualize, understand, perceive, apprehend, etc., various
+phenomena in and aspects of the world around us” [37, p. 4424].
+These different ways of conceptualizing or understanding are then
+categorized by description and logically related to each other to
+form an outcome space for the ways in which the phenomenon
+under investigation is perceived.
+Phenomenography was established as an alternative to an older,
+more well-established theoretical framework known as phenomenology [38]. The goal of both theoretical constructs is a description
+of the so-called “lived experience” of people, their perceptions of
+what it means to go through an experience or phenomenon. The
+two theoretical perspectives have slightly different functions, however. Consider, for example, the different perspectives the two theoretical frameworks would bring to a study of how students approach
+the task of studying for an exam in one of their courses. Phenomenology would look for the single, true essence of the experience that
+applied to all students enrolled in the course; the common thread
+for every person who experienced this course. Phenomenography
+would presume that different people might approach the task of
+studying for an exam in different ways, and that there are a limited
+number of different ways in which students experience this
+phenomenon.
+Phenomenography therefore bridges the extremes of the universal and the individual [36]. In a phenomenographical study of the
+various ways people experience learning, the final product may be
+three categories of recognition, for example: (1) ‘I can pass a related
+test’, (2) ‘I can explain material to others’, and (3) ‘I can apply the
+material to new situations.’ Further, a phenomenographical approach will attempt to interrelate the experiential categories in a hierarchical fashion. The present study was designed to identify factors affecting students’ self-efficacy beliefs. It is established within
+the literature that men and women have different self-efficacy beliefs and that these beliefs further vary among members of the same
+gender. Therefore, it is apparent that there is not a single essence associated with the experience of students’ first year in engineering.
+Rather, how students perceive the experience will vary, falling into
+several categories of perception and lending this study to a phenomenographical focus.
+January 2006
+
+B. Participants
+Participants for this study included 1,387 freshmen engineering
+students enrolled in ENGR 106, Engineering Problem Solving and
+Computer Tools, at Purdue University in the fall of 2003. Required
+of all first-year engineering students for admittance into one of the
+engineering professional schools, this two-credit course covers engineering problem-solving, computer logic and the use of computer
+software (UNIX, Excel, MATLAB), teaming, statistics, and economics in an engineering context. Of the students surveyed, 81.9
+percent (N  1136) were men and 18.9 percent (N  251) were
+women. The average SAT scores of the men and women surveyed
+were 1,253 (SD  106) and 1,244 (SD  122) respectively. The
+class was 66.7 percent (N  925) Caucasian American, 11.4
+percent (N  158) International, 6.1 percent (N  85) Asian
+American, 2.7 percent (N  37) Hispanic/Latin American, 2.6
+percent (N  36) African American, 0.7 percent (N  10) Puerto
+Rican, 0.1 percent (N  2) Native American Indian, and 3.0
+percent (N  41) another unlisted ethnicity. The remaining 6.7
+percent (N  93) of the students provided no ethnicity data.
+C. Procedure
+An engineering efficacy survey was administered to all students
+enrolled in ENGR 106 as a required, on-line homework assignment. Students were informed that their responses to survey items
+were completely confidential and would not be linked to their individual identities. The survey was administered two weeks after the
+first course exam so that students would have some experience with
+the ENRG 106 environment, assignments, and exams on which to
+base their efficacy assessment. However, the semester had not progressed far enough that students were able to make concrete predictions concerning their final course grades.
+D. Instrument
+The survey administered to ENGR 106 students probed their
+perceptions of the learning environment and their efficacy beliefs
+[39]. Students’ self-efficacy beliefs concerning ENGR 106 were
+first assessed using Likert-scale items developed by the research
+team. Several of these items were modeled after the “strength of
+self-efficacy for academic milestones” scale developed by Lent et al.
+[40] and the “academic efficacy scale” developed by Midgley
+et al.[41]. Factors students attributed to influencing their efficacy
+beliefs were then probed using a cognitive thought-listing technique patterned after Lent et al. [32]. This technique allowed them
+to discuss the factors in their own words. Specifically, students were
+asked to think about ENGR 106 and rank the extent to which they
+agreed with the statement: “I am confident I can succeed in ENGR
+106.” Following this item, students were told to “think about the
+factors you considered in the previous question. Describe briefly all
+of the factors on which you based your confidence rating to this particular question. Write everything that comes to mind.” The instrument was designed to allow students to list up to 10 separate factors.
+After listing all of the factors they considered, students were asked
+to “go back and rank your entries in terms of how important each
+factor you mentioned was in influencing your confidence rating
+(1  most influential, 10  least influential).”
+E. Analysis
+Due to the large number of students enrolled in ENGR 106,
+smaller sample populations were selected for analysis using a comJanuary 2006
+
+bination of stratified random sampling and purposeful sampling
+techniques. The student population was stratified by gender and
+each stratum randomly sampled. Sample sizes of 284 men and 152
+women were selected in order to achieve a 95 percent confidence
+level with a 5 percent error. Purposeful sampling ensured that the
+sample populations accurately represented the ethnic diversity of
+the overall population (Table 1), but sampling was otherwise random. Within these samples, blank student surveys and those exhibiting ambiguity in the factors listed were rejected and replaced;
+this led to the rejection and replacement of 61 surveys submitted by
+men and 11 submitted by women. The resulting sample populations were similar to the overall ENGR 106 population with respect
+to average SAT scores: men, 1,257 (SD  104), women, 1,246
+(SD  133).
+Analysis, based on a phenomenographic methodology [37],
+aimed to identify factors cited by significant portions of the samples
+(defined as at least 20 percent) as influential on their confidence in
+success. The process began with five independent researchers individually identifying categories of factors that fit two small subsets of
+data, meeting and discussing these categories, and agreeing upon a
+set of categories appropriate for use in analysis. Survey data collected from each sample population were then independently categorized and coded by two researchers using the qualitative data management program, ATLAS.ti, version 5.0 [42]. Coding included
+both the category to which each factor was assigned and whether it
+was indicated as a positive, neutral, or negative influence by the student. The rankings students assigned to each factor were also coded
+to identify those factors male and female students labeled as most
+influential.
+The open-ended survey instrument allowed students to list up to
+ten influential factors. In many instances, students listed more than
+one factor belonging to a single category (e.g., “My exam grades,”
+“My homework grades,” and “My quiz scores”). Because analysis
+was based on the percentage of students citing each factor, such cases
+were only counted once in the corresponding category (i.e., the student was counted once in the category of ‘Grades’). Conversely, instances also arose in which one student response fit more than one
+category (e.g., “I can usually finish the homework assignments, even
+though it takes me a long time to understand them.”). In these cases,
+the student was counted in all applicable categories.
+
+Table 1. Demographic description of sample populations.
+Journal of Engineering Education 41
+
+Initial researcher agreement on factors placed in each category
+ranged from 80 percent to 95 percent, which is a reasonable level of
+agreement for this type of research [37]. Factors not initially agreed
+upon were discussed until agreement was reached. Z-tests ( 
+0.01) were performed to determine the existence of any statistical
+differences between genders.
+
+III. RESULTS
+A useful way to look at the data collected from this study is to
+examine those factors that were listed by the most students as influencing their confidence in success in ENGR 106. Later, the
+data will be presented in terms of the factors students ranked as
+the most influential.
+A. Influential Factors
+Analysis of student responses concerning the factors affecting
+confidence in success in ENGR 106 revealed nine categories of
+prominent factors: understanding or learning the material; drive or
+motivation toward success; teaming issues; computing abilities; the
+availability of help and ability to access it; issues surrounding doing
+assignments; student problem-solving abilities; enjoyment, interest,
+and satisfaction associated with the course and its material; and
+grades earned in the course. Figure 1 summarizes the percentage of
+the male and female sample populations citing each factor.
+The categories presented in Figure 1 are discussed in more detail
+below.
+1) Understanding/Learning: Listed most frequently by students, understanding/learning course material affected approximately 55 percent of the men and 72 percent of the women
+surveyed, a difference that is statistically significant (z  3.42,
+
+p  0.001). A small portion of students indicated being affected
+specifically by the level of understanding or learning they achieved
+on homework assignments (“I am understanding the work more
+than I did before so my confidence level is higher.”), lab tasks
+(“Some of the labs feel very rushed and are finished when I don’t
+really understand how.”), projects, engineering economics (“I
+don’t understand Engineering Economics as well as I should.”),
+lecture (“I understand what we talk about in lecture.”), or reading
+material. However, the majority of responses within this category
+described only a general understanding or ability to learn the material without any more detail (“My ability to understand new
+concepts quickly and fully.”). While most students cited a boost in
+their self-efficacy beliefs because they did understand or were
+capable of learning the course material, it would be reasonable to
+expect that their beliefs would be negatively affected should they
+encounter material that they did not understand or felt incapable
+of learning.
+2) Drive and Motivation: A strong desire to succeed in ENGR
+106 or engineering in general was also expressed by a large number
+of students. Students expressing this sentiment made statements
+such as, “If I want to be an engineer I am going to be an engineer, I
+am not going to give up my goals,” and “If I don’t get the grade I
+want, I will work harder.” These students all expressed an internal
+locus of control mentality [15]: with enough persistence, determination, and hard work, they could achieve success, regardless of the
+challenges they may encounter. Very few responses of this nature
+associated negative self-efficacy beliefs with a lack of drive and motivation; students appear to almost always view drive and motivation
+as a positive influence. These findings compliment those of a previous study that showed both men and women at the onset of their
+engineering education to frequently attribute their performance to
+how hard they worked in the course [7].
+
+Figure 1. Factors indicated by at least 20 percent of male or female students as influencing efficacy beliefs (* p < 0.001).
+42
+
+Journal of Engineering Education
+
+January 2006
+
+3) Teaming: ENGR 106 is designed to prepare students to work
+in teams. Accordingly, team-based work accounts for 30 percent of
+the course grade. This may be an indication of why nearly half of
+the students indicated teaming as influencing their confidence in
+ENGR 106 success. Of the students who mentioned this factor,
+two different aspects of teaming emerged in the students’ responses.
+Many students, both male and female, described positively influenced efficacy based on the discovery that they could work well in a
+team. Often students referred to this as possessing “teaming skills”.
+Examples of students’ statements to this effect include, “I think this
+class has honed my teaming skills and I think I can do well in…real
+world team work,” and “Using my teaming skills and being able to
+work together as a team; after all, this class is partly to teach us how
+to work in a team.” Students of both genders also discussed the support, help, and motivation they received from their team members.
+These students looked at their team as a small support group that
+raised each member’s confidence in their ENGR 106 abilities.
+They made comments such as, “My team members help and encourage me,” and “Working with a team was really a great experience. Having someone to rely on was nice, and I grew confident in
+their skills as well as mine by the end.” In both cases, most students
+cited teaming as positively affecting self-efficacy beliefs. This finding supports the result of a previous study that has shown group
+work to be viewed positively by both men and women [7]. Few students indicated that they were not confident they would succeed
+due to the poor quality of their team.
+4) Computing Abilities: Students who listed computing as an important influence on their self-efficacy beliefs frequently cited their
+ability to use one or all of the computing tools taught in ENGR 106
+(Excel, MATLAB, and Unix), their programming abilities, and
+their ability to use a computer in general. The nature of this
+influence varied from one student to another: “I can apply the
+MATLAB tools to actual situations and problems” (positive), “My
+computer skills” (neutral), and “I have a hard time memorizing
+Unix commands and using them according to their correct application” (negative). Computing abilities influenced nearly the same
+fraction of men and women; however, women were affected differently than men (Table 2). Overall, relatively few men saw computing as negatively affecting their self-efficacy beliefs, in contrast to
+the nearly one-third of women who did; a difference that was statistically significant (z  5.14; p  0.001).
+5) Help: Significantly more women (38 percent) than men (19
+percent) discussed getting help as a factor influencing their confidence in ENGR 106 success (z  4.35, p  0.001). Similarly,
+Felder et al. found female engineering students to be much more
+likely than men to cite the help or support of someone else as the
+
+Table 2. The nature of the effect of computing abilities on
+students’ efficacy beliefs.
+January 2006
+
+reason for their performance exceeding their expectations [7].
+Among those students who did mention the influence of help, results were quite similar. Two aspects of getting help in the course
+were mentioned: the numerous resources available for help (“I have
+excellent help and resources to go to if in fact I find myself struggling to succeed.”) and the students’ ability to recognize when and
+how to seek help (“I ask a lot of questions when I don’t understand
+the given info. I ask enough until I have a thorough understanding.”) Nearly all of the students discussing help indicated that it increased their confidence in their ability to achieve success. A very
+small number of students (15) expressed doubts in their likely
+success because they did not know how or where to get help for the
+course.
+6) Working Assignments: Students also cited their ability to complete assignments as influencing their efficacy beliefs. This category
+contained statements such as, “I can usually finish the homework
+assignments, even though it takes me a long time to understand
+them,” and “I complete all of my assignments on time and to the
+best of my ability.”
+7) Problem-Solving Abilities: Students’ problem-solving abilities
+appeared to influence nearly equal percentages of men and women.
+Usually, students neglected to mention specific details in regards to
+this factor, making statements such as: “I am a good problemsolver,” “I am improving my problem-solving skills…,” and “I can
+work through problems of any difficulty.”
+8) Enjoyment, Interest, and Satisfaction: Similar percentages of
+men and women discussed their enjoyment regarding, interest in,
+and satisfaction with ENGR 106 as being influential. For most,
+these factors promoted efficacy, prompting students to make statements such as: “When I finish an assignment, I find myself learning
+and feeling satisfied,” and “Solving the problems in the labs and in
+the homework is challenging but interesting.” Only one-quarter of
+the responses in this category cited decreased confidence in ENGR
+106 abilities due to a lack of interest, enjoyment, or satisfaction.
+Those who were negatively influenced made comments such as: “I
+don’t enjoy the work which makes it harder to do,” and “I have a
+huge feeling of being completely overwhelmed.”
+9) Grades: Scores on graded course materials including homework assignments, projects, quizzes, and exams as well as overall
+course grades and grading policies affected nearly equal percentages
+of men and women. Some students were specific in their discussion
+of the grades they were receiving, making statements such as,
+“When I get assignments returned to me, I usually get a B average,”
+or “The fact that so far, I have an A,” while most students made
+more general statements about being affected by “my homework
+and lab grades.” Other students mentioned that the grading policies
+used in the class, in addition to the grades they received, were influential; for example, “Sometimes points for the CFU’s [quizzes] are
+taken off for very trivial things, you can get a 5 [out of 10 points] on
+the CFU even when you understand the material.”
+B. Rankings
+Students cited motivation toward success, understanding/
+learning of course material, and computing abilities as the factors
+that influenced their efficacy beliefs the most (i.e., those factors
+ranked ‘1’), as shown in Figure 2. The ‘Other’ category in Figure 2
+represents a large variety of additional factors students indicated as
+being most influential on their confidence in succeeding in ENGR
+106. Examples of items falling into this category include abilities
+Journal of Engineering Education 43
+
+Figure 2a. Percentage of male sample population ranking each
+factor number 1 (most influential).
+compared to others, professors’ abilities, and attendance. Since
+items in these categories were listed by fewer than 20 percent of the
+men or women sampled (Figure 1), they are not presented in more
+detail in this work.
+Figure 2 illustrates the striking similarity in the rankings given
+by men and women. Interestingly, 51 percent of men and 42 percent of women listed teaming as one of the factors that influenced
+their confidence in success; however, only 3 percent of men and 2
+percent of women indicated it as the most influential factor. Similarly, significantly more women (38 percent) than men (19 percent)
+included help as an influential factor, however few students of either
+gender felt it was the most influential factor (2 percent of women
+versus 3 percent of men).
+
+IV. DISCUSSION
+The results of this study can be examined in light of Bandura’s
+social cognitive theory and, more specifically, his four identified
+sources of self-efficacy beliefs. The categories of influential factors
+identified are discussed in this fashion below.
+1) Mastery Experiences: Many students’ self-efficacy beliefs in
+the context of ENGR 106 are shaped by mastery experiences, their
+personal interpretations of their performances on particular courserelated tasks. The majority of factors listed as influential by students
+fell within this category. This result is consistent with the findings
+of Lent et al. [32], who reported personal performance as the
+mathematics-efficacy source that affected the largest percentage of
+students surveyed. Understanding/learning course material can be
+categorized as a mastery experience: students become more highly
+efficacious when they feel able to understand and learn material,
+and less efficacious when they feel unable to do so. Student mastery
+of teaming skills is another efficacy belief source in this category, as
+are perceived abilities with computing and computer applications.
+Students who feel that they have mastered these abilities experience
+more positive self-efficacy beliefs than those who do not. Similar results were reported by Doyle, Stamouli, and Huggard [43], who
+found that as computer science students’ opportunities for mastery
+experiences with computers increased, their perceived computer
+44
+
+Journal of Engineering Education
+
+Figure 2b. Percentage of female sample population ranking
+each factor number 1 (most influential).
+efficacy also increased. In addition, students’ confidence in their
+ability to succeed in ENGR 106 is increased when they are able to
+master an assignment and lowered when an assignment cannot be
+completed. It is similarly affected by their abilities to use problemsolving techniques effectively. Interestingly, only about 20 percent
+of the students explicitly cited grades as an indication of mastery or a
+source of efficacy, a smaller number than might be expected [8, 13,
+40].
+Several additional factors discussed by students may also indirectly influence their efficacy beliefs through mastery experiences.
+While students reported that mastering the ability to recognize
+when they needed to seek help was influential, they may also be
+gaining mastery experiences with course concepts and material
+through the help they receive. Additionally, roughly half of student
+responses categorized as enjoyment, interest, and satisfaction with
+the course discussed these feelings within the context of mastering
+the subject material. Specifically, students enjoyed the material
+they had mastered (“A major part of ENGR 106 is projects and I
+enjoy them more than other parts of the course and we do fairly
+well on them.”) and were frustrated by that which they had not
+(“The things holding me back are that I have troubles with some of
+the problems, and get frustrated, I am worried that if I am having
+troubles from the start that I won’t make it to the end.”). For these
+students, mastery experiences likely play a role in the shaping of efficacy beliefs.
+2) Vicarious Experiences: When students encounter a situation
+for which they have little or no experience, efficacy beliefs may be
+influenced by their perceptions of the outcomes others have
+achieved when performing similar tasks. Two factors cited by students exhibited characteristics of vicarious experiences: teaming and
+seeking help. Many students who discussed working closely with
+their team members were potentially using vicarious experiences as
+sources of self-efficacy beliefs. Students who seek help may also use
+the vicarious experience of witnessing another’s ability to complete a
+task to shape their beliefs. In both cases, students are forming their
+beliefs based on the outcomes of others’ actions. This appears to be
+especially true for women who reported being influenced by these
+sources more frequently than men. In an investigation of the efficacy
+beliefs of men and women succeeding in mathematics-related
+January 2006
+
+careers, Zeldin and Pajares [28] similarly found women to be more
+frequently influenced by vicarious experiences.
+3) Social Persuasions: The verbal judgments of others (in this case
+peers, professors, and teaching assistants) can also influence selfefficacy beliefs. While students who discussed the support of their
+team members may have been basing their efficacy beliefs on vicarious experiences, it is also possible that the verbal feedback they were
+receiving from teammates was the source of the influence. Similarly,
+students who seek help may have their beliefs shaped by the verbal
+judgments they experience when receiving help. Students likely see
+the grades they receive as measures of their mastery of course material; however, it is important to consider the possibility that they view
+their scores as professors’ or teaching assistants’ judgments of their
+abilities.
+4) Physiological States: Self-efficacy beliefs can further be affected
+by the physiological states a student associates with a task. As such,
+the enjoyment, interest, and satisfaction students associate with a
+course could be considered a physiological source of efficacy beliefs.
+For example, the student struggling to master engineering problem-solving (“The things holding me back are that I have troubles
+with some of the problems, and get frustrated, I am worried that if I
+am having troubles from the start that I won’t make it to the end.”)
+exhibits obvious signs of anxiety in his discussion of frustration and
+doubt.
+5) Other: Drive and motivation have been characterized by
+some [15] as outcome expectations, beliefs that certain behaviors
+or wants, such as hard work or the desire to become an engineer,
+will lead to desired outcomes such as success in ENGR 106. According to Bandura, such beliefs bias the ways in which individuals process sources of efficacy information [25]. For example, people who regard ability as an acquirable skill evaluate mastery
+experiences more by personal improvement than by comparison
+against the achievement of others. People who view ability as an
+inherent aptitude are “prone to measure their ability by social
+comparison and to belittle their own accomplishments when others surpass them” [25, p. 118]. The data collected in this study do
+not provide enough insight to speculate as to whether drive and
+motivation, in the sense it is discussed by these students, affect
+how students process their efficacy beliefs. Alternatively, it is possible that drive and motivation are a fifth efficacy source for these
+students; that is, they may draw on a conviction that they can
+achieve success at any endeavor if they put forth enough effort.
+This question of the role drive and motivation play in students’
+formation of efficacy beliefs is currently being investigated in the
+analysis of interview data.
+
+Much of this work supports Bandura’s framework for selfefficacy belief sources. With the exception of drive and motivation,
+all identified categories can be placed within one of his four classifications of sources. The direct or indirect linkage of these emergent
+categories to mastery experiences also supports theory and previous
+research findings indicating mastery experiences to be the single
+most influential source of efficacy beliefs.
+While this study is a first step in gaining an understanding of the
+sources of student self-efficacy beliefs, more work needs to be done
+to make possible a description of the cognitive processing leading
+up to the formation of these beliefs. One surprising finding [24, 44]
+is the lack of a more significant gender variation in how the students
+identified and ranked the factors influencing self-efficacy beliefs.
+However, the current literature in this area is contradictory [45],
+possibly due to the inability of surveys to probe student attitudes
+through deeper questioning. For example, similar numbers of men
+and women discussed working assignments, problem-solving abilities, enjoyment, interest, and satisfaction with the course, and
+grades as influential; however, it is impossible to know how the
+students perceive these experiences from their limited survey
+responses. Similarly, the effect drive and motivation have on student efficacy can not be determined from survey responses alone;
+nor can it be determined whether students are processing teaming
+and help seeking experiences as mastery experiences, vicarious experiences, or verbal persuasions. In order to gain a better understanding of these and other factors that have been identified as sources of
+students’ efficacy beliefs, interviews facilitated by survey data have
+been conducted. Analysis of these interviews, currently underway,
+will lead to improved insight into how efficacy beliefs are formed.
+This knowledge will allow the creation of learning environments
+designed to promote students’ self-efficacy beliefs and thereby increase their confidence, success, and retention.
+
+ACKNOWLEDGEMENTS
+The authors would like to acknowledge the ERM division of
+ASEE for the support of this research through an ERM minigrant.
+Additional thanks are extended to Dr. P.K. Imbrie for his assistance
+computerizing survey materials, the ENGR 106 faculty for their
+continued support in this research endeavor, and Dr. Richard
+Felder and the Journal of Engineering Education reviewers for their
+useful suggestions.
+
+REFERENCES
+V. CONCLUSIONS
+Nine categories have emerged from the classification of the factors affecting students’ responses to the statement: “I am confident I
+can succeed in ENGR 106,” including understanding or learning of
+the material; drive or motivation toward success; teaming issues;
+computing abilities; the availability of help and ability to access it;
+issues surrounding doing assignments; student problem-solving
+abilities; enjoyment, interest, and satisfaction associated with the
+course and its material; and grades earned in the course. Of these,
+students ranked drive and motivation, understanding of material,
+and computing abilities as most influential.
+January 2006
+
+[1] “An Emerging and Critical Problem of the Science and Engineering Labor Force: A Companion to Science and Engineering Indicators
+2004,” National Science Foundation, 2004, www.nsf.gov/sbe/srs/nsb0407/
+start.htm.
+[2] Galluzzo, G., “WISE Reports High Retention Rate for Class of
+2003 Women,” 2003, www.uiowa.edu/~ournews/2003/july/071403wise.
+html.
+[3] Brainard, S.G., and Carlin, L., “A Six-Year Longitudinal Study of
+Undergraduate Women in Engineering and Science,” Journal of Engineering Education, Vol. 87, No. 4, 1998, pp. 369–375.
+[4] Seymour, E., and Hewitt, N., Talking About Leaving: Why Undergraduate Leave the Sciences, Boulder, Colo.: Westview Press, 1997.
+
+Journal of Engineering Education 45
+
+[5] Sax, L.J., “Retaining Tomorrow’s Scientists: Exploring the Factors
+That Keep Male and Female College Students Interested in Science
+Careers,” Journal of Women and Minorities in Science and Engineering,
+Vol. 1, 1994, pp. 45–61.
+[6] Margolis, J., and Fisher, A., Unlocking the Clubhouse: Women in
+Computing, Cambridge, Mass.: The MIT Press, 2002.
+[7] Felder, R.M., Felder, G.N., Mauney, M., Hamrin, C.E., and
+Dietz, E.J., “A Longitudinal Study of Engineering Student Performance
+and Retention. III. Gender Differences in Student Performance and
+Attitudes,” Journal of Engineering Education, Vol. 84, No. 2, 1995,
+pp. 151–163.
+[8] Besterfield-Sacre, M., Atman, C.J., and Shuman, L.J., “Characteristics of Freshman Engineering Students: Models for Determining Student Attrition in Engineering,” Journal of Engineering Education, Vol. 86,
+No. 2, 1997, pp. 139–149.
+[9] Agogino, A.M., and Linn, M., “Retaining Female Engineering
+Students: Will Early Design Experiences Help?,” NSF Directions, Vol. 5,
+No. 2, 1992, pp. 5–7.
+[10] Bandura, A., Social Foundations of Thought and Action: A Social Cognitive Theory, Englewood Cliffs, N.J.: Prentice-Hall, 1986.
+[11] Pajares, F., “Self-Efficacy Beliefs in Academic Settings,” Review of
+Educational Research, Vol. 66, No. 4, 1996, pp. 543–578.
+[12] “Self-Efficacy Beliefs in Academic Contexts,” www.emory.
+edu/EDUCATION/mfp/efftalk.html.
+[13] Lent, R.W., Brown, S.D., Schmidt, J., Brenner, B., Lyons, H.,
+and Treistman, D., “Relation of Contextual Supports and Barriers to
+Choice Behavior in Engineering Majors: Test of Alternative Social Cognitive Models,” Journal of Counseling Psychology, Vol. 50, No. 4, 2003, pp.
+458–465.
+[14] Schaefers, K.G., Epperson, D.L., and Nauta, M.M., “Women’s
+Career Development: Can Theoretically Derived Variables Predict Persistence in Engineering Majors?,” Journal of Counseling Psychology, Vol. 44,
+1997, pp. 173–183.
+[15] Eccles, J.S., and Wigfield, A., “Motivational Beliefs, Values, and
+Goals,” Annual Review of Psychology, Vol. 53, 2002, pp. 109–132.
+[16] Lent, R.W., Brown, S.D., and Larkin, K.C., “Comparison of
+Three Theoretically Derived Variables in Predicting Career and Academic
+Behavior: Self-Efficacy, Interest Congruence, and Consequence Thinking,” Journal of Counseling Psychology, Vol. 34, No. 3, 1987, pp. 293–298.
+[17] Hackett, G., Betz, N.E., Casas, J.M., and Rocha-Singh, I.A.,
+“Gender, Ethnicity, and Social Cognitive Factors Predicting the Academic
+Achievement of Students in Engineering,” Journal of Counseling Psychology,
+Vol. 39, No. 4, 1992, pp. 527–538.
+[18] Lent, R.W., Lopez, F.G., and Bieschke, K.J., “Mathematics SelfEfficacy: Sources and Relation to Science-Based Career Choice,” Journal of
+Counseling Psychology, Vol. 38, No. 4, 1991, pp. 424–430.
+[19] Schmidt, J., Lent, R.W., Schmidt, L., Mead, P., and Bigio, D.,
+“Social Cognitive Career Theory as an Approach to Understanding Retention in Engineering Majors,” Proceedings, 2001 ASEE Annual Conference
+and Exposition, Albuquerque, New Mexico: American Society of Engineering Education, 2001.
+[20] Adelman, C., “Women and Men of the Engineering Path: A
+Model for Analyses of Undergraduate Careers,” U.S. Department of
+Education and the National Institute for Science Education, 1998,
+www.erc-assoc.org/nsf/engrg_paths/EPMONOG.htm.
+[21] Goodman, I.F., Cunningham, C.M., Lachapelle, C., Thompson,
+M., Bittinger, K., Senior, Brennan, R.T., and Delci, M., “Final Report of the
+Women’s Experiences in College Engineering Project,” Goodman Research
+Group Inc., 2002, www.grginc.com/WECE_FINAL_REPORT.pdf.
+
+46
+
+Journal of Engineering Education
+
+[22] Hackett, G., “Role of Mathematics Self-Efficacy in the Choice of
+Math-Related Majors of College Women and Men: A Path Analysis,”
+Journal of Counseling Psychology, Vol. 32, 1985, pp. 47–56.
+[23] Pajares, F., and Miller, M.D., “The Role of Self-Efficacy and SelfConcept Beliefs in Mathematical Problem Solving: A Path Analysis,” Journal of Educational Psychology, Vol. 86, No. 2, 1994, pp. 192–203.
+[24] Besterfield-Sacre, M., Moreno, M., Shuman, L.J., and Atman,
+C.J., “Gender and Ethnicity Differences in Freshmen Engineering Student Attitudes: A Cross-Institutional Study,” Journal of Engineering Education, Vol. 90, No. 4, 2001, pp. 477–489.
+[25] Bandura, A., Self-Efficacy: The Exercise of Control, New York, N.Y.:
+W.H. Freeman and Company, 1997.
+[26] From Scarcity to Visibility: Gender Differences in the Careers of
+Doctoral Scientists and Engineers, Washington, D.C.: National Academy
+Press, 2001.
+[27] Hathaway, R., Loesch, E., Sharp, S., and Davis, C.-S., “Factors
+Influencing First Year Undergraduate Science and Engineering Academic
+Confidence,” Proceedings, WEPAN Conference, Chicago, Ill., 2003.
+[28] Zeldin, A.L., and Pajares, F., “Against the Odds: Self-Efficacy
+Beliefs of Women in Mathematical, Scientific, and Technological
+Careers,” American Educational Research Journal, Vol. 37, No. 1, 2000,
+pp. 215–246.
+[29] Betz, N.E., and Hackett, G., “The Relationship of Career-Related
+Self-Efficacy Expectations to Perceived Career Options in College
+Women and Men,” Journal of Counseling Psychology, Vol. 28, 1981,
+pp. 399–410.
+[30] Matsui, T., Matsui, K., and Ohnishi, R., “Mechanisms Underlying Math Self-Efficacy Learning of College Students,” Journal of Vocational
+Behavior, Vol. 37, 1990, pp. 225–238.
+[31] Lent, R.W., Lopez, F.G., Brown, S.D., and Gore, P.A., “Latent
+Structure of the Sources of Mathematics Self-Efficacy,” Journal of Vocational Behavior, Vol. 49, 1996, pp. 292–308.
+[32] Lent, R.W., Brown, S.D., Gover, M.R., and Nijjer, S.K., “Cognitive Assessment of the Sources of Mathematics Self-Efficacy: A ThoughtListing Technique,” Journal of Career Assessment, Vol. 4, No. 1, 1996,
+pp. 33–46.
+[33] Pajares, F., and Miller, M.D., “Mathematics Self-Efficacy and
+Mathematics Performances: The Need for Specificity of Assessment,”
+Journal of Counseling Psychology, Vol. 42, No. 2, 1995, pp. 190–198.
+[34] Pajares, F., In Advances in Motivation and Achievement, Maehr, M.,
+Pintrich, P.R. (eds.), Greenwich, Conn.: JAI Press, 1997, Vol. 10, pp. 1–49.
+[35] Schunk, D.H., “Self-Efficacy and Academic Motivation,” Educational Psychologist, Vol. 26, 1991, pp. 207–231.
+[36] Bodner, G.M., “Twenty Years of Learning How to Do Research
+in Chemical Education,” Journal of Chemical Education, Vol. 81, No. 5,
+2004, pp. 618–628.
+[37] Marton, F., In The International Encyclopedia of Education, 2nd ed.,
+Husen, T., and Postlethwaite, T.N. (eds.), Oxford, England: Pergamon,
+1994; Vol. 8, pp. 4424–4429.
+[38] van Manen, M., Researching Lived Experiences, Albany, NY: State
+University of New York Press, 1990.
+[39] Follman, D.K., Patrick, H., and French, B., “Efficacy for Learning
+Engineering,” In Preparation.
+[40] Lent, R.W., Brown, S.D., and Larkin, K.C., “Self-Efficacy in the
+Prediction of Academic Performance and Perceived Career Options,” Journal of Counseling Psychology, Vol. 33, No. 3, 1986, pp. 265–269.
+[41] Midgley, C., Maehr, M.L., Hicks, L., Roeser, R., Urdan, T., Anderman, E.M., and Kaplan, A. “The Patterns of Adaptive Learning Survey
+(Pals),” University of Michigan, 1996.
+
+January 2006
+
+[42] Muhr, T., Atlas Ti 5.0, Berlin, Germany: Scientific Software Development, 2004.
+[43] Doyle, E., Stamouli, I., and Huggard, M., “Computer Anxiety,
+Self-Efficacy, Computer Experience: An Investigation Throughout a
+Computer Science Degree,” Proceedings, 35th Annual Frontiers in
+Education, Indianapolis, Ind.: ASEE/IEEE, 2005, pp. S2H-3–S2H-7.
+[44] Pajares, F., “Gender and Perceived Self-Efficacy in Self-Regulated
+Learning,” Theory into Practice, Vol. 41, No. 2, 2002, pp. 116–125.
+[45] “Assessing Women in Engineering (Awe) Project 2005: Self-Efficacy,” AWE Research Overviews, 2005, www.aweonline.org.
+
+AUTHORS’ BIOGRAPHIES
+Mica A. Hutchison is a graduate student at Purdue University.
+She is currently finishing the requirements for a master’s degree
+from the Department of Chemistry while actively working toward a
+Ph.D. from the Department of Engineering Education. Her research interests are focused on engineering education and the retention of engineering students. She received her B.S. in Chemical
+Engineering from the University of Idaho in 2002. Her research is
+directed by Dr. George M. Bodner and Dr. Deborah K. Follman.
+Address: Department of Chemistry, Purdue University, 560
+Oval Drive #498, West Lafayette, Indiana, 47907; e-mail:
+mahutchi@ purdue.edu.
+Deborah K. Follman is an assistant professor in the Department
+of Engineering Education at Purdue University. She holds a B.S. in
+
+Chemical Engineering from Cornell University and a Ph.D. in
+Chemical Engineering from North Carolina State University. Her
+research interests include engineering education and gender equity,
+specifically regarding self-efficacy, issues of gender on student cooperative learning teams, and curriculum development.
+Address: Department of Engineering Education, Purdue University, 400 Centennial Mall Drive, West Lafayette, Indiana,
+47907; e-mail: dfollman@purdue.edu.
+Melissa A. Sumpter is an undergraduate student in the Department of Chemistry at Purdue University preparing to transfer to the
+Krannert School of Management marketing program. She is a
+member of the national chemistry fraternity, Alpha Chi Sigma.
+Her research is directed by George M. Bodner, Deborah K. Follman, and Mica A. Hutchison.
+Address: Department of Chemistry, Purdue University, 560 Oval
+Drive, West Lafayette, Indiana, 47907; e-mail: masumpte@purdue.
+edu.
+George M. Bodner is the Arthur E. Kelly Professor of Chemistry, Education and Engineering at Purdue University, where he is
+head of the Division of Chemical Education in the Department of
+Chemistry and a member of the faculty of the newly constituted
+Department of Engineering Education.
+Address : Department of Chemistry, Purdue University, 560
+Oval Drive, West Lafayette, Indiana, 47907; e-mail: gmbodner@
+purdue.edu.
+
+January
+2006
+of toEngineering
+47
+The author
+has requested enhancement of the downloaded file. All in-text references underlined in blue Journal
+are linked
+publications Education
+on ResearchGate.
+
+

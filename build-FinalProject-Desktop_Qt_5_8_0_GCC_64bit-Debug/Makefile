@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = FinalProject1.0.0
-DISTDIR = /home/coder/Documents/CSE2341-17S-Have-mercy/build-FinalProject-Desktop_Qt_5_8_0_GCC_64bit-Debug/.tmp/FinalProject1.0.0
+DISTDIR = /home/coder/Desktop/DS/CSE2341-17S-Have-mercy/build-FinalProject-Desktop_Qt_5_8_0_GCC_64bit-Debug/.tmp/FinalProject1.0.0
 LINK          = g++
 LFLAGS        = 
 LIBS          = $(SUBLIBS) -lpodofo 
@@ -49,18 +49,25 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../FinalProject/main.cpp \
-		../FinalProject/parsedpdf.cpp \
 		../FinalProject/word.cpp \
 		../FinalProject/stopwords.cpp \
-		../FinalProject/searcher.cpp 
+		../FinalProject/searcher.cpp \
+		../FinalProject/streamparser.cpp \
+		../FinalProject/avlindex.cpp \
+		../FinalProject/pdfparser.cpp \
+		../FinalProject/indexhandler.cpp 
 OBJECTS       = main.o \
-		parsedpdf.o \
 		word.o \
 		stopwords.o \
-		searcher.o
+		searcher.o \
+		streamparser.o \
+		avlindex.o \
+		pdfparser.o \
+		indexhandler.o
 DIST          = ../FinalProject/xrayingpregnantbitches.pdf \
 		../FinalProject/StopWords \
 		StopWords \
+		../FinalProject/index.txt \
 		/opt/Qt/5.8/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.8/gcc_64/mkspecs/common/unix.conf \
 		/opt/Qt/5.8/gcc_64/mkspecs/common/linux.conf \
@@ -202,17 +209,24 @@ DIST          = ../FinalProject/xrayingpregnantbitches.pdf \
 		/opt/Qt/5.8/gcc_64/mkspecs/features/exceptions.prf \
 		/opt/Qt/5.8/gcc_64/mkspecs/features/yacc.prf \
 		/opt/Qt/5.8/gcc_64/mkspecs/features/lex.prf \
-		../FinalProject/FinalProject.pro parsedpdf.h \
-		word.h \
+		../FinalProject/FinalProject.pro word.h \
 		../avlTree/avltree.h \
 		../avlTree/catch.hpp \
 		avltree.h \
 		stopwords.h \
-		searcher.h ../FinalProject/main.cpp \
-		../FinalProject/parsedpdf.cpp \
+		searcher.h \
+		streamparser.h \
+		avlindex.h \
+		indexinterface.h \
+		pdfparser.h \
+		indexhandler.h ../FinalProject/main.cpp \
 		../FinalProject/word.cpp \
 		../FinalProject/stopwords.cpp \
-		../FinalProject/searcher.cpp
+		../FinalProject/searcher.cpp \
+		../FinalProject/streamparser.cpp \
+		../FinalProject/avlindex.cpp \
+		../FinalProject/pdfparser.cpp \
+		../FinalProject/indexhandler.cpp
 QMAKE_TARGET  = FinalProject
 DESTDIR       = 
 TARGET        = FinalProject
@@ -552,27 +566,21 @@ compiler_clean:
 
 ####### Compile
 
-main.o: ../FinalProject/main.cpp ../FinalProject/parsedpdf.h \
+main.o: ../FinalProject/main.cpp ../FinalProject/pdfparser.h \
 		../FinalProject/avltree.h \
+		../FinalProject/stopwords.h \
 		../FinalProject/word.h \
 		../FinalProject/porter2_stemmer.h \
 		../FinalProject/util/string_view.h \
 		../FinalProject/util/hash.h \
-		../FinalProject/stopwords.h \
-		../FinalProject/searcher.h
+		../FinalProject/avlindex.h \
+		../FinalProject/indexinterface.h \
+		../FinalProject/searcher.h \
+		../FinalProject/indexhandler.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../FinalProject/main.cpp
 
-parsedpdf.o: ../FinalProject/parsedpdf.cpp ../FinalProject/parsedpdf.h \
-		../FinalProject/avltree.h \
-		../FinalProject/word.h \
-		../FinalProject/porter2_stemmer.h \
-		../FinalProject/util/string_view.h \
-		../FinalProject/util/hash.h \
-		../FinalProject/stopwords.h \
-		../FinalProject/searcher.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o parsedpdf.o ../FinalProject/parsedpdf.cpp
-
 word.o: ../FinalProject/word.cpp ../FinalProject/word.h \
+		../FinalProject/avltree.h \
 		../FinalProject/porter2_stemmer.h \
 		../FinalProject/util/string_view.h \
 		../FinalProject/util/hash.h
@@ -589,6 +597,49 @@ searcher.o: ../FinalProject/searcher.cpp ../FinalProject/searcher.h \
 		../FinalProject/util/string_view.h \
 		../FinalProject/util/hash.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o searcher.o ../FinalProject/searcher.cpp
+
+streamparser.o: ../FinalProject/streamparser.cpp ../FinalProject/streamparser.h \
+		../FinalProject/word.h \
+		../FinalProject/avltree.h \
+		../FinalProject/porter2_stemmer.h \
+		../FinalProject/util/string_view.h \
+		../FinalProject/util/hash.h \
+		../FinalProject/stopwords.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o streamparser.o ../FinalProject/streamparser.cpp
+
+avlindex.o: ../FinalProject/avlindex.cpp ../FinalProject/avlindex.h \
+		../FinalProject/indexinterface.h \
+		../FinalProject/word.h \
+		../FinalProject/avltree.h \
+		../FinalProject/porter2_stemmer.h \
+		../FinalProject/util/string_view.h \
+		../FinalProject/util/hash.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o avlindex.o ../FinalProject/avlindex.cpp
+
+pdfparser.o: ../FinalProject/pdfparser.cpp ../FinalProject/pdfparser.h \
+		../FinalProject/avltree.h \
+		../FinalProject/stopwords.h \
+		../FinalProject/word.h \
+		../FinalProject/porter2_stemmer.h \
+		../FinalProject/util/string_view.h \
+		../FinalProject/util/hash.h \
+		../FinalProject/avlindex.h \
+		../FinalProject/indexinterface.h \
+		../FinalProject/searcher.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o pdfparser.o ../FinalProject/pdfparser.cpp
+
+indexhandler.o: ../FinalProject/indexhandler.cpp ../FinalProject/indexhandler.h \
+		../FinalProject/avltree.h \
+		../FinalProject/pdfparser.h \
+		../FinalProject/stopwords.h \
+		../FinalProject/word.h \
+		../FinalProject/porter2_stemmer.h \
+		../FinalProject/util/string_view.h \
+		../FinalProject/util/hash.h \
+		../FinalProject/avlindex.h \
+		../FinalProject/indexinterface.h \
+		../FinalProject/searcher.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o indexhandler.o ../FinalProject/indexhandler.cpp
 
 ####### Install
 

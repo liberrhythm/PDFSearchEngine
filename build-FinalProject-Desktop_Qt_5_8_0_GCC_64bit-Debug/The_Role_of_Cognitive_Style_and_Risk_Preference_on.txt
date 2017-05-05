@@ -1,0 +1,2040 @@
+Journal of Leadership and Organizational Studies, 2007, Vol.13, No. 4
+
+The Role of Cognitive Style and Risk Preference
+on Entrepreneurial Self-Efficacy and
+Entrepreneurial Intentions
+Saulo Dubard Barbosa
+Université Pierre Mendès France
+Megan W. Gerhardt & Jill Richard Kickul
+Miami University
+The purpose of the current study is to address
+the distinctive roles of cognitive style and risk
+preference on four types of entrepreneurial selfefficacy and entrepreneurial intentions. More
+specifically, we examine how both cognitive
+style and risk preference separately and
+interactively contribute to an individual’s
+assessment of his/her own skills and abilities as
+well as to his/her own entrepreneurial
+intentions.
+This study investigated these
+relationships using an international sample of
+528 entrepreneurial students across three
+universities. Results indicated that individuals
+with a high risk preference had higher levels of
+entrepreneurial intentions and opportunityidentification efficacy, whereas individuals with
+a low risk preference had higher levels of
+relationship efficacy, and tolerance efficacy.
+Individuals with an intuitive cognitive style were
+also found to have lower perceived self-efficacy
+concerning the establishment of relationship
+with investors, the economic management of the
+new venture, and their capacity to tolerate
+ambiguity. However, intuitive individuals who
+had a high preference for risk exhibited higher
+levels of opportunity identification efficacy.
+Finally, contrary to our final hypothesis,
+analytic individuals with a low preference for
+risk had higher levels of relationship and
+tolerance self-efficacy than intuitive individuals
+with a high risk preference. Implications of
+these findings and directions for future research
+are discussed.
+The question of what separates those who
+choose to pursue entrepreneurial pursuits from
+those who opt not to be entrepreneurs is an
+
+intriguing issue, and investigating the role of
+individual differences in entrepreneurial
+behavior and intentions is a growing field of
+research. While increased understanding of the
+individual-level constructs that may contribute
+to successful entrepreneurial endeavors appears
+to be an essential endeavor, prior research has
+only begun to scratch the surface of this pursuit
+(Markman, Balkin, & Baron, 2002; Zhao,
+Seibert, & Hills, 2005). The purpose of the
+current study is to examine in-depth the role of
+two
+key
+individual
+differences
+and
+entrepreneurial motivation and behavior. More
+specifically, we examine how cognitive style
+and risk preference—both separately and
+interactively—contribute to an individual’s
+entrepreneurial efficacy as well as to his/her own
+entrepreneurial intentions.
+The current study examines the specific
+ways in which cognitive style and risk
+preference may affect entrepreneurial selfefficacy beliefs and entrepreneurial intentions.
+Drawing upon different conceptual frameworks
+from the literature on psychology and
+entrepreneurship,
+we
+formulate
+specific
+hypotheses concerning the relationships among
+these constructs.
+We then present the
+methodology used to test such hypotheses and
+the results we found. Since self-efficacy is a
+task-specific construct, we opted to test the
+effects of cognitive style and risk preference on
+four task-specific types of efficacy that have
+been found to relate to overall entrepreneurial
+efficacy. Finally, we discuss our findings in the
+light of existent conceptualizations of
+entrepreneurial risk and cognition.
+
+Cognitive Style and Risk Preference
+
+Theoretical Background
+The Unique Role of Cognitive Style
+Researchers have postulated that a focus on
+the role of cognition has the potential to make a
+significant contribution to the study of
+entrepreneurship (Allinson, Chell, & Hayes,
+2000; Baron, 1998; Mitchell et al., 2002). As
+defined
+by
+Mitchell
+et
+al.
+(2002),
+“entrepreneurial cognitions are the knowledge
+structures that people use to make assessments,
+judgments, or decisions involving opportunity
+evaluation, venture creation, and growth” (p.
+97). Cognition research offers us multiple
+mechanisms, both theory-driven and empirically
+robust, to build a deeper, richer understanding of
+how we learn to see opportunities and further
+assess our skills and abilities along the
+entrepreneurial intentions process.
+An
+individual’s cognitive style may influence
+his/her preferences for different types of
+learning, knowledge gathering, information
+processing, and decision making—many of the
+critical behaviors and actions an entrepreneur is
+confronted with on a daily basis. As individuals
+process information, they develop a sense of
+how capable they are to engage in a course of
+action (self-efficacy) and how likely it is that
+they will engage in the action (intention).
+To date, a number of researchers have
+presented potential conceptualizations and
+dimensions of cognition and cognitive style
+(e.g., Kahneman, 2003; Nickerson, Perkins, &
+Smith, 1985; Ornstein, 1977).
+Early on,
+Ornstein (1977) referred to two modes of
+awareness that reflect the rational and intuitive
+sides of an individual. This super-ordinate
+dimension of cognitive style is identified as
+intuition-analysis (Allison et al, 2000). Drawing
+upon the work of a number of theorists and
+empirical researchers who have argued that the
+dimensions of cognitive style can be ordered
+within a unitary framework, Allinson & Hayes
+(1996) reported the development and validation
+of a new instrument, the Cognitive Style Index
+(CSI).
+Based on research with the CSI,
+Allinson, Chell, and Hayes (2000) found that
+people showing entrepreneurial behavior tend to
+score high on the intuition pole of the intuitionanalysis dimension. Such finding is consistent
+with the description of a specific type of
+entrepreneur—the ‘expert idea generator’—
+
+Volume 13, Number 2, 2007 87
+which has been characterized as predominantly
+intuitive (Miner, 1997).
+Additionally, an
+individual’s cognitive style may influence their
+preference for different types of learning,
+knowledge gathering, information processing,
+and decision making, many of the critical
+intentions and actions an entrepreneur is
+confronted with on a daily basis.
+Moreover, the assertion that entrepreneurs
+generally present an intuitive cognitive style is
+also supported by research on entrepreneurial
+cognition. In particular, this line of research has
+suggested that cognitive heuristics and biases
+may explain the risky ideas entrepreneurs pursue
+(L. Busenitz & Barney, 1997; L. W. Busenitz,
+1999; Palich & Bagby, 1995). Heuristics and
+biases, indeed, are typical of our intuitive
+system, i.e., they could be described as cognitive
+tools of human intuition (Kahneman, 2003;
+Kahneman, Slovic, & Tversky, 1982). The
+assertion that entrepreneurs make more use of
+cognitive heuristics—such as overconfidence,
+representativeness, law of small numbers, etc.—
+than nonentrepreneurs, implies therefore that
+entrepreneurs
+are
+more intuitive than
+nonentrepreneurs.
+The explanation usually
+given (or simply assumed) in the literature on
+entrepreneurial cognition is that the use of
+cognitive heuristics enables fast decision making
+and reduces risk perception, which in turn would
+explain the risky ideas entrepreneurs pursue (L.
+Busenitz & Barney, 1997; L. W. Busenitz, 1999;
+Keh, Foo, & Lim, 2002; Palich & Bagby, 1995;
+Simon, Houghton, & Aquino, 2000). In this
+sense, intuitive thinking seems to create a bias
+toward action that favors the decision of starting
+a venture. If this is true, we can hypothesize that
+intuitive thinking will be associated with higher
+levels of entrepreneurial intentionality.
+H1: Individuals having an intuitive
+cognitive style will exhibit higher levels of
+entrepreneurial intentions than individuals
+having an analytical cognitive style.
+Impact of Cognitive Style on
+Entrepreneurial Self-Efficacy
+Another important factor that may impact
+intentionality and risk taking is an individual’s
+belief in his/her own capacity of executing the
+behavior, i.e., his/her perceived self-efficacy (I.
+Ajzen, 2002; N. Krueger, 1993; N. Krueger &
+
+88 Journal of Leadership and Organizational Studies
+Dickson, 1994). Self-efficacy is defined as “an
+individual’s belief in one’s capability to
+organize and execute the courses of action
+required to produce given attainments”
+(Bandura, 1977, p. 3).
+The self-efficacy
+construct is derived from social cognitive theory,
+which states that human functioning is a result
+of the interplay between personal, behavioral,
+and environmental influences (Bandura, 1986).
+Social cognitive theory argues for the
+importance of human agency, viewing an
+individual as being influential in his or her own
+development. In keeping with this view, an
+individual is able to exercise control over his or
+her own thoughts, feelings, and actions, and this
+control is heavily influenced by an individual’s
+view of self. Meta-analytic investigations have
+found self-efficacy to consistently and positively
+relate to performance across a variety of workrelated contexts (Stajkovic & Luthans, 1998). In
+the field of entrepreneurship, self-efficacy has
+theoretically proposed to lead to entrepreneurial
+intentions and behavior (Boyd & Vozikis, 1994),
+and has been empirically found to relate
+positively to entrepreneurial intentions (Chen,
+Greene, & Crick, 1998).
+Given the importance of self-efficacy, the
+examination of what individual level factors
+may impact efficacy perceptions continues to be
+an important task. To date, research has found
+self-efficacy perceptions to relate to a wide
+variety of individual differences, including
+conscientiousness, extraversion, openness to
+experience, and emotional stability (Judge &
+Ilies, 2002), as well as learning goal orientation,
+need for achievement, and locus of control
+(Phillips & Gully, 1997), among others. The
+examination of individual differences that
+impact entrepreneurial self-efficacy has received
+more limited attention. More recently, Zhao,
+Seibert, and Hills (2005) found entrepreneurial
+experience and risk propensity to positively
+relate to entrepreneurial self-efficacy.
+Our
+current study aims to build upon this past
+research and contribute to the understanding of
+the antecedents that lead to entrepreneurial selfefficacy perceptions.
+Self-efficacy as first conceptualized by
+Bandura (1986) is a task-specific construct,
+meaning it is best assessed with regard to
+specific tasks and behaviors. However, since
+“entrepreneurial self-efficacy” is more of a
+
+Barbosa, Gerhardt, & Kickul
+broad conceptualization, we predicted it would
+be composed of several task-specific types of
+self-efficacy (see research of DeNoble et al.,
+1999 and Chen et al., 1998 for review of facets
+of entrepreneurial self-efficacy). It is these taskspecific types of efficacy that may be
+differentially related to cognitive style. Based
+on understanding and insight into the
+entrepreneurial process, we identified four
+potential types of task-specific self-efficacy that
+would fall under the broader umbrella of
+“entrepreneurial efficacy” that are drawn upon
+the work of DeNoble et al. (1999) and Chen et
+al. (1998):
+• Opportunity-Identification Self-Efficacy:
+the individual’s perceived self-efficacy
+concerning his/her capacities to identify
+and develop new product and market
+opportunities.
+• Relationship
+Self-Efficacy:
+the
+individual’s perceived self-efficacy
+concerning his/her capacities to build
+relationships, especially with potential
+investors and people who are connected
+to capital sources.
+• Managerial
+Self-Efficacy:
+the
+individual’s perceived self-efficacy
+concerning
+his/her
+managerial
+capacities, especially economic and
+financial management.
+• Tolerance Self-Efficacy: the individual’s
+perceived
+self-efficacy
+concerning
+his/her capacities to work productively
+under conditions of stress, pressure,
+conflict, and change.
+Olson (1995) introduced the notion that
+different approaches to information processing
+are more effective at different phases of the
+entrepreneurial life cycle. For example, when an
+entrepreneur is immersed in opportunity
+identification (e.g., attempting to develop a new
+product, service, or technology application),
+his/her thinking tends to be predominantly
+intuitive (Olson, 1995). Similarly, in later stages
+of the process as the entrepreneur shifts to
+evaluation of market opportunities, and the
+planning and implementation of the new
+venture, his/her information processing is
+predominantly rational and analytic (Cole, Field,
+& Harris, 2004; Olson, 1995).
+Since the
+different dimensions of self-efficacy may
+become more salient or relevant to different
+
+Cognitive Style and Risk Preference
+phases of the entrepreneurial process (Kickul,
+Gundry, & Whitcanack, 2005), we hypothesize
+the following:
+H2a: Individuals
+having an intuitive
+cognitive style will score higher in the types of
+self-efficacy that refer to the early stage of the
+entrepreneurial
+process
+(opportunityidentification efficacy) than those with an
+analytical cognitive style.
+H2b: Individuals having an intuitive
+cognitive style will score lower in the
+dimensions of perceived entrepreneurial selfefficacy that refer to the latter stages of the
+entrepreneurial process (relationship selfefficacy, managerial self-efficacy and tolerance
+self-efficacy) than those with an analytical
+cognitive style.
+The Distinct Role of Risk Preference
+In addition to cognitive style, another
+possibly related but separate factor at the
+individual level is one’s own preference for risk.
+Risk preferences consist of a general tendency,
+or the general desire, to pursue or avoid risks
+(Sitkin & Pablo, 1992). They are viewed as a
+determinant of risk propensity, which is defined
+as an individual’s general tendency toward
+either taking or avoiding risk within a particular
+kind of decision context (Mullins & Forlani,
+2005; Sitkin & Pablo, 1992).
+This means that when faced with different
+situations, an individual will likely show
+differing risk propensities; even if his/her risk
+preferences do not change a great deal. At the
+same time, different individuals faced with the
+same situation may present different risk
+propensities/preferences. Thus, an individual’s
+risk preferences correspond to his “risk
+disposition”, which, if combined with contextual
+factors, is likely a good predictor of what his/her
+attitudes toward risk will be for a specific kind
+of context.
+Throughout this text the terms risk
+preference and risk propensity are used almost
+interchangeably to designate an individual’s
+general tendency toward either taking or
+avoiding risk. While risk preference more
+specifically describes the measure we used
+(from the PSED) risk propensity is the term used
+more frequently in the literature (although there
+
+Volume 13, Number 2, 2007 89
+is no consensus about how to measure this
+construct)i.
+In Sitkin and Pablo’s (1992) conceptual
+model, for example, risk propensity has a
+preponderant role in influencing risk perception
+and risk behavior. The same assumption is
+shared by economic models in which risk
+seeking individuals become entrepreneurs and
+risk averse individuals become employees (e.g.,
+Kihlstrom & Laffont, 1979).
+Thus, in order to test those assumptions and
+fully examine the role of risk preferences on the
+pathway to entrepreneurship, we hypothesize:
+H3: Individuals having a high preference
+for risk will exhibit higher levels of
+entrepreneurial intentions than individuals
+having a low preference for risk.
+On the other hand, the relationship between
+risk preference and self-efficacy has been
+explored in the literature on entrepreneurship on
+a very limited basis. For instance, Krueger and
+Dickson (1994) showed that an increase in
+perceived self-efficacy leads to an increase in
+risk taking, by affecting perceptions of
+opportunities and threats. Similarly, Sitkin and
+Pablo (1992) suggested that risk-averse decision
+makers are more likely to attend to and weigh
+negative outcomes, overestimating threats and
+underestimating opportunities, whereas riskseeking decision makers tend to attend to and
+weigh positive outcomes, overestimating
+opportunities and underestimating threats. Most
+recently, Zhao et al (2005) examined the
+relationship of risk propensity to entrepreneurial
+self-efficacy, finding a positive relationship. In
+this sense, it is unclear if risk preferences affect
+perceptions of self-efficacy, or if instead
+perceptions of self-efficacy affect risk
+preferences. Thus, without presuming causality,
+but in order to simply investigate the
+relationship between risk preference and selfefficacy, we state the following:
+H4: Individuals having a high preference
+for risk will exhibit higher levels of all four types
+of entrepreneurial self-efficacy (opportunityidentification self-efficacy, relationship selfefficacy, managerial self-efficacy, and tolerance
+self-efficacy) than individuals having a low
+preference for risk.
+
+90 Journal of Leadership and Organizational Studies
+
+The Dual – Interactive Role of Cognition
+and Risk Preferences on Self-Efficacy
+and Intentionality
+As stated by MacCrimmon and Wehrung
+(1985), “Risk-taking has two components: the
+riskiness of situations and the willingness of
+people to take risks” (p.1). By combining
+cognitive style and risk preferences, our attempt
+is to take into account these two components of
+risk-taking behavior.
+Stated simply, cognition is the reason why
+situations look more or less risky. Hogarth
+(1987) has clarified this point: “from a logical
+viewpoint, it is absurd to make a statement of
+the kind that one situation or venture is more
+uncertain than another; it is simply you who are
+more uncertain about one of the situations”
+(Hogarth, 1987, p. 13). Indeed, the author
+argues that it is our limited informationprocessing capacities that are the source of
+uncertainty. Analyzing cognitive style gives us
+a clue of how individuals process (transform,
+reduce, elaborate, store, recover and use) the
+sensory input they receive from the environment
+(situational factors). On the other hand, risk
+preferences are by definition “the willingness of
+people to take risks.”
+Together, cognitive style and risk
+preferences may influence the self-efficacy and
+the intentions of nascent and potential
+entrepreneurs in ways that have not yet been
+explored.
+Drawing once again upon the
+theoretical framework underlying self-efficacy
+beliefs, social-cognitive theory states that the
+primary source of self-efficacy beliefs is the
+process of enactive mastery (Bandura,
+1986;1997). It is almost definitional to state, for
+example, that analytics tend to develop different
+skills through mastery experiences when
+compared to intuitives – enhancing therefore
+different types of self-efficacy. One could also
+hypothesize that different risk preferences are
+associated with different types of self-efficacy,
+because risk preferences may have influenced an
+individual’s past choices and then his/her
+previous mastery experience, affecting the
+individual’s beliefs about what he/she is or is not
+capable of.
+At this point, it may be useful to think
+about the different combinations of risk
+preference and cognitive style. For instance,
+
+Barbosa, Gerhardt, & Kickul
+from the hypotheses early stated we can infer
+that intuitive individuals with high preference
+for risk will present the highest levels of
+entrepreneurial intentions and the strongest
+beliefs concerning their capacity of identifying
+and exploiting opportunities. Inversely, we can
+imagine that analytic individuals with low
+preference for risk will exhibit the lowest levels
+of entrepreneurial intentions and will not feel so
+confident in their capacity to recognize
+opportunities. In order to fully test those
+hypotheses, we state:
+H5: Intuitive individuals having a high
+preference for risk will exhibit higher levels of
+entrepreneurial intentions than
+analytic
+individuals having a low preference for risk.
+Since different task-specific types of selfefficacy relate to different stages of the venture
+process (Kickul, Gundry, & Whitcanack, 2005),
+it seems useful to investigate more in detail the
+dual role of cognitive style and risk preference
+on the different task-specific types of selfefficacy. As indicated earlier, previous research
+has shown that analytics and intuitives have
+different aptitudes that are required in different
+phases of the venture process. In particular, it
+has been pointed out that intuition is more
+relevant to the activities executed in the earlier
+phases of the process (i.e., opportunity
+identification), whereas analysis is preponderant
+in the tasks executed in the later stages of
+implementation and management of the new
+venture (N. F. Krueger & Kickul, 2006; Olson,
+1995). Based on this literature, we hypothesize:
+H6a: Intuitive individuals having a high
+preference for risk will exhibit higher levels of
+opportunity identification efficacy than analytic
+individuals having a low preference for risk.
+H6b: Analytic individuals having a high
+preference for risk will exhibit higher levels of
+relationship efficacy, managerial self-efficacy
+and tolerance self-efficacy than intuitive
+individuals having a low preference for risk.
+
+Cognitive Style and Risk Preference
+
+METHODOLOGY
+Participants
+Participants were 528 university students
+enrolled in entrepreneurship programs across
+three countries (Russian, Norway and Finland).
+In Russia, 324 questionnaires were gathered
+from students of the Baltic State Technical
+University in St. Petersburg. From them, 226
+third-year students were enrolled in the bachelor
+Business Administration program with the
+International Industry Management Department
+(IIMD), 20 students were enrolled in the Master
+of Business Administration program and 76
+students were taking the second Master of
+Business degree on the same IIMD (these are
+typically students from the engineering
+Departments of the University, pursuing an
+additional degree in Economy).
+Our
+questionnaire was administrated in December
+2004. After controlling for missing values,
+seven questionnaires were removed due to a
+high percentage of missing values. Totally, 317
+questionnaires obtained from Russian students
+were entered into the analysis. The average
+student age was 21.5 years, with 54% females.
+Twenty-three percent reported to have parents
+who had been self-employed, while only 7% had
+been self-employed personally.
+Forty six
+percent of the respondents had never been
+employed earlier, and about the same proportion
+had between one and three years of work
+experience.
+In Norway, the data for this study was
+gathered from 111 third year Business
+administration bachelor students within Bode
+Graduate School of Business.
+It was
+administered as a hand-out in a lesson in a
+method course for third-year business bachelor
+students. The average student age was 28 years,
+with 45% being female. Forty percent reported
+to have parents who had been self-employed,
+and 17% had been self-employed personally.
+The
+Finnish
+students
+were
+100
+undergraduates enrolled in the three year
+Bachelor of Business Administration (BBA)
+program at the Helsinki School of Economics Mikkeli Campus.
+The questionnaires were
+administrated to students enrolled in a
+Management course given by one of the coauthors. The average student age was 22 years,
+with 43% being female. Fifty one percent
+
+Volume 13, Number 2, 2007 91
+reported to have parents who had been selfemployed, and only 10% had been selfemployed personally. Forty six percent of
+respondents have never been employed earlier,
+and about the same proportion had between one
+and five years of work employment experience.
+From this brief description it is evident that
+while in all three cases the main group of
+respondents are third-year bachelor business
+students, a number of differences were noticed.
+Norwegian students were older than both
+Finnish and Russian students, and that may
+explain the higher percent of those who have
+tried self-employment. A higher proportion of
+the Norwegian and the Finnish students had selfemployed parents than in the Russian sample.
+This may be due to the fact that entrepreneurial
+activities in Russia were allowed only 15 years
+ago. Finally, slightly more women are found
+among Russian students than among the samples
+from the other two countries.
+Participants completed measures of selfefficacy, entrepreneurial intentions, cognitive
+style, as well as risk preferences. Prior to the
+main data collection, questionnaire was
+translated to Russian and Norwegian and tested
+on a smaller number of respondents. Finnish
+students received an English version of
+questionnaire.
+All Finnish students who
+participated in the project were taking a
+management course in English. Hence, it was
+assumed they could answer an English version.
+It was a challenge to find the correct Russian
+and Norwegian translation and to take into
+consideration all cultural and language nuances.
+(For example, in some cases the same
+expression translated from English to Russian
+had a slightly different meaning than the same
+expression translated from English to
+Norwegian).
+In order to overcome these
+difficulties the authors had a number of
+telephone conferences. The questionnaires were
+pretested on colleagues and students in order to
+discuss the wording and the meaning of the
+questions.
+
+Measures
+Entrepreneurial Intentions
+Entrepreneurial intentions were measured
+by 9 items adopted from Krueger, Reilly, &
+Carsrud (2000) concerning intentions to start a
+
+92 Journal of Leadership and Organizational Studies
+business. Responses were given along a 7-point
+scale from 1=very unlikely to 7=very likely,
+except for the first item, which ranged from
+1=would prefer to be employed by someone to
+7=would prefer to be self-employed. Another
+sample item read: “I plan to start and run my
+own business in the near future.” The final scale
+yielded a Cronbach’s alpha of .92 and was
+unidimensional.
+Cognitive Style
+Participants completed the Cognitive Style
+Index (CSI) (Allinson & Hayes, 1996), a 38item measure that has a true-false response mode
+(true coded as ‘1” and false coded as ‘0’). The
+index identifies an individual's cognitive style as
+being either analyst or intuitive (dichotomized
+measurement). Allinson & Hayes (1996) found
+discriminant validity for their instrument and
+later work on the CSI by Allinson, Chell, and
+Hayes (2000) found that people showing
+entrepreneurial behavior tend to be intuitive as
+opposed to analytic on the CSI measure.
+Entrepreneurial Self-Efficacy
+A total of 18 items were included in the
+entrepreneurial self-efficacy scales: developing
+new product and market opportunities
+(DeNoble, Jung, & Ehrlich, 1999), economic
+management (Anna, Chandler, Jansen, & Mero,
+2000), initiating investor relationships, and
+tolerance for ambiguity (DeNoble, Jung, &
+Ehrlich, 1999). One self-constructed item was
+added to the DeNoble et al. (1999) investor
+relationship scale. The overall Cronbach alpha
+reliability of the self-efficacy was .93. A factor
+analysis was conducted using the Principal Axis
+Factoring method with oblique rotation
+(oblimin): a total of four factors emerged,
+confirming the four types of task-specific selfefficacy we expected. Since all items presented
+loadings above .5, they were all retained, and
+factor scores were used in the subsequent
+analysis. As previously discussed, the four taskspecific types of Entrepreneurial Self-Efficacy
+were named and interpreted as follows:
+• Opportunity-Identification
+SelfEfficacy: the individual’s perceived
+self-efficacy
+concerning
+his/her
+capacities to identify and develop new
+product and market opportunities.
+
+Barbosa, Gerhardt, & Kickul
+•
+
+•
+
+•
+
+Relationship
+Self-Efficacy:
+the
+individual’s perceived self-efficacy
+concerning his/her capacities to build
+relationships, especially with potential
+investors and people who are connected
+to capital sources.
+Managerial
+Self-Efficacy:
+the
+individual’s perceived self-efficacy
+concerning
+his/her
+managerial
+capacities, especially economic and
+financial management.
+Tolerance
+Self-Efficacy:
+the
+individual’s perceived self-efficacy
+concerning his/her capacities to work
+productively under conditions of stress,
+pressure, conflict, and change.
+
+Risk Preference
+Past research has used a great variety of
+risk measures (e.g., MacCrimmon & Wehrung,
+1985) in order to assess risk preference and risk
+propensity, without making a clear distinction
+between them. In our research, risk preference
+was assessed using the same measure found in
+The Panel Study of Entrepreneurial Dynamics
+(PSED) (Reynolds, 2000) survey. To represent
+this preference the PSED provides a categorical
+measure of the risk-return preference.
+Specifically, the PSED measure asks:
+“Assuming you are the sole owner, which
+situation would you prefer? 1) A business that
+would provide a good living, but with little risk
+of failure, and little likelihood of making you a
+millionaire, or 2) A business that was much
+more likely to make you a millionaire but had a
+much higher chance of going bankrupt”, which
+were coded “0” and “1” respectively for the two
+types of new businesses with different
+risk/return (alpha = low risk, “0”; beta = high
+risk, “1”).
+Within our own sample,
+approximately 72% were risk-averse (chose the
+alpha category).
+
+Results
+In order to analyze all of our different
+hypotheses, we conducted a series of tests that
+ranged from simple t-tests (for the main effects)
+to multivariate analyses of variance (MANOVA)
+that considered the interactive effects of
+cognitive style and risk preference on the four
+types of self-efficacy and entrepreneurial
+
+Cognitive Style and Risk Preference
+
+Volume 13, Number 2, 2007 93
+
+intentions. For each of the hypotheses, we
+mention the tests and findings based on that type
+and level of analyses below.
+To examine our first hypothesis, we
+conducted a t-test to determine whether
+individuals having an intuitive cognitive style
+would have higher levels of entrepreneurial
+intentions than individuals having a more
+analytic cognitive style. We did not find support
+for hypothesis 1 (t = -.94, p = ns). In fact,
+analytics had a slightly higher score on
+intentionality (mean = 4.05, SD 1.21) than
+intuitives (mean = 3.95, SD = 1.24).
+In investigating both hypotheses 2a and 2b
+using MANOVA (dependent variables were all
+four dimensions of self-efficacy), we found
+
+partial support for intuitive cognitive style on
+several of our dimensions. More specifically,
+while hypothesis 2a was not supported (no
+significant differences between intuitives and
+analytics on opportunity identification; F = 1.32,
+p = ns), we did find full support of hypothesis 2b
+in that intuitives scored lower in the dimensions
+of perceived entrepreneurial self-efficacy that
+refer to the latter stages of the entrepreneurial
+process (i.e., relationship self-efficacy, F = 6.92,
+p<.05; managerial self-efficacy, F = 5.39, p<.05;
+and tolerance self-efficacy, F = 8.03, p<.05) than
+those with an analytical cognitive style. Table 1
+reveals all of the means for each of the
+dimensions by type of cognitive style.
+
+Table 1
+Descriptive Statistics (Cognitive Style)
+Self-Efficacy (SE)
+SE Opportunity
+SE Relationships
+SE Management
+SE Tolerance Ambiguity
+
+Cognitive
+style
+Intuitives
+Analytics
+Intuitives
+Analytics
+Intuitives
+Analytics
+Intuitives
+Analytics
+
+Hypothesis 3 was also supported in that
+results from our t-tests revealed that individuals
+having a high preference for risk exhibited
+higher levels of entrepreneurial intentions than
+individuals having a low preference for risk (t =
+5.04, p<.05; high risk mean = 4.45 (SD = 1.16);
+low risk mean = 3.85 (SD = 1.20)).
+As for hypothesis 4, we found partial
+support. As shown in Table 2 and in our
+MANOVA analyses, individuals having a high
+preference for risk exhibited higher levels of
+entrepreneurial self-efficacy for opportunityidentification (F = 22.49, p<.05), relationship (F
+= 18.69, p<.05), and tolerance (F= 27.44, p<.05)
+than individuals having a low preference for
+risk.
+There were, however, no significant
+differences between the two types of risk
+preferences on our managerial self-efficacy
+dimension (F = 2.49, p = ns).
+
+Mean
+.04
+-.05
+-.11
+.11
+-.09
+.10
+-.11
+.12
+
+Std.
+Deviation
+.97
+.90
+.92
+.97
+.93
+.99
+.93
+.98
+
+In examining the dual and interactive role
+of cognitive style and risk preference on
+intentionality and self-efficacy, we found mixed
+support for hypotheses 5, 6a, and 6b. Analysis
+of Variance (ANOVA) results revealed that
+intuitive individuals having a high preference for
+risk were found to have higher levels of
+entrepreneurial intentions (mean = 4.56, SD
+=.14) than analytic individuals having a low
+preference for risk (mean = 3.98, SD = .08; F =
+4.96, p<.05). To determine if these mean
+differences were significant, we conducted
+simple t-tests. This t-test revealed a discernable
+difference between the above two means
+(overall support for hypothesis 5). Figure 1
+depicts the interaction and plotting of the means
+for entrepreneurial intentions by cognitive style
+and risk preference.
+
+94 Journal of Leadership and Organizational Studies
+
+Barbosa, Gerhardt, & Kickul
+
+Table 2
+Descriptive Statistics (Risk Preference)
+Self-Efficacy (SE)
+SE Opportunity
+
+RP: Alpha or
+Beta
+beta
+alpha
+
+Mean
+.32
+-.11
+
+Std.
+Deviation
+0.99
+0.89
+
+SE Relationships
+
+beta
+alpha
+
+-.30
+.10
+
+1.05
+0.89
+
+SE Management
+
+beta
+alpha
+
+-.11
+.04
+
+1.02
+0.95
+
+SE Tolerance Ambiguity
+
+beta
+alpha
+
+-.36
+.13
+
+0.92
+0.94
+
+Figure 1
+Estimated Marginal Means of Summated Scale for Intentions
+4.6
+
+Estimated Marginal Means
+
+4.4
+
+4.2
+
+4.0
+
+Cognitive style
+
+3.8
+Intuitives
+
+3.6
+
+Analytics
+
+beta
+
+alpha
+
+RP: Alpha or Beta
+
+preference for risk (please see Table 3 for
+means.
+Finally, in investigating hypothesis 6a,
+we found that intuitive individuals having a high
+preference for risk exhibited higher levels of
+opportunity identification efficacy (mean = .46,
+SD = .93) than analytic individuals having a low
+preference for risk (mean = -.09, SD = .85; F =
+
+3.95, p<.05). Follow-up simple t-tests revealed
+that these two means are indeed significant (t =
+4.67, p<.05; see also Figure 2).
+As for hypothesis 6b, analytic
+individuals having a high preference for risk did
+not exhibit higher levels of relationship efficacy,
+managerial self-efficacy and tolerance selfefficacy than intuitive individuals having a low
+
+Cognitive Style and Risk Preference
+
+Volume 13, Number 2, 2007 95
+
+Figure 2
+
+Estimated Marginal Means of SE Opportunity
+.5
+.4
+
+Estimated Marginal Means
+
+.3
+.2
+.1
+
+0.0
+
+Cognitive style
+
+-.1
+
+Intuitives
+
+-.2
+
+Analytics
+
+beta
+
+alpha
+
+RP: Alpha or Beta
+
+Table 3
+Descriptive Statistics (Cognitive Style & Risk Preference)
+Self-Efficacy (SE)
+SE Opportunity
+
+SE Relationships
+
+SE Management
+
+Cognitive
+style
+Intuitives
+
+RP: Alpha or
+Beta
+beta
+alpha
+
+Mean
+.46
+-.13
+
+Std.
+Deviation
+0.93
+0.93
+
+Analytics
+
+beta
+alpha
+
+.12
+-.09
+
+1.07
+0.85
+
+Intuitives
+
+beta
+alpha
+
+-.51
+.06
+
+0.89
+0.87
+
+Analytics
+
+beta
+alpha
+
+.01
+.13
+
+1.20
+0.90
+
+Intuitives
+
+beta
+alpha
+beta
+alpha
+
+-.17
+-.05
+-.01
+.14
+
+0.98
+0.91
+1.07
+0.97
+
+Intuitives
+
+beta
+alpha
+
+-.56
+.08
+
+0.75
+0.93
+
+Analytics
+
+beta
+alpha
+
+-.07
+.18
+
+1.08
+0.94
+
+Analytics
+
+SE Tolerance Ambiguity
+
+96 Journal of Leadership and Organizational Studies
+
+Although the interactions were significant
+for relationship self-efficacy (F = 5.60, p<.05),
+and tolerance self-efficacy (F = 3.94, p<.05), we
+found unplanned effects that did not support
+hypothesis 6b. More specifically, as shown in
+Figures 3 and 4, analytic individuals with a low
+preference for risk had higher levels of
+
+Barbosa, Gerhardt, & Kickul
+
+relationship and tolerance self-efficacy than
+intuitive individuals with a high risk preference.
+Follow-up simple t-tests revealed discernable
+differences for relationship self-efficacy (t =
+5.36, p<.05) and tolerance self-efficacy (t =
+6.20, p<.05).
+
+Figure 3
+
+Estimated Marginal Means of SE Relationships
+.2
+
+Estimated Marginal Means
+
+0.0
+
+-.2
+
+Cognitive style
+
+-.4
+
+Intuitives
+
+-.6
+
+Analytics
+
+beta
+
+alpha
+
+RP: Alpha or Beta
+
+Figure 4
+
+Estimated Marginal Means of SE Tolerance Ambiguity
+.4
+
+.2
+
+Estimated Marginal Means
+
+0.0
+
+-.2
+
+-.4
+
+Cognitive style
+
+-.6
+
+Intuitives
+
+-.8
+
+Analytics
+
+beta
+
+RP: Alpha or Beta
+
+alpha
+
+Cognitive Style and Risk Preference
+
+Discussion
+Summary of Findings
+The results of this study suggest that
+individuals with a high risk preference have
+higher levels of entrepreneurial intentions and
+opportunity-seeking
+self-efficacy,
+whereas
+individuals with a low risk preference had higher
+levels of relationship efficacy, and tolerance
+efficacy. Our results also show that intuitives
+tend to have lower perceived self-efficacy
+concerning the establishment of relationship
+with investors, the economic management of the
+new venture, and their capacity to tolerate
+ambiguity and stress. In addition, these findings
+are consistent with the general assertion that
+analytics and intuitives have different aptitudes
+that are required in different phases of the
+venture process (N. F. Krueger & Kickul, 2006;
+Olson, 1995)—they differ at least in their
+perceptions of their own aptitudes.
+Our results were not supported when
+examining the general assertion that individuals
+having an intuitive cognitive style will exhibit
+higher levels of entrepreneurial intentions than
+individuals having an analytic cognitive style.
+Instead, it seems that risk preference plays a
+more preponderant role on entrepreneurial
+intentions. This is particularly illustrated by
+Figure 1, where (a) intuitives with high risk
+preferences have significantly higher intentions
+of starting their own business than analytics with
+high risk preferences, and (b) intuitives with low
+risk preferences have significantly lower
+intentions of starting their own business than
+analytics with low risk preferences. A possible
+explanation in need of additional research is that
+analytics tend to process more information
+before making decisions or evaluations, and are
+therefore less susceptible to their predispositions
+toward risk than are intuitives.
+Together, these findings support our
+hypotheses concerning the dual and interactive
+effect of risk preference and cognitive style on
+intentionality.
+We found that intuitive
+individuals having a high preference for risk
+exhibited higher levels of opportunity
+identification efficacy. However, contrary to
+our final hypothesis, analytic individuals with a
+low preference for risk had higher levels of
+relationship and tolerance self-efficacy than
+
+Volume 13, Number 2, 2007 97
+
+intuitive individuals with a high risk preference.
+Given the complexities of our results, we discuss
+in further detail our findings concerning each
+hypothesis in the following section.
+Discussion of Findings for Each
+Hypothesis
+The mixed results we found across our six
+general hypotheses necessitate a more detailed
+discussion. In the following paragraphs, we
+discuss the findings and implications for each
+hypothesis, made in the light of the literature on
+entrepreneurial risk and cognition. Finally, we
+also discuss the limitations and practical
+implications of our study.
+First, our data did not support hypothesis 1,
+i.e., that individuals having an intuitive cognitive
+style will exhibit higher levels of entrepreneurial
+intentions than individuals with an analytical
+cognitive style. This suggests that cognitive
+style alone is not a strong determinant of
+entrepreneurial intentions. This hypothesis was
+formulated based on the argument that
+entrepreneurs seem to present stronger intuitive
+thinking, characterized by an intensive use of
+cognitive heuristics (L. Busenitz & Barney,
+1997; L. W. Busenitz, 1999; Palich & Bagby,
+1995), and score higher on the intuition pole of
+the intuition-analysis continuum assessed by the
+CSI (Allinson, Chell, & Hayes, 2000).
+Therefore, our results for hypothesis 1 raise the
+question whether intuition is an antecedent or a
+consequence of entrepreneurial behavior.
+Indeed, the failure to support hypothesis 1 (with
+a student sample) suggests that actual
+entrepreneurs may score higher on intuition
+because they develop their intuitive thinking as a
+consequence of their situation, which means that
+they may more likely use cognitive heuristics
+(when compared to nonentrepreneurs) out of
+necessity. This, of course, is just one possible
+interpretation of this finding, and this idea
+should be explored in future research.
+We also found mixed results for our
+hypotheses concerning the relationship between
+cognitive style and entrepreneurial self-efficacy.
+In particular, we did not find support for
+hypothesis 2a, whereas hypothesis 2b was
+supported by our data. Without further research,
+we can only speculate about the reasons for
+these findings. However, one speculation is
+
+98 Journal of Leadership and Organizational Studies
+worth mentioning: our sample—composed
+mainly by third year business students—may
+have contributed to these results.1 This is
+because students generally learn analytical tools
+and develop analytical skills in management
+courses. As a result, it is possible that the
+business students in our sample felt more
+confident with activities requiring a good deal of
+analysis, especially those students with an
+analytical cognitive style, which may explain the
+corroboration of hypothesis 2b. On the other
+hand, hypothesis 2a was not supported possibly
+because analytic individuals may also feel
+capable of identifying opportunities with
+analytical tools, as opposed to intuition and gut
+feeling. Once more, we cannot stress enough
+the need for further research on entrepreneurial
+cognition in educational contexts, which is the
+only way to reduce speculations and clarify our
+results.
+We found support for hypothesis 3, i.e. that
+individuals with a high preference for risk
+exhibit stronger entrepreneurial intentions than
+individuals with a low preference for risk.
+Although this is consistent with previous
+literature presenting the entrepreneur as a risktaker (e.g., Kihlstrom & Laffont, 1979), we did
+not empirically test the idea that actual
+entrepreneurs have indeed higher risk
+preferences than nonentrepreneurs.
+Indeed,
+previous research has indicated that this is not
+the case (Brockhaus, 1980; Palich & Bagby,
+1995). With a sample of students, it appears that
+risk preferences are indeed associated with
+intentions to become an entrepreneur. However,
+it is well known that the passage from intentions
+to behavior depends on several factors—many
+of them context-dependent—that were not
+assessed in this study. In the following sections
+we elaborate on the limitations of this study and
+propose further avenues for research that
+directly address these issues.
+The results for hypothesis 4 suggest that
+individuals with a high preference for risk have
+stronger and positive perceptions of their
+opportunity-identification
+self-efficacy,
+relationship self-efficacy, and tolerance selfefficacy. However, we found no significant
+differences between the two types of risk
+preference we assessed in terms of their
+1
+
+We thank one of the reviewers for raising this issue.
+
+Barbosa, Gerhardt, & Kickul
+perceived managerial self-efficacy. Here again,
+one possible explanation for these mixed results
+remains in our sample. Since third year business
+students generally have taken several
+management courses, they may feel fairly
+confident in their capacity to manage a new
+venture, regardless of their risk preference.
+Along this line, further research could
+investigate the extent to which the effect of
+personal traits—such as risk preference—may
+be influenced by education and training.
+Our data supported hypothesis 5, indicating
+that intuitive individuals having a high
+preference for risk do exhibit higher levels of
+entrepreneurial
+intentions
+than
+analytic
+individuals having a low preference for risk.
+This supports the interaction between cognitive
+style and risk preference, which is shown in
+Figure 1. Based on these findings, it seems that
+cognitive style may foster or inhibit the effects
+of risk preference (a predisposition toward risk),
+because, as shown in Figure 1, intuitive
+individuals
+present
+higher
+levels
+of
+entrepreneurial
+intentions
+than
+analytic
+individuals when both have high preferences for
+risk (i.e., intuitives with high risk preference
+exhibit higher intentions than analytics with high
+risk preference), whereas intuitive individuals
+present lower levels of entrepreneurial intentions
+than analytic individuals when both have low
+preferences for risk (i.e., intuitives with low risk
+preference exhibit lower intentions than
+analytics with low risk preference). A possible
+explanation for this is that analytic individuals
+may tend to process more information before
+they make decisions, relying less on their
+predispositions and more on the external
+information
+available
+to them.
+These
+propositions should be investigated in future
+research.
+Finally, we found mixed results for
+hypotheses 6a and 6b.
+More specifically,
+hypothesis 6a was supported, indicating that
+intuitive individuals with a high preference for
+risk do exhibit stronger beliefs of opportunity
+identification efficacy than analytic individuals
+with a low preference for risk. This offers
+further evidence for the interaction between
+cognitive style and risk preference. It is also
+consistent with our previous findings: in
+particular, it complements our findings
+indicating that cognitive style alone is not a
+
+Cognitive Style and Risk Preference
+significant
+determinant
+of
+opportunity
+identification efficacy (Hypothesis 2a—not
+supported) while risk preference is (Hypothesis
+4—supported for opportunity identification
+efficacy). Indeed, analyzing their interaction
+allows for a more complete view of their effects
+on self-efficacy. For instance, Figure 2 shows
+that cognitive style does have an effect on
+perceived opportunity identification efficacy, but
+only for individuals having a high preference for
+risk.
+Hypothesis 6b, however, was not supported
+by our data, indicating that analytic individuals
+with a high preference for risk do not
+systematically exhibit higher levels of
+relationship self-efficacy, managerial selfefficacy, and tolerance self-efficacy than
+intuitive individuals having a low preference for
+risk. On the one hand, the interactive effects of
+cognitive style and risk preference were not
+significant for managerial self-efficacy beliefs,
+possibly because of the composition of our
+sample (management students), an issue that we
+addressed earlier. On the other hand, even when
+the interactions were significant (i.e., for
+relationship self-efficacy and tolerance selfefficacy), the effects were not as we expected.
+Figures 3 and 4 show the pattern of the
+interactive role of cognitive style and risk
+preference on perceived relationship selfefficacy and perceived tolerance self-efficacy,
+respectively. As is indicated, it seems that
+analytic
+individuals
+tend
+to
+exhibit
+systematically stronger perceptions of these two
+types of entrepreneurial self-efficacy, which is
+consistent with our findings for hypothesis 2b.
+However, it appears that the difference between
+intuitive and analytic individuals’ perceptions
+concerning these types of self-efficacy are much
+more significant among individuals with high
+preferences for risk than among individuals with
+low preferences for risk. Although this is
+consistent with our observation that cognitive
+style may foster or inhibit the effects of risk
+preference, these counterintuitive results should
+be analyzed with caution and further
+investigated by future research.
+In sum, the testing of our hypotheses and
+the careful analysis of our findings contribute to
+the literature on entrepreneurship by adding
+some important pieces to our conceptual map of
+the cognitive antecedents of entrepreneurial
+
+Volume 13, Number 2, 2007 99
+intentions.
+It adds to the literature on
+entrepreneurial
+risk and cognition
+by
+investigating the interactive role of risk
+preference and cognitive style on self-efficacy
+beliefs related to the venture creation process, as
+well as on entrepreneurial intentions. Therefore,
+it helps to provide a more complete view of the
+cognitive factors
+that influence one’s
+entrepreneurial intentions and, eventually, one’s
+decision to engage in entrepreneurship. The
+current study, however, has several limitations
+that we address in the next section.
+Limitations
+Our study, like most studies on
+entrepreneurial intentionality, has several
+limitations. First, even though implications for
+practice can be inferred, it is clear that we
+assessed students’ perceptions, and not
+entrepreneurs’ behaviors. Using a sample of
+students is justified, in our case, because we
+focus on factors that may affect the
+intentionality of potential entrepreneurs toward
+entrepreneurial behavior. That is, since one of
+the main interests of the study was focused on
+how entrepreneurs emerge (intentions process),
+we wanted to investigate the extent to which
+critical preconditions facilitate or inhibit this
+emergence (e.g., N. F. Krueger, Reilly, &
+Carsrud, 2000).
+In cognitive psychology,
+intention is the cognitive state immediately prior
+to executing a behavior. The dominant class of
+formal intentions models employs critical
+antecedents of intentions.
+For example,
+intentions require the belief that the behavior is
+achievable (e.g., self-efficacy). Empirically,
+intentions are consistently the single best
+predictor of subsequent behavior because any
+planned behavior is, by definition, intentional.
+This suggests that our understanding of
+relatively rare behaviors such as starting a
+venture will be enhanced by a richer
+understanding of the causally-prior intentions.
+In turn, we need to focus on the critical
+antecedents and students who are currently at the
+stage of assessing their own cognitive style and
+perceiving their own beliefs in achieving many
+of the critical skills and abilities associated with
+entrepreneurial intentions. This approach is also
+away from retrospective data collection
+techniques (entrepreneurial sample) whereby it
+may be difficult for the entrepreneurs to identify
+
+100 Journal of Leadership and Organizational Studies
+their cognitive style and self-efficacy post hoc
+the creation of a new venture (Gaglio & Katz,
+2001). Although there is a great deal of
+previous research establishing the reasonable
+linkage between intentions and later behavior
+(Icek Ajzen, 1991; Zhao, Seibert, & Hills,
+2005), we acknowledge that intentionality,
+however, does not automatically imply behavior.
+Second, causality cannot be assumed. Even
+though throughout this study cognitive style and
+risk preference appear as ‘antecedents’ of selfefficacy and intentionality, the causal relations
+linking these constructs can only be inferred, at
+most, and remain to be clearly demonstrated by
+future research.
+Third, the data in this study is self-reported.
+While self-report surveys are the typical
+mechanism for assessing and understanding
+certain individual differences, such as selfefficacy, and it can be argued that an accurate
+assessment of constructs such as cognitive style
+and intentions must occur from the individual, it
+is important to acknowledge that the data in this
+study all came from a common source. This
+may have potentially negative implications,
+especially common method variance. Common
+method variance is a methodological issue that
+affects many studies in social sciences and
+generates great debate (e.g., Doty & Glick,
+1998; Spector, 2006). Our findings are subject
+to this limitation and must be interpreted as
+such. We agree with Pedhazur and Schmelkin
+(1991) in that “it is only a multimethod approach
+that holds the promise of separating effects due
+to methods from those that appear to be due to
+the independent variables of interest.” (Pedhazur
+& Schmelkin, 1991, p. 276). Multimethod
+approaches, unfortunately, are rare in
+entrepreneurship research and may not be viable
+when assessing constructs such as the ones we
+addressed in the current study.
+Common
+method variance remains, therefore, a
+formidable challenge for future research on
+entrepreneurial cognition.
+Finally, we restricted our examination to a
+limited set of factors. In particular, and as most
+studies on entrepreneurial intentionality, our
+study overlooked situational factors that may be
+preponderant in the decision of starting a
+business. This does not affect the validity of our
+findings, but should serve as a remainder against
+misinterpretations.
+Indeed, the association
+
+Barbosa, Gerhardt, & Kickul
+between personal traits and perceptions of selfefficacy and intentionality may be moderated
+and even fully mediated by different situational
+factors. In this sense, our findings should be
+taken with caution, as a contribution to establish
+a more general map of the cognitive processes
+that may enhance or inhibit entrepreneurial
+intentions. Future research should combine both
+personal and situational variables in order to
+obtain a more complete picture of the processes
+that may lead to entrepreneurial behavior.
+
+Implications and Areas for Future
+Research
+The current study has useful implications
+for both academic entrepreneurial research and
+entrepreneurial
+education
+of
+potential
+entrepreneurs.
+In terms of entrepreneurial
+research, this study has contributed to the
+growing body of knowledge on antecedents of
+entrepreneurial self-efficacy and entrepreneurial
+intentions by identifying the role of cognitive
+style and risk preference.
+Future research
+should continue to utilize theoretically-grounded
+frameworks to select and investigate other
+individual differences that may lead to
+entrepreneurial
+efficacy
+and
+increased
+entrepreneurial intentions. Our understanding of
+entrepreneurial self-efficacy and intentions has
+to a large extent been guided by Ajzen’s (1991)
+theory of planned behavior (TPB). According to
+the TPB, attitudes, subjective norms and
+perceived
+behavioral
+control
+determine
+intentions.
+Intentions, in turn, along with
+perceived behavioral control, determine actual
+behavior. Empirical testing of entrepreneurial
+intentions has found support for the TPB model
+(for a review, see Kolvereid, 1996; N. F.
+Krueger, Reilly, & Carsrud, 2000). Additional
+individual difference antecedents including
+entrepreneurial intensity, proactive personality,
+and specific facets of subjective norms should be
+further investigated.
+In terms of contribution to the field of
+entrepreneurial education, this study provides
+evidence that there are valid individual
+differences
+in
+potential
+and
+nascent
+entrepreneurs that are important to recognize
+and acknowledge, as they have potential
+consequences for entrepreneurial efficacy and
+intentions. We echo the suggestion presented by
+
+Cognitive Style and Risk Preference
+Zhao et al. (2005), who call for greater attention
+and need for diverse learning experiences in
+entrepreneurial education. Such diverse learning
+experiences will increase the likelihood that the
+educational
+experience
+for
+potential
+entrepreneurs will be a good “fit” for those with
+differing cognitive styles.
+Another implication for entrepreneurial
+research and entrepreneurial education lies in a
+closer examination of the concept of risk. While
+this study has followed in the footsteps of
+previous research looking at the role of risk
+propensity and has added to this area of research
+by examining both the separate and interactive
+effects of risk preference and cognitive style,
+more research is needed to investigate the role of
+differing types of risk and ways that such risk
+can be avoided or dealt with successfully (e.g.,
+missing the boat vs. sinking the boat risks;
+Dickson & Giglierano, 1986).
+Our findings suggest that potential
+entrepreneurs with high risk preferences and an
+intuitive cognitive style are more likely to start
+new businesses than individuals with a more
+analytic thinking or lower risk preferences.
+However, our findings also suggest that
+individuals with a more analytic thinking believe
+they are better prepared to execute the activities
+necessary to the development and survival of a
+new business.
+This is consistent with
+Venkataraman’s
+assertion that
+“analysis
+increases a new business’s chance of success but
+decreases the probability of creating a business
+in the first place” (Venkataraman, 2002,
+Principle 2). Further research is necessary to
+verify the validity of such propositions, by
+examining not only perceptions, but also actual
+behavior.
+In particular, the link between intuition,
+analysis, and venture outcome, has yet to be
+explored. Previous research has indicated that
+entrepreneurs make an intensive use of cognitive
+heuristics, which are intuitive tools that enable
+entrepreneurs to make decisions and react
+quickly in changing markets (L. Busenitz &
+Barney, 1997; L. W. Busenitz, 1999; Palich &
+Bagby, 1995). However, the question whether
+such cognitive heuristics ultimately contribute to
+venture success or, instead, generate biases and
+pitfalls that reduce performance, remains open.
+Further research should also examine the
+causal relationships among the variables
+
+Volume 13, Number 2, 2007 101
+presented in this study. For instance, the
+relationship between self-efficacy and risk
+preference deserves to be treated in more detail.
+In the framework we adopted from Sitkin and
+Pablo (1992), risk preference is a determinant of
+risk propensity and risk behavior. In this sense,
+it is conceived as a personal trait. However,
+other scholars have suggested that preferences
+are in fact determined by perceptions of risks
+and benefits (Weber, Blais, & Betz, 2002).
+Moreover, previous research has also shown that
+self-efficacy beliefs do affect risk taking (N.
+Krueger & Dickson, 1994). The question if selfefficacy impacts risk preferences, or if instead
+risk preferences determine self-efficacy, is
+therefore of particular interest.
+
+Conclusion
+Our research addressed the role of
+cognition and risk preferences on self-efficacy
+and entrepreneurial intentions.
+Empirical
+evidence of the interaction between cognitive
+style and risk preferences was presented, as well
+as of their influence on intentionality and
+different types of self-efficacy. Implications for
+entrepreneurship research and education were
+drawn upon articulations of theory, empirical
+findings, and a detailed discussion of our
+hypotheses. While much work remains to be
+done, we hope that our findings give
+entrepreneurship scholars and educators yet
+another perspective on the complex role of
+cognitive style and risk preference in
+understanding an individual’s self-efficacy
+beliefs and entrepreneurial intentions. This
+understanding, in turn, can assist us in
+developing the appropriate curriculum and
+pedagogy to support a nascent entrepreneur’s
+pursuit of creating and growing a venture, which
+may ultimately enable the creation of new
+profitable and sustainable solutions for the
+marketplace.
+
+References
+Ajzen, I. (1991). The Theory of Planned
+Behavior. Organizational Behavior and
+Human Decision Processes, 50, 179-211.
+
+102 Journal of Leadership and Organizational Studies
+Ajzen, I. (2002). Perceived behavioural control,
+self-efficacy, locus of control, and the
+theory of planned behavior. Journal of
+Applied Social Psychology, 32(4), 665-683.
+Allinson, C. W., Chell, E., & Hayes, J. (2000).
+Intuition and entrepreneurial Behavior.
+European
+Journal
+of
+Work
+and
+Organizational Psychology, 9(1), 31-43.
+Allinson, C. W., & Hayes, J. (1996). The
+Cognitive style index: A Measure of
+intuition-analysis
+for
+organizational
+research. Journal of Management Studies,
+33(1), 119-135.
+Anna, A. L., Chandler, G. N., Jansen, E., &
+Mero, N. P. (2000). Women business
+owners in traditional and non-traditional
+industries. Journal of Business Venturing,
+15, 279-303.
+Bandura, A. (1977). Social Learning Theory.
+Englewood Cliffs, NJ: Prentice-Hall.
+Bandura, A. (1986). Social Foundations of
+Thought and Action. Englewood Cliffs, NJ:
+Prentice-Hall.
+Bandura, A. (1997). Self-Efficacy: The Exercise
+of Control. New York: Freeman & Co.
+Publishers.
+Baron, R. A. (1998). Cognitive mechanisms in
+entrepreneurship:
+Why
+and
+when
+Entrepreneurs think differently than other
+people. Journal of Business Venturing,
+13(4), 275-294.
+Boyd, N. G., & Vozikis, G. S. (1994). The
+Influence of Self-Efficacy on the
+Development of Entrepreneurial Intentions
+and Actions. Entrepreneurship Theory and
+Practice, 63-77.
+Brockhaus, R. H. S. (1980). Risk taking
+propensity of entrepreneurs. Academy of
+Management Journal, 23(3), 509-520.
+Busenitz, L., & Barney, J. B. (1997).
+Differences between entrepreneurs and
+managers in large organizations: Biases and
+heuristics in strategic decision-making.
+Journal of Business Venturing, 12(1), 9-30.
+Busenitz, L. W. (1999). Entrepreneurial risk and
+strategic decision making: It’s a matter of
+perspective. The Journal of Applied
+Behavioral Science, 35(3), 325-340.
+
+Barbosa, Gerhardt, & Kickul
+Chen, C. C., Greene, P. G., & Crick, A. (1998).
+Does
+entrepreneurial
+self-efficacy
+distinguish entrepreneurs from managers?
+Journal of Business Venturing, 13, 295316.
+Cole, M. S., Field, H. S., & Harris, S. G. (2004).
+Student
+learning
+motivation
+and
+psychological hardiness: Interactive effects
+on students’ reactions to a management
+class. Academy of Management Learning &
+Education, 3(1), 64-85.
+DeNoble, A. F., Jung, D., & Ehrlich, S. B.
+(1999). Entrepreneurial self-efficacy: The
+development of a measure and its
+relationship to entrepreneurial action. In W.
+D. B. R.D. Reynolds, S. Manigart, Cm.
+Mason, G.D. Meyer, H.J. Sapienza & K.G.
+Shaver (Ed.), Frontiers of Entrepreneurship
+Research (pp. 73-87). Waltham, MA: P&R
+Publications Inc.
+Dickson, P. R., & Giglierano, J. J. (1986).
+Missing the Boat and Sinking the Boat: A
+Conceptual Model of Entrepreneurial Risk.
+Journal of Marketing, 50(3), 58-70.
+Doty, D. H., & Glick, W. H. (1998). Common
+Methods Bias: Does Common Methods
+Variance
+Really
+Bias
+Results?
+.
+Organizational Research Methods, 1(4),
+374-406
+Gaglio, C. M., & Katz, J. (2001). The
+psychological
+basis
+of
+opportunity
+identification: Entrepreneurial alertness.
+Small Business Economics, 16, 95-111.
+Hogarth, R. (1987). Judgment and Choice: The
+Psychology of Decision (2nd ed.).
+Chichester, New York, Brisbane, Toronto:
+John Wiley & Sons.
+Judge, T. A., & Ilies, R. (2002). Relationship of
+personality to performance motivation: A
+meta-analytic review. Journal of Applied
+Psychology, 87(4), 797-807.
+Kahneman, D. (2003). Maps of Bounded
+Rationality: Psychology for Behavioral
+Economics. The American Economic
+Review, 93(5), 1449-1475.
+Kahneman, D., Slovic, P., & Tversky, A. (1982).
+Judgment under uncertainty: heuristics and
+biases. New York: Cambridge University
+Press.
+
+Cognitive Style and Risk Preference
+Keh, H. T., Foo, M. D., & Lim, B. C. (2002).
+Opportunity Evaluation under Risky
+Conditions: The Cognitive Processes of
+Entrepreneurs. Entrepreneurship Theory
+and Practice, 27(2), 125-148.
+Kickul, J., Gundry, L., & Whitcanack, L. (2005).
+Intuition
+versus
+Analysis?:
+Testing
+differential models of cognitive style on
+entrepreneurial
+self-efficacy
+and
+intentionality. Paper presented at the 2005
+Ivey Conference on Information Processing
+and Entrepreneurial Cognition Conference,
+London, Ontario.
+Kihlstrom, R. E., & Laffont, J.-J. (1979). A
+general equilibrium theory of firm
+formation based on risk aversion. Journal
+of Political Economy, 87(4), 719-748.
+Kolvereid, L. (1996). Prediction of employment
+status choice intentions. Entrepreneurship
+Theory and Practice, 21(1), 47-57.
+Krueger, N. (1993). The impact of prior
+entrepreneurial exposure on perceptions of
+new venture feasibility and desirability.
+Entrepreneurship Theory and Practice,
+18(1), 5-21.
+Krueger, N., & Dickson, P. R. (1994). How
+Believing in Ourselves Increases Risk
+Taking: Perceived Self-Efficacy and
+Opportunity
+Recognition.
+Decision
+Sciences, 25(3), 385-400.
+Krueger, N. F., & Kickul, J. (2006). So You
+Thought the Intentions Model Was Simple?
+Navigating
+the
+Complexities
+and
+Interactions of Cognitive Style, Culture,
+Gender, Social Norms, and Intensity on the
+Pathway to Entrepreneurship. Paper
+presented at the 2006 United States
+Association
+Small
+Business
+and
+Entrepreneurship Conference.
+Krueger, N. F., Reilly, M. D., & Carsrud, A. L.
+(2000). Entrepreneurial intentions: A
+competing models approach. Journal of
+Business Venturing, 15(5/6), 411-432.
+MacCrimmon, K. R., & Wehrung, D. A. (1985).
+A portfolio of risk measures. Theory and
+Decision, 19, 1-29.
+Markman, G. D., Balkin, D. B., & Baron, R. A.
+(2002). Inventors and New Venture
+Formation: the Effects of General SelfEfficacy
+and
+Regretful
+Thinking.
+Entrepreneurship Theory and Practice,
+27(2), 149-165.
+
+Volume 13, Number 2, 2007 103
+Miner, J. B. (1997). A psychological typology of
+successful entrepreneurs. London: Quorum
+Books.
+Mitchell, R. K., Busenitz, L., Lant, T.,
+McDougall, P. P., Morse, E. A., & Smith, J.
+B. (2002). Toward a theory of
+entrepreneurial cognition: rethinking the
+people side of entrepreneurship research.
+Entrepreneurship Theory and Practice,
+27(2), 93-104.
+Mullins, J. W., & Forlani, D. (2005). Missing
+the boat or sinking the boat: a study of new
+venture decision making. Journal of
+Business Venturing, 20, 47-69.
+Nickerson, R., Perkins, D., & Smith, E. (1985).
+The teaching of thinking. Hillsdale, NJ:
+Lawrence Erlbaum Associates, Inc.
+Olson, P. D. (1995). Entrepreneurship: Process
+and abilities. Entrepreneurship Theory and
+Practice, 10(1), 25-32.
+Ornstein, R. E. (1977). The psychology of
+consciousness. New York: Harcourt Brace.
+Palich, L. E., & Bagby, R. D. (1995). Using
+cognitive theory to explain entrepreneurial
+risk-taking:
+challenging
+conventional
+wisdom. Journal of Business Venturing, 10,
+425-438.
+Pedhazur, E. J., & Schmelkin, L. P. (1991).
+Measurement, Design, and Analysis: An
+Integrated Approach. Hillsdale, New
+Jersey: Lawrence Erlbaum Associates.
+Phillips, J. M., & Gully, S. M. (1997). Role of
+goal orientation, ability, need for
+achievement, and locus of control in the
+self-efficacy and goal-setting process.
+Journal of Applied Psychology, 82, 792802.
+Reynolds, P. (2000). National PSED of U. S.
+business
+startups:
+Background
+and
+methodology. In J. A. Katz (Ed.), Advances
+in Entrepreneurship, Firm Emergence, and
+Growth (Vol. 4, pp. 153-227). Stamford,
+CT: JAI Press.
+Shaver, K. G., & Scott, L. R. (1991). Person,
+Process, Choice: The Psychology of New
+Venture Creation. Entrepreneurship Theory
+and Practice, 16(2), 23-45.
+Simon, M., Houghton, S. M., & Aquino, K.
+(2000). Cognitive biases, risk perception,
+and venture formation: how individuals
+decide to start companies. Journal of
+Business Venturing, 15(2), 113-134.
+
+104 Journal of Leadership and Organizational Studies
+Sitkin, S. B., & Pablo, A. L. (1992).
+Reconceptualizing the determinants of risk
+behavior. Academy of Management Review,
+17(1), 9-38.
+Spector, P. E. (2006). Method Variance in
+Organizational Research Organizational
+Research Methods, 9(2), 221-232
+Stajkovic, A. D., & Luthans, F. (1998). Selfefficacy and work-related performance: A
+meta-analysis. Psychological Bulletin,
+124(2), 240-261.
+Venkataraman, S. (2002). Ten Principles of
+Entrepreneurial Creation. Batten Briefings,
+1(1).
+
+Barbosa, Gerhardt, & Kickul
+Weber, E. U., Blais, A.-R., & Betz, N. E. (2002).
+A Domain-specific Risk-attitude Scale:
+Measuring Risk Perceptions and Risk
+Behaviors. Journal of Behavioral Decision
+Making, 15, 263-290.
+Zhao, H., Seibert, S. E., & Hills, G. E. (2005).
+The Mediating Role of Self-Efficacy in the
+Development of Entrepreneurial Intentions.
+Journal of Applied Psychology, 90(6),
+1265-1272.
+
+i
+
+For a critique of the measurement of risk propensity,
+see (Shaver & Scott, 1991).
+
+The author has requested enhancement of the downloaded file. All in-text references underlined in blue are linked to publications on ResearchGate.
+
+

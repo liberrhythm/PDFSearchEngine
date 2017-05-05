@@ -3,31 +3,60 @@
 #include <vector>
 
 using namespace std;
-searcher::searcher()
-{
 
+Searcher::Searcher(char* directory) {
+    PDFParser parser(directory);
+    parser.readDirectory();
+    string term;
+    cout << parser.getNumDocs() << endl;
+    cout << "What is the term you would like to search for? ";
+    cin >> term;
+    while (term != "quit") {
+        receiveRequest(parser.getWords(), term, parser.getNumDocs());
+        tfidfRankings.clear();
+        cout << "What is the term you would like to search for? ";
+        cin >> term;
+    }
 }
 
-void searcher::receiveRequest(AvlTree<Word>& wordTree, string searchWord)
-{
-    vector<string> foundPDFNames;
+void Searcher::receiveRequest(AvlTree<Word>& wordTree, string term, int numDocs) {
 
 
-    Word term(searchWord);
+    cout << endl << endl;
+    cout << "---------Results for: " << term << "------------------" << endl;
 
+    if (wordTree.contains(term)) {
 
-    cout<<endl<<endl;
-    cout<<"---------Results for: "<<searchWord<<"------------------"<<endl;
+        //cout << wordTree.find(term);
+        tfidfRankings = calculateTFIDF(wordTree.find(term), numDocs);
 
-    if(wordTree.contains(term)){
+        cout << term << endl;
 
-        foundPDFNames = wordTree.find(term).getFiles();
-        for(int i=0; i<foundPDFNames.size(); i++){
-            cout<<foundPDFNames[i]<<endl;
+        for (int i = 0; i < tfidfRankings.size() && i < 15; i++) {
+            cout << i+1 << ") ";
+            cout << tfidfRankings[i].first << " " << tfidfRankings[i].second << endl;
         }
     }
+    
     else {
-        cout<<"This word does not exist in the specified corpus" << endl;
+        cout << "This word does not exist in the specified corpus" << endl;
     }
-    cout<<"---------end of results-------------------------------"<<endl<<endl;
+    cout << "---------end of results-------------------------------" << endl << endl;
+}
+
+vector<pair<string, int>>& Searcher::calculateTFIDF(Word wrd, int numDocs) {
+    vector<pair<string, int>> files = wrd.getFiles();
+    for (pair<string, int> p: files) {
+        double tf = p.second;
+        double idf = log2(static_cast<double>(numDocs) / static_cast<double>(files.size()));
+        double tfidf = tf * idf;
+        tfidfRankings.push_back(pair<string, int>(p.first, tfidf));
+    }
+    sort(tfidfRankings.begin(), tfidfRankings.end(), [](const pair<string, int>& left, const pair<string, int>& right)
+    {return left.second > right.second;});
+    return tfidfRankings;
+}
+
+void Searcher::printResults() {
+
 }

@@ -1,0 +1,711 @@
+Personality and Individual Differences 45 (2008) 767–772
+
+Contents lists available at ScienceDirect
+
+Personality and Individual Differences
+journal homepage: www.elsevier.com/locate/paid
+
+Is there a relationship between political orientation and cognitive ability?
+A test of three hypotheses in two studies
+Markus Kemmelmeier *
+University of Nevada, Department of Sociology/300, Reno, NV 89557, United States
+
+a r t i c l e
+
+i n f o
+
+Article history:
+Received 19 June 2007
+Received in revised form 1 August 2008
+Accepted 4 August 2008
+Available online 11 September 2008
+Keywords:
+Conservatism
+Political orientation
+Cognitive ability
+Intelligence
+Political involvement
+
+a b s t r a c t
+Two studies tested one linear and two curvilinear hypotheses concerning the relationship between political conservatism-liberalism and cognitive ability. Study 1, focusing on students at a selective US university (n = 7279), found support for the idea that some dimensions of conservatism are linked to lower
+verbal ability, whereas other dimensions are linked to higher verbal ability. There was also strong support
+for political extremists both on the left and right being higher in verbal ability than centrists. Study 2
+employed aggregate data pertaining to the 50 US states and demonstrated that conservatism was linked
+to lower cognitive ability in states with high political involvement, but found conservatism to be correlated with higher average ability in states with low political involvement. The discussion addresses
+potential implications and criticisms of this research.
+Ó 2008 Elsevier Ltd. All rights reserved.
+
+1. Introduction
+The present research examines the hypothesis that an individual’s location on the liberal-conservative dimension is related to
+an individual’s cognitive resources. Prominently, Adorno, FrenkelBrunswik, Levinson, and Sanford (1950) linked endorsing rightwing ideology to lower levels of cognitive functioning. These and
+subsequent authors found conservatism to be associated with lower tolerance for ambiguity, openness to new experiences and cognitive complexity, but with higher need for structure – ﬁndings
+that were largely conﬁrmed in a comprehensive review of the literature by Jost, Glaser, Kruglanski, and Sulloway (2003a).
+Implicit in this research is the claim that, all else being equal,
+conservative beliefs tend to be cognitively less demanding than liberal beliefs. Conservatism is oriented toward tradition and the
+preservation of the status quo and, thus, entails resistance to
+change and uncertainty. Further, conservatism is more likely to invoke absolutes, such as the absolute distinction of right and wrong,
+the absolute sovereignty of the state or other authorities. According to various authors, conservatism is at least in part the result
+of the avoidance of uncertainty and complexity, which are experienced as inherently threatening by the individual (e.g., Wilson,
+1973). Conversely, this line of argument links left-wing ideologies
+to embracing change and uncertainty as well as higher tolerance of
+ambiguity and complexity. Though theorists often view more basic
+personality characteristics as antecedents and (supposedly less ba* Tel.: +1 775 784 1287; fax: +1 775 784 1358.
+E-mail address: markusk@unr.edu
+0191-8869/$ - see front matter Ó 2008 Elsevier Ltd. All rights reserved.
+doi:10.1016/j.paid.2008.08.003
+
+sic) political ideologies as consequents, any causal claim concerning the relationship between personality and political ideology is
+inherently hazardous as it is based on correlational data.
+Nevertheless, the hypothesis of a positive, linear association of
+conservatism and measures of cognitive functioning has received
+considerable empirical support (e.g., Jost et al., 2003a); yet, others
+argued that extremists at both ends of the ideological spectrum are
+highly similar. For instance, Greenberg and Jonas (2003) suggested
+that both right-wing and left-wing extremists are more dogmatic
+and less tolerant of ambiguity than the mainstream, though
+support for this hypothesis is scant (Jost, Glaser, Kruglanski, &
+Sulloway, 2003b).
+Sidanius (1985) hypothesized that individuals at both ends of
+the political spectrum show greater cognitive sophistication than
+the mainstream. He argued that any deviation from mainstream
+beliefs requires higher levels of cognitive functioning as extremists
+need to be able to explain why they hold views different from the
+majority. By comparison, centrists, who typically outnumber
+extremists, face no similar intellectual challenges. As a result,
+highly functioning individuals should be overrepresented at the
+margins of the political spectrum.
+1.1. Conservatism and general cognitive ability
+This paper revisits the three hypotheses described above by
+examining the relationship between conservatism-liberalism and
+general cognitive ability (g), a potent predictor of people’s success
+in life (e.g., Gottfredson, 1997). Much research on the conservatism-liberalism dimension has explored its cognitive correlates,
+
+768
+
+M. Kemmelmeier / Personality and Individual Differences 45 (2008) 767–772
+
+but almost all of these studies have relied on self-report measures
+of cognitive functioning, including cognitive styles or preferences,
+which may or may not be correlated with standardized measures
+of cognitive ability (e.g., Cacioppo & Petty, 1982; Peterson, Deary,
+& Austin, 2005). Thus, it is unclear if there is a link between conservatism-liberalism and cognitive ability. Further, Lapsley and
+Enright (1979) and Bouchard et al. (2003) reported a negative correlation between conservatism and general intelligence. However,
+Wright and Phillips (1979) did not ﬁnd conservatism to be related
+to intelligence, and Katz (2001) even reported a positive relationship between conservatism and IQ. Thus, the evidence linking conservatism-liberalism and cognitive ability is mixed at best, and
+none of these studies addresses the possibility of a curvilinear
+relationship.
+1.2. The present series of studies
+This research tests the three hypotheses outlined above for the
+relationship between conservatism-liberalism and cognitive ability. Hypothesis 1 predicts there to be a linear and positive relationship between these constructs. Assuming that extremists of all
+stripes are similar in their lack of cognitive resources, Hypothesis
+2 predicts an inverted U-shaped curvilinear relationship with higher cognitive ability in the political mainstream, and lower ability
+toward the extremes. Lastly, assuming that deviating from the
+political mainstream requires cognitive resources, Hypothesis 3
+predicts a U-shaped curvilinear relationship with higher levels of
+cognitive ability toward the political extremes, and lower levels toward the center. Note that, while Hypothesis 2 and 3 make opposite predictions, Hypothesis 1 is compatible with either of the two.
+Indeed, investigations examining cognitive styles have obtained
+support for both Hypothesis 1 and 3 (e.g., Jost et al., 2003b).
+2. Study 1
+The ﬁrst study correlated college students’ conservatism-liberalism with their scores on the Scholastic Assessment Test (SAT)
+and the American College Test (ACT). Although both tests are typically treated as achievement tests, Frey and Detterman (2004)
+demonstrated that the SAT can be used as a measure of general
+cognitive ability. ACT and SAT are highly correlated (Stumpf &
+Stanley, 2002) and because ACT is also strongly correlated with
+verbal intelligence (Sypher & Applegate, 1982), it can serve as a
+measure of cognitive ability also (cf. Neisser, Boodoo, Bouchard,
+et al., 1996).
+
+continuum is the most common method used to assess political
+orientation and is highly predictive of voting behavior in the US
+(Jost, 2006).
+2.1.2.2. Conservative attitudes. Overall, 6805 students indicated
+their agreement or disagreement with 6 CIRP items concerning distinct social issues using a 4-point scale. A principal component
+analysis with varimax rotation revealed two factors that accounted
+for 55.6% of the overall variance. As summarized in Table 1, the
+ﬁrst factor, termed ‘‘gender role attitudes,” was characterized by
+high factor loadings of supporting the legality of abortions, supporting a legal marital status to same-sex couples and rejecting
+the prohibition of homosexual relations. The second factor, termed
+‘‘anti-regulation attitudes,” was characterized by support for federal gun control, colleges prohibiting racist and sexist speech on
+campus, and higher taxes for the wealthy. Because split-half analyses revealed factor loadings to be highly reliable, weighted factor
+scores were computed. Thus, the two factor scores are uncorrelated, and have a mean of 0 and a standard deviation of 1. To facilitate interpretation, factors were rescored such that higher values
+indicated greater conservatism. Note that the factors reﬂect two
+very distinct aspects of conservatism: social conservatism and
+‘‘small government” conservatism (libertarianism).
+2.1.2.3. Cognitive ability. From the registrar’s ofﬁce ACT scores and
+SAT scores, separately for the mathematics (SAT-M) and verbal
+(SAT-V) subsections, were obtained. SAT scores vary between 200
+and 800, and ACT scores between 1 and 36. Valid ACT data were
+available for 5893, and SAT data for 4082 students; 2696 students
+took both tests. The mean for SAT-M was 661.63 (SD = 73.94), for
+SAT-V 634.07 (SD = 74.23). The sample mean for the ACT was
+27.82 (SD = 3.14).
+2.1.2.4. Control variables. In all analyses students’ sex, ethnicity/
+race, parental income and mother’s education were controlled.
+2.2. Results
+2.2.1. Correlation between SAT and ACT
+Replicating earlier research, SAT and ACT where highly correlated, r(2696) = .801, p < .001. Whereas SAT-M and SAT-V were
+moderately correlated, r(4082) = .370, p < .001, ACT was somewhat
+more closely related to SAT-V, r(2696) = .690, p < .001, than to SATM, r(2696) = .644, p < .001.
+
+2.1. Method
+2.1.1. Participants
+As part of the Cooperative Institutional Research Program
+(CIRP), two entering cohorts at a large selective US university
+(n = 11,088) completed a comprehensive survey (response rate
+87%). Approximately 85% of respondents granted researchers permission to access their ofﬁcial test scores. The present analysis
+focuses on individuals for whom self-described conservatismliberalism, a measure of cognitive ability (SAT or ACT) and all
+control variables were available. Thus, the sample included 7279
+students (49.3% women). Most described themselves as White
+(76.3%), 12.4% as Asian American, 6.4% Black, 3.4% as Hispanic
+and 1.4% as Native American.
+2.1.2. Variables
+2.1.2.1. Political self-description. Students were asked to describe
+their political orientation as ‘‘far left” (2.3%), ‘‘liberal” (34.8%),
+‘‘middle of the road” (42.5%), ‘‘conservative” (19.4%), or ‘‘far right”
+(1.0%). Such a simple rating on a bipolar conservative-liberal
+
+Table 1
+Exploratory factor analysis with VARIMAX rotation performed on six social issues
+items
+Items
+
+Abortion should be legal
+Same sex couples should have the right to
+legal marital status
+It is important to have laws prohibiting
+homosexual relations
+The federal government should do more
+to control the sale of handguns
+Colleges should prohibit racist/sexist
+speech on campus
+Wealthy people should pay a larger share
+of taxes than they do now
+Variance explained
+
+Factor I
+‘‘Conservative
+gender roles”
+
+Factor II
+‘‘Anti-regulation”
+
+.87
+.84
+
+.09
+.19
+
+0.69
+
+.15
+
+.18
+
+.72
+
+.27
+
+.63
+
+.11
+34.19%
+
+60
+21.39%
+
+Note: Table entries reﬂect factor loadings, based on which weighted factor scores
+were computed. In subsequent analyses, factors scores were reversed such that
+higher values indicated higher levels of conservatism.
+
+M. Kemmelmeier / Personality and Individual Differences 45 (2008) 767–772
+
+2.2.2. Relationship between political self-description and conservative
+attitudes
+Pearson correlations between self-described conservatism-liberalism and attitudes were .47 for conservative gender roles and
+.22 for anti-regulation attitudes. These analyses conﬁrm a consistent relationship between conservative-liberal self-description
+and attitudes, although they are hardly redundant.
+2.2.3. SAT and ACT as a function of conservatism
+To investigate whether conservative attitudes and self-description predict test scores, a hierarchical linear regression model was
+used. In the ﬁrst step, I entered all control variables. In the second
+step, the conservative attitudes scores as well as political selfdescriptions were added. In the ﬁnal step, I entered quadratic
+terms for the two attitude scores and political self-descriptions
+to test for a non-linear association between conservatism-liberalism and cognitive ability.
+Table 2 summarizes the results of this regression model using
+SAT-V, SAT-M and ACT as dependent variables. At step 1, the models replicate frequently documented effects of student background
+on performance, e.g., lower scores for certain minority groups compared to European Americans.
+Second, including the two attitudes scores and political selfdescriptions led to an increase in the model ﬁt for SAT-V and
+
+Table 2
+Hierarchical regression models predicting SAT and ACT from social attitudes
+Dependent variable
+SAT-V
+b
+
+SAT-M
+2
+
+DR
+
+b
+***
+
+ACT
+
+DR
+
+2
+
+Step 1: Control
+.060
+.183
+variables
+***
+Sex of
+.012
+.220
+respondent
+Income
+.013
+.042**
+Maternal
+.136***
+.085***
+education
+Black
+.169***
+.241***
+Latino
+.080***
+.105***
+Asian
+.011
+.178***
+Native
+.022
+.005
+American
+Step 2:
+.002
+.032***
+Conservative
+attitudes –
+linear trends
+Self-described
+.088**
+.000
+conservatism
+Conservative
+.097***
+.035
+gender roles
+Anti-regulation
+.117***
+0.03
+Step 3:
+.001
+.012*
+Conservative
+attitudes –
+quadratic
+trends
+Self-described
+.066***
+.027
+conservatism
+***
+Conservative
+.094
+.004
+gender roles
+Anti-regulation
+.028
+.028
+Final R2
+.106
+.186
+n
+3842
+3842
+
+DR2
+
+b
+***
+
+.134***
+.114***
+.046***
+.110***
+.286***
+.087***
+.036**
+.033*
+.015***
+
+.037*
+.085
+
+***
+
+.072***
+.009***
+
+.069***
+.053***
+.029*
+.158
+5552
+
+Note: Entries reﬂect standardized regression coefﬁcients. European Americans
+served as the references variable for the dummy-coded racial-ethnic group predictors. Parental income and maternal education were centered. Sex of respondent
+was coded male 0, female 1.
+*
+p < .05.
+**
+p < .01.
+***
+p < .001.
+
+769
+
+ACT, as evidenced in a signiﬁcant rise of the variance explained
+(DR2). Across models, self-described conservatism-liberalism as
+well as conservative gender role attitudes were related to lower
+SAT-V and ACT. These patterns support Hypothesis 1, i.e. a negative
+linear association between conservatism-liberalism and cognitive
+ability. Surprisingly, anti-regulation attitudes were positively related to both SAT-V and ACT; that is, the rejection of government
+control and restrictions on free speech was linked to greater cognitive ability. Note, however, that SAT-M was not predicted by any of
+the three conservatism variables.
+Third, the inclusion of quadratic terms into the regression model improved the prediction of SAT-V and ACT, but again not that of
+SAT-M. Inspection of the three conservatism variables shows that,
+with the exception of anti-regulation attitudes and SAT-V, each
+quadratic effect is statistically signiﬁcant. The positive sign of these
+signiﬁcant coefﬁcients clearly refutes Hypothesis 2, but supports
+Hypothesis 3’s notion that extremists are higher in cognitive ability
+than centrists.
+2.3. Discussion
+Study 1 showed that conservatism is related to cognitive ability
+as measured by widely used standardized tests shown to measure
+general cognitive ability (e.g., Frey & Detterman, 2004). However,
+the relationship between political self-descriptions, conservative
+attitudes and cognitive ability is somewhat complex, providing
+support for two of the three hypotheses tested. First, there was
+substantial support for Hypothesis 1 concerning a negative, linear
+relationship between conservatism and cognitive ability: conservative gender role attitudes and self-descriptions predicted SAT-V
+and ACT. This pattern of ﬁndings replicates much of the results reported in the literature for other variables tapping cognitive functioning (e.g., Jost et al., 2003a). However, anti-regulation attitudes
+were related to higher, not lower, SAT-V and ACT scores. This result
+was not anticipated by any of the three hypotheses and diametrically contradicts Hypothesis 1, though it does replicate Katz
+(2001).
+Second, there was also much evidence to support Hypothesis 3,
+the notion of a curvilinear relationship with political extremists
+commanding greater cognitive resources than those in the political
+center (Sidanius, 1985). This pattern was obtained for two conservatism-liberalism variables predicting SAT-V and three predicting
+ACT. Yet, it has to be acknowledged that whenever there was a signiﬁcant quadratic term I simultaneously found a linear effect. That
+is, all else being equal, self-described conservative and more liberals, as well as social conservatives and liberals differed from middling respondents, but, compared to conservatives, liberals were
+still higher in SAT-V and ACT. However, the reverse pattern was
+found for anti-regulation attitudes, such that, all else being equal,
+more conservative respondents scored higher than more liberal
+respondents.
+While Study 1 revealed similar links between conservatism-liberalism, and SAT-V and ACT, SAT-M was unrelated to conservatism-liberalism variables. Thus, based on the present data
+individuals high or low in conservatism (or liberalism) vary with
+regard to verbal ability, but not necessarily quantitative ability.
+This pattern is plausible because political discourse and argument
+primarily draw upon language-based resources.
+3. Study 2
+A limitation of Study 1 was that it focused on students who
+attended one of the top-25 US universities. Incoming students
+were disproportionately from relatively wealthy, educated families, holding test scores that were on average 1.5 standard deviations above the national mean. Though college-aged US citizens
+
+770
+
+M. Kemmelmeier / Personality and Individual Differences 45 (2008) 767–772
+
+are generally less likely to vote than the general population, college students are roughly twice as likely to vote compared to
+non-college attending citizens of the same age (Phillips, Urbany,
+& Reynolds, 2008). Further, at elite colleges student involvement
+in politics tends to be quite high, with voter turnout rates often
+exceeding the national average (e.g., Phillips et al., 2008). Further,
+other national CIRP data indicated that the student sample of
+Study 1 was almost twice as likely to become involved in student
+protests, such as a grass-roots political action, than the average
+US college freshman. Because personal involvement in the political domain moderates the link between personality and ideology
+(e.g., Kemmelmeier, 2007), one may suspect that Study 1 ﬁndings
+were contingent on high political involvement and might not
+generalize to the population as a whole. Study 2 sought to test
+Hypotheses 1–3 drawing on data from the entire US However,
+in contrast to Study 1, the present research was conducted at
+the aggregate levels, examining patterns of political leanings,
+political involvement and cognitive ability at the level of US
+states.
+3.1. Method
+The data were composed of variables obtained from various secondary-data sources for all 50 US states. All data pertained to 2004,
+the year of a US general election (which included a Presidential
+election).
+3.1.1. Cognitive ability
+McDaniel’s (2006a) estimates of cognitive ability for each US
+state served as main dependent variable. McDaniel generated his
+estimates based on the National Assessment of Educational Progress (NEAP), a large-scale program that administers standardized
+tests in reading and mathematics to representative samples of
+public school students in all 50 US states. State estimates were validated against a series of established correlates of intelligence and
+they were shown to be superior to other efforts to assess indicators
+of state-level differences in cognitive ability (McDaniel, 2006a,
+2006b). McDaniel’s estimates use the metric of IQ scores, with a
+mean of 100 and a standard deviation of 15.
+3.1.2. Political orientation
+To gauge the general political leanings of each state I selected
+the 2004 proportion of Democratic lawmakers among all lawmakers across both houses of a state’s legislature (Morgan Quitno, 2006). In the US two-party system it is well-known that
+Democrats are on average more liberal than conservatives;
+hence, an electorate that is more likely to vote for Democrats
+to rule their state can be assumed to be more liberal. Because
+the number of independents and members of other parties is
+generally negligible, the proportion of Republican lawmakers is
+roughly the complement to the proportion of Democrats (average
+48.70%, SD = 15.64).
+3.1.3. Political involvement
+To measure how politically engaged the population of a state
+was, I chose the ofﬁcial voter turnout rate in the 2004 general election (Morgan Quitno, 2006). Across the 50 states the mean was
+61.37% (SD = 6.60).
+3.1.4. Control variables
+Because members of US minority groups typically score lower
+on standardized tests, via the US Census Bureau I obtained the proportion of African American and Latino residents in each US state
+in 2004. Similarly, gross state product per capita for 2004 was con-
+
+trolled because of the established link between state wealth and
+state-IQ (McDaniel, 2006a).
+3.2. Results
+Using again a hierarchical regression model, state-IQ was predicted based on voting participation rates and the proportion of
+Democratic lawmakers. Following Friedrich (1982), all predictors
+and the dependent variable were standardized. In the ﬁrst step I
+added the control variables (DR2 = .546, p < .001), in step 2 the
+linear terms for the two main predictors (DR2 = .126, p < .002),
+in step 3 the quadratic term for Democratic lawmakers
+(DR2 = .016, p > .15), and in Step 4 in interaction between linear
+terms for voting participant and Democratic lawmakers
+(DR2 = .107, p < .001). The ﬁnal model, summarized in Table 3,
+explains 80% of the overall variance. There was no support for
+Hypotheses 2 and 3, as the quadratic term was not signiﬁcant.
+However, the signiﬁcant interaction term indicated that, at high
+levels of political involvement (1 SD above the mean) there
+was a positive relationship between the proportion of Democratic lawmakers and state-IQ, simple slope b = .380, p < .02. This
+ﬁnding is consistent with Hypothesis 1; however, at low levels of
+political involvement (1 SD below the mean) greater proportions
+of Democratic lawmakers were linked to lower state-IQs,
+b = .475, p < .001. In other words, in states with low voter turnout, in-state support for the more liberal Democrats was related
+to lower state-IQ.
+3.3. Discussion
+Although conducted at a different level of analysis than Study 1,
+Study 2 yielded some support for Hypothesis 1: In states with high
+political involvement, there was a linear and positive relationship
+between state-IQ and the proportion of Democrats in the state legislature. This ﬁnding represents a conceptual replication of important aspects of Study 1. At the same time, Study 2 also replicated an
+unanticipated ﬁnding in Study 1, namely, that some conservative
+leanings were related to higher cognitive ability. In Study 2, this
+ﬁnding was quite robust, but was conﬁned to states with comparatively low political involvement. Unfortunately, Study 2 did not
+allow the examination of different kinds of conservative leanings,
+but relied on the proportion of Democratic lawmakers in a state’s
+legislatures. Similarly, Study 2 did not permit the examination of
+different aspects of cognitive ability; thus, it remains open whether
+
+Table 3
+Hierarchical regression model predicting US state-level intelligence
+State-IQ
+b
+Control variables
+GSP/capita ($100 millions)
+% of African Americans
+% of Hispanics income
+Linear terms
+Voting participation
+% of Democratic lawmakers
+Quadratic term
+% of Democrats (squared)
+Linear interaction
+Voting participation  % of Democratic lawmakers
+R2
+
+.179*
+.433***
+.505***
+.344**
+.047
+.059
+.398***
+.795
+
+Note: Entries reﬂect standardized regression coefﬁcients. GSP/capita ($100 millions)
+refers to general state product per capita in $100 millions. All variables were
+standardized prior to analysis.
+*
+p < .05.
+**
+p < .01.
+***
+p < .001.
+
+M. Kemmelmeier / Personality and Individual Differences 45 (2008) 767–772
+
+observed effects were largely driven by verbal ability, as suggested
+by Study 1.
+4. General discussion
+The present studies paint a somewhat complex picture of the
+relationship between cognitive ability and political orientation.
+There was general support for Adorno et al.’s (1950) notion that
+higher conservatism (lower liberalism) was linked to lower cognitive functioning (Hypothesis 1). Yet, the present research also
+documents that more conservative attitudes may be associated
+with greater ability, especially when, as in Study 1, conservative
+attitudes concerned government control (a chief concern in libertarian thought), and in Study 2, when levels of political involvement were low. As such, these studies simultaneously replicate
+the inconsistencies of prior research (e.g., Bouchard et al., 2003;
+Katz, 2001). While a clear theoretical rationale for a positive relationship between conservatism and cognitive ability may be lacking, it appears, however, that the implicit assumption of earlier
+research, that conservative beliefs are inherently less cognitively
+demanding than liberal beliefs, is not tenable in light of the present
+data.
+Hypothesis 3, Sidanius’s (1985) notion that extremists, whether
+conservative or liberal, command greater cognitive resources also
+garnered a good deal of support. Arguably, in Study 1 this hypothesis received the most support of all three hypotheses because it
+held regardless of whether the speciﬁc conservatism-liberalism
+variable had a positive or negative relationship with cognitive ability. Conversely, Study 1 shows that an exclusive curvilinear effect
+of political ideology on cognitive functioning remains the exception rather than the rule, and that the combination of a linear
+and curvilinear effects are typical (cf. Jost et al., 2003b). The fact
+that Study 2 did not produce any support for Hypothesis 3 is likely
+the result of the different units of analysis in Study 1 and 2, and a
+topic to be investigated in future research.
+In the present data there was no evidence whatsoever to
+support the notion that those on the political fringes have lower
+cognitive ability than those with middling views (Hypothesis 2).
+Even though this notion regularly emerges in the literature (e.g.,
+Greenberg & Jonas, 2003) the continued absence of any conﬁrmatory evidence suggests that it might be time to retire this idea.
+Given that this research has established various linkages
+between political orientation and cognitive ability, one might wonder which way the causal arrow goes. Excluding the possibility that
+a third variable has created the correlation between political orientation and cognitive ability, does one’s cognitive ability shape one’s
+political ideology, or do one’s political beliefs have an impact on
+one’s level of cognitive ability? Both paths are possible, though it
+may be more plausible to view cognitive ability as more basic antecedent to one’s political orientation than the other way around. For
+example, documented genetic inﬂuences are more pronounced for
+cognitive ability than political orientation (e.g., Neisser et al.,
+1996). However, as alluded to earlier, the present correlational
+data do not allow any ﬁrm conclusion with regard to causality.
+A potential criticism of this research concerns the relatively
+small effect sizes that especially Study 1 uncovered where standardized regression coefﬁcients rarely exceeded .10 (see Table 2).
+While small effect sizes are still theoretically meaningful (Prentice
+& Miller, 1992), Study 2 took advantage of using aggregated scores
+from literally hundreds of thousands of students whose test scores
+contributed to McDaniel’s (2006a) state-IQ scores, as well as party
+membership in a state’s lawmakers, which is also the product of an
+aggregation process across thousands, if not millions, of voters. The
+‘‘miracle of aggregation” reduces error variance and increases coefﬁcients. As a result, the relevant Study 2 coefﬁcients (simples
+slopes) were considerably larger. Nevertheless, one may argue that,
+
+771
+
+at the individual level, the relationship between political orientation and cognitive ability is of small practical signiﬁcance. This is
+accurate, but not surprising, given the multitude of factors shaping
+political beliefs.
+Other criticism of the present work may come from authors
+who view work on the psychological correlates of political ideology
+as ideologically biased (e.g., Durrheim, 1997; Greenberg & Jonas,
+2003). It is sometimes alleged that the nature and choice of the
+cognitive variables, typically self-report measures of cognitive
+styles, reveal decidedly anti-conservative tendencies. However,
+by relying on standardized tests to measure cognitive ability at
+the individual (Study 1) and state (Study 2) level, the present research is impervious to this criticism.
+In closing, it appears that the practical implications of the present research are not yet entirely clear. For instance, in the highly
+functioning student sample of Study 1 conservatism was often
+linked to slightly lower verbal ability. Therefore, one might wonder
+whether in language-intensive academic disciplines conservative
+students are at a disadvantage compared to liberal students.
+Kemmelmeier, Danielson, and Basten (2005) concluded that in
+many such academic disciplines conservative and liberal students
+do equally well. However, to the extent that the type and level of
+their cognitive abilities steers individuals toward or away from
+certain careers, some of the present ﬁndings might lead one to predict a greater number of liberals in humanistic and other heavily
+language-based disciplines. Indeed, Klein and Western (2005)
+demonstrated that, in American academia, humanistic disciplines
+are more heavily dominated by faculty who support the Democratic Party than is the case for disciplines less heavily based on
+language (e.g., natural sciences). Any assumption, however, concerning the implications of conservatism for career choice or success is complicated by the fact that Study 1 provided substantive
+evidence for a curvilinear relationship between conservatism and
+cognitive ability, and Study 2 highlighted the importance of political involvement. Thus, future research needs to explore how conservatism and its cognitive correlates shape individual outcomes,
+within and outside of academia.
+
+References
+Adorno, T. W., Frenkel-Brunswik, E., Levinson, D. J., & Sanford, R. N. (1950). The
+authoritarian personality. New York: Harper.
+Bouchard, T. J., Segal, N. L., Tellegen, A., McGue, M., Keyes, M., & Krueger, R. (2003).
+Evidence of the construct validity and heritability of the Wilson-Patterson
+conservatism scale: A reared-apart twins study of social attitudes. Personality
+and Individual Differences, 34, 959–969.
+Cacioppo, J. T., & Petty, R. E. (1982). The need for cognition. Journal of Personality and
+Social Psychology, 42, 116–131.
+Durrheim, K. (1997). Theoretical conundrum: The politics and science of theorizing
+authoritarian cognition. Political Psychology, 18, 625–656.
+Frey, M. C., & Detterman, D. K. (2004). Scholastic assessment or g? The relationship
+between the scholastic assessment test and general cognitive ability.
+Psychological Science, 15, 373–378.
+Friedrich, R. J. (1982). In defense of multiplicative terms in multiple regression
+equations. American Journal of Political Science, 26, 797–833.
+Gottfredson, L. S. (1997). Why g matters: The complexity of everyday life.
+Intelligence, 24, 79–132.
+Greenberg, J., & Jonas, E. (2003). Psychological motives and political orientation –
+The left, the right, and the rigid: Comment on Jost et al. (2003). Psychological
+Bulletin, 129, 376–382.
+Jost, J. T. (2006). The end of the end of ideology. American Psychologist, 61, 651–
+670.
+Jost, J. T., Glaser, J., Kruglanski, A. W., & Sulloway, F. J. (2003a). Political conservatism
+as motivated social cognition. Psychological Bulletin, 129, 339–375.
+Jost, J. T., Glaser, J., Kruglanski, A. W., & Sulloway, F. J. (2003b). Exceptions that prove
+the rule – Using a theory of motivated social cognition to account for ideological
+incongruities and political anomalies: Reply to Greenberg and Jonas (2003).
+Psychological Bulletin, 129, 383–393.
+Katz, Y. J. (2001). Intelligence as a function of conservatism among white South
+African students. Journal of Social Psychology, 130, 477–484.
+Kemmelmeier, M. (2007). Political conservatism, rigidity and dogmatism in
+American foreign policy ofﬁcials: The 1966 Mennis data. Journal of Psychology:
+Interdisciplinary and Applied, 141, 77–90.
+
+772
+
+M. Kemmelmeier / Personality and Individual Differences 45 (2008) 767–772
+
+Kemmelmeier, M., Danielson, C., & Basten, J. (2005). What’s in a grade? Academic
+success and political orientation. Personality and Social Psychology Bulletin, 31,
+1386–1399.
+Klein, D. B., & Western, A. (2005). Voter registration of Berkeley and Stanford
+faculty. Academic Questions, 18, 53–65.
+Lapsley, D. K., & Enright, R. D. (1979). The effects of social desirability, intelligence,
+and milieu on an American validation of the conservatism scale. Journal of Social
+Psychology, 107, 9–14.
+McDaniel, M. A. (2006a). Estimating state IQ: Measurement challenges and
+preliminary correlates. Intelligence, 34, 607–619.
+McDaniel, M. A. (2006b). State preferences for the ACT versus SAT complicates
+inferences about SAT-derived state IQ estimates: A comment on Kanazawa
+(2006). Intelligence, 34, 601–606.
+Morgan Quinto (2006). State rankings. Lawrence, KS: Morgan Quitno Corp.
+Neisser, U., Boodoo, G., Bouchard, T. J. Jr.,, et al. (1996). Intelligence: Knowns and
+unknowns. American Psychologist, 51, 77–101.
+Peterson, E. R., Deary, I. J., & Austin, E. J. (2005). Are intelligence and personality
+related to verbal-imagery and wholistic-analytic cognitive styles? Personality
+and Individual Differences, 39, 201–213.
+
+Phillips, J. M., Urbany, J. E., & Reynolds, T. J. (2008). Conﬁrmation and the effects of
+valenced political advertising: A ﬁeld experiment. Journal of Consumer Research,
+34, 794–806.
+Prentice, D. A., & Miller, D. T. (1992). When small effects are impressive.
+Psychological Bulletin, 112, 160–164.
+Sidanius, J. (1985). Cognitive functioning and sociopolitical ideology revisited.
+Political Psychology, 6, 637–662.
+Stumpf, H., & Stanley, J. C. (2002). Group data on high school grade point averages
+and scores on academic aptitude tests as predictors of institutional graduation
+rates. Educational and Psychological Measurement, 62, 1042–1052.
+Sypher, H. E., & Applegate, J. L. (1982). Cognitive differentiation and verbal
+intelligence:
+Clarifying
+relationships.
+Educational
+and
+Psychological
+Measurement, 42, 537–543.
+Wilson, G. D. (1973). The psychology of conservatism. London: Academic Press.
+Wright, G. N., & Phillips, L. D. (1979). Personality and probabilistic thinking: An
+exploratory study. British Journal of Psychology, 70, 295–303.
+
+The author has requested enhancement of the downloaded file. All in-text references underlined in blue are linked to publications on ResearchGate.
+
+

@@ -8,9 +8,11 @@
 #include <algorithm>
 #include <cstring>
 #include <cctype>
+#include "avltree.h"
 #include "porter2_stemmer.h"
 
 using namespace std;
+using namespace Porter2Stemmer;
 
 class Word {
 
@@ -18,13 +20,16 @@ class Word {
 
     private:
         string text;
-        vector<string> fileNames;
+        int totalFrequency;
+        vector<pair<string, int>> files;
     public:
         Word();
+        Word(string);
         Word(string, string);
         string getText();
         void addFile(string);
-        vector<string>& getFiles();
+        vector<pair<string, int>>& getFiles();
+        int findFile(string);
         bool operator>(const Word&);
         bool operator<(const Word&);
         bool operator==(const Word&);

@@ -1,0 +1,821 @@
+Tolerance of Ambiguity and Use
+of Second Language Strategies
+Christopher M. Ely
+Ball State University
+ABSTRACT This study developed a scale of
+tolerance of ambiguity (as an aspect of personality or cognitive style) related to second
+language learning. The scale was used to discover if tolerance of ambiguity influences
+students’ use of various second language
+strategies. The research was carried out with
+students of Spanish at the university level. Multiple regression analysis provided partial confirmation of several specific hypotheses regarding
+tolerance of ambiguity. Strength of motivation,
+attitude, and concernfor grade were alsofound
+to influence use of strategies.
+
+Second language learning is fraught with
+uncertainty. Seldom do we know the precise
+meaning of a new lexical item, understand the
+exact temporal reference of a second language
+verb form, or feel that we are pronouncing an L2
+sound with total accuracy. Given the pervasiveness of uncertainty-or, to use the psychological
+term, “ambiguity’Lin second language learning, we may well be interested in determining:
+(1) the degree to which students are “intolerant”
+or “tolerant” of such ambiguity and (2) whether
+and how students’ feelings about this ambiguity influence L2 learning.
+Christopher M. Ely (Ph. D., Stanford University) is an
+Associate Professor of English at Ball State University,
+Muncie, Indiana.
+Foreign Language Annals, 22, No. 5 , 1989
+
+In considering “tolerance of ambiguity” we
+are faced with the issue of whether to consider
+personality or cognitive style variables as being
+relatively stable or as varying according to the
+situation.2 Until fairly recently, most psychologists have held that one’s characteristics are
+relatively consistent from one situation to
+another. In the last several decades, however, a
+small but influential group of personality researchers (see, e.g., Mischel, 22, 23, 24; Endler,
+17) has found that it is not always possible to use
+“global” (general) personality instruments to
+predict how an individual will behave in a certain
+environment.
+The need to operationalize personality
+variables in the specific context of second
+language learning has been addressed previously
+by Ely (14, 16). A major purpose of the study
+reported here is to extend the situation-specific
+approach to the consideration of tolerance of
+ambiguity.
+In addition, the study deals with a second problem: the need to learn more about the processes
+through which personality or cognitive style
+variables influence language learning outcomes.
+One approach to this question is to measure the
+impact of these variables on overall classroom participation (see, eg., Naiman et. al., 25; Ely, 14).
+Alternatively, one can examine the way in which
+such variables influence students’ specific second
+
+437
+
+43 8
+
+FOREIGN LANGUAGE ANNALS - OCTOBER 1989
+
+language learning and communication
+“strategies? Although second language strategies
+have been the focus of many recent studies,
+relatively little attention has been paid to possible links between personality or cognitive style
+characteristics and the use of such ~trategies.~
+It is the second purpose of the present research, then, to explore situation-specific
+tolerance of ambiguity as a possible antecedent
+of strategy use.
+Tolerance of Ambiguity
+In second language research, two of the commonly-used tolerance of ambiguity instruments
+are those developed by Budner (8) and Norton
+(26).5 (Neither of these scales is specifically
+concerned with language learning settings.)
+Budner defined intolerance of ambiguity as “the
+tendency to perceive...ambiguous situations as
+sources of threat” (p. 29). Norton conceived of
+intolerance of ambiguity as: “a tendency to
+perceive or interpret information marked by
+vague, incomplete, fragmented, multiple, probable, unstructured, uncertain, inconsistent, contrary, contradictory, or unclear meanings as actual or potential sources of psychological
+discomfort or threat” (p. 608).
+In their comprehensivestudy of the predictors
+of language achievement, Naiman et al. (25)
+used Budner’s global scale with English-speaking Canadian high school students of French.
+Eighth-grade students who were more tolerant of
+ambiguity performed better on both receptive
+and productive language tests. Chapelle (9)
+(also see Chapelle and Roberts, lo), utilizing
+Norton’s scale, found that global tolerance of
+ambiguity was a predictor of final TOEFL scores
+of ESL university students (other independent
+variables entering the regression were semesterinitial TOEFL scores, field independence, and
+anxiety).
+Reiss (34) found a positive relationship between tolerance of ambiguity and university
+foreign language students’ ratings of themselves
+as language learners. Although Reiss measured
+tolerance of ambiguity with three situationspecific items, she apparently did not attempt to
+construct a psychometrically reliable tolerance
+of ambiguity instrument.
+
+Second Language Strategies
+The study of second language “learning strategies” is motivated largely by a desire to identify
+characteristics of successful language learners.
+The field was opened by Rubin (35; see also 36)
+and Stern (37) in their discussion of strategies
+which they felt characterized the “good”
+language learner. These included: a willingness
+and ability to guess, looking for patterns in
+linguistic meaning and form, experimentation,
+practicing, supervisingone‘s own language learning, and monitoring one’s production.
+A second major strand of strategy investigation, that of “communication strategies:’ focuses
+on the nonnative speaker as a producer (and
+receiver) of language. Communication strategy
+research seeks to identify strategies employed by
+nonnative speakers in attempting to convey and
+process information in the second language.
+In their investigation of the nature of second
+language strategies, certain researchers have
+chosen to carry out their central analysis at the
+level of individual strategies. Naiman et al. (25),
+for example, interviewed superior adult language
+learners to discover their specific strategies, and
+also found that particular classroom strategiesof
+secondary school learners of French predicted
+language achievement. Politzer (30) has discovered interesting relationships between university foreign language students’ use of a large
+number of strategies and language learning, as
+measured by grades and instructor evaluations.
+Politzer and McGroarty (33) also have found
+significant associations between use of certain
+strategies and the improvement of ESL students
+on standardized tests.
+Other researchers have examined strategies
+within groupings, categories, or typologies.
+Bialystok ( 2 ) , for instance, examined four
+strategy categories: “formal practice:’ “functional practic4’ “monitoring:’ and “inferencing”
+(each category was further divided into “oral”
+and “written” sub-categories). With Canadian
+high school students of French, Bialystok found
+that the impact of strategy use varied according
+to the language skill being tested.6 Reiss (34)
+assessed university foreign language students’ use
+of strategies in such categoriesas guessing, attending to form, practicing, monitoring, attending
+
+439
+
+FOREIGN LANGUAGE ANNALS - OCTOBER 1989
+
+to meaning, and using mnemonic devices. She
+found that students who had rated themselves as
+good language learners reported use of each of
+the strategy categories7 O’Malley and his colleagues (e.g., 28) have divided a large number of
+strategies into “metacognitiv$’ “cognitive’ and
+“social” categories. Wenden (e.g., 39) has examined ways in which learners consider, plan,
+and evaluatetheir language learning and strategy
+use. Oxford (e.g., 29) has employed factor
+analysis to isolate five key strategy clusters,
+namely, those involving: “general study habits:’
+“functional practice:’ “search for and communication of meaning:’ “studying or practicing
+alone” (including practicing rules), and using
+“mnemonic or memory devices? Studies focusing on communication strategies, such as those
+of Tarone (e.g., 38), Bialystok (3) and Faerch and
+Kasper (e.g., IS), have also typically endeavored
+to place strategies within typologically discrete
+categories.
+
+are high in tolerance of ambiguity. It is thus expected that students who are relatively intolerant
+of ambiguity will cling to the L1, and also will be
+uncomfortable if they skip over what appear to
+be essential bits of information in their study or
+in their classroom work; students high in
+tolerance of ambiguity are expected to be more
+willing to deal with the L2 on its own terms, and
+concentrate on the overall message being communicated (rather than on the smaller details of
+the language).
+
+Procedure
+Students enrolled in second- and third-year
+university Spanish classes comprised the sample
+for this study. There were six classes, with a total
+of 84 students: two second-year classes (n=26)
+and four third-year classes (n= 58).
+Students were asked, during class time, to
+complete the tolerance of ambiguity and
+strategies instruments. They were told that participation in the study was voluntary, that the
+questionnaires would be filled out anonymousResearch Questions
+The first question addressed in this study was ly, and that their teachers would not see the
+the feasibility of designing a situation-specifictol- results of the questionnaires.*
+erance of ambiguity scale. Tolerance/intolerance
+The tolerance of ambiguity items were written
+of ambiguity in second language learning, as by the investigator, based upon his language
+operationalized in this study, is the relative degree learning and teaching experience and upon a
+of discomfort associated with thinking: that one review of the literature on tolerance of ambiguity.
+does not know or understand exact meaning; that A major criterion in the design of the tolerance
+one is not able to express one‘s ideas accurately or of ambiguity scale was that items should repreexactly; that one is dealing with overly-complex sent a broad spectrum of language activities:
+language; that there is a lack of correspondence listening, speaking, reading, writing, pronunciabetween the L1 and the L2.
+tion, and grammar. Students rated the items
+The second research question in the study was using a six point Likert-scale, with possible
+the relationship between tolerance of ambigui- responses of “strongly disagree:’ “moderately
+ty and strategy use. It was theorized that a stu- disagree:’ “slightly disagree:’ slightly agree:’
+dent’s use of strategies (in addition to being the “moderately agree:’ and “strongly agree:’
+result of prior experience and of other factors)
+Included with the tolerance of ambiguity scale
+is influenced by tolerance of ambiguity in the were items representing three other scales (in adfollowing two ways: 1) relatively lower toler- dition to foil items): strength of motivation, atance of ambiguity leads to relatively greater re- titude toward studying Spanish (e.g., whether it
+liance upon the L1 when using the language, and is considered interesting or boring), and desire
+a relatively stronger tendency to relate L2 items for a “good” grade. The decision to include
+to elements known in the L1; and 2) strategies strength of motivation and attitude toward studywhich focus on specific details are used more ing Spanish was prompted by a desire to explore
+by students low in tolerance of ambiguity, while possible causal factors not included in the major
+strategies which focus on understanding general hypotheses. l o
+The strategy questionnaire presented a list of
+meaning are utilized more by students who
+93
+
+440
+
+FOREIGN LANGUAGE ANNALS - OCTOBER 1989
+
+individual strategies, arranged under language
+learning situations (e.g., “When I listen to the
+teacher speaking Spanish: a. I pay attention to
+the overall meaning; b. I pay attention to the
+grammar and vocabulary). Although most of
+the strategies investigated are traditionally considered to be “learning” strategies, it was decided
+to include several “communicative” strategies as
+well. (It should be noted, in fact, that many strategies can be considered to have both learning dnd
+communicative functions;no theoretical distinction is made in this study between the two
+categories of strategies.)I1 Students responded
+to each strategy on a five-point Likert scale:
+“neved’ “rarelg’ “sometimes:’ “often:’ and
+“almost always? 12
+
+d.
+
+I try to make up a mental picture to help
+me remember:
+Tol. of ambig.: beta= .23
+R2 = .lo
+Str. of motiv.:
+beta = .21
+2. When I listen to the teacher speaking
+Spanish:
+a. I pay attention to the overall meaning:
+Attitude toward
+learning Spanish beta= .32
+R2 = .10
+b.
+I pay attention to the grammar or
+vocabulary:
+R2 =.07
+Str. of motiv.: beta= .27
+3 . If the teacher corrects something I’ve
+said:
+a. I repeat the correct word or sentence:
+Results
+The first purpose of this study was to investi- Concern for grade: beta= .25
+R2 = .06
+gate the possibility of arriving at a tolerance of
+b.
+I make a mental note of the correction:
+ambiguity scale with statisfactory psychometric
+properties. To create the final tolerance of am- No sig. pred.
+c.
+I try to use the correct form the next
+biguity scale, standard item-analysis procedures
+time
+I speak:
+were followed (including the omission of items
+with unacceptably low corrected item-total cor- Conc. for gr.: beta= .24
+R2 = .06
+relations). The final result was an instrument 4. After I learn a new Spanish word, I try to
+consisting of 12 items (shown in Appendix A)
+use it right away:
+and having a reliability (Cronbach alpha) of .82.
+R2 = .08
+The second stage in the analysis was to regress Str. of motiv.: beta= .29
+the strategies on tolerance of ambiguity, strength 5 . As I read something in Spanish:
+of motivation, attitude toward learning the
+a. I focus on getting the overall meaning:
+language, and concern for grade. The following Att. toward lng. Sp.: beta= .32
+R2 = .12
+is a summary of the results for these regressions
+Tol. of ambig.: beta= .21
+(with the beta weights or standardized regression
+b.
+I try hard to understand each individual
+coefficients and the amount of variance (R2)).
+word:
+(For ease of reference, the strategies are listed
+here, along with the significant (p< .05) predic- No sig. pred.
+tors entering the regression equations.)
+6 . In speaking Spanish, I plan out exactly
+what I’m going to say before I say it:
+1. When I’m learning a new Spanish word:
+Tol. of ambig.: beta=-.38
+R2=.15
+a. I try to associate it with a word that
+sounds similar in Spanish or English 7 . In writing Spanish compositions:
+No significant predictors
+a. I think carefully about grammar as I
+b. I try to associate it with another word
+write each sentence:
+that looks similar in Spanish or
+Tol. of ambig.: beta= -.25
+English:
+R2 = .lI
+Str. of motiv.:
+beta = .23
+No sig. pred.
+b.
+I use a word even when I’m not sure it’s
+c. I try to memorize it by repeating it a
+right:
+number of times:
+Tol. of ambig.: beta= -.23
+~2=.05
+No sig. pred.
+
+FOREIGN LANGUAGE ANNALS - OCTOBER 1989
+
+441
+
+c. I look up words in the dictionary:
+Conc. for gr.: beta= .34
+R2 = .12
+8. If I’m reading in Spanish and come across
+an unknown word:
+a . The first thing I do is look it up to
+see what it means in English:
+
+I proofread for spelling and accent
+marks:
+TO^. of ambig.: beta= .33
+R2 = .15
+Conc. for gr.: beta= .29
+14. When other students are reading aloud in
+class, I read along with them mentally:
+
+Tol. of ambig.: beta= -.39
+R2=.18
+Att. toward lng. Sp.: beta= .25
+b . the first thing 1 do is try to guess
+what it means in English:
+No sig. pred.
+9. Outside the classroom I repeat Spanish
+words and sentences to myself:
+Str. of motiv.: beta=.38
+R2 = .15
+10. If I realize I’ve made a mistake when I’m
+speaking, I go back and correct it:
+Att. toward lng. Sp.: beta= .33
+R2 = .ll
+11. In reading Spanish, when I’m trying to
+guess the meaning of a new word:
+a . to help me guess, I think about the
+overall meaning of the sentence or
+passage:
+No sig. pred.
+b . to help me guess, I look for the similarity of the word to an English word:
+Tol. of ambig.: beta= -.21
+R2 = .05
+c . to help me guess, I look at the individual parts of the word:
+No. sig. pred.
+12. When I’m listening to Spanish in the
+classroom:
+a . I try to understand every word I hear:
+No sig. pred.
+b . I try to “feel the sound” of Spanish
+when I IistenL‘soaking in” the pronunciation, intonation and accent:
+Str. of motiv.: beta= .26
+R2 = .07
+c . I let the meaning sink in slowly,
+without really focusing on it:
+No sig. pred.
+13. If I’m writing something for class:
+a . I go back after I’m done and check
+my grammar:
+Att. toward lng. Sp.: beta = .29
+R2 = .08
+
+Conc. for gr.: beta = .29
+R2 = .08
+15. In speaking, when I don’t quite know how
+to express an idea:
+a. I ask the teacher for the right words:
+R2=.10
+Tol. of ambig.: beta= -.32
+b. I try to express the idea with Spanish
+that I do know:
+Att. toward lng. Sp.: beta= .34
+R2 = .21
+Conc. for gr.: beta= .29
+c I change the topic:
+No sig. pred.
+16. I think about my pronunciation when I
+speak Spanish:
+
+b.
+
+Str. of motiv.: beta= .30
+R2 = .09
+17. When I’m reading Spanish and find some
+new or difficult grammar, I try to understand the grammar problem right away:
+Str. of motiv.: beta= .28
+R2 = .08
+18. In listening to Spanish, when I hear a word
+I don’t know:
+a. I write it down:
+No sig. pred.
+b. I make a mental note of it:
+Att. toward lng. Sp.: beta= .33
+R2=.11
+c. I ask the teacher about it:
+No sig. pred.
+d. I try to figure out what it means:
+
+Str. of motiv.: beta= .28
+R2 = .08
+19. When I’m speaking and I’m not sure if
+something will be correct:
+a. I say it and then check to see if the
+teacher corrects me:
+Str. of motiv.: beta= .32
+R2 = .10
+b. I try to find out if it’s correct first before
+I say it:
+R2 = .07
+Conc. for gr.: beta = .27
+
+442
+__-____
+
+FOREIGN LANGUAGE ANNALS - OCTOBER 1989
+
+c . I just say it and don’t think too much
+about it:
+Conc. for gr.: beta= -.26
+R2=.17
+Tol. of ambig.: beta= .29
+
+ambiguity was not found to contribute
+significantly to variance in looking for overall
+meaning in listening (2a) and guessing word
+meaning from context (lla).
+In the case of two other strategies not
+specificallyrelated to the research questions, inDiscussion
+This study found that it is possible to develop teresting results regarding tolerance of ambiguity
+an instrument which can measure the construct can be noted. When faced with the task of iearnof tolerance of ambiguity in the specific context ing new words, students high in tolerance of amof second language learning. The current scale, biguity were less likely to simply memorize the
+consisting of 12 items representing various words through rote repetition (lc), but favored
+aspects of language learning and use, was found the more creative technique of constructing
+to have a high internal consistency. Further mental images to aid later recall (Id).
+Although apriori hypotheses were not framed
+development and refinement of the instrument
+are planned.
+regarding attitude toward the learning situation,
+The predictions regarding tolerance of am- concern for grade, and strength of motivation,
+biguity received support from the findings for the results involving these variables suggest relasome, but not all, of the strategies. In the case of tionships for future research. A positive attitude
+strategies involving reliance on the L1, tolerance toward the learning situation would appear to
+of ambiguity was indeed a significant negative generally facilitate a balanced approach to
+predictor of looking for similarities between language learning, encouraging students to
+new words and L1 words (strategy llb) and look- focus on the overall picture (in reading, 5a,
+ing up words in English right away when reading speaking, 15b, and listening, 2a, (while remain(8a). There was no predictive relationship be- ing alert for new words, 18b)), but at the same
+tween tolerance of ambiguity and guessing the time leading them to monitor their production
+(in writing, 13a, and speaking, 10). A strong
+meaning in English right away (Sb).
+Tolerance of ambiguity, as hypothesized, was positive attitude may, however, (especially in
+found to be a significant negative predictor of conjunction with a low tolerance of ambiguity),
+various strategies which involve focusing on in- lead to an overly quick attempt to grasp meandividual language elements: planning out exactly ing (Sa). Students high in concern for grade seem
+what to say ahead of time (6), thinking careful- to focus on correctness of production in speakly about grammar when writing (7a), looking up ing (3a, 3c, 19b, and 19c-negative prediction)
+words in English right away when reading (Sa), and writing (76, 13b), but they also appear to
+and asking teacher for the right words when have a strong desire to engage actively in learnspeaking (15a). Also, students high in tolerance ing (14) and to persist in communicativeattempts
+of ambiguity did not mind speaking even when (15b). Strength of language learning motivation
+they were unsure of possessing the correct may promote a desire to internalize language
+language tools (19c). Level of tolerance of am- deeply (in writing, 7a, pronunciation, 12b and
+biguity was not, however, a predictor of focusing 16, and listening, 18d), an interest in encounteron grammar or vocabulary when listening (2b), ing, mastering, and using new language items
+focusing on individual words when reading (5b), (2b, 4,9, and 17), a willingness to create associaor trying to understand every word when listen- tions (Id), and an openness to teacher correcting (12a). Curiously, tolerance of ambiguity ness after an utterance has been completed (19a).
+positively predicted proofreading one’s written
+While there are a number of significant
+predictors evidenced in the data, the amount of
+work for spelling and accent marks (13b).
+For strategies involving overall meaning, variance in the dependent variables is modest,
+tolerance of ambiguity did in fact prove to be a averaging 10 percent. Although this is an imporsignificant positive predictor of looking for tant amount of variance, this figure indicates
+overall meaning in reading (5a). Tolerance of that many other factors are also acting to
+
+____
+FOREIGN LANGUAGE ANNALS - OCTOBER 1989
+influence use of strategies, including, perhaps,
+prior training and practice in strategy use, as
+well as other individual differences not measured
+in the present study. It is hoped that further
+research will be able to discover some of these
+variables. In addition, future studies conducted
+with populations differing in the laaguage situation and level from those of the present research
+can be expected to produce additional insights
+into the relationship between individual
+characteristics and language learning.
+
+Conclusion
+Perhaps the central implication of this study
+for language-teachingllearning theory and
+pedagogy concerns the way in which teachers
+view and present second language learning/
+communication strategies. Although some
+teachers are now becoming aware of the need
+to recommend particular strategies to their
+students (for example, saying “be sure to look for
+overall meaning when you read”), often little
+thought is given to individual learning styles and
+personality characteristics. The present study
+demonstrates a deeper dimension to the problem of strategy instruction. Teaching language
+learning behavior is not, apparently, merely to
+be accomplished by making students aware of
+a strategy and its potential benefits, encouraging them to use it, and providing opportunities
+to do so. We also should become aware of (and
+take into account) underlying personality and
+other affective variables which might tend to
+inhibit or promote the acquisition of new ways
+of approaching language learning tasks. After
+assessment of these variables, we will be better
+able to make informed judgments about strategy
+development. In addition, we may wish to provide activities which might be able to alter the
+classroom-specific characteristics we have
+dis~overed’~
+(although a good deal of research
+is needed in this area). As we become more
+knowledgeable about the personal characteristics
+of students that may promote or inhibit the
+adoption of various learning processes, we will
+move more quickly toward that desideratum
+of helping our students become “good language
+learners?
+
+443
+
+NmES
+‘This research was supported by a grant from the
+Office of Research, Ball State University. This study
+would not have been possible without the kind and enthusiastic support of Rita Gardiol, Chair of the
+Department of Foreign Languages at Ball State, and
+the advice and assistance of the following members of
+that department: Douglas Barnette, Linda Barnette,
+James Brown, Robert Fritz, Permilla Jenkins, and
+Alazne Landa.
+2Toleranceof ambiguity is considered by various
+researchers to be either a personality or cognitive style
+variable (or both).
+3Asituation-specific tolerance of ambiguity instrument was developed by Chapelle (9), but she considered the scale to be “somewhat suspect as a consistent measure of [tolerance of ambiguity]:’ since the
+original 13-item scale had to be reduced to 4 items in
+order to obtain a reliability level of .54 (Cronbach
+alpha) (p. 47). This scale was not apparently used in
+Chapelle’s subsequent analysis.
+4Fieldindependence and reflectivity (measured as
+global constructs) have been found to be significantly correlated with monitoring (Abraham, 1)and working styles on computers (from which learning styles
+were inferred (Jamieson and Chapelle (21)). Also see
+related studies by Brown (7) and by Ehrman and Oxford (12,13). Regarding Ehrman and Oxford (13), Oxford suggests (personal communication) that “[MyersBriggs] ‘perceivers’ would seem to have a high
+tolerance for ambiguity, while ‘judgers’ would not?
+5Theconstruct of tolerance of ambiguity was first
+explored by Frenkel-Brunswik (e.g., 19).
+%ee also Bialystok and Frohlich (4). Related
+research has been conducted by Huang and Van
+Naerssen (20) in China.
+7Studentswho rated themselves high as language
+learners also tended to be tolerant of ambiguity.
+However, a causal investigation of personality and
+strategy use was not carried out.
+*Thedata were gathered several weeks prior to the
+end of a ten-week term in 1987.
+gRe~earchby Politzer (31, 32) found integrative
+motivation and instrumental motivation related to
+students’ use of various languagelearning strategies.
+‘OFor a discussion of the development of the
+strength of motivation and concern for grade scales,
+see Ely (14, 15). The attitude toward studyingSpanish
+scale employed two items assessing students’ interest
+or lack of interest in learning the language.
+“For further discussion of this point, see, e.g.,
+Bialystok (3, pp. 100-03).
+
+FOREIGN LANGUAGE ANNALS - OCTOBER 1989
+
+444--_.--
+
+I2Although the use of self-report data in the
+measurement of individual differences and learning
+strategies is a common research procedure, there is
+much discussion about the relative merits of this (and
+other) data-gathering methods. See, e.g., Cohen (ll),
+Ely (14), Politzer (30), and Oxford (29).
+i30maggio(27) (see also Birckbichler and Omaggio,
+5) presents a number of interestingclassroom activities
+designed to address such characteristics as low
+tolerance of ambiguity, execessive impulsiveness,lack
+of flexibility,and lack of organization.
+REFERENCES
+1. Abraham, Roberta G. “Relationships between
+
+2.
+
+3.
+
+4.
+
+5.
+
+6.
+
+7.
+
+8.
+
+9.
+
+10.
+
+11.
+
+Use of the Strategy of Monitoring and Cognitive
+Style? Studies in Second Language Acquisition 6
+(1983): 17-32.
+Bialystok, Ellen. “The Role of Conscious Strategies in Second Language Proficiencyl’Modern
+Language Journal 65 (1981): 24-35.
+. “Some Factors in the Selection and
+Implementation of Communication Strategies:’
+in Claus Faerch and Gabriele Kasper, eds.,
+Strategies in Interlanguage Communication. New
+York: Longman, 1983.
+and Maria Frohlich. “Variables of
+Classroom Achievement in Second Language
+Learning? Modern Language Journal 62 (1978):
+327-36.
+Birckbichler, Diane W. and Alice C. Omaggio.
+“Diagnosing and Responding to Individual
+Learner Needs!’ Modern Language Journal 62
+(1978): 336-45.
+Brown, H. Douglas. Principles of Language
+Learning and Teaching. 2nd ed. Englewood Cliffs,
+N.J.: Prentice-Hall, 1987.
+. Presentation at colloquium on
+Myers-Briggs Personality Types and Second
+Language Learning Strategies, 1988 Annual
+TESOL Convention, Chicago.
+Budner, Stanley. “Intolerance of Ambiguity as a
+Personality Variable? Journal of Personality 30
+(1962): 29-50.
+Chapelle, Carol. “The Relationshipbetween Ambiguity Tolerance and Success in Acquiring
+English as a Second Language in Adult Learners!’
+Dissertation, University of Illinois, 1983.
+and Cheryl Roberts. “Ambiguity
+Tolerance and Field Independence as Predictors
+of Proficiency in English as a Second Language?
+Language Learning 36 (1986): 27-45.
+Cohen, Andrew D. “Studying Learner Strategies:
+How We Get the Information:’ in Anita Wenden
+
+and Joan Rubin, eds., Learner Strategies in
+Language Learning. Englewood Cliffs, N.J.:
+Prentice-Hall, 1987.
+12. Ehrman, Madeleine and Rebecca Oxford. Presentation at colloquium on Myers-Briggs Personality
+Types and Second Language Learning Strategies,
+1988 Annual TESOL Convention, Chicago.
+13.
+. “Ants and Grasshoppers, Badgers
+and Butterflies: Quantitative and QualitativeExploration of Adult Language Learning Styles and
+Strategies? Presentation at Conference on
+Research Perspectivesin Adult Language Learning and Acquisition, Ohio State University, 1988.
+14. Ely, Christopher M. “An Analysis of Discomfort,
+Risktaking, Sociability,and Motivation in the L2
+Classroom? Language Learning 36 (1986): 1-25.
+. “Language Learning Motivation:
+15.
+A Descriptive and Causal Analysis? Modern
+Language Journal 70 (1986): 28-35.
+16.
+f‘Personality: Its Impact on Attitudes toward Classroom Activities? Foreign
+Language Annals 21 (1988): 25-32.
+17. Endler, Norman S. “The Person Versus the
+Situation-a Pseudo Issue? A Response to
+AlkeZ’ Journalof Personality 41 (1973): 287-303.
+18. Faerch, Claus and Gabriele Kasper. “Plans and
+Strategiesin Foreign Language Communication:’
+in Claus Faerch and Gabriele Kasper, eds.,
+
+Strategies in Interlanguage Communication.
+New York: Longman, 1983.
+19. Frenkel-Brunswik, Else. “Intolerance of Ambiguity as an Emotional and Perceptual Personality Variable? Journal of Personality 18
+(1949): 108-43.
+20. Huang, Xiao-Hua and Margaret Van Naerssen.
+“Learning Strategies for Oral Communication?
+Applied Linguistics 8 (1987): 287-307.
+21. Jamieson, Joan and Carol Chapelle. “Working
+Styles on Computers as Evidence of Second
+Language Learning Strategies? Language Learning 37 (1987): 523-44.
+22. Mischel, Walter. Personality and Assessment.
+New York: Wiley, 1968.
+. “The Interaction of Person and
+23.
+Situation:’ in David Magnusson and Norman S.
+Endler, eds., Personality at the Crossroads: Current Issues in InteractionalPsychology. Hillsdale,
+NJ.: Erlbaum, 1977.
+24.
+. “Personality and Cognition:
+SomethingBorrowed, SomethingNew?” in Nancy Cantor and John F. Kihlstrorn, eds., Personality, Cognition and Social Interaction. Hillsdale,
+N.J.: Erlbaum, 1981.
+
+~ ~ LANGUAGE
+FOREIGN
+_ _ _
+ANNALS
+_ - OCTOBER 1989
+25. Naiman, Neil, Maria Frohlich, H.H. Stern, and
+Angela Todesco. The Good Language Learner.
+Research in Education Series No. 7. Toronto: The
+Ontario Institute for Studies in Education, 1978.
+26. Norton, Robert W. “Measurement of Ambiguity Tolerance? J40urnalof Personality Assessment
+39 (1975): 607-19.
+27. Omaggio, Alice C. Helpingkamers Succeed Activitiesfor the Foreign Language Clamroom. Washington, D.C.: Center for Applied Linguistics, 1981.
+28. O’Malley, J. Michael, Anna Uhl Chamot, Gloria
+Stewner-Manzanares,Lisa Kupper, and Rocco P.
+Russo. “LearningStrategies Used by Beginning and
+Intermediate ESL Students!’ Language
+Learning 35 (1985): 21-46.
+29. Oxford, Rebecca L. Second Language Learning
+
+Strategies: Current Research and Implicationsfor
+hctice. Los An,geles: Center for LanguageEducation and Research, University of California, Los
+30.
+
+31.
+
+32.
+
+33.
+
+34.
+
+35.
+36.
+
+37.
+
+38.
+
+39.
+
+Angeles, 1986.
+Politzer, Robert L. “An Exploratory Study of Self
+Reported Language Learning Behaviorsand their
+Relation to Achievement!’ Studies in Second
+Language Acquisition 6 (1983): 54-68.
+. “Motivation, Language Learning
+Behavior and Achievement in an Intensive ESL
+Course!’ Undated manuscript.
+. “Linguistic and Communicative
+CompetenceAchievement in Relationto Reported
+Motivation and Learning Behaviors in an Intensive
+EFL Course!’ Undated manuscript.
+and Mary McGroarty. “An Exploratory Study of Learning Behaviors and their
+Relationship to Gains in Linguistic and Communicative Competence? TESOL Quarterly 19
+(1985): 103-23.
+Reiss, Mary-Ann. “The Good Language Learner:
+Another Look!’ The Canadian Modern Language
+Review 41 (1985): 511-23.
+Rubin, Joan. “What the ‘Good Language Learner’
+Can Teach Us!’ TESOL Quarterly 9 (1975): 41-51.
+. “Study of Cognitive Processes in
+Second Language Learning!’ Applied Linguistics
+2 (1981): 117-31.
+Stern, H.H. “What Can We Learn from the Good
+Language Learner?” The Canadian Modern
+Language Review 31 (1975): 304-18.
+Tarone, Elaine. “Some Thoughts on the Notion of
+Communication Strategy’.’ TESOL Quarterly 15
+(1981): 285-95.
+Wenden, Anita.“Literature Review:The Process of
+Intervention!’ Language Learning 33 (1983): 103-21.
+
+445
+
+APPENDIX A
+Tolerance of Ambiguity Scale*
+1. When I’m reading in Spanish, I get
+somewhat impatient when I don’t totally
+understand the meaning. (I)
+2. It bothers me that sometimes I don’t know
+exactly what the teacher is saying in
+Spanish, even though I understand the
+general idea. (I)
+
+3. When I write Spanish compositions, I don’t
+like the fact that I can’t always express my
+idea exactly. (I)
+
+4. I find it kind of frustrating that it’s
+sometimes hard to pin down the meaning
+of Spanish grammar. (I)
+5. I don’t like the feeling that my Spanish pronunciation may not be quite right. (I)
+6. I enjoy reading something in Spanish that
+takes a while to figure out completely. (T)
+7. It bothers me that even when I study
+Spanish grammar, some of it is hard to really understand. (I)
+
+3. When I’m writing in Spanish, I don’t like
+the fact that I can’t say just what I want. (I)
+
+9. When I’m speaking in Spanish, I don’t really worry about not being able to say what
+I mean. (T)
+10.It bothers me when the teacher uses a
+Spanish word I don’t know. (I)
+11. I don’t like the fact that it’s often impossi-
+
+ble to find Spanish words that mean exactly
+the same as some English words. (I)
+12. I wish I could pronounce Spanish words
+
+the way they should be pronounced. (I)
+
+*I = intolerance, T= tolerance; “I” items
+were negative on the scale; items were interspersed in a larger questionnaire.
+
+The author has requested enhancement of the downloaded file. All in-text references underlined in blue are linked to publications
+
+

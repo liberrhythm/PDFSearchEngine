@@ -1,0 +1,1182 @@
+International Journal of Intercultural Relations
+24 (2000) 27±46
+www.elsevier.com/locate/ijintrel
+
+The Attitudinal and Behavioral Openness
+Scale: scale development and construct
+validation
+Paula M. Caligiuri a,*, Rick R. Jacobs b, James L. Farr b
+a
+Rutgers University, USA
+The Pennsylvania State University, USA
+
+b
+
+Abstract
+The focus of this study is the development and construct validation of the Attitudinal
+and Behavioral Openness Scale (ABOS). This scale measures the personality construct of
+openness with behavioral and attitudinal indicators. Exploratory and con®rmatory factor
+analyses suggest multiple dimensions of the Attitudinal and Behavioral Openness Scale:
+Participation in Cultural Activities, Foreign Experiences, Openness Attitudes, and Comfort
+with Dierences. Additional analyses establish a nomological network for this construct by
+demonstrating convergence between the ABOS and theoretically linked sociopolitical
+constructs, attitudinal and personality constructs, in particular a self-rated adjective
+measure of openness. # 1999 Elsevier Science Ltd. All rights reserved.
+Keywords: Openness; Personality assessment; Expatriates; Diversity; Global assignments; Cultural sensitivity
+
+Introduction
+In recent years, many organizations have had to adjust their human resource
+* Corresponding author. Rutgers University, School of Management and Labor Relations,
+Department of Human Resource Management, 200B Levin Building, Piscataway, NJ, 08854. Tel.: +1732-445-5228; fax: +1-732-445-2830.
+E-mail address: caligiur@rci.rutgers.edu (P.M. Caligiuri).
+0147-1767/99/$ - see front matter # 1999 Elsevier Science Ltd. All rights reserved.
+PII: S 0 1 4 7 - 1 7 6 7 ( 9 9 ) 0 0 0 2 1 - 8
+
+28
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+management strategies in response to both domestic workforce diversity and
+global business expansion (Jamieson & O'Mara, 1991; Tung, 1993). Both of these
+environmental factors, domestic diversity and global competition, have given rise
+to the need for a new type of employee in organizations. The domestic
+organization of today needs people who are open and receptive to diversity and
+can embrace diversity as a source of competitive advantage for their
+organizations. With respect to organizations expanding their operations globally,
+they too have a rising need for employees who can work eectively in foreign
+environments, with foreign colleagues, clients, etc. Both intra-national and
+international diversity, therefore, have fostered the need for employees who
+possess the personalities which would enable them to acculturate in cross-cultural
+situations.
+Personality characteristics: openness
+Responding to this human resource need, many organizations are attempting to
+select individuals who seem to have personalities more receptive to diversity. In
+general, individuals' personality traits are enduring characteristics which
+predispose them to behave in certain ways, given particular situations (Buss, 1989;
+Costa & McCrae, 1992). For example, people who are extroverted would be more
+likely to hold jobs which require public speaking than those who are introverted.
+Likewise, those who are intellectual would be more likely to hold cognitively
+demanding jobs than those people with less intellect.
+Several researchers have suggested a ®ve-factor model of personality (`the BigFive'; McCrae & Costa, 1987; Piedmont, McCrae & Costa, 1991; Trapnell &
+Wiggins, 1990) which encompasses all characteristics of personality. The ®ve
+personality factors are (1) Extroversion, (2) Agreeableness, (3) Conscientiousness,
+(4) Emotional Stability, and (5) Openness.
+This study will focus on measurement of the ®fth factor, openness. We believe
+that it is this personality characteristic that can ultimately help facilitate the
+acceptance of cultural diversity. Individuals higher in openness will have less rigid
+views of right and wrong, what is appropriate and inappropriate, etc. (Black,
+1990). Those who are less open `view their ideas, norms, and behavior patterns as
+correct and others as incorrect . . . and will make little eort to understand'
+people from other cultures and backgrounds (Black, 1990).
+The Attitudinal and Behavioral Openness Scale (ABOS)
+Past studies have demonstrated the relationship between openness (or correlates
+of openness) and variables, such as cross-cultural adjustment (e.g., Abe &
+Wiseman, 1983; Black, 1990; Hammer, Gudykunst & Wiseman, 1978). These
+studies, however, were conducted using one questionnaire of attitudinal-type
+measures to assess both the personality dimensions (e.g., openness) and the
+criterion (e.g., cross-cultural adjustment). The signi®cant ®ndings in these studies
+may have been, in part, due to common method variance (e.g., Black, 1990).
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+29
+
+An alternative method for measuring individual characteristics is to consider the
+actual behaviors which individuals, who possess the personality characteristic in
+question (i.e., openness), demonstrate (Regan & Fazio, 1977). Weigel and
+Newman (1976) suggest that when attitude scales are used, they should be
+administered in conjunction with behavioral measures to determine the connection
+between actions and beliefs. Behaviors and attitudes, therefore, provide evidence
+for the existence of a given personality trait in those individuals who self-report
+having such personal attributes. With respect to this study, both behavioral
+indicators and attitudinal measures related to openness are assessed. For instance,
+behavioral evidence which may relate to openness (in a cultural context) may
+include, eating at foreign restaurants, having a diverse group of friends, and the
+like. Therefore, `attitudinal and behavioral openness' is de®ned as ¯exibility of
+one's attitudes and behaviors which result in an individual's ability to function
+eectively in diverse cross-national and intra national settings. The attitudes and
+behaviors measured by the Attitudinal and Behavioral Openness Scale (ABOS)
+provide evidence for the level of the personality trait of openness which may be
+present in an individual.
+Research on biodata suggests that individuals' past experiences may be used to
+predict future individual related outcome variables (Neiner & Owens, 1985; Owens
+& Shoenfeldt, 1979). In the case of biodata items related to openness, we would
+expect that individuals who possess openness would have the propensity to work
+well in cross-cultural situations, to collaborate well with colleagues who are
+diverse, to acculturate to foreign countries, etc. The (ABOS) was developed on the
+premise that there are certain behaviors individuals exhibit and attitudes
+individuals hold which would indicate the presence of the underlying personality
+characteristic of opennessÐand the presence of openness would relate to positive
+outcomes requiring sensitivity to cultural dierences.
+The development of the ABOS represents the overarching goal of this research.
+This paper is divided into two sections. The ®rst section describes the scale
+development of the ABOS. The second section presents construct validity evidence
+to show how this newly developed measure relates to other measures relevant to
+this area of research.
+Study one: scale development
+Item generation
+The initial items included in the ABOS were written from a variety of sources.
+Some items were based on interviews with successful expatriates after they had
+returned to their home country from their experiences abroad. Other items were
+based on the authors' personal observations of employees in work situations
+requiring openness. All items were measured with 5-point scales. Speci®c scale
+anchors varied across items and were based on the stem of the item. For example,
+the item, `Other cultures fascinate me' has the anchors of 1=Strongly Disagree to
+
+30
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+5=Strongly Agree and the item `I eat at a variety of ethnic restaurants' has the
+anchors of 1=Never to 5=Frequently. An experimental set of 30 items were
+written with the expectation that some items would be dropped, based on the
+results of the item analysis. The 30 items were written to measure four theoretical
+dimensions of openness: attitudes, participation in cultural activities, past
+experiences, and comfort with dierences.
+Method
+Samples
+Sample 1 consisted of 98 male and 159 female undergraduates from a large,
+rural, midatlantic university. The average age of the sample was 19.7 years. They
+completed the ABOS and received extra credit in their psychology classes. They
+were given the ABOS in class and asked to complete all 30 questions. The
+questionnaire responses were anonymous. Sample 2 consisted of 116 (49 male and
+52 female and 15 subjects who did not indicate their sex) upper level,
+undergraduate, management students from a large mid-western university. The
+subjects ranged in age from 22 to 49 years old (average age=28.4). The sample
+included students of the following ethnic backgrounds: 78 white, 22 black, 4
+Hispanic, 4 Asian (8 subjects did not indicate their race). The subjects received
+extra credit for anonymously completing the questionnaire in their class.
+Psychometric analyses
+After the 30 items were written, they were tested so that deviant items could be
+identi®ed and dropped. An item was dropped from the scale for any one of
+several reasons. For instance, the item may have little or no variance in the
+sample of respondents. Also, an item may have a near zero, or negative item total
+correlation, suggesting that the item is not measuring the same construct as the
+other items on the scale (i.e., low internal consistency). These properties were
+examined for all of the items on the original scale. In addition to testing the item
+properties, the multidimensional nature of the scale was also analyzed.
+Results
+Item analyses
+The data from the 257 respondents in Sample 1 were used for the analysis of
+the scale. First, the item descriptive statistics (mean, standard deviation, and
+variance) were examined. The single item distributions did not suggest that any
+items should be dropped (items would have been dropped if their means were
+extreme, or if their variances were near zero). Next, the item-total correlations
+were computed. Six items which had near zero or negative item-total correlations
+were dropped. Because of the possibility that items which did not correlate with
+the total score could correlate with the factor scores, these six items were reentered for the factor analysis (presented in the Multidimensionality section). The
+
+Factor 1: Attitudes
+Item number
+24
+A year long overseas assignment would be a fantastic opportunity for me and/or my family.
+21
+Traveling the world is a priority in my life.
+19
+I hope the company I work for, (or will work for), will send me on an overseas assignment.
+25
+Other cultures fascinate me.
+1
+I would host a foreign exchange student for one year.
+20
+Foreign language skills should be taught in (as early as) elementary school.
+30
+If you took a vacation to Europe, which would you prefer (anchors increase in cultural immersion)?
+Factor 2: Past Experiences
+Item number
+12
+I have spent time overseas. . .
+13
+I was overseas before the age of 18 . . .
+11
+I am ¯uent in another language.
+18
+I have moved or been relocated substantial distances (e.g., state to state, overseas). . .
+10
+I have studied a foreign language.
+Factor 3: Comfort with Dierences
+Item number
+15
+My friends' ethnic backgrounds are . . .
+16
+My friends' religious aliations are. . .
+17
+My friends' ®rst languages are . . .
+14
+My friends' career goals, interests and educations are. . .
+Factor 4: Participation in Cultural Activities
+Item number
+7
+I visit art galleries and museums.
+8
+I attend the theater, concerts, ballet, etc.
+3
+I attend foreign ®lms.
+9
+I travel within the United States.
+2
+I eat at a variety of ethnic restaurants.
+6
+I attend ethnic festivals.
+4
+I read magazines which address world events.
+5
+I watch the major networks' world news.
+
+Factors
+
+Table 1
+Means, standard deviations and factor loadings for the ABOS
+
+1.1
+1.2
+1.2
+1.0
+0.9
+1.1
+1.0
+1.4
+1.4
+0.9
+1.2
+0.6
+1.1
+1.0
+0.7
+1.1
+0.9
+1.1
+0.7
+1.0
+0.9
+0.9
+0.9
+1.0
+
+2.0
+1.9
+3.0
+1.9
+4.1
+2.4
+2.7
+1.3
+2.8
+2.7
+3.0
+1.6
+3.3
+2.6
+2.0
+2.6
+3.2
+
+SD
+
+3.6
+3.4
+3.4
+4.1
+3.5
+4.1
+3.8
+
+M
+
+0.69
+0.62
+0.57
+0.51
+0.50
+0.48
+0.43
+0.36
+
+0.78
+0.63
+0.55
+0.43
+
+0.94
+0.93
+0.37
+0.30
+0.30
+
+0.70
+0.64
+0.58
+0.51
+0.43
+0.38
+0.36
+
+Factor loading
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+31
+
+32
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+same six items failed to ®t with any dimension or ®t together as a dimension or
+set of dimensions and were subsequently dropped again.
+Reliability
+An alpha coecient of internal consistency reliability was then computed for
+the remaining 24-item ABOS. The resulting alpha was 0.81. By most standards, an
+alpha above 0.70 is an indication that a scale is a reliable measureÐand in this
+case, internally consistent.
+Multidimensionality
+The ®rst test of the multidimensionality of the ABOS was an exploratory
+principal factor analysis on the 24 retained items. The data from Sample 1 were
+used in this analysis. The original solution using the widely accepted root r1
+criterion yielded a seven-factor solution (Gorsuch, 1983). Several of these factors
+were considered trivial because they did not have a unique set of de®ning
+variables (Gorsuch, 1983). In order to improve interpretation four, ®ve, and sixfactor solutions were examined. The four-factor solution maximized simple
+structure and was the most interpretable as it had the greatest number of unique
+de®ning variables on each factor. This solution was retained. These four factors
+had eigenvalues of 4.90, 2.20, 1.87, and 1.75. The percentages of variance
+accounted for were 20.4, 9.2, 7.8, and 7.3, respectively. The factors were rotated
+using an oblimin (oblique) rotation.
+The criterion was to interpret only those items which had factor loadings with
+absolute values greater than 0.30. This value was derived from the general
+approach whereby the minimum standard error is doubled and the minimum
+salient loading is signi®cant at that level (Gorsuch, 1983). With 256 degrees of
+freedom and P < 0.05, the minimum value of the correlation coecient is
+approximately 0.15, therefore the minimum salient loading is 0.30. Table 1
+presents the items, means, standard deviations, and respective factor loadings for
+each of the four factors. Next, scores on each dimension were computed for the
+sample and a correlation matrix was calculated. The factor intercorrelations are
+presented in Table 2. An alpha coecient was calculated for each of the factors to
+
+Table 2
+Factor intercorrelations of the Attitudinal and Behavioral Openness Scale
+Factors:
+
+1
+
+2
+
+3
+
+4
+
+1.
+2.
+3.
+4.
+
+(0.73)
+0.21
+0.22
+0.42
+
+(0.71)
+0.20
+0.25
+
+(0.68)
+0.30
+
+(0.75)
+
+Attitudes
+Past Experiences
+Comfort with Distance
+Participation in Cultural Activities
+
+
+
+P < 0.01, two-tailed.
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+33
+
+estimate the internal consistency for each factor. The factor reliabilities appear in
+the diagonal of Table 2.
+Con®rmatory factor analysis for the ABOS
+In order to insure that the four-factor solution is stable and invariant across
+groups, con®rmatory factor analysis was applied to the data from Sample 2.
+Using the LISREL con®rmatory factor analysis program (JoÈreskog & SoÈrbom,
+1989), the best ®tting measurement model was obtained from the Sample 1 data,
+then that resulting model was tested on the Sample 2 data. Sample 1 and
+Sample 2 data were compared simultaneously to evaluate the stability of the
+four factor solution. Analyzing both groups allowed both factor structures to be
+compared and more restrictive hypotheses about the factor structures to be
+tested. From less to more restrictive hypotheses, the following were tested: (1)
+variance/covariance matrix equivalence; (2) equivalent factor patterns; (3)
+equivalent magnitudes of the factor loadings; (4) identical error variances across
+samples; and (5) invariance of inter-factor variances and covariances. In order to
+proceed to testing the next most restrictive hypothesis, the previous hypothesis
+must be supported (e.g., before testing (2), support for (1) must be obtained).
+The chi-square statistic was used to assess the goodness-of-®t index (GFI) of the
+factor structures.
+The initial four-factor solution (based on 24 items of the ABOS) from the
+Sample 1 data produced a less than adequate ®t. Based on the examination of the
+normalized residuals, it was discovered that two items were complex, that is, they
+both loaded on three of the four factors. These two items were deleted in two
+iterative steps, each producing a signi®cant improvement in the model. The
+resulting measurement model (for the remaining 22 items) produced an adequate
+®t, w2203  442:96, P < 0.001, GFI=0.865.
+The four factor solution was then tested to determine if the same factor
+pattern held for Sample 1 and Sample 2 data (i.e., four factors with the same
+items loading on the same factors). The ®rst step was to test all four factors
+for similar factor patterns. The factor patterns did not ®t the data well,
+w2406  848:63, P < 0.001, GFI=0.773. Likewise, the test of metric invariance
+for all four factors did not ®t the data w2424  880:75, P < 0.001, GFI=0.760.
+Since the four-factor solution was found to vary from Sample 1 to Sample 2,
+the factor variances were examined for both samples. For each of the four
+factors the variances for Sample 2 (0.815, 0.766, 0.629, and 0.551) were
+greater then the variances for Sample 1 (0.444, 0.616, 0.499, and 0.307). Based
+on the demographic dierences between Sample 1 and Sample 2 (e.g.,
+dierences in ages and location), it made sense that Factor 2 and Factor 4
+varied more in Sample 2. Sample 2 was older and located in an urban area
+where the opportunities to be involved in many of the activities measured on
+the ABOS are greater. It is unclear why Factor 1 and Factor 3 should vary
+between Sample 1 and Sample 2 so the model was retested for only these two
+factors.
+The next step was to test these two factors for similar factor patterns. These
+
+34
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+factor patterns did ®t the data well, w268  135:82, P < 0.001, GFI=0.890. The
+test of metric invariance for the two factors also ®t the data better, w276  149:66,
+P < 0.001, GFI=0.880.
+Interpretation of the dimensions
+Based on the reliability and the multidimensionality results, the ABOS and its
+four dimensions were used with con®dence in the next stage of this study.
+Although Factor 2 (Foreign Experiences) and Factor 4 (Participation in Cultural
+Activities) did not generalize to the second sample in the con®rmatory factor
+analysis, they are still retained and used in subsequent analyses for a variety of
+reasons. Both Factor 2 and Factor 4 appear to be age dependent. It is logical that
+in a population which is above the traditional undergraduate age, both the
+opportunities to do more, and the ®nancial resources to participate in cultural
+activities would be greater. Sample 2 was an older, non-traditional, working,
+sample. In addition, the subjects in Sample 2 attend a university located in a large
+city, whereas the subjects in Sample 1 came from a rural area. Again, it is logical
+that cultural and foreign opportunities are greater in larger metropolitan areas.
+Since these factors were written as behaviorally based items, and to some extent
+one's situational constraints will aect or restrict one's behaviors (e.g., lack of
+foreign restaurants in small towns), these factors will vary across heterogeneous
+demographic groups.
+Considering the population to which this work could possibly be generalized
+(i.e., working individuals), Factors 2 and 4 must be considered important and
+should be further evaluated when additional subjects with similar backgrounds are
+surveyed. Given that many organizations are often located in or near major cities,
+and that employees are usually older than 19.7 years of age (the mean age of
+Sample 1) Factors 2 and 4 could potentially become more important and therefore
+should be retained at this early stage of instrument development.
+The ®rst dimension identi®ed is Attitudes. This dimension is characterized by
+individuals' thoughts and feelings toward people of other cultures and diversity.
+People who score highly on this dimension will have positive attitudes toward
+diversity and foreign experiences (such as taking an overseas assignment or
+hosting a foreign exchange student). In addition, they place these experiences as a
+high priority in their lives, and in the lives of their families.
+The second dimension is Past Experiences. This dimension measures the extent
+to which a person has sought out and participated in foreign and diverse
+experiences. Two of the behavioral items included in this dimension are whether
+or not one elected to study a foreign language and whether or not one has had
+foreign travel experience. It is hypothesized that those who have sought out these
+activities have a greater interest in having these experiences and may be more
+successful in situations requiring diversity.
+The third dimension of the ABOS is Comfort with Dierences. This dimension
+is an assessment of the diversity among the types of friends people choose. Very
+simply, people who choose to become close with only people who are very similar
+
+
+
+P < 0.05, two-tailed.
+P < 0.01, two-tailed.
+
+Neutral
+Negative
+Positive
+Negative
+Negative
+Positive
+Negative
+Negative
+
+Patriotism
+Nationalism
+Internationalism
+Smugness
+Consumer Ethnocentrism
+Liberalism
+Ethnocentrism
+International Relations
+
+
+Hypothesized
+relationship with ABOS
+
+Scales:
+
+0.73
+0.70
+0.62
+0.67
+0.96
+0.58
+0.57
+0.59
+
+Alpha
+
+ÿ0.03
+ÿ0.17
+0.24
+ÿ0.25
+ÿ0.23
+0.06
+ÿ0.02
+ÿ0.24
+
+Attitudes
+(Factor 1)
+0.04
+0.11
+0.17
+ÿ0.09
+ÿ0.06
+0.19
+0.14
+ÿ0.01
+
+Past experiences
+(Factor 2)
+
+Table 3
+Sociopolitical constructs and the Attitudinal and Behavioral Openness Scale (n=118)
+
+0.01
+ÿ0.04
+0.21
+ÿ0.15
+ÿ0.09
+0.19
+ÿ0.02
+< ]d ÿ0.12
+
+Comfort with Dierences
+(Factor 3)
+
+0.08
+0.03
+0.25
+ÿ0.11
+ÿ0.23
+0.09
+0.08
+ÿ0.07
+
+Cultural
+Activities
+(Factor 4)
+
+0.04
+ÿ0.04
+0.32
+ÿ0.23
+ÿ0.23
+0.18
+0.04
+ÿ0.18
+
+ABOS total
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+35
+
+36
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+to themselves are possibly less comfortable with the dierences of others. Those
+higher in openness would be people who are comfortable having relationships
+with people dierent from themselves. People who receive a low score on this
+dimension have friends and acquaintances with similar (if not identical)
+demographic pro®les (e.g., the same race, religious aliation, age, and
+socioeconomic status).
+The last dimension of the ABOS is Participation in Activities. This dimension is
+a behavioral assessment of one's intellectual curiosity for diversity in his or her
+experiences. Someone high in the construct of openness would be more likely to
+embrace diverse experiences as positive opportunities. People who have high
+scores on this dimension would have participated in new and unfamiliar things.
+For example, they would eat at foreign restaurants and go to art galleries,
+concerts, and museums featuring the works of diverse artists, and so forth.
+
+Study two: construct validation
+`A construct represents a hypothesis . . . that a variety of behaviors will
+correlate with one another in studies of individual dierences and/or will be
+similarly aected by experimental treatments' (Nunnally, 1978. p. 96). This study
+identi®es openness as a valid construct and provides evidence that the scale
+developed, the Attitudinal and Behavioral Openness Scale, can be used for its
+assessment. In order to better understand the construct measured by the ABOS, it
+is necessary to examine other constructs which are related to (convergent validity)
+and conceptually dierent (discriminant validity) from it. This study presents the
+discriminant and convergent validity evidence for the ABOS (and its four
+dimensions) by comparing it to 21 other theoretically selected constructs from
+three broad categories, (1) sociopolitical attitudes towards foreigners, foreign
+goods, etc., (2) individual characteristics linked to openness, and (3) personality
+characteristics (the Big Five). (The constructs included are de®ned below along
+with the instrument used to measure each, respectively.)
+Sociopolitical constructs
+The hypothesized relationships among the following sociopolitical constructs
+and the ABOS are summarized in the ®rst column of Table 3.
+Internationalism
+Internationalism is an attitude measure of political and moral ideology toward
+other nations. This construct was measured by the 5-item Internationalism Scale
+(Kosterman & Feshbach, 1989).
+Liberalism
+Liberalism is the extent to which one espouses liberal political opinions. This
+
+Positive
+Positive
+Positive
+Positive
+Negative
+Positive
+Positive
+Positive
+Negative
+Positive
+Neutral
+Neutral
+Neutral
+Neutral
+Positive
+
+Tolerance of Ambiguity
+Novelty
+Interpersonal Orientation
+Self Monitoring
+Need for Structure
+Autonomy
+Optimism
+Positive Aect
+Negative Aect
+Need for Cognition
+Extroversiona
+Agreeablenessa
+Conscientiousnessa
+Emotional Stabilitya
+Opennessa
+
+0.62
+0.49
+0.86
+0.72
+0.85
+0.65
+0.86
+0.88
+0.88
+0.87
+
+Alpha
+
+Past experiences
+(Factor 2)
+0.08
+0.23
+ÿ0.04
+0.08
+0.08
+ÿ0.19
+ÿ0.04
+0.13
+0.04
+0.16
+0.00
+0.11
+0.15
+ÿ0.04
+0.19
+
+Attitudes
+(Factor 1)
+0.21
+0.29
+0.02
+0.03
+0.21
+ÿ0.19
+ÿ0.20
+0.23
+ÿ0.06
+0.28
+ÿ0.08
+ÿ0.10
+0.02
+ÿ0.06
+0.27
+
+0.21
+0.30
+ÿ0.17
+0.00
+0.21
+ÿ0.10
+0.04
+0.05
+0.01
+0.15
+ÿ0.20
+0.00
+ÿ0.02
+ÿ0.11
+0.36
+
+Comfort with Dierences
+(Factor 3)
+
+
+
+Factor scores were used to measure these variables, therefore the alpha coecients could not be computed.
+P < 0.05, two-tailed.
+
+P < 0.01, two-tailed.
+
+a
+
+Hypothesized
+relationship with ABOS
+
+Scales:
+
+Table 4
+Attitudinal and personality constructs and the Attitudinal and Behavioral Openness Scale (n=482)
+
+0.15
+0.31
+0.01
+0.13
+0.18
+ÿ0.23
+ÿ0.15
+0.30
+ÿ0.08
+0.35
+ÿ0.10
+0.05
+0.05
+ÿ0.04
+0.27
+
+Cultural Activities
+(Factor 4)
+
+0.23
+0.40
+ÿ0.06
+0.09
+0.24
+ÿ0.26
+ÿ0.14
+0.27
+ÿ0.04
+0.34
+ÿ0.14
+0.01
+0.07
+ÿ0.09
+0.39
+
+ABOS total
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+37
+
+38
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+construct was measured by the 7-item Liberalism Scale (Adorno, FrenkelBrunswik, Levinson & Sanford, 1950).
+Ethnocentrism, national smugness, and nationalism
+These three constructs represent one's belief in the `superiority' of one's own
+country. Individual with these attitudes would believe that other countries are
+inferior to their own, and that people from their country can learn little from
+people of other cultures. These constructs were measured by the 5-item
+Ethnocentrism Scale (Adorno et al., 1950), the 6-item Nationalism Scale
+(Kosterman & Feshbach, 1989), and the 4-item Smugness Scale (Kosterman &
+Feshbach, 1989).
+International relations
+International Relations is de®ned as hostility toward other nations, and
+attitudes about the correctness of the use of military force in order to protect its
+interests. This construct was measured by the 8-item International Relations Scale
+(Helfant, 1952).
+Consumer ethnocentrism
+Consumer ethnocentrism is an individuals' attitudes toward purchasing foreignmade goods. Refusing to buy foreign made goods (i.e., high in consumer
+ethnocentrism) suggests that one does not recognize the global economy and the
+degree to which the United States bene®ts from participation. This construct was
+measured by the 17-item Consumer Ethnocentrism Scale (Shimp & Sharma, 1987).
+Patriotism
+Patriotism is a healthy love for one's country. (The hypothesis is that openness
+toward people of other cultures is not the opposite of patriotism on a continuum.
+Since both are separate characteristics, they should not be related to one another.)
+This construct was measured by the 7-item Patriotism Scale (Kosterman &
+Feshbach, 1989).
+Attitudinal constructs
+The attitudinal constructs included in this nomological network are listed
+below. The hypothesized relationships among the constructs are also found in
+Table 4.
+Tolerance of ambiguity
+Tolerance of ambiguity is the extent to which individuals are comfortable with
+novel or unpredictable situations. This construct was measured by the 7-item
+Tolerance of Ambiguity Scale (MacDonald, 1970; Rydell & Rosen, 1966) and
+the 4-item Novelty Scale (another measure of tolerance of ambiguity; Budner,
+1962).
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+39
+
+Personal need for structure
+Individuals' personal need for structure is the extent to which they are likely to
+reduce complexity by forming simple cognitive structures about the world. The
+negative implication of a person who is high in personal need for structure is that
+they tend to stereotype and have prejudices (Neuberg & Newsom, 1993). This
+construct was measured by the 11-item Personal Need for Structure Scale
+(Thompson, Naccarato & Parker, 1989 cited in Neuberg & Newsom, 1993).
+Interpersonal orientation
+Black (1988) and Mendenhall and Oddou (1988) found that having strong
+relational skills (i.e., interpersonal and social skills) is positively related to crosscultural adjustment. (Interpersonal orientation, or the extent to which individuals
+seek out and enjoy being with other people should be positively related to
+opennessÐin particular, as it is measured on the comfort with dierences
+dimension.) This construct was measured by the 15-item Interpersonal Orientation
+Scale (Filsinger, 1981).
+Self-monitoring
+This construct is the extent to which individuals will adjust their behaviors to ®t
+the situation that they are in (i.e., high self monitors) or maintain a steady
+demeanor regardless of the situation (i.e., low self-monitors). This construct was
+measured by the 18-item Self-Monitoring Scale (Gangestad & Snyder, 1985).
+Autonomy
+This construct is the extent to which one feels comfortable and enjoys doing
+things independently. This was included because employees assigned to work in
+foreign countries need to work in situations where they will be without their
+familiar supports (Mendenhall & Oddou, 1988). This construct was measured by
+the 10-item Autonomy Scale (Lifton, 1983).
+Optimism
+Given the many dierences associated with situations of diversity, the likelihood
+of making mistakes (e.g., not understanding language, not being able to easily
+interpret behaviors) is great. A optimist would be someone who has a positive
+attitude and will not get discouraged easily (Harvey, 1985). This construct was
+measured by the 8-item Optimism Scale (Scheier & Carver, 1985).
+Intellectual curiosity
+Intellectually curious individuals desire to learn more about other people, other
+cultures, other ways of doing things in cross-cultural situations. This desire to
+`know more' enables them to more readily learn a new culture and adjust to that
+culture (Tung, 1986). Because of its similarity to intellectual curiosity, the
+construct, need for cognition, which is an individual's tendency to engage in and
+enjoy eortful cognitive endeavors (Cacioppo & Petty, 1982) should also be
+
+40
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+related to openness. This construct was measured by the 18-item Need for
+Cognition Scale (Cacioppo, Petty & Kao, 1984).
+Positive and negative aect
+Positive and negative aect are two orthogonal dimensions of an individual's
+mood state. Positive aect, having a high activity and energy level, may be related
+to international orientation, assuming that cross cultural situations require greater
+energy than situations within one's own cultural bounds. Negative aect focuses
+on aversive mood states, such as fear and nervousness. It would be more dicult
+for an individual to adjust to a cross cultural situation in a negative mood state,
+which suggests that this construct should be related negatively with cross cultural
+adjustment. Since positive and negative aect can be induced by a situation, it
+may be incorrect to assume that the inverse is true. That is, aect may not
+in¯uence the participation in diverse activities. It may, however, be a result from
+the behaviors. (In this case, subjects were asked to describe how they are
+`usually'.) These constructs were measured by the 20-item Positive and Negative
+Aect Scale (Watson, Clark & Tellegen, 1988).
+Personality constructs
+As noted previously, psychologists have identi®ed ®ve orthogonal factors (`the
+Big Five') which comprise the taxonomy of personality characteristics (Goldberg,
+1992; McCrae & Costa, 1987). These ®ve factors of personality are: (1)
+Extraversion; (2) Agreeableness; (3) Conscientiousness; (4) Emotional Stability;
+and (5) Openness. Factor 5, openness, should exhibit a positive correlation with
+the ABOS given that they are measuring the same underlying personality trait, the
+only dierence being that the latter is assessing it in terms of observable attitudes
+and behaviors. The other four personality factors should not be related. The ®ve
+personality dimensions will be measured by the 100-adjective factor marker
+instrument developed by Goldberg (1992).
+Method
+Samples
+From the scale development study (Study 1, above) the sample consisting of 116
+upper level, undergraduate, management students, were used to test the
+nomological network of sociopolitical constructs. To test the nomological network
+or attitudinal and personality constructs, an additional set of 482 subjects (177
+male and 298 female, and 7 subjects who did not indicate their sex) from
+undergraduate psychology students at a large midatlantic university were sampled.
+The subjects ranged in age from 17 to 56 years old (mean age=19.7). The sample
+included students of the following ethnic backgrounds: 427 white, 9 black, 9
+Hispanic, 1 American Indian, and 27 Asian (9 subjects did not indicate their race).
+These subjects received extra credit in their psychology classes for completing the
+questionnaire.
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+41
+
+Procedure
+To test the ®rst (socio-political) nomological network, subjects were given a
+packets including the socio-political measures and the Attitudinal and Behavioral
+Openness Scale. All of the items were based on 5-point Likert-type scales, except
+for the Consumer Ethnocentrism which had a 7-point rating scale. The subjects
+were given the questionnaires to complete during their scheduled class meeting
+time. They were instructed to respond to each question honestly and to return the
+completed questionnaires to the experimenter.
+To test the second (attitudinal and personality) nomological network, subjects
+were given a packets including the attitudinal measures, personality adjectives, and
+the ABOS. All of the items were based on 5-point Likert-type scales, except for
+the Self-Monitoring Scale which was measured by true/false items. During their
+scheduled experiment session, subjects were instructed to respond to each question
+honestly and to return the completed questionnaires to the experimenter.
+Results and interpretation
+The alpha coecients for all of the scales included in this study are found on
+Tables 3 and 4. Six measures were below the generally acceptable level of 0.70
+(ABOS Factor 3, Internationalism Scale, International Relations Scale, Smugness
+Scale, Liberalism Scale and Ethnocentrism Scale). All subsequent correlational
+analyses based on these measures will be understated or lower than they actually
+are because they are attenuated by measurement error. As expected, the total
+ABOS alpha coecient was higher than any of its four subscales (0.84). This
+suggests that the ABOS is comprised of subscales which within themselves are
+internally consistent, but can be collectively labeled as one construct.
+The correlation matrices for the ABOS and the socio-political and attitudinal
+and personality constructs are reported in Tables 3 and 4, respectively. In the
+socio-political nomological network, neither patriotism nor nationalism were
+found to be related to any of the four ABOS dimensions or overall ABOS score.
+Nationalism and patriotism were correlated (r = 0.36, P < 0.01). As
+hypothesized, patriotism should not have been related, because one can have both
+a healthy love for his or her own country as well as an openness to other
+countries. Based on the correlation between nationalism and patriotism, these two
+are probably similar constructs or parts of a broader construct which is not
+related to openness. Surprisingly, ethnocentrism was not negatively related to
+openness. This may be explained in that ethnocentrism and nationalism were
+correlated (r = 0.48, P < 0.01) ±possibly neither are pure measures of the
+constructs intended.
+Internationalism correlated with the overall ABOS, and all of its factors
+independently except for Factor 2, Past Experiences. Although causal inference
+cannot be made, it was anticipated that more foreign experience would be related
+to higher internationalism. This may have been an incorrect assumption on our
+part, given that we assumed a quantitative dierence in amount of foreign
+experience. We did not account for the qualitative dierences in foreign
+
+42
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+experience. For example, people may have several very bad experiences overseas
+or, on the contrary, one very positive experience. This may be an explanation for
+why no relationship was found between Foreign Experiences and Internationalism.
+Consumer ethnocentrism, international relations, ethnocentrism, and smugness
+about one's own country were all signi®cantly and negatively correlated with
+Factor 1 of the ABOS (Attitudes), and the latter two with the overall ABOS. This
+is explicable if we assume that international relations, consumer ethnocentrism,
+and smugness are measures of an `us versus them' mentality. This may suggest
+that people with greater openness recognize the global marketplace and see the
+positive aspects of foreign trade. Similarly, people with higher openness may see
+greater unity among nations. They do not consider other countries and foreign
+competition as threatening to them or their own country. The signi®cant negative
+correlation between the ABOS Factor 2, which is Participation in Cultural
+Activities, and consumer ethnocentrism makes intuitive sense as well. Those who
+are more culturally active look to other cultures (as well as their own) for
+recreational activities, likewise those who are low in consumer ethnocentrism look
+to other countries (as well as their own) for consumer goods.
+Factors 2 and 3 (Past Experiences and Comfort with Dierences) and liberalism
+correlated signi®cantly. This association is interesting because it links actual
+experiences of foreign cultures and dierent people with liberal political attitudes.
+It might be the same underlying personal characteristic which aligns one with
+political liberalism, also predisposing one to be acceptant of other cultures and
+other people.
+For the attitudinal and personality constructs, almost all of the individual
+characteristics which were hypothesized (on Tables 3 and 4) to be linked to
+openness had signi®cant correlations with the ABOS. Tolerance of ambiguity and
+personal need for structure were related to all dimensions of behavioral openness
+except past experiences. This could indicate that people who are able to tolerate
+more ambiguity and less structure, are better able to adjust to culturally diverse
+situations once they are in them, but do not necessarily seek out foreign
+experiences more than others.
+Interpersonal orientation was only related to Factor 3, comfort with dierences.
+This factor is the only one with an interpersonal component, that is, one which
+requires relational skills. Likewise, self-monitoring was only slightly related to
+Factor 4, participation in cultural activities. This makes sense taking into account
+the dierent emphasis that low and high self-monitors place on the social
+situation. High self monitors may participate in cultural events (whether they
+intrinsically enjoy them or not) to ®t in a given social environment. Low self
+monitors may participate in cultural activities, only if they truly enjoy them.
+Taken together, whether they enjoy cultural activities or not, high self monitors
+may participate more in cultural activities, making them higher in this dimension
+of behavioral openness.
+As it is measured in this study, a low score on the autonomy scale indicates
+higher autonomy. All dimensions of the ABOS were related to autonomy. This
+may indicate that people who are less concerned with the norms of a social
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+43
+
+situation, will be more likely to do what they pleaseÐincluding spending time
+with foreign people, participating in a variety of cultural events, etc. This assumes,
+of course, that the free thinking autonomous individuals participate in more
+diverse things than the societal norm. (Given that these data were collected on a
+sample of highly homogeneous undergraduates this result would make sense.)
+As it is measured in this study, a low score on the optimism scale indicates
+higher optimism. Optimism is not related to either comfort with dierences or
+past experiences, but is related to attitudes and participation in cultural activities.
+The nonsigni®cant correlations can be explained in that people who are more
+optimistic may be more optimistic and enjoy diverse situations more once they are
+in them, but do not necessarily seek out these experiences to any great extent. For
+experiences common to more people (that is, things that almost everyone in this
+sample can experience, such as eating at foreign restaurants and going to
+museums) more optimistic people may be willing to try new things more
+frequently because they believe that they will enjoy them. Positive aect was
+related to all facets of behavioral openness, except comfort with dierences. Since
+positive aect is an assessment individual mood state, it may be true that it is
+related to the attitudes and behaviors of the individual, but unrelated to relational
+experiences involving others (i.e., as assessed by Factor 3). Negative aect was not
+related to any of the ABOS factors.
+Intellectual curiosity (i.e., need for cognition) was found to be positively related
+to all factors of the ABOS. Unlike most of the other personal characteristics
+assessed by this study, this construct assesses those who would actively seek out
+international oriented activities. People who are higher in intellectual curiosity do
+things which allow them to learn more about other people, other cultures, other
+ways of doing thingsÐprecisely the behaviors that the ABOS was assessing.
+With regard to the personality dimensions, principal axis factor analysis with a
+varimax rotation (i.e., orthogonal rotation) was conducted on the Big Five factor
+markers, as suggested by Goldberg (1992). As hypothesized, behavioral openness
+loaded on the Openness personality factor (i.e., 0.40), and had a near-zero loading
+on the other four factors. When factor scores retained and used for correlational
+analyses openness, as expected, had the highest positive correlation with the
+ABOS. Extraversion also correlated signi®cantly, but to a lesser extent. This result
+provides the strongest convergent validity evidence between openness, measured
+by the ABOS, and self-reported adjective measure of openness.
+Discussion
+The focus of this study was the development and construct validation of the
+Attitudinal and Behavioral Openness Scale (ABOS). From the reliability and
+construct validity evidence presented, we believe that the ABOS is a useful
+measure of the personality construct, openness. Past studies have suggested that a
+relationship exists between openness and criteria variables, such as cross-cultural
+adjustment (e.g., Abe & Wiseman, 1983; Black, 1990; Hammer, Gudykunst &
+
+44
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+Wiseman, 1978). We believe that the ABOS could be used in future studies
+predicting expatriate cross-cultural adjustment. Consonant with the bene®ts of the
+ABOS for global assignments, this measure could possibly be used to predict who
+would be most likely to bene®t from (or be in the greatest need of) cross-cultural
+training.
+In addition to global assignments, the ABOS could be used in other situations
+which require the prediction of a person who is `open'. For example, the
+successful management of domestic workforce diversity (or intra-national
+diversity) has also given rise to the need to identify people who possess the
+characteristic `openness'. As one possibility, the ABOS could be added to a
+diversity training program to promote self-awareness. The ABOS may also be
+used to identify who would be most successful in (or bene®t the most from) a
+multicultural work team.
+A current limitation of the ABOS is that it focused on mostly objective,
+behavioral indicators of openness, future studies should also include the both
+biographical variables and additional attitudinal variables which aect
+behaviors. The biographical variables could include marital status,
+socioeconomic status, education level, geographical region, among others. It is
+possible that the behaviors assessed by the ABOS are the products of both
+individuals' predisposing personality characteristics and their demographic
+backgrounds. For example, dimension 4, Participation in Cultural Activities,
+could be aected by both individuals' desire to experience new things, as well
+as their income and geographic location which enable participation in the
+activities. Since the aim of this research should be the identi®cation of the true
+individual dierences on a personality trait, further research is needed in this
+area.
+Based on this preliminary research, we believe the ABOS warrants further study
+and development. Additional questions should be added to the original four
+dimensions to improve the subscale internal consistencies. Preliminary work on
+the scale has been conducted with student populations and further research should
+be conducted to test the scale with working samples. Criterion-related validity
+studies should also be conducted to relate openness with some external criteria,
+such as performance on a global assignment, performance in a diversity training
+program, performance on a multicultural work team, etc.
+
+References
+Abe, H., & Wiseman, R. L. (1983). A cross-cultural con®rmation of the dimensions of intercultural
+eectiveness. International Journal of Intercultural Relations, 7, 5±67.
+Adorno, T., Frenkel-Brunswik, E., Levinson, D. J., & Sanford, R. N. (1950). The authoritarian personality. New York, NY: Harper and Row.
+Black, J. S. (1988). Work role transitions: a study of American expatriate managers in Japan. Journal
+of International Business Studies, 18, 277±294.
+Black, J. S. (1990). The relationship of personal characteristics with adjustment of Japanese expatriate
+managers. Management International Review, 30, 119±134.
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+45
+
+Budner, S. (1962). Intolerance of ambiguity as a personality variable. Journal of Personality, 30, 29±50.
+Buss, A. H. (1989). Personality as traits. American Psychologist, 44, 1378±1388.
+Cacioppo, J. T., & Petty, R. E. (1982). The need for cognition. Journal of Personality and Social
+Psychology, 42, 116±131.
+Cacioppo, J. T., Petty, R. E., & Kao, C. F. (1984). The ecient assessment of need for cognition.
+Journal of Personality Assessment, 48, 306±307.
+Costa, P. T., & McCrae, R. R. (1992). Four ways ®ve factors are basic. Personality and Individual
+Dierences, 13, 653±665.
+Filsinger, E. E. (1981). A measure of interpersonal orientation: the liking people scale. Journal of
+Personality Assessment, 45, 295±300.
+Gangestad, S., & Snyder, M. (1985). `To carve nature at its joints': on the existence of discrete classes
+in personality. Psychological Review, 92, 317±349.
+Goldberg, L. R. (1992). The development of markers for the Big-Five factor structure. Psychological
+Assessment, 4, 26±42.
+Gorsuch, R. L. (1983). Factor analysis (2nd ed.). New Jersey: Lawrence Erlbaum Associates.
+Hammer, M. R., Gudykunst, W. B., & Wiseman, R. L. (1978). Dimensions of intercultural eectiveness: an exploratory study. International Journal of Intercultural Relations, 2, 382±393.
+Harvey, M. G. (1985). The executive family: an overlooked variable in international assignments.
+Columbia Journal of World Business, Spring, 84±92.
+Helfant, K. (1952). Parents' attitudes versus adolescent sociopolitical attitudes. Psychological
+Monographs, 66, 1±23.
+Jamieson, D., & O'Mara, J. (1991). Managing workforce 2000. San Francisco: Jossey-Bass.
+JoÈreskog, K. G., & SoÈrbom, D. (1989). LISREL 7 users's reference guide. Mooresville, IN: Scienti®c
+Software, Inc.
+Kosterman, R., & Feshbach, S. (1989). Toward a measure of patriotic and nationalistic attitudes.
+Political Psychology, 10, 257±274.
+Lifton, P. D. (1983). Measures of autonomy. Journal of Personality Assessment, 47, 514±523.
+MacDonald Jr, A. (1970). Revised scale for ambiguity tolerance: reliability and validity. Psychological
+Reports, 26, 791±798.
+McCrae, R. R., & Costa, P. T. (1987). Validation of the ®ve-factor model of personality across instruments and observers. Journal of Personality and Social Psychology, 52, 81±90.
+Mendenhall, M., & Oddou, G. (1988). The overseas assignment: a practical look. Business Horizons, 31,
+78±84.
+Neiner, A. G., & Owens, W. A. (1985). Using biodata to predict job choice among college graduates.
+Journal of Applied Psychology, 70, 127±136.
+Neuberg, S. L., & Newsom, J. T. (1993). Personal need for structure: individual dierences in the desire
+for simple structure. Journal of Personality and Social Psychology, 65, 113±131.
+Nunnally, J. C. (1978). Psychometric theory (2nd ed.). New York: McGraw-Hill Book Company, Inc.
+Owens, W. A., & Shoenfeldt, L. F. (1979). Toward a classi®cation of persons. Journal of Applied
+Psychology, 64, 569±607.
+Piedmont, R. L., McCrae, R. R., & Costa, P. T. (1991). Adjective check list scales and the ®ve-factor
+model. Journal of Personality and Social Psychology, 60, 630±637.
+Regan, D., & Fazio, R. (1977). On the consistency between attitudes and behavior: look to the method
+of attitude formation. Journal of Experimental Social Psychology, 13, 28±45.
+Rydell, S., & Rosen, E. (1966). Measurement of some correlates of need-cognition. Psychological
+Reports, 19, 139±165.
+Scheier, M. F., & Carver, C. S. (1985). Optimism, coping, and health: assessment and implications of
+generalized outcome expectancies. Health Psychology, 4, 219±247.
+Shimp, T. A., & Sharma, S. (1987). Consumer ethnocentrism: construction and Validation of the
+CETSCALE. Journal of Marketing Research, 24, 280±289.
+Trapnell, P. D., & Wiggins, J. S. (1990). Extension of the interpersonal adjective scales to include the
+big ®ve dimensions of personality. Journal of Personality and Social Psychology, 59, 781±790.
+Tung, R. L. (1986). Corporate executives and their families in China: the need for cross-cultural understanding in business. Columbia Journal of World Business, 21, 21±25.
+
+46
+
+P.M. Caligiuri et al. / International Journal of Intercultural Relations 24 (2000) 27±46
+
+Watson, D., Clark, L. A., & Tellegen, A. (1988). Development and validation of brief measures of positive and negative aect: the PANAS scale. Journal of Personality and Social Psychology, 54, 1063±
+1070.
+Weigel, R., & Newman, L. (1976). Increasing attitude±behavior correspondence by broadening the
+scope of the behavioral measure. Journal of Personality and Social Psychology, 33, 793±802.
+
+The author has requested enhancement of the downloaded file. All in-text references underlined in blue are linked to publications on ResearchGate.
+
+

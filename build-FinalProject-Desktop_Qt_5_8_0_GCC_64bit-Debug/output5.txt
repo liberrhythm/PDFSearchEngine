@@ -1,0 +1,1937 @@
+DOCUMENT RESUME
+ED 384 608
+
+AUTHOR
+TITLE
+PUB DATE
+NOTE
+
+PUB TY7E
+
+EDRS PRICE
+DESCRIPTORS
+
+SP 036 110
+Pajares, Frank
+Self-Efficacy in Academic Settings.
+Apr 95
+39p.; Paper presented at the Annual Meeting of the
+American Educational Research Association (San
+Francisco, CA, April 18-22, 1995).
+Information Analyses (070)
+Speeches/Conference
+Papers (150)
+MF01/PCO2 Plus Postage.
+*Academic Achievement; Anxiety; Beliefs; *Educational
+Research; Elementary Secondary Education; Higher
+Education; Metacognition; Predictive Validity; Self
+Concept; *Self Efficacy; Self Evaluation
+(Individuals); Self Management; Self Motivation;
+*Student Characteristics; *Student Motivation
+
+ABSTRACT
+
+This paper explored the contributions made by
+self-efficacy theory to the study of self-regulation and motivation
+in academic settings. Findings on the relationship between
+self-efficacy and academic performance are first summarized. The
+conceptual difference between the definition and use of perceptions
+of competence in social cognitive theory and in other theoretical
+perspectives of motivation is clarified. Next, results of recent
+studies that investigated the role of self-efficacy and other
+motivational constructs in various academic areas are reported.
+Overall results demonstrated that, when self-efficacy is included in
+statistical models with other, more global, self-beliefs (such as
+self-concept, anxiety, and attributions), and with variables such as
+academic background, gender, ethnicity, ability, and socioeconomic
+status, self-efficacy is a strong predictor of academic performance
+and mediates the influence of other determinants. (Contains 104
+references.) (F8)
+
+**********************************************************************
+Reproductions supplied by EDRS are the best that can be made
+from the original document.
+***********************************************************************
+
+p
+Self-efficacy
+
+Running Head: SELF-EFFICACY
+
+oco
+
+SELF-EFFICACY IN ACADEMIC SETTINGS
+
+a
+
+Frank Pajares
+Emory University
+
+Paper presented at a symposium held during the meeting of the
+American Educational Research Association, San Francisco, 1995.
+Session 39A0
+
+U S DEPAR.1MeNTOFEpl1CATION.,
+
+PERMISSION TO REPRODUCE THIS
+MATERIAL HAS BEEN GRANTED BY
+
+EDUCATIONAL RESOURCE3 INFORMATION
+CENTER (ERIC,
+rh,s document has 1"),,en ,oc,roduced
+rece,ved horn the pe, son Or n,cianliatior,
+,,raynattrq rl
+
+Maier changes have been mad, 1,
+,mpove repo uchor orralr:,.
+Ptarls of vie.v or ocarwrals stateo
+
+TO THE EDUCATIONAL RESOURCES
+INFORMATION CENTER IERICI
+
+:his
+
+Jocurnent do not nee555:wly repfcr,,,t
+uffr,rral OEFfI oostlorr
+
+Please address correspondence to:
+Frank Pajares
+Educational Studies
+
+4
+
+Emory University
+Atlanta, GA 30322
+Tel:
+Fax:
+
+404-727-1775
+404-727-2799
+
+Email: Mpajaregunix.cc.emory.cdu
+BEST COPY AVAILABLE
+
+44\
+
+2
+
+Self-efficacy
+
+2
+
+Self-Efficacy in Academic Settings
+Abstract
+
+The purpose of this paper was to identify the unique contribution made by self-efficacy
+
+theory to the study of self-regulation and motivation in academie settings. Findings on the
+relationship between self-efficacy and academic performances are first summarized. Second, the
+conceptual difference between the definition and use of perceptions of competence in social
+
+cognitive theory and in other theoretical perspectives of motivation is clarified. Last, results of
+recent studies that investigate the role of self-efficacy and other motivational constructs in
+
+various academic areas are reported. These results demonstrate that, when self-efficacy is
+included in statistical models with other, more global, self beliefs (e.g., self-concept, anxiety,
+perceived usefulness, attributions) and with variables such as academic background, gender,
+race \ethnicity, ability, and socioeconomic status, self-efficacy is a strong predictor of academic
+
+performance and mediates the influence of other determinants. These results support A.
+Bandura s (1986) contention that particularized measures of self-referent thought surpass global
+measures in the explanation and prediction of related outcomes.
+
+Self-efficacy
+
+3
+
+Self-Efficacy in Academic Settings
+In Social Foundations of Thought and Action, Albert Bandura (1986) wrote that
+individuals possess a self system that enables them to exercise a measure of control over their
+
+thoughts, feelings, and actions. This self system includes the abilities to symbolize, learn from
+others, plan alternative strategies, regulate one's own behavior, and engage in self- reflection.
+Human behavior results from the interplay between this self system and external-environmental
+
+sources of influence. It is the capability for self-reflection, however, that is most uniquely
+human, for this form of self-referent thought allows people to evaluate and alter their own
+thinking and behavior. These self-evaluations include perceptions of self - efficacy -- personal
+
+judgments of canability to accomplish specific tasks and deal with different realities.
+
+Perceptions of efficacy influence human behavior in three ways. First, they influence
+choice of behavior. People engage in tasks in which they feel competent and confident and avoid
+those in which they do not. Second, they help de ermine how much effort people will expend on
+an activity and how long they will persevere--the higher the sense of efficacy. the greater the
+
+effort expenditure and persistence. Finally, self-efficacy beliefs influence individuals' thought
+patterns and emotional reactions. People with low self-efficacy may believe that things are
+tougher than they really are, a belief that fosters stress and a narrow vision of how best to solve a
+
+problem. Hi' self-efficacy, on the other hand, creates feelings of serenity in approaching
+difficult tasks.
+
+Self-efficacy beliefs are important influences on motivation and behavior in part because
+
+they mediate the relationship between knowledge and action. That is, environmental, cognitive.
+and affective factors influence behavior partly by influencing self beliefs. As such. these beliefs
+are strong predictors of individuals' subsequent performances. The tenets of self-efficacy theory.
+as that specific area of social cognitive theory has come to he called, have been tested in varied
+disciplines and settings and have received support from a growing body of findings from diverse
+fields (see Bandura. in press: Lent & Hackett, 1987: Maddux & Stanley. 1986; Multon. Brown.
+& Lent. 1991; Schunk. 1991).
+
+Self-efficacy
+
+4
+
+In educational settings, self-efficacy has been prominent in studies that have explored its
+relationship with attributions (Schunk, 1981, 1982a; Schunk & Cox, 1986; Schunk & Gunn,
+1986), career development (see Lent & Hackett, 1987, for a review), goal setting (Bandura &
+
+Schunk, 1981; Schunk, 1983a; Wood & Bandura, 1989), memory (Berry, 1987), modeling
+(Schunk, 1981, 1987; Schunk & Hanson, 1985, 1988; Zimmerman & Ring le, 1981), problem
+solving (Larson, Piersel, Imao, & Allen, 1990), reward contingencies (Schunk, 1983b), self-
+
+regulation (Schunk, 1982b), social comparisons (Bandura & Jourden, 1991; Schunk, 1983a),
+strategy training (Schunk & Cox, 1986), teaching and teacher education (Ashton & Webb, 1986),
+anxiety and self-concept (Pajares & Miller, 1994a, 1994b), and academic performances across
+
+subject areas (Bandura, 1993; Zimmerman & Bandura, 1994). In general, researchers have
+established that self-efficacy beliefs are correlated with other self beliefs and with academic
+changes and outcomes and that self-efficacy is a strong predictor of related academic outcomes.
+The role that self beliefs play in motivating individuals is the primary focus of theoretical
+
+perspectives other than social cognitive theory. These include theories about self-concept,
+attributions of success and failure, expectancy-value, goals, and self-schemas. In the quest for
+predictive supremacy and practical utility, self beliefs are also in competition with variables that
+have been identified as influencing students' academic outcomes, such as anxiety, perceived
+usefulness, previous experience and achievement, aptitude and ability, gender, race/ethnicity, and
+socioeconomic status.
+
+To better understand the role these self beliefs play in academic settings, researchers have
+investigated the relationship between these beliefs and various academic outcomes as well as that
+
+among the beliefs themselves. Although results have generally supported the contentions of
+social cognitive theory as regards the rola of self-efficacy. they have not been as successful in
+clarifying the nature of the relationship between self-efficacy beliefs and motivational constructs
+
+from other theoretical perspectives. There are several reasons for this. Perhaps the major one is
+that researchers from theoretical camps other than social cognitive theory have tended to define
+judgments of capability in ways consistent with their own conceptualization of such self-
+
+perceptions but not consistent with its definition and use by self-efficacy researchers. In most
+
+Self-efficacy
+
+5
+
+cases, such definitions have been global and general and have lacked the specificity and
+consistency with the criterial task that optimizes the predictive power of self-efficacy beliefs. As
+
+a consequence, results tend to minimize the influence of self-efficacy and maximize the influence
+
+of the determinants of interest to the theory in question. In studies utilizing causal modeling, the
+theoretical frameworks used to hypothesize relationships have quite naturally been based on the
+perspectives of the researchers, and so results add little to the understanding of self-efficacy's
+
+presumed influence. As Gilligan (1982) observed, theory has the tendency to blind observation.
+The purpose of this paper is to identify the unique contribution made by self-efficacy
+theory to the study of self-regulation and motivation in academic settings and to compare its
+
+influence on academic performances with that of other self beliefs prominent in theories of
+motivation. 1'o these ends, findings on the relationship between self-efficacy and academic
+performances are first briefly summarized. Second, the conceptual difference between the
+definition and use of perceptions of competence in social cognitive theory and in other
+
+theoretical perspectives of motivation is clarified. Last, recent findings that assess the role of
+self-efficacy percepts and other motivational constructs in various academic areas are presented.
+Self-efficacy and Academic Performance
+
+Since publication of a seminal article introducing the construct of self-efficacy in 1977,
+Bandura (1978, 1982, 1984, 1986, 1989, 1991, 1993, 1995, in press) has consistently maintained
+that the judgments of capability an individual brings to a specific task are strong predictors of the
+performance that results from that task and mediate the influence of other determinants of that
+
+performance. Th, growing number of researchers who have subsequently investigated the role
+of self-efficacy in academic settings generally support these contentions (e.g., Bores-Rangel,
+Church, Szendre, & Reeves, 1990; Bouffard-Bouchard, 1989; Brown, Lent, & Larkin. 1989;
+Felson, 1984; Lent, Brown, & Larkin, 1984, 1986; Locke, Frederick, Lee, & Bobko, 1984;
+Maddux, Norton, & Stoltenberg, 1986; McCarthy, Meier, & Rinderer, 1985; Meier, McCarthy,
+& Schmeck, 1984; Pajares & Johnson, 1994; Pajares & Kranzler. 1994; Pajares & Miller, 1994a.
+1994b, 1995; Shell, Murphy. & Bruning, 1989; Vollmer. 1986; Wood & Locke. 1987; and see
+Schunk and his colleagues; Lent & Hackett, 1987, for review of research on career self-efficacy).
+
+Self-efficacy
+
+6
+
+Despite this abundance of riches, however, many studies are plagued by assessments of
+self-efficacy that do not follow Bandura's (1986)' guidelines regarding specificity and
+
+consistency with criterial tasks. Bandura cautioned that, because judgments of self-efficacy are
+task- and domain-specific, global or inappropriately defined self-efficacy assessments will
+
+weaken effects. When the efficacy beliefs assessed do not reflect with specificity the criteria'
+task with which they are compared, their predictive value is diminished. For this reason,
+measures of self-efficacy should be tailored to the criterial task being assessed and the domain of
+
+functioning being analyzed. This caution has often gone unheeded in educational research,
+where assessments of self-efficacy frequently bear little resemblance to the criterial task with
+which they are compared but, instead, reflect generalized, or sometimes even unrelated, attitudes
+
+about capabilities. The mismatch between self-efficacy and criterial task assessment is a
+recurring theme. often producing confounded relationships and ambiguous findings.
+Mu lton et al. (1991) found 36 studies written between 1977 and 1988 on the relationship
+
+between self-efficacy and academic performance or persistence that met their criteria for
+inclusion in a meta-analysis: containing a measure of self-efficacy and academic performance
+
+and providing sufficient information to calculate effect size estimates. They computed that
+efficacy beliefs were related to performance (r, = .38) and accounted for approximately 14% of
+the variance in academic performance. However, effect sizes depended on specific
+characteristics of the studies, notably on the types of efficacy and performance measures used.
+
+The strongest effects were obtained by researchers who compared specific efficacy judgments
+with basic skills measures of performance, developed highly concordant self-
+
+efficacy/performance indices, and administered them at the same time. Significant relationships
+are obtained even vith generalized self-efficacy indices, a phenomenon that Mutton et al.
+described as reinforcing the theoretical and practical value of self-efficacy but that also tends to
+produce confounded and misleading results. In fact, if global and generalized self-efficacy
+assessments can predict performances that are not specifically related, the relationship between
+properly assessed self-efficacy and performance should certainly increase.
+
+Self-efficacy
+
+7
+
+Not all researchers have found a significant relationship between efficacy beliefs and
+academic outcomes. Wilhite (1990) found that college students' self-assessment of memory
+ability was the strongest predictor of academic achievement (GPA), followed by locus of control.
+
+Self-efficacy showed a weak relationship. However, efficacy judgments were assessed using a
+global self-concept measure. Smith, Arnkoff, and Wright (1990) tested the predictive power of
+three theoretical models on academic performance--cognitive-attentional, cognitive-skills, and
+
+social learning. Smith et al. concluded that, although variables within each model predicted
+performance to some degree, self-efficacy was a weak predictor. Self-efficacy was
+operationalized as study skills or test-taking ability and was measured with items Ilich as "Rate
+
+how certain you are that you can study at a time and place where you won't get distracted." This
+was compared with academic outcomes such as exam grades and course GPA. Again, when
+efficacy beliefs do not reflect with specificity the criterial task, predictive power is minimized.
+Some researchers have found that self-efficacy is related to self-regulated learning
+variables (e.g., Feather, 1988; Fincham & Cain, 1986; Paris & Oka, 1986; Pokay & Blumenfeld;
+
+1990; Schunk, 1982b, 1985). Findings in this area suggest that students who believe they are
+capable of performing certain tasks use more cognitive and metacognitive strategics and persist
+
+longer than those who do not (Pintrich & Garcia, 1991). For example, Pintrich and De Groot
+(1990) reported a correlation between global academic self-efficacy and both cognitive strategy
+use and self-regulation through use of metacognitive strategies. In addition, academic self-
+
+efficacy correlated with academic outcomes such as semester and final year grades. in-class
+
+seatwork and homework, exams and quizzes, and essays and reports. Perceived importance of
+academic ac, ievement was associated with the outcome variables but was not a significant
+
+predictor. Pintrich and De Groot concluded that self-efficacy played a mediational or
+"facilitative" role in relation to cognitive engagement, that improving self-efficacy might lead to
+increased use of cognitive strategies and, thereby, higher performance, and that "students need to
+have both the 'will' and the 'skill' to be successful in classrooms" (p. 38).
+
+A growing number of other findings support Bandura's (1986) contention that efficacy
+beliefs mediate the effect of skill or other self-beliefs on subsequent performance by influencing
+
+Self-efficacy
+
+8
+
+effort, persistence, and perseverance. For example, Collins (1982) identified children of low,
+middle, and high mathematics ability who had, within each ability level, either high or low
+mathematics self-efficacy. After instruction, the children were given new problems to solve and
+
+an opportunity to rework those they missed. Collins reported that ability was related to
+performance but that, t:gardless of ability level, children with high self-efficacy completed more
+problems correctly and reworked more of the ones they missed.
+
+Schunk (1981) used path analysis to show that modeling treatments increased persistence
+and accuracy on division problems by raising children's self-efficacy, which had a direct effect
+
+on skill. He later demonstrated that effort attributional feedback of prior performance
+(e.g., "You've been working hard") raised the self-efficacy expectations of elementary school
+
+children, and this increase was, in part, responsible for increased skill in performance of
+subtraction problems (Schunk, 1982a). In subsequent experiments, he found that ability
+feedback (e.g., "You're good at this") had an even stronger effect on self-efficacy and subsequent
+
+performance (Schunk. 1983: Schunk & Gunn. 1986). Relich, Debus, and Walker (1986) also
+reported that self-efficacy mediated the role of skill training and attributional feedback and had a
+direct effect on the performance of division problems of learned helpless sixth graders.
+Attribution showed a moderate direct effect on performance and a stronger indirect effect
+
+mediated by self-efficacy. Schunk (1991) has provided an overview of research on the effect of
+self-efficacy beliefs on academic motivation, specifically the role played by variables such as
+perceived control, outcome expectations. perceived value of outcomes, attributions. and self-
+
+concept. He concluded that all may provide a "type of cue" used by individual: to assess their
+efficacy beliefs.
+Self-efficacy and Other Motivational Theories
+
+In some fashion. perceptions of capability play a prominent role in most theories of
+
+motivation. For example. self-concept theorists point out that these percepts of self-worth
+include judgments of confidence (see Rosenberg & Kapland. 1982: Shavelson & Bolus. 1982:
+
+Shavelson, Hubner. & Stanton. 1976). Consequently. self-efficacy is considered an important
+component of an individual's self-concept. Self-schema theory provides a concept of self with
+
+Self-efficacy
+
+9
+
+four dimensions, one of which, the efficacy dimension, is characterized by individuals' beliefs
+
+about their potentialities (Garcia & Pintrich, 1994). In attribution theory (Weiner, 1979), the
+causal attributions that individuals make about the success or failure of their actions are
+
+presumed to influence their subsequent performance expectancies. Recent findings suggest that
+this relationship is reciprocal and that attributions influence motivation and performance largely
+
+through the mediational role of self-efficacy (see Bandura, 1995; Schunk, 1991). And goal
+theorists concur that self-perceptions of competence provide essential information used by
+individuals when setting goals (Ames, 1992; Dweck & Leggett, 1988; Nicholls, 1984, 1990).
+Within the constructs that form the centerpiece of these theories, judgments of personal
+capability perform the functions that Bandura (1986) suggests.
+Subsuming beliefs of personal efficacy under broader and more generalized motivational
+constructs may be useful for purposes of validating these constructs, but it can be problematic in
+that it can obfuscate important differences between the self-beliefs and minimize the unique
+contribution that self-efficacy perceptions make to an understanding of motivation and behavior.
+To illustrate, it may be useful to explore in some depth the differing conceptions of the role of
+self-efficacy perceptions in another theoretical perspective, that of expectancy-value theory.
+
+According to this perspective, motivation is primaily a result of individuals' beliefs about the
+likely outcomes of their actions and of the incentive value they place on those outcomes
+
+(Atkinson, 1957; MaClelland, 1985). Individuals will be motivated to engage in tasks when they
+value the outcome expected; they will be less predisposed to perform tasks whose outcomes they
+do not value.
+
+Expectancy-value theorists agree that judgments of competence play an interactive role
+
+with valued outcomes in determining the tasks in which individuals will engage (Eccles 1983;
+Wigfield & Eccles, 1992), but they emphasize the more prominent role of a construct similar to
+that which Bandura (1986) called outcome expectations in influencing motivation and predicting
+
+behavior. According to Bandura, judgments of personal competence differ from judgments of
+the likely consequence that behavior will produce. Outcome expectations are related to efficacy
+beliefs because these beliefs in part determine the expectations. Individuals who expect success
+
+10
+
+Self-efficacy
+
+10
+
+in a particular enterprise anticipate successful outcomes. Students confident in their math skills,
+for example, expect high marks on related exams and expect the quality of their work to reap
+
+benefits. The opposite is also true of those who lack such confidence. Students who doubt their
+math ability envision a low grade before they begin a math exam. The expected results of these
+imagined performances will be differently envisioned: academic success and other benefits for
+the former, academic failure and curtailed possibilities for the latter.
+Bandura (1984, 1986) argued that, because the outcomes people expect are largely
+dependent on their judgments of what they can accomplish, outcome expectations are unlikely to
+make much of an independent contribution to predictions of behavior when self-efficacy
+
+perceptions are controlled. This is not to say that efficacy and outcome judgments are always
+consistent. A high sense of efficacy may not result in behavior consistent with that belief if an
+individual also believes that the outcome of engaging in that behavior will have undesired
+
+effects. For example, some students may realize that strung math skills are essential for a good
+score on the Graduate Record Examination (GRE) and eligibility for graduate school, which, in
+turn, may ensure a prestigious career and affluent lifestyle, but low confidence in math abilities
+may keep them away from certain courses and they may not bother to take the GRE or apply to
+
+graduate school. High self-efficacy and negative outcome expectations are similarly possible.
+The distinctions that Bandura (1978) drew between self-efficacy and outcome
+expectations, as well as the roles he suggested they each play, are not without controversy.
+
+Kirsch (1985) argued that Bandura used the term outcome expectations in two different ways. A
+perceived ens ironmental contingency. Kirsch noted, is an outcome expectation beyond the
+
+control of the individual. It is knowledge of logical and immutable consequences. such as
+knowing that a good score on the GRE results in graduate school admission. These outcome
+expectations are independent of individuals' perceptions of their own competence. This meaning.
+Kirsch argued, is at odds with Bandura's claim that "the outcomes one expects derive largely
+from judgments as to how well one can execute the requisite behavior" (p. 241), for, in this
+sense, outcomes are dependent on performance and may well be at the mercy of efficacy beliefs.
+
+11
+
+Self-efficacy
+
+11
+
+Some re3earchers find the distinction between the two constructs ambiguous and suggest
+that outcome expectations cannot so easily be extricated from efficacy beliefs (Eastman &
+Marzillier,
+
+1984;
+
+Kazdin,
+
+1978;
+
+Manning & Wright,
+
+1983;
+
+Marzillier & Eastman,
+
+1984;
+
+Teasdale, 1978). They contend that self-efficacy judgments are dependent on and inextricably
+
+int-rtwined with perceptions of the outcomes envisioned by actions. Therefore, outcome
+expectations play a large role in creating efficacy perceptions. To illustrate that Bandura.
+oversimplified the variab:cs involved in behavior change, Marzillier and Eastman (1984) used
+
+the example of a socially anxious man who is asked to attend a party. To this poor soul, the
+perceived outcomes are disastrous--people will notice he looks odd and laugh at him, and he will
+
+make a fool of himself, be unable to talk to anyone, and drink too much. Marzillier and Eastman
+argued that these expectations cannot be disassociated from efficacy judgments, that outcome
+beliefs are as important in determining whether the man will attend the party as is his belief in
+
+whether he can cope with the demands of the occasion. They argued that individuals infer their
+efficacy beliefs from imagined outcomes. Consistent with the tenets of expectancy-value theory,
+the) suggested that an individual's perception of the outcome and his value of the task necessary
+to achieve that outcome will regulate his behavior as powerfully as his self-efficacy beliefs, and
+independent of them.
+
+Bandura (1984) countered that such cart-before-the-horse thinking fails to take into
+consideration that "one cannot conjure up outcomes without giving thought to what one is doing
+
+and how well one is doing it" (p. 232). The man confronted with the decision of whether to
+attend the party envisions disastrous outcomes largely because he has little confidence in his
+
+capabilities to meet the demands associated with parties. Foresightful action require, a causal
+ordering wherein "human causai thinking places actions before the outcomes that flow from
+
+them" (p. 237). It is unlikely that the partyphobic man, when faced with the decision of whether
+to attend, envisions the disastrous outcomes and concludes that he is an inefficacious partygoer.
+
+More likely, the perceived self-inefficacy creates the envisioned outcomes. It is also possible,
+Bandura argued, to exclude considerations of outcome from judgments of personal efficacy. For
+example, students are capable of assessing their academic capabilities quite apart from any
+
+12
+
+Self-efficacy
+
+12
+
+outcomes they may envision. Eastman and Marzillier (1984) remained dissatisfied and
+unconvinced.
+
+As earlier noted, researchers with theoretical persuasions other than those of social
+
+cognitive theory define and use judgments of competence in ways consistent with their
+theoretical understandings but not always with its definition and use by self-efficacy theorists.
+
+Quite naturally, they also hypothesize relationships in statistical models from the perspective of
+their own theoretical framework. As a consequence, the influence of self-perceptions of
+competence is minimized and that of the competing belief optimized. In spite of these problems,
+several studies from other theoretical perspectives offer strong support for the hypothesized role
+
+of self-efficacy. One such investigation was conducted by Meece, Wigfield, and Eccles (1990),
+who constructed two structural equation models from the perspective of expecta:icy-value theory
+to investigate the relationship among mathematics ability perceptions, performance expectancies,
+perceived importance, anxiety, and mathematics performance in a two-year longitudinal study of
+junior high school students. Ability perceptions and performance expectancies were described
+
+as "two types of efficacy beliefs" (p. 62). Some of the ability perception items, however, would
+not be considered self-efficacy judgments by social cognitive theorists (e.g., "How have you been
+doing in math this year?"), and the performance expectancies were global judgments of the type
+that work to minimize effects (e.g., "How well do you expect to do in math this year?").
+Importance of mathematics was analogous to perceived usefulness (e.g., "Being good at math is
+important").
+
+Model 1 tested the effects of perceived ability, expectancies, and importance on anxiety,
+
+and Model 2 tested the effects of those four variables on students' grade point average (GPA). In
+both cases, perceived ability was used as an exogenous variable hypothesized to be causally
+predominant over the others. Perceived expectancies were hypothesized to have a reciprocal
+
+relationship with importance in Model 1 and with importance and anxiety in Model 2. Because
+Meecc et tl. (1990) conceptualized ability perceptions and performance expectancies as two
+
+types of self-efficacy, they used ability perceptions from Year 1 to predict both anxiety and GPA
+in Year 2 in an effort to avoid potential problems of multicollinearity.
+
+Es
+
+Despite tne global
+
+Self-efficacy
+
+13
+
+assessment, correlations with grades were higher for the efficacy items than for the importance or
+anxiety items, and path analysis results revealed that expectancies (global self-efficacy) had a
+significant direct effect on grades whereas perceptions of importance did not.
+The researchers found that expectancy (globally assessed self-efficacy) and perceived
+importance were significantly related in both models and noted that Atkinson (1957) had argued
+the relationship should be inverse--that individuals place greater value on tasks they believe they
+
+can least accomplish. Recall that, according to social cognitive theory, the perceived importance
+of a task is in large part the result of the outcome expectation an individual has for a particular
+task and is related to self-efficacy judgments in much the same way as are outcome expectations.
+Bandura (1986) argued that, because beliefs in part determine expectations, people generally
+value those things they feel capable of accomplishing and do not place as much value on those
+
+for which they have little confidence to perform. It is not unusual, then, that expectations and
+perceived importance should be related, though the relationship can be complex.
+Feather (1988) also used an expectancy-value orientation in a path analysis to study the
+effect of math self-concept, perceived value of mathematics, and gender on the enrollment
+
+decisions of university students. Like Meece et al. (1990), Feather defined mathematics selfconcept as a reflection of "expectancies of success in mathematics" (p. 381) that "could therefore
+be classified as self-efficacy expectations" (p. 382) and assessed it with two global items, the first
+asking students to report their previous mathematics grades (top 10%, well above average, etc.)
+and the second with the item. "In general, how do you rate your ability to do well at
+mathematics?" Like Meece et al.. Feather also found that perceived ability and importance were
+correlated. Perceived ability also showed a stronger direct effect on choice of majors than did
+
+perceived importance. Recall that what is noteworthy about these two studies is that, although
+from a differing theoretical orientation, they demonstrate the predictive and mediational role of
+self-efficacy, even when globally assessed.
+Recent Investigations
+
+A recent line of inquiry by Pajares and his colleagues has focused on the predictive and
+mediational role of self-efficacy in academic settings. One important component of these studies
+
+14
+
+Self-efficacy
+
+14
+
+is the inclusion of other motivational constructs so as to help clarify the interplay among them.
+
+In all cases, judgments of self-efficacy are measured in terms of particularized self-perceptions
+
+of competence that are consistent with the criterial task being assessed. For example, if the
+criterial task involves solving mathematics problems, the efficacy assessment asks students to
+provide judgments of confidence to solve the individual problems (e.g., Pajares & Kranzler,
+1994; Pajares & Miller, 1994a, 1994b, 1995); if the task involves writing an essay, students are
+asked to provide judgments that they possess the various composition, grammar. usage, and
+mechanical skills on which their writing performance is assessed (e.g., Pajares & Johnson, 1994,
+
+1995; Valiante & Pajares, 1995). Results from these studies demonstrate that. when self-efficacy
+judgments are included in path analyses or multiple regression models with other, more global,
+self beliefs (e.g., self-concept. anxiety. perceived usefulness, perceptions of self-regulation,
+attributions) and with variables such as ability and aptitude, academic background, race\ethnicity.
+gender. and socioeconomic status, self-efficacy is a strong predictor of related academic
+
+outcomes and mediates the influence of other determinants of academic performance. These
+results support Bandura's (1986) contention that particularized measures of self-referent thought
+surpass global measures in the explanation and prediction of related outcomes.
+Math Self-efficacy, Self-concept. Perceived Usefulness, and Anxiety
+
+Pajares and Miller (1994a) used path analytic techniques to discover whether
+mathematics self-efficacy beliefs play the mediational role ascribed to them by social cognitive
+theory and whether these beliefs are stronger predictors of solving mathematics problems than
+are other determinants of performance such as self-concept. anxiety. perceived usefulness,
+previous experience, and gender. The strong correlation between self-concept and anxiety
+created a problem of multicollinearity. which creates instabilities in the parameter estimates that
+lessen the effect of each variable. As a consequence. Pajares and Miller removed anxiety from
+the path mock:. a choice guided by their primary interest in the interplay between self-efficacy
+and self-concept (see Table 1). The independent variables accounted for 52% of the variability
+in problem-solving performance. E(6.343)
+
+61.80.p < 0001.
+
+15
+
+Self-efficacy
+
+15
+
+Pajares and Miller (1994a) found that math self-efficacy had stronger direct effects on
+problem-solving performance (13 -= .545) than did the other determinants (see Figure 1). Math
+
+self-concept and high school level each had modest effects. Results also revealed that the
+relationships between performance and both self-concept and perceived usefulness were largely a
+
+result of noncausal covariation due to the effect of self-efficacy. Self-efficacy influenced
+performance almost exclusively directly and also mediated the effects of gender and prior
+experience on self-concept, perceived usefulness, and problem-solving performance.
+Writing Self-efficacy, Self-concept, and Apprehension
+
+Pajares and Johnson (1995) also used path analysis to investigate the influence of writing
+self-efficacy, writing self-concept. and writing apprehension on high school students' essaywriting performance. using a model that controlled for the effects of gender and previously
+
+assessed writing aptitude. The researchers were especially interested in whether self-efficacy
+beliefs would make an independent contribution to the prediction of writing performance given
+
+the expected powerful effect of the aptitude assessment. Results showed that students' selfefficacy perceptions were strong predictors of their writing performance and played the
+
+mediational role hypothesized by social cognitive theory. Self-efficacy had a direct effect on
+writing apprehension and performance and partially mediated the effect of gender and writing
+aptitude on apprehension and perfoi mance (see Figure 2). The independent variables accounted
+
+for 53% of the variability in performance, F(4, 173) = 47.97, p < .0001. It should also be noted
+that the use of previous performance and aptitude assessments as controls in studies of selfefficacy is itself problematic. as these are confounded with the influence of the self-efficacy and
+other beliefs that earlier influenced these prior determinants (Bandura, in press: Dew. (ialassi, &
+Galassi. 1984: Hackett & Betz. 1989). As a consequence. if the prior effect of self-efficacy is not
+partialed out. the effect of self-efficacy in the model is lessened.
+
+Pajares and Johnson (1995) reported that the magnitude of the correlations between all
+independent variables and performance. as well as that between these variables and self-efficacy,
+
+was generally consistent with those of previous investigations (see Table 2). One exception was
+the strong relationship between %riting self-efficacy and performance (.60). which was higher
+
+1 fi
+
+Self-efficacy
+
+16
+
+than had previously been obtained. This was likely due to the rater' use of the self-efficacy
+items as the criteria for scoring the essays.
+
+As was the case in Pajares and Miller's (1994a) investigation of math self-efficacy, the
+strong correlation between self-concept and apprehension resulted in multicollinearity. Due to
+the prominence of writing apprehension in the writing research literature, the researchers
+
+removed writing self-concept from the path model. Although students' writing apprehension and
+performance were correlated, results showed that the influence of apprehension on performance
+
+was largely a result of noncausal covariation with self-efficacy. This finding is consistent with
+others that have been reported by researchers exploring writing or other academic areas (see
+Alexander & Martray, 1989; Hackett & Betz, 1989; Meece et al., 1990; Pajares & Kranzler,
+1994: Pajares & Miller, 1994a, on mathematics; Meier et al., 1984; Pajares & Johnson, 1994.
+
+1995. on writing). A model in which apprehension was replaced with self-concept was tested
+and revealed similar results. These findings were replicated by Valiante and Pajares (1995) with
+a sample of fifth grade students.
+Math Self-efficacy, Self - concept. Anxiety, and General Mental Ability
+
+Pajares and Kranzler (1994) constructed a path model that included math self-efficacy.
+general mental ability, math anxiety, previous background in mathematics, and gender. with
+
+relationships hypothesized from prior findings and social cognitive theory (see Table 3). The
+most substantive effort to extend previous findings involved the inclusion in the path model of a
+
+measure of general mental ability, or psychometric g. Pajares and Kranzler chose an assessment
+of psychometric g because it accounts for the single largest component underlying individual
+differences in mental ability (see Carroll. 1993) and because of the general acknowledgement
+that psychometric g is a strong predictor of academic performance (Hunter. 1986; Jensen, 1984.
+1987: Thorndike, 1986).
+
+Previous investigations of the influence of math self- efficacy on math outcomes had not
+
+controlled for general mental ability. Instead, researchers used scores from the quantitative
+section of standardized aptitude tests with samples of college students. This is problematic for
+two reasons. First, as earlier explained, scores on apt;tude tests are confounded by other
+
+17
+
+Self-efficacy
+
+17
+
+attitudinal and anxiety factors related to mathematics. Second, college students' scores on
+aptitude tests are restricted in range. Because students with lower scores are screened out by the
+college admission's process, correlations between math performance and aptitude measures in
+
+college samples are attenuated. Pajares and Miller (1994a) did not include an ability measure in
+their path model but acknowledged that its exclusion may have influenced the effects found and
+
+recommended that a future model include such a measure with an eye to testing their findings. A
+nonverbal, untimed measure of general mental abilities such as Raven's Advanced Progressive
+Matrices is less influenced by educational background than are aptitude tests or other ability
+
+measures. Thus, it minimizes the confounding and provides a better control for ability in a path
+model testing the mediational role of self-efficacy.
+The key finding from this study was that the direct effect of self-efficacy on performance
+was as strong (p = .348) as was the effect of ability (13 = .321)(see Figure 3). The direct effect of
+anxiety on performarice (0 = -.113) and that of self-efficacy on anxiety (13 = -.411) support
+
+previous findings that the influence of anxiety on academic outcomes is minimized when selfefficacy is included in a model and that anxiety is to a great extent a by-product of efficacy
+
+perceptions. These are striking results in light of the particularly stringent test of the influence of
+self-efficacy that inclusion of a general mental ability measure in the path model provides in an
+investigation of this type (see Thorndike, 1986; Zimmermann, Bandura, & Martinez-Pons,
+1992). In addition, self-efficacy partially mediated the effect of ability and math background
+
+both on anxiety and performance. The independent variables accounted for 61% of the
+variability in problem-solving performance. F(5.323) = 99.1,p < .0001.
+Anxiety correlated significantly with problem-solving performance. but results indicated;
+
+that the influence of anxiety was primarily a result of noncausal covariation due to the effect of
+self-efficacy. Similar findings have been reported by researchers exploring mathematics and
+other academic areas (see Alexander & Martray, 1989: Hackett. 1985: Hackett & Betz, 1989:
+Pajares & Johnson. 1994, 1995: Pajares & Miller. 1994a). It should be noted that Pajares and
+
+Kranzler (1994) also assessed math self-concept but dropped it from the analysis after finding
+multicollinearity with math anxiety. A path analysis model in which anxiety was replaced with
+
+18
+
+Self-efficacy
+
+18
+
+self-concept revealed similar effects in similar proportions. These findings were supported by
+preliminary results from two studies investigating the physical science and biology self-efficacy
+of middle school students (Pajares & Brown, 1995).
+Increasing the Predictive Power of Self-efficacy
+As earlier noted, even self-efficacy researchers have often used generalized, global, or
+
+multiple-scale self-efficacy measures to predict academic outcomes. In studies of math selfefficacy, for example. researchers have generally operationalized the construct in terms of
+individuals' judgments of their capabilities to solve math problems, perform math-related tasks,
+and succeed in math-related courses--the three subscales of the Mathematics Self-Efficacy Scale
+created by Betz and Hackett (1983)(see, for example. Hackett & Betz. 1989: Randhawa, Beamer,
+& Lundberg, 1993).
+
+In line with Bandura's (1986) guidelines regarding specificity and consistency of selfefficacy and performance assessment, Pajares and Miller (1995) observed that these judgments of
+
+math capabilities are substantively different. Although they have in common that all are mathrelated judgments. their predictive value should largely depend on the nature of the criterial tasks
+
+with which they are compared. Consequently. students' judgments to solve math problems
+should be more strongly predictive of their ability to solve those problems than should their
+
+confidence to perform other math-related tasks or succeed in math-related courses. Similarly,
+their judgments to succeed in math-related courses should be more strongly predictive of their
+choice to enroll in such courses than should their confidence to solve specific problems or
+
+perform mathematics tasks. Figure 4 represents the typical method of using multiple-scale math
+self-efficacy assessments with dependent measures such as solving math problems or choosing
+math-related majors. The more parsimonious model in Figure 5 more accurately reflects the role
+of the same serf- efficacy assessments in predicting those outcomes.
+
+Pajares and Miller (1995) compared these judgments of capability with two outcome
+measures: ability to solve the problems on which self-efficacy was assessed am; math-relatedness
+
+of academic majors. Results confirmed that Bandura's (1986) warnings regardinf, specificity of
+self-efficacy and performance assessment are well founded. Students' confidence to solve
+
+Self-efficacy
+
+19
+
+mathematics problems was a more powerful predictor of their ability to solve those problems
+than was their confidence to perform math-related tasks or their confidence to earn A's or B's in
+
+math-related courses. Similarly, their confidence to succeed in such courses was more predictive
+of their choice of majors that required them to take many of the math-related courses on which
+
+they expressed that confidence. Although there are different ways of assessing self-efficacy, the
+more theoretically appropriate and empirically warranted are those in which the self-efficacy
+measure assesses the same or similar skills required for the performance task.
+
+Recall that researchers have found that even genaalized or less closely related indices
+will correlate significantly with academic outcomes (see Multon et al., 1991). Pajares and Miller
+(1995) found this phenomenon as well. That is, each subscale, as well as the full-scale,
+correlated significantly with each outcome. Prediction was enhanced, however, as self-efficacy
+and performance correspondence more closely matched
+Math Self-efficacy, Self-concept, Anxiety, and Attributions
+
+Pajares and Dixon (1995) are currently completing a study whose primary focus is to
+examine the interplay between self-efficacy judgments, motivational variables, and mathematical
+problem-solving with special education, regular. and gifted middle school students mainstreamed
+in Algebra classes and special education students who are self-contained as a result of more
+
+serious disabilities. The motivational variables include self-concept, anxiety, attributions of
+success and failure, and self-efficacy for self-regulated learning. In addition, cognitive ability,
+
+gender, previous mathematics attainments, race/ethnicity, and socioeconomic status are
+controlled.
+
+Preliminary results suggest that self-efficacy was predictive of mathematical problemsolving capabilities of all students with the exception of the self-contained special education
+
+students. Consistent with previous results, most students were generally overconfident about
+their math abilities, but self-contained students were significantly more overconfident. In
+addition, these results point out that the self-contained special education students' self-efficacy
+perceptions were so out of line N ith their actual competence that they had little awareness of
+
+Self-efficacy
+
+20
+
+what they knew and did not know. This poor calibration makes learning very difficult given that
+a major factor in learning is the ability to self-correct (Pressley, Borkowsky, & Schneider, 1987).
+As expected, gifted students had higher performance, self-efficacy, self-concept, and
+lower anxiety scores and were better calibrated in their judgments of capabilities than either
+
+regular or special education students. These results of higher calibration for gifted students
+support research findings showing that students with higher general mental ability had higher
+calibration and performance (Pajares & Kranz ler, 1994).
+
+Multiple regression results revealed that ',-.ath self-efficacy was the strongest predictor of
+
+performance in a model that controlled for self-corcept, anxiety, self-efficacy for self-regulated
+learning, cognitive ability, semester grades, socioeconomic status, and gender. Path analyses are
+in the process of being conducted. As regards the relationship between self-efficacy perceptions
+and attributions of success and failure, preliminary results reveal that high self-efficacy students
+tended to attribute their success to ability, intelligence, and their usual effort, whereas low self-
+
+efficacy students attributed their success to luck and to the fact that problems are easy. As
+Bandura (1986, 1995) has theorized, high self-efficacy students tended to attribute their failure to
+not putting forth their usual effort, whereas low self-efficacy students attributed their failure to
+
+ability, luck, general intelligence. and difficult problems. More detailed analyses focusing on
+each of the student subgroups should provide additional insights.
+Conclusions
+
+Beyond supporting the hypothesized predictive and mediational role of self-efficacy,
+results from the investigations of Pajares and his associates show that, as Bandura (1986)
+theorized. particularized judgments of capability are better predictors of highly related academic
+
+performances than more generalized self-referent judgments. That is to say that specific
+judgments are better predictors of the specific performances on which the judgments are based
+
+than are broader, less contextual, less task-specific judgments. How could it be otherwise? This
+begs a question of practical utility, given that many criterial tasks of interest in the motivational
+and academic arenas cannot be assessed with the specificity afforded by. say. the solution of
+mathematics problems.
+
+Self-efficacy
+
+21
+
+Although researchers have demonstrated that self-efficacy beliefs are also good predictors
+of more generalized outcomes such as grades (Bandura, 1993; Meece et al., 1990; Pintrich &
+Garcia, 1991), choice of academic majors (Hackett & Betz, 1989), and intention to enroll in
+math-related courses (Lent, Lopez, & Bieschke, 1993), Lent and Hackett (1987) observed that
+the optimal level of specificity of an efficacy assessment must ultimately depend on the
+
+complexity of the performance criteria with which it is compared. Academic outcomes,
+particularly in investigations of career choices and decisions, are seldom specific in nature, and
+Lent and Hackett warned that specificity and precision are often purchased at the expense of
+
+external validity and practical relevance. And general self-perceptions are useful in their own
+right - -they can provide teachers and counselors with information regarding students' dispositions,
+
+and results may be useful in helping to predict outcomes that do not easily lend themselves to
+
+microanalytic analysis. Some reser _hers have also noted the need to explore the generality of
+self-efficacy beliefs--that is. the extent to which they relate to, or transfer across, different
+performance tasks or domains (Lent & Hackett, 1987; Mu lton et al., 1991). Findings from this
+line of inquiry should help further the generalizability and practical relevance and utility of selfefficacy theory.
+
+Bandura (1984, 1986. in press) noted that knowledge, competence. and various forms of
+self-kne Ai ledge and self-belief act in concert to provide adequate explanations of behavior. Such
+
+explanations cannot be had without considering the role that each may play in human decision-
+
+making and functioning in a given context. This rich and often complex interplay may create
+situations in which self-efficacy is neither the most important influence on nor especially
+predictive of behavior (Schunk, 1991). Moreover, human functioning is such that discordances
+between beliefs and between belief and action are possible. For example, some students may be
+highly confident of their academic ability, but, if the outcomes they expect are dismal (a poor job
+market. strong competition for few jobs), it is doubtful they will behave in concert with their
+beliefs. Conversely, low self-efficacy may he overcome by valued outcomes and potential
+rewards. And of course. if i,.dividuals lack necessary skills, no amount of self-efficacy will bring
+
+Self-efficacy
+
+22
+
+about the desired performance, although increased effort, persistence, and perseverance may lay
+the foundation for skill improvement and better subsequent performance.
+
+Nonetheless, Bandura (1984) hypothesized that, because individuals' beliefs of personal
+competence "touch, at least to some extent, most everything they do" (p. 251) ane because selfefficacy mediates the effect of other determinants of behavior, when these determinants are
+
+controlled, self-efficacy judgments should prove better predictors of choice and direction of
+behavior. Because human behavior is multiply determined, however, its understanding and
+explanation require an appreciation of the interplay among the determinants that act as common
+
+mechanisms of personal agency. Commonality of mechanism, Bandura cautioned, should not be
+confused with exclusivity of mechanism. Hence one need not fear that perceived self efficacy
+will "usurp the lion's share of the variance in human conduct" (p. 252).
+It seems clear that, to develop more complete understandings of the sources of this
+variance, researchers with differing theoretical allegiances should engage in greater
+intertheoretical crosstalk and investigative collaboration using research designs that incorporate
+
+the various constructs operationalized and used in a manner consistent with the construct's
+theoretical home. For example, researchers incorporating self-perceptions of capability into
+studies of self-concept might ensure that self-efficacy is assessed at a level of specificity
+
+consistent with the out )me variables under investigation. For their part, self-efficacy
+researchers would take the same methodological precautions when assessing and using other
+
+motivational constructs. In studies requiring the use of self-report instruments, researchers might
+more accurately assess a construct by using appropriate instruments created by researchers from
+
+the construct's theoretical home than by creating their own. Such efforts would be instrumental
+in identifying the contexts in which certain motivational constructs may be better predictors of
+human functioning as well as the unique role that each construct plays in the general
+
+development of self-regulatory skills. The result would be a clearer and deeper understanding of
+the nature of the interplay between self-efficacy and its motivational cousins.
+
+Self-efficacy
+
+23
+
+References
+
+Ames, C. (1992). Classrooms: Goals, structures, and student motivation. Journal of
+Educational Psychology, 84, 261-271.
+Ashton, P. T., & Webb, R. B. (1986). Making a difference: Teachers' sense of efficacy
+and student achievement. New York: Longman.
+Alexander, L., & Martray, C. (1989). The development of an abbreviated version of the
+
+Mathematics Anxiety Rating Scale. Measurement and Evaluation in Counseling and
+Development, 22, 143-150.
+
+Atkinson, J. W. (1957). Motivational determinants of risk-taking behavior. Psychological
+Review, 64, 359-372.
+
+Bandura. A. (1977). Self-efficacy: Toward a unifying theory of behavioral change.
+Psychological Review, 84. 191-215.
+Bandura, A. (1978). Reflections on self-efficacy. Advances in Behavioural Research and
+Therapy. 1. 237-269.
+
+Bandura. A. (1982). Self-efficacy mechanism in human agency. American Psychologist,
+37. 122-147.
+
+Bandura, A. (1984). Recycling misconceptions of perceived self-efficacy. Cognitive
+Therapy and Research, 8, 231-255.
+
+Bandura, A. (1986). Social foundations of thought and action: A social cognitive theory.
+Englewood Cliffs, NJ: Prentice Hall.
+
+Bandura, A. (1989). Human agency in social cognitive theory. American Psychologist,
+44. 1175-1184.
+
+Bandura, A. (1991). Social cognitive theory of self-regulation. Organizational Behavior
+and Human Decision Processes, 50. 248-287.
+Bandura, A. (1993). Perceived self-efficacy in cognitive development and functioning.
+Educational Psychologist. 28. 117-148.
+Bandura. A. (1995). Self-efficacy. In V. S. Ramachaudran (Ed.). Encyclopedia of Human
+Behavior (vol. 4. 71-81). New York: Academic Press.
+
+24
+
+Self-efficacy
+
+24
+
+Bandura, A. (in press). Self-efficacy: The exercise of control. New York: Freeman.
+
+Bandura. A., & Jourden, F. J. (1991). Self-regulatory mechanisms governing the
+motivational effects of goal systems. Journal of Personality and Social Psychology, 60, 941-951.
+Bandura, A., & Schunk, D. H. (1981). Cultivating competence, self - efficacy, and intrinsic
+
+interest through proximal self-motivation. Journal of Personality and Social Psychology, 41,
+586-598.
+
+Berry, J. M. (1987, September). A self- efficacy model of memory performance. Paper
+
+presented at the meeting of the American Psychological Association, New York.
+Betz, N. E., & Hackett. G. (1983). The relationship of mathematics self-efficacy
+expectations to the selection of science-based college majors. Journal of Vocational Behavior,
+23, 329-345.
+
+Bores-Rangel, E.. Church, A. T.. Szendre, D., & Reeves. C. (1990). Self-efficacy in
+relation to occupational consideration and academic performance in high school equivalency
+students. Journal of Counseling Psychologv, 37, 407-418.
+Bouffard-Bouchard, T. (1989). Influence of self-efficacy on performance in a cognitive
+task. Journal of Social Psychology, 130, 353-363.
+Brown, S. D.. Lent. R. D.. & Larkin, K. C. (1989). Self-efficacy as a moderator of
+scholastic aptitude-academic performance relationships. Journal of Vocational Behavior, 35,
+64-75.
+
+Carroll, J. B. (1993). Human cognitive abilities: A survey offactor- analytic studies. New
+York. NY: Cambridge University Press.
+Collins. J. L. (1982. March). Self-efficacy and ability in achievement behavior. Paper
+presented at the meeting of the American Educational Research Association, New York.
+
+Dew. K. M. H.. Galassi, J. P.. & Galassi, M. D. (1984). Math anxiety: Relations with
+situational test anxiety. performance. physiological arousal, and math avoidance behavior.
+
+Journal olCotinseling P.sychologt. 31, 580-583.
+Dweck, C. S.. & Leggett. E. 1. (l 9F8). A social-cognitive approach to motivation and
+personality. P.sychological Review, 95, 256-272.
+
+Self-efficacy
+
+25
+
+Eastman, C., & Marzillier, J. S. (1984). Theoretical and methodological difficulties in
+Bandura's self-efficacy theory. Cognitive Therapy and Research, 8, 213-229.
+Eccles, J. (1983). Expectancies, values, and academic behaviors. In J. T. Spence (Ed.),
+
+Achievement and achievement motives: Psychological ana sociological approaches (pp. 75-146).
+San Francisco: Freeman.
+
+Feather, N. T. (1988). Values, valences, and course enrollment: Testing the role of
+personal values within an expectancy-valence framework. Journal of Educational Psychology,
+
+80,381-391.
+Felson. R. B. (1984). The effect of self-appraisals of ability on academic performance.
+
+Journal of Personality and Social Psychology, 47, 944-952.
+Fincham, F., & Cain, K. (1986). Learned helplessness in humans: A developmental
+analysis. Developmental Review. 6. 138-156.
+
+Garcia. T., & Pintrich, P. R. (1994). Regulating motivation and cognition in the
+classroom: The role of self-schemas and self-regulatory strategies. In
+
+Schunk and B.
+
+Zimmerman (Eds.), Seif-regulation of learning and performance: Issues and educational
+applications. Hillsdale. NJ: Erlbaum.
+Gilligan. C. (1982). In a different voice. Cambridge, MA: Harvard University Press.
+Hackett. G. (1985). The role of mathematics self-efficacy in the choice of math-related
+majors of college women and men: A path analysis. Journal of Counseling Psychology, 31,
+47-56.
+
+Hackett. G., & Betz. N. E. ( I 989). An exploration of the mathematics self-
+
+efficacy/mathematics performance correspondence. Journal for Research in Mathematics
+Education. 20, 261-273.
+
+Hunter. J. E. (1986). Cognitive ability, cognitive aptitudes. job knowledge. and job
+performance. Journal of Vocational Behavior, 29, 340-362.
+
+Jensen. A. R. (1984). lest validity: g versus the specificity doctrine. Journal of Social
+and Biological Structures. 29. 93-118.
+
+Self - efficacy
+
+26
+
+Jensen, A. R. (1987). The g beyond factor analysis. In J. C. Conoley, J. A. Glover, & R.
+R. Ronning (Eds.), The influence of cognitive psychology on testing and measurement. Hillsdale,
+
+NJ: Erlbaum.
+Kazdin, A. E. (1978). Conceptual and assessment issues raised by self-efficacy theory.
+
+Advances in Behavioural Research and Therapy, 1, 177-185.
+
+Kirsch, I. (1985). Self-efficacy and expectancy: Old wine with new labels. Journal of
+Personality and Social Psychology, 49, 824-830.
+Larson, L. M., Piersel, W. C., Imao, A. K., & Allen, S. J. (1990). Significant predictors of
+problem-solving appraisal. Journal of counseling Psycho&
+
+,
+
+37, 482-490.
+
+Lent, R. W., Brown, S. D., & Larkin, K. C. (1984). Relation of self-efficacy expectations
+to academic achievement and persistence. Journal of Counseling Psychology, 31, 356-362.
+
+Lent, R. W., Brown, S. D., & Larkin, K. C. (1986). Self-efficacy in the prediction of
+academic performance and perceived career options. Journal of Counseling Psychology, 33,
+265-269.
+
+Lent, R. W., & Hackett, G. (1987). Career self-efficacy: Empirical status and future
+
+directions. Journal of Vocational Behavior, 30, 347-382.
+Lent, R. W., Lopez, F. G., & Bieschke, K. J. (1993). Predicting mathematics-related
+
+choice and success behaviors: Test of an expanded social cognitive model. Journal of Vocational
+Behavior, 42, 223-236.
+
+Locke, E. A., Frederick, E., Lee, C., & Bobko, P. (1984). Effect of self-efficacy, goals,
+and task strategies on task performance. Journal of Applied Psychology, 69, 241-251.
+Maddux, J. E., Norton, L. W., & Stoltenberg, C. D. (1986). Self-efficacy expectancy,
+outcome; expectancy, and outcome value: Relative effects on behavioral intentions. Journal of'
+Personality and Social Psychology, 51, 783-789.
+Maddux, J. E., & Stanley, M. A. (Eds.). (1986). Self-efficacy theory in contemporary
+
+psychology [Special issue]. Journal of Social and Clinical Psycholok), 4(3).
+Manning, M. M., & Wright, T. L. (1983). Self-efficacy expectancies, outcome
+
+expectancies, and the persistence of pain control in childbirth. Journal of Personality and Social
+Psychology, 45, 421-431.
+
+27
+
+Self-efficacy
+
+27
+
+Marzillier, J. S., & Eastman, C. (1984). Continuing problems with self-efficacy theory: A
+reply to Bandura. Cognitive Therapy and Research, 8, 257-262.
+McCarthy, P., Meier, S., & Rinderer, R. (1985). Self-efficacy and writing. College
+Composition and Communication, 36, 465-471.
+McClelland, D. C. (1985). How motives, skills, and values determine what people do.
+American Psychologist, 40, 812-825.
+Meece, J. L., Wigfield, A., & Eccles, J. S. (1990). Predictors of math anxiety and its
+
+influence on young adolescents' course enrollment and performance in mathematics. Journal of
+Educational Psychology, 82, 60-70.
+Meier, S., McCarthy, P. R.. & Schmeck, R. R. (1984). Validity of self-efficacy as a
+predictor of writing performance. Cognitive Therapy and Research, 8, 107-120.
+Multon, K. D., Brown, S. D., & Lent, R. W. (1991). Relation of self-efficacy beliefs to
+academic outcomes: A meta-analytic investigation. Journal of Counseling Psychology, 38,
+30-38.
+
+Nicholls, J. (1984). Achievement motivation: Conceptions of ability, subjective
+experience, task choice, and performance. Psychological Review, 91, 328-346.
+
+Nicholls, J. G. (1990). What is ability and why are we mindful of it? A developmental
+
+perspective. In R. Sternberg & J. Kolligian (Eds.). Competence considered. New Haven, CT:
+Yale University Press.
+Pajares, F., & Brown. W. (1995). Self-efficacy beliefs in middle school science.
+Unpublished raw data.
+
+Pajares, F., & Dixon. D. (1995). Mathematics self-efficacy and performance attainments
+
+of mainstreamed regular, special education, and gifted students. Manuscript in preparation
+Pajares, F., & Johnson, M. J. (1994). Confidence and competence in writing: The role of
+self-efficacy, outcome expectancy. and apprehension. Research in the Teaching of English, 28,
+316-334.
+
+Pajares, F., & Johnson, M. J. (1995, April). Role of self-efficacy beliefs in the writing of
+
+high school students: A path analysis. Paper to be presented at the meeting of the American
+Educational Research Association. San Francisco.
+
+28
+
+Self-efficacy
+
+28
+
+Pajares, F., & Kranz ler, J. (1994). Competence and confidence in mathematics: The role
+
+of self-efficacy, self-concept, and general mental ability in mathematical problem-solving.
+
+Florida Educational Research Council Research Bulletin, 26(1/2). Sanibel, FL: Florida
+Educational Research Council.
+
+Pajares, F., & Miller, M. D. (1994a). The role of self-efficacy and self-concept beliefs in
+
+mathematical problem-solving: A path analysis. Journal of Educational Psychology, 86,
+193-203.
+
+Pajares, F., & Miller, M. D. (1994b). Mathematics self-efficacy and mathematical
+
+problem-solving: Implications of using varying forms of assessment. Florida Educational
+Research Council Research Bulletin, 26(1/2). Sanibel, FL: Florida Educational Research
+Council.
+
+Pajares, F., & Miller, M. D. (1995). Mathematics self-efficacy and mathematics
+outcomes: The need for specificity of assessment. Journal of Counseling Psychology, 42(2).
+Paris, S. G., & Oka, E. (1986). Children's reading strategies, metacognition and
+motivation. Developmental Review, 6, 25-36.
+
+Pintrich, P. R., & De Groot, E. V. (1990). Motivational and self-regulated learning
+components of classroom academic performance. Journal of Educational Psychology, 82. 33-40.
+Pintrich, P. R., & Garcia. T. (1991). Student goal orientation and self-regulation in the
+college classroom. In M. Maehr & P. R. Pintrich (Eds.), Advances in motivation and
+
+achievement: Goals and self-regulatory processes (Vol. 7, p. 371-402). Greenwich, CT: JAI
+Press.
+
+Pintrich, P. R., Marx. R. W.. & Boyle, R. A. (1993). Beyond cold conceptual change: The
+role of motivational beliefs and classroom contextual factors in the process of conceptual change.
+Review of Educational Research, 63, 167-199.
+
+Pokay, P., & Blumenfeld, P. C. (1990). Predicting achievement early and late in the
+
+semester: The role of motivation and use of learning strategies. Journal of Educational
+Psychology, 82, 41-50
+
+29
+
+Self-efficacy
+
+29
+
+Pressley, M., Borkowski, J. G., & Schneider, W. (1987). Cognitive strategies: Good
+strategy users coordinate metacognition and knowledge. In R. Vasta & G. Whitehursi. (Eds.),
+Annals of Child Development (Vol. 5, pp. 89-129). New York: JAI Press.
+
+Randhawa, B. S., Beamer, J. E., & Lundberg, I. (1993). Role of mathematics self-efficacy
+in the structural model of mathematics achievement. Journal of Educational Psychology, 85,
+41-48.
+
+Relich, J. D., Debus, R. L., & Walker, R. (1986). The mediating role of attribution and
+self-efficacy variables for treatment effects on achievement outcomes. Contemporary
+Educational Psychology, 11, 195-216.
+Rosenberg, M., & Kapland, H. B. (1982). Social psychology of the self-concept.
+
+Arlington Heights, IL: Harlan Davidson.
+Schunk, D. H. (1981). Modeling and attributional effects on children's achievement: A
+self-efficacy analysis. Journal of Educational Psychology, 73, 93-105.
+Schunk, D. H. (1982a). Effects of effort attributional feedback on children's perceived
+self-efficacy and achievement. Journal of Educational Psychology, 74, 548-556.
+Schunk, D. H. (1982b). Verbal self-regulation as a facilitator of children's achievement
+and self-efficacy. Human Learning, 1, 265-277
+Schunk, D. H. (1983). Developing children's self-efficacy and skills: The roles of social
+comparative information and goal setting. Contemporary Educational f'sychology, 8, 76-86
+Schunk, D. H. (1984). Self-efficacy perspective on achievement behavior. Educational
+Psychologist, 19, 48-58.
+Schunk, D. H. (1985). Self-efficacy and classroom learning. Psychology in the Schools,
+2, 208-123.
+
+Schunk. D. H. (1987). Peer models and children's behavioral change. Review of
+
+Educational Research, 57, 149-174.
+Schunk, D. H. (1989). Self-efficacy and achievement behaviors. Educational Psychology
+Review, 1, 173-208.
+
+30
+
+Self-efficacy
+
+30
+
+Schur.k, D. H. (1991). Self-efficacy and academic motivation. Educational Psychologist,
+26, 207-231.
+
+Schunk, D. H., & Cox, P. D. (1986). Strategy training and attributional feedback with
+
+learning disabled students. Journal of Educational Psychology, 78, 201-209.
+Schunk, D. H., & Gunn, T. P. (1985). Modeled importance of task strategies and
+
+achievement beliefs: Effects on self-efficacy and skill development. Journal of Early
+Adolescence, 5, 247-258.
+
+Schunk, D. H., & Gunn, T. P. (1986). Self-efficacy and skill development: Influence of
+
+task strategies and attributions. Journal of Educational Research, 79, 238-244.
+Schunk, D. H., & Hanson, A. R. (1985). Peer models: Influence on children's self-
+
+efficacy and achievement. Journal of Educational Psychology, 77, 313-322.
+Schunk, D. H.. & Hanson, A. R. (1988). Influence of peer-model attributes on children's
+beliefs and learning. Journal of Educational Psychology, 81, 431-434.
+Schunk, D. H., & Rice, J. M. (1993). Strategy fading and progress feedback: Effects on
+
+self-efficacy and comprehension among students receiving remedial reading services. Journal of
+Special Education. 27. 257-276.
+Shavelson, R. J., & Bolus. R. (1982). Self-concept: The interplay of theory and models.
+
+Journal of Educcfional Psychology. 74, 3-17.
+Shavelson, R. J., Hubner, J. J., & Stanton, G. C. (1976). Self-concept: Validation of
+construct interpretations. Review of Educational Research, 46, 407-441.
+Shell. D. F., Murphy. C. C., & Bruning. R. H. (1989). Self-efficacy and outcome
+expectancy mechanisms in reading and writing achievement. Journal of Educational Psychology,
+81, 91-100.
+
+Smith. R. J., Arnkoff. D. B.. & Wright, T. L. (1990). Test anxiety and academic
+competence: A comparison of alternative models. Journal of Counseling Psychology. 37,
+313-321.
+
+Teasdale, J. D. (1978). Self-efficacy: Toward a unifying theory of behavioural change.
+
+Advances in Behavioural Research and Therapy, 1. 211-215.
+
+31
+
+Self-efficacy
+
+31
+
+Thorndike, R. L.(1986). The role of general ability in prediction. Journal of Vocational
+Behavior, 29, 332-329.
+
+Valiante, G., & Pajares, F. (1995). Predictive utility, causal influence, and root causes of
+the writing self-efficacy beliefs of upper elementary students. Manuscript in preparation.
+
+Vollmer, F. (1986a). The relationship between expectancy and academic achievement:
+
+How can it be explained? British Journal of Educational Psychology, 56, 64-74.
+Weiner, B. (1979). A theory of motivation for some classroom experiences. Journal of
+Educational Psychology, 71, 3-25.
+Wigfield, A., & Eccles, J. (1992). The development of achievement task values: A
+theoretical analysis. Developmental review, 12, 265-310.
+
+Wilhite, S. C. (1990). Self-efficacy, locus of control, self-assessment of memory ability,
+
+and study activities as predictors of college course achievement. Journal of Educational
+Psychology, 82, 696-700.
+
+Wood, R. E., & Bandura, A. (1989). Impact of conceptions of ability on self-regulatory
+mechanisms and complex decision making. Journal of Personality and Social Psychology, 56,
+407-415.
+
+Wood, R. E., & Locke, E. A. (1987). The relation of self-efficacy and grade goals to
+academic performance. Educational and Psychological Measurement, 47, 1013-1024.
+Zimmerman, B. J., & Bandura, A. (1994). Impact of self-regulatory influences on writing
+
+course attainment. American Educational Research Journal, 31, 845-862.
+Zimmerman, B. J., Bandura, A., & Martinez-Pons, M. (1992). Self-motivation for
+academic attainment: The role of self-efficacy beliefs and personal goal setting. American
+
+Educational Research Journal, 29, 663-676.
+Zimmerman, B., & Ringle, J. (1981). Effects of model persistence and statement of
+confidence on children's self-efficacy and problem-solving. Journal of Educational Psychology,
+-3, 485-493.
+
+Self-efficacy
+
+32
+
+Table 1.
+
+Means, Standard Deviations, and Zero-order Correlations of Variables in the
+Path Analysis (Pajares & Miller, 1994a)
+
+Variable
+
+HSL
+
+M
+
+4.9
+
+SD
+
+1.2
+
+GENDER
+
+HSL
+
+CC
+
+USE
+
+MSC
+
+MAS
+
+MSE
+
+.11*
+
+6.0 -.07
+
+.15**
+
+CC
+
+10.3
+
+USE
+
+50.9
+
+15.2
+
+.05
+
+.12*
+
+.06
+
+MSC
+
+49.7
+
+16.6
+
+.13*
+
+.48***
+
+.25***
+
+.40***
+
+MAS
+
+31.8
+
+10.9
+
+.15**
+
+.44***
+
+.20***
+
+.32***
+
+.87***
+
+MSE
+
+73.6
+
+10.5
+
+.24***
+
+.47***
+
+.23***
+
+.19***
+
+.61***
+
+.56***
+
+PERF
+
+14.1
+
+2.8
+
+.17***
+
+.44***
+
+.23***
+
+.14**
+
+.54***
+
+.51***
+
+.70***
+
+HSL = High school level; CC = College credits earned; MSE = Math self-efficacy;
+MSC = Math self-concept; MAS = Math anxiety; USE = Perceived usefulness of
+mathematics; PERF = Math problem-solving performance.
+
+* p < .05
+
+** p < .01
+
+*** p < A031
+
+33
+
+Self-efficacy
+Figure 1.
+
+33
+
+Path model representing significant path coefficients between variables
+predicting mathematics problem-solving (Pajares & Miller, I 994a).
+
+R " .99
+
+R= .76
+
+.84
+
+34
+
+R = .98
+
+= .69
+
+Self-efficacy
+
+34
+
+Table 2.
+Zero-order Correlations Between Variables in the Study (Pajares & Johnson, 1995)
+
+1.
+
+GENDER
+
+2.
+
+ETHNIC BACKGROUND
+
+3.
+
+AGE
+
+4.
+
+APTITUDE
+
+5.
+
+.04
+
+14.6
+
+0.59
+
+.00
+
+2.S
+
+0.92
+
+-.13
+
+APPREHENSION
+
+60.4
+
+12.74
+
+.13
+
+6.
+
+SELF-CONCEPT
+
+49.2
+
+13.54
+
+-.25**
+
+7.
+
+SELF-EFFICACY
+
+75.9
+
+20.27
+
+.09
+
+8.
+
+PERFORMANCE
+
+3.7
+
+1.08
+
+-.00
+
+P < .05.
+
+Note.
+
+* P c
+
+.001.
+
+-.05
+
+.37**
+
+-.14
+
+-.22**
+
+.16
+
+.22
+
+-.22**
+
+.39
+.43
+
+-.27**
+
+.38
+.41
+
+-.47***
+
+.51
+
+-.27**
+
+.60*
+
+-.48***
+
+.47*
+
+.60
+
+P c .0001
+
+1. For GENDER, girls were coded 0; boys were coded 1.
+2. For ETANIC BACKGROUND, Hispanic students were coded 0; non-Hispanic White
+
+students were coded 1.
+in this analysis.
+
+African American or Asian American students were not included
+
+Self-efficacy
+Figure 2.
+
+35
+
+Path model representing significant path coefficients between variables
+
+predicting essay-writing performance (Pajares & Johnson, 1995).
+
+R-
+
+R .99
+
+WRITING
+PERFORMANCE
+
+R .90
+
+R
+
+.69
+
+Self-efficacy
+
+36
+
+Table 3.
+
+Means, Standard Deviations, and Zero-order Correlations for Variables in the Study (Pajares &
+Kranzler, 1994).
+
+Variable
+
+1.
+
+GENDER
+
+2.
+
+RACE
+
+3.
+
+RAVEN
+
+4.
+
+SD
+
+M
+
+2
+
+1
+
+3
+
+4
+
+6
+
+5
+
+7
+
+.02
+
+.31***
+
+19.0
+
+5.9
+
+.04
+
+HSL
+
+5.0
+
+1.4
+
+-.03
+
+5.
+
+MAS
+
+25.8
+
+8.7
+
+-.28*** -.12*
+
+6.
+
+MSC
+
+52.3
+
+13.8
+
+.27***
+
+.12*
+
+.41***
+
+.27***-.81***
+
+7.
+
+MSE
+
+81.5
+
+16.3
+
+.10
+
+.21**
+
+.48***
+
+.35***-.53***
+
+.55***
+
+8.
+
+PERF
+
+9.4
+
+4.3
+
+.02
+
+.33***
+
+.63***
+
+.52***-.46***
+
+.49***
+
+.64***
+
+9.
+
+CAL
+
+11.2
+
+3.1
+
+.04
+
+.',5***
+
+.42***
+
+.38 * ** - .26 * **
+
+.31***
+
+.17**
+
+Note:
+
+8
+
+.40***
+
+.15**
+
+-.43*** -.16**
+
+.67***
+
+RAVEN = General Mental Ability; HSL = High school level;
+MSE = Math self-efficacy; MAS = Math anxiety; MSC = Math selfconcept; PERF = Math problem-solving performance;
+CAL = Calibration score
+
+* 2 <
+
+.05.
+
+** 2 <
+
+.001.
+
+*** 2 < .0001.
+
+N
+
+=
+
+329
+
+Self-efficacy
+Figure 3.
+
+37
+
+Path model representing significant path coefficients between variables
+
+predicting mathematics problem-solving (Pajares & Kranzler, 1994).
+
+R
+
+.99
+
+R= .78
+
+MATHEMATICS
+PERFORMANCE
+
+HIGH SCHOOL
+MATHEMATIC
+EVEL
+
+R = .92
+
+R
+
+.62
+
+.85
+
+38
+
+Self-efficacy
+Figure 4.
+
+Multiple mathematics self-efficacy assessments to predict solving math problems
+
+and selecting math-related majors (Pajares & Miller, 1995)
+
+Mathematics Problems
+Self-Efficacy
+
+rc
+
+Mathematics
+Problem-solving
+Performance
+Math-Related Tasks
+Self-Efficacy
+
+Selection of
+Math-Related
+Major
+Math-Related Courses
+Self- Efficacy
+
+Figure 5.
+
+38
+
+Mathematics self-efficacy assessment matched to related outcomes.
+
+Mathematics Problems
+Self-Efficacy
+
+Mathematics
+Problem-solving
+Performance
+
+Selection of
+Math - Related
+Major
+Math-Related Courses
+Self-Efficacy
+
+3;i
+
+

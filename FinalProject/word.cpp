@@ -2,9 +2,19 @@
 
 Word::Word() {
     text = "";
+    totalFrequency = 0;
+}
+
+Word::Word(string wrd) {
+    totalFrequency = 0;
+    text = wrd;
+    formatString();
+    clearPunctuation();
+    //stemWord();
 }
 
 Word::Word(string wrd, string file) {
+    totalFrequency = 0;
     text = wrd;
     formatString();
     clearPunctuation();
@@ -17,32 +27,39 @@ string Word::getText() {
 }
 
 void Word::addFile(string file) {
-    fileNames.push_back(file);
+    totalFrequency++;
+    int index = findFile(file);
+    if (index != -1) {
+        files[index].second += 1;
+    }
+    else {
+        files.push_back(pair<string, int>(file, 1));
+    }
 }
 
-vector<string>& Word::getFiles() {
-    return fileNames;
+vector<pair<string, int>>& Word::getFiles() {
+    return files;
+}
+
+int Word::findFile(string file) {
+    for (int i = 0; i < files.size(); i++) {
+        if (files[i].first == file) {
+            return i;
+        }
+    }
+    return -1;
 }
 
 bool Word::operator>(const Word& wrd) {
-    if (strcmp(text.c_str(), wrd.text.c_str()) > 0) {
-        return true;
-    }
-    return false;
+    return text > wrd.text;
 }
 
 bool Word::operator<(const Word& wrd) {
-    if (strcmp(text.c_str(), wrd.text.c_str()) < 0) {
-        return true;
-    }
-    return false;
+    return text < wrd.text;
 }
 
 bool Word::operator==(const Word& wrd) {
-    if (strcmp(text.c_str(), wrd.text.c_str()) == 0) {
-        return true;
-    }
-    return false;
+    return text == wrd.text;
 }
 
 void Word::formatString() {
@@ -69,11 +86,9 @@ void Word::stemWord() {
 */
 
 ostream& operator<<(ostream& output, const Word& wrd) {
-    output << wrd.text;
-    /*
-    for (string str: wrd.fileNames) {
-        output << str << endl;
+    output << wrd.text << endl;
+    for (pair<string, int> p: wrd.files) {
+        output << p.first << "-" << p.second << endl;
     }
-    */
     return output;
 }
