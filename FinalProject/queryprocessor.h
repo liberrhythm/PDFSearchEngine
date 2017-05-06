@@ -3,12 +3,22 @@
 #include <queue>
 #include <iostream>
 #include <string>
+#include <sstream>
+#include <vector>
+#include <locale>
+#include "porter2_stemmer.h"
+#include "word.h"
+#include "stopwords.h"
+#include "avltree.h"
+#include "searcher.h"
 
 using namespace std;
+using namespace Porter2Stemmer;
 
 class queryProcessor
 {
-    vector<string>results;
+    AvlTree<string>stopTree;
+    vector<pair<string, int>> results;
     queue<string> input;
 
 public:

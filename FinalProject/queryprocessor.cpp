@@ -1,120 +1,77 @@
+
+
+
+
+
+
+
 #include "queryprocessor.h"
-
-#include <sstream>
-
-#include <vector>
-
-#include <locale>
-
-
 
 using namespace std;
 
-
-
 queryProcessor::queryProcessor()
-
 {
 
-
+    StopWords sW;
+    stopTree=sW.getStopTree();
 
 }
 
 
-
 void queryProcessor::requestInput()
-
 {
 
     cout<<"Please enter your search terms:"<<endl;
-
     string searchTerm;
-
     string buffer;
-
     getline( cin, buffer );
-
-
-
     istringstream ss(buffer);
 
-
-
-    while (getline( ss, searchTerm, ' ' ))
-
+    while (getline( ss, buffer, ' ' ))
     {
 
         //changing the input words to lower case
-
-        locale tool;
-
-        for (int i=0; i<searchTerm.length(); ++i){
-
-           searchTerm[i]=tolower(searchTerm[i],tool);
-
-        }
-
-
-
-        //stem the searchTerm
-
-
-
+        Word w(buffer);
+        searchTerm=w.getText();
         //check for stop words
+        if(stopTree.contains(searchTerm)){
+            if(searchTerm == "and" || searchTerm == "or" || searchTerm == "not"){
+                input.push(searchTerm);
+                continue;
+            }
+            else
+            {
+                cout<<"The stop word: "<<searchTerm<<" was detected please try again."<<endl;
 
-        //if stop word detected, clear queue
+                //if stop word detected, clear queue
+                while(!input.empty()){
+                    input.pop();
+                }
+                buffer.clear();
+                requestInput();
+                break;
 
-        //output proper message, call the requestInput function
-
-//        if(abClass.contains(searchTerm))
-
-//        {
-
-//            cout<<"The stop word: "<<searchTerm<<"was detected please try again."<<endl;
-
-//            while(!input.empty()){
-
-//                input.pop();
-
-//            }
-
-//            requestInput();
-
-
-
-//        }
-
-
-
-//        else
-
-        {
-
-
-
-            input.push(searchTerm);
-
-
-
+            }
         }
-
+        else
+        {
+            input.push(searchTerm);
+        }
     }
 
-
-
+//    while(!input.empty()){
+//        cout<<input.front()<<endl;
+//        input.pop();
+//    }
 
 
     if(input.size()==1)
-
     {
+        cout<<" in one search" <<endl;
 
+        //searcher(input.front());//equals a vector
 
-
-        searcher(input.front());//equals a vector
-
-        outPut();//might use or query
-
-
+        //outPut();//might use or query
 
     }
 
@@ -142,24 +99,23 @@ void queryProcessor::searcher(string data) //should return a vector
 
 {
 
-  //if(abClass.contains(data)){
+    //if(abClass.contains(data)){
 
 
 
-     //abClass.find(data)=results;//needs fixing
+    //abClass.find(data)=results;//needs fixing
 
-  //}
+    //}
 
 
 
 }
 
 
-
 void queryProcessor::andQuery()
 
 {
-
+    cout<<"and Query"<<endl;
     //we remove the first element "and" from the queue
 
     input.pop();
@@ -182,7 +138,7 @@ void queryProcessor::andQuery()
 
 
 
-    if(input.empty()!=false)
+    if(!input.empty())
 
     {
 
@@ -199,7 +155,7 @@ void queryProcessor::andQuery()
 void queryProcessor::orQuery()
 
 {
-
+    cout<<"or Query"<<endl;
     //we remove the first element "or" from the queue
 
     input.pop();
@@ -245,13 +201,7 @@ void queryProcessor::orQuery()
 
 
 void queryProcessor::outPut()
-
 {
 
-    for(int i=0; i<results.size(); i++){
-
-        cout<<results[i]<<endl;
-
-    }
-
+   // Searcher.printResults(results);
 }
