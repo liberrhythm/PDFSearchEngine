@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
         choice = printModeMenu();
     }
 
-    cout << "Thank you for using our search engine!"
+    cout << "Thank you for using our search engine!";
 
     return 0;
 }

@@ -13,7 +13,8 @@ SOURCES += main.cpp \
     avlindex.cpp \
     pdfparser.cpp \
     indexhandler.cpp \
-    porter2_stemmer.cpp
+    porter2_stemmer.cpp \
+    queryprocessor.cpp
 
 LIBS += -lpodofo
 
@@ -35,4 +36,6 @@ HEADERS += \
     indexinterface.h \
     pdfparser.h \
     indexhandler.h \
-    porter2_stemmer.h
+    porter2_stemmer.h \
+    hashtable.h \
+    queryprocessor.h
