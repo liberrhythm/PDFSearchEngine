@@ -15,8 +15,8 @@ Searcher::Searcher() {
 
 void Searcher::getQuery() {
 
-    queryProcessor qr;
-    qr.requestInput();
+    //queryProcessor qr;
+    //qr.requestInput();
 
 //    string term;
 //    cout << "What would you like to search for? ";
@@ -27,6 +27,11 @@ void Searcher::getQuery() {
 
 vector<pair<string, int>>& Searcher::receiveStringRequest(string term) {
 
+
+}
+
+void Searcher::printRequest(vector<pair<string, int>>& data)
+{
 
 }
 

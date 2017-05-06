@@ -62,9 +62,9 @@ void queryProcessor::requestInput()
     {
 
         //need to check for and, not, or
-        results=locator.receiveStringRequest(input.front());//equals a vector
+        vector<pair<string, int>> data=locator.receiveStringRequest(input.front());//equals a vector
         input.pop();
-        outPut();
+        outPut(data);
 
     }
 
@@ -90,29 +90,53 @@ void queryProcessor::requestInput()
 void queryProcessor::andQuery()
 {
 
+    vector<pair<string, int>> temp;
+    vector<pair<string, int>> results;
+
     //we remove the first element "and" from the queue
     input.pop();
 
     //while the queue is not empty, search words are implementd
     while(!input.empty()){
-    if(input.front()=="not"){
+        if(input.front()=="not"){
+            input.pop();
+            temp=locator.receiveStringRequest(input.front());
+
+            if(results.empty()){
 
 
+            }
+            else
+            {
 
+                results=vecDiff(results, temp);
+
+            }
+
+        }
+        else
+        {
+
+            temp=locator.receiveStringRequest(input.front());
+
+            if(results.empty()){
+
+                results=temp;
+            }
+            else
+            {
+
+                results=vecInter(results, temp);
+
+            }
+
+
+        }
+
+        input.pop();
     }
-    else
-    {
 
-    //find the same types of documents
-
-
-    }
-
-    input.pop();
-
-    }
-
-    outPut();
+    outPut(results);
 
 }
 
@@ -120,36 +144,113 @@ void queryProcessor::andQuery()
 
 void queryProcessor::orQuery()
 {
+
+    vector<pair<string, int>> results;
+    vector<pair<string, int>> temp;
+
     //we remove the first element "and" from the queue
     input.pop();
 
     //while the queue is not empty, search words are implementd
     while(!input.empty()){
-    if(input.front()=="not"){
 
+        if(input.front()=="not"){
+            input.pop();
+            temp=locator.receiveStringRequest(input.front());
 
+            if(results.empty()){
+            }
+            else
+            {
+                results=vecDiff(results, temp);
+            }
+        }
+        else
+        {
+            temp=locator.receiveStringRequest(input.front());
 
-        //remove the contents
+            if(results.empty()){
 
+                results=temp;
+            }
+            else
+            {
+                results=vecUnion(results, temp);
+            }
+        }
+
+        input.pop();
     }
-    else
-    {
 
-        //find the same types of documents
-
-    }
-
-    input.pop();
-    }
-
-    outPut();
+    outPut(results);
 
 }
 
-
-
-void queryProcessor::outPut()
+vector<pair<string, int>>&  queryProcessor::vecUnion(vector<pair<string, int>>& overall, vector<pair<string, int>>& temp)
 {
 
-    // Searcher.printResults(results);
+    vector<pair<string, int>> final;
+    vector<pair<string, int>>::iterator it;
+
+
+
+        for(int i=0; i<overall.size(); i++){
+            for(int j=0; j<temp.size(); j++){
+                if(overall[i].first==temp[j].first){
+                    overall[i].second+=temp[j].second;
+                    temp.erase(temp.begin()+j);
+                }
+            }
+        }
+
+        sort(overall.begin(), overall.end(), [](const pair<string, int>& left, const pair<string, int>& right)
+        {return left.first > right.first;});
+        sort(temp.begin(), temp.end(), [](const pair<string, int>& left, const pair<string, int>& right)
+        {return left.first > right.first;});
+
+        it=set_union(overall.begin(), overall.end(), temp.begin(), temp.end(), final.begin());
+        final.resize(it-final.begin());
+
+
+    return final;
+}
+
+vector<pair<string, int>>&  queryProcessor::vecDiff(vector<pair<string, int>>& overall, vector<pair<string, int>>& temp)
+{
+    vector<pair<string, int>> final;
+    vector<pair<string, int>>::iterator it;
+
+        sort(overall.begin(), overall.end(), [](const pair<string, int>& left, const pair<string, int>& right)
+        {return left.first > right.first;});
+        sort(temp.begin(), temp.end(), [](const pair<string, int>& left, const pair<string, int>& right)
+        {return left.first > right.first;});
+
+        it=set_difference(overall.begin(), overall.end(), temp.begin(), temp.end(), final.begin());
+        final.resize(it-final.begin());
+
+    return final;
+}
+
+vector<pair<string, int>>&  queryProcessor::vecInter(vector<pair<string, int>>& overall, vector<pair<string, int>>& temp)
+{
+    vector<pair<string, int>> final;
+    vector<pair<string, int>>::iterator it;
+
+
+        for(int i=0; i<overall.size(); i++){
+            for(int j=0; j<temp.size(); j++){
+                if(overall[i].first==temp[j].first){
+                    overall[i].second+=temp[j].second;
+                    final.push_back( make_pair(overall[i].first,overall[i].second));
+                }
+            }
+        }
+
+    return final;
+}
+
+void queryProcessor::outPut(vector<pair<string, int>>& data)
+{
+
+    //locator.printResults(data);
 }

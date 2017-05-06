@@ -1,11 +1,12 @@
 #ifndef SEARCHER_H
 #define SEARCHER_H
+//#include "queryprocessor.h"
 #include "avltree.h"
 #include "hashtable.h"
-#include "queryprocessor.h"
 #include "word.h"
 #include "pdfparser.h"
 #include <cmath>
+
 
 class Searcher {
     private:
@@ -22,6 +23,7 @@ class Searcher {
         vector<pair<string, int>>& calculateTFIDF(Word, int);
         string findPDFToPrint(string, vector<string>);
         void printPDF(string);
+        void printRequest(vector<pair<string, int>>& );
 };
 
 #endif // SEARCHER_H

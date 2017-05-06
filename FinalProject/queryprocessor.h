@@ -6,20 +6,18 @@
 #include <sstream>
 #include <vector>
 #include <locale>
-#include "porter2_stemmer.h"
 #include "word.h"
 #include "stopwords.h"
 #include "avltree.h"
+#include <algorithm>
 #include "searcher.h"
 
 using namespace std;
-using namespace Porter2Stemmer;
 
 class queryProcessor
 {
     Searcher locator;
     AvlTree<string>stopTree;
-    vector<pair<string, int>> results;
     queue<string> input;
 
 
@@ -28,8 +26,10 @@ public:
     void requestInput();
     void andQuery();
     void orQuery();
-    void outPut();
-
+    void outPut(vector<pair<string, int>>&);
+    vector<pair<string, int>>& vecUnion(vector<pair<string, int>>&, vector<pair<string, int>>&);
+    vector<pair<string, int>>& vecInter(vector<pair<string, int>>&, vector<pair<string, int>>&);
+    vector<pair<string, int>>& vecDiff(vector<pair<string, int>>&, vector<pair<string, int>>&);
 };
 
 #endif // QUERYPROCESSOR_H
