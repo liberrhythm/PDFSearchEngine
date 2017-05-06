@@ -34,14 +34,24 @@ int main(int argc, char *argv[]) {
         if (choice == 1) {
             choice = printMaintenanceMenu();
             while (choice != 3) {
-                cout << "maintenance" << endl;
+                switch (choice) {
+                    case 1: cout << "Add documents to index" << endl; break;
+                    case 2: cout << "Clear the index" << endl; break;
+                    default: cout << "That is not a valid choice. Please enter another choice:" << endl; break;
+                }
                 choice = printMaintenanceMenu();
             }
         }
         else if (choice == 2) {
             choice = printQueryMenu();
             while (choice != 5) {
-                cout << "query" << endl;
+                switch (choice) {
+                    case 1: cout << "Select avl or hashtable" << endl; break;
+                    case 2: cout << "Enter search query" << endl; break;
+                    case 3: cout << "Print basic statistics" << endl; break;
+                    case 4: cout << "Do predictive analytics" << endl; break;
+                    default: cout << "That is not a valid choice. Please enter another choice." << endl; break;
+                }
                 choice = printQueryMenu();
             }
         }

@@ -9,6 +9,7 @@ class Searcher {
     private:
         int numDocs;
         AvlTree<Word> index;
+        vector<pair<string, int>> documents;
         vector<pair<string, int>> tfidfRankings;
     public:
         Searcher(AvlTree<Word>, int);

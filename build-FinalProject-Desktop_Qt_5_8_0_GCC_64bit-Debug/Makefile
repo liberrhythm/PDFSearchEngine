@@ -56,7 +56,8 @@ SOURCES       = ../FinalProject/main.cpp \
 		../FinalProject/avlindex.cpp \
 		../FinalProject/pdfparser.cpp \
 		../FinalProject/indexhandler.cpp \
-		../FinalProject/porter2_stemmer.cpp 
+		../FinalProject/porter2_stemmer.cpp \
+		../FinalProject/queryprocessor.cpp 
 OBJECTS       = main.o \
 		word.o \
 		stopwords.o \
@@ -65,7 +66,8 @@ OBJECTS       = main.o \
 		avlindex.o \
 		pdfparser.o \
 		indexhandler.o \
-		porter2_stemmer.o
+		porter2_stemmer.o \
+		queryprocessor.o
 DIST          = ../FinalProject/xrayingpregnantbitches.pdf \
 		../FinalProject/StopWords \
 		StopWords \
@@ -222,7 +224,9 @@ DIST          = ../FinalProject/xrayingpregnantbitches.pdf \
 		indexinterface.h \
 		pdfparser.h \
 		indexhandler.h \
-		porter2_stemmer.h ../FinalProject/main.cpp \
+		porter2_stemmer.h \
+		hashtable.h \
+		queryprocessor.h ../FinalProject/main.cpp \
 		../FinalProject/word.cpp \
 		../FinalProject/stopwords.cpp \
 		../FinalProject/searcher.cpp \
@@ -230,7 +234,8 @@ DIST          = ../FinalProject/xrayingpregnantbitches.pdf \
 		../FinalProject/avlindex.cpp \
 		../FinalProject/pdfparser.cpp \
 		../FinalProject/indexhandler.cpp \
-		../FinalProject/porter2_stemmer.cpp
+		../FinalProject/porter2_stemmer.cpp \
+		../FinalProject/queryprocessor.cpp
 QMAKE_TARGET  = FinalProject
 DESTDIR       = 
 TARGET        = FinalProject
@@ -653,6 +658,9 @@ porter2_stemmer.o: ../FinalProject/porter2_stemmer.cpp ../FinalProject/porter2_s
 		../FinalProject/util/string_view.h \
 		../FinalProject/util/hash.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o porter2_stemmer.o ../FinalProject/porter2_stemmer.cpp
+
+queryprocessor.o: ../FinalProject/queryprocessor.cpp ../FinalProject/queryprocessor.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o queryprocessor.o ../FinalProject/queryprocessor.cpp
 
 ####### Install
 
