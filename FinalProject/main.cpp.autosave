@@ -1,5 +1,4 @@
 #include <iostream>
-#include <podofo/podofo.h>
 #include <string>
 #include <vector>
 #include <cstdlib>
@@ -27,21 +26,40 @@ int printMaintenanceMenu();
 int printQueryMenu();
 
 int main(int argc, char *argv[]) {
+    IndexHandler ih;
     cout << "PDF Search Engine by Muaz and Sabrina!" << endl;
 
     int choice = printModeMenu();
     while (choice != 3) {
-        if (choice == 1) {
+        if (choice == 1) { //maintenance mode
             choice = printMaintenanceMenu();
             while (choice != 3) {
-                cout << "maintenance" << endl;
+                switch (choice) {
+                    case 1: //add documents to index
+                        
+                    case 2: //clear index
+                        
+                    default: //anything else
+                        cout << "That is not a valid choice. Please input another option." << endl;
+                }
                 choice = printMaintenanceMenu();
             }
         }
-        else if (choice == 2) {
+        else if (choice == 2) { //query mode
             choice = printQueryMenu();
             while (choice != 5) {
-                cout << "query" << endl;
+                switch (choice) {
+                    case 1: //choose avltree or hashtable
+                        
+                    case 2: //enter query
+                    
+                    case 3: //output basic statistics
+                        
+                    case 4: //wow factor
+                        cout << ""
+                    default: //anything else
+                        cout << "That is not a valid choice. Please input another option." << endl;
+                }
                 choice = printQueryMenu();
             }
         }

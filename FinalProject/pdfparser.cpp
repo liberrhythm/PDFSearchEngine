@@ -1,18 +1,8 @@
 #include "pdfparser.h"
 
 PDFParser::PDFParser() {
-
-}
-
-PDFParser::PDFParser(char* dir) {
-    directory = dir;
     StopWords s;
     stopWords = s.getStopTree();
-}
-
-PDFParser::PDFParser(char* dir, AvlTree<Word>& a) {
-    directory = dir;
-    words = a;
 }
 
 AvlTree<Word>& PDFParser::getWords() {
@@ -20,6 +10,10 @@ AvlTree<Word>& PDFParser::getWords() {
 }
 
 void PDFParser::readDirectory() {
+    char* directory;
+    cout << "Enter the directory path for the PDFs you want to parse: ";
+    cin >> directory;
+
     DIR* corpus;
     struct dirent* dir;
     char filePath[4096];
@@ -87,6 +81,7 @@ void PDFParser::insertWord(string str, string pdfName) {
         Word newWord(str, pdfName);
         if (newWord.getText() != "") {
             if (!words.contains(newWord)) {
+                numWordsIndexed++;
                 words.insert(newWord);
             }
             else {
@@ -107,6 +102,14 @@ bool PDFParser::isStringBlanks(string str) {
 
 int PDFParser::getNumDocs() {
     return outputFiles.size();
+}
+
+int PDFParser::getNumWordsIndexed() {
+    return numWordsIndexed;
+}
+
+vector<string>& PDFParser::getOutputFiles() {
+    return outputFiles;
 }
 
 void PDFParser::printWords() {

@@ -1,11 +1,6 @@
 #include "indexhandler.h"
 
 IndexHandler::IndexHandler() {
-
-}
-
-IndexHandler::IndexHandler(char* directory) {
-    PDFParser parser(directory);
     parser.readDirectory();
     index = parser.getWords();
     numDocuments = parser.getNumDocs();
@@ -15,17 +10,13 @@ int IndexHandler::getNumDocuments() {
     return numDocuments;
 }
 
-bool IndexHandler::isIndexEmpty() {
+bool IndexHandler::doesIndexExist() {
     f.open("index.txt", ios::in);
-
-    /*
     if (!f) {
         cerr << "Persistent index could not be opened for reading" << endl;
-        exit(EXIT_FAILURE);
+        return false;
     }
-    */
-
-    return f.peek() == ifstream::traits_type::eof();
+    return true;
 }
 
 void IndexHandler::writeToIndex() {
@@ -42,10 +33,6 @@ void IndexHandler::writeToIndex() {
 
 void IndexHandler::readFromIndex() {
     f.open("index.txt", ios::in);
-    if (!f) {
-        cerr << "Persistent index could not be opened for reading" << endl;
-        exit(EXIT_FAILURE);
-    }
 
     string word;
     int numFiles;
@@ -69,6 +56,15 @@ void IndexHandler::readFromIndex() {
     index.printInOrder();
 
     f.close();
+}
+
+void IndexHandler::clearIndex() {
+    if (remove("index.txt") != 0) {
+        perror("Error deleting file");
+    }
+    else {
+        puts("File successfully deleted");
+    }
 }
 
 /*

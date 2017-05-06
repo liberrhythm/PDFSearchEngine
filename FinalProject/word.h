@@ -21,6 +21,7 @@ class Word {
     private:
         string text;
         vector<pair<string, int>> files;
+        int totalFrequency;
     public:
         Word();
         Word(string);

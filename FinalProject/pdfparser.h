@@ -22,22 +22,21 @@ using namespace std;
 
 class PDFParser {
     private:
-        char* directory;
         AvlTree<Word> words;
         AvlTree<string> stopWords;
         fstream file;
         vector<string> outputFiles;
-
+        int numWordsIndexed;
     public:
         PDFParser();
-        PDFParser(char*);
-        PDFParser(char*, AvlTree<Word>&);
         AvlTree<Word>& getWords();
         void readDirectory();
         void parsePDF(string, string);
         void insertWord(string, string);
         bool isStringBlanks(string);
+        int getNumWordsIndexed();
         int getNumDocs();
+        vector<string>& getOutputFiles();
         void printWords();
         //void requestSearch();
 };

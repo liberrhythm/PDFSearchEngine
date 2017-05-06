@@ -4,31 +4,28 @@
 
 using namespace std;
 
-Searcher::Searcher(char* directory) {
-    PDFParser parser(directory);
-    parser.readDirectory();
-    string term;
-    cout << parser.getNumDocs() << endl;
-    cout << "What is the term you would like to search for? ";
-    cin >> term;
-    while (term != "quit") {
-        receiveRequest(parser.getWords(), term, parser.getNumDocs());
-        tfidfRankings.clear();
-        cout << "What is the term you would like to search for? ";
-        cin >> term;
-    }
+Searcher::Searcher(AvlTree<Word> words, int docs) {
+    index = words;
+    numDocs = docs;
 }
 
-void Searcher::receiveRequest(AvlTree<Word>& wordTree, string term, int numDocs) {
+void Searcher::getQuery() {
+    string term;
+    cout << "What would you like to search for? ";
+    getline(cin, term);
+    receiveRequest(term, numDocs);
+    tfidfRankings.clear();
+}
 
+void Searcher::receiveRequest(string term, int numDocs) {
 
     cout << endl << endl;
-    cout << "---------Results for: " << term << "------------------" << endl;
+    cout << "----------Results for: " << term << "----------" << endl;
 
-    if (wordTree.contains(term)) {
+    if (index.contains(term)) {
 
         //cout << wordTree.find(term);
-        tfidfRankings = calculateTFIDF(wordTree.find(term), numDocs);
+        tfidfRankings = calculateTFIDF(index.find(term), numDocs);
 
         cout << term << endl;
 
@@ -41,7 +38,7 @@ void Searcher::receiveRequest(AvlTree<Word>& wordTree, string term, int numDocs)
     else {
         cout << "This word does not exist in the specified corpus" << endl;
     }
-    cout << "---------end of results-------------------------------" << endl << endl;
+    cout << "----------end of results----------" << endl << endl;
 }
 
 vector<pair<string, int>>& Searcher::calculateTFIDF(Word wrd, int numDocs) {
@@ -57,6 +54,36 @@ vector<pair<string, int>>& Searcher::calculateTFIDF(Word wrd, int numDocs) {
     return tfidfRankings;
 }
 
-void Searcher::printResults() {
+string Searcher::findPDFToPrint(string pdf, vector<string> outputFiles) {
+    string doc;
 
+    pdf = pdf.substr(pdf.length()-4, pdf.length());
+
+    for (int i = 0; i < outputFiles.size(); i++) {
+        string txtFile = outputFiles[i];
+        txtFile = txtFile.substr(txtFile.length()-4, txtFile.length());
+        if (pdf == txtFile) {
+            doc = outputFiles[i];
+            return doc;
+        }
+    }
+}
+
+void Searcher::printPDF(string doc) {
+    ifstream inFile;
+    inFile.open(doc, ios::in);
+
+    if (!inFile) {
+        cerr << "PDF file requested could not be opened for reading" << endl;
+        exit(EXIT_FAILURE);
+    }
+
+    string line;
+    getline(inFile, line);
+    while (!inFile.eof()) {
+        cout << line;
+        getline(inFile, line);
+    }
+
+    inFile.close();
 }

@@ -1,10 +1,12 @@
 #include "word.h"
 
 Word::Word() {
+    totalFrequency = 0;
     text = "";
 }
 
 Word::Word(string wrd) {
+    totalFrequency = 0;
     text = wrd;
     formatString();
     clearPunctuation();
@@ -12,6 +14,7 @@ Word::Word(string wrd) {
 }
 
 Word::Word(string wrd, string file) {
+    totalFrequency = 0;
     text = wrd;
     formatString();
     clearPunctuation();
@@ -20,6 +23,7 @@ Word::Word(string wrd, string file) {
 }
 
 Word::Word(string str, pair<string, int> p) {
+    totalFrequency = p.second;
     text = str;
     files.push_back(p);
 }
@@ -29,6 +33,7 @@ string Word::getText() {
 }
 
 void Word::addFile(string file) {
+    totalFrequency += 1;
     int index = findFile(file);
     if (index != -1) {
         files[index].second += 1;
@@ -39,6 +44,7 @@ void Word::addFile(string file) {
 }
 
 void Word::addFileFromIndex(pair<string, int> file) {
+    totalFrequency += file.second;
     files.push_back(file);
 }
 
