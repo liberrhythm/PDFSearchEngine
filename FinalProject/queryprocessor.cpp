@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 #include "queryprocessor.h"
 
 using namespace std;
@@ -59,19 +52,19 @@ void queryProcessor::requestInput()
         }
     }
 
-//    while(!input.empty()){
-//        cout<<input.front()<<endl;
-//        input.pop();
-//    }
+    //    while(!input.empty()){
+    //        cout<<input.front()<<endl;
+    //        input.pop();
+    //    }
 
 
     if(input.size()==1)
     {
-        cout<<" in one search" <<endl;
 
-        //searcher(input.front());//equals a vector
-
-        //outPut();//might use or query
+        //need to check for and, not, or
+        results=locator.receiveStringRequest(input.front());//equals a vector
+        input.pop();
+        outPut();
 
     }
 
@@ -94,74 +87,44 @@ void queryProcessor::requestInput()
 }
 
 
-
-void queryProcessor::searcher(string data) //should return a vector
-
-{
-
-    //if(abClass.contains(data)){
-
-
-
-    //abClass.find(data)=results;//needs fixing
-
-    //}
-
-
-
-}
-
-
 void queryProcessor::andQuery()
-
 {
-    cout<<"and Query"<<endl;
-    //we remove the first element "and" from the queue
 
+    //we remove the first element "and" from the queue
     input.pop();
 
+    //while the queue is not empty, search words are implementd
+    while(!input.empty()){
     if(input.front()=="not"){
 
 
 
-        //remove the contents
-
     }
-
     else
-
     {
 
-        //find the same types of documents
+    //find the same types of documents
+
 
     }
 
-
-
-    if(!input.empty())
-
-    {
-
-        //while the queue is not empty the function is called recurcively
-
-        andQuery();
+    input.pop();
 
     }
+
+    outPut();
 
 }
 
 
 
 void queryProcessor::orQuery()
-
 {
-    cout<<"or Query"<<endl;
-    //we remove the first element "or" from the queue
-
+    //we remove the first element "and" from the queue
     input.pop();
 
-
-
+    //while the queue is not empty, search words are implementd
+    while(!input.empty()){
     if(input.front()=="not"){
 
 
@@ -169,32 +132,17 @@ void queryProcessor::orQuery()
         //remove the contents
 
     }
-
     else
-
     {
 
         //find the same types of documents
 
     }
 
-
-
-    if(!input.empty()){
-
-        //while the queue is not empty the function is called recurcively
-
-        orQuery();
-
+    input.pop();
     }
 
-    else if(input.empty()){
-
-
-
-        outPut();
-
-    }
+    outPut();
 
 }
 
@@ -203,5 +151,5 @@ void queryProcessor::orQuery()
 void queryProcessor::outPut()
 {
 
-   // Searcher.printResults(results);
+    // Searcher.printResults(results);
 }

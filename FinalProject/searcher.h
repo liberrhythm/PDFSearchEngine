@@ -1,6 +1,8 @@
 #ifndef SEARCHER_H
 #define SEARCHER_H
 #include "avltree.h"
+#include "hashtable.h"
+#include "queryprocessor.h"
 #include "word.h"
 #include "pdfparser.h"
 #include <cmath>
@@ -12,9 +14,11 @@ class Searcher {
         vector<pair<string, int>> documents;
         vector<pair<string, int>> tfidfRankings;
     public:
+        Searcher();
         Searcher(AvlTree<Word>, int);
         void getQuery();
         void receiveRequest(string, int);
+        vector<pair<string, int>>& receiveStringRequest(string);
         vector<pair<string, int>>& calculateTFIDF(Word, int);
         string findPDFToPrint(string, vector<string>);
         void printPDF(string);

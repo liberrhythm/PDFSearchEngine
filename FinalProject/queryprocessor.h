@@ -17,14 +17,15 @@ using namespace Porter2Stemmer;
 
 class queryProcessor
 {
+    Searcher locator;
     AvlTree<string>stopTree;
     vector<pair<string, int>> results;
     queue<string> input;
 
+
 public:
     queryProcessor();
     void requestInput();
-    void searcher(string);
     void andQuery();
     void orQuery();
     void outPut();

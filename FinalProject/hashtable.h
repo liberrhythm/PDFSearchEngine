@@ -80,7 +80,7 @@ Hashtable<K, V>& Hashtable<K, V>::operator=(Hashtable<K, V> &rhs)
     {
         delete [] datalist;
     }
-    datalist=new LinkedList<V> [size];
+    datalist=new vector<V> [size];
     for(int i =0; i<size; i++)
     {
         datalist[i]=rhs.datalist[i];

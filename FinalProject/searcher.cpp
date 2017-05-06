@@ -9,12 +9,25 @@ Searcher::Searcher(AvlTree<Word> words, int docs) {
     numDocs = docs;
 }
 
+Searcher::Searcher() {
+
+}
+
 void Searcher::getQuery() {
-    string term;
-    cout << "What would you like to search for? ";
-    getline(cin, term);
-    receiveRequest(term, numDocs);
-    tfidfRankings.clear();
+
+    queryProcessor qr;
+    qr.requestInput();
+
+//    string term;
+//    cout << "What would you like to search for? ";
+//    getline(cin, term);
+//    receiveRequest(term, numDocs);
+//    tfidfRankings.clear();
+}
+
+vector<pair<string, int>>& Searcher::receiveStringRequest(string term) {
+
+
 }
 
 void Searcher::receiveRequest(string term, int numDocs) {
