@@ -20,7 +20,8 @@ class IndexHandler {
         IndexHandler(char*);
         int getNumDocuments();
         bool isIndexEmpty();
-        void uploadIndex();
+        void writeToIndex();
+        void readFromIndex();
 };
 
 #endif // INDEXHANDLER_H

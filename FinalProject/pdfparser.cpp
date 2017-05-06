@@ -83,15 +83,26 @@ void PDFParser::parsePDF(string text, string pdfName) {
 }
 
 void PDFParser::insertWord(string str, string pdfName) {
-    if (!stopWords.contains(str) && str != "") {
+    if (!stopWords.contains(str)) {
         Word newWord(str, pdfName);
-        if (!words.contains(newWord)) {
-            words.insert(newWord);
-        }
-        else {
-            words.find(newWord).addFile(pdfName);
+        if (newWord.getText() != "") {
+            if (!words.contains(newWord)) {
+                words.insert(newWord);
+            }
+            else {
+                words.find(newWord).addFile(pdfName);
+            }
         }
     }
+}
+
+bool PDFParser::isStringBlanks(string str) {
+    for (int i = 0; i < str.length(); i++) {
+        if (str[i] != ' ') {
+            return false;
+        }
+    }
+    return true;
 }
 
 int PDFParser::getNumDocs() {

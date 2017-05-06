@@ -12,7 +12,8 @@ SOURCES += main.cpp \
     streamparser.cpp \
     avlindex.cpp \
     pdfparser.cpp \
-    indexhandler.cpp
+    indexhandler.cpp \
+    porter2_stemmer.cpp
 
 LIBS += -lpodofo
 
@@ -20,7 +21,7 @@ DISTFILES += \
     xrayingpregnantbitches.pdf \
     StopWords \
     ../build-FinalProject-Desktop_Qt_5_8_0_GCC_64bit-Debug/StopWords \
-    index.txt
+    ../build-FinalProject-Desktop_Qt_5_8_0_GCC_64bit-Debug/index.txt
 
 HEADERS += \
     word.h \
@@ -33,4 +34,5 @@ HEADERS += \
     avlindex.h \
     indexinterface.h \
     pdfparser.h \
-    indexhandler.h
+    indexhandler.h \
+    porter2_stemmer.h

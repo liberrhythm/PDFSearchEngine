@@ -20,14 +20,15 @@ class Word {
 
     private:
         string text;
-        int totalFrequency;
         vector<pair<string, int>> files;
     public:
         Word();
         Word(string);
         Word(string, string);
+        Word(string, pair<string, int>);
         string getText();
         void addFile(string);
+        void addFileFromIndex(pair<string, int>);
         vector<pair<string, int>>& getFiles();
         int findFile(string);
         bool operator>(const Word&);
@@ -35,7 +36,7 @@ class Word {
         bool operator==(const Word&);
         void formatString();
         void clearPunctuation();
-        //void stemWord();
+        void stemWord();
 };
 
 #endif // WORD_H

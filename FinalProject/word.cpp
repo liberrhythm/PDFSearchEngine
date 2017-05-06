@@ -2,24 +2,26 @@
 
 Word::Word() {
     text = "";
-    totalFrequency = 0;
 }
 
 Word::Word(string wrd) {
-    totalFrequency = 0;
     text = wrd;
     formatString();
     clearPunctuation();
-    //stemWord();
+    stemWord();
 }
 
 Word::Word(string wrd, string file) {
-    totalFrequency = 0;
     text = wrd;
     formatString();
     clearPunctuation();
-    //stemWord();
+    stemWord();
     addFile(file);
+}
+
+Word::Word(string str, pair<string, int> p) {
+    text = str;
+    files.push_back(p);
 }
 
 string Word::getText() {
@@ -27,7 +29,6 @@ string Word::getText() {
 }
 
 void Word::addFile(string file) {
-    totalFrequency++;
     int index = findFile(file);
     if (index != -1) {
         files[index].second += 1;
@@ -35,6 +36,10 @@ void Word::addFile(string file) {
     else {
         files.push_back(pair<string, int>(file, 1));
     }
+}
+
+void Word::addFileFromIndex(pair<string, int> file) {
+    files.push_back(file);
 }
 
 vector<pair<string, int>>& Word::getFiles() {
@@ -78,17 +83,16 @@ void Word::clearPunctuation() {
     }
 }
 
-/*
 void Word::stemWord() {
-    trim(text);
-    stem(text);
+    Porter2Stemmer::trim(text);
+    Porter2Stemmer::stem(text);
 }
-*/
+
 
 ostream& operator<<(ostream& output, const Word& wrd) {
-    output << wrd.text << endl;
+    output << wrd.text << endl << wrd.files.size() << endl;
     for (pair<string, int> p: wrd.files) {
-        output << p.first << "-" << p.second << endl;
+        output << p.second << " " << p.first << endl;
     }
     return output;
 }

@@ -8,8 +8,6 @@ using namespace std;
 template<class T>
 class AvlTree{
 
-    //friend ofstream& operator<<(ofstream&, const AvlTree<T>&);
-
 private:
 
     template<class U>
@@ -71,6 +69,7 @@ public:
     void clean();
     void insert(T);
     void printInOrder() const;
+    void outputInOrder(ostream&);
 
     bool isEmpty();
     bool contains(T);
@@ -88,7 +87,7 @@ private:
     void clean(Node<T>*);
     void insert(T, Node<T>*&);
     void printInOrder(Node<T>*) const;
-    void outputToFile(ofstream&, Node<T>*);
+    void outputInOrder(Node<T>*, ostream&);
 
     bool contains(T, Node<T>*);
     Node<T>* copy(Node<T>*&);
@@ -405,22 +404,22 @@ void AvlTree<T>::printInOrder(Node<T>* node) const
 
 }
 
-/*
 template<class T>
-ofstream& operator<<(ofstream& output, const AvlTree<T>& tree) {
-    outputToFile(output, tree.root);
-    return output;
+void AvlTree<T>::outputInOrder(ostream& output) {
+
+    outputInOrder(root, output);
+
 }
 
 template<class T>
-void AvlTree<T>::outputToFile(ofstream& output, Node<T>* node) {
-    if (node != nullptr){
-        outputToFile(output, node->left);
-        output << node->data << " " << endl;
-        outputToFile(output, node->right);
+void AvlTree<T>::outputInOrder(Node<T>* node, ostream& output) {
+    if(node!=nullptr){
+        outputInOrder(node->left, output);
+        output<<node->data;
+        outputInOrder(node->right, output);
     }
+
 }
-*/
 
 template<class T>
 void AvlTree<T>::rotateWithLeftChild(Node<T>*& node1)

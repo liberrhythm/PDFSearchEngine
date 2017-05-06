@@ -36,6 +36,7 @@ class PDFParser {
         void readDirectory();
         void parsePDF(string, string);
         void insertWord(string, string);
+        bool isStringBlanks(string);
         int getNumDocs();
         void printWords();
         //void requestSearch();

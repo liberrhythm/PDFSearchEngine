@@ -55,7 +55,8 @@ SOURCES       = ../FinalProject/main.cpp \
 		../FinalProject/streamparser.cpp \
 		../FinalProject/avlindex.cpp \
 		../FinalProject/pdfparser.cpp \
-		../FinalProject/indexhandler.cpp 
+		../FinalProject/indexhandler.cpp \
+		../FinalProject/porter2_stemmer.cpp 
 OBJECTS       = main.o \
 		word.o \
 		stopwords.o \
@@ -63,11 +64,12 @@ OBJECTS       = main.o \
 		streamparser.o \
 		avlindex.o \
 		pdfparser.o \
-		indexhandler.o
+		indexhandler.o \
+		porter2_stemmer.o
 DIST          = ../FinalProject/xrayingpregnantbitches.pdf \
 		../FinalProject/StopWords \
 		StopWords \
-		../FinalProject/index.txt \
+		index.txt \
 		/opt/Qt/5.8/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.8/gcc_64/mkspecs/common/unix.conf \
 		/opt/Qt/5.8/gcc_64/mkspecs/common/linux.conf \
@@ -219,14 +221,16 @@ DIST          = ../FinalProject/xrayingpregnantbitches.pdf \
 		avlindex.h \
 		indexinterface.h \
 		pdfparser.h \
-		indexhandler.h ../FinalProject/main.cpp \
+		indexhandler.h \
+		porter2_stemmer.h ../FinalProject/main.cpp \
 		../FinalProject/word.cpp \
 		../FinalProject/stopwords.cpp \
 		../FinalProject/searcher.cpp \
 		../FinalProject/streamparser.cpp \
 		../FinalProject/avlindex.cpp \
 		../FinalProject/pdfparser.cpp \
-		../FinalProject/indexhandler.cpp
+		../FinalProject/indexhandler.cpp \
+		../FinalProject/porter2_stemmer.cpp
 QMAKE_TARGET  = FinalProject
 DESTDIR       = 
 TARGET        = FinalProject
@@ -595,7 +599,11 @@ searcher.o: ../FinalProject/searcher.cpp ../FinalProject/searcher.h \
 		../FinalProject/word.h \
 		../FinalProject/porter2_stemmer.h \
 		../FinalProject/util/string_view.h \
-		../FinalProject/util/hash.h
+		../FinalProject/util/hash.h \
+		../FinalProject/pdfparser.h \
+		../FinalProject/stopwords.h \
+		../FinalProject/avlindex.h \
+		../FinalProject/indexinterface.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o searcher.o ../FinalProject/searcher.cpp
 
 streamparser.o: ../FinalProject/streamparser.cpp ../FinalProject/streamparser.h \
@@ -640,6 +648,11 @@ indexhandler.o: ../FinalProject/indexhandler.cpp ../FinalProject/indexhandler.h 
 		../FinalProject/indexinterface.h \
 		../FinalProject/searcher.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o indexhandler.o ../FinalProject/indexhandler.cpp
+
+porter2_stemmer.o: ../FinalProject/porter2_stemmer.cpp ../FinalProject/porter2_stemmer.h \
+		../FinalProject/util/string_view.h \
+		../FinalProject/util/hash.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o porter2_stemmer.o ../FinalProject/porter2_stemmer.cpp
 
 ####### Install
 
