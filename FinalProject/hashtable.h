@@ -28,14 +28,22 @@ private:
 public:
     Hashtable();
     Hashtable(int);
+
     Hashtable(Hashtable &rhs);
     Hashtable& operator=(Hashtable &rhs);
+
     ~Hashtable();
+
     void insert(K, V);
+
     V& find(K);
     bool contains(K);
+
     int getSize();
     bool isHashtableEmpty();
+
+    void print();
+
 };
 template<class K, class V>
 Hashtable<K, V>::Hashtable(): size(1000000)
@@ -79,12 +87,14 @@ Hashtable<K, V>& Hashtable<K, V>::operator=(Hashtable<K, V> &rhs)
     }
     return *this;
 }
+
 template<class K, class V>
 Hashtable<K, V>::~Hashtable()
 {
     delete[] datalist;
     datalist=nullptr;
 }
+
 template<class K, class V>
 void Hashtable<K, V>::insert(K key, V value)
 {
@@ -92,6 +102,7 @@ void Hashtable<K, V>::insert(K key, V value)
     info obj(key, value);
     datalist[index].push_back(obj);
 }
+
 template<class K, class V>
 V& Hashtable<K, V>::find(K newKey)
 {
@@ -99,18 +110,18 @@ V& Hashtable<K, V>::find(K newKey)
     for(int j=0; j<datalist[index].size(); j++)
     {
         if(datalist[index][j].getkey() == newKey){
-           return datalist[index][j].getValue();
+            return datalist[index][j].getValue();
         }
     }
-//    for(int i=0; i<size; i++)
-//    {
-//        for(int j=0; j<datalist[i].size(); j++)
-//        {
-//            if((datalist[i].operator [](j)).getkey()==newKey){
-//                return datalist[i][j].getValue();
-//            }
-//        }
-//    }
+    //    for(int i=0; i<size; i++)
+    //    {
+    //        for(int j=0; j<datalist[i].size(); j++)
+    //        {
+    //            if((datalist[i].operator [](j)).getkey()==newKey){
+    //                return datalist[i][j].getValue();
+    //            }
+    //        }
+    //    }
     //need to throw an excpetion
 }
 template<class K, class V>
@@ -124,16 +135,16 @@ bool Hashtable<K, V>::contains(K newKey)
         }
     }
     return false;
-//    for(int i=0; i<size; i++)
-//    {
-//        for(int j=0; j<datalist[i].size(); j++)
-//        {
-//            if(datalist[i][j].getkey() == newKey){
-//                return true;
-//            }
-//        }
-//    }
-//    return false;
+    //    for(int i=0; i<size; i++)
+    //    {
+    //        for(int j=0; j<datalist[i].size(); j++)
+    //        {
+    //            if(datalist[i][j].getkey() == newKey){
+    //                return true;
+    //            }
+    //        }
+    //    }
+    //    return false;
 }
 template<class K, class V>
 int Hashtable<K, V>::getSize()
@@ -150,5 +161,17 @@ bool Hashtable<K, V>::isHashtableEmpty()
         }
     }
     return true;
+}
+
+template<class K, class V>
+void Hashtable<K, V>::print()
+{
+    for(int i=0; i<size; i++)
+    {
+        for(int j=0; j<datalist[i].size(); j++)
+        {
+        cout<<datalist[i][j].getValue();
+        }
+    }
 }
 #endif // HASHTABLE_H
