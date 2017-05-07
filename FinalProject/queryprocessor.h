@@ -26,6 +26,7 @@ public:
     void requestInput();
     void andQuery();
     void orQuery();
+    void simpleQuery(string);
     void outPut(vector<pair<string, int>>&);
     vector<pair<string, int>>& vecUnion(vector<pair<string, int>>&, vector<pair<string, int>>&);
     vector<pair<string, int>>& vecInter(vector<pair<string, int>>&, vector<pair<string, int>>&);

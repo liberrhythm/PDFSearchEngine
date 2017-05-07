@@ -59,11 +59,9 @@ void queryProcessor::requestInput()
     if(input.size()==1)
     {
 
-        //need to check for and, not, or
         vector<pair<string, int>> data=locator.receiveStringRequest(input.front());//equals a vector
         input.pop();
         outPut(data);
-
     }
     else if(input.front()=="and")
     {
@@ -78,6 +76,13 @@ void queryProcessor::requestInput()
 
 }
 
+void queryProcessor::simpleQuery(string s)
+{
+
+    vector<pair<string, int>> data=locator.receiveStringRequest(s);//equals a vector
+    input.pop();
+    outPut(data);
+}
 
 void queryProcessor::andQuery()
 {

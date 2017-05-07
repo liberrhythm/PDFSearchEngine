@@ -50,6 +50,7 @@ void predictiveSearch::combo(string data)
         }
     }
     permutation(data);
+    cout<<"Sucess!! Search engine has done predictive searches for you"<<endl;
     vecManager();
 }
 
@@ -83,8 +84,8 @@ void predictiveSearch::vecManager()
     sort(possibleWords.begin(), possibleWords.end(), [](const pair<string, int>& left, const pair<string, int>& right)
     {return left.second > right.second;});
     int count=1;
-    string choice;
-    cout<<"Sucess!! Search engine has done predictive searches for you"<<endl;
+    int choice;
+
     cout<<endl<<"Did you mean the following terms instead?"<<endl;
 
     if(possibleWords.size()<=5)
@@ -104,32 +105,27 @@ void predictiveSearch::vecManager()
          count++;
         }
     }
-    do{
+
     cout<<"If you would like to see the PDF for any of the above terms, enter the precideing number"<<endl;
     cout<<endl<<"Enter 9 to return to the main menu"<<endl;
     cin>>choice;
-//    switch(choice){
+    if(choice < possibleWords.size())
+    {
+        //send search to query
+    }
+    else if(choice == 9)
+    {
+        possibleWords.clear();
+        //return user to main
+    }
+    else
+    {
+        cout<<"Invalid entery! please enter the numbers listed above"<<endl;
+        vecManager();
 
-//    case "1":
-//        break;
-//    case "2":
-//        break;
-//    case "3":
-//        break;
-//    case "4":
-//        break;
-//    case "5":
-//        break;
-//    case "9":
-//        break;
+    }
 
-//    default:
-//        cout<<"Invalid entery! please enter the numbers listed above"<<endl;
-//        break;
 
-//    }
-
-    }while(choice!="9");
 
 
 }
