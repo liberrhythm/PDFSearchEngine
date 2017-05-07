@@ -79,14 +79,16 @@ void PDFParser::parsePDF(string text, string pdfName) {
 }
 
 void PDFParser::insertWord(string str, string pdfName) {
+
     if (!stopWords.contains(str)) {
         Word newWord(str, pdfName);
         if (newWord.getText() != "") {
-            if (!words.contains(newWord.getText())) {
+            if (!words.contains(newWord)) {
                 numWordsIndexed++;
                 words.insert(newWord);
             }
             else {
+
                 words.find(newWord).addFile(pdfName);
             }
         }
