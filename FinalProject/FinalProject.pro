@@ -24,6 +24,7 @@ DISTFILES += \
     xrayingpregnantbitches.pdf \
     StopWords \
     ../build-FinalProject-Desktop_Qt_5_8_0_GCC_64bit-Debug/StopWords \
+    ../build-FinalProject-Desktop_Qt_5_8_0_GCC_64bit-Debug/index.txt \
     ../build-FinalProject-Desktop_Qt_5_8_0_GCC_64bit-Debug/index.txt
 
 HEADERS += \
