@@ -28,7 +28,6 @@ int printQueryMenu();
 
 int main(int argc, char *argv[]) {
 
-
     cout << "PDF Search Engine by Muaz and Sabrina!" << endl;
 
     int choice = printModeMenu();
@@ -51,7 +50,7 @@ int main(int argc, char *argv[]) {
             choice = printQueryMenu();
             while (choice != 5) {
                 switch (choice) {
-                    case 1: ih.chooseIndex();
+                    case 1: ih.chooseIndex(); break;
                     case 2: cout << "Enter search query" << endl; break;
                     case 3: cout << "Print basic statistics" << endl; break;
                     case 4: cout << "Do predictive analytics" << endl; break;
