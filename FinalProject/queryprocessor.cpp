@@ -252,5 +252,5 @@ vector<pair<string, int>>&  queryProcessor::vecInter(vector<pair<string, int>>& 
 void queryProcessor::outPut(vector<pair<string, int>>& data)
 {
 
-    //locator.printResults(data);
+    locator.printResults(data);
 }

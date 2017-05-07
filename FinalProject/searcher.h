@@ -23,7 +23,7 @@ class Searcher {
         vector<pair<string, int>>& calculateTFIDF(Word, int);
         string findPDFToPrint(string, vector<string>);
         void printPDF(string);
-        void printRequest(vector<pair<string, int>>& );
+        void printResults(vector<pair<string, int>>& );
 };
 
 #endif // SEARCHER_H

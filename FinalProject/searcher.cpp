@@ -30,7 +30,7 @@ vector<pair<string, int>>& Searcher::receiveStringRequest(string term) {
 
 }
 
-void Searcher::printRequest(vector<pair<string, int>>& data)
+void Searcher::printResults(vector<pair<string, int>>& data)
 {
 
 }
