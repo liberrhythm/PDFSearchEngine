@@ -10,7 +10,6 @@ queryProcessor::queryProcessor()
 
 }
 
-
 void queryProcessor::requestInput()
 {
 
@@ -67,21 +66,15 @@ void queryProcessor::requestInput()
         outPut(data);
 
     }
-
     else if(input.front()=="and")
-
     {
 
         andQuery();
 
     }
-
     else if(input.front()=="or")
-
     {
-
         orQuery();
-
     }
 
 }
@@ -98,11 +91,14 @@ void queryProcessor::andQuery()
 
     //while the queue is not empty, search words are implementd
     while(!input.empty()){
+
         if(input.front()=="not"){
+
             input.pop();
             temp=locator.receiveStringRequest(input.front());
 
             if(results.empty()){
+            //we do nothing if the vector is empty
 
             }
             else
@@ -124,12 +120,8 @@ void queryProcessor::andQuery()
             }
             else
             {
-
                 results=vecInter(results, temp);
-
             }
-
-
         }
 
         input.pop();
@@ -154,10 +146,12 @@ void queryProcessor::orQuery()
     while(!input.empty()){
 
         if(input.front()=="not"){
+
             input.pop();
             temp=locator.receiveStringRequest(input.front());
 
             if(results.empty()){
+            //we do nothing if the vector is empty
             }
             else
             {
@@ -191,22 +185,24 @@ vector<pair<string, int>>&  queryProcessor::vecUnion(vector<pair<string, int>>& 
     vector<pair<string, int>> final;
     vector<pair<string, int>>::iterator it;
 
-        for(int i=0; i<overall.size(); i++){
-            for(int j=0; j<temp.size(); j++){
-                if(overall[i].first==temp[j].first){
-                    overall[i].second+=temp[j].second;
-                    temp.erase(temp.begin()+j);
-                }
+    for(int i=0; i<overall.size(); i++){
+        for(int j=0; j<temp.size(); j++){
+            if(overall[i].first==temp[j].first){
+                overall[i].second+=temp[j].second;
+                temp.erase(temp.begin()+j);
             }
         }
+    }
 
-        sort(overall.begin(), overall.end(), [](const pair<string, int>& left, const pair<string, int>& right)
-        {return left.first > right.first;});
-        sort(temp.begin(), temp.end(), [](const pair<string, int>& left, const pair<string, int>& right)
-        {return left.first > right.first;});
+    sort(overall.begin(), overall.end(), [](const pair<string, int>& left, const pair<string, int>& right)
+    {return left.first > right.first;});
+    sort(temp.begin(), temp.end(), [](const pair<string, int>& left, const pair<string, int>& right)
+    {return left.first > right.first;});
 
-        it=set_union(overall.begin(), overall.end(), temp.begin(), temp.end(), final.begin());
-        final.resize(it-final.begin());
+    it=set_union(overall.begin(), overall.end(), temp.begin(), temp.end(), final.begin(),
+                 [](const pair<string, int>& left, const pair<string, int>& right)
+    {return left.first > right.first;});
+    final.resize(it-final.begin());
 
 
     return final;
@@ -217,13 +213,15 @@ vector<pair<string, int>>&  queryProcessor::vecDiff(vector<pair<string, int>>& o
     vector<pair<string, int>> final;
     vector<pair<string, int>>::iterator it;
 
-        sort(overall.begin(), overall.end(), [](const pair<string, int>& left, const pair<string, int>& right)
-        {return left.first > right.first;});
-        sort(temp.begin(), temp.end(), [](const pair<string, int>& left, const pair<string, int>& right)
-        {return left.first > right.first;});
+    sort(overall.begin(), overall.end(), [](const pair<string, int>& left, const pair<string, int>& right)
+    {return left.first > right.first;});
+    sort(temp.begin(), temp.end(), [](const pair<string, int>& left, const pair<string, int>& right)
+    {return left.first > right.first;});
 
-        it=set_difference(overall.begin(), overall.end(), temp.begin(), temp.end(), final.begin());
-        final.resize(it-final.begin());
+    it=set_difference(overall.begin(), overall.end(), temp.begin(), temp.end(), final.begin(),
+                      [](const pair<string, int>& left, const pair<string, int>& right)
+                        {return left.first > right.first;});
+    final.resize(it-final.begin());
 
     return final;
 }
@@ -234,14 +232,14 @@ vector<pair<string, int>>&  queryProcessor::vecInter(vector<pair<string, int>>& 
     vector<pair<string, int>>::iterator it;
 
 
-        for(int i=0; i<overall.size(); i++){
-            for(int j=0; j<temp.size(); j++){
-                if(overall[i].first==temp[j].first){
-                    overall[i].second+=temp[j].second;
-                    final.push_back( make_pair(overall[i].first,overall[i].second));
-                }
+    for(int i=0; i<overall.size(); i++){
+        for(int j=0; j<temp.size(); j++){
+            if(overall[i].first==temp[j].first){
+                overall[i].second+=temp[j].second;
+                final.push_back( make_pair(overall[i].first,overall[i].second));
             }
         }
+    }
 
     return final;
 }
