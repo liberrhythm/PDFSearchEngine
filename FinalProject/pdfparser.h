@@ -23,7 +23,7 @@ using namespace std;
 
 class PDFParser {
     private:
-        IndexInterface* words;
+        AvlTree<Word> words;
         AvlTree<string> stopWords;
         fstream file;
         vector<string> outputFiles;
@@ -38,8 +38,6 @@ class PDFParser {
         int getNumWordsIndexed();
         int getNumDocs();
         vector<string>& getOutputFiles();
-        void printWords();
-        void requestSearch();
 };
 
 #endif // PDFPARSER_H

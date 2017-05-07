@@ -4,10 +4,6 @@ HashIndex::HashIndex() {
 
 }
 
-Hashtable<string, Word>& HashIndex::getWords() {
-    return words;
-}
-
 void HashIndex::addWord(Word wrd) {
     words.insert(wrd.getText(), wrd);
 }

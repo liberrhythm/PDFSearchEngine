@@ -10,10 +10,9 @@ class AvlIndex: public IndexInterface {
         AvlTree<Word> words;
     public:
         AvlIndex();
-        AvlTree<Word>& getWords();
         void addWord(Word);
         Word& find(string);
-        bool contains(string)=0;
+        bool contains(string);
         void printWords();
 };
 

@@ -16,9 +16,11 @@ void IndexHandler::chooseIndex() {
     while (choice != 3) {
         if (choice == 1) {
             index = new AvlIndex;
+            readFromIndex();
         }
         else if (choice == 2) {
             index = new HashIndex;
+            readFromIndex();
         }
         else {
             cout << "That is not a valid index option. Please select AVL or hash.";
@@ -28,7 +30,7 @@ void IndexHandler::chooseIndex() {
 
 void IndexHandler::getIndex() {
     parser.readDirectory();
-    index = parser.getWords();
+    writeToIndex(parser.getWords());
     numDocuments = parser.getNumDocs();
 }
 
@@ -46,14 +48,14 @@ bool IndexHandler::doesIndexExist() {
     return true;
 }
 
-void IndexHandler::writeToIndex() {
+void IndexHandler::writeToIndex(AvlTree<Word>& words) {
     f.open("index.txt", ios::out);
     if (!f) {
         cerr << "Persistent index could not be opened for writing" << endl;
         exit(EXIT_FAILURE);
     }
 
-    index->outputInOrder(f);
+    words.outputInOrder(f);
 
     f.close();
 }
@@ -61,26 +63,31 @@ void IndexHandler::writeToIndex() {
 void IndexHandler::readFromIndex() {
     f.open("index.txt", ios::in);
 
-    string word;
-    int numFiles;
-    f >> word;
-
-    while (!f.eof()) {
-        Word entry(word);
-        f >> numFiles;
-        int frequency;
-        string pdf;
-        for (int i = 0; i < numFiles; i++) {
-            f >> frequency;
-            getline(f, pdf);
-            entry.addFileFromIndex(pair<string, int>(pdf, frequency));
-        }
-        index->insert(entry);
-        cout << entry;
+    if (doesIndexExist()) {
+        string word;
+        int numFiles;
         f >> word;
+
+        while (!f.eof()) {
+            Word entry(word);
+            f >> numFiles;
+            int frequency;
+            string pdf;
+            for (int i = 0; i < numFiles; i++) {
+                f >> frequency;
+                getline(f, pdf);
+                entry.addFileFromIndex(pair<string, int>(pdf, frequency));
+            }
+
+            index->addWord(entry);
+            cout << entry;
+            f >> word;
+        }
+
+        index->printWords();
     }
 
-    index->printInOrder();
+
 
     f.close();
 }

@@ -4,7 +4,7 @@
 #include <string>
 #include <fstream>
 #include <stdio.h>
-//#include "avltree.h"
+#include "avltree.h"
 #include "avlindex.h"
 #include "hashindex.h"
 #include "pdfparser.h"
@@ -21,10 +21,11 @@ class IndexHandler {
         PDFParser parser;
     public:
         IndexHandler();
+        void chooseIndex();
         void getIndex();
         int getNumDocuments();
         bool doesIndexExist();
-        void writeToIndex();
+        void writeToIndex(AvlTree<Word>&);
         void readFromIndex();
         void clearIndex();
 };

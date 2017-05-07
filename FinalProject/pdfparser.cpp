@@ -5,8 +5,8 @@ PDFParser::PDFParser() {
     stopWords = s.getStopTree();
 }
 
-IndexInterface*& PDFParser::getWords() {
-    return &words;
+AvlTree<Word>& PDFParser::getWords() {
+    return words;
 }
 
 void PDFParser::readDirectory() {
@@ -82,12 +82,12 @@ void PDFParser::insertWord(string str, string pdfName) {
     if (!stopWords.contains(str)) {
         Word newWord(str, pdfName);
         if (newWord.getText() != "") {
-            if (!words->contains(newWord.getText())) {
+            if (!words.contains(newWord.getText())) {
                 numWordsIndexed++;
-                words->insert(newWord);
+                words.insert(newWord);
             }
             else {
-                words->find(newWord).addFile(pdfName);
+                words.find(newWord).addFile(pdfName);
             }
         }
     }
@@ -115,17 +115,3 @@ int PDFParser::getNumWordsIndexed() {
 vector<string>& PDFParser::getOutputFiles() {
     return outputFiles;
 }
-
-void PDFParser::printWords() {
-    words->print();
-}
-
-/*
-void PDFParser::requestSearch() {
-    Searcher se;
-
-    se.receiveRequest("phobias", getNumDocs());
-    se.receiveRequest("schunk", getNumDocs());
-}
-*/
-
