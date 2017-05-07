@@ -4,10 +4,6 @@ AvlIndex::AvlIndex() {
 
 }
 
-AvlTree<Word>& AvlIndex::getWords() {
-    return words;
-}
-
 void AvlIndex::addWord(Word wrd) {
     words.insert(wrd);
 }
