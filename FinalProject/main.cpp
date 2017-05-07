@@ -22,38 +22,38 @@ using namespace std;
 //pdfFiles.readDirectory();
 //pdfFiles.requestSearch();
 
-int printModeMenu();
-int printMaintenanceMenu();
-int printQueryMenu();
+char printModeMenu();
+char printMaintenanceMenu();
+char printQueryMenu();
 
 int main(int argc, char *argv[]) {
 
     cout << "PDF Search Engine by Muaz and Sabrina!" << endl;
 
-    int choice = printModeMenu();
+    char choice = printModeMenu();
     IndexHandler ih;
-    while (choice != 3) {
-        if (choice == 1) {
+    while (choice != '3') {
+        if (choice == '1') {
             choice = printMaintenanceMenu();
-            while (choice != 3) {
+            while (choice != '3') {
                 switch (choice) {
-                    case 1:
+                    case '1':
                         ih.getIndex(); break;
-                    case 2:
+                    case '2':
                         ih.clearIndex(); break;
                     default: cout << "That is not a valid choice. Please enter another choice:" << endl; break;
                 }
                 choice = printMaintenanceMenu();
             }
         }
-        else if (choice == 2) {
+        else if (choice == '2') {
             choice = printQueryMenu();
-            while (choice != 5) {
+            while (choice != '5') {
                 switch (choice) {
-                    case 1: ih.chooseIndex(); break;
-                    case 2: cout << "Enter search query" << endl; break;
-                    case 3: cout << "Print basic statistics" << endl; break;
-                    case 4: cout << "Do predictive analytics" << endl; break;
+                    case '1': ih.chooseIndex(); break;
+                    case '2': cout << "Enter search query" << endl; break;
+                    case '3': ih.printStatistics(); break;
+                    case '4': cout << "Do Predictive Search" << endl; break;
                     default: cout << "That is not a valid choice. Please enter another choice." << endl; break;
                 }
                 choice = printQueryMenu();
@@ -70,39 +70,40 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 
-int printModeMenu() {
+char printModeMenu() {
     cout << "Choose a mode: " << endl;
     cout << "1) Maintenance mode" << endl;
     cout << "2) Query mode" << endl;
     cout << "3) Exit search engine" << endl;
+
     cout << "Mode selection: ";
-    int choice;
+    char choice;
     cin >> choice;
     cout << endl;
     return choice;
 }
 
-int printMaintenanceMenu() {
+char printMaintenanceMenu() {
     cout << "Maintenance Menu: " << endl;
     cout << "1) Add documents to the index" << endl;
     cout << "2) Clear the index" << endl;
     cout << "3) Exit maintenance mode" << endl;
     cout << "Action: ";
-    int choice;
+    char choice;
     cin >> choice;
     cout << endl;
     return choice;
 }
 
-int printQueryMenu() {
+char printQueryMenu() {
     cout << "Query mode: " << endl;
     cout << "1) Choose an index data structure" << endl;
     cout << "2) Search for a term" << endl;
     cout << "3) Print search engine statistics" << endl;
-    cout << "4) Predictive Analytics" << endl;
+    cout << "4) Predictive Search" << endl;
     cout << "5) Exit query mode" << endl;
     cout << "Action: ";
-    int choice;
+    char choice;
     cin >> choice;
     cout << endl;
     return choice;
