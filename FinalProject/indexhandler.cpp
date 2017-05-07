@@ -1,6 +1,32 @@
 #include "indexhandler.h"
 
 IndexHandler::IndexHandler() {
+
+}
+
+void IndexHandler::chooseIndex() {
+    int choice;
+
+    cout << "1) AVL tree" << endl;
+    cout << "2) Hash table" << endl;
+    cout << "3) Return to maintenance menu" << endl;
+    cout << "Action: ";
+    cin >> choice;
+
+    while (choice != 3) {
+        if (choice == 1) {
+            index = new AvlIndex;
+        }
+        else if (choice == 2) {
+            index = new HashIndex;
+        }
+        else {
+            cout << "That is not a valid index option. Please select AVL or hash.";
+        }
+    }
+}
+
+void IndexHandler::getIndex() {
     parser.readDirectory();
     index = parser.getWords();
     numDocuments = parser.getNumDocs();
@@ -16,6 +42,7 @@ bool IndexHandler::doesIndexExist() {
         cerr << "Persistent index could not be opened for reading" << endl;
         return false;
     }
+    f.close();
     return true;
 }
 
@@ -26,7 +53,7 @@ void IndexHandler::writeToIndex() {
         exit(EXIT_FAILURE);
     }
 
-    index.outputInOrder(f);
+    index->outputInOrder(f);
 
     f.close();
 }
@@ -48,22 +75,30 @@ void IndexHandler::readFromIndex() {
             getline(f, pdf);
             entry.addFileFromIndex(pair<string, int>(pdf, frequency));
         }
-        index.insert(entry);
+        index->insert(entry);
         cout << entry;
         f >> word;
     }
 
-    index.printInOrder();
+    index->printInOrder();
 
     f.close();
 }
 
 void IndexHandler::clearIndex() {
-    if (remove("index.txt") != 0) {
-        perror("Error deleting file");
+    f.open("index.txt", ios::in);
+
+    if (!f) {
+        cerr << "Persistent index does not exist" << endl;
     }
     else {
-        puts("File successfully deleted");
+        f.close();
+        if (remove("index.txt") != 0) {
+            perror("Error deleting file");
+        }
+        else {
+            puts("File successfully deleted");
+        }
     }
 }
 

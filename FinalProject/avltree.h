@@ -248,9 +248,9 @@ void AvlTree<T>::printInOrder(Node<T>* node)
         cout<<node->data<<" "<<endl;
         printInOrder(node->right);
     }
-    else
-    {
-        cout<<"Tree is empty"<<endl;
+
+    if (isEmpty()) {
+        cout << "tree is empty";
     }
 }
 
@@ -262,11 +262,6 @@ void AvlTree<T>:: outputInOrder(Node<T>*& node, ostream& output)
         output<<node->data;
         outputInOrder(node->right, output);
     }
-    else
-    {
-        cout<<"Tree is empty"<<endl;
-    }
-
 }
 
 template<class T>

@@ -27,17 +27,28 @@ int printMaintenanceMenu();
 int printQueryMenu();
 
 int main(int argc, char *argv[]) {
+
+
     cout << "PDF Search Engine by Muaz and Sabrina!" << endl;
 
     int choice = printModeMenu();
     while (choice != 3) {
+        IndexHandler ih;
         if (choice == 1) {
             choice = printMaintenanceMenu();
             while (choice != 3) {
                 switch (choice) {
-                    case 1: cout << "Add documents to index" << endl; break;
-                    case 2: cout << "Clear the index" << endl; break;
-                    default: cout << "That is not a valid choice. Please enter another choice:" << endl; break;
+                case 1:
+                    if (!ih.doesIndexExist()) {
+                        ih.getIndex();
+                    }
+                    else {
+                        ih.readFromIndex();
+                    }
+                    break;
+                case 2:
+                    ih.clearIndex(); break;
+                default: cout << "That is not a valid choice. Please enter another choice:" << endl; break;
                 }
                 choice = printMaintenanceMenu();
             }
@@ -46,11 +57,11 @@ int main(int argc, char *argv[]) {
             choice = printQueryMenu();
             while (choice != 5) {
                 switch (choice) {
-                    case 1: cout << "Select avl or hashtable" << endl; break;
-                    case 2: cout << "Enter search query" << endl; break;
-                    case 3: cout << "Print basic statistics" << endl; break;
-                    case 4: cout << "Do predictive analytics" << endl; break;
-                    default: cout << "That is not a valid choice. Please enter another choice." << endl; break;
+                case 1: cout << "Select avl or hashtable" << endl; break;
+                case 2: cout << "Enter search query" << endl; break;
+                case 3: cout << "Print basic statistics" << endl; break;
+                case 4: cout << "Do predictive analytics" << endl; break;
+                default: cout << "That is not a valid choice. Please enter another choice." << endl; break;
                 }
                 choice = printQueryMenu();
             }

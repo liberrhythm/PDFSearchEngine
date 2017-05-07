@@ -15,7 +15,8 @@ SOURCES += main.cpp \
     indexhandler.cpp \
     porter2_stemmer.cpp \
     queryprocessor.cpp \
-    predictivesearch.cpp
+    predictivesearch.cpp \
+    hashindex.cpp
 
 LIBS += -lpodofo
 
@@ -40,4 +41,5 @@ HEADERS += \
     porter2_stemmer.h \
     hashtable.h \
     queryprocessor.h \
-    predictivesearch.h
+    predictivesearch.h \
+    hashindex.h

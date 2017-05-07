@@ -5,6 +5,7 @@
 
 class IndexInterface {
     public:
+        virtual IndexInterface* getWords()=0;
         virtual void addWord(Word)=0;
         virtual Word& find(string)=0;
         virtual bool contains(string)=0;

@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = FinalProject1.0.0
-DISTDIR = /home/coder/Desktop/DS/CSE2341-17S-Have-mercy/build-FinalProject-Desktop_Qt_5_8_0_GCC_64bit-Debug/.tmp/FinalProject1.0.0
+DISTDIR = /home/coder/Documents/CSE2341-17S-Have-mercy/build-FinalProject-Desktop_Qt_5_8_0_GCC_64bit-Debug/.tmp/FinalProject1.0.0
 LINK          = g++
 LFLAGS        = 
 LIBS          = $(SUBLIBS) -lpodofo 
@@ -57,7 +57,9 @@ SOURCES       = ../FinalProject/main.cpp \
 		../FinalProject/pdfparser.cpp \
 		../FinalProject/indexhandler.cpp \
 		../FinalProject/porter2_stemmer.cpp \
-		../FinalProject/queryprocessor.cpp 
+		../FinalProject/queryprocessor.cpp \
+		../FinalProject/predictivesearch.cpp \
+		../FinalProject/hashindex.cpp 
 OBJECTS       = main.o \
 		word.o \
 		stopwords.o \
@@ -67,7 +69,9 @@ OBJECTS       = main.o \
 		pdfparser.o \
 		indexhandler.o \
 		porter2_stemmer.o \
-		queryprocessor.o
+		queryprocessor.o \
+		predictivesearch.o \
+		hashindex.o
 DIST          = ../FinalProject/xrayingpregnantbitches.pdf \
 		../FinalProject/StopWords \
 		StopWords \
@@ -226,7 +230,9 @@ DIST          = ../FinalProject/xrayingpregnantbitches.pdf \
 		indexhandler.h \
 		porter2_stemmer.h \
 		hashtable.h \
-		queryprocessor.h ../FinalProject/main.cpp \
+		queryprocessor.h \
+		predictivesearch.h \
+		hashindex.h ../FinalProject/main.cpp \
 		../FinalProject/word.cpp \
 		../FinalProject/stopwords.cpp \
 		../FinalProject/searcher.cpp \
@@ -235,7 +241,9 @@ DIST          = ../FinalProject/xrayingpregnantbitches.pdf \
 		../FinalProject/pdfparser.cpp \
 		../FinalProject/indexhandler.cpp \
 		../FinalProject/porter2_stemmer.cpp \
-		../FinalProject/queryprocessor.cpp
+		../FinalProject/queryprocessor.cpp \
+		../FinalProject/predictivesearch.cpp \
+		../FinalProject/hashindex.cpp
 QMAKE_TARGET  = FinalProject
 DESTDIR       = 
 TARGET        = FinalProject
@@ -585,6 +593,7 @@ main.o: ../FinalProject/main.cpp ../FinalProject/pdfparser.h \
 		../FinalProject/avlindex.h \
 		../FinalProject/indexinterface.h \
 		../FinalProject/searcher.h \
+		../FinalProject/hashtable.h \
 		../FinalProject/indexhandler.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../FinalProject/main.cpp
 
@@ -601,6 +610,7 @@ stopwords.o: ../FinalProject/stopwords.cpp ../FinalProject/stopwords.h \
 
 searcher.o: ../FinalProject/searcher.cpp ../FinalProject/searcher.h \
 		../FinalProject/avltree.h \
+		../FinalProject/hashtable.h \
 		../FinalProject/word.h \
 		../FinalProject/porter2_stemmer.h \
 		../FinalProject/util/string_view.h \
@@ -638,7 +648,8 @@ pdfparser.o: ../FinalProject/pdfparser.cpp ../FinalProject/pdfparser.h \
 		../FinalProject/util/hash.h \
 		../FinalProject/avlindex.h \
 		../FinalProject/indexinterface.h \
-		../FinalProject/searcher.h
+		../FinalProject/searcher.h \
+		../FinalProject/hashtable.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o pdfparser.o ../FinalProject/pdfparser.cpp
 
 indexhandler.o: ../FinalProject/indexhandler.cpp ../FinalProject/indexhandler.h \
@@ -651,7 +662,8 @@ indexhandler.o: ../FinalProject/indexhandler.cpp ../FinalProject/indexhandler.h 
 		../FinalProject/util/hash.h \
 		../FinalProject/avlindex.h \
 		../FinalProject/indexinterface.h \
-		../FinalProject/searcher.h
+		../FinalProject/searcher.h \
+		../FinalProject/hashtable.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o indexhandler.o ../FinalProject/indexhandler.cpp
 
 porter2_stemmer.o: ../FinalProject/porter2_stemmer.cpp ../FinalProject/porter2_stemmer.h \
@@ -659,8 +671,43 @@ porter2_stemmer.o: ../FinalProject/porter2_stemmer.cpp ../FinalProject/porter2_s
 		../FinalProject/util/hash.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o porter2_stemmer.o ../FinalProject/porter2_stemmer.cpp
 
-queryprocessor.o: ../FinalProject/queryprocessor.cpp ../FinalProject/queryprocessor.h
+queryprocessor.o: ../FinalProject/queryprocessor.cpp ../FinalProject/queryprocessor.h \
+		../FinalProject/word.h \
+		../FinalProject/avltree.h \
+		../FinalProject/porter2_stemmer.h \
+		../FinalProject/util/string_view.h \
+		../FinalProject/util/hash.h \
+		../FinalProject/stopwords.h \
+		../FinalProject/searcher.h \
+		../FinalProject/hashtable.h \
+		../FinalProject/pdfparser.h \
+		../FinalProject/avlindex.h \
+		../FinalProject/indexinterface.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o queryprocessor.o ../FinalProject/queryprocessor.cpp
+
+predictivesearch.o: ../FinalProject/predictivesearch.cpp ../FinalProject/predictivesearch.h \
+		../FinalProject/searcher.h \
+		../FinalProject/avltree.h \
+		../FinalProject/hashtable.h \
+		../FinalProject/word.h \
+		../FinalProject/porter2_stemmer.h \
+		../FinalProject/util/string_view.h \
+		../FinalProject/util/hash.h \
+		../FinalProject/pdfparser.h \
+		../FinalProject/stopwords.h \
+		../FinalProject/avlindex.h \
+		../FinalProject/indexinterface.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o predictivesearch.o ../FinalProject/predictivesearch.cpp
+
+hashindex.o: ../FinalProject/hashindex.cpp ../FinalProject/hashindex.h \
+		../FinalProject/indexinterface.h \
+		../FinalProject/word.h \
+		../FinalProject/avltree.h \
+		../FinalProject/porter2_stemmer.h \
+		../FinalProject/util/string_view.h \
+		../FinalProject/util/hash.h \
+		../FinalProject/hashtable.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o hashindex.o ../FinalProject/hashindex.cpp
 
 ####### Install
 

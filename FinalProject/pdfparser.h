@@ -15,14 +15,15 @@
 #include "avltree.h"
 #include "stopwords.h"
 #include "word.h"
-#include "avlindex.h"
+//#include "avlindex.h"
 #include "searcher.h"
+#include "indexinterface.h"
 
 using namespace std;
 
 class PDFParser {
     private:
-        AvlTree<Word> words;
+        IndexInterface* words;
         AvlTree<string> stopWords;
         fstream file;
         vector<string> outputFiles;
@@ -38,7 +39,7 @@ class PDFParser {
         int getNumDocs();
         vector<string>& getOutputFiles();
         void printWords();
-        //void requestSearch();
+        void requestSearch();
 };
 
 #endif // PDFPARSER_H

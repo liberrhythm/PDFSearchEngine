@@ -5,12 +5,12 @@ PDFParser::PDFParser() {
     stopWords = s.getStopTree();
 }
 
-AvlTree<Word>& PDFParser::getWords() {
-    return words;
+IndexInterface*& PDFParser::getWords() {
+    return &words;
 }
 
 void PDFParser::readDirectory() {
-    char* directory;
+    string directory;
     cout << "Enter the directory path for the PDFs you want to parse: ";
     cin >> directory;
 
@@ -18,7 +18,7 @@ void PDFParser::readDirectory() {
     struct dirent* dir;
     char filePath[4096];
 
-    while ((corpus = opendir(directory)) == nullptr) {
+    while ((corpus = opendir(directory.c_str())) == nullptr) {
         fprintf(stderr, "Could not open directory: %s\n", directory);
         exit(-1);
     }
@@ -33,7 +33,7 @@ void PDFParser::readDirectory() {
 
             if (fileType == ".pdf") {
                 pdfCount++;
-                strncpy(filePath, directory, 4095);
+                strncpy(filePath, directory.c_str(), 4095);
                 strncat(filePath, "/", 4095);
                 string dirPath = filePath;
                 strncat(filePath, dir->d_name, 4095);
@@ -74,21 +74,25 @@ void PDFParser::parsePDF(string text, string pdfName) {
         getline(file, line);
     }
     file.close();
+    cout<<"parsing complete "<<endl;
+
 }
 
 void PDFParser::insertWord(string str, string pdfName) {
     if (!stopWords.contains(str)) {
         Word newWord(str, pdfName);
         if (newWord.getText() != "") {
-            if (!words.contains(newWord)) {
+            if (!words->contains(newWord.getText())) {
                 numWordsIndexed++;
-                words.insert(newWord);
+                words->insert(newWord);
             }
             else {
-                words.find(newWord).addFile(pdfName);
+                words->find(newWord).addFile(pdfName);
             }
         }
     }
+
+
 }
 
 bool PDFParser::isStringBlanks(string str) {
@@ -113,14 +117,15 @@ vector<string>& PDFParser::getOutputFiles() {
 }
 
 void PDFParser::printWords() {
-    words.printInOrder();
+    words->print();
 }
 
 /*
 void PDFParser::requestSearch() {
     Searcher se;
 
-    se.receiveRequest(words, "phobias");
-    se.receiveRequest(words, "schunk");
+    se.receiveRequest("phobias", getNumDocs());
+    se.receiveRequest("schunk", getNumDocs());
 }
 */
+

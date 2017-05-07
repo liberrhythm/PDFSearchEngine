@@ -22,7 +22,7 @@ void queryProcessor::requestInput()
     while (getline( ss, buffer, ' ' ))
     {
 
-        //changing the input words to lower case
+        //changing the input words to lower case and format text
         Word w(buffer);
         searchTerm=w.getText();
         //check for stop words
@@ -42,7 +42,6 @@ void queryProcessor::requestInput()
                 buffer.clear();
                 requestInput();
                 break;
-
             }
         }
         else
