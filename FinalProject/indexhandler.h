@@ -28,6 +28,7 @@ class IndexHandler {
         void writeToIndex(AvlTree<Word>&);
         void readFromIndex();
         void clearIndex();
+        void printStatistics();
 };
 
 #endif // INDEXHANDLER_H

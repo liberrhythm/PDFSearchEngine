@@ -49,7 +49,7 @@ bool IndexHandler::doesIndexExist() {
 }
 
 void IndexHandler::writeToIndex(AvlTree<Word>& words) {
-    f.open("index.txt", ios::out);
+    f.open("index.txt", ios::app);
     if (!f) {
         cerr << "Persistent index could not be opened for writing" << endl;
         exit(EXIT_FAILURE);
@@ -107,6 +107,10 @@ void IndexHandler::clearIndex() {
             puts("File successfully deleted");
         }
     }
+}
+
+void IndexHandler::printStatistics() {
+    cout << "Number of words indexed: " << parser.getNumWordsIndexed() << endl;
 }
 
 /*
