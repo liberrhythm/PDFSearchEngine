@@ -16,21 +16,14 @@ using namespace std;
 
 class queryProcessor
 {
-    Searcher locator;
+private:
     AvlTree<string>stopTree;
     queue<string> input;
 
-
 public:
     queryProcessor();
-    void requestInput();
-    void andQuery();
-    void orQuery();
-    void simpleQuery(string);
-    void outPut(vector<pair<string, int>>&);
-    vector<pair<string, int>>& vecUnion(vector<pair<string, int>>&, vector<pair<string, int>>&);
-    vector<pair<string, int>>& vecInter(vector<pair<string, int>>&, vector<pair<string, int>>&);
-    vector<pair<string, int>>& vecDiff(vector<pair<string, int>>&, vector<pair<string, int>>&);
+    queue<string>& requestInput();
+
 };
 
 #endif // QUERYPROCESSOR_H

@@ -4,6 +4,10 @@ IndexHandler::IndexHandler() {
 
 }
 
+IndexInterface* IndexHandler::returnIndex() {
+    return index;
+}
+
 void IndexHandler::chooseIndex() {
     int choice;
 

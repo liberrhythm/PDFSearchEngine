@@ -21,6 +21,7 @@ class IndexHandler {
         PDFParser parser;
     public:
         IndexHandler();
+        IndexInterface* returnIndex();
         void chooseIndex();
         void getIndex();
         int getNumDocuments();
