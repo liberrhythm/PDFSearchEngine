@@ -63,7 +63,7 @@ vector<pair<string, int>>& Searcher::calculateTFIDF(Word wrd, int numDocs) {
     vector<pair<string, int>> files = wrd.getFiles();
     for (pair<string, int> p: files) {
         double tf = p.second;
-        double idf = log2(static_cast<double>(numDocs) / static_cast<double>(files.size()));
+        double idf = log2(static_cast<double>(numDocs) / (1 + static_cast<double>(files.size())));
         double tfidf = tf * idf;
         tfidfRankings.push_back(pair<string, int>(p.first, tfidf));
     }

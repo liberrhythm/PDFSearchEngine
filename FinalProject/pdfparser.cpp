@@ -20,7 +20,8 @@ void PDFParser::readDirectory() {
 
     while ((corpus = opendir(directory.c_str())) == nullptr) {
         fprintf(stderr, "Could not open directory: %s\n", directory);
-        exit(-1);
+        cout << "Enter the directory path for the PDFs you want to parse: ";
+        cin >> directory;
     }
 
     int pdfCount = 0;
@@ -79,14 +80,16 @@ void PDFParser::parsePDF(string text, string pdfName) {
 }
 
 void PDFParser::insertWord(string str, string pdfName) {
+
     if (!stopWords.contains(str)) {
         Word newWord(str, pdfName);
         if (newWord.getText() != "") {
-            if (!words.contains(newWord.getText())) {
+            if (!words.contains(newWord)) {
                 numWordsIndexed++;
                 words.insert(newWord);
             }
             else {
+
                 words.find(newWord).addFile(pdfName);
             }
         }
