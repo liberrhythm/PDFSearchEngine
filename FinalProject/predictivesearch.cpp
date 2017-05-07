@@ -50,7 +50,7 @@ void predictiveSearch::combo(string data)
         }
     }
     permutation(data);
-    cout<<"Sucess!! Search engine has done predictive searches for you"<<endl;
+    cout<<"Search engine has done predictive searches for you"<<endl;
     vecManager();
 }
 
@@ -80,6 +80,7 @@ void predictiveSearch::permutation(string data)
 void predictiveSearch::vecManager()
 {
 
+    if(!possibleWords.empty()){
     //sort vector based of frequence or tf/idf
     sort(possibleWords.begin(), possibleWords.end(), [](const pair<string, int>& left, const pair<string, int>& right)
     {return left.second > right.second;});
@@ -124,7 +125,12 @@ void predictiveSearch::vecManager()
         vecManager();
 
     }
-
+    }
+    else
+    {
+        cout<<endl<<"Oops! Predictive Search wasnt able to find any possile matchs in the Corpus, Please try a diffrent coprus"<<endl;
+        //return to the main menu
+    }
 
 
 
