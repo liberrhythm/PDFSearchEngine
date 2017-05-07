@@ -104,7 +104,6 @@ void queryProcessor::andQuery()
 
             if(results.empty()){
 
-
             }
             else
             {
@@ -191,8 +190,6 @@ vector<pair<string, int>>&  queryProcessor::vecUnion(vector<pair<string, int>>& 
 
     vector<pair<string, int>> final;
     vector<pair<string, int>>::iterator it;
-
-
 
         for(int i=0; i<overall.size(); i++){
             for(int j=0; j<temp.size(); j++){
