@@ -16,12 +16,12 @@ class Searcher {
     private:
         IndexInterface* index;
         queue<string> input;
-        vector<string> txtFiles;
+        int numDocs;
         vector<pair<string, int>> tfidfRankings;
 
     public:
         Searcher();
-        Searcher(IndexInterface*, vector<string>);
+        Searcher(IndexInterface*, int);
         bool checkForWord(string);
         void getQuery();
         void receiveRequest(string, int);

@@ -6,17 +6,16 @@ Searcher::Searcher() {
 
 }
 
-Searcher::Searcher(IndexInterface* ih, vector<string> files) {
+Searcher::Searcher(IndexInterface* ih, int docs) {
     index = ih;
-    txtFiles = files;
+    numDocs = docs;
 }
 
 void Searcher::getQuery() {
     queryProcessor qr;
     input = qr.requestInput();
 
-    if(input.size()==1)
-    {
+    if (input.size()==1) {
         vector<pair<string, int>> data;
         if (checkForWord(input.front())) {
             data=receiveStringRequest(input.front());//equals a vector
@@ -79,36 +78,10 @@ void Searcher::printResults(vector<pair<string, int>> data)
     }
 }
 
-/*
-void Searcher::receiveRequest(string term, int numDocs) {
-
-    cout << endl << endl;
-    cout << "----------Results for: " << term << "----------" << endl;
-
-    if (index->contains(term)) {
-
-        //cout << wordTree.find(term);
-        tfidfRankings = calculateTFIDF(index->find(term), numDocs);
-
-        cout << term << endl;
-
-        for (int i = 0; i < tfidfRankings.size() && i < 15; i++) {
-            cout << i+1 << ") ";
-            cout << tfidfRankings[i].first << " " << tfidfRankings[i].second << endl;
-        }
-    }
-    
-    else {
-        cout << "This word does not exist in the specified corpus" << endl;
-    }
-    cout << "----------end of results----------" << endl << endl;
-}
-*/
-
 void Searcher::calculateTFIDF(vector<pair<string, int>> files) {
     for (pair<string, int> p: files) {
         double tf = p.second;
-        double idf = log2(static_cast<double>(txtFiles.size()) / (1 + static_cast<double>(files.size())));
+        double idf = log2(static_cast<double>(numDocs) / static_cast<double>(files.size()));
         double tfidf = tf * idf;
         tfidfRankings.push_back(pair<string, int>(p.first, tfidf));
     }
@@ -116,46 +89,30 @@ void Searcher::calculateTFIDF(vector<pair<string, int>> files) {
     {return left.second > right.second;});
 }
 
-/*
-string Searcher::findPDFToPrint(string pdf) {
-    string doc;
-
-    pdf = pdf.substr(pdf.length()-4, pdf.length());
-
-    for (int i = 0; i < outputFiles.size(); i++) {
-        string txtFile = outputFiles[i];
-        txtFile = txtFile.substr(txtFile.length()-4, txtFile.length());
-        if (pdf == txtFile) {
-            doc = outputFiles[i];
-            return doc;
-        }
-    }
-}
-*/
-
 void Searcher::printPDF() {
     string doc;
     cout << "Which pdf would you like to view?" << endl << endl;
     getline(cin, doc);
 
-    doc = doc.substr(doc.length()-4, doc.length());
+    doc = doc.substr(0, doc.length()-4);
     doc += ".txt";
+
+    cout << doc << endl;
 
     ifstream inFile;
     inFile.open(doc, ios::in);
 
     if (!inFile) {
         cerr << "PDF file requested could not be opened for reading" << endl;
-        exit(EXIT_FAILURE);
     }
-
-    string line;
-    getline(inFile, line);
-    while (!inFile.eof()) {
-        cout << line;
+    else {
+        string line;
         getline(inFile, line);
+        while (!inFile.eof()) {
+            cout << line << endl;
+            getline(inFile, line);
+        }
     }
-
     inFile.close();
 }
 

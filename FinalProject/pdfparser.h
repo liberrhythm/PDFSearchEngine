@@ -26,8 +26,10 @@ class PDFParser {
         AvlTree<Word> words;
         AvlTree<string> stopWords;
         fstream file;
-        vector<string> outputFiles;
+        //vector<string> outputFiles;
+        int numDocs;
         int numWordsIndexed;
+        int numWordsTotal;
     public:
         PDFParser();
         AvlTree<Word>& getWords();
@@ -37,6 +39,7 @@ class PDFParser {
         bool isStringBlanks(string);
         int getNumWordsIndexed();
         int getNumDocs();
+        int getNumWordsTotal();
         vector<string> getOutputFiles();
 };
 

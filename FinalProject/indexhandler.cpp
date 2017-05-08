@@ -1,7 +1,9 @@
 #include "indexhandler.h"
 
 IndexHandler::IndexHandler() {
-
+    numDocuments = 0;
+    numWordsIndexed = 0;
+    numWordsTotal = 0;
 }
 
 IndexInterface* IndexHandler::returnIndex() {
@@ -34,32 +36,23 @@ void IndexHandler::chooseIndex() {
         }
     }
     else {
-        cout << "That is not a valid index option. Please select AVL or hash.";
-        chooseIndex();
+        cout << "That is not a valid index option. Please choose AVL or hash." << endl;
     }
     cout << endl;
 }
 
 void IndexHandler::getIndex() {
     parser.readDirectory();
-    writeToIndex(parser.getWords());
     numDocuments = parser.getNumDocs();
-    txtFiles = parser.getOutputFiles();
-}
-
-int IndexHandler::getNumDocuments() {
-    return numDocuments;
-}
-
-int IndexHandler::getNumPages() {
-    return parser.getNumWordsIndexed()/400;
-}
+    numWordsIndexed = parser.getNumWordsIndexed();
+    numWordsTotal = parser.getNumWordsTotal();
+    writeToIndex(parser.getWords());}
 
 bool IndexHandler::doesIndexExist() {
     f.open("index.txt", ios::in);
     if (!f) {
         f.close();
-        cerr << "Persistent index could not be opened for reading" << endl;
+        //cerr << "Persistent index could not be opened for reading" << endl;
         return false;
     }
     else {
@@ -69,13 +62,20 @@ bool IndexHandler::doesIndexExist() {
 }
 
 void IndexHandler::writeToIndex(AvlTree<Word>& words) {
-    f.open("index.txt", ios::app);
-    if (!f) {
-        cerr << "Persistent index could not be opened for writing" << endl;
-        exit(EXIT_FAILURE);
-    }
 
-    words.outputInOrder(f);
+    bool persistenceExists = doesIndexExist();
+    f.open("index.txt", ios::out);
+    if (!persistenceExists) {
+        //cerr << "Persistent index could not be opened for writing" << endl;
+        f << numDocuments << endl;
+        f << numWordsIndexed << endl;
+        f << numWordsTotal << endl;
+
+        words.outputInOrder(f);
+    }
+    else {
+        words.outputInOrder(f);
+    }
 
     f.close();
 }
@@ -85,6 +85,11 @@ void IndexHandler::readFromIndex() {
 
     string word;
     int numFiles;
+
+    f >> numDocuments;
+    f >> numWordsIndexed;
+    f >> numWordsTotal;
+
     f >> word;
 
     while (!f.eof()) {
@@ -95,6 +100,7 @@ void IndexHandler::readFromIndex() {
         for (int i = 0; i < numFiles; i++) {
             f >> frequency;
             getline(f, pdf);
+            pdf = pdf.substr(1, pdf.length());
             entry.addFileFromIndex(pair<string, int>(pdf, frequency));
         }
 
@@ -124,33 +130,17 @@ void IndexHandler::clearIndex() {
     }
 }
 
-void IndexHandler::printStatistics() {
-    cout << "Number of words indexed: " << parser.getNumWordsIndexed() << endl;
+int IndexHandler::getNumDocuments() {
+    return numDocuments;
 }
 
-/*
- * while (!f.eof()) {
-        Word entry(word);
-        getline(f, line);
-        stringstream linestream(line);
-        string elem;
-        string pdf;
-        int frequency;
+void IndexHandler::printStatistics() {
+    cout << "Number of documents parsed: " << numDocuments << endl;
+    cout << "Number of words indexed: " << numWordsIndexed << endl;
+    cout << "Number of pages indexed: " << numWordsTotal/400 << endl << endl;
+}
 
-        int elemCount = 0;
-        while (linestream >> elem) {
-            elemCount++;
-            if (elemCount % 2 == 1) {
-                pdf = elem;
-            }
-            else {
-                frequency = atoi(elem.c_str());
-                entry.addFileFromIndex(pair<string, int>(pdf, frequency));
-            }
-        }
+void IndexHandler::getTopWords() {
 
-        index.insert(entry);
-        f >> word;
-    }
-    */
+}
 

@@ -3,6 +3,9 @@
 PDFParser::PDFParser() {
     StopWords s;
     stopWords = s.getStopTree();
+    numDocs = 0;
+    numWordsIndexed = 0;
+    numWordsTotal = 0;
 }
 
 AvlTree<Word>& PDFParser::getWords() {
@@ -24,8 +27,6 @@ void PDFParser::readDirectory() {
         cin >> directory;
     }
 
-    int pdfCount = 0;
-
     while ((dir = readdir(corpus)) != nullptr) {
         if (strncmp(dir->d_name, "..", 2) != 0 && strncmp(dir->d_name, ".", 1) != 0) {
             string fileName = dir->d_name;
@@ -33,7 +34,7 @@ void PDFParser::readDirectory() {
             string fileType = fileName.substr(fileName.length()-4, fileName.length());
 
             if (fileType == ".pdf") {
-                pdfCount++;
+                numDocs++;
                 strncpy(filePath, directory.c_str(), 4095);
                 strncat(filePath, "/", 4095);
                 string dirPath = filePath;
@@ -42,7 +43,6 @@ void PDFParser::readDirectory() {
                 string newFileName = "\"" + fileName + "\"";
                 string textFile = onlyFile + ".txt";
                 string outputFile = "\"" + onlyFile + ".txt" + "\"";
-                outputFiles.push_back(textFile);
 
                 string outputPath = "/home/coder/Desktop/DS/CSE2341-17S-Have-mercy/build-FinalProject-Desktop_Qt_5_8_0_GCC_64bit-Debug/";
                 string command = "pdftotext " + dirPath + newFileName + " " + outputPath + outputFile;
@@ -57,7 +57,6 @@ void PDFParser::readDirectory() {
 }
 
 void PDFParser::parsePDF(string text, string pdfName) {
-    //cout << text.c_str() << endl;
     file.open(text.c_str(), ios::in);
     if (!file) {
         cerr << "PDF to text file could not be opened" << endl;
@@ -70,6 +69,7 @@ void PDFParser::parsePDF(string text, string pdfName) {
         stringstream ss(line);
         string wrd;
         while (ss >> wrd) {
+            numWordsTotal++;
             insertWord(wrd, pdfName);
         }
         getline(file, line);
@@ -94,8 +94,6 @@ void PDFParser::insertWord(string str, string pdfName) {
             }
         }
     }
-
-
 }
 
 bool PDFParser::isStringBlanks(string str) {
@@ -107,14 +105,14 @@ bool PDFParser::isStringBlanks(string str) {
     return true;
 }
 
-int PDFParser::getNumDocs() {
-    return outputFiles.size();
-}
-
 int PDFParser::getNumWordsIndexed() {
     return numWordsIndexed;
 }
 
-vector<string> PDFParser::getOutputFiles() {
-    return outputFiles;
+int PDFParser::getNumDocs() {
+    return numDocs;
+}
+
+int PDFParser::getNumWordsTotal() {
+    return numWordsTotal;
 }

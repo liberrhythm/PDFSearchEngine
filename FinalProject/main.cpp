@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
                 switch (qchoice) {
                     case '1': ih.chooseIndex(); break;
                     case '2': {
-                        Searcher se(ih.returnIndex(), ih.getTextFiles());
+                        Searcher se(ih.returnIndex(), ih.getNumDocuments());
                         cin.ignore();
                         se.getQuery();
                         break;
