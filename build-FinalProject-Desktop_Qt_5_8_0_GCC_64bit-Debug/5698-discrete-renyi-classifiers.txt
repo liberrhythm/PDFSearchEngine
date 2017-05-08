@@ -1,0 +1,752 @@
+Discrete Rényi Classifiers
+
+Meisam Razaviyayn∗
+meisamr@stanford.edu
+
+Farzan Farnia∗
+farnia@stanford.edu
+
+David Tse∗
+dntse@stanford.edu
+
+Abstract
+Consider the binary classification problem of predicting a target variable Y from
+a discrete feature vector X = (X1 , . . . , Xd ). When the probability distribution
+P(X, Y ) is known, the optimal classifier, leading to the minimum misclassification rate, is given by the Maximum A-posteriori Probability (MAP) decision
+rule. However, in practice, estimating the complete joint distribution P(X, Y ) is
+computationally and statistically impossible for large values of d. Therefore, an
+alternative approach is to first estimate some low order marginals of the joint probability distribution P(X, Y ) and then design the classifier based on the estimated
+low order marginals. This approach is also helpful when the complete training
+data instances are not available due to privacy concerns.
+In this work, we consider the problem of finding the optimum classifier based on
+some estimated low order marginals of (X, Y ). We prove that for a given set of
+marginals, the minimum Hirschfeld-Gebelein-Rényi (HGR) correlation principle
+introduced in [1] leads to a randomized classification rule which is shown to have
+a misclassification rate no larger than twice the misclassification rate of the optimal classifier. Then, under a separability condition, it is shown that the proposed
+algorithm is equivalent to a randomized linear regression approach. In addition,
+this method naturally results in a robust feature selection method selecting a subset of features having the maximum worst case HGR correlation with the target
+variable. Our theoretical upper-bound is similar to the recent Discrete Chebyshev
+Classifier (DCC) approach [2], while the proposed algorithm has significant computational advantages since it only requires solving a least square optimization
+problem. Finally, we numerically compare our proposed algorithm with the DCC
+classifier and show that the proposed algorithm results in better misclassification
+rate over various UCI data repository datasets.
+
+1
+
+Introduction
+
+Statistical classification, a core task in many modern data processing and prediction problems, is
+the problem of predicting labels for a given feature vector based on a set of training data instances
+containing feature vectors and their corresponding labels. From a probabilistic point of view, this
+problem can be formulated as follows: given data samples (X1 , Y 1 ), . . . , (Xn , Y n ) from a probability distribution P(X, Y ), predict the target label y test for a given test point X = xtest .
+Many modern classification problems are on high dimensional categorical features. For example, in the genome-wide association studies (GWAS), the classification task is to predict a trait
+of interest based on observations of the SNPs in the genome. In this problem, the feature vector
+X = (X1 , . . . , Xd ) is categorical with Xi ∈ {0, 1, 2}.
+What is the optimal classifier leading to the minimum misclassification rate for such a classification
+problem with high dimensional categorical feature vectors? When the joint probability distribution
+of the random vector (X, Y ) is known, the MAP decision rule defined by δ MAP , argmaxy P(Y =
+∗
+
+Department of Electrical Engineering, Stanford University, Stanford, CA 94305.
+
+1
+
+y|X = x) achieves the minimum misclassification rate. However, in practice the joint probability
+distribution P(X, Y ) is not known. Moreover, estimating the complete joint probability distribution
+is not possible due to the curse of dimensionality. For example, in the above GWAS problem, the
+dimension of the feature vector X is d ≈ 3, 000, 000 which leads to the alphabet size of 33,000,000
+for the feature vector X. Hence, a practical approach is to first estimate some low order marginals of
+P(X, Y ), and then use these low order marginals to build a classifier with low misclassification rate.
+This approach, which is the sprit of various machine learning and statistical methods [2–6], is also
+useful when the complete data instances are not available due to privacy concerns in applications
+such as medical informatics.
+In this work, we consider the above problem of building a classifier for a given set of low order
+marginals. First, we formally state the problem of finding the robust classifier with the minimum
+worst case misclassification rate. Our goal is to find a (possibly randomized) decision rule which has
+the minimum worst case misclassification rate over all probability distributions satisfying the given
+low order marginals. Then a surrogate objective function, which is obtained by the minimum HGR
+correlation principle [1], is used to propose a randomized classification rule. The proposed classification method has the worst case misclassification rate no more than twice the misclassification rate
+of the optimal classifier. When only pairwise marginals are estimated, it is shown that this classifier
+is indeed a randomized linear regression classifier on indicator variables under a separability condition. Then, we formulate a feature selection problem based on the knowledge of pairwise marginals
+which leads to the minimum misclassification rate. Our analysis provides a theoretical justification
+for using group lasso objective function for feature selection over the discrete set of features. Finally,
+we conclude by presenting numerical experiments comparing the proposed classifier with discrete
+Chebyshev classifier [2], Tree Augmented Naive Bayes [3], and Minimax Probabilistic Machine [4].
+In short, the contributions of this work is as follows.
+• Providing a rigorous theoretical justification for using the minimum HGR correlation principle for binary classification problem.
+• Proposing a randomized classifier with misclassification rate no larger than twice the misclassification rate of the optimal classifier.
+• Introducing a computationally efficient method for calculating the proposed randomized
+classifier when pairwise marginals are estimated and a separability condition is satisfied.
+• Providing a mathematical justification based on maximal correlation for using group lasso
+problem for feature selection in categorical data.
+Related Work: The idea of learning structures in data through low order marginals/moments is
+popular in machine learning and statistics. For example, the maximum entropy principle [7], which
+is the spirit of the variational method in graphical models [5] and tree augmented naive Bayes [3],
+is based on the idea of fixing the marginal distributions and fitting a probabilistic model which
+maximizes the Shannon entropy. Although these methods fit a probabilistic model satisfying the low
+order marginals, they do not directly optimize the misclassification rate of the resulting classifier.
+Another related information theoretic approach is the minimum mutual information principle [8]
+which finds the probability distribution with the minimum mutual information between the feature
+vector and the target variable. This approach is closely related to the framework of this paper;
+however, unlike the minimum HGR principle, there is no known computationally efficient approach
+for calculating the probability distribution with the minimum mutual information.
+In the continuous setting, the idea of minimizing the worst case misclassification rate leads to the
+minimax probability machine [4]. This algorithm and its analysis is not easily extendible to the
+discrete scenario.
+The most related algorithm to this work is the recent Discrete Chebyshev Classifier (DCC) algorithm [2]. The DCC is based on the minimization of the worst case misclassification rate over the
+class of probability distributions with the given marginals of the form (Xi , Xj , Y ). Similar to our
+framework, the DCC method achieves the misclassification rate no larger than twice the misclassification rate of the optimum classifier. However, computation of the DCC classifier requires solving
+a non-separable non-smooth optimization problem which is computationally demanding, while the
+proposed algorithm results in a least squares optimization problem with a closed form solution.
+Furthermore, in contrast to [2] which only considers deterministic decision rules, in this work we
+2
+
+consider the class of randomized decision rules. Finally, it is worth noting that the algorithm in [2]
+requires tree structure to be tight, while our proposed algorithm works on non-tree structures as long
+as the separability condition is satisfied.
+
+2
+
+Problem Formulation
+
+Consider the binary classification problem with d discrete features X1 , X2 , . . . , Xd ∈ X and a target
+variable Y ∈ Y , {0, 1}. Without loss of generality, let us assume that X , {1, 2, . . . , m} and the
+data points (X, Y ) are coming from an underlying probability distribution P̄X,Y (x, y). If the joint
+probability distribution P̄(x, y) is known, the optimal classifier is given by the maximum a posteriori
+probability (MAP) estimator, i.e., yb MAP (x) , argmaxy∈{0,1} P̄(Y = y | X = x). However, the
+joint probability distribution P̄(x, y) is often not known in practice. Therefore, in order to utilize
+the MAP rule, one should first estimate P̄(x, y) using the training data instances. Unfortunately,
+estimating the joint probability distribution requires estimating the value of P̄(X = x, Y = y) for
+all (x, y) ∈ X d × Y which is intractable for large values of d. Therefore, as mentioned earlier, our
+approach is to first estimate some low order marginals of the joint probability distribution P̄(·); and
+then utilize the minimax criterion for classification.
+Let C be the class of probability distributions satisfying the estimated marginals. For example, when
+only pairwise marginals of the ground-truth distribution P̄ is estimated, the set C is the class of
+distributions satisfying the given pairwise marginals, i.e.,
+
+
+Cpairwise , PX,Y (·, ·)  PXi ,Xj (xi , xj ) = P̄Xi ,Xj (xi , xj ), PXi ,Y (xi , y) = P̄Xi ,Y (xi , y),
+
+(1)
+∀xi , xj ∈ X , ∀y ∈ Y, ∀i, j .
+In general, C could be any class of probability distributions satisfying a set of estimated low order
+marginals.
+Let us also define δ to be a randomized classification rule with
+(
+0 with probability qδx
+δ(x) =
+1 with probability 1 − qδx ,
+for some qδx ∈ [0, 1], ∀x ∈ X d . Given a randomized decision rule δ and a joint probability distribution PX,Y (x, y), we can extend P(·) to include our randomized decision rule. Then the misclassification rate of the decision rule δ, under the probability distribution P(·), is given by P(δ(X) 6= Y ).
+Hence, under minimax criterion, we are looking for a decision rule δ ∗ which minimizes the worst
+case misclassification rate. In other words, the robust decision rule is given by
+δ ∗ ∈ argmin max P (δ(X) 6= Y ) ,
+δ∈D
+
+(2)
+
+P∈C
+
+where D is the set of all randomized decision rules. Notice that the optimal decision rule δ ∗ may not
+be unique in general.
+
+3
+
+Worst Case Error Minimization
+
+In this section, we propose a surrogate objective for (2) which leads to a decision rule with misclassification rate no larger than twice of the optimal decision rule δ ∗ . Later we show that the proposed
+surrogate objective is connected to the minimum HGR principle [1].
+Let us start by rewriting (2) as an optimization problem over real valued variables. Notice that each
+probability distribution PX,Y (·, ·) can be represented by a probability vector p = [px,y | (x, y) ∈
+P
+d
+X d × Y] ∈ R2m with px,y = P(X = x, Y = y) and x,y px,y = 1. Similarly, every randomized
+d
+
+rule δ can be represented by a vector qδ = [qδx | x ∈ X d ] ∈ Rm . Adopting these notations, the
+set C can be rewritten in terms of the probability vector p as
+ 
+	
+C , p  Ap = b, 1T p = 1, p ≥ 0 ,
+3
+
+where the system of linear equations Ap = b represents all the low order marginal constraints in
+B; and the notation 1 denotes the vector of all ones. Therefore, problem (2) can be reformulated as
+X
+q∗δ ∈ argmin max
+(qδx px,1 + (1 − qδx )px,0 ) ,
+(3)
+p∈C
+
+0≤qδ ≤1
+
+x
+
+where px,0 and px,1 denote the elements of the vector p corresponding to the probability values
+P(X = x, Y = 0) and P(X = x, Y = 1), respectively. The simple application of the minimax
+theorem [9] implies that the saddle point of the above optimization problem exists and moreover,
+the optimal decision rule is a MAP rule for a certain probability distribution P∗ ∈ C. In other words,
+there exists a pair (δ ∗ , P∗ ) for which
+P(δ ∗ (X) 6= Y ) ≤ P∗ (δ ∗ (X) 6= Y ), ∀ P ∈ C and P∗ (δ(X) 6= Y ) ≥ P∗ (δ ∗ (X) 6= Y ), ∀δ ∈ D.
+Although the above observation characterizes the optimal decision rule to some extent, it does not
+provide a computationally efficient approach for finding the optimal decision rule. Notice that it
+is NP-hard to verify the existence of a probability distribution satisfying a given set of low order
+marginals [10]. Based on this observation and the result in [11], we conjecture that in general,
+solving (2) is NP-hard in the number variables and the alphabet size even when the set C is nonempty. Hence, here we focus on developing a framework to find an approximate solution of (2).
+Let us continue by utilizing the minimax theorem
+P [9] and obtain the worst case probability distribution in (3) by p∗ ∈ argmaxp∈C min0≤qδ ≤1 x (qxδ px,1 + (1 − qxδ )px,0 ) , or equivalently,
+X
+p∗ ∈ argmax
+min {px,0 , px,1 } .
+(4)
+p∈C
+
+x
+
+Despite convexity of the above problem, there are two sources of hardness which make the problem
+intractable for moderate and large values of d. Firstly, the objective function is non-smooth. Secondly, the number of optimization variables is 2md and grows exponentially with the alphabet size.
+To deal with the first issue, notice that the function inside the summation is the max-min fairness objective between the two quantities px,1 and px,0 . Replacing this objective with the harmonic average
+leads to the following smooth convex optimization problem:
+X px,1 px,0
+e ∈ argmax
+p
+.
+(5)
+px,1 + px,0
+p∈C
+x
+It is worth noting that the harmonic mean of the two quantities is intuitively a reasonable surrogate
+for the original objective function since
+px,1 px,0
+2px,1 px,0
+≤ min {px,0 , px,1 } ≤
+.
+(6)
+px,1 + px,0
+px,1 + px,0
+Although this inequality suggests that the objective functions in (5) and (4) are close to each other,
+e leads to any classification rule having low misclassification
+it is not clear whether the distribution p
+e , the first naive approach
+rate for all distributions in C. In order to obtain a classification rule from p
+e . However, the following result shows that this decision rule
+is to use MAP decision rule based on p
+does not achieve the factor two misclassification rate obtained in [2].
+e x,y with the worst case error probability
+Theorem 1 Let us define δemap (x) , argmaxy∈Y p
+
+
+map
+map
+∗
+e
+ee
+, maxP∈C P δ
+(X) 6= Y . Then, e ≤ ee map ≤ 4e∗ , where e∗ is the worst case
+misclassification rate of the optimal decision rule δ ∗ , that is, e∗ , maxP∈C P (δ ∗ (X) 6= Y ) .
+Proof The proof is similar to the proof of next theorem and hence omitted here.
+Next we show that, surprisingly, one can obtain a randomized decision rule based on the solution of
+(5) which has a misclassification rate no larger than twice of the optimal decision rule δ ∗ .
+e as the optimal solution of (5), define the random decision rule δe as
+Given p
+
+e
+δ(x)
+=
+
+
+ 0
+
+with probability
+
+2
+p
+ex,0
+2 +e
+2
+p
+ex,0
+px,1
+
+ 1
+
+with probability
+
+2
+p
+ex,1
+2 +e
+2
+p
+ex,0
+px,1
+
+4
+
+(7)
+
+e i.e.,
+Let ẽ be the worst case classification error of the decision rule δ,
+
+
+e
+ee , max P δ(X)
+6= Y .
+P∈C
+
+∗
+
+Clearly, e ≤ ee according to the definition of the optimal decision rule e∗ . The following theorem
+shows that ee is also upper-bounded by twice of the optimal misclassification rate e∗ .
+Theorem 2 Define
+θ , max
+p∈C
+
+X px,1 px,0
+px,1 + px,0
+x
+
+(8)
+
+Then, θ ≤ ee ≤ 2θ ≤ 2e∗ . In other words, the worst case misclassification rate of the decision rule
+δe is at most twice the optimal decision rule δ ∗ .
+Proof The proof is relegated to the supplementary materials.
+So far, we have resolved the non-smoothness issue in solving (4) by using a surrogate objective
+function. In the next section, we resolve the second issue by establishing the connection between
+problem (5) and the minimum HGR correlation principle [1]. Then, we use the existing result in [1]
+to develop a computationally efficient approach for calculating the decision rule δ̃(·) for Cpairwise .
+
+4
+
+Connection to Hirschfeld-Gebelein-Rényi Correlation
+
+A commonplace approach to infer models from data is to employ the maximum entropy principle [7].
+This principle states that, given a set of constraints on the ground-truth distribution, the distribution
+with the maximum (Shannon) entropy under those constraints is a proper representer of the class.
+To extend this rule to the classification problem, the authors in [8] suggest to pick the distribution
+maximizing the target entropy conditioned to features, or equivalently minimizing mutual information between target and features. Unfortunately, this approach does not lead to a computationally
+efficient approach for model fitting and there is no guarantee on the misclassification rate of the resulting classifier. Here we study an alternative approach of minimum HGR correlation principle [1].
+This principle suggests to pick the distribution in C minimizing HGR correlation between the target
+variable and features. The HGR correlation coefficient between the two random objects X and Y ,
+which was first introduced by Hirschfeld and Gebelein [12, 13] and then studied by Rényi [14], is
+defined as ρ(X, Y ) , supf,g E [f (X)g(Y )] , where the maximization is taken over the class of all
+measurable functions f (·) and g(·) with E[f (X)] = E[g(Y )] = 0 and E[f 2 (X)] = E[g 2 (Y )] = 1.
+The HGR correlation coefficient has many desirable properties. For example, it is normalized to be
+between 0 and 1. Furthermore, this coefficient is zero if and only if the two random variables are
+independent; and it is one if there is a strict dependence between X and Y . For other properties of
+the HGR correlation coefficient see [14, 15] and the references therein.
+Lemma 1 Assume the random variable Y is binary and define q , P(Y = 0). Then,
+s
+X PX,Y (x, 0)PX,Y (x, 1) 
+1
+ρ(X, Y ) = 1 −
+,
+q(1 − q) x PX,Y (x, 0) + PX,Y (x, 1)
+Proof The proof is relegated to the supplementary material.
+This lemma leads to the following observation.
+Observation: Assume the marginal distribution P(Y = 0) and P(Y = 1) is fixed for any
+distribution P ∈ C. Then, the distribution in C with the minimum HGR correlation between X and
+e obtained by solving (5). In other words, ρ(X, Y ; P)
+e ≤ ρ(X, Y ; P), ∀ P ∈ C,
+Y is the distribution P
+where ρ(X, Y ; P) denotes the HGR correlation coefficient under the probability distribution P.
+e in (7) as the “Rényi clasBased on the above observation, from now on, we call the classifier δ(·)
+sifier”. In the next section, we use the result of the recent work [1] to compute the Rényi classifier
+e for a special class of marginals C = Cpairwise .
+δ(·)
+5
+
+5
+
+Computing Rényi Classifier Based on Pairwise Marginals
+
+In many practical problems, the number of features d is large and therefore, it is only computationally tractable to estimate marginals of order at most two. Hence, hereafter, we restrict ourselves
+to the case where only the first and second order marginals of the distribution P̄ is estimated, i.e.,
+C = Cpairwise . In this scenario, in order to predict the output of the Rényi classifier for a given data
+e x,0 and p
+e x,1 . Next, we state a result from [1] which sheds
+point x, one needs to find the value of p
+e x,0 and p
+e x,1 . To state the theorem, we need the following definitions:
+light on the computation of p
+Let the matrix Q ∈ Rdm×dm and the vector d ∈ Rdm×1 be defined through their entries as
+Qmi+k,mj+` = P̄(Xi+1 = k, Xj+1 = `), dmi+k = P̄(Xi+1 = k, Y = 1) − P̄(Xi+1 = k, Y = 0),
+for every i, j = 0, . . . , d − 1 and k, ` = 1, . . . , m. Also define the function h(z) : Rmd×1 7→ R as
+Pd
+h(z) , i=1 max{zmi−m+1 , zmi−m+2 , . . . , zmi }. Then, we have the following theorem.
+Theorem 3 (Rephrased from [1]) Assume Cpairwise 6= ∅. Let
+γ,
+Then,
+
+q
+1−
+
+γ
+q(1−q)
+
+min
+
+z∈Rmd×1
+
+1
+zT Qz − dT z + .
+4
+
+(9)
+
+≤ minP∈Cpairwise ρ(X, Y ; P), where the inequality holds with equality if and
+
+only if there exists a solution z∗ to (9) such that h(z∗ ) ≤ 21 and h(−z∗ ) ≤ 12 ; or equivalently, if and
+only if the following separability condition is satisfied for some P ∈ Cpairwise .
+EP [Y |X = x] =
+
+d
+X
+
+ζi (xi ), ∀x ∈ X d ,
+
+(10)
+
+i=1
+
+for some functions ζ1 , . . . , ζd . Moreover, if the separability condition holds with equality, then
+d
+X
+
+∗
+e = y X = (x1 , . . . , xd )) = 1 − (−1)y
+P(Y
+z(i−1)m+x
+.
+i
+2
+i=1
+
+(11)
+
+Combining the above theorem with the equality
+e2 (Y = 0, X = x)
+e2 (Y = 0 | X = x)
+P
+P
+=
+e2 (Y = 0, X = x) + P
+e2 (Y = 1, X = x)
+e2 (Y = 0 | X = x) + P
+e2 (Y = 1 | X = x)
+P
+P
+implies that the decision rule δe and δe map can be computed in a computationally efficient manner
+under the separability condition. Notice that when the separability condition is not satisfied, the
+approach proposed in this section would provide a classification rule whose error rate is still bounded
+by 2γ. However, this error rate does no longer provide a 2-factor approximation gap. It is also worth
+mentioning that the separability condition is a property of the class of distribution Cpairwise and is
+independent of the classifier at hand. Moreover, this condition is satisfied with a positive measure
+over the simplex of the all probability distributions, as discussed in [1]. Two remarks are in order:
+Inexact knowledge of marginal distribution: The optimization problem (9) is equivalent to solving the stochastic optimization problem
+h
+2 i
+z∗ = argmin E WT z − C
+,
+z
+
+where W ∈ {0, 1}md×1 is a random vector with Wm(i−1)+k = 1 if Xi = k in the and
+Wm(i−1)+k = 0, otherwise. Also define the random variable C ∈ {− 21 , 12 } with C = 12 if the
+random variable Y = 1 and C = − 12 , otherwise. Here the expectation could be calculated with respect to any distribution in C. Hence, in practice, the above optimization problem can be estimated
+using Sample Average Approximation (SAA) method [16, 17] through the optimization problem
+n
+
+b
+z = argmin
+z
+
+2
+1X
+(wi )T z − ci ,
+n i=1
+6
+
+where (wi , ci ) corresponds to the i-th training data point (xi , y i ). Clearly, this is a least square
+problem with a closed form solution. Notice that in order to bound the SAA error and avoid overfitting, one could restrict the search space for b
+z [18]. This could also be done using regularizers such
+as ridge regression by solving
+n
+2
+1X
+b
+z ridge = argmin
+(wi )T z − ci + λridge kzk22 .
+n i=1
+z
+Beyond pairwise marginals: When d is small, one might be interested in estimating higher order
+marginals for predicting Y . In this scenario,
+a simple modification
+n
+o for the algorithm is to define
+e
+the new set of feature random variables Xij = (Xi , Xj ) | i 6= j ; and apply the algorithm to the
+new set of feature variables. It is not hard to see that this approach utilizes the marginal information
+P(Xi , Xj , Xk , X` ) and P(Xi , Xj , Y ).
+
+6
+
+Robust Rényi Feature Selection
+
+The task of feature selection for classification purposes is to preselect a subset of features for use in
+model fitting in prediction. Shannon mutual information, which is a measure of dependence between
+two random variables, is used in many recent works as an objective for feature selection [19, 20].
+In these works, the idea is to select a small subset of features with maximum dependence with the
+target variable Y . In other words, the task is to find a subset of variables S ⊆ {1, . . . , d} with
+|S| ≤ k based on the following optimization problem
+S MI , argmax I(XS ; Y ),
+
+(12)
+
+S⊆{1,...,d}
+
+where XS , (Xi )i∈S and I (XS ; Y ) denotes the mutual information between the random variable
+XS and Y . Almost all of the existing approaches for solving (12) are based on heuristic approaches
+and of greedy nature which aim to find a sub-optimal solution of (12). Here, we suggest to replace
+mutual information with the maximal correlation. Furthermore, since estimating the joint distribution of X and Y is computationally and statistically impossible for large number of features d, we
+suggest to estimate some low order marginals of the groundtruth distribution P̄(X, Y ) and then solve
+the following robust Rényi feature selection problem:
+S RFS , argmax min ρ(XS , Y ; P).
+
+(13)
+
+S⊆{1,...,d} P∈C
+
+When only pairwise
+q marginals are estimated from the training data, i.e., C = Cpairwise , maximizing
+γ
+the lower-bound 1 − q(1−q)
+instead of (13) leads to the following optimization problem
+s
+1
+1
+RFS
+b
+S
+, argmax 1 −
+min zT Qz − dT z + ,
+q(1 − q) z∈ZS
+4
+|S|≤k
+or equivalently,
+Sb RFS , argmin min zT Qz − dT z,
+|S|≤k
+
+z∈ZS
+
+ Pm
+	
+
+where ZS , z ∈ Rmd 
+/ S . This problem is of combinatorial nak=1 |zmi−m+k | = 0, ∀i ∈
+ture. Howevre, using the standard group Lasso regularizer leads to the feature selection procedure
+in Algorithm 1.
+Algorithm 1 Robust Rényi Feature Selection
+Choose a regularization parameter λ > 0 and define h(z) ,
+Let b
+zRFS ∈ argminz zT Qz − dT z + λh(|z|).
+Pm
+RFS
+Set S = {i | k=1 |zmi−m+k
+| > 0}.
+
+Pd
+
+i=1
+
+max{zmi−m+1 , . . . , zmi }.
+
+Notice that, when the pairwise marginals are estimated from a set of training data points, the above
+feature selection procedure is equivalent to applying the group Lasso regularizer to the standard
+linear regression problem over the domain of indicator variables. Our framework provides a justification for this approach based on the robust maximal correlation feature selection problem (13).
+7
+
+Remark 1 Another natural approach to define the feature selection procedure is to select a subset of
+features S by minimizing the worst case classification error, i.e., solving the following optimization
+problem
+min min max P(δ(X) 6= Y ),
+
+(14)
+
+|S|≤k δ∈DS P∈C
+
+where DS is the set of randomized decision rules which only uses the feature variables in
+S. Define F(S) , minδ∈DS maxP∈C P(δ(X) 6= Y ). It can be shown that F(S) ≤
+min|S|≤k minz∈ZS zT Qz − dT z + 41 . Therefore, another justification for Algorithm 1 is to
+minimize an upper-bound of F(S) instead of itself.
+Remark 2 Alternating Direction Method of Multipliers (ADMM) algorithm [21] can be used for
+solving the optimization problem in Algorithm 1; see the supplementary material for more details.
+
+7
+
+Numerical Results
+
+We evaluated the performance of the Rényi classifiers δe and δe map on five different binary classification datasets from the UCI machine learning data repository. The results are compared with five
+different benchmarks used in [2]: Discrete Chebyshev Classifier [2], greedy DCC [2], Tree Augmented Naive Bayes [3], Minimax Probabilistic Machine [4], and support vector machines (SVM).
+In addition to the classifiers δe and δe map which only use pairwise marginals, we also use higher
+order marginals in δe2 and δe2map . These classifiers are obtained by defining the new feature variables
+eij = (Xi , Xj )} as discussed in section 5. Since in this scenario, the number of features is large,
+{X
+we combine our Rényi classifier with the proposed group lasso feature selection. In other words,
+eij } and then find the maximum correlation classifier for the selected
+we first select a subset of {X
+ridge
+features. The value of λ
+and λ is determined through cross validation. The results are averaged
+over 100 Monte Carlo runs each using 70% of the data for training and the rest for testing. The
+results are summarized in the table below where each number shows the percentage of the error of
+each method. The boldface numbers denote the best performance on each dataset.
+As can be seen in this table, in four of the tested datasets, at least one of the proposed methods
+outperforms the other benchmarks. Furthermore, it can be seen that the classifier δemap on average
+performs better than δ̃. This fact could be due to the specific properties of the underlying probability
+distribution in each dataset.
+Datasets
+adult
+credit
+kr-vs-kp
+promoters
+votes
+
+δemap
+17
+13
+5
+6
+3
+
+δe
+21
+16
+10
+16
+4
+
+δe2map
+16
+16
+5
+3
+3
+
+δe2
+20
+17
+14
+4
+4
+
+map
+δeFS,2
+16
+16
+5
+3
+2
+
+δeFS,2
+20
+17
+14
+4
+4
+
+DCC
+18
+14
+10
+5
+3
+
+gDCC
+18
+13
+10
+3
+3
+
+MPM
+22
+13
+5
+6
+4
+
+TAN
+18
+17
+7
+44
+8
+
+SVM
+22
+16
+3
+9
+5
+
+In order to evaluate the computational efficiency of the Rényi classifier, we compare its running
+time with SVM over the synthetic data set with d = 10, 000 features and n = 200 data points.
+Each feature Xi is generated by i.i.d. Bernoulli distribution with P(Xi = 1) = 0.7. The target
+variable y is generated by y = sign(αT X + n) with n ∼ N (0, 1); and α ∈ Rd is generated with
+30% nonzero elements each drawn from standard Gaussian distribution N (0, 1). The results are
+averaged over 1000 Monte-Carlo runs of generating the data set and use 85% of the data points
+for training and 15% for test. The Rényi classifier is obtained by gradient descent method with
+regularizer λridge = 104 . The numerical experiment shows 19.7% average misclassification rate for
+SVM and 19.9% for Rényi classifier. However, the average training time of the Rényi classifier is
+0.2 seconds while the training time of SVM (with Matlab SVM command) is 1.25 seconds.
+Acknowledgments: The authors are grateful to Stanford University supporting a Stanford Graduate
+Fellowship, and the Center for Science of Information (CSoI), an NSF Science and Technology
+Center under grant agreement CCF-0939370 , for the support during this research.
+
+8
+
+References
+[1] F. Farnia, M. Razaviyayn, S. Kannan, and D. Tse. Minimum HGR correlation principle: From
+marginals to joint distribution. arXiv preprint arXiv:1504.06010, 2015.
+[2] E. Eban, E. Mezuman, and A. Globerson. Discrete chebyshev classifiers. In Proceedings of
+the 31st International Conference on Machine Learning (ICML-14), pages 1233–1241, 2014.
+[3] N. Friedman, D. Geiger, and M. Goldszmidt. Bayesian network classifiers. Machine learning,
+29(2-3):131–163, 1997.
+[4] G. R. G. Lanckriet andE. L. Ghaoui, C. Bhattacharyya, and M. I. Jordan. A robust minimax
+approach to classification. The Journal of Machine Learning Research, 3:555–582, 2003.
+[5] M. I. Jordan, Z. Ghahramani, T. S. Jaakkola, and L. K. Saul. An introduction to variational
+methods for graphical models. Machine learning, 37(2):183–233, 1999.
+[6] T. Roughgarden and M. Kearns. Marginals-to-models reducibility. In Advances in Neural
+Information Processing Systems, pages 1043–1051, 2013.
+[7] E. T. Jaynes. Information theory and statistical mechanics. Physical review, 106(4):620, 1957.
+[8] A. Globerson and N. Tishby. The minimum information principle for discriminative learning.
+In Proceedings of the 20th conference on Uncertainty in artificial intelligence, pages 193–200.
+AUAI Press, 2004.
+[9] M. Sion. On general minimax theorems. Pacific J. Math, 8(1):171–176, 1958.
+[10] J. De Loera and S. Onn. The complexity of three-way statistical tables. SIAM Journal on
+Computing, 33(4):819–836, 2004.
+[11] D. Bertsimas and J. Sethuraman. Moment problems and semidefinite optimization. In Handbook of semidefinite programming, pages 469–509. Springer, 2000.
+[12] H. O. Hirschfeld. A connection between correlation and contingency. In Mathematical Proceedings of the Cambridge Philosophical Society, volume 31, pages 520–524. Cambridge
+Univ. Press, 1935.
+[13] H. Gebelein. Das statistische problem der korrelation als variations-und eigenwertproblem und
+sein zusammenhang mit der ausgleichsrechnung. ZAMM-Journal of Applied Mathematics and
+Mechanics/Zeitschrift für Angewandte Mathematik und Mechanik, 21(6):364–379, 1941.
+[14] A. Rényi. On measures of dependence. Acta mathematica hungarica, 10(3):441–451, 1959.
+[15] V. Anantharam, A. Gohari, S. Kamath, and C. Nair. On maximal correlation, hypercontractivity, and the data processing inequality studied by Erkip and Cover. arXiv preprint
+arXiv:1304.6133, 2013.
+[16] A. Shapiro, D. Dentcheva, and A. Ruszczyński. Lectures on stochastic programming: modeling and theory, volume 16. SIAM, 2014.
+[17] A. Shapiro. Monte carlo sampling methods. Handbooks in operations research and management science, 10:353–425, 2003.
+[18] S. M. Kakade, K. Sridharan, and A. Tewari. On the complexity of linear prediction: Risk
+bounds, margin bounds, and regularization. In Advances in neural information processing
+systems, pages 793–800, 2009.
+[19] H. Peng, F. Long, and C. Ding. Feature selection based on mutual information criteria of maxdependency, max-relevance, and min-redundancy. IEEE Transactions on Pattern Analysis and
+Machine Intelligence, 27(8):1226–1238, 2005.
+[20] R. Battiti. Using mutual information for selecting features in supervised neural net learning.
+IEEE Transactions on Neural Networks, 5(4):537–550, 1994.
+[21] S. Boyd, N. Parikh, E. Chu, B. Peleato, and J. Eckstein. Distributed optimization and statistical
+R in
+learning via the alternating direction method of multipliers. Foundations and Trends
+Machine Learning, 3(1):1–122, 2011.
+
+9
+
+

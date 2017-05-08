@@ -14,31 +14,31 @@ using namespace std;
 
 class Searcher {
     private:
-        //int numDocs;
         IndexInterface* index;
         queue<string> input;
-        vector<pair<string, int>> documents;
+        vector<string> txtFiles;
         vector<pair<string, int>> tfidfRankings;
+
     public:
         Searcher();
-        Searcher(IndexInterface*);
+        Searcher(IndexInterface*, vector<string>);
         bool checkForWord(string);
         void getQuery();
         void receiveRequest(string, int);
-        vector<pair<string, int>>& receiveStringRequest(string);
-        vector<pair<string, int>>& calculateTFIDF(Word, int);
-        string findPDFToPrint(string, vector<string>);
-        void printPDF(string);
-        void printResults(vector<pair<string, int>>&);
+        vector<pair<string, int>> receiveStringRequest(string);
+        void calculateTFIDF(vector<pair<string, int>>);
+        //string findPDFToPrint(string);
+        void printPDF();
+        void printResults(vector<pair<string, int>>);
 
-
+        void notQuery();
         void andQuery();
         void orQuery();
         void simpleQuery(string);
-        void outPut(vector<pair<string, int>>&);
-        vector<pair<string, int>>& vecUnion(vector<pair<string, int>>&, vector<pair<string, int>>&);
-        vector<pair<string, int>>& vecInter(vector<pair<string, int>>&, vector<pair<string, int>>&);
-        vector<pair<string, int>>& vecDiff(vector<pair<string, int>>&, vector<pair<string, int>>&);
+        //void outPut(vector<pair<string, int>>);
+        vector<pair<string, int>> vecUnion(vector<pair<string, int>>&, vector<pair<string, int>>&);
+        vector<pair<string, int>> vecInter(vector<pair<string, int>>&, vector<pair<string, int>>&);
+        vector<pair<string, int>> vecDiff(vector<pair<string, int>>&, vector<pair<string, int>>&);
 
 };
 

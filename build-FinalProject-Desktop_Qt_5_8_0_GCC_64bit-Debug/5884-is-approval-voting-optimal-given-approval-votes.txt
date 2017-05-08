@@ -1,0 +1,789 @@
+Is Approval Voting Optimal Given Approval Votes?
+
+Nisarg Shah
+Computer Science Department
+Carnegie Mellon University
+nkshah@cs.cmu.edu
+
+Ariel D. Procaccia
+Computer Science Department
+Carnegie Mellon University
+arielpro@cs.cmu.edu
+
+Abstract
+Some crowdsourcing platforms ask workers to express their opinions by approving a set of k good alternatives. It seems that the only reasonable way to aggregate
+these k-approval votes is the approval voting rule, which simply counts the number of times each alternative was approved. We challenge this assertion by proposing a probabilistic framework of noisy voting, and asking whether approval voting
+yields an alternative that is most likely to be the best alternative, given k-approval
+votes. While the answer is generally positive, our theoretical and empirical results
+call attention to situations where approval voting is suboptimal.
+
+1
+
+Introduction
+
+It is surely no surprise to the reader that modern machine learning algorithms thrive on large
+amounts of data — preferably labeled. Online labor markets, such as Amazon Mechanical Turk
+(www.mturk.com), have become a popular way to obtain labeled data, as they harness the power
+of a large number of human workers, and offer significantly lower costs compared to expert opinions. But this low-cost, large-scale data may require compromising quality: the workers are often
+unqualified or unwilling to make an effort, leading to a high level of noise in their submitted labels.
+To overcome this issue, it is common to hire multiple workers for the same task, and aggregate their
+noisy opinions to find more accurate labels. For example, TurKit [17] is a toolkit for creating and
+managing crowdsourcing tasks on Mechanical Turk. For our purposes its most important aspect
+is that it implements plurality voting: among available alternatives (e.g., possible labels), workers
+report the best alternative in their opinion, and the alternative that receives the most votes is selected.
+More generally, workers may be asked to report the k best alternatives in their opinion; such a vote
+is known as a k-approval vote. This has an advantage over plurality (1-approval) in noisy situations
+where a worker may not be able to pinpoint the best alternative accurately, but can recognize that
+it is among the top k alternatives [23].1 At the same time, k-approval votes, even for k > 1, are
+much easier to elicit than, say, rankings of the alternatives, not to mention full utility functions. For
+example, EteRNA [16] — a citizen science game whose goal is to design RNA molecules that fold
+into stable structures — uses 8-approval voting on submitted designs, that is, each player approves
+up to 8 favorite designs; the designs that received the largest number of approval votes are selected
+for synthesis in the lab.
+So, the elicitation of k-approval votes is common practice and has significant advantages. And it
+may seem that the only reasonable way to aggregate these votes, once collected, is via the approval
+voting rule, that is, tally the number of approvals for each alternative, and select the most approved
+one.2 But is it? In other words, do the k-approval votes contain useful information that can lead to
+1
+
+k-approval is also used for picking k winners, e.g., various cities in the US such as San Francisco, Chicago,
+and New York use it in their so-called “participatory budgeting” process [15].
+2
+There is a subtle distinction, which we will not belabor, between k-approval voting, which is the focus of
+this paper, and approval voting [8], which allows voters to approve as many alternatives as they wish. The latter
+
+1
+
+significantly better outcomes, and is ignored by approval voting? Or is approval voting an (almost)
+optimal method for aggregating k-approval votes?
+Our Approach. We study the foregoing questions within the maximum likelihood estimation (MLE)
+framework of social choice theory, which posits the existence of an underlying ground truth that provides an objective comparison of the alternatives. From this viewpoint, the votes are noisy estimates
+of the ground truth. The optimal rule then selects the alternative that is most likely to be the best
+alternative given the votes. This framework has recently received attention from the machine learning community [18, 3, 2, 4, 21], in part due to its applications to crowdsourcing domains [20, 21, 9],
+where, indeed, there is a ground truth, and individual votes are objective.
+In more detail, in our model there exists a ground truth ranking over the alternatives, and each voter
+holds an opinion, which is another ranking that is a noisy estimate of the ground truth ranking. The
+opinions are drawn i.i.d. from the popular Mallows model [19], which is parametrized by the ground
+truth ranking, a noise parameter ϕ ∈ [0, 1], and a distance metric d over the space of rankings.
+We use five well-studied distance metrics: the Kendall tau (KT) distance, the (Spearman) footrule
+distance, the maximum displacement distance, the Cayley distance, and the Hamming distance.
+When required to submit a k-approval vote, a voter simply approves the top k alternatives in his
+opinion. Given the votes, an alternative a is the maximum likelihood estimate (MLE) for the best
+alternative if the votes are most likely generated by a ranking that puts a first.
+We can now reformulate our question in slightly more technical terms:
+Is approval voting (almost) a maximum likelihood estimator for the best alternative, given votes drawn from the Mallows model? How does the answer depend
+on the noise parameter φ and the distance metric d?
+Our results. Our first result (Theorem 1) shows that under the Mallows model, the set of winners
+according to approval voting coincides with the set of MLE best alternatives under the Kendall tau
+distance, but under the other four distances there may exist approval winners that are not MLE best
+alternatives. Our next result (Theorem 2) confirms the intuition that the suboptimality of approval
+voting stems from the information that is being discarded: when only a single alternative is approved
+or disapproved in each vote, approval voting — which now utilizes all the information that can be
+gleaned from the anonymous votes — is optimal under mild conditions.
+Going back to the general case of k-approval votes, we show (Theorem 3) that even under the four
+distances for which approval voting is suboptimal, a weaker statement holds: in cases with very high
+or very low noise, every MLE best alternative is an approval winner (but some approval winners
+may not be MLE best alternatives). And our experiments, using real data, show that the accuracy of
+approval voting is usually quite close to that of the MLE in pinpointing the best alternative.
+We conclude that approval voting is a good way of aggregating k-approval votes in most situations.
+But our work demonstrates that, perhaps surprisingly, approval voting may be suboptimal, and, in
+situations where a high degree of accuracy is required, exact computation of the MLE best alternative
+is an option worth considering. We discuss our conclusions in more detail in Section 6.
+
+2
+
+Model
+
+Let [t] , {1, . . . , t}. Denote the set of alternatives by A, and let |A| = m. We use L(A) to denote
+the set of rankings (total orders) of the alternatives in A. For a ranking σ ∈ L(A), let σ(i) denote
+the alternative occupying position i in σ, and let σ −1 (a) denote the rank (position) of alternative a
+in σ. With a slight abuse of notation, let σ([t]) , {a ∈ A|σ −1 (a) ∈ [t]}. We use σa↔b to denote
+the ranking obtained by swapping the positions of alternatives a and b in σ. We assume that there
+exists an unknown true ranking of the alternatives (the ground truth), denoted σ ∗ ∈ L(A). We also
+make the standard assumption of a uniform prior over the true ranking.
+framework of approval voting has been studied extensively, both from the axiomatic point of view [7, 8, 13,
+22, 1], and the game-theoretic point of view [14, 12, 6]. However, even under this framework it is a standard
+assumption that votes are tallied by counting the number of times each alternative is approved, which is why
+we simply refer to the aggregation rule under consideration as approval voting.
+
+2
+
+Let N = {1, . . . , n} denote the set of voters. Each voter i has an opinion, denoted πi ∈ L(A),
+which is a noisy estimate of the true ranking σ ∗ ; the collection of opinions — the (opinion) profile
+— is denoted π. Fix k ∈ [m]. A k-approval vote is a collection of k alternatives approved by a
+voter. When asked to submit a k-approval vote, voter i simply submits the vote Vi = πi ([k]), which
+is the set of alternatives at the top k positions in his opinion. The collection of all votes is called
+the vote profile, and denoted V = {Vi }i∈[n] . For a ranking σ and a k-approval vote v, we say that
+v is generated from σ, denoted σ →k v (or σ → v when the value of k is clear from the context),
+if v = σ([k]). More generally, for an opinion profile π and a vote profile V , we say π →k V (or
+π → V ) if πi →k Vi for every i ∈ [n].
+Let Ak = {Ak ⊆ A||Ak | = k} denote the set of all subsets of A of size k. A voting rule operating
+on k-approval votes is a function (Ak )n → A that returns a winning alternative given the votes.3
+In particular, let us define the approval score of an alternative a, denoted SC A PP (a), as the number
+of voters that approve a. Then, approval voting simply chooses an alternative with the greatest
+approval score. Note that we do not break ties. Instead, we talk about the set of approval winners.
+Following the standard social choice literature, we model the opinion of each voter as being drawn
+i.i.d. from an underlying noise model. A noise model describes the probability of drawing an opinion
+σ given the true ranking σ ∗ , denoted Pr[σ|σ ∗ ]. We say that a noise model is neutral if the labels
+of the alternatives do not matter, i.e., renaming alternatives in the true ranking σ and in the opinion
+σ ∗ , in the same fashion, keeps Pr[σ|σ ∗ ] intact. A popular noise model is the Mallows model [19],
+∗
+under which Pr[σ|σ ∗ ] = ϕd(σ,σ ) /Zϕm . Here, d is a distance metric over the space of rankings.
+Parameter ϕ ∈ [0, 1] governs the noise level; ϕ = 0 implies that the true ranking is generated with
+probability 1, and ϕ = 1 implies the uniform distribution. Zϕm is the normalization constant, which
+is independent of the true ranking σ ∗ given that distance d is neutral, i.e., renaming alternatives in
+the same fashion in two rankings does not change the distance between them. Below, we review five
+popular distances used in the social choice literature; they are all neutral.
+• The Kendall tau (KT) distance, denoted dKT , measures the number of pairs of alternatives
+over which two rankings disagree. Equivalently, it is the number of swaps required by
+bubble sort to convert one ranking into another.
+• The (Spearman) footrule (FR) distance, denoted dFR , measures the total displacement (absolute difference between positions) of all alternatives in two rankings.
+• The Maximum Displacement (MD) distance, denoted dMD , measures the maximum of the
+displacements of all alternatives between two rankings.
+• The Cayley (CY) distance, denoted dCY , measures the minimum number of swaps (not
+necessarily of adjacent alternatives) required to convert one ranking into another.
+• The Hamming (HM) distance, denoted dHM , measures the number of positions in which
+two rankings place different alternatives.
+Since opinions
+the probability of aPprofile π given the true ranking σ ∗ is
+Qnare drawn independently,
+n
+∗
+∗
+d(π,σ ∗ )
+Pr[π|σ ] = i=1 Pr[πi |σ ] ∝ ϕ
+, where d(π, σ ∗ ) = i=1 d(πi , σ ∗ ). Once we fix the noise
+model,
+for a fixed k we can derive the probability of observing a given k-approval vote v: Pr[v|σ ∗ ] =
+P
+Pr[σ|σ ∗ ]. Then, the probability of drawing a given vote profile V is Pr[V |σ ∗ ] =
+Qnσ∈L(A):σ→v∗
+P
+∗
+∗
+i=1 Pr[Vi |σ ]. Alternatively, this can also be expressed as Pr[V |σ ] =
+π∈L(A)n :π→V Pr[π|σ ].
+Hereinafter, we omit the domains L(A)n for π and L(A) for σ ∗ when they are clear from the context.
+Finally, given the vote profile V the likelihood of an alternative a beingPthe best alternative in the true
+ranking σ ∗ is proportional to (via Bayes’ rule) Pr[V |σ ∗ (1) = a] = σ∗ :σ∗ (1)=a Pr[V |σ ∗ ]. Using
+the two expressions derived earlier for Pr[V |σ ∗ ], and ignoring the normalization constant Zϕm from
+the probabilities, we define the likelihood function of a given votes V as
+"
+#
+n
+X
+X
+X
+Y
+X
+d(π,σ ∗ )
+d(πi ,σ ∗ )
+L(V, a) ,
+ϕ
+=
+ϕ
+.
+(1)
+σ ∗ :σ ∗ (1)=a π:π→V
+
+σ ∗ :σ ∗ (1)=a i=1
+
+πi :πi →Vi
+
+The maximum likelihood estimate (MLE) for the best alternative is given by arg maxa∈A L(V, a).
+Again, we do not break ties; we study the set of MLE best alternatives.
+3
+
+Technically, this is a social choice function; a social welfare function returns a ranking of the alternatives.
+
+3
+
+3
+
+Optimal Voting Rules
+
+At first glance, it seems natural to use approval voting (that is, returning the alternative that is
+approved by the largest number of voters) given k-approval votes. However, consider the following
+example with 4 alternatives (A = {a, b, c, d}) and 5 voters providing 2-approval votes:
+V1 = {b, c}, V2 = {b, c}, V3 = {a, d}, V4 = {a, b}, V5 = {a, c}.
+
+(2)
+
+Notice that alternatives a, b, and c receive 3 approvals each, while alternative d receives only a
+single approval. Approval voting may return any alternative other than alternative d. But is that
+always optimal? In particular, while alternatives b and c are symmetric, alternative a is qualitatively
+different due to different alternatives being approved along with a. This indicates that under certain
+conditions, it is possible that not all three alternatives are MLE for the best alternative. Our first
+result shows that this is indeed the case under three of the distance functions listed above, and a
+similar example works for a fourth. However, surprisingly, under the Kendall tau distance the MLE
+best alternatives are exactly the approval winners, and hence are polynomial-time computable, which
+stands in sharp contrast to the NP-hardness of computing them given rankings [5].
+Theorem 1. The following statements hold for aggregating k-approval votes using approval voting.
+1. Under the Mallows model with a fixed distance d ∈ {dMD , dCY , dHM , dFR }, there exist a
+vote profile V with at most six 2-approval votes over at most five alternatives, and a choice
+for the Mallows parameter ϕ, such that not all approval winners are MLE best alternatives.
+2. Under the Mallows model with the distance d = dKT , the set of MLE best alternatives
+coincides with the set of approval winners, for all vote profiles V and all values of the
+Mallows parameter ϕ ∈ (0, 1).
+Proof. For the Mallows model with d ∈ {dMD , dCY , dHM } and any ϕ ∈ (0, 1), the profile from
+Equation (2) is a counterexample: alternatives b and c are MLE best alternatives, but a is not.
+For the Mallows model with d = dFR , we could not find a counter example with 4 alternatives;
+computer-based simulations generated the following counterexample with 5 alternatives that works
+for any ϕ ∈ (0, 1): V1 = V2 = {a, b}, V3 = V4 = {c, d}, V5 = {a, e}, and V6 = {b, c}.
+Here, alternatives a, b, and c have the highest approval score of 3. However, alternative b has a
+strictly lower likelihood of being the best alternative than alternative a, and hence is not an MLE
+best alternative. The calculation verifying these counterexamples is presented in the online appendix
+(specifically, Appendix A).
+In contrast, for the Kendall tau distance, we show that all approval winners are MLE best alternatives,
+and vice-versa. We begin by simplifying the likelihood function L(V, a) from Equation (1) for the
+special case of the Mallows model with the Kendall tau distance. In this case, it is well known that
+Qm
+Pj−1
+the normalization constant satisfies Zϕm = j=1 Tϕj , where Tϕj = i=0 ϕi . Consider a ranking
+πi such that πi → Vi . We can decompose dKT (πi , σ ∗ ) into three types of pairwise mismatches:
+i) d1 (πi , σ ∗ ): The mismatches over pairs (b, c) where b ∈ Vi and c ∈ A \ Vi , or vice-versa; ii)
+d2 (πi , σ ∗ ): The mismatches over pairs (b, c) where b, c ∈ Vi ; and iii) d3 (πi , σ ∗ ): The mismatches
+over pairs (b, c) where b, c ∈ A \ Vi .
+Note that every ranking πi that satisfies πi → Vi has identical mismatches of type 1. Let us denote
+the number of such mismatches by dKT (Vi , σ ∗ ). Also, notice that d2 (πi , σ ∗ ) = dKT (πi |Vi , σ ∗ |Vi ),
+where σ|S denotes the ranking of alternatives in S ⊆ A dictated by σ. Similarly, d3 (πi , σ ∗ ) =
+dKT (πi |A\Vi , σ ∗ |A\Vi ). Now, in the expression for the likelihood function L(V, a),
+L(V, a) =
+
+X
+
+n
+Y
+
+X
+
+ϕdKT (Vi ,σ
+
+∗
+
+)+dKT (πi |Vi ,σ ∗ |Vi )+dKT (πi |A\V ,σ ∗ |A\V )
+i
+
+i
+
+σ ∗ :σ ∗ (1)=a i=1 πi :πi →V
+
+=
+
+X
+
+n
+Y
+
+
+dKT (Vi ,σ ∗ )
+
+ϕ
+
+σ ∗ :σ ∗ (1)=a i=1
+
+=
+
+X
+
+n
+Y
+
+
+
+dKT (πi1 ,σ ∗ |Vi ) 
+
+ϕ
+
+πi1 ∈L(Vi )
+
+ϕdKT (Vi ,σ
+
+∗
+
+)
+
+
+
+ 
+X
+
+·
+
+dKT (πi2 ,σ ∗ |A\V ) 
+
+X
+
+ϕ
+
+πi2 ∈L(A\Vi )
+
+· Zϕk · Zϕm−k ∝
+
+σ ∗ :σ ∗ (1)=a i=1
+
+X
+σ ∗ :σ ∗ (1)=a
+
+4
+
+ϕdKT (V,σ
+
+∗
+
+)
+
+b
+, L(V,
+a).
+
+i
+
+The second equality follows because every ranking πi that satisfies πi → V can be generated by
+picking rankings πi1 ∈ L(Vi ) and πi2 ∈ L(A \ Vi ), and concatenating them. The third equality
+follows from theP
+definition of the normalization constant in the Mallows model. Finally, we denote
+n
+∗
+dKT (V, σ ∗ ) ,
+i=1 dKT (Vi , σ ). It follows that maximizing L(V, a) amounts to maximizing
+b
+L(V,
+a). Note that dKT (V, σ ∗ ) counts the number of times alternative a is approved while alternative
+b is not for all a, b ∈ P
+A with b σ∗ a. That is, let nV (a, −b) , |{i ∈ [n]|a ∈ Vi ∧ b ∈
+/ Vi }|.
+Then, dKT (V, σ ∗ ) = a,b∈A:bσ∗ a nV (a, −b). Also, note that for alternatives c, d ∈ A, we have
+SC A PP (c) − SC A PP (d) = nV (c, −d) − nV (d, −c).
+b
+Next, we show that L(V,
+a) is a monotonically increasing function of SC A PP (a). Equivalently,
+b
+b
+L(V, a) ≥ L(V, b) if and only if SC A PP (a) ≥ SC A PP (b). Fix a, b ∈ A. Consider the bijection
+between the sets of rankings placing a and b first, which simply swaps a and b (σ ↔ σa↔b ). Then,
+X
+∗
+∗
+b
+b
+L(V,
+a) − L(V,
+b) =
+ϕdKT (V,σ ) − ϕdKT (V,σa↔b ) .
+(3)
+σ ∗ :σ ∗ (1)=a
+∗
+
+∗
+
+∗
+(1) = a. Note that σa↔b
+(1) = b. Let C
+∗
+σ ∗ (equivalently, in σa↔b
+). Now, σ ∗ and
+
+Fix σ such that σ
+denote the set of alternatives positioned
+∗
+between a and b in
+σa↔b
+have identical disagreements with
+V on a pair of alternatives (x, y) unless i) one of x and y belongs to {a, b}, and ii) the other belongs
+∗
+to C ∪ {a, b}. Thus, the difference of disagreements of σ ∗ and σa↔b
+with V on such pairs is
+∗
+dKT (V, σ ∗ ) − dKT (V, σa↔b
+)
+h
+i X
+V
+V
+= n (b, −a) − n (a, −b) +
+[nV (c, −a) + nV (b, −c) − nV (c, −b) − nV (a, −c)]
+c∈C
+
+
+
+= (|C| + 1) · SC
+
+A PP
+
+(b) − SC
+
+A PP
+
+
+(a) .
+
+∗
+b
+b
+Thus, SC A PP (a) = SC A PP (b) implies dKT (V, σ ∗ ) = dKT (V, σa↔b
+) (and thus, L(V,
+a) = L(V,
+b)),
+A PP
+A PP
+∗
+∗
+b
+b
+and SC (a) > SC (b) implies dKT (V, σ ) < dKT (V, σa↔b ) (and thus, L(V,
+a) > L(V,
+b)). 
+
+Suboptimality of approval voting for distances other than the KT distance stems from the fact that
+in counting the number of approvals for a given alternative, one discards information regarding
+other alternatives approved along with the given alternative in various votes. However, no such
+information is discarded when only one alternative is approved (or not approved) in each vote. That
+is, given plurality (k = 1) or veto (k = m − 1) votes, approval voting should be optimal, not only
+for the Mallows model but for any reasonable noise model. The next result formalizes this intuition.
+Theorem 2. Under a neutral noise model, the set of MLE best alternatives coincides with the set of
+approval winners
+1. given plurality votes, if p1 > pi > 0, ∀i ∈ {2, . . . , m}, where pi is the probability of the
+alternative in position i in the true ranking appearing in the first position in a sample, or
+2. given veto votes, if 0 < q1 < qi , ∀i ∈ {2, . . . , m}, where qi is the probability of the
+alternative in position i in the true ranking appearing in the last position in a sample.
+Proof. We show the proof for plurality votes. The case of veto votes is symmetric: in every vote,
+instead of a single approved alternative, we have a single alternative that is not approved. Note that
+the probability pi is independent of the true ranking σ ∗ due to the neutrality of the noise model.
+∗
+∗
+Consider a plurality vote profile V and an alternative
+Pa. Let T =∗ {σ ∈ L(A)|σ ∗(1) = a}.
+The likelihood function for a is given by L(V, a) = σ∗ ∈T Pr[V |σ ]. Under every σ ∈ T , the
+Qn
+contribution of the SC A PP (a) plurality votes for a to the product Pr[V |σ ∗ ] = i=1 Pr[Vi |σ ∗ ] is
+A PP
+(p1 )SC (a) . Note that the alternatives in A \ {a} are distributed among positions in {2, . . . , m} in
+all possible ways by the rankings in T . Let ib denote the position of alternative b ∈ A \ {a}. Then,
+SC A PP (a)
+
+L(V, a) = p1
+
+·
+
+X
+
+SC A PP (b)
+
+Y
+
+pi b
+
+{ib }b∈A\{a} ={2,...,m} b∈A\{a}
+
+= (p1 )n·k ·
+
+X
+
+Y
+
+{ib }b∈A\{a} ={2,...,m} b∈A\{a}
+
+5
+
+
+
+pi b
+p1
+
+SC APP (b)
+.
+
+P
+The second transition holds because SC A PP (a) = n · k − b∈A\{a} SC A PP (b). Our assumption in
+the theorem statement implies 0 < pib /p1 < 1 for ib ∈ {2, . . . , m}. Now, it can be checked that
+P
+A PP
+A PP
+b
+b
+for a, b ∈ A, we have L(V,
+a)/L(V,
+b) = i∈{2,...,m} (pi /p1 )SC (b)−SC (a) . Thus, SC A PP (a) ≥
+b
+b
+SC A PP (b) if and only if L(V,
+a) ≥ L(V,
+b), as required. 
+Note that the conditions of Theorem 2 are very mild. In particular, the condition for plurality votes
+is satisfied under the Mallows model with all five distances we consider, and the condition for veto
+votes is satisfied under the Mallows model with the Kendall tau, the footrule, and the maximum
+displacement distances. This is presented as Theorem 4 in the online appendix (Appendix B).
+
+4
+
+High Noise and Low Noise
+
+While Theorem 1 shows that there are situations where at least some of the approval winners may not
+be MLE best alternatives, it does not paint the complete picture. In particular, in both profiles used as
+counterexamples in the proof of Theorem 1, it holds that every MLE best alternative is an approval
+winner. That is, the optimal rule choosing an MLE best alternative works as if a tie-breaking scheme
+is imposed on top of approval voting. Does this hold true for all profiles? Part 2 of Theorem 1 gives
+a positive answer for the Kendall tau distance. In this section, we answer the foregoing question
+(largely) in the positive under the other four distance functions, with respect to the two ends of the
+Mallows spectrum: the case of low noise (ϕ → 0), and the case of high noise (ϕ → 1). The case
+of high noise is especially compelling (because that is when it becomes hard to pinpoint the ground
+truth), but both extreme cases have received special attention in the literature [24, 21, 11]. In contrast
+to previous results, which have almost always yielded different answers in the two cases, we show
+that every MLE best alternative is an approval winner in both cases, in almost every situation.
+P
+P
+∗
+We begin with the likelihood function for alternative a: L(V, a) = σ∗ :σ∗ (1)=a π:π→V ϕd(π,σ ) .
+When ϕ → 0, maximizing L(V, a) requires minimizing the minimum exponent. Ties, if any, are
+broken using the number of terms achieving the minimum exponent, then the second smallest exponent, and so on. At the other extreme, let ϕ = 1 −  with  → 0. Using the first-order approximation
+∗
+(1 − )d(π,σ ) ≈ 1 −  · d(π, σ ∗ ), maximizing L(V, a) requires minimizing the sum of d(π, σ ∗ ) over
+∗
+all σ , π with σ ∗ (1) = a and π → V . Ties are broken using higher-order approximations. Let
+X
+X
+L0 (V, a) = ∗ min
+min d(π, σ ∗ )
+L1 (V, a) =
+d(π, σ ∗ ).
+∗
+σ :σ (1)=a π:π→V
+
+σ ∗ :σ ∗ (1)=a π:π→V
+
+We are interested in minimizing L0 (V, a) and L1 (V, a); this leads to novel combinatorial problems
+that require detailed analysis. We are now ready for the main result of this section.
+Theorem 3. The following statements hold for using approval voting to aggregate k-approval votes
+drawn from the Mallows model.
+1. Under the Mallows model with d ∈ {dFR , dCY , dHM } and ϕ → 0, and under the Mallows
+model with d ∈ {dFR , dCY , dHM , dMD } and ϕ → 1, it holds that for every k ∈ [m − 1],
+and every profile with k-approval votes, every MLE best alternative is an approval winner.
+2. Under the Mallows model with d = dMD and ϕ → 0, there exists a profile with seven 2approval votes over 5 alternatives such that no MLE best alternative is an approval winner.
+Before we proceed to the proof, we remark that in part 1 of the theorem, by ϕ → 0 and ϕ → 1,
+we mean that there exist 0 < ϕ∗0 , ϕ∗1 < 1 such that the result holds for all ϕ ≤ ϕ∗0 and ϕ ≥ ϕ∗1 ,
+respectively. In part 2 of the theorem, we mean that for every ϕ∗ > 0, there exists a ϕ < ϕ∗ for
+which the negative result holds. Due to space constraints, we only present the proof for the Mallows
+model with d = dFR and ϕ → 0; the full proof appears in the online appendix (Appendix C).
+Proof of Theorem 3 (only for d = dFR , φ → 0). Let ϕ → 0 in the Mallows model with the footrule
+distance. To analyze L0 (V, ·), we first analyze minπ:π→V dFR (σ ∗ , π) for a fixed σ ∗ ∈ L(A). Then,
+we minimize it over σ ∗ , and show that the set of alternatives that appear first in the minimizers (i.e.,
+the set of alternatives minimizing L0 (V, a)) is exactly the set of approval winners. Since every MLE
+best alternative in the ϕ → 0 case must minimize L0 (V, ·), the result follows.
+6
+
+Fix σ ∗ ∈ L(A). Imagine a boundary between positions k and k + 1 in all rankings, i.e., between the
+approved and the non-approved alternatives. Now, given a profile π such that π → V , we first apply
+the following operation repeatedly. For i ∈ [n], let an alternative a ∈ A be in positions t and t0 in σ ∗
+and πi , respectively. If t and t0 are on the same side of the boundary (i.e., either both are at most k or
+both are greater than k) and t 6= t0 , then swap alternatives πi (t) and πi (t0 ) = a in πi . Note that this
+decreases the displacement of a in πi with respect to σ ∗ by |t − t0 |, and increases the displacement
+of πi (t) by at most |t − t0 |. Hence, the operation cannot increase dFR (π, σ ∗ ). Let π ∗ denote the
+profile that we converge to. Note that π ∗ satisfies π ∗ → V (because we only swap alternatives on
+the same side of the boundary), dFR (π ∗ , σ ∗ ) ≤ dFR (π, σ ∗ ), and the following condition:
+Condition X: for i ∈ [n], every alternative that is on the same side of the boundary in σ ∗ and πi∗ is
+in the same position in both rankings.
+Because we started from an arbitrary profile π (subject to π → V ), it follows that it is sufficient to
+minimize dFR (π ∗ , σ ∗ ) over all π ∗ with π ∗ → V satisfying condition X. However, we show that
+subject to π ∗ → V and condition X, dFR (π ∗ , σ ∗ ) is actually a constant.
+Note that for i ∈ [n], every alternative that is in different positions in πi∗ and σ ∗ must be on different
+sides of the boundary in the two rankings. It is easy to see that in every πi∗ , there is an equal number
+of alternatives on both sides of the boundary that are not in the same position as they are in σ ∗ . Now,
+we can divide the total footrule distance dFR (π ∗ , σ ∗ ) into four parts:
+1. Let i ∈ [n] and t ∈ [k] such that σ ∗ (t) 6= πi∗ (t). Let a = σ ∗ (t) and (πi∗ )−1 (a) = t0 > k.
+Then, the displacement t0 − t of a is broken into two parts: (i) t0 − k, and (ii) k − t.
+2. Let i ∈ [n] and t ∈ [m] \ [k] such that σ ∗ (t) 6= πi∗ (t). Let a = σ ∗ (t) and (πi∗ )−1 (a) =
+t0 ≤ k. Then, the displacement t − t0 of a is broken into two parts: (i) k − t0 , and (ii) t − k.
+Because the number of alternatives of type 1 and 2 is equal for every πi∗ , we can see that the total
+displacements of types 1(i) and 2(ii) are equal, and so are the total displacements of types 1(ii) and
+2(i). By observing that there are exactly n − SC A PP (σ ∗ (t)) instances of type 1 for a given value of
+t ≤ k, and SC A PP (σ ∗ (t)) instances of type 2 for a given value of t > k, we conclude that
+#
+" k
+m
+X
+X
+A PP
+A PP
+∗
+∗
+∗
+∗
+SC (σ (t)) · (t − k) .
+dFR (π , σ ) = 2 ·
+(n − SC (σ (t))) · (k − t) +
+t=1
+
+t=k+1
+
+Pm
+
+Minimizing this over σ ∗ reduces to minimizing t=1 SC A PP (σ ∗ (t)) · (t − k). By the rearrangement
+inequality, this is minimized when alternatives are ordered in a non-increasing order of their approval
+scores. Note that exactly the set of approval winners appear first in such rankings. 
+Theorem 3 shows that under the Mallows model with d ∈ {dFR , dCY , dHM }, every MLE best
+alternative is an approval winner for both ϕ → 0 and ϕ → 1. We believe that the same statement
+holds for all values of ϕ, as we were unable to find a counterexample despite extensive simulations.
+Conjecture 1. Under the Mallows model with distance d ∈ {dFR , dCY , dHM }, every MLE best
+alternative is an approval winner for every ϕ ∈ (0, 1).
+
+5
+
+Experiments
+
+We perform experiments with two real-world datasets — Dots and Puzzle [20] — to compare the
+performance of approval voting against that of the rule that is MLE for the empirically observed
+distribution of k-approval votes (and not for the Mallows model). Mao et al. [20] collected these
+datasets by asking workers on Amazon Mechanical Turk to rank either four images by the number
+of dots they contain (Dots), or four states of an 8-puzzle by their distance to the goal state (Puzzle).
+Hence, these datasets contain ranked votes over 4 alternatives in a setting where a true ranking of the
+alternatives indeed exists. Each dataset has four different noise levels; higher noise was created by
+increasing the task difficulty [20]. For Dots, ranking images with a smaller difference in the number
+of dots leads to high noise, and for Puzzle, ranking states farther away from the goal state leads to
+high noise. Each noise level of each dataset contains 40 profiles with approximately 20 votes each.
+7
+
+In our experiments, we extract 2-approval votes from the ranked votes by taking the top 2 alternatives
+in each vote. Given these 2-approval votes, approval voting returns an alternative with the largest
+number of approvals. To apply the MLE rule, however, we need to learn the underlying distribution
+of 2-approval votes. To that end, we partition the set of profiles in each noise level of each dataset
+into training (90%) and test (10%) sets. We use a high fraction of the profiles for training in order
+to examine the maximum advantage that the MLE rule may have over approval voting.
+Given the training profiles (which approval voting simply ignores), the MLE rule learns the probabilities of observing each of the 6 possible 2-subsets of the alternatives given a fixed true ranking.4
+On the test data, the MLE rule first computes the likelihood of each ranking given the votes. Then, it
+computes the likelihood of each alternative being the best by adding the likelihoods of all rankings
+that put the alternative first. It finally returns an alternative with the highest likelihood.
+
+0.9
+
+0.9
+
+0.8
+
+0.8
+
+Accuracy
+
+Accuracy
+
+We measure the accuracy of both methods by their frequency of being able to pinpoint the correct
+best alternative. For each noise level in each dataset, the accuracy is averaged over 1000 simulations
+with random partitioning of the profiles into training and test sets.
+
+0.7
+0.6
+0.5
+
+0.7
+
+MLE
+Approval
+
+0.6
+1
+
+2
+
+3
+
+4
+
+0.5
+
+Noise Level
+
+1
+
+2
+
+3
+
+4
+
+Noise Level
+
+(a) Dots
+
+(b) Puzzle
+
+Fig. 1: The MLE rule (trained on 90% of the profiles) and approval voting for 2-approval votes.
+Figures 1(a) and 1(b) show that in general the MLE rule does achieve greater accuracy than approval
+voting. However, the increase is at most 4.5%, which may not be significant in some contexts.
+
+6
+
+Discussion
+
+Our main conclusion from the theoretical and empirical results is that approval voting is typically
+close to optimal for aggregating k-approval votes. However, the situation is much subtler than it
+appears at first glance. Moreover, our theoretical analysis is restricted by the assumption that the
+votes are drawn from the Mallows model. A recent line of work in social choice theory [9, 10] has
+focused on designing voting rules that perform well — simultaneously — under a wide variety of
+noise models. It seems intuitive that approval voting would work well for aggregating k-approval
+votes under any reasonable noise model; an analysis extending to a wide family of realistic noise
+models would provide a stronger theoretical justification for using approval voting.
+On the practical front, it should be emphasized that approval voting is not always optimal. When
+maximum accuracy matters, one may wish to switch to the MLE rule. However, learning and applying the MLE rule is much more demanding. In our experiments we learn the entire distribution over
+k-approval votes given the true ranking. While for 2-approval or 3-approval votes over 4 alternatives we only need to learn 6 probability values, in general for k-approval votes over m alternatives
+one would need to learn m
+k probability values, and the training data may not be sufficient for this
+purpose. This calls for the design of estimators for the best alternative that achieve greater statistical
+efficiency by avoiding the need to learn the entire underlying distribution over votes.
+4
+Technically, we learn a neutral noise model where the probability of a subset of alternatives being observed
+only depends on the positions of the alternatives in the true ranking.
+
+8
+
+References
+[1] C. Alós-Ferrer. A simple characterization of approval voting. Social Choice and Welfare,
+27(3):621–625, 2006.
+[2] H. Azari Soufiani, W. Z. Chen, D. C. Parkes, and L. Xia. Generalized method-of-moments for
+rank aggregation. In Proc. of 27th NIPS, pages 2706–2714, 2013.
+[3] H. Azari Soufiani, D. C. Parkes, and L. Xia. Random utility theory for social choice. In Proc. of
+26th NIPS, pages 126–134, 2012.
+[4] H. Azari Soufiani, D. C. Parkes, and L. Xia. Computing parametric ranking models via rankbreaking. In Proc. of 31st ICML, pages 360–368, 2014.
+[5] J. Bartholdi, C. A. Tovey, and M. A. Trick. Voting schemes for which it can be difficult to tell
+who won the election. Social Choice and Welfare, 6:157–165, 1989.
+[6] D. Baumeister, G. Erdélyi, E. Hemaspaandra, L. A. Hemaspaandra, and J. Rothe. Computational aspects of approval voting. In Handbook on Approval Voting, pages 199–251. Springer,
+2010.
+[7] S. J. Brams. Mathematics and democracy: Designing better voting and fair-division procedures. Princeton University Press, 2007.
+[8] S. J. Brams and P. C. Fishburn. Approval Voting. Springer, 2nd edition, 2007.
+[9] I. Caragiannis, A. D. Procaccia, and N. Shah. When do noisy votes reveal the truth? In Proc. of
+14th EC, pages 143–160, 2013.
+[10] I. Caragiannis, A. D. Procaccia, and N. Shah. Modal ranking: A uniquely robust voting rule.
+In Proc. of 28th AAAI, pages 616–622, 2014.
+[11] E. Elkind and N. Shah. Electing the most probable without eliminating the irrational: Voting
+over intransitive domains. In Proc. of 30th UAI, pages 182–191, 2014.
+[12] G. Erdélyi, M. Nowak, and J. Rothe. Sincere-strategy preference-based approval voting fully
+resists constructive control and broadly resists destructive control. Math. Log. Q., 55(4):425–
+443, 2009.
+[13] P. C. Fishburn. Axioms for approval voting: Direct proof. Journal of Economic Theory,
+19(1):180–185, 1978.
+[14] P. C. Fishburn and S. J. Brams. Approval voting, condorcet’s principle, and runoff elections.
+Public Choice, 36(1):89–114, 1981.
+[15] A. Goel, A. K. Krishnaswamy, S. Sakshuwong, and T. Aitamurto. Knapsack voting. In Proc.
+of Collective Intelligence, 2015.
+[16] J. Lee, W. Kladwang, M. Lee, D. Cantu, M. Azizyan, H. Kim, A. Limpaecher, S. Yoon,
+A. Treuille, and R. Das. RNA design rules from a massive open laboratory. Proceedings
+of the National Academy of Sciences, 111(6):2122–2127, 2014.
+[17] G. Little, L. B. Chilton, M. Goldman, and R. C. Miller. TurKit: Human computation algorithms
+on Mechanical Turk. In Proc. of 23rd UIST, pages 57–66, 2010.
+[18] T. Lu and C. Boutilier. Learning Mallows models with pairwise preferences. In Proc. of 28th
+ICML, pages 145–152, 2011.
+[19] C. L. Mallows. Non-null ranking models. Biometrika, 44:114–130, 1957.
+[20] A. Mao, A. D. Procaccia, and Y. Chen. Better human computation through principled voting.
+In Proc. of 27th AAAI, pages 1142–1148, 2013.
+[21] A. D. Procaccia, S. J. Reddi, and N. Shah. A maximum likelihood approach for selecting sets
+of alternatives. In Proc. of 28th UAI, pages 695–704, 2012.
+[22] M. R. Sertel. Characterizing approval voting. Journal of Economic Theory, 45(1):207–211,
+1988.
+[23] N. Shah, D. Zhou, and Y. Peres. Approval voting and incentives in crowdsourcing. In Proc. of
+32nd ICML, pages 10–19, 2015.
+[24] H. P. Young. Condorcet’s theory of voting.
+82(4):1231–1244, 1988.
+9
+
+The American Political Science Review,
+
+

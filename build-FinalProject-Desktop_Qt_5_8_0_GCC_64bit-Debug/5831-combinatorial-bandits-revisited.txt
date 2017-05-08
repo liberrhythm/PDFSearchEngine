@@ -1,0 +1,826 @@
+Combinatorial Bandits Revisited
+Richard Combes∗
+
+M. Sadegh Talebi†
+Alexandre Proutiere†
+Marc Lelarge‡
+Centrale-Supelec, L2S, Gif-sur-Yvette, FRANCE
+† Department of Automatic Control, KTH, Stockholm, SWEDEN
+‡ INRIA & ENS, Paris, FRANCE
+richard.combes@supelec.fr,{mstms,alepro}@kth.se,marc.lelarge@ens.fr
+∗
+
+Abstract
+This paper investigates stochastic and adversarial combinatorial multi-armed bandit problems. In the stochastic setting under semi-bandit feedback, we derive
+a problem-specific regret lower bound, and discuss its scaling with the dimension of the decision space. We propose ESCB, an algorithm that efficiently exploits the structure of the problem and provide a finite-time analysis of its regret.
+ESCB has better performance guarantees than existing algorithms, and significantly outperforms these algorithms in practice. In the adversarial setting under
+bandit feedback, we propose C OMB EXP, an algorithm with the same regret scaling as state-of-the-art algorithms, but with lower computational complexity for
+some combinatorial problems.
+
+1
+
+Introduction
+
+Multi-Armed Bandit (MAB) problems [1] constitute the most fundamental sequential decision problems with an exploration vs. exploitation trade-off. In such problems, the decision maker selects
+an arm in each round, and observes a realization of the corresponding unknown reward distribution.
+Each decision is based on past decisions and observed rewards. The objective is to maximize the
+expected cumulative reward over some time horizon by balancing exploitation (arms with higher
+observed rewards should be selected often) and exploration (all arms should be explored to learn
+their average rewards). Equivalently, the performance of a decision rule or algorithm can be measured through its expected regret, defined as the gap between the expected reward achieved by the
+algorithm and that achieved by an oracle algorithm always selecting the best arm. MAB problems
+have found applications in many fields, including sequential clinical trials, communication systems,
+economics, see e.g. [2, 3].
+In this paper, we investigate generic combinatorial MAB problems with linear rewards, as introduced
+in [4]. In each round n ≥ 1, a decision maker selects an arm M from a finite set M ⊂ {0, 1}d and
+Pd
+d
+receives a reward M > X(n) =
+i=1 Mi Xi (n). The reward vector X(n) ∈ R+ is unknown.
+We focus here on the case where all arms consist of the same number m of basic actions in the
+sense that kM k1 = m, ∀M ∈ M. After selecting an arm M in round n, the decision maker
+receives some feedback. We consider both (i) semi-bandit feedback under which after round n, for
+all i ∈ {1, . . . , d}, the component Xi (n) of the reward vector is revealed if and only if Mi = 1; (ii)
+bandit feedback under which only the reward M > X(n) is revealed. Based on the feedback received
+up to round n − 1, the decision maker selects an arm for the next round n, and her objective is to
+maximize her cumulative reward over a given time horizon consisting of T rounds. The challenge in
+these problems resides in the very large number of arms, i.e., in its combinatorial structure: the size
+of M could well grow as dm . Fortunately, one may hope to exploit the problem structure to speed
+up the exploration of sub-optimal arms.
+We consider two instances of combinatorial bandit problems, depending on how the sequence
+of reward vectors is generated. We first analyze the case of stochastic rewards, where for all
+1
+
+Algorithm
+Regret
+
+LLR
+[9]
+O
+
+
+
+m3 d∆max
+∆2
+min
+
+CUCB
+[10]
+
+log(T )
+
+O
+
+
+
+m2 d
+∆min
+
+
+log(T )
+
+CUCB
+[11]
+O
+
+
+
+md
+∆min
+
+
+log(T )
+
+ESCB
+5) 
+(Theorem
+√
+md
+O ∆min log(T )
+
+Table 1: Regret upper bounds for stochastic combinatorial optimization under semi-bandit feedback.
+i ∈ {1, . . . , d}, (Xi (n))n≥1 are i.i.d. with Bernoulli distribution of unknown mean. The reward
+sequences are also independent across i. We then address the problem in the adversarial setting
+where the sequence of vectors X(n) is arbitrary and selected by an adversary at the beginning of
+the experiment. In the stochastic setting, we provide sequential arm selection algorithms whose performance exceeds that of existing algorithms, whereas in the adversarial setting, we devise simple
+algorithms whose regret have the same scaling as that of state-of-the-art algorithms, but with lower
+computational complexity.
+
+2
+2.1
+
+Contribution and Related Work
+Stochastic combinatorial bandits under semi-bandit feedback
+
+Contribution. (a) We derive an asymptotic (as the time horizon T grows large) regret lower bound
+satisfied by any algorithm (Theorem 1). This lower bound is problem-specific and tight: there
+exists an algorithm that attains the bound on all problem instances, although the algorithm might
+be computationally expensive. To our knowledge, such lower bounds have not been proposed in
+the case of stochastic combinatorial bandits. The dependency in m and d of the lower bound is
+unfortunately not explicit. We further provide a simplified lower bound (Theorem 2) and derive its
+scaling in (m, d) in specific examples.
+(b) We propose ESCB
+√ (Efficient Sampling for Combinatorial Bandits), an algorithm whose regret
+scales at most as O( md∆−1
+min log(T )) (Theorem 5), where ∆min denotes the expected reward difference between the best and the second-best arm. ESCB assigns an index to each arm. The index
+of given arm can be interpreted as performing likelihood tests with vanishing risk on its average reward. Our indexes are the natural extension of KL-UCB and UCB1 indexes defined for unstructured
+bandits [5, 21]. Numerical experiments for some specific combinatorial problems are presented in
+the supplementary material, and show that ESCB significantly outperforms existing algorithms.
+Related work. Previous contributions on stochastic combinatorial bandits focused on specific combinatorial structures, e.g. m-sets [6], matroids [7], or permutations [8]. Generic combinatorial problems were investigated in [9, 10, 11, 12]. The proposed algorithms, LLR and CUCB are variants
+of the UCB algorithm, and their performance guarantees are√presented in Table 1. Our algorithms
+improve over LLR and CUCB by a multiplicative factor of m.
+2.2
+
+Adversarial combinatorial problems under bandit feedback
+
+Contribution.
+We
+present
+algorithm
+C OMB EXP,
+whose
+regret
+is
+
+q
+P
+−1
+−1
+1
+3
+1/2
+O
+m T (d + m λ ) log µmin , where µmin = mini∈[d] m|M| M ∈M Mi and λ is
+the smallest nonzero eigenvalue of the matrix E[M M > ] when M is uniformly distributed over M
+(Theorem 6). For most problems
+of interest m(dλ)−1 = O(1) [4] and µ−1
+min = O(poly(d/m)),
+p
+√
+3
+so that C OMB EXP has O( m dT log(d/m)) regret. A known regret lower bound is Ω(m dT )
+[13], so the regret gap between C OMB EXP and this lower bound scales at most as m1/2 up to a
+logarithmic factor.
+Related work. Adversarial combinatorial bandits have been extensively investigated recently,
+see [13] and references therein. Some papers consider specific instances of these problems, e.g.,
+shortest-path routing [14], m-sets [15],and permutations
+For generic combinatorial problems,
+
+[16].
+√
+√ 
+known regret lower bounds scale as Ω
+mdT and Ω m dT (if d ≥ 2m) in the case of semibandit and bandit feedback, respectively [13]. In the case of semi-bandit feedback, [13] proposes
+2
+
+Algorithm
+Lower Bound [13]
+C OM BAND [4]
+EXP2 WITH J OHN ’ S E XPLORATION [18]
+C OMB EXP (Theorem 6)
+
+ √ Regret
+
+Ω m dT , if d ≥ 2m
+r
+
+
+d
+O
+m3 dT log m
+1 + 2m
+dλ
+
+q
+d
+O
+m3 dT log m
+r
+
+
+
+1/2
+O
+m3 dT 1 + mdλ log µ−1
+min
+
+Table 2: Regret of various algorithms for adversarial combinatorial bandits with bandit feedback.
+Note that for most combinatorial classes of interests, m(dλ)−1 = O(1) and µ−1
+min = O(poly(d/m)).
+
+OSMD, anp
+algorithm whose regret upper bound matches the lower bound. [17] presents an algorithm
+with O(m dL?T log(d/m)) regret where L?T is the total reward of the best arm after T rounds.
+For problems with bandit feedback, [4] proposes C OM BAND and derives a regret upper bound which
+depends on the structurep
+of arm set M. For most problems of interest, the regret under C OM BAND
+is upper-bounded by O( m3 dT log(d/m)). [18] addresses generic linear optimization with bandit
+feedback and the proposed p
+algorithm, referred to as EXP2 WITH J OHN ’ S E XPLORATION, has a
+regret scaling at most as O( m3 dT log(d/m)) in the case of combinatorial structure. As we show
+next, for many combinatorial structures of interest (e.g. m-sets, matchings, spanning trees), C OMB EXP yields the same regret as C OM BAND and EXP2 WITH J OHN ’ S E XPLORATION, with lower
+computational complexity for a large class of problems. Table 2 summarises known regret bounds.
+Example 1: m-sets. M is the set of all d-dimensional binary vectors with m non-zero coordinates.
+m(d−m)
+We have µmin = m
+d and λ = d(d−1) (refer to the supplementary material for details). Hence when
+p
+m = o(d), the regret upper bound of C OMB EXP becomes O( m3 dT log(d/m)), which is the
+same as that of C OM BAND and EXP2 WITH J OHN ’ S E XPLORATION.
+Example 2: matchings. The set of arms M is the set of perfect matchings in Km,m . d = m2 and
+1
+1
+|M| = m!. We have µmin = m
+, and λ = m−1
+. Hence the regret upper bound of C OMB EXP is
+p
+5
+O( m T log(m)), the same as for C OM BAND and EXP2 WITH J OHN ’ S E XPLORATION.
+Example 3: spanning
+trees. M is the set of spanning trees in the complete graph KN . In this
+
+case, d = N2 , m = N − 1, and by Cayley’s formula M has N N −2 arms. log µ−1
+min ≤ 2N for
+m
+N ≥ 2 and dλ
+< 7 when N ≥ 6, The regret upper bound of C OM BAND and EXP2 WITH J OHN ’ S
+p
+E XPLORATION
+becomes O( N 5 T log(N )). As for C OMB EXP, we get the same regret upper
+p
+bound O( N 5 T log(N )).
+
+3
+
+Models and Objectives
+
+We consider MAB problems where each arm M is a subset of m basic actions taken from [d] =
+{1, . . . , d}. For i ∈ [d], Xi (n) denotes the reward of basic action i in round n. In the stochastic
+setting, for each i, the sequence of rewards (Xi (n))n≥1 is i.i.d. with Bernoulli distribution with
+mean θi . Rewards are assumed to be independent across actions. We denote by θ = (θ1 , . . . , θd )> ∈
+Θ = [0, 1]d the vector of unknown expected rewards of the various basic actions. In the adversarial
+setting, the reward vector X(n) = (X1 (n), . . . , Xd (n))> ∈ [0, 1]d is arbitrary, and the sequence
+(X(n), n ≥ 1) is decided (but unknown) at the beginning of the experiment.
+The set of arms M is an arbitrary subset of {0, 1}d , such that each of its elements M has m basic
+actions. Arm M is identified with a binary column vector (M1 , . . . , Md )> , and we have kM k1 =
+m, ∀M ∈ M. At the beginning of each round n, a policy π, selects an arm M π (n) ∈ M based on
+the arms chosen
+rounds and their observed rewards. The reward of arm M π (n) selected
+P in previous
+π
+in round n is i∈[d] Mi (n)Xi (n) = M π (n)> X(n).
+3
+
+We consider both semi-bandit and bandit feedbacks. Under semi-bandit feedback and policy π,
+at the end of round n, the outcome of basic actions Xi (n) for all i ∈ M π (n) are revealed to the
+decision maker, whereas under bandit feedback, M π (n)> X(n) only can be observed.
+Let Π be the set of all feasible policies. The objective is to identify a policy in Π maximizing the
+cumulative expected reward over a finite time horizon T . The expectation is here taken with respect
+to possible randomness in the rewards (in the stochastic setting) and the possible randomization in
+the policy. Equivalently, we aim at designing a policy that minimizes regret, where the regret of
+policy π ∈ Π is defined by:
+" T
+#
+" T
+#
+X
+X
+M > X(n) − E
+M π (n)> X(n) .
+Rπ (T ) = max E
+M ∈M
+
+n=1
+
+n=1
+
+Finally, for the stochastic setting, we denote by µM (θ) = M > θ the expected reward of arm M ,
+and let M ? (θ) ∈ M, or M ? for short, be any arm with maximum expected reward: M ? (θ) ∈
+arg maxM ∈M µM (θ). In what follows, to simplify the presentation, we assume that the optimal
+M ? is unique. We further define: µ? (θ) = M ?> θ, ∆min = minM 6=M ? ∆M where ∆M =
+µ? (θ) − µM (θ), and ∆max = maxM (µ? (θ) − µM (θ)).
+
+4
+4.1
+
+Stochastic Combinatorial Bandits under Semi-bandit Feedback
+Regret Lower Bound
+
+Given θ, define the set of parameters that cannot be distinguished from θ when selecting action
+M ? (θ), and for which arm M ? (θ) is suboptimal:
+B(θ) = {λ ∈ Θ : Mi? (θ)(θi − λi ) = 0, ∀i, µ? (λ) > µ? (θ)}.
+We define X = (R+ )|M| and kl(u, v) the Kullback-Leibler divergence between Bernoulli distributions of respective means u and v, i.e., kl(u, v) = u log(u/v) + (1 − u) log((1 − u)/(1 − v)).
+Finally, for (θ, λ) ∈ Θ2 , we define the vector kl(θ, λ) = (kl(θi , λi ))i∈[d] .
+We derive a regret lower bound valid for any uniformly good algorithm. An algorithm π is uniformly
+good iff Rπ (T ) = o(T α ) for all α > 0 and all parameters θ ∈ Θ. The proof of this result relies on
+a general result on controlled Markov chains [19].
+Theorem 1 For all θ ∈ Θ, for any uniformly good policy π ∈ Π, lim inf T →∞
+where c(θ) is the optimal value of the optimization problem:
+inf
+
+x∈X
+
+X
+M ∈M
+
+xM (M ? (θ) − M )> θ
+
+s.t.
+
+ X
+
+xM M
+
+>
+
+Rπ (T )
+log(T )
+
+≥ c(θ),
+
+kl(θ, λ) ≥ 1 , ∀λ ∈ B(θ).
+
+(1)
+
+M ∈M
+
+Observe first that optimization problem (1) is a semi-infinite linear program which can be solved for
+any fixed θ, but its optimal value is difficult to compute explicitly. Determining how c(θ) scales as
+a function of the problem dimensions d and m is not obvious. Also note that (1) has the following
+interpretation: assume that (1) has a unique solution x? . Then any uniformly good algorithm must
+select action M at least x?M log(T ) times over the T first rounds. From [19], we know that there
+exists an algorithm which is asymptotically optimal, so that its regret matches the lower bound of
+Theorem 1. However this algorithm suffers from two problems: it is computationally infeasible
+for large problems since it involves solving (1) T times, furthermore the algorithm has no finite
+time performance guarantees, and numerical experiments suggest that its finite time performance
+on typical problems is rather poor. Further remark that if M is the set of singletons (classical
+bandit), Theorem 1 reduces to the Lai-Robbins bound [20] and if M is the set of m-sets (bandit
+with multiple plays), Theorem 1 reduces to the lower bound derived in [6]. Finally, Theorem 1 can
+be generalized in a straightforward manner for when rewards belong to a one-parameter exponential
+family of distributions (e.g., Gaussian, Exponential, Gamma etc.) by replacing kl by the appropriate
+divergence measure.
+4
+
+A Simplified Lower Bound We now study how the regret c(θ) scales as a function of the problem
+dimensions d and m. To this aim, we present a simplified regret lower bound. Given θ, we say that
+a set H ⊂ M \ M ? has property P (θ) iff, for all (M, M 0 ) ∈ H2 , M 6= M 0 we have Mi Mi0 (1 −
+Mi? (θ)) = 0 for all i. We may now state Theorem 2.
+Theorem 2 Let H be a maximal (inclusion-wise) subset of M with property P (θ). Define β(θ) =
+M
+minM 6=M ? |M∆\M
+? | . Then:
+β(θ)
+
+X
+
+c(θ) ≥
+
+
+
+M ∈H
+
+1
+maxi∈M \M ? kl θi , |M \M
+?|
+
+P
+
+j∈M ? \M
+
+θj
+
+.
+
+Corollary 1 Let θ ∈ [a, 1]d for some constant a > 0 and M be such that each arm M ∈ M, M 6=
+M ? has at most k suboptimal basic actions. Then c(θ) = Ω(|H|/k).
+Theorem 2 provides an explicit regret lower bound. Corollary 1 states that c(θ) scales at least
+with the size of H. For most combinatorial sets, |H| is proportional to d − m (see supplementary
+material for some examples), which implies that in these cases, one cannot obtain a regret smaller
+than O((d − m)∆−1
+min log(T )). This result is intuitive since d − m is the number of parameters
+not observed
+when
+selecting the optimal arm. The algorithms
+proposed below have a regret of
+√
+√
+O(d m∆−1
+log(T
+)),
+which
+is
+acceptable
+since
+typically,
+m
+is
+much smaller than d.
+min
+4.2
+
+Algorithms
+
+Next we present ESCB, an algorithm for stochastic combinatorial bandits that relies on arm indexes
+as in UCB1 [21] and KL-UCB [5]. We derive finite-time regret upper bounds for ESCB that hold
+even if we assume that kM k1 ≤ m, ∀M ∈ M, instead of kM k1 = m, so that arms may have
+different numbers of basic actions.
+4.2.1
+
+Indexes
+
+ESCB relies on arm indexes. In general, an index of arm M in round n, say bM (n), should be
+defined so that bM (n) ≥ M > θ with high probability. Then as for UCB1 and KL-UCB, applying the
+principle of optimism in face of uncertainty, a natural way to devise algorithms based on indexes is
+to select in
+round the arm with the highest index. Under a given algorithm, at time n, we define
+Peach
+n
+ti (n) = s=1 Mi (s) the number of times basic action i has been sampled. The empirical mean
+Pn
+reward of action i is then defined as θ̂i (n) = (1/ti (n)) s=1 Xi (s)Mi (s) if ti (n) > 0 and θ̂i (n) =
+0 otherwise. We define the corresponding vectors t(n) = (ti (n))i∈[d] and θ̂(n) = (θ̂i (n))i∈[d] .
+The indexes we propose are functions of the round n and of θ̂(n). Our first index for arm M ,
+referred to as bM (n, θ̂(n)) or bM (n) for short, is an extension of KL-UCB index. Let f (n) =
+log(n) + 4m log(log(n)). bM (n, θ̂(n)) is the optimal value of the following optimization problem:
+max M > q
+q∈Θ
+
+s.t. (M t(n))> kl(θ̂(n), q) ≤ f (n),
+
+(2)
+
+where we use the convention that for v, u ∈ Rd , vu = (vi ui )i∈[d] . As we show later, bM (n) may be
+computed efficiently using a line search procedure similar to that used to determine KL-UCB index.
+Our second index cM (n, θ̂(n)) or cM (n) for short is a generalization of the UCB1 and UCB-tuned
+indexes:
+v
+!
+u
+d
+u f (n) X
+M
+i
+>
+cM (n) = M θ̂(n) + t
+2
+t (n)
+i=1 i
+Note that, in the classical bandit problems with independent arms, i.e., when m = 1, bM (n) reduces to the KL-UCB index (which yields an asymptotically optimal algorithm) and cM (n) reduces
+to the UCB-tuned index. The next theorem provides generic properties of our indexes. An important consequence of these properties is that the expected number of times where bM ? (n, θ̂(n)) or
+cM ? (n, θ̂(n)) underestimate µ? (θ) is finite, as stated in the corollary below.
+5
+
+Theorem 3 (i) For all n ≥ 1, M ∈ M and τ ∈ [0, 1]d , we have bM (n, τ ) ≤ cM (n, τ ).
+(ii) There exists Cm > 0 depending on m only such that, for all M ∈ M and n ≥ 2:
+P[bM (n, θ̂(n)) ≤ M > θ] ≤ Cm n−1 (log(n))−2 .
+Corollary 2
+
+P
+
+n≥1
+
+P[bM ? (n, θ̂(n)) ≤ µ? ] ≤ 1 + Cm
+
+P
+
+n≥2
+
+n−1 (log(n))−2 < ∞.
+
+Statement (i) in the above theorem is obtained combining Pinsker and Cauchy-Schwarz inequalities.
+The proof of statement (ii) is based on a concentration inequality on sums of empirical KL divergences proven in [22]. It enables to control the fluctuations of multivariate empirical distributions
+for exponential families. It should also be observed that indexes bM (n) and cM (n) can be extended
+in a straightforward manner to the case of continuous linear bandit problems, where the set of arms
+is the unit sphere and one wants to maximize the dot product between the arm and an unknown
+vector. bM (n) can also be extended to the case where reward distributions are not Bernoulli but
+lie in an exponential family (e.g. Gaussian, Exponential, Gamma, etc.), replacing kl by a suitably
+chosen divergence measure. A close look at cM (n) reveals that the indexes proposed in [10], [11],
+Pd
+i
+and [9] are too conservative to be optimal in our setting: there the “confidence bonus” i=1 tiM(n)
+Pd
+i
+was replaced by (at least) m i=1 tiM(n)
+. Note that [10], [11] assume that the various basic actions
+are arbitrarily correlated, while we assume independence among basic actions. When independence
+does not hold, [11] provides a problem instance where the regret is at least Ω( ∆md
+log(T )). This
+min
+√
+
+d m
+log(T ))), since we have added the
+does not contradict our regret upper bound (scaling as O( ∆
+min
+independence assumption.
+
+4.2.2
+
+Index computation
+
+While the index cM (n) is explicit, bM (n) is defined as the solution to an optimization problem. We
+show that it may be computed by a simple line search. For λ ≥ 0, w ∈ [0, 1] and v ∈ N, define:
+
+
+p
+g(λ, w, v) = 1 − λv + (1 − λv)2 + 4wvλ /2.
+Fix n, M , θ̂(n) and t(n). Define I = {i : Mi = 1, θ̂i (n) 6= 1}, and for λ > 0, define:
+X
+F (λ) =
+ti (n)kl(θ̂i (n), g(λ, θ̂i (n), ti (n))).
+i∈I
+
+Theorem 4 If I = ∅, bM (n) = ||M ||1 . Otherwise: (i) λ 7→ F (λ) is strictly increasing, and
+F (R+ ) = R+ . (ii) Define λ? as the unique solution to F (λ) = f (n). Then bM (n) = ||M ||1 − |I| +
+P
+?
+i∈I g(λ , θ̂i (n), ti (n)).
+Theorem 4 shows that bM (n) can be computed using a line search procedure such as bisection,
+as this computation amounts to solving the nonlinear equation F (λ) = f (n), where F is strictly
+increasing. The proof of Theorem 4 follows from KKT conditions and the convexity of the KL
+divergence.
+4.2.3
+
+The ESCB Algorithm
+
+The pseudo-code of ESCB is presented in Algorithm 1. We consider two variants of the algorithm
+based on the choice of the index ξM (n): ESCB-1 when ξM (n) = bM (n) and ESCB-2 if ξM (n) =
+cM (n). In practice, ESCB-1 outperforms ESCB-2. Introducing ESCB-2 is however instrumental
+in the regret analysis of ESCB-1 (in view of Theorem 3 (i)). The following theorem provides a
+finite time analysis of our ESCB algorithms. The proof of this theorem borrows some ideas from
+the proof of [11, Theorem 3].
+Theorem 5 The regret under algorithms π ∈ {ESCB-1, ESCB-2} satisfies for all T ≥ 1:
+√
+3 −2
+0
+Rπ (T ) ≤ 16d m∆−1
+min f (T ) + 4dm ∆min + Cm ,
+√
+0
+where Cm
+≥ 0 does not depend on θ, d and T . As a consequence Rπ (T ) = O(d m∆−1
+min log(T ))
+when T → ∞.
+6
+
+Algorithm 1 ESCB
+for n ≥ 1 do
+Select arm M (n) ∈ arg maxM ∈M ξM (n).
+Observe the rewards, and update ti (n) and θ̂i (n), ∀i ∈ M (n).
+end for
+
+Algorithm 2 C OMB EXP
+q
+
+Initialization: Set q0 = µ0 , γ =
+
+q
+
+m log µ−1
+min
+
+√
+
+m log µ−1
+min +
+
+C(Cm2 d+m)T
+
+and η = γC, with C =
+
+λ
+.
+m3/2
+
+for n ≥ 1 do
+0
+Mixing: Let qn−1
+= (1 − γ)qn−1 + γµ0 .
+P
+0
+Decomposition: Select a distribution pn−1 over M such that M pn−1 (M )M = mqn−1
+.
+P
+Sampling: Select a random arm M (n) with distribution pn−1 and incur a reward Yn = i Xi (n)Mi (n).
+
+
++
+Estimation: Let Σn−1 = E M M > , where M has law pn−1 . Set X̃(n) = Yn Σ+
+n−1 M (n), where Σn−1
+is the pseudo-inverse of Σn−1 .
+Update: Set q̃n (i) ∝ qn−1 (i) exp(η X̃i (n)), ∀i ∈ [d].
+Projection: Set qn to be the projection of q̃n onto the set P using the KL divergence.
+end for
+
+ESCB with time horizon T has a complexity of O(|M|T ) as neither bM nor cM can be written as M > y for some vector y ∈ Rd . Assuming that the offline (static) combinatorial problem is solvable in O(V (M)) time, the complexity of the CUCB algorithm in [10] and [11]
+after T rounds is O(V (M)T ). Thus, if the offline problem is efficiently implementable, i.e.,
+V (M) = O(poly(d/m)), CUCB is efficient, whereas ESCB is not since |M| may have exponentially many elements. In §2.5 of the supplement, we provide an extension of ESCB called
+E POCH -ESCB, that attains almost the same regret as ESCB while enjoying much better computational complexity.
+
+5
+
+Adversarial Combinatorial Bandits under Bandit Feedback
+
+We now consider adversarial combinatorial bandits with bandit feedback. We start with the following observation:
+max M > X =
+
+M ∈M
+
+max
+
+µ> X,
+
+µ∈Co(M)
+
+with Co(M) the convex hull of M. We embed M in the d-dimensional simplex by dividing its
+elements by m. Let P be this scaled version of Co(M).
+Inspired by OSMD [13, 18], we propose the C OMB EXP algorithm, where the KL divergence
+is the Bregman divergence used to project onto P. Projection using the KL divergence is
+addressed in [23]. We denote the KL divergence between distributions q and p in P by
+P
+KL(p, q) = i∈[d] p(i) log p(i)
+q(i) . The projection of distribution q onto a closed convex set Ξ of
+?
+distributions is p = arg minp∈Ξ KL(p, q).
+Let λ be the smallest nonzero eigenvalue of E[M M > ], where M is uniformly
+distributed over M.
+P
+1
+We define the exploration-inducing distribution µ0 ∈ P: µ0i = m|M|
+M
+∀i ∈ [d], and
+i,
+M ∈M
+0
+0
+let µmin = mini mµi . µ is the distribution over basic actions [d] induced by the uniform distribution over M. The pseudo-code for C OMB EXP is shown in Algorithm 2. The KL projection
+in C OMB EXP
+P ensures that mqn−1 ∈ Co(M). There exists λ, a distribution over M such that
+mqn−1 = M λ(M )M . This guarantees that the system of linear equations in the decomposition
+step is consistent. We propose to perform the projection step (the KL projection of q̃ onto P) using
+interior-point methods [24]. We provide a simpler method in §3.4 of the supplement. The decomposition step can be efficiently implemented using the algorithm of [25]. The following theorem
+provides a regret upper bound for C OMB EXP.
+r
+
+
+1/2
+−1
+m5/2
+C OMB EXP
+Theorem 6 For all T ≥ 1: R
+(T ) ≤ 2 m3 T d + mλ
+log µ−1
+min + λ log µmin .
+7
+
+−1
+−1
+For most classes of M, we have µmin
+O(1) [4]. For these
+p = O(poly(d/m)) and m(dλ) =p
+3
+classes, C OMB EXP has a regret of O( m dT log(d/m)), which is a factor m log(d/m) off the
+lower bound (see Table 2).
+
+It might not be possible to compute the projection step exactly, and this step can be solved up
+to accuracy n in round n. Namely we find qn such that KL(qn , q̃n ) − minp∈Ξ KL(p, q̃n ) ≤ n .
+Proposition 1 shows that for n = O(n−2 log−3 (n)), the approximate projection gives the same
+regret as when the projection is computed exactly. Theorem 7 gives the computational complexity of
+C OMB EXP with approximate projection. When Co(M) is described by polynomially (in d) many
+linear equalities/inequalities, C OMB EXP is efficiently implementable and its running time scales
+(almost) linearly in T . Proposition 1 and Theorem 7 easily extend to other OSMD-type algorithms
+and thus might be of independent interest.
+Proposition 1 If the projection
+n = O(n−2 log−3 (n)), we have:
+s
+RC OMB EXP (T ) ≤ 2
+
+step
+
+2m3 T
+
+C OMB EXP
+
+of
+
+
+d+
+
+m1/2
+λ
+
+
+
+is
+
+log µ−1
+min +
+
+solved
+
+up
+
+to
+
+accuracy
+
+2m5/2
+log µ−1
+min .
+λ
+
+Theorem 7 Assume that Co(M) is defined by c linear equalities and s linear inequalities. If the
+projection step is solved up to accuracy n = O(n−2 log−3 (n)), then C OMB EXP has time complexity.
+The time complexity of C OMB EXP can be reduced by exploiting the structure of M (See [24,
+page 545]). In particular, if inequality
+√constraints describing Co(M) are box constraints, the time
+complexity of C OMB EXP is O(T [c2 s(c + d) log(T ) + d4 ]).
+The computational complexity of C OMB EXP is determined by the structure of Co(M) and C OMB EXP has O(T log(T )) time complexity due to the efficiency of interior-point methods. In contrast, the computational complexity of C OM BAND depends on the complexity of sampling from M.
+C OM BAND may have a time complexity that is super-linear in T (see [16, page 217]). For instance,
+consider the matching problem described in Section 2. We have c = 2m equality constraints and
+s = m2 box constraints, so that the time complexity of C OMB EXP is: O(m5 T log(T )). It is noted
+that using [26, Algorithm 1], the cost of decomposition in this case is O(m4 ). On the other hand,
+C OMB BAND has a time complexity of O(m10 F (T )), with F a super-linear function, as it requires
+to approximate a permanent, requiring O(m10 ) operations per round. Thus, C OMB EXP has much
+lower complexity than C OM BAND and achieves the same regret.
+
+6
+
+Conclusion
+
+We have investigated stochastic and adversarial combinatorial bandits. For stochastic combinatorial
+bandits with semi-bandit feedback, we have provided a tight, problem-dependent regret lower bound
+that, in most cases, scales at least as O((d − m)∆−1
+min log(T )). We proposed ESCB, an algorithm
+√
+log(T
+))
+regret.
+We
+plan
+to
+reduce
+the gap between this regret guarantee and
+with O(d m∆−1
+min
+the regret lower bound, as well as investigate the performance of E POCH -ESCB. For adversarial
+combinatorial bandits with bandit feedback, we proposed the C OMB EXP algorithm. There is a gap
+between the regret of C OMB EXP and the known regret lower bound in this setting, and we plan to
+reduce it as much as possible.
+Acknowledgments
+A. Proutiere’s research is supported by the ERC FSA grant, and the SSF ICT-Psi project.
+
+8
+
+References
+[1] Herbert Robbins. Some aspects of the sequential design of experiments. In Herbert Robbins Selected
+Papers, pages 169–177. Springer, 1985.
+[2] Sébastien Bubeck and Nicolò Cesa-Bianchi. Regret analysis of stochastic and nonstochastic multi-armed
+bandit problems. Foundations and Trends in Machine Learning, 5(1):1–222, 2012.
+[3] Nicolò Cesa-Bianchi and Gábor Lugosi. Prediction, learning, and games, volume 1. Cambridge University Press Cambridge, 2006.
+[4] Nicolò Cesa-Bianchi and Gábor Lugosi. Combinatorial bandits. Journal of Computer and System Sciences, 78(5):1404–1422, 2012.
+[5] Aurélien Garivier and Olivier Cappé. The KL-UCB algorithm for bounded stochastic bandits and beyond.
+In Proc. of COLT, 2011.
+[6] Venkatachalam Anantharam, Pravin Varaiya, and Jean Walrand. Asymptotically efficient allocation rules
+for the multiarmed bandit problem with multiple plays-part i: iid rewards. Automatic Control, IEEE
+Transactions on, 32(11):968–976, 1987.
+[7] Branislav Kveton, Zheng Wen, Azin Ashkan, Hoda Eydgahi, and Brian Eriksson. Matroid bandits: Fast
+combinatorial optimization with learning. In Proc. of UAI, 2014.
+[8] Yi Gai, Bhaskar Krishnamachari, and Rahul Jain. Learning multiuser channel allocations in cognitive
+radio networks: A combinatorial multi-armed bandit formulation. In Proc. of IEEE DySpan, 2010.
+[9] Yi Gai, Bhaskar Krishnamachari, and Rahul Jain. Combinatorial network optimization with unknown
+variables: Multi-armed bandits with linear rewards and individual observations. IEEE/ACM Trans. on
+Networking, 20(5):1466–1478, 2012.
+[10] Wei Chen, Yajun Wang, and Yang Yuan. Combinatorial multi-armed bandit: General framework and
+applications. In Proc. of ICML, 2013.
+[11] Branislav Kveton, Zheng Wen, Azin Ashkan, and Csaba Szepesvari. Tight regret bounds for stochastic
+combinatorial semi-bandits. In Proc. of AISTATS, 2015.
+[12] Zheng Wen, Azin Ashkan, Hoda Eydgahi, and Branislav Kveton. Efficient learning in large-scale combinatorial semi-bandits. In Proc. of ICML, 2015.
+[13] Jean-Yves Audibert, Sébastien Bubeck, and Gábor Lugosi. Regret in online combinatorial optimization.
+Mathematics of Operations Research, 39(1):31–45, 2013.
+[14] András György, Tamás Linder, Gábor Lugosi, and György Ottucsák. The on-line shortest path problem
+under partial monitoring. Journal of Machine Learning Research, 8(10), 2007.
+[15] Satyen Kale, Lev Reyzin, and Robert Schapire. Non-stochastic bandit slate problems. Advances in Neural
+Information Processing Systems, pages 1054–1062, 2010.
+[16] Nir Ailon, Kohei Hatano, and Eiji Takimoto. Bandit online optimization over the permutahedron. In
+Algorithmic Learning Theory, pages 215–229. Springer, 2014.
+[17] Gergely Neu. First-order regret bounds for combinatorial semi-bandits. In Proc. of COLT, 2015.
+[18] Sébastien Bubeck, Nicolò Cesa-Bianchi, and Sham M. Kakade. Towards minimax policies for online
+linear optimization with bandit feedback. Proc. of COLT, 2012.
+[19] Todd L. Graves and Tze Leung Lai. Asymptotically efficient adaptive choice of control laws in controlled
+markov chains. SIAM J. Control and Optimization, 35(3):715–743, 1997.
+[20] Tze Leung Lai and Herbert Robbins. Asymptotically efficient adaptive allocation rules. Advances in
+Applied Mathematics, 6(1):4–22, 1985.
+[21] Peter Auer, Nicolò Cesa-Bianchi, and Paul Fischer. Finite time analysis of the multiarmed bandit problem.
+Machine Learning, 47(2-3):235–256, 2002.
+[22] Stefan Magureanu, Richard Combes, and Alexandre Proutiere. Lipschitz bandits: Regret lower bounds
+and optimal algorithms. Proc. of COLT, 2014.
+[23] I. Csiszár and P.C. Shields. Information theory and statistics: A tutorial. Now Publishers Inc, 2004.
+[24] Stephen Boyd and Lieven Vandenberghe. Convex optimization. Cambridge university press, 2004.
+[25] H. D. Sherali. A constructive proof of the representation theorem for polyhedral sets based on fundamental
+definitions. American Journal of Mathematical and Management Sciences, 7(3-4):253–270, 1987.
+[26] David P. Helmbold and Manfred K. Warmuth. Learning permutations with exponential weights. Journal
+of Machine Learning Research, 10:1705–1736, 2009.
+
+9
+
+

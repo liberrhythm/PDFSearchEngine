@@ -1,0 +1,814 @@
+Sample Complexity of Episodic Fixed-Horizon
+Reinforcement Learning
+
+Emma Brunskill
+Computer Science Department
+Carnegie Mellon University
+ebrun@cs.cmu.edu
+
+Christoph Dann
+Machine Learning Department
+Carnegie Mellon University
+cdann@cdann.net
+
+Abstract
+Recently, there has been significant progress in understanding reinforcement
+learning in discounted infinite-horizon Markov decision processes (MDPs) by deriving tight sample complexity bounds. However, in many real-world applications,
+an interactive learning agent operates for a fixed or bounded period of time, for
+example tutoring students for exams or handling customer service requests. Such
+scenarios can often be better treated as episodic fixed-horizon MDPs, for which
+only looser bounds on the sample complexity exist. A natural notion of sample
+complexity in this setting is the number of episodes required to guarantee a certain
+performance with high probability (PAC guarantee). In this paper, we derive an
+2
+2
+2
+1
+upper PAC bound Õ( |S| |A|H
+ln 1δ ) and a lower PAC bound Ω̃( |S||A|H
+ln δ+c
+)
+2
+2
+that match up to log-terms and an additional linear dependency on the number of
+states |S|. The lower bound is the first of its kind for this setting. Our upper bound
+leverages Bernstein’s inequality to improve on previous bounds for episodic finitehorizon MDPs which have a time-horizon dependency of at least H 3 .
+
+1
+
+Introduction and Motivation
+
+Consider test preparation software that tutors students for a national advanced placement exam taken
+at the end of a year, or maximizing business revenue by the end of each quarter. Each individual
+task instance requires making a sequence of decisions for a fixed number of steps H (e.g., tutoring
+one student to take an exam in spring 2015 or maximizing revenue for the end of the second quarter
+of 2014). Therefore, they can be viewed as a finite-horizon sequential decision making under uncertainty problem, in contrast to an infinite horizon setting in which the number of time steps is infinite.
+When the domain parameters (e.g. Markov decision process parameters) are not known in advance,
+and there is the opportunity to repeat the task many times (teaching a new student for each year’s
+exam, maximizing revenue for each new quarter), this can be treated as episodic fixed-horizon reinforcement learning (RL). One important question is to understand how much experience is required
+to act well in this setting. We formalize this as the sample complexity of reinforcement learning [1],
+which is the number of time steps on which the algorithm may select an action whose value is not
+near-optimal. RL algorithms with a sample complexity that is a polynomial function of the domain
+parameters are referred to as Probably Approximately Correct (PAC) [2, 3, 4, 1]. Though there has
+been significant work on PAC RL algorithms for the infinite horizon setting, there has been relatively
+little work on the finite horizon scenario.
+In this paper we present the first, to our knowledge, lower bound, and a new upper bound on the
+sample complexity of episodic finite horizon PAC reinforcement learning in discrete state-action
+spaces. Our bounds are tight up to log-factors in the time horizon H, the accuracy , the number
+of actions |A| and up to an additive constant in the failure probability δ. These bounds improve
+upon existing results by a factor of at least H. Our results also apply when the reward model
+is a function of the within-episode time step in addition to the state and action space. While we
+assume a stationary transition model, our results can be extended readily to time-dependent state1
+
+transitions. Our proposed UCFH (Upper-confidence fixed-horizon RL) algorithm that achieves our
+upper PAC guarantee can be applied directly to wide range of fixed-horizon episodic MDPs with
+known rewards.1 It does not require additional structure such as assuming access to a generative
+model [8] or that the state transitions are sparse or acyclic [6].
+The limited prior research on upper bound PAC results for finite horizon MDPs has focused on
+different settings, such as partitioning a longer trajectory into fixed length segments [4, 1], or considering a sliding time window [9]. The tightest dependence on the horizon in terms of the number
+of episodes presented in these approaches is at least H 3 whereas our dependence is only H 2 . More
+importantly, such alternative settings require the optimal policy to be stationary, whereas in general
+in finite horizon settings the optimal policy is nonstationary (e.g. is a function of both the state and
+the within episode time-step).2 Fiechter [10, 11] and Reveliotis and Bountourelis [12] do tackle a
+closely related setting, but find a dependence that is at least H 4 .
+Our work builds on recent work [6, 8] on PAC infinite horizon discounted RL that offers much tighter
+upper and lower sample complexity bounds than was previously known. To use an infinite horizon
+algorithm in a finite horizon setting, a simple change is to augment the state space by the time step
+(ranging over 1, . . . , H), which enables the learned policy to be non-stationary in the original state
+space (or equivalently, stationary in the newly augmented space). Unfortunately, since these recent
+bounds are in general a quadratic function of the state space size, the proposed state space expansion
+would introduce at least an additional H 2 factor in the sample complexity term, yielding at least a
+H 4 dependence in the number of episodes for the sample complexity.
+Somewhat surprisingly, we prove an upper bound on the sample complexity for the finite horizon
+case that only scales quadratically with the horizon. A key part of our proof is that the variance of
+the value function in the finite horizon setting satisfies a Bellman equation. We also leverage recent
+insights that state–action pairs can be estimated to different precisions depending on the frequency to
+which they are visited under a policy, extending these ideas to also handle when the policy followed
+is nonstationary. Our lower bound analysis is quite different than some prior infinite-horizon results,
+and involves a construction of parallel multi-armed bandits where it is required that the best arm in
+a certain portion of the bandits is identified with high probability to achieve near-optimality.
+
+2
+
+Problem Setting and Notation
+
+We consider episodic fixed-horizon MDPs, which can be formalized as a tuple M =
+(S, A, r, p, p0 , H). Both, the statespace S and the actionspace A are finite sets. The learning agent
+interacts with the MDP in episodes of H time steps. At time t = 1 . . . H, the agent observes a state
+st and choses an action at based on a policy π that potentially depends on the within-episode time
+step, i.e., at = πt (st ) for t = 1, . . . , H. The next state is sampled from the stationary transition
+kernel st+1 ∼ p(·|st , at ) and the initial state from s1 ∼ p0 . In addition the agent receives a reward
+drawn from a distribution3 with mean rt (st ) determined by the reward function. The reward function r is possibly time-dependent and takes values in
+[0, 1]. The quality
+of a policy π is evaluated by
+hP
+i
+H
+π
+1
+the total expected reward of an episode RM = E
+t=1 rt (st ) . For simplicity, we assume that
+the reward function r is known to the agent but the transition kernel p is unknown. The question
+we study is how many episodes does a learning agent follow a policy π that is not -optimal, i.e.,
+∗
+π
+RM
+−  > RM
+, with probability at least 1 − δ for any chosen accuracy  and failure probability δ.
+Notation. In the following sections, we reason about the true MDP M , an empirical MDP M̂ and
+an optimistic MDP M̃ which are identical except for their transition probabilities p, p̂ and p̃t . We
+will provide more details about these MDPs later. We introduce the notation explicitly only for M
+but the quantities carry over to M̃ and M̂ with additional tildes or hats by replacing p with p̃t or p̂.
+1
+Previous works [5] have shown that the complexity of learning state transitions usually dominates learning
+reward functions. We therefore follow existing sample complexity analyses [6, 7] and assume known rewards
+for simplicity. The algorithm and PAC bound can be extended readily to the case of unknown reward functions.
+2
+The best action will generally depend on the state and the number of remaining time steps. In the tutoring
+example, even if the student has the same state of knowledge, the optimal tutor decision may be to space
+practice if there is many days till the test and provide intensive short-term practice if the test is tomorrow.
+3
+It is straightforward to have the reward depend on the state, or state/action or state/action/next state.
+
+2
+
+P
+The (linear) operator Piπ f (s) := E[f (si+1 )|si = s] = s0 ∈S p(s0 |s, πi (s))f (s0 ) takes any function
+f : S → R and returns the expected value of f with respect to the next time step.4 For convenience,
+π
+π
+we define the multi-step version as Pi:j
+f := Piπ Pi+1
+. . . P π f . The value function from time i to
+hP
+i Pj
+
+j
+j
+π
+π
+π π
+time j is defined as Vi:j
+(s) := E
+t=i rt (st )|si = s =
+t=i Pi:t−1 rt = Pi Vi+1:j (s) + ri (s)
+∗
+is the optimal value-function. When the policy is clear, we omit the superscript π.
+and Vi:j
+We denote by S(s, a) ⊆ S the set of possible successor states of state s and action a. The maximum
+number of them is denoted by C = maxs,a∈S×A |S(s, a)|. In general, without making further
+assumptions, we have C = |S|, though in many practical domains (robotics, user modeling) each
+state can only transition to a subset of the full set of states (e.g. a robot can’t teleport across the
+building, but can only take local moves). The notation Õ is similar to the usual O-notation but
+ignores log-terms. More precisely f = Õ(g) if there are constants c1 , c2 such that f ≤ c1 g(ln g)c2
+and analogously for Ω̃. The natural logarithm is ln and log = log2 is the base-2 logarithm.
+
+3
+
+Upper PAC-Bound
+
+We now introduce a new model-based algorithm, UCFH, for RL in finite horizon episodic domains.
+We will later prove UCFH is PAC with an upper bound on its sample complexity that is smaller
+than prior approaches. Like many other PAC RL algorithms [3, 13, 14, 15], UCFH uses an optimism under uncertainty approach to balance exploration and exploitation. The algorithm generally
+works in phases comprised of optimistic planning, policy execution and model updating that take
+several episodes each. Phases are indexed by k. As the agent acts in the environment and observes
+(s, a, r, s0 ) tuples, UCFH maintains a confidence set over the possible transition parameters for each
+state-action pair that are consistent with the observed transitions. Defining such a confidence set that
+holds with high probability can be be achieved using concentration inequalities like the Hoeffding
+inequality. One innovation in our work is to use a particular new set of conditions to define the confidence set that enables us to obtain our tighter bounds. We will discuss the confidence sets further
+below. The collection of these confidence sets together form a class of MDPs Mk that are consistent
+with the observed data. We define M̂k as the maximum likelihood estimate of the MDP given the
+previous observations.
+Given Mk , UCFH computes a policy π k by performing optimistic planning. Specifically, we use
+a finite horizon variant of extended value iteration (EVI) [5, 14]. EVI performs modified Bellman
+backups that are optimistic with respect to a given set of parameters. That is, given a confidence
+set of possible transition model parameters, it selects in each time step the model within that set
+that maximizes the expected sum of future rewards. Appendix A provides more details about fixed
+horizon EVI.
+UCFH then executes π k until there is a state-action pair (s, a) that has been visited often enough
+since its last update (defined precisely in the until-condition in UCFH). After updating the model
+statistics for this (s, a)-pair, a new policy π k+1 is obtained by optimistic planning again. We refer to
+each such iteration of planning-execution-update as a phase with index k. If there is no ambiguity,
+we omit the phase indices k to avoid cluttered notation.
+UCFH is inspired by the infinite-horizon UCRL-γ algorithm by Lattimore and Hutter [6] but has
+several important differences. First, the policy can only be updated at the end of an episode, so
+there is no need for explicit delay phases as in UCRL-γ. Second, the policies π k in UCFH are
+time-dependent. Finally, UCFH can directly deal with non-sparse transition probabilities, whereas
+UCRL-γ only directly allows two possible successor states for each (s, a)-pair (C = 2).
+Confidence sets. The class of MDPs Mk consists of fixed-horizon MDPs M 0 with the known true
+reward function r and where the transition probability p0t (s0 |s, a) from any (s, a) ∈ S × A to s0 ∈
+S(s, a) at any time t is in the confidence set induced by p̂(s0 |s, a) of the empirical MDP M̂ . Solely
+for the purpose of computationally more efficient optimistic planning, we allow time-dependent
+transitions (allows choosing different transition models in different time steps to maximize reward),
+but this does not affect the theoretical guarantees as the true stationary MDP is still in Mk with high
+4
+
+The definition also works for time-dependent transition probabilities.
+
+3
+
+Algorithm 1: UCFH: Upper-Confidence Fixed-Horizon episodic reinforcement learning algorithm
+Input: desired accuracy  ∈ (0, 1], failure tolerance δ ∈ (0, 1], fixed-horizon MDP M
+Result: with probability at least 1 − δ: -optimal policy
+|S|H
+
+δ
+k := 1,
+wmin := 4H|S|
+,
+δ1 := 2Umax
+,
+Umax := |S × A| log2 w
+;
+min
+ 2 2C
+2
+2
+2
+2
+6|S×A|C log2 (4|S| H /)
+2 8H |S|
+2 CH
+m := 512(log2 log2 H) 2 log
+ln
+;
+
+δ
+n(s, a) = v(s, a) = n(s, a, s0 ) := 0
+while do
+
+∀, s ∈ S, a ∈ A, s0 ∈ S(s, a);
+
+/* Optimistic planning
+
+*/
+
+/* Execute policy
+
+*/
+
+p̂(s0 |s, a) := n(s, a, s0 )/n(s, a), for all (s, a) with n(s, a) > 0 and s0 ∈ S(s, a);
+
+Mk := M̃ ∈ Mnonst. : ∀(s, a) ∈ S × A, t = 1 . . . H, s0 ∈ S(s, a)	
+p̃t (s0 |s, a) ∈ ConfidenceSet(p̂(s0 |s, a), n(s, a)) ;
+k
+M̃k , π := FixedHorizonEVI(Mk );
+
+repeat
+SampleEpisode(π k ) ; // from M using π k
+until there is a (s, a) ∈ S × A with v(s, a) ≥ max{mwmin , n(s, a)} and n(s, a) < |S|mH;
+/* Update model statistics for one (s, a)-pair with condition above
+
+*/
+
+n(s, a) := n(s, a) + v(s, a);
+n(s, a, s0 ) := n(s, a, s0 ) + v(s, a, s0 ) ∀s0 ∈ S(s, a);
+v(s, a) := v(s, a, s0 ) := 0 ∀s0 ∈ S(s, a); k := k + 1
+Procedure SampleEpisode(π)
+s0 ∼ p0 ;
+for t = 0 to H − 1 do
+at := πt+1 (st ) and st+1 ∼ p(·|st , at );
+v(st , at ) := v(st , at ) + 1 and v(st , at , st+1 ) := v(st , at , st+1 ) + 1;
+Function ConfidenceSet(p,
+n)
+
+P :=
+
+2 ln(6/δ1 )
+,
+(1)
+p0 ∈ [0, 1] :if n > 1 : |p0 (1 − p0 ) − p(1 − p)| ≤
+n−1
+!
+r
+r
+ln(6/δ1 )
+2p(1 − p)
+2
+6
+|p − p0 | ≤ min
+,
+ln(6/δ1 ) +
+ln
+(2)
+2n
+n
+3n δ1
+
+return P
+
+probability. Unlike the confidence intervals used by Lattimore and Hutter [6], we not only include
+conditions based on Hoeffding’s inequality5 and Bernstein’s inequality (Eq. 2), but also require that
+the variance p(1 − p) of the Bernoulli random variable associated with this transition is close to the
+empirical one (Eq. 1). This additional condition (Eq. 1) is key for making the algorithm directly
+applicable to generic MDPs (in which states can transition to any number of next states, e.g. C > 2)
+while only having a linear dependency on C in the PAC bound.
+3.1 PAC Analysis
+For simplicity we assume that each episode starts in a fixed start state s0 . This assumption is not
+crucial and can easily be removed by additional notational effort.
+Theorem 1. For any 0 < , δ ≤ 1, the following holds. With probability at least 1 − δ, UCFH
+produces a sequence of policies π k , that yield at most
+
+ 2
+H C|S × A| 1
+Õ
+ln
+2
+δ
+k
+
+k
+
+∗
+π
+episodes with R∗ − Rπ = V1:H
+(s0 ) − V1:H
+(s0 ) > . The maximum number of possible successor
+states is denoted by 1 < C ≤ |S|.
+5
+The first condition in the min in Equation (2) is actually not necessary for the theoretical results to hold. It
+can be removed and all 6/δ1 can be replaced by 4/δ1 .
+
+4
+
+Similarities to other analyses. The proof of Theorem 1 is quite long and involved, but builds on
+similar techniques for sample-complexity bounds in reinforcement learning (see e.g. Brafman and
+Tennenholtz [3], Strehl and Littman [16]). The general proof strategy is closest to the one of UCRL-γ
+[6] and the obtained bounds are similar if we replace the time horizon H with the equivalent in the
+discounted case 1/(1 − γ). However, there are important differences that we highlight now briefly.
+• A central quantity in the analysis by Lattimore and Hutter [6] is the local variance of the value
+function. The exact definition for the fixed-horizon case will be given below. The key insight for
+the almost tight bounds of Lattimore and Hutter [6] and Azar et al. [8] is to leverage the fact that
+these local variances satisfy a Bellman equation [17] and so the discounted sum of local variances
+can be bounded by O((1 − γ)−2 ) instead of O((1 − γ)−3 ). We prove in Lemma 4 that local value
+2
+function variances σi:j
+also satisfy a Bellman equation for fixed-horizon MDPs even if transition
+probabilities and rewards are time-dependent. This allows us to bound the total sum of local
+variances by O(H 2 ) and obtain similarly strong results in this setting.
+• Lattimore and Hutter [6] assumed there are only two possible successor states (i.e., C = 2) which
+2
+allows them to easily relate the local variances σi:j
+to the difference of the expected value of
+successor states in the true and optimistic MDP (Pi − P̃i )Ṽi+1:j . For C > 2, the relation is less
+clear, but we address this by proving a bound with tight dependencies on C (Lemma C.6).
+• To avoid super-linear dependency on C in the final PAC bound, we add the additional condition
+in Equation (1) to the confidence set. We show that this allows us to upper-bound the total reward
+k
+2
+difference R∗ − Rπ of policy π k with terms that either depend on σi:j
+or decrease linearly in
+the number of samples. This gives the desired linear dependency on C in the final bound. We
+therefore avoid assuming C = 2 which makes UCFH directly applicable to generic MDPs with
+C > 2 without the impractical transformation argument used by Lattimore and Hutter [6].
+We will now introduce the notion of knownness and importance of state-action pairs that is essential
+for the analysis of UCFH and subsequently present several lemmas necessary for the proof of Theorem 1. We only sketch proofs here but detailed proofs for all results are available in the appendix.
+Fine-grained categorization of (s, a)-pairs. Many PAC RL sample complexity proofs [3, 4, 13,
+14] only have a binary notion of “knownness”, distinguishing between known (transition probability estimated sufficiently accurately) and unknown (s, a)-pairs. However, as recently shown by
+Lattimore and Hutter [6] for the infinite horizon setting, it is possible to obtain much tighter sample
+complexity results by using a more fine grained categorization. In particular, a key idea is that in order to obtain accurate estimates of the value function of a policy from a starting state, it is sufficient
+to have only a loose estimate of the parameters of (s, a)-pairs that are unlikely to be visited under
+this policy.
+Let the weight of a (s, a)-pair given policy π k be its expected frequency in an episode
+wk (s, a) :=
+
+H
+X
+
+P(st = s, πtk (st ) = a) =
+
+t=1
+
+H
+X
+
+P1:t−1 I{s = ·, a = πtk (s)}(s0 ).
+
+t=1
+
+
+The importance ιk of (s, a) is its relative weight compared to wmin := 4H|S|
+on a log-scale
+
+
+wk (s, a)
+ιk (s, a) := min zi : zi ≥
+where z1 = 0 and zi = 2i−2 ∀i = 2, 3, . . . .
+wmin
+
+Note that ιk (s, a) ∈ {0, 1, 2, 4, 8, 16 . . . } is an integer indicating the influence of the state-action
+pair on the value function of π k . Similarly, we define the knownness
+
+
+nk (s, a)
+κk (s, a) := max zi : zi ≤
+∈ {0, 1, 2, 4, . . . }
+mwk (s, a)
+which indicates how often (s, a) has been observed relative to its importance. The constant m is
+defined in Algorithm 1. We can now categorize (s, a)-pairs into subsets
+Xk,κ,ι := {(s, a) ∈ Xk : κk (s, a) = κ, ιk (s, a) = ι}
+
+and
+
+X̄k = S × A \ Xk
+
+where Xk = {(s, a) ∈ S × A : ιk (s, a) > 0} is the active set and X̄k the set of state-action pairs
+that are very unlikely under the current policy. Intuitively, the model of UCFH is accurate if only few
+5
+
+(s, a) are in categories with low knownness – that is, important under the current policy but have
+not been observed often so far. Recall that over time observations are generated under many policies
+(as the policy is recomputed), so this condition does not always hold. We will therefore distinguish
+between phases k where |Xk,κ,ι | ≤ κ for all κ and ι and phases where this condition is violated.
+The condition essentially allows for only a few (s, a) in categories that are less known and more and
+more (s, a) in categories that are more well known. In fact, we will show that the policy is -optimal
+with high probability in phases that satisfy this condition.
+We first show the validity of the confidence sets Mk .
+Lemma 1 (Capturing the true MDP whp.). M ∈ Mk for all k with probability at least 1 − δ/2.
+Proof Sketch. By combining Hoeffding’s inequality, Bernstein’s inequality and the concentration result on empirical variances by Maurer and Pontil [18] with the union bound, we get that p(s0 |s, a) ∈
+P with probability at least 1 − δ1 for a single phase k, fixed s, a ∈ S × A and fixed s0 ∈ S(s, a). We
+then show that the number of model updates is bounded by Umax and apply the union bound.
+The following lemma bounds the number of episodes in which ∀κ, ι : |Xk,κ,ι | ≤ κ is violated with
+high probability.
+Lemma 2. Let E be the number of episodes k for which there are κ and ι with |Xk,κ,ι | > κ,
+P∞
+2Emax
+6H 2
+i.e. E =
+. Then P(E ≤
+k=1 I{∃(κ, ι) : |Xk,κ,ι | > κ} and assume that m ≥
+ ln
+δ
+H
+6N Emax ) ≥ 1 − δ/2 where N = |S × A| m and Emax = log2 wmin log2 |S|.
+Proof Sketch. We first bound the total number of times a fixed pair (s, a) can be observed while
+being in a particular category Xk,κ,ι in all phases k for 1 ≤ κ < |S|. We then show that for a
+particular (κ, ι), the number of episodes where |Xk,κ,ι | > κ is bounded with high probability, as the
+value of ι implies a minimum probability of observing each (s, a) pair in Xk,κ,ι in an episode. Since
+the observations are not independent we use martingale concentration results to show the statement
+for a fixed (κ, ι). The desired result follows with the union bound over all relevant κ and ι.
+The next lemma states that in episodes where the condition ∀κ, ι : |Xk,κ,ι | ≤ κ is satisfied and the
+true MDP is in the confidence set, the expected optimistic policy value is close to the true value.
+This lemma is the technically most involved part of the proof.
+Lemma 3 (Bound mismatch in total reward). Assume
+M 
+∈ Mk . If |Xk,κ,ι | ≤ κ for all (κ, ι) and
+
+2 8H 2 |S|2
+CH 2
+πk
+πk
+2
+(s0 )| ≤ .
+(s0 )−V1:H
+0 <  ≤ 1 and m ≥ 512 2 (log2 log2 H) log2
+ln δ61 . Then |Ṽ1:H
+
+Proof Sketch. q
+Using basic
+algebraic
+≤
+
+
+ transformations, we show that |p − p̃|
+p
+1
+1
+1
+1
+p̃(1 − p̃)O
++ O n ln δ1 for each p̃, p ∈ P in the confidence set as defined
+n ln δ1
+in Eq. 2. Since we assume M ∈ Mk , we know that p(s0 |s, a) and p̃(s0 |s, a) satisfy this bound
+with n(s, a) for all s,a and s0 . We use that to bound the difference of the expected
+value function
+
+
+
+CH
+of the successor state in M and M̃ , proving that |(Pi − P̃i )Ṽi+1:j (s)| ≤ O n(s,π(s))
+ln δ11 +
+q
+
+C
+1
+O
+n(s,π(s)) ln δ1 σ̃i:j (s), where the local variance of the value function is defined as
+
+
+2
+π
+π
+2
+2
+σi:j
+(s, a) := E (Vi+1:j
+(si+1 ) − Piπ Vi+1:j
+(si ))2 |si = s, ai = a
+and σi:j
+(s) := σi:j
+(s, πi (s)).
+PH−1
+This bound then is applied to |Ṽ1:H (s0 ) − V1:H (s0 )| ≤ t=0 P1:t |(Pt − P̃t )Ṽt+1:H (s)|. The basic
+idea is to split the bound into a sum of two parts by partitioning of the (s, a) space by knownness,
+e.g. that is (st , at ) ∈ X̄κ,ι for all κ and ι and (st , at ) ∈ X̄. Using the fact that w(st , at ) and
+n(st , at ) are tightly coupled for each (κ, ι), we can bound the expression eventually by . The final
+PH
+key ingredient in the remainder of the proof is to bound t=1 P1:t−1 σt:H (s)2 by O(H 2 ) instead of
+the trivial bound O(H 3 ). To this end, we show the lemma below.
+
+Lemma 4. The variance of the value function defined as Vπi:j (s)
+:=
+
+
+2
+Pj
+π
+2
+E
+|si = s satisfies a Bellman equation Vi:j = Pi Vi+1:j + σi:j
+t=i rt (st ) − Vi:j (si )
+Pj
+2
+2
+which gives Vi:j =
+Since 0 ≤ V1:H ≤ H 2 rmax
+, it follows that
+t=i Pi:t−1 σt:j .
+Pj
+2
+2 2
+0 ≤ t=1 Pi:t−1 σt:j (s) ≤ H rmax for all s ∈ S.
+6
+
+p(i|0, a) =
+
+1
+n
+
+0
+
++
+
+1
+2
+..
+.
+
+−
+
+n
+
+r(+) = 1
+p(+|i, a) =
+
+1
+2
+
++ 0i (a)
+
+p(−|i, a) =
+
+1
+2
+
+− 0i (a)
+
+r(−) = 0
+
+Figure 1: Class of a hard-to-learn finite horizon MDPs. The function 0 is defined as 0 (a1 ) = /2,
+0 (a∗i ) =  and otherwise 0 (a) = 0 where a∗i is an unknown action per state i and  is a parameter.
+Proof Sketch. The proof works by induction and uses fact that the value function satisfies the Bellman equation and the tower-property of conditional expectations.
+Proof Sketch for Theorem 1. The proof of Theorem 1 consists of the following major parts:
+1. The true MDP is in the set of MDPs Mk for all phases k with probability at least 1− 2δ (Lemma 1).
+2. The FixedHorizonEVI algorithm computes a value function whose optimistic value is higher
+than the optimal reward in the true MDP with probability at least 1 − δ/2 (Lemma A.1).
+3. The number of episodes with |Xk,κ,ι |> κ for some
+ κ and ι are bounded with probability at least
+1 − δ/2 by Õ(|S × A| m) if m = Ω̃
+
+H2
+
+
+ln |S|
+(Lemma 2).
+δ
+
+4. If |Xk,κ,ι | ≤ κ for all κ, ι, i.e., relevant state-action pairs are sufficiently known and m =
+2
+1
+Ω̃ CH
+2 ln δ1 , then the optimistic value computed is -close to the true MDP value. Together
+with part 2, we get that with high probability, the policy π k is -optimal in this case.
+
+
+2
+1
+5. From parts 3 and 4, with probability 1 − δ, there are at most Õ C|S×A|H
+ln
+2
+
+δ episodes that
+are not -optimal.
+
+4
+
+Lower PAC Bound
+
+Theorem 2. There exist positive constants c1 , c2 , δ0 , 0 such that for every δ ∈ (0, δ0 ) and  ∈
+(0, 0 ) and for every algorithm A that satisfies a PAC guarantee for (, δ) and outputs a deterministic
+policy, there is a fixed-horizon episodic MDP Mhard with
+
+
+
+
+
+c2
+c2
+|S × A|H 2
+c1 (H − 2)2 (|A| − 1)(|S| − 3)
+ln
+ln
+=Ω
+(3)
+E[nA ] ≥
+2
+δ + c3
+2
+δ + c3
+where nA is the number of episodes until the algorithm’s policy is (, δ)-accurate. The constants
+−4
+1
+H−2
+−4
+, 0 = 640e
+/80.
+can be set to δ0 = e80 ≈ 5000
+4 ≈ H/35000, c2 = 4 and c3 = e
+The ranges of possible δ and  are of similar order than in other state-of-the-art lower bounds for
+multi-armed bandits [19] and discounted MDPs [14, 6]. They are mostly determined by the bandit
+result by Mannor and Tsitsiklis [19] we build on. Increasing the parameter limits δ0 and 0 for
+bandits would immediately result in larger ranges in our lower bound, but this was not the focus of
+our analysis.
+Proof Sketch. The basic idea is to show that the class of MDPs shown in Figure 1 require at least a
+number of observed episodes of the order of Equation (3). From the start state 0, the agent ends up
+in states 1 to n with equal probability, independent of the action. From each such state i, the agent
+transitions to either a good state + with reward 1 or a bad state − with reward 0 and stays there for
+the rest of the episode. Therefore, each state i = 1, . . . , n is essentially a multi-armed bandit with
+binary rewards of either 0 or H − 2. For each bandit, the probability of ending up in + or − is
+equal except for the first action a1 with p(st+1 = +|st = i, at = a1 ) = 1/2 + /2 and possibly an
+unknown optimal action a∗i (different for each state i) with p(st+1 = +|st = i, at = a∗i ) = 1/2 + .
+In the episodic fixed-horizon setting we are considering, taking a suboptimal action in one of the
+bandits does not necessarily yield a suboptimal episode. We have to consider the average over all
+bandits instead. In an -optimal episode, the agent therefore needs to follow a policy that would
+solve at least a certain portion of all n multi-armed bandits with probability at least 1 − δ. We show
+that the best strategy for the agent to achieve this is to try to solve all bandits with equal probability.
+The number of samples required to do so then results in the lower bound in Equation (3).
+7
+
+Similar MDPs that essentially solve multiple of such multi-armed bandits have been used to prove
+lower sample-complexity bounds for discounted MDPs [14, 6]. However, the analysis in the infinite
+horizon case as well as for the sliding-window fixed-horizon optimality criterion considered by
+Kakade [4] is significantly simpler. For these criteria, every time step the agent follows a policy that
+is not -optimal counts as a ”mistake”. Therefore, every time the agent does not pick the optimal
+arm in any of the multi-armed bandits counts as a mistake. This contrasts with our fixed-horizon
+setting where we must instead consider taking an average over all bandits.
+
+5
+
+Related Work on Fixed-Horizon Sample Complexity Bounds
+
+We are not aware of any lower sample complexity bounds beyond multi-armed bandit results that
+directly apply to our setting. Our upper bound in Theorem 1 improves upon existing results by at
+least a factor of H. We briefly review those existing results in the following.
+Timestep bounds. Kakade [4, Chapter 8] proves upper and lower PAC bounds for a similar setting where the agent interacts indefinitely with the environment but the interactions are divided in
+segments of equal length and the agent is evaluated by the expected
+of rewards
+ sum
+ until the end
+2
+6
+1 6
+of each segment. The bound states that there are not more than Õ |S| |A|H
+time steps in
+ln
+3
+δ
+which the agents acts -suboptimal. Strehl etal. [1] improves
+ the state-dependency of these bounds
+|S||A|H 5
+1
+for their delayed Q-learning algorithm to Õ
+ln δ . However, in episodic MDP it is more
+4
+natural to consider performance on the entire episode since suboptimality near the end of the episode
+is no issue as long as the total reward on the entire episode is sufficiently high. Kolter and Ng [9]
+use an interesting sliding-window criterion, but prove bounds for a Bayesian setting instead of PAC.
+Timestep-based bounds can be applied to the episodic case by augmenting the original statespace
+with a time-index per episode to allow resets after H steps. This adds H dependencies for each |S|
+in the original bound which results in a horizon-dependency of at least H 6 of these existing bounds.
+Translating the regret bounds of UCRL2 in Corollary 3by Jaksch et al. [20] yields a PAC-bound
+2
+3
+ln 1δ even if one ignores the reset after H time
+on the number of episodes of at least Õ |S| |A|H
+2
+steps. Timestep-based lower PAC-bounds cannot be applied directly to the episodic reward criterion.
+Episode bounds. Similar to us, Fiechter [10] uses the value of initial states as optimality-criterion,
+ 2
+
+7
+1
+but defines the value w.r.t. the γ-discounted infinite horizon. His results of order Õ |S| |A|H
+ln
+2
+
+δ
+episodes of length Õ(1/(1 − γ)) ≈ Õ(H) are therefore not directly applicable to our setting. Auer
+and Ortner [5] investigate the same setting as we and propose
+ 10a UCB-type
+ algorithm that has no7
+1
+ln
+regret, which translates into a basic PAC bound of order Õ |S| |A|H
+3
+δ episodes. We improve
+on this bound substantially in terms of its dependency on H, |S| and . Reveliotis and Bountourelis
+[12] also consider the episodic undiscounted fixed-horizon setting and present an efficient algorithm
+in cases where the transition graph is acyclic and the agent knows for each state a policy that visits
+this state with a known minimum probability
+assumptions
+are quite limiting and rarely
+
+ q. These
+|S||A|H 4
+1
+ln δ explicitly depends on 1/q.
+hold in practice and their bound of order Õ
+2 q
+
+6
+
+Conclusion
+
+We have shown upper and lower bounds on the sample complexity of episodic fixed-horizon RL that
+are tight up to log-factors in the time horizon H, the accuracy , the number of actions |A| and up
+to an additive constant in the failure probability δ. These bounds improve upon existing results by a
+factor of at least H. One might hope to reduce the dependency of the upper bound on |S| to be linear
+by an analysis similar to Mormax [7] for discounted MDPs which has sample complexity linear in
+|S| at the penalty of additional dependencies on H. Our proposed UCFH algorithm that achieves our
+PAC bound can be applied to directly to a wide range of fixed-horizon episodic MDPs with known
+rewards and does not require additional structure such as sparse or acyclic state transitions assumed
+in previous work. The empirical evaluation of UCFH is an interesting direction for future work.
+Acknowledgments: We thank Tor Lattimore for the helpful suggestions and comments. This work
+was supported by an NSF CAREER award and the ONR Young Investigator Program.
+6
+For comparison we adapt existing bounds to our setting. While the original bound stated by Kakade [4]
+only has H 3 , an additional H 3 comes in through −3 due to different normalization of rewards.
+
+8
+
+References
+[1] Alexander L. Strehl, Lihong Li, Eric Wiewiora, John Langford, and Michael L. Littman.
+PAC Model-Free Reinforcement Learning. In International Conference on Machine Learning, 2006.
+[2] Michael J Kearns and Satinder P Singh. Finite-Sample Convergence Rates for Q-Learning and
+Indirect Algorithms. In Advances in Neural Information Processing Systems, 1999.
+[3] Ronen I Brafman and Moshe Tennenholtz. R-MAX – A General Polynomail Time Algorithm
+for Near-Optimal Reinforcement Learning. Journal of Machine Learning Research, 3:213–
+231, 2002.
+[4] Sham M. Kakade. On the Sample Complexity of Reinforcement Learning. PhD thesis, University College London, 2003.
+[5] Peter Auer and Ronald Ortner. Online Regret Bounds for a New Reinforcement Learning
+Algorithm. In Proceedings 1st Austrian Cognitive Vision Workshop, 2005.
+[6] Tor Lattimore and Marcus Hutter. PAC bounds for discounted MDPs. In International Conference on Algorithmic Learning Theory, 2012.
+[7] Istvàn Szita and Csaba Szepesvári. Model-based reinforcement learning with nearly tight exploration complexity bounds. In International Conference on Machine Learning, 2010.
+[8] Mohammad Gheshlaghi Azar, Rémi Munos, and Hilbert J. Kappen. On the Sample Complexity
+of Reinforcement Learning with a Generative Model. In International Conference on Machine
+Learning, 2012.
+[9] J Zico Kolter and Andrew Y Ng. Near-Bayesian exploration in polynomial time. In International Conference on Machine Learning, 2009.
+[10] Claude-Nicolas Fiechter. Efficient reinforcement learning. In Conference on Learning Theory,
+1994.
+[11] Claude-Nicolas Fiechter. Expected Mistake Bound Model for On-Line Reinforcement Learning. In International Conference on Machine Learning, 1997.
+[12] Spyros Reveliotis and Theologos Bountourelis. Efficient PAC learning for episodic tasks with
+acyclic state spaces. Discrete Event Dynamic Systems: Theory and Applications, 17(3):307–
+327, 2007.
+[13] Alexander L Strehl, Lihong Li, and Michael L Littman. Incremental Model-based Learners
+With Formal Learning-Time Guarantees. In Conference on Uncertainty in Artificial Intelligence, 2006.
+[14] Alexander L Strehl, Lihong Li, and Michael L Littman. Reinforcement Learning in Finite
+MDPs : PAC Analysis. Journal of Machine Learning Research, 10:2413–2444, 2009.
+[15] Thomas Jaksch, Ronald Ortner, and Peter Auer. Near-optimal Regret Bounds for Reinforcement Learning. In Advances in Neural Information Processing Systems, 2010.
+[16] Alexander L. Strehl and Michael L. Littman. An analysis of model-based Interval Estimation
+for Markov Decision Processes. Journal of Computer and System Sciences, 74(8):1309–1331,
+dec 2008.
+[17] Matthew J Sobel. The Variance of Markov Decision Processes. Journal of Applied Probability,
+19(4):794–802, 1982.
+[18] Andreas Maurer and Massimiliano Pontil. Empirical Bernstein Bounds and Sample-Variance
+Penalization. In Conference on Learning Theory, 2009.
+[19] Shie Mannor and John N Tsitsiklis. The Sample Complexity of Exploration in the Multi-Armed
+Bandit Problem. Journal of Machine Learning Research, 5:623–648, 2004.
+[20] Thomas Jaksch, Ronald Ortner, and Peter Auer. Near-optimal Regret Bounds for Reinforcement Learning. Journal of Machine Learning Research, 11:1563–1600, 2010.
+[21] Fan Chung and Linyuan Lu. Concentration Inequalities and Martingale Inequalities: A Survey.
+Internet Mathematics, 3(1):79–127, 2006.
+
+9
+
+

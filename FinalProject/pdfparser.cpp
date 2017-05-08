@@ -115,6 +115,6 @@ int PDFParser::getNumWordsIndexed() {
     return numWordsIndexed;
 }
 
-vector<string>& PDFParser::getOutputFiles() {
+vector<string> PDFParser::getOutputFiles() {
     return outputFiles;
 }

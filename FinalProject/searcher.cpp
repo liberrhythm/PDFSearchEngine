@@ -6,10 +6,9 @@ Searcher::Searcher() {
 
 }
 
-Searcher::Searcher(IndexInterface* ih) {
+Searcher::Searcher(IndexInterface* ih, vector<string> files) {
     index = ih;
-    index->printWords();
-    //numDocs = docs;
+    txtFiles = files;
 }
 
 void Searcher::getQuery() {
@@ -36,6 +35,9 @@ void Searcher::getQuery() {
     {
         orQuery();
     }
+    else {
+        notQuery();
+    }
 }
 
 bool Searcher::checkForWord(string term) {
@@ -43,24 +45,37 @@ bool Searcher::checkForWord(string term) {
         return true;
     }
     else {
+        cout << term << " does not exist in the corpus" << endl;
         return false;
     }
 }
 
-vector<pair<string, int>>& Searcher::receiveStringRequest(string term) {
+vector<pair<string, int>> Searcher::receiveStringRequest(string term) {
     Word wrd = index->find(term);
     return wrd.getFiles();
 }
 
-void Searcher::printResults(vector<pair<string, int>>& data)
+void Searcher::printResults(vector<pair<string, int>> data)
 {
     if (!data.empty()) {
-        for (pair<string, int> p: data) {
-            cout << p.first << " " << p.second << endl;
+        calculateTFIDF(data);
+
+        for (int i = 0; i < tfidfRankings.size() && i < 15; i++) {
+            cout << i+1 << ") ";
+            cout << tfidfRankings[i].first << " " << tfidfRankings[i].second << endl;
         }
+
+        cout << endl << endl;
+
+        int tfidfSize = tfidfRankings.size();
+        for (int i = 0; i < tfidfSize; i++) {
+            tfidfRankings.pop_back();
+        }
+
+        printPDF();
     }
     else {
-        cout << "No results found for search query" << endl;
+        cout << "No results found for search query" << endl << endl;
     }
 }
 
@@ -88,22 +103,21 @@ void Searcher::receiveRequest(string term, int numDocs) {
     }
     cout << "----------end of results----------" << endl << endl;
 }
+*/
 
-vector<pair<string, int>>& Searcher::calculateTFIDF(Word wrd, int numDocs) {
-    vector<pair<string, int>> files = wrd.getFiles();
+void Searcher::calculateTFIDF(vector<pair<string, int>> files) {
     for (pair<string, int> p: files) {
         double tf = p.second;
-        double idf = log2(static_cast<double>(numDocs) / (1 + static_cast<double>(files.size())));
+        double idf = log2(static_cast<double>(txtFiles.size()) / (1 + static_cast<double>(files.size())));
         double tfidf = tf * idf;
         tfidfRankings.push_back(pair<string, int>(p.first, tfidf));
     }
     sort(tfidfRankings.begin(), tfidfRankings.end(), [](const pair<string, int>& left, const pair<string, int>& right)
     {return left.second > right.second;});
-    return tfidfRankings;
 }
-*/
 
-string Searcher::findPDFToPrint(string pdf, vector<string> outputFiles) {
+/*
+string Searcher::findPDFToPrint(string pdf) {
     string doc;
 
     pdf = pdf.substr(pdf.length()-4, pdf.length());
@@ -117,8 +131,16 @@ string Searcher::findPDFToPrint(string pdf, vector<string> outputFiles) {
         }
     }
 }
+*/
 
-void Searcher::printPDF(string doc) {
+void Searcher::printPDF() {
+    string doc;
+    cout << "Which pdf would you like to view?" << endl << endl;
+    getline(cin, doc);
+
+    doc = doc.substr(doc.length()-4, doc.length());
+    doc += ".txt";
+
     ifstream inFile;
     inFile.open(doc, ios::in);
 
@@ -139,8 +161,8 @@ void Searcher::printPDF(string doc) {
 
 
 
-void Searcher::simpleQuery(string s)
-{
+void Searcher::simpleQuery(string s) {
+
     vector<pair<string, int>> data;
     if (checkForWord(s)) {
         data=receiveStringRequest(s);//equals a vector
@@ -150,53 +172,29 @@ void Searcher::simpleQuery(string s)
     printResults(data);
 }
 
-void Searcher::andQuery()
-{
-
+void Searcher::notQuery() {
     vector<pair<string, int>> temp;
     vector<pair<string, int>> results;
 
-    //we remove the first element "and" from the queue
-    input.pop();
-
-    //while the queue is not empty, search words are implementd
     while(!input.empty()){
 
-        if(input.front()=="not"){
-
+        if(input.front() == "not"){
             input.pop();
             if (checkForWord(input.front())) {
                 temp=receiveStringRequest(input.front());
-            }
-
-
-            if(results.empty()){
-            //we do nothing if the vector is empty
-
-            }
-            else
-            {
-
-                results=vecDiff(results, temp);
-
-            }
-
-        }
-        else
-        {
-
-            temp=receiveStringRequest(input.front());
-
-            if(results.empty()){
-
-                results=temp;
-            }
-            else
-            {
-                results=vecInter(results, temp);
+                if(!results.empty()){
+                    results=vecDiff(results, temp);
+                }
             }
         }
-
+        else {
+            if (checkForWord(input.front())) {
+                temp=receiveStringRequest(input.front());
+                if(results.empty()){
+                    results=temp;
+                }
+            }
+        }
         input.pop();
     }
 
@@ -204,13 +202,11 @@ void Searcher::andQuery()
 
 }
 
-
-
-void Searcher::orQuery()
-{
-
-    vector<pair<string, int>> results;
+void Searcher::andQuery() {
     vector<pair<string, int>> temp;
+    vector<pair<string, int>> results;
+
+    bool wordExists = true;
 
     //we remove the first element "and" from the queue
     input.pop();
@@ -219,45 +215,82 @@ void Searcher::orQuery()
     while(!input.empty()){
 
         if(input.front()=="not"){
-
             input.pop();
-            temp=receiveStringRequest(input.front());
-
-            if(results.empty()){
-            //we do nothing if the vector is empty
-            }
-            else
-            {
-                results=vecDiff(results, temp);
+            if (checkForWord(input.front())) {
+                temp=receiveStringRequest(input.front());
+                if(!results.empty()){
+                    results=vecDiff(results, temp);
+                }
             }
         }
-        else
-        {
-            temp=receiveStringRequest(input.front());
-
-            if(results.empty()){
-
-                results=temp;
+        else {
+            if (checkForWord(input.front())) {
+                temp=receiveStringRequest(input.front());
+                if(results.empty()){
+                    results=temp;
+                }
+                else {
+                    results=vecInter(results, temp);
+                }
             }
-            else
-            {
-                results=vecUnion(results, temp);
+            else {
+                wordExists = false;
             }
         }
 
         input.pop();
+        if (wordExists == false) {
+            int resultsSize = results.size();
+            for (int i = 0; i < resultsSize; i++) {
+                results.pop_back();
+            }
+            break;
+        }
     }
 
     printResults(results);
-
 }
 
-vector<pair<string, int>>&  Searcher::vecUnion(vector<pair<string, int>>& overall, vector<pair<string, int>>& temp)
+
+
+void Searcher::orQuery() {
+    vector<pair<string, int>> results;
+    vector<pair<string, int>> temp;
+
+    //we remove the first element "and" from the queue
+    input.pop();
+
+    //while the queue is not empty, search words are implementd
+    while(!input.empty()) {
+
+        if(input.front()=="not") {
+            input.pop();
+            if (checkForWord(input.front())) {
+                temp=receiveStringRequest(input.front());
+                if(!results.empty()){
+                    results=vecDiff(results, temp);
+                }
+            }
+        }
+        else {
+            if (checkForWord(input.front())) {
+                temp=receiveStringRequest(input.front());
+                if(results.empty()) {
+                    results=temp;
+                }
+                else {
+                    results=vecUnion(results, temp);
+                }
+            }
+        }
+        input.pop();
+    }
+
+    printResults(results);
+}
+
+vector<pair<string, int>> Searcher::vecUnion(vector<pair<string, int>>& overall, vector<pair<string, int>>& temp)
 {
-
-    vector<pair<string, int>> final;
-    vector<pair<string, int>>::iterator it;
-
     for(int i=0; i<overall.size(); i++){
         for(int j=0; j<temp.size(); j++){
             if(overall[i].first==temp[j].first){
@@ -267,6 +300,7 @@ vector<pair<string, int>>&  Searcher::vecUnion(vector<pair<string, int>>& overal
         }
     }
 
+    /*
     sort(overall.begin(), overall.end(), [](const pair<string, int>& left, const pair<string, int>& right)
     {return left.first > right.first;});
     sort(temp.begin(), temp.end(), [](const pair<string, int>& left, const pair<string, int>& right)
@@ -276,13 +310,18 @@ vector<pair<string, int>>&  Searcher::vecUnion(vector<pair<string, int>>& overal
                  [](const pair<string, int>& left, const pair<string, int>& right)
     {return left.first > right.first;});
     final.resize(it-final.begin());
+    */
 
+    for (pair<string, int> p: temp) {
+        overall.push_back(p);
+    }
 
-    return final;
+    return overall;
 }
 
-vector<pair<string, int>>&  Searcher::vecDiff(vector<pair<string, int>>& overall, vector<pair<string, int>>& temp)
+vector<pair<string, int>> Searcher::vecDiff(vector<pair<string, int>>& overall, vector<pair<string, int>>& temp)
 {
+    /*
     vector<pair<string, int>> final;
     vector<pair<string, int>>::iterator it;
 
@@ -295,11 +334,21 @@ vector<pair<string, int>>&  Searcher::vecDiff(vector<pair<string, int>>& overall
                       [](const pair<string, int>& left, const pair<string, int>& right)
                         {return left.first > right.first;});
     final.resize(it-final.begin());
+    */
 
-    return final;
+    for(int i=0; i<overall.size(); i++){
+        for(int j=0; j<temp.size(); j++){
+            if(overall[i].first==temp[j].first){
+                overall.erase(overall.begin()+i);
+                temp.erase(temp.begin()+j);
+            }
+        }
+    }
+
+    return overall;
 }
 
-vector<pair<string, int>>&  Searcher::vecInter(vector<pair<string, int>>& overall, vector<pair<string, int>>& temp)
+vector<pair<string, int>> Searcher::vecInter(vector<pair<string, int>>& overall, vector<pair<string, int>>& temp)
 {
     vector<pair<string, int>> final;
     vector<pair<string, int>>::iterator it;

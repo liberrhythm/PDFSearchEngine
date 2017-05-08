@@ -1,0 +1,1024 @@
+Accelerated Mirror Descent
+in Continuous and Discrete Time
+Walid Krichene
+UC Berkeley
+
+Alexandre M. Bayen
+UC Berkeley
+
+Peter L. Bartlett
+UC Berkeley and QUT
+
+walid@eecs.berkeley.edu
+
+bayen@berkeley.edu
+
+bartlett@berkeley.edu
+
+Abstract
+We study accelerated mirror descent dynamics in continuous and discrete time.
+Combining the original continuous-time motivation of mirror descent with a recent ODE interpretation of Nesterov’s accelerated method, we propose a family of
+continuous-time descent dynamics for convex functions with Lipschitz gradients,
+such that the solution trajectories converge to the optimum at a O(1/t2 ) rate. We
+then show that a large family of first-order accelerated methods can be obtained as
+a discretization of the ODE, and these methods converge at a O(1/k 2 ) rate. This
+connection between accelerated mirror descent and the ODE provides an intuitive
+approach to the design and analysis of accelerated first-order algorithms.
+
+1
+
+Introduction
+
+We consider a convex optimization problem, minimizex∈X f (x), where X ⊆ Rn is convex and
+closed, f is a C 1 convex function, and ∇f is assumed to be Lf -Lipschitz. Let f ? be the minimum
+of f on X . Many convex optimization methods can be interpreted as the discretization of an ordinary
+differential equation, the solutions of which are guaranteed to converge to the set of minimizers. Perhaps the simplest such method is gradient descent, given by the iteration x(k+1) = x(k) −s∇f (x(k) )
+for some step size s, which can be interpreted as the discretization of the ODE Ẋ(t) = −∇f (X(t)),
+with discretization step s. The well-established theory of ordinary differential equations can provide
+guidance in the design and analysis of optimization algorithms, and has been used for unconstrained
+optimization [8, 7, 13], constrained optimization [27] and stochastic optimization [25]. In particular,
+proving convergence of the solution trajectories of an ODE can often be achieved using simple and
+elegant Lyapunov arguments. The ODE can then be carefully discretized to obtain an optimization algorithm for which the convergence rate can be analyzed by using an analogous Lyapunov
+argument in discrete time.
+In this article, we focus on two families of first-order methods: Nesterov’s accelerated method [22],
+and Nemirovski’s mirror descent method [19]. First-order methods have become increasingly important for large-scale optimization problems that arise in machine learning applications. Nesterov’s
+accelerated method [22] has been applied to many problems and extended in a number of ways, see
+for example [23, 20, 21, 4]. The mirror descent method also provides an important generalization of the gradient descent method to non-Euclidean geometries, as discussed in [19, 3], and has
+many applications in convex optimization [6, 5, 12, 15], as well as online learning [9, 11]. An intuitive understanding of these methods is of particular importance for the design and analysis of
+new algorithms. Although Nesterov’s method has been notoriously hard to explain intuitively [14],
+progress has been made recently: in [28], Su et al. give an ODE interpretation of Nesterov’s method.
+However, this interpretation is restricted to the original method [22], and does not apply to its extensions to non-Euclidean geometries. In [1], Allen-Zhu and Orecchia give another interpretation
+of Nesterov’s method, as performing, at each iteration, a convex combination of a mirror step and a
+gradient step. Although it covers a broader family of algorithms (including non-Euclidean geometries), this interpretation still requires an involved analysis, and lacks the simplicity and elegance of
+1
+
+ODEs. We provide a new interpretation which has the benefits of both approaches: we show that a
+broad family of accelerated methods (which includes those studied in [28] and [1]) can be obtained
+as a discretization of a simple ODE, which converges at a O(1/t2 ) rate. This provides a unified
+interpretation, which could potentially simplify the design and analysis of first-order accelerated
+methods.
+The continuous-time interpretation [28] of Nesterov’s method and the continuous-time motivation
+of mirror descent [19] both rely on a Lyapunov argument. They are reviewed in Section 2. By
+combining these ideas, we propose, in Section 3, a candidate Lyapunov function V (X(t), Z(t), t)
+that depends on two state variables: X(t), which evolves in the primal space E = Rn , and Z(t),
+which evolves in the dual space E ∗ , and we design coupled dynamics of (X, Z) to guarantee that
+d
+dt V (X(t), Z(t), t) ≤ 0. Such a function is said to be a Lyapunov function, in reference to [18];
+see also [16]. This leads to a new family of ODE systems, given in Equation (5). We prove the
+existence and uniqueness of the solution to (5) in Theorem 1. Then we prove in Thereom 2, using
+the Lyapunov function V , that the solution trajectories are such that f (X(t)) − f ? = O(1/t2 ). In
+Section 4, we give a discretization of these continuous-time dynamics, and obtain a family of accelerated mirror descent methods, for which we prove the same O(1/k 2 ) convergence rate (Theorem 3)
+using a Lyapunov argument analogous to (though more involved than) the continuous-time case. We
+give, as an example, a new accelerated method on the simplex, which can be viewed as performing,
+at each step, a convex combination of two entropic projections with different step sizes. This ODE
+interpretation of accelerated mirror descent gives new insights and allows us to extend recent results
+such as the adaptive restarting heuristics proposed by O’Donoghue and Candès in [24], which are
+known to empirically improve the convergence rate. We test these methods on numerical examples
+in Section 5 and comment on their performance.
+
+2
+
+ODE interpretations of Nemirovski’s mirror descent method and
+Nesterov’s accelerated method
+
+Proving convergence of the solution trajectories of an ODE often involves a Lyapunov argument. For
+example, to prove convergence of the solutions to the gradient descent ODE Ẋ(t) = −∇f (X(t)),
+consider the Lyapunov function V (X(t)) = 21 kX(t) − x? k2 for some minimizer x? . Then the time
+derivative of V (X(t)) is given by
+D
+E
+d
+V (X(t)) = Ẋ(t), X(t) − x? = h−∇f (X(t)), X(t) − x? i ≤ −(f (X(t)) − f ? ),
+dt
+
+where the last inequality is by convexity of f .Integrating, we
+− V (x0 ) ≤ tf ? −
+ have V (X(t))
+Rt
+R
+R
+t
+t
+f (X(τ ))dτ , thus by Jensen’s inequality, f 1t 0 X(τ )dτ − f ? ≤ 1t 0 f (X(τ ))dτ − f ? ≤
+0
+ R
+
+V (x0 )
+1 t
+?
+t , which proves that f t 0 X(τ )dτ converges to f at a O(1/t) rate.
+2.1
+
+Mirror descent ODE
+
+The previous argument was extended by Nemirovski and Yudin in [19] to a family of methods
+called mirror descent. The idea is to start from a non-negative function V , then to design dynamics
+for which V is a Lyapunov function. Nemirovski and Yudin argue that one can replace the Lyapunov
+function V (X(t)) = 21 kX(t) − x? k2 by a function on the dual space, V (Z(t)) = Dψ∗ (Z(t), z ? ),
+where Z(t) ∈ E ∗ is a dual variable for which we will design the dynamics (z ? is the value of Z at
+equilibrium), and the corresponding trajectory in the primal space is X(t) = ∇ψ ∗ (Z(t)). Here ψ ∗ is
+a convex function defined on E ∗ , such that ∇ψ ∗ maps E ∗ to X , and Dψ∗ (Z(t), z ? ) is the Bregman
+divergence associated with ψ ∗ , defined as Dψ∗ (z, y) = ψ ∗ (z) − ψ ∗ (y) − h∇ψ ∗ (y), z − yi. The
+∗
+function ψ ∗ is said to be `-strongly convex w.r.t. a reference norm k · k∗ if Dψ
+(z, y) ≥ 2` kz − yk2∗
+L
+for all y, z, and it is said to be L-smooth w.r.t. k · k∗ if Dψ∗ (z, y) ≤ 2 kz − yk2∗ . For a review of
+properties of Bregman divergences, see Chapter 11.2 in [11], or Appendix A in [2].
+By definition of the Bregman divergence, we have
+d
+d
+d
+V (Z(t)) = Dψ∗ (Z(t), z ? ) =
+(ψ ∗ (Z(t)) − ψ ∗ (z ? ) − h∇ψ ∗ (z ∗ ), Z(t) − z ? i)
+dt
+dt
+dt
+D
+E D
+E
+= ∇ψ ∗ (Z(t)) − ∇ψ ∗ (z ? ), Ż(t) = X(t) − x? , Ż(t) .
+
+2
+
+Therefore, if the dual variable Z obeys the dynamics Ż = −∇f (X), then
+
+d
+V (Z(t)) = − h∇f (X(t)), X(t) − x? i ≤ −(f (X(t)) − f ? )
+dt
+
+and
+the same
+ by
+ argument as in the gradient descent ODE, V is a Lyapunov function and
+R
+1 t
+f t 0 X(τ )dτ − f ? converges to 0 at a O(1/t) rate. The mirror descent ODE system can be
+summarized by
+
+∗
+
+ X = ∇ψ (Z)
+Ż = −∇f (X)
+
+ X(0) = x , Z(0) = z with ∇ψ ∗ (z ) = x
+0
+0
+0
+0
+
+(1)
+
+Note that since ∇ψ ∗ maps into X , X(t) = ∇ψ ∗ (Z(t)) remains in X . Finally, the unconstrained
+gradient descent ODE can be obtained as a special case of the mirror descent ODE (1) by taking
+ψ ∗ (z) = 12 kzk2 , for which ∇ψ ∗ is the identity, in which case X and Z coincide.
+2.2
+
+ODE interpretation of Nesterov’s accelerated method
+
+In [28], Su et al. show that Nesterov’s accelerated method [22] can be interpreted as a discretization
+of a second-order differential equation, given by
+(
+
+Ẍ + r+1
+Ẋ + ∇f (X) = 0
+t
+X(0) = x0 , Ẋ(0) = 0
+
+(2)
+2
+
+The argument uses the following Lyapunov function (up to reparameterization), E(t) = tr (f (X) −
+f ? ) + 2r kX + rt Ẋ − x? k2 , which is proved to be a Lyapunov function for the ODE (2) whenever
+r ≥ 2. Since E is decreasing along trajectories of the system, it follows that for all t > 0, E(t) ≤
+? 2
+2
+k
+E(0) = 2r kx0 − x? k2 , therefore f (X(t)) − f ? ≤ tr2 E(t) ≤ tr2 E(0) ≤ rt2 kx0 −x
+, which proves
+2
+that f (X(t)) converges to f ? at a O(1/t2 ) rate. One should note in particular that the squared
+Euclidean norm is used in the definition of E(t) and, as a consequence, discretizing the ODE (2)
+leads to a family of unconstrained, Euclidean accelerated methods. In the next section, we show
+that by combining this argument with Nemirovski’s idea of using a general Bregman divergence
+as a Lyapunov function, we can construct a much more general family of ODE systems which
+have the same O(1/t2 ) convergence guarantee. And by discretizing the resulting dynamics, we
+obtain a general family of accelerated methods that are not restricted to the unconstrained Euclidean
+geometry.
+
+3
+3.1
+
+Continuous-time Accelerated Mirror Descent
+Derivation of the accelerated mirror descent ODE
+
+We consider a pair of dual convex functions, ψ defined on X and ψ ∗ defined on E ∗ , such that
+∇ψ ∗ : E ∗ → X . We assume that ψ ∗ is Lψ∗ -smooth with respect to k · k∗ , a reference norm on the
+dual space. Consider the function
+V (X(t), Z(t), t) =
+
+t2
+(f (X(t)) − f ? ) + rDψ∗ (Z(t), z ? )
+r
+
+(3)
+
+?
+
+where Z is a dual variable for which we will design the dynamics, and z is its value at equilibrium.
+Taking the time-derivative of V , we have
+E
+D
+E
+d
+2t
+t2 D
+V (X(t), Z(t), t) = (f (X) − f ? ) +
+∇f (X), Ẋ + r Ż, ∇ψ ∗ (Z) − ∇ψ ∗ (z ? ) .
+dt
+r
+r
+
+Assume that Ż = − rt ∇f (X). Then, the time-derivative of V becomes
+
+
+
+d
+2t
+t
+?
+∗
+∗ ?
+V (X(t), Z(t), t) = (f (X) − f ) − t ∇f (X), − Ẋ + ∇ψ (Z) − ∇ψ (z ) .
+dt
+r
+r
+
+Therefore, if Z is such that ∇ψ ∗ (Z) = X + rt Ẋ, and ∇ψ ∗ (z ? ) = x? , then,
+
+d
+2t
+2t
+V (X(t), Z(t), t) = (f (X) − f ? ) − t h∇f (X), X − x? i ≤ (f (X) − f ? ) − t(f (X) − f ? )
+dt
+r
+r
+r−2
+≤ −t
+(f (X) − f ? )
+(4)
+r
+
+3
+
+and it follows that V is a Lyapunov function whenever r ≥ 2. The proposed ODE system is then
+
+∗
+r
+
+ Ẋ = t (∇ψ (Z) − X),
+t
+Ż = − r ∇f (X),
+
+ X(0) = x , Z(0) = z , with ∇ψ ∗ (z ) = x .
+0
+0
+0
+0
+
+(5)
+
+1
+2
+∗
+In the unconstrained Euclidean case, taking ψ ∗ (z)
+ = 2 kzk
+ , we have ∇ψ (z) = z, thus Z =
+t
+t
+d
+t
+X + r Ẋ, and the ODE system is equivalent to dt X + r Ẋ = − r ∇f (X), which is equivalent to
+the ODE (2) studied in [28], which we recover as a special case.
+
+We also give another interpretation of ODE (5): theR first equation is equivalent to tr Ẋ + rtr−1 X =
+t
+rtr−1 ∇ψ ∗ (Z), or, in integral form, tr X(t) = r 0 τ r−1 ∇ψ ∗ (Z(τ ))dτ , which can be written as
+X(t) =
+
+Rt
+0
+
+w(τ )∇ψ ∗ (Z(τ ))dτ
+Rt
+,
+w(τ )dτ
+0
+
+with w(τ ) = τ r−1 . Therefore the coupled dynamics of (X, Z) can
+
+be interpreted as follows: the dual variable Z accumulates gradients with a rt rate, while the primal
+variable X is a weighted average of ∇ψ ∗ (Z(τ )) (the “mirrored” dual trajectory), with weights
+proportional to τ r−1 . This also gives an interpretation of r as a parameter controlling the weight
+distribution. It is also interesting to observe that the weights are increasing if and only if r ≥ 2.
+Finally, with this averaging interpretation, it becomes clear that the primal trajectory X(t) remains
+in X , since ∇ψ ∗ maps into X and X is convex.
+3.2
+
+Solution of the proposed dynamics
+
+First, we prove existence and uniqueness of a solution to the ODE system (5), defined for all t >
+0. By assumption, ψ ∗ is Lψ∗ -smooth w.r.t. k · k∗ , which is equivalent (see e.g. [26]) to ∇ψ ∗ is
+Lψ∗ -Lipschitz. Unfortunately, due to the rt term in the expression of Ẋ, the function (X, Z, t) 7→
+(Ẋ, Ż) is not Lipschitz at t = 0, and we cannot directly apply the Cauchy-Lipschitz existence and
+uniqueness theorem. However, one can work around it by considering a sequence of approximating
+ODEs, similarly to the argument used in [28].
+Theorem 1. Suppose f is C 1 , and that ∇f is Lf -Lipschitz, and let (x0 , z0 ) ∈ X × E ∗ such that
+∇ψ ∗ (z0 ) = x0 . Then the accelerated mirror descent ODE system (5) with initial condition (x0 , z0 )
+has a unique solution (X, Z), in C 1 ([0, ∞), Rn ).
+We will show existence of a solution on any given interval [0, T ] (uniqueness is proved in the supplementary material). Let δ > 0, and consider the smoothed ODE system
+
+∗
+r
+
+ Ẋ = max(t,δ) (∇ψ (Z) − X),
+t
+Ż = − r ∇f (X),
+
+ X(0) = x , Z(0) = z with ∇ψ ∗ (z ) = x .
+0
+0
+0
+0
+
+(6)
+
+r
+Since the functions (X, Z) 7→ − rt ∇f (X) and (X, Z) 7→ max(t,δ)
+(∇ψ ∗ (Z) − X) are Lipschitz for
+all t ∈ [0, T ], by the Cauchy-Lipschitz theorem (Theorem 2.5 in [29]), the system (6) has a unique
+solution (Xδ , Zδ ) in C 1 ([0, T ]). In order to show the existence of a solution to the original ODE,
+we use the following Lemma (proved in the supplementary material).
+
+Lemma 1. Let t0 = √ 2
+. Then the family of solutions (Xδ , Zδ )|[0,t0 ] δ≤t is equi-LipschitzLf Lψ∗
+
+0
+
+continuous and uniformly bounded.
+
+Proof of existence. Consider the family of solutions (Xδi , Zδi ), δi = t0 2−i i∈N restricted to [0, t0 ].
+By Lemma 1, this family is equi-Lipschitz-continuous and uniformly bounded, thus by the ArzelàAscoli theorem, there exists a subsequence ((Xδi , Zδi ))i∈I that converges uniformly on [0, t0 ]
+(where I ⊂ N is an infinite set of indices). Let (X̄, Z̄) be its limit. Then we prove that (X̄, Z̄)
+is a solution to the original ODE (5) on [0, t0 ].
+First, since for all i ∈ I, Xδi (0) = x0 and Zδi (0) = z0 , it follows that X̄(0) =
+limi→∞,i∈I Xδi (0) = x0 and Z̄(0) = limi→∞,i∈I Zδi (0) = z0 , thus (X̄, Z̄) satisfies the initial
+conditions. Next, let t1 ∈ (0, t0 ), and let (X̃, Z̃) be the solution of the ODE (5) on t ≥ t1 , with
+initial condition (X̄(t1 ), Z̄(t1 )). Since (Xδi (t1 ), Zδi (t1 ))i∈I → (X̄(t1 ), Z̄(t1 )) as i → ∞, then by
+4
+
+continuity of the solution w.r.t. initial conditions (Theorem 2.8 in [29]), we have that for some  > 0,
+Xδi → X̃ uniformly on [t1 , t1 + ). But we also have Xδi → X̄ uniformly on [0, t0 ], therefore X̄
+and X̃ coincide on [t1 , t1 + ), therefore X̄ satisfies the ODE on [t1 , t1 + ). And since t1 is arbitrary
+in (0, t0 ), this concludes the proof of existence.
+3.3
+
+Convergence rate
+
+It is now straightforward to establish the convergence rate of the solution.
+Theorem 2. Suppose that f has Lipschitz gradient, and that ψ ∗ is a smooth distance generating
+function. Let (X(t), Z(t)) be the solution to the accelerated mirror descent ODE (5) with r ≥ 2.
+Then for all t > 0, f (X(t)) − f ? ≤
+
+r 2 Dψ∗ (z0 ,z ? )
+.
+t2
+
+2
+
+Proof. By construction of the ODE, V (X(t), Z(t), t) = tr (f (X(t)) − f ? ) + rDψ∗ (Z(t), z ? ) is
+2
+a Lyapunov function. It follows that for all t > 0, tr (f (X(t)) − f ? ) ≤ V (X(t), Z(t), t) ≤
+V (x0 , z0 , 0) = rDψ∗ (z0 , z ? ).
+
+4
+
+Discretization
+
+Next, we show that with a careful discretization of this continuous-time dynamics, we can obtain a
+general family of accelerated mirror descent methods for constrained optimization. Using a mixed
+forward/backward
+(5)
+√ system
+√Euler scheme (see e.g. Chapter 2 in [10]), we can discretize the ODE
+(k)
+of
+the
+ODE
+(5),
+let
+t
+=
+k
+s,
+and
+x
+=
+using a step size s as follows. Given a solution (X, Z)
+k
+√
+√
+k)
+X(tk ) = X(k s). Approximating Ẋ(tk ) with X(tk + √s)−X(t
+,
+we
+propose
+the
+discretization
+s
+(
+
+(k)
+x(k+1)
+√−x
+s
+(k)
+z (k+1)
+√−z
+s
+
+=
++
+
+r
+√
+∇ψ ∗ (z (k) ) − x(k+1)
+k√ s
+k s
+(k+1)
+) = 0.
+r ∇f (x
+
+
+
+,
+
+(7)
+
+
+
+The first equation can be rewritten as x(k+1) = x(k) + kr ∇ψ ∗ (z (k) ) / 1 + kr (note the independence on s, due to the time-scale invariance of the first ODE). In other words, x(k+1) is a convex
+r
+k
+combination of ∇ψ ∗ (z (k) ) and x(k) with coefficients λk = r+k
+and 1 − λk = r+k
+. To summarize,
+our first discrete scheme can be written as
+(
+r
+x(k+1) = λk ∇ψ ∗ (z (k) ) + (1 − λk )x(k) , λk = r+k
+,
+(8)
+ks
+(k+1)
+(k+1)
+(k)
+).
+z
+= z − r ∇f (x
+Since ∇ψ ∗ maps into the feasible set X , starting from x(0) ∈ X guarantees that x(k) remains in X
+for all k (by convexity of X ). Note that by duality, we have ∇ψ ∗ (x∗ ) = arg maxx∈X hx, x∗ i−ψ(x),
+and if we additionally assume that ψ is differentiable on the image of ∇ψ ∗ , then ∇ψ = (∇ψ ∗ )−1
+(Theorem 23.5 in [26]), thus if we write z̃ (k) = ∇ψ ∗ (z (k) ), the second equation can be written as
+
+
+ks
+ks
+∇f (x(k+1) )) = arg min ψ(x) − ∇ψ(z̃ (k) ) −
+∇f (x(k+1) ), x
+r
+r
+x∈X
+D
+E
+ks
+= arg min
+∇f (x(k+1) ), x + Dψ (x, z̃ (k) ).
+r
+x∈X
+
+z̃ (k+1) = ∇ψ ∗ (∇ψ(z̃ (k) ) −
+
+We will eventually modify this scheme in order to be able to prove the desired O(1/k 2 ) convergence
+rate. However, we start by analyzing this version.√ Motivated by the continuous-time Lyapunov
+function (3), and using the correspondence t ≈ k s, we consider the potential function E (k) =
+√
+2
+V (x(k) , z (k) , k s) = kr s (f (x(k) ) − f ? ) + rDψ∗ (z (k) , z ? ). Then we have
+(k + 1)2 s
+k2 s
+(f (x(k+1) ) − f ? ) −
+(f (x(k) ) − f ? ) + r(Dψ∗ (z (k+1) , z ? ) − Dψ∗ (z (k) , z ? ))
+r
+r
+s(1 + 2k)
+k2 s
+=
+(f (x(k+1) ) − f (x(k) )) +
+(f (x(k+1) ) − f ? ) + r(Dψ∗ (z (k+1) , z ? ) − Dψ∗ (z (k) , z ? )).
+r
+r
+
+E (k+1) − E (k) =
+
+5
+
+And through simple algebraic manipulation, the last term can be bounded as follows
+Dψ∗ (z (k+1) , z ? ) − Dψ∗ (z (k) , z ? )
+D
+E
+= Dψ∗ (z (k+1) , z (k) ) + ∇ψ ∗ (z (k) ) − ∇ψ ∗ (z ? ), z (k+1) − z (k)
+by definition of the Bregman divergence
+
+
+k (k+1)
+ks
+= Dψ∗ (z (k+1) , z (k) ) +
+(x
+− x(k) ) + x(k+1) − x? , − ∇f (x(k+1) )
+by the discretization (8)
+r
+r
+≤ Dψ∗ (z (k+1) , z (k) ) +
+
+k2 s
+ks ?
+(f (x(k) ) − f (x(k+1) )) +
+(f − f (x(k+1) )).
+r2
+r
+
+by convexity of f
+
+Therefore we have E (k+1) − E (k) ≤ − s[(r−2)k−1]
+(f (x(k+1) ) − f ? ) + rDψ∗ (z (k+1) , z (k) ). Comr
+d
+V (X(t), Z(t), t) in the continuous-time case,
+paring this expression with the expression (4) of dt
+we see that we obtain an analogous expression, except for the additional Bregman divergence term
+rDψ∗ (z (k+1) , z (k) ), and we cannot immediately conclude that V is a Lyapunov function. This can
+be remedied by the following modification of the discretization scheme.
+4.1
+
+A family of discrete-time accelerated mirror descent methods
+
+In the expression (8) of x(k+1) = λk z̃ (k) + (1 − λk )x(k) , we propose to
+x(k) with x̃(k) , ob
+ replace
+(k)
+(k)
+tained as a solution to a minimization problem x̃ = arg minx∈X γs ∇f (x ), x + R(x, x(k) ),
+where R is regularization function that satisfies the following assumptions: there exist 0 < `R ≤ LR
+such that for all x, x0 ∈ X , `2R kx − x0 k2 ≤ R(x, x0 ) ≤ L2R kx − x0 k2 .
+0 2
+
+k
+In the Euclidean case, one can take R(x, x0 ) = kx−x
+, in which case `R = LR = 1 and the
+2
+x̃ update becomes a prox-update. In the general case, one can take R(x, x0 ) = Dφ (x, x0 ) for
+some distance generating function φ which is `R -strongly convex and LR -smooth, in which case
+the x̃ update becomes a mirror update. The resulting method is summarized in Algorithm 1. This
+algorithm is a generalization of Allen-Zhu and Orecchia’s interpretation of Nesterov’s method in [1],
+where x(k+1) is a convex combination of a mirror descent update and a gradient descent update.
+
+Algorithm 1 Accelerated mirror descent with distance generating function ψ ∗ , regularizer R, step
+size s, and parameter r ≥ 3
+
+1: Initialize x̃(0) = x0 , z̃ (0) = x0 , or z (0) ∈ (∇ψ)−1 (x0 ) .
+2: for k ∈ N do
+r
+3:
+x(k+1) = λk z̃ (k) + (1 − λk )x̃(k) , with λk = r+k
+.
+D
+E
+(k+1)
+(k+1)
+ks
+), z̃ + Dψ (z̃, z̃ (k) ).
+4:
+z̃
+= arg minz̃∈X r ∇f (x
+
+5:
+
+4.2
+
+∇f (x(k+1) ) and z̃ (k+1) = ∇ψ ∗ (z (k+1) ).
+If ψ is non-differentiable, z (k+1) = z (k) − kr
+D
+E s
+(k+1)
+(k+1)
+x̃
+= arg minx̃∈X γs ∇f (x
+), x̃ + R(x̃, x(k+1) )
+
+
+
+Consistency of the modified scheme
+
+One can show that given our assumptions on R, x̃(k) = x(k) + O(s). Indeed, we have
+D
+E
+`R (k)
+kx̃ − x(k) k2 ≤ R(x̃(k) , x(k) ) ≤ R(x(k) , x(k) ) + γs ∇f (x(k) ), x(k) − x̃(k)
+2
+≤ γsk∇f (x(k) )k∗ kx̃(k) − x(k) k
+(k)
+
+)k∗
+therefore kx̃(k) − x(k) k ≤ s 2γk∇f`(x
+, which proves the claim. Using this observation, we
+R
+can show that the modified discretization scheme is consistent with the original ODE (5), that is,
+the difference equations defining x(k) and z (k) converge, as s tends to 0, to the ordinary differential
+equations of the continuous-time system (5). The difference equations of Algorithm 1 are equivalent
+to (7) in which x(k) is replaced by x̃(k) , i.e.
+(
+(k)
+x(k+1)
+r
+√−x̃
+= k√
+(∇ψ ∗ (z (k) ) − x(k+1) )
+s
+s
+(k)
+z (k+1)
+√−z
+s
+
+√
+
+= − k r s ∇f (x(k+1) )
+6
+
+Now suppose there exist C 1 functions (X, Z), defined on R+ , such that X(tk ) ≈ x(k) and
+√
+Z(tk ) ≈ z (k) for tk = k s. Then, using√ the fact that x̃(k) = x(k) + O(s), we have
+√
+√
+(k+1)
+(k)
+(k+1)
+(k)
+x
+k)
+√−x̃
+= x √−x
++ O( s) ≈ X(tk + √s)−X(t
++ O( s) = Ẋ(tk ) + o(1), and simis
+s
+s
+larly,
+
+(k)
+z (k+1)
+√−z
+s
+
+≈ Ż(tk ) + o(1), therefore the difference equation system can be written as
+(
+√
+Ẋ(tk ) + o(1) = trk (∇ψ ∗ (Z(tk )) − X(tk + s))
+√
+Ż(tk ) + o(1) = − trk ∇f (X(tk + s))
+
+which converges to the ODE (5) as s → 0.
+4.3
+
+Convergence rate
+
+To prove convergence of the algorithm, consider the modified potential function
+√
+2
+Ẽ (k) = V (x̃(k) , z (k) , k s) = kr s (f (x̃(k) ) − f ? ) + rDψ∗ (z (k) , z ? ).
+Lemma 2. If γ ≥ LR Lψ∗ and s ≤
+
+`R
+2Lf γ ,
+
+Ẽ (k+1) − Ẽ (k) ≤
+
+then for all k ≥ 0,
+
+(2k + 1 − kr)s
+(f (x̃(k+1) ) − f ? ).
+r
+
+As a consequence, if r ≥ 3, Ẽ is a Lyapunov function for k ≥ 1.
+This lemma is proved in the supplementary material.
+Theorem 3. The discrete-time accelerated mirror descent Algorithm 1 with parameter r ≥ 3 and
+step sizes γ ≥ LR Lψ∗ , s ≤ 2L`Rf γ , guarantees that for all k > 0,
+r2 Dψ∗ (z0 , z ? ) f (x0 ) − f ?
+r (1)
+Ẽ
+≤
++
+.
+sk 2
+sk 2
+k2
+Proof. The first inequality follows immediately from Lemma 2. The second inequality follows from
+a simple bound on Ẽ (1) , proved in the supplementary material.
+f (x̃(k)) ) − f ? ≤
+
+4.4
+
+Example: accelerated entropic descent
+
+We give an P
+instance of Algorithm 1 for simplex-constrained problems. Suppose that X = ∆n =
+n
+n
+{x ∈ R+ : i=1 xi = 1} is the n-simplex. Taking ψ to be the negative entropy on ∆, we have for
+x ∈ X , z ∈ E∗,
+!
+ψ(x) =
+
+n
+X
+
+xi ln xi +δ(x|∆), ψ ∗ (z) = ln
+
+i=1
+
+n
+X
+
+ezi
+
+ezi
+, ∂ψ(x) = (1 + ln xi )i +Ru, ∇ψ ∗ (z)i = Pn
+j=1
+
+i=1
+
+ezj
+
+.
+
+where δ(·|∆) is the indicator function of the simplex (δ(x|∆) = 0 if x ∈ ∆ and +∞ otherwise),
+and u ∈ Rn is a normal vector to the affine hull of the simplex. The resulting mirror descent
+update is a simple entropy projection and can be computed exactly in O(n) operations, and ψ ∗
+can be shown to be 1-smooth w.r.t. k · k∞ , see for example [3, 6]. For the second update, we
+take R(x, y) = Dφ (x, y) where
+Pn φ is a smoothed negative entropy function defined as follows:
+let  > 0, and let φ(x) =  i=1 (xi + ) ln(xi + ) + δ(x|∆). Although no simple, closed-form
+expression is known for ∇φ∗ , it can be computed efficiently, in O(n log n) time using a deterministic
+algorithm, or O(n) expected time using a randomized algorithm, see [17]. Additionally, φ satisfies
+
+our assumptions: it is 1+n
+-strongly convex and 1-smooth w.r.t. k · k∞ . The resulting accelerated
+mirror descent method on the simplex can then be implemented efficiently, and by Theorem 3 it is
+
+guaranteed to converge in O(1/k 2 ) whenever γ ≥ 1 and s ≤ 2(1+n)L
+.
+fγ
+
+5
+
+Numerical Experiments
+
+We test the accelerated mirror descent method in Algorithm 1, on simplex-constrained problems in Rn , n = 100, with two different objective functions: a simple quadratic f (x) =
+hx − x? , Q(x − x? )i, for a random positive semi-definite matrix Q, and a log-sum-exp function
+7
+
+10−1
+
+f (x(k) ) − f ?
+
+f (x(k) ) − f ?
+
+10−9
+
+10
+
+−17
+
+Mirror descent
+Accelerated mirror descent
+Speed restart
+Gradient restart
+100
+
+200
+
+300
+
+400
+
+10−5
+
+10−8
+
+10−11
+
+500
+
+600
+
+700
+
+f (x(k) ) − f ?
+
+10−5
+
+10−5
+
+10−13
+
+r
+r
+r
+r
+
+10−2
+
+10−2
+
+10
+
+−14
+
+10−8
+
+10−11
+
+Mirror descent
+Accelerated mirror descent
+Speed restart
+Gradient restart
+100
+
+200
+
+300
+k
+
+k
+
+(a) Weakly convex quadratic, rank 10
+
+=3
+= 10
+= 30
+= 90
+
+10−14
+
+400
+
+500
+
+(b) Log-sum-exp
+
+600
+
+10−17
+
+100
+
+200
+
+300
+
+400
+k
+
+500
+
+600
+
+700
+
+800
+
+(c) Effect of the parameter r.
+
+Figure 1: Evolution of f (x(k) ) − f ? on simplex-constrained problems, using different accelerated
+mirror descent methods with entropy distance generating functions.
+Algorithm 2 Accelerated mirror descent with restart
+1: Initialize l = 0, x̃(0) = z̃ (0) = x0 .
+2: for k ∈ N do
+r
+3:
+x(k+1) = λl z̃ (k) + (1 − λl )x̃(k) , with λl = r+l
+D
+E
+(k+1)
+(k+1)
+ks
+4:
+z̃
+= arg minz̃∈X r ∇f (x
+), z̃ + Dψ (z̃, z̃ (k) )
+D
+E
+5:
+x̃(k+1) = arg minx̃∈X γs ∇f (x(k+1) ), x̃ + R(x̃, x(k+1) )
+6:
+l ←l+1
+7:
+if Restart condition then
+8:
+z̃ (k+1) ← x(k+1) , l ← 0
+
+P
+
+I
+n
+given by f (x) = ln
+i=1 hai , xi + bi , where each entry in ai ∈ R and bi ∈ R is iid normal. We implement the accelerated entropic descent algorithm proposed in Section 4.4, and include the (non-accelerated) entropic descent for reference. We also adapt the gradient restarting
+heuristic proposed by O’Donoghue and Candès in [24], as well as the speed restart heuristic proposed by Su et al. in [28]. The generic restart
+2. The restart condi
+ method is given in Algorithm
+
+tions are the following: (i) gradient restart: x(k+1) − x(k) , ∇f (x(k) ) > 0, and (ii) speed restart:
+kx(k+1) − x(k) k < kx(k) − x(k−1) k.
+The results are given in Figure 1. The accelerated mirror descent method exhibits a polynomial
+convergence rate, which is empirically faster than the O(1/k 2 ) rate predicted by Theorem 3. The
+method also exhibits oscillations around the set of minimizers, and increasing the parameter r seems
+to reduce the period of the oscillations, and results in a trajectory that is initially slower, but faster
+for large k, see Figure 1-c. The restarting heuristics alleviate the oscillation and empirically speed
+up the convergence. We also visualized, for each experiment, the trajectory of the iterates x(k) for
+each method, projected on a 2-dimensional hyperplane. The corresponding videos are included in
+the supplementary material.
+
+6
+
+Conclusion
+
+By combining the Lyapunov argument that motivated mirror descent, and the recent ODE interpretation [28] of Nesterov’s method, we proposed a family of ODE systems for minimizing convex
+functions with a Lipschitz gradient, which are guaranteed to converge at a O(1/t2 ) rate, and proved
+existence and uniqueness of a solution. Then by discretizing the ODE, we proposed a family of
+accelerated mirror descent methods for constrained optimization and proved an analogous O(1/k 2 )
+rate when the step size is small enough. The connection with the continuous-time dynamics motivates a more detailed study of the ODE (5), such as studying the oscillatory behavior of its solution
+trajectories, its convergence rates under additional assumptions such as strong convexity, and a rigorous study of the restart heuristics.
+Acknowledgments
+We gratefully acknowledge the NSF (CCF-1115788, CNS-1238959, CNS-1238962, CNS-1239054,
+CNS-1239166), the ARC (FL110100281 and ACEMS), and the Simons Institute Fall 2014 Algorithmic Spectral Graph Theory Program.
+8
+
+References
+[1] Zeyuan Allen-Zhu and Lorenzo Orecchia. Linear coupling: An ultimate unification of gradient and mirror
+descent. In ArXiv, 2014.
+[2] Arindam Banerjee, Srujana Merugu, Inderjit S. Dhillon, and Joydeep Ghosh. Clustering with Bregman
+divergences. J. Mach. Learn. Res., 6:1705–1749, December 2005.
+[3] Amir Beck and Marc Teboulle. Mirror descent and nonlinear projected subgradient methods for convex
+optimization. Oper. Res. Lett., 31(3):167–175, May 2003.
+[4] Amir Beck and Marc Teboulle. A fast iterative shrinkage-thresholding algorithm for linear inverse problems. SIAM Journal on Imaging Sciences, 2(1):183–202, 2009.
+[5] A. Ben-Tal and A. Nemirovski. Lectures on Modern Convex Optimization. SIAM, 2001.
+[6] Aharon Ben-Tal, Tamar Margalit, and Arkadi Nemirovski. The ordered subsets mirror descent optimization method with applications to tomography. SIAM J. on Optimization, 12(1):79–108, January 2001.
+[7] Anthony Bloch, editor. Hamiltonian and gradient flows, algorithms, and control. American Mathematical
+Society, 1994.
+[8] A. A. Brown and M. C. Bartholomew-Biggs. Some effective methods for unconstrained optimization
+based on the solution of systems of ordinary differential equations. Journal of Optimization Theory and
+Applications, 62(2):211–224, 1989.
+[9] Sébastien Bubeck and Nicolò Cesa-Bianchi. Regret analysis of stochastic and nonstochastic multi-armed
+bandit problems. Foundations and Trends in Machine Learning, 5(1):1–122, 2012.
+[10] J. C. Butcher. Numerical Methods for Ordinary Differential Equations. John Wiley & Sons, Ltd, 2008.
+[11] Nicolò Cesa-Bianchi and Gábor Lugosi. Prediction, Learning, and Games. Cambridge, 2006.
+[12] Ofer Dekel, Ran Gilad-Bachrach, Ohad Shamir, and Lin Xiao. Optimal distributed online prediction. In
+Proceedings of the 28th International Conference on Machine Learning (ICML), June 2011.
+[13] U. Helmke and J.B. Moore. Optimization and dynamical systems. Communications and control engineering series. Springer-Verlag, 1994.
+[14] Anatoli Juditsky. Convex Optimization II: Algorithms, Lecture Notes. 2013.
+[15] Anatoli Juditsky, Arkadi Nemirovski, and Claire Tauvel. Solving variational inequalities with stochastic
+mirror-prox algorithm. Stoch. Syst., 1(1):17–58, 2011.
+[16] H.K. Khalil. Nonlinear systems. Macmillan Pub. Co., 1992.
+[17] Walid Krichene, Syrine Krichene, and Alexandre Bayen. Efficient Bregman projections onto the simplex.
+In 54th IEEE Conference on Decision and Control, 2015.
+[18] A.M. Lyapunov. General Problem of the Stability Of Motion. Control Theory and Applications Series.
+Taylor & Francis, 1992.
+[19] A. S. Nemirovsky and D. B. Yudin. Problem Complexity and Method Efficiency in Optimization. WileyInterscience series in discrete mathematics. Wiley, 1983.
+[20] Yu. Nesterov. Smooth minimization of non-smooth functions. Mathematical Programming, 103(1):127–
+152, 2005.
+[21] Yu. Nesterov. Gradient methods for minimizing composite functions. Mathematical Programming,
+140(1):125–161, 2013.
+[22] Yurii Nesterov. A method of solving a convex programming problem with convergence rate o(1/k2).
+Soviet Mathematics Doklady, 27(2):372–376, 1983.
+[23] Yurii Nesterov. Introductory Lectures on Convex Optimization, volume 87. Springer Science & Business
+Media, 2004.
+[24] Brendan O’Donoghue and Emmanuel Candès. Adaptive restart for accelerated gradient schemes. Foundations of Computational Mathematics, 15(3):715–732, 2015.
+[25] M. Raginsky and J. Bouvrie. Continuous-time stochastic mirror descent on a network: Variance reduction,
+consensus, convergence. In CDC 2012, pages 6793–6800, 2012.
+[26] R.T. Rockafellar. Convex Analysis. Princeton University Press, 1970.
+[27] J. Schropp and I. Singer. A dynamical systems approach to constrained minimization. Numerical Functional Analysis and Optimization, 21(3-4):537–551, 2000.
+[28] Weijie Su, Stephen Boyd, and Emmanuel Candès. A differential equation for modeling Nesterov’s accelerated gradient method: Theory and insights. In NIPS, 2014.
+[29] Gerald Teschl. Ordinary differential equations and dynamical systems, volume 140. American Mathematical Soc., 2012.
+
+9
+
+

@@ -37,7 +37,7 @@ class PDFParser {
         bool isStringBlanks(string);
         int getNumWordsIndexed();
         int getNumDocs();
-        vector<string>& getOutputFiles();
+        vector<string> getOutputFiles();
 };
 
 #endif // PDFPARSER_H

@@ -1,0 +1,843 @@
+Online Learning with Adversarial Delays
+Kent Quanrud∗ and Daniel Khashabi†
+Department of Computer Science
+University of Illinois at Urbana-Champaign
+Urbana, IL 61801
+{quanrud2,khashab2}@illinois.edu
+
+Abstract
+We study the performance of standard online learning algorithms when the feedback is delayed by an adversary. We show that online-gradient-descent
+√
+[1] and follow-the-perturbed-leader [2] achieve regret O( D) in the
+delayed setting, where D is the sum
+√ of delays of each round’s feedback. This
+bound collapses to an optimal O( T ) bound in the usual setting of no delays
+(where D = T ). Our main contribution is to show that standard algorithms for
+online learning already have simple regret bounds in the most general setting of
+delayed feedback, making adjustments to the analysis and not to the algorithms
+themselves. Our results help affirm and clarify the success of recent algorithms in
+optimization and machine learning that operate in a delayed feedback model.
+
+1
+
+Introduction
+
+Consider the following simple game. Let K be a bounded set, such as the unit `1 ball or a collection
+of n experts. Each round t, we pick a point xt ∈ K. An adversary then gives us a cost function ft ,
+PT
+and we incur the loss `t = ft (xt ). After T rounds, our total loss is the sum LT = t=1 `t , which
+we want to minimize.
+We cannot hope to beat the adversary, so to speak, when the adversary picks the cost function after
+we select our point. There is margin for optimism, however, if rather than evaluate our total loss in
+absolute terms, we compare our strategy to the best fixed point in hindsight. The regret of a strategy
+PT
+PT
+x1 , . . . , xT ∈ K is the additive difference R(T ) = t=1 ft (xt ) − arg minx∈K t=1 ft (x).
+Surprisingly, one can obtain positive results in terms of regret. Kalai and Vempala
+√ showed that a
+simple and randomized follow-the-leader type algorithm achieves R(T ) = O( T ) in expectation
+for linear cost functions [2] (here, the big-O notation assumes that the diameter of K and the ft ’s
+are bounded by constants). If K is convex, then even if the cost vectors are more generally convex
+cost functions (where we incur losses of the form `t = ft (xt ), √
+with ft a convex function), Zinkevich showed that gradient descent achieves regret R(T ) = O( T ) [1]. There is a large body of
+theoretical literature about this setting, called online learning (see for example the surveys by Blum
+[3], Shalev-Shwartz [4], and Hazan [5]).
+Online learning is general enough to be applied to a diverse family of problems. For example, Kalai
+and Vempala’s algorithm can be applied to online combinatorial problems such as shortest paths
+[6], decision trees [7], and data structures [8, 2]. In addition to basic machine learning problems
+with convex loss functions, Zinkevich considers applications to industrial optimization, where the
+∗
+http://illinois.edu/~quanrud2/. Supported in part by NSF grants CCF-1217462, CCF1319376, CCF-1421231, CCF-1526799.
+†
+http://illinois.edu/~khashab2/. Supported in part by a grant from Google.
+
+1
+
+value of goods is not known until after the goods are produced. Other examples of applications of
+online learning include universal portfolios in finance [9] and online topic-ranking for multi-labeled
+documents [10].
+The standard setting assumes that the cost vector ft (or more generally, the feedback) is given to and
+processed by the player before making the next decision in round t + 1. Philosophically, this is not
+how decisions are made in real life: we rush through many different things at the same time with no
+pause for careful consideration, and we may not realize our mistakes for a while. Unsurprisingly, the
+assumption of immediate feedback is too restrictive for many real applications. In online advertising,
+online learning algorithms try to predict and serve ads that optimize for clicks [11]. The algorithm
+learns by observing whether or not an ad is clicked, but in production systems, a massive number of
+ads are served between the moment an ad is displayed to a user and the moment the user has decided
+to either click or ignore that ad. In military applications, online learning algorithms are used by radio
+jammers to identify efficient jamming strategies [12]. After a jammer attempts to disrupt a packet
+between a transmitter and a receiver, it does not know if the jamming attempt succeeded until an
+acknowledgement packet is sent by the receiver. In cloud computing, online learning helps devise
+efficient resource allocation strategies, such as finding the right mix of cheaper (and inconsistent)
+spot instances and more reliable (and expensive) on-demand instances when renting computers for
+batch jobs [13]. The learning algorithm does not know how well an allocation strategy worked for
+a batch job until the batch job has ended, by which time many more batch jobs have already been
+launched. In finance, online learning algorithms managing portfolios are subject to information and
+transaction delays from the market, and financial firms invest heavily to minimize these delays.
+One strategy to handle delayed feedback is to pool independent copies of a fixed learning algorithm,
+each of which acts as an undelayed learner over a subsequence of the rounds. Each round is delegated to a single instance from the pool of learners, and the learner is required to wait for and process
+its feedback before rejoining the pool. If there are no learners available, a new copy is instantiated
+and added to the pool. The size of the pool is proportional to the maximum number of outstanding
+delays at any point of decision, and the overall regret is bounded by the sum of regrets of the individual learners. This approach is analyzed for constant delays by Weinberger and Ordentlich [14], and
+a more sophisticated analysis is given by Joulani et al. [15]. If α is the expected maximum
+number
+√
+of outstanding feedbacks, then Joulani et al. obtain a regret bound on the order of O( αT ) (in expectation) for the setting considered here. The blackbox nature of this approach begets simultaneous
+bounds for other settings such as partial information and stochastic rewards. Although maintaining
+copies of learners in proportion to the delay may be prohibitively resource intensive, Joulani et al.
+provide a more efficient variant for the stochastic bandit problem, a setting not considered here.
+Another line of research is dedicated to scaling gradient descent type algorithms to distributed settings, where asynchronous processors naturally introduce delays in the learning framework. A classic reference in this area is the book of Bertsekas and Tsitskilis [16]. If the data is very sparse, so that
+input instances and their gradients are somewhat orthogonal, then intuitively we can apply gradients
+out of order without significant interference across rounds. This idea is explored by Recht et al. [17],
+who analyze and test parallel algorithm on a restricted class of strongly convex loss functions, and
+by Duchi et al. [18] and McMahan and Streeter [19], who design and analyze distributed variants
+of adaptive gradient descent [20]. Perhaps the most closely related work in this area is by Langford
+et al., who study the online-gradient-descent algorithm of Zinkevich when the delays are
+bounded by a constant number of rounds [21]. Research in this area has largely moved on from the
+simplistic models considered here; see [22, 23, 24] for more recent developments.
+The impact of delayed feedback in learning algorithms is also explored by Riabko [25] under the
+framework of “weak teachers”.
+For the sake of concreteness, we establish the following notation for the delayed setting. For each
+round t, let dt ∈ Z+ be a non-negative integer delay. The feedback from round t is delivered at the
+end of round t + dt − 1, and can be used in round t + dt . In the standard setting with no delays,
+dt = 1 for all t. For each round t, let Ft = {u ∈ [T ] : u + du − 1 = t} be the set of rounds whose
+PT
+feedback appears at the end of round t. We let D = t=1 dt denote the sum of all delays; in the
+standard setting with no delays, we have D = T .
+In this paper, we investigate the implications of delayed feedback when the delays are adversarial
+(i.e., arbitrary), with no assumptions or restrictions made on the adversary. Rather than design new
+
+2
+
+algorithms that may generate a more involved analysis, we study the performance of the classical
+algorithms online-gradient-descent and follow-the-perturbed-leader, essentially unmodified, when the feedback is delayed.
+In the delayed setting, we prove that both algo√
+rithms
+have
+a
+simple
+regret
+bound
+of
+O(
+D).
+These
+bounds collapse to match the well-known
+√
+O( T ) regret bounds if there are no delays (i.e., where D = T ).
+Paper organization In Section 2, we analyze the online-gradient-descent algorithm in
+the delayed setting, giving upper bounds on the regret as a function of the sum of delays D. In
+Section 3, we analyze the follow-the-perturbed-leader in the delayed setting and derive
+a regret bound in terms of D. Due to space constraints, extensions to online-mirror-descent
+and follow-the-lazy-leader are deferred to the appendix. We conclude and propose future
+directions in Section 4.
+
+2
+
+Delayed gradient descent
+
+Convex optimization In online convex optimization, the input domain K is convex, and each
+cost function ft is convex. For this setting, Zinkevich proposed a simple online algorithm, called
+online-gradient-descent, designed as follows [1]. The first point, x1 , is picked in K
+arbitrarily. After picking the tth point xt , online-gradient-descent computes the gradient
+∇ft |xt of the loss function at xt , and chooses xt+1 = πK (xt − η∇ft |xt ) in the subsequent round,
+for some parameter η ∈ R>0 . Here, πK is the projection that maps a point x0 to its nearest point
+in K (discussed further below). Zinkevich showed that, assuming the Euclidean diameter of K
+and the Euclidean lengths of all gradients ∇ft√
+|x are bounded by constants, online-gradientdescent has an optimal regret bound of O( T ).
+Delayed gradient descent In the delayed setting, the loss function ft is not necessarily given by
+the adversary before we pick the next point xt+1 (or even at all). The natural generalization of
+online-gradient-descent to this setting is to process the convex loss functions and apply
+their gradients the moment they are delivered. That is, we update
+X
+x0t+1 = xt − η
+∇fs |xs ,
+s∈Ft
+
+for some fixed parameter η, and then project xt+1 = πK (x0t+1 ) back into K to choose our (t + 1)th
+point. In the setting of Zinkevich, we have Ft = {t} for each t, and this algorithm is exactly
+online-gradient-descent. Note that a gradient ∇fs |xs does not need to be timestamped by
+the round s from which it originates, which is required by the pooling strategies of Weinberger and
+Ordentlich [14] and Joulani et al. [15] in order to return the feedback to the appropriate learner.
+Theorem 2.1. Let K be a convex set with diameter 1, let f1 , . . . , fT be convex functions over K
+with k∇ft |x k2 ≤ L for all x ∈ K and t ∈ [T ], and let η ∈ R be a fixed parameter. In the presence
+of adversarial delays, online-gradient-descent selects points x1 , . . . , xT ∈ K such that
+for all y ∈ K,
+
+
+T
+T
+X
+X
+1
+2
+ft (xt ) −
+ft (y) = O
++ ηL (T + D) ,
+η
+t=1
+t=1
+where D denotes the sum of delays over all rounds t ∈ [T ].
+√
+√
+√
+For η = 1/L T + D, Theorem 2.1 implies a regret bound of O(L D + T ) = O(L D). This
+choice of η requires prior knowledge of the final sum D. When this sum is not known, one can
+calculate D on the fly: if there are δ outstanding (undelivered) cost functions at a round t, then D
+increases by exactly δ. Obviously, δ ≤ T and T ≤ D, so D at most doubles. We can therefore
+employ the “doubling trick” of Auer et al. [26] to dynamically adjust η as D grows.
+In the undelayed setting analyzed by Zinkevich, we have D = T , and the regret bound of Theorem
+2.1 matches that obtained by Zinkevich.
+√ If each delay dt is bounded by some fixed value τ , Theorem
+2.1 implies a regret bound of O(L τ T ) that matches that of Langford et al. [21]. In both of these
+special cases, the regret bound is known to be tight.
+3
+
+Before proving Theorem 2.1, we review basic definitions and facts on convexity. A function f :
+K → R is convex if
+f ((1 − α)x + αy) ≤ (1 − α)f (x) + αf (y)
+∀x, y ∈ K, α ∈ [0, 1].
+If f is differentiable, then f is convex iff
+f (x) + ∇f |x · (y − x) ≤ f (y)
+∀x, y ∈ K.
+(1)
+For f convex but not necessarily differentiable, a subgradient of f at x is any vector that can replace
+∇f |x in equation (1). The (possible empty) set of gradients of f at x is denoted by ∂f (x).
+The gradient descent may occasionally update along a gradient that takes us out of the constrained
+domain K. If K is convex, then we can simply project the point back into K.
+Lemma 2.2. Let K be a closed convex set in a normed linear space X and x ∈ X a point, and let
+x0 ∈ K be the closest point in K to x. Then, for any point y ∈ K,
+kx − yk2 ≤ kx0 − yk2 .
+We let πK denote the map taking a point x to its closest point in the convex set K.
+Proof of Theorem 2.1. Let y = arg minx∈K (f1 (x) + · · · + fT (x)) be the best point in hindsight at
+the end of all T rounds. For t ∈ [T ], by convexity of ft , we have,
+ft (y) ≥ ft (xt ) + ∇ft |xt · (y − xt ).
+Fix t ∈ [T ], and
+t+1 and y. By Lemma 2.2, we know that
+ consider
+ the distance between x
+P
+kxt+1 − yk2 ≤ x0t+1 − y 2 , where x0t+1 = xt − η s∈Ft ∇fs |xs .
+We split the sum of gradients applied in a single round P
+and consider them one by one. For each
+s ∈ Ft , let Ft,s = {r ∈ Ft : r < s}, and let xt,s = xt −η r∈Ft,s ∇fr |xr . Suppose Ft is nonempty,
+and fix s0 = max Ft to be the last index in Ft . By Lemma 2.2, we have,
+
+2 
+2
+2
+kxt+1 − yk2 ≤ x0t+1 − y 2 = xt,s0 − η∇fs0 |xs0 − y 2
+
+2
+
+2
+= kxt,s0 − yk2 − 2η ∇fs0 |xs0 · (xt,s0 − y) + η 2 ∇fs0 |xs0 2 .
+Repeatedly unrolling the first term in this fashion gives
+X
+X
+2
+2
+2
+kxt+1 − yk2 ≤ kxt − yk2 − 2η
+∇fs |xs · (xt,s − y) + η 2
+k∇fs |xs k2 .
+s∈Ft
+
+s∈Ft
+
+For each s ∈ Ft , by convexity of f , we have,
+−∇fs |xs · (xt,s − y) = ∇fs |xs · (y − xt,s ) = ∇fs |xs · (y − xs ) + ∇fs |xs · (xs − xt,s )
+≤ fs (y) − fs (xs ) + ∇fs |xs · (xs − xt,s ).
+By assumption, we also have k∇fs |xs k2 ≤ L for each s ∈ Ft . With respect to the distance between
+xt+1 and y, this gives,
+X
+2
+2
+kxt+1 − yk2 ≤ kxt − yk2 + 2η
+(fs (y) − fs (xs ) + ∇fs |xs · (xs − xt,s )) + η 2 · |Ft | · L2 .
+s∈Ft
+
+Solving this inequality for the regret terms
+over all rounds t ∈ [T ], we have,
+T
+X
+
+(ft (xt ) − ft (y)) =
+
+t=1
+
+T X
+X
+
+P
+
+s∈Ft
+
+fs (xs ) − fs (y) and taking the sum of inequalities
+
+fs (xs ) − fs (y)
+
+t=1 s∈Ft
+
+T
+X
+1 X
+2
+2
+≤
+·
+kxt − yk2 − kxt+1 − yk2 + 2η
+∇fs |xs · (xs − xt,s ) + η 2 · |Ft | · L2
+2η t=1
+s∈Ft
+!
+T
+T X
+X
+1 X
+η
+2
+2
+=
+kxt − yk2 − kxt+1 − yk2 + T L2 +
+∇fs |xs · (xs − xt,s )
+2η t=1
+2
+t=1
+
+!
+
+s∈Ft
+
+≤
+
+T
+X
+
+X
+1
+η
++ T L2 +
+∇fs |xs · (xs − xt,s ).
+2η
+2
+t=1
+s∈Ft
+
+4
+
+(2)
+
+The first two terms are familiar from the standard analysis of online-gradient-descent. It
+remains to analyze the last sum, which we call the delay term.
+Each summand ∇fs |xs · (xs − xt,s ) in the delay term contributes loss proportional to the distance
+between the point xs when the gradient ∇fs |xs is generated and the point xt,s when the gradient is
+applied. This distance is created by the other gradients that are applied in between, and the number
+of such in-between gradients are intimately tied to the total delay, as follows. By Cauchy-Schwartz,
+the delay term is bounded above by
+T X
+X
+
+∇fs |xs · (xs − xt,s ) ≤
+
+t=1 s∈Ft
+
+T X
+X
+
+k∇fs |xs k2 kxs − xt,s k2 ≤ L
+
+t=1 s∈Ft
+
+T X
+X
+
+kxs − xt,s k2 . (3)
+
+t=1 s∈Ft
+
+Consider a single term kxs − xt,s k2 for fixed t ∈ [T ] and s ∈ Ft . Intuitively, the difference xt,s −xs
+is roughly the sum of gradients received between round s and when we apply the gradient from round
+s in round t. More precisely, by applying the triangle inequality and Lemma 2.2, we have,
+kxt,s − xs k2 ≤ kxt,s − xt k2 + kxt − xs k2 ≤ kxt,s − xt k2 + kx0t − xs k2 .
+
+
+For the same reason, we have kx0t − xs k2 ≤ kx0t − xt−1 k2 + x0t−1 − xs 2 , and unrolling in this
+fashion, we have,
+kxt,s − xs k2 ≤ kxt,s − xt k2 +
+
+t−1
+t−1 X
+X
+X 
+X
+ 0
+
+
+
+
+xr+1 − xr  ≤ η
+∇fp |x  + η
+∇fq |x 
+p 2
+q 2
+2
+r=s
+
+≤η·L·
+
+|Ft,s | +
+
+r=s q∈Fr
+
+p∈Ft,s
+
+!
+
+t−1
+X
+
+|Fr | .
+
+(4)
+
+r=s
+
+PT P
+After substituting equation (4) into equation (3), it remains to bound the sum t=1 s∈Ft (|Ft,s | +
+Pt−1
+Pt−1
+r=s |Fr |). Consider a single term |Ft,s | +
+r=s |Fr | in the sum. This quantity counts, for a
+gradient ∇fs |xs from round s delivered just before round t ≥ s, the number of other gradients that
+are applied while ∇fs |xs is withheld. Fix two rounds s and t, and consider an intermediate round
+r ∈ {s, . . . , t}. If r < t then fix q ∈ Fr , and if r = t then fix q ∈ Ft,s . The feedback from round q
+is applied in a round r between round s and round t. We divide our analysis into two scenarios. In
+one case, q ≤ s, and the gradient from round q appears only after s, as in the following diagram.
+∇fq |xq
+
+q
+
+/ ···
+
+∇fs |xs
+
+/s
+
+/ ···
+
+/% r
+
+/ ···
+
+"/
+
+/ ···
+
+$/
+
+t
+
+In the other case, q > s, as in the following diagram.
+∇fs |xs
+
+s
+
+/ ···
+
+∇fq |xq
+
+/q
+
+/ ···
+
+r
+
+/) t
+
+For each round u, let du denote the number of rounds the gradient feedback is delayed (so u ∈
+Fu+du ). There are at most ds instances of the latter case, since q must lie in s+1, . . . , t. The first case
+can be charged to dq . To bound the first case, observe that for fixed q, the number of indices s such
+that q < s ≤ dq + q ≤ ds + s is at most dq . That is, all instances of the second case for a fixed q can
+PT P
+Pt−1
+PT
+be charged to dq . Between the two cases, we have t=1 s∈Ft (|Ft,s | + r=s |Fr |) ≤ 2 t=1 dt ,
+and the delay term is bounded by
+T X
+X
+
+∇fs |xs · (xs − xt,s ) ≤ 2η · L2
+
+t=1 s∈Ft
+
+T
+X
+
+dt .
+
+t=1
+
+With respect to the overall regret, this gives,
+T
+X
+
+T
+X
+1
+T
+(f (xt ) − f (y)) ≤
++ η · L2
++2
+dt
+2η
+2
+t=1
+t=1
+
+!
+
+
+=O
+
+
+1
++ ηL2 D ,
+η
+
+
+as desired.
+5
+
+PT P
+Remark 2.3. The delay term t=1 s∈Ft ∇fs |xs · (xs − xt,s ) is a natural point of entry for a
+sharper analysis based on strong sparseness assumptions. The distance xs − xt,s is measured by its
+projection against the gradient ∇fs |xs , and the preceding proof assumes the worst case and bounds
+the dot product with the Cauchy-Schwartz inequality. If, for example, we assume that gradients
+are pairwise orthogonal and analyze online-gradient-descent in the unconstrained setting,
+then the dot product ∇fs |xs · (xs − xt,s ) is 0 and the delay term vanishes altogether.
+
+3
+
+Delaying the Perturbed Leader
+
+Discrete online linear optimization In discrete online linear optimization, the input domain K ⊂
+Rn is a (possibly discrete) set with bounded diameter, and each cost function ft is of the form
+ft (x) = ct · x for a bounded-length cost vector ct . The previous algorithm online-gradientdescent does not apply here because K is not convex.
+A natural algorithm for this problem is follow-the-leader. Each round t, let yt =
+arg minx∈K x·(c1 +· · ·+ct ) be the optimum choice over the first t cost vectors. The algorithm picking yt in round t is called be-the-leader, and can be shown to have zero regret. Of course, bethe-leader is infeasible since the cost vector ct is revealed after picking yt . follow-theleader tries the next best thing, picking yt−1 in round t. Unfortunately, this strategy can have
+linear regret, largely because it is a deterministic algorithm that can be manipulated by an adversary.
+Kalai and Vempala [2] gave a simple and elegant correction called follow-the-perturbedleader. Let  > 0 be a parameter to be fixed later, and let Q = [0, 1/]n be the cube of length
+1/. Each round t, follow-the-perturbed-leader randomly picks a vector c0 ∈ Q by the
+uniform distribution, and then selects xt = arg minx∈K x · (c0 + · · · + ct−1 ) to optimize over the
+previous costs plus the random perturbation c0 . With the diameter of K and the lengths kct k of each
+cost vector held
+√ constant, Kalai and Vempala showed that follow-the-perturbed-leader
+has regret O( T ) in expectation.
+Following the delayed and perturbed leader More generally, follow-the-perturbedleader optimizes over all information available to the algorithm, plus some additional noise to
+smoothen the worst-case analysis. If the cost vectors are delayed, we naturally interpret followthe-perturbed-leader to optimize over all cost vectors ct delivered in time for round t when
+picking its point xt . That is, the tth leader becomes the best choice with respect to all cost vectors
+delivered in the first t rounds:
+ytd = arg min
+x∈K
+
+t X
+X
+
+cr · x
+
+s=1 r∈Fs
+
+(we use the superscript d to emphasize the delayed setting). The tth perturbed leader optimizes over
+all cost vectors delivered through the first t rounds in addition to the random perturbation c0 ∈ Q :
+!
+t X
+X
+ỹtd = arg min c0 · x +
+cr · x .
+x∈K
+
+s=1 r∈Fs
+
+d
+In the delayed setting, follow-the-perturbed-leader chooses xt = ỹt−1
+in round t. We
+claim that follow-the-perturbed-leader has a direct √
+and simple regret bound in terms of
+the sum of delays D, that collapses to Kalai and Vempala’s O( T ) regret bound in the undelayed
+setting.
+Theorem 3.1. Let K ⊆ Rn be a set with L1 -diameter ≤ 1, c1 , . . . , cT ∈ Rn with kct k1 ≤ 1 for all
+t, and η > 0. In the presence of adversarial delays, follow-the-perturbed-leader picks
+points x1 , . . . , xT ∈ K such that for all y ∈ K,
+T
+X
+t=1
+
+E[ct · xt ] ≤
+
+T
+X
+
+
+ct · y + O −1 + D .
+
+t=1
+
+√
+√
+For  = 1/ D, Theorem 3.1 implies a regret bound of O( D). When D is not known a priori, the
+doubling trick can be used to adjust  dynamically (see the discussion following Theorem 2.1).
+6
+
+To analyze follow-the-perturbed-leader in the presence of delays, we introduce the notion of a prophet, who is a sort of omniscient leader who sees the feedback immediately. Formally,
+the tth prophet is the best point with respect to all the cost vectors over the first t rounds:
+zt = arg min(c1 + · · · + ct ) · x.
+x∈K
+
+The tth perturbed prophet is the best point with respect to all the cost vectors over the first t rounds,
+in addition to a perturbation c0 ∈ Q :
+z̃t = arg min(c0 + c1 + · · · + ct ) · x.
+
+(5)
+
+x∈K
+
+The prophets and perturbed prophets behave exactly as the leaders and perturbed leaders in the
+setting of Kalai and Vempala with no delays. In particular, we can apply the regret bound of Kalai
+and Vempala to the (infeasible) strategy of following the perturbed prophet.
+Lemma 3.2 ([2]). Let K ⊆ Rn be a set with L1 -diameter ≤ 1, let c1 , . . . , cT ∈ Rn be cost vectors
+bounded by kct k1 ≤ 1 for all t, and let  > 0. If z̃1 , . . . , z̃T −1 ∈ K are chosen per equation (5),
+
+PT
+PT
+then t=1 E[ct · z̃i−1 ] ≤ t=1 ct · y + O −1 + T . for all y ∈ K.
+The analysis by Kalai and Vempala observes that when there are no delays, two consecutive perturbed leaders ỹt and ỹt+1 are distributed similarly over the random noise [2, Lemma 3.2]. Instead,
+we will show that ỹtd and z̃t are distributed in proportion to delays. We first require a technical
+lemma that is implicit in [2].
+Lemma 3.3. Let K be a set with L1 -diameter ≤ 1, and let u, v ∈ Rn be vectors. Let y, z ∈ Rn
+be random vectors defined by y = arg miny∈K (q + u) · y and z = arg minz∈K (q + v) · z, where
+Qn
+q is chosen uniformly at random from Q = i=1 [0, r], for some fixed length r > 0. Then, for any
+vector c,
+E[c · z] − E[c · y] ≤
+
+kv − uk1 kck∞
+.
+r
+
+Proof. Let Q0 = v+Q and Q00 = u+Q, and write y = arg miny∈K q 00 ·y and z = arg minz∈K q 0 ·z,
+where q 0 ∈ Q0 and q 00 ∈ Q00 are chosen uniformly at random. Then
+E[c · z] − E[c · y] = Eq00 ∈Q00 [c · z] − Eq0 ∈Q0 [c · y].
+0
+
+0
+
+Subtracting P[q ∈ Q ∩ Q00 ]Eq0 ∈Q0 ∩Q00 [c · z] from both terms on the right, we have
+Eq00 ∈Q00 [c · z] − Eq0 ∈Q0 [c · y]
+= P[q 00 ∈ Q00 \ Q0 ] · Eq00 ∈Q00 \Q0 [c · z] − P[q 0 ∈ Q0 \ Q00 ] · Eq0 ∈Q0 \Q00 [c · y]
+By symmetry, P[q 00 ∈ Q00 \ Q0 ] = P[q 0 ∈ Q0 \ Q00 ], and we have,
+E[c · z] − E[c · y] ≤ (P[q 00 ∈ Q00 \ Q0 ])Eq00 ∈Q00 \Q0 ,q0 ∈Q0 \Q00 [c · (z − y)].
+By assumption, K has L1 -diameter ≤ 1, so ky − zk1 ≤ 1, and by Hölder’s inequality, we have,
+E[c · z] − E[c · y] ≤ P[q 00 ∈ Q00 \ Q0 ]kck∞ .
+It remains to bound P[q 00 ∈ Q00 \ Q0 ] = P[q 0 ∈ Q0 \ Q00 ]. If kv − uk1 ≤ r, we have,
+
+
+
+n
+n 
+Y
+Y
+kv − uk1
+|(vi − ui )|
+0
+0
+00
+0
+≥ vol(Q ) 1 −
+.
+vol(Q ∩ Q ) =
+(r − |vi − ui |) = vol(Q )
+1−
+r
+r
+i=1
+i=1
+Otherwise, if ku − vk1 > r, then vol(Q0 ∩ Q00 ) = 0 ≥ vol(Q0 )(1 − kv − uk1 /r). In either case,
+we have,
+P[q 0 ∈ Q0 \ Q00 ] =
+
+kv − uk1
+vol(Q0 ∩ Q00 )
+vol(Q0 ∩ Q00 )
+≤1−
+≤
+,
+0
+0
+vol(Q )
+vol(Q )
+r
+
+
+and the claim follows.
+Lemma 3.3 could also have been proven geometrically in similar fashion to Kalai and Vempala.
+7
+
+Lemma 3.4.
+vectors.
+
+PT
+
+t=1
+
+
+
+d
+≤ D, where D is the sum of delays of all cost
+E[ct · z̃t−1 ] − E ct · ỹt−1
+
+Pt
+P
+Proof. Let ut = s=1 ct be the sum of all costs through the first t rounds, and vt = s:s+ds ≤t ct
+be the sum of cost vectors actually delivered through the first t rounds. Then the perturbed prophet
+d
+z̃t−1 optimizes over c0 + ut−1 and ỹt−1
+optimizes over c0 + vt−1 . By Lemma 3.3, for each t, we
+have
+
+
+d
+≤  · kut−1 − vt−1 k1 kct k∞ ≤  · |{s < t : s + ds ≥ t}|
+Ec0 ∼Q [ct · z̃t−1 ] − Ec0 ∼Q ct · ỹt−1
+Summed over all T rounds, we have,
+T
+X
+
+
+
+Ec0 [ct · z̃t ] − Ec0 ct ·
+
+ỹtd
+
+
+
+T
+X
+≤
+|{s < t : s + ds ≥ t}|.
+
+t=1
+
+t=1
+
+PT
+
+The sum t=1 |{s < t : s + ds ≥ t}| charges each cost vector cs once for every round it is delayed,
+
+
+PT
+and therefore equals D. Thus, t=1 Ec0 [ct · z̃t ] − Ec0 ct · ỹtd ≤ D, as desired.
+
+Now we complete the proof of Theorem 3.1.
+Proof of Theorem 3.1. By Lemma 3.4 and Lemma 3.2, we have,
+T
+T
+T
+X
+X
+
+ X
+d
+E[ct · x] + O(−1 + D),
+E ct · ỹt−1
+E[ct · z̃t−1 ] + D ≤ arg min
+≤
+t=1
+
+x∈K
+
+t=1
+
+4
+
+t=1
+
+
+
+as desired.
+
+Conclusion
+
+√
+We prove O( D) regret bounds for online-gradient-descent
+√ and follow-theperturbed-leader in the delayed setting, directly extending the O( T ) regret bounds known
+in the undelayed setting. More importantly, by deriving a simple bound as a function of the delays, without any restriction on the delays, we establish a simple and intuitive model for measuring
+delayed learning. This work suggests natural relationships between the regret bounds of online
+learning algorithms and delays in the feedback.
+Beyond analyzing existing algorithms, we hope that optimizing over the regret as a function of D
+may inspire different (and hopefully simple) algorithms that readily model real world applications
+and scale nicely to distributed environments.
+Acknowledgements We thank Avrim Blum for introducing us to the area of online learning and
+helping us with several valuable discussions. We thank the reviewers for their careful and insightful
+reviews: finding errors, referencing relevant works, and suggesting a connection to mirror descent.
+
+References
+[1] M. Zinkevich. Online convex programming and generalized infinitesimal gradient ascent. In Proc. 20th
+Int. Conf. Mach. Learning (ICML), pages 928–936, 2003.
+[2] A. Kalai and S. Vempala. Efficient algorithms for online decision problems. J. Comput. Sys. Sci., 71:291–
+307, 2005. Extended abstract in Proc. 16th Ann. Conf. Comp. Learning Theory (COLT), 2003.
+[3] A. Blum. On-line algorithms in machine learning. In A. Fiat and G. Woeginger, editors, Online algorithms, volume 1442 of LNCS, chapter 14, pages 306–325. Springer Berlin Heidelberg, 1998.
+[4] S. Shalev-Shwartz. Online learning and online convex optimization. Found. Trends Mach. Learn.,
+4(2):107–194, 2011.
+[5] E. Hazan. Introduction to online convex optimization. Internet draft available at http://ocobook.
+cs.princeton.edu, 2015.
+[6] E. Takimoto and M. Warmuth. Path kernels and multiplicative updates. J. Mach. Learn. Research, 4:773–
+818, 2003.
+
+8
+
+[7] D. Helmbold and R. Schapire. Predicting nearly as well as the best pruning of a decision tree. Mach.
+Learn. J., 27(1):61–68, 1997.
+[8] A. Blum, S. Chawla, and A. Kalai. Static optimality and dynamic search optimality in lists and trees.
+Algorithmica, 36(3):249–260, 2003.
+[9] T. M. Cover. Universal portfolios. Math. Finance, 1(1):1–29, 1991.
+[10] K. Crammer and Y. Singer. A family of additive online algorithms for category ranking. J. Mach. Learn.
+Research, 3:1025–1058, 2003.
+[11] X. He, J. Pan, O. Jin, T. Xu, B. Liu, T. Xu, Y. Shi, A. Atallah, R. Herbrich, S. Bowers, and J. Quiñonero
+Candela. Practical lessons from predicting clicks on ads at facebook. In Proc. 20th ACM Conf. Knowl.
+Disc. and Data Mining (KDD), pages 1–9. ACM, 2014.
+[12] S. Amuru and R. M. Buehrer. Optimal jamming using delayed learning. In 2014 IEEE Military Comm.
+Conf. (MILCOM), pages 1528–1533. IEEE, 2014.
+[13] I. Menache, O. Shamir, and N. Jain. On-demand, spot, or both: Dynamic resource allocation for executing
+batch jobs in the cloud. In 11th Int. Conf. on Autonomic Comput. (ICAC), 2014.
+[14] M.J. Weinberger and E. Ordentlich. On delayed prediction of individual sequences. IEEE Trans. Inf.
+Theory, 48(7):1959–1976, 2002.
+[15] P. Joulani, A. György, and C. Szepesvári. Online learning under delayed feedback. In Proc. 30th Int.
+Conf. Mach. Learning (ICML), volume 28, 2013.
+[16] D. P. Bertsekas and J. N. Tsitsiklis. Parallel and Distributed Computation: Numerical Methods. PrenticeHall, 1989.
+[17] B. Recht, C. Re, S. Wright, and F. Niu. Hogwild: a lock-free approach to parallelizing stochastic gradient
+descent. In Adv. Neural Info. Proc. Sys. 24 (NIPS), pages 693–701, 2011.
+[18] J. Duchi, M.I. Jordan, and B. McMahan. Estimation, optimization, and parallelism when data is sparse.
+In Adv. Neural Info. Proc. Sys. 26 (NIPS), pages 2832–2840, 2013.
+[19] H.B. McMahan and M. Streeter. Delay-tolerant algorithms for asynchronous distributed online learning.
+In Adv. Neural Info. Proc. Sys. 27 (NIPS), pages 2915–2923, 2014.
+[20] J. Duchi, E. Hazan, and Y. Singer. Adaptive subgradient methods for online learning and stochastic
+optimization. J. Mach. Learn. Research, 12:2121–2159, July 2011.
+[21] J. Langford, A. J. Smola, and M. Zinkevich. Slow learners are fast. In Adv. Neural Info. Proc. Sys. 22
+(NIPS), pages 2331–2339, 2009.
+[22] J. Liu, S. J. Wright, C. Ré, V. Bittorf, and S. Sridhar. An asynchronous parallel stochastic coordiante
+descent algorithm. J. Mach. Learn. Research, 16:285–322, 2015.
+[23] J. C. Duchi, T. Chaturapruek, and C. Ré. Asynchronous stochastic convex optimization.
+abs/1508.00882, 2015. To appear in Adv. Neural Info. Proc. Sys. 28 (NIPS), 2015.
+
+CoRR,
+
+[24] S. J. Wright. Coordinate descent algorithms. Math. Prog., 151(3–34), 2015.
+[25] D. Riabko. On the flexibility of theoretical models for pattern recognition. PhD thesis, University of
+London, April 2005.
+[26] N. Cesa-Bianchi, Y. Freund, D. Haussler, D.P. Helmbold, R.E. Schapire, and M.K. Warmuth. How to use
+expert advice. J. Assoc. Comput. Mach., 44(3):426–485, 1997.
+
+9
+
+

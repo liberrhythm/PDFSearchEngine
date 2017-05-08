@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = FinalProject1.0.0
-DISTDIR = /home/coder/Documents/CSE2341-17S-Have-mercy/build-FinalProject-Desktop_Qt_5_8_0_GCC_64bit-Debug/.tmp/FinalProject1.0.0
+DISTDIR = /home/coder/Desktop/DS/CSE2341-17S-Have-mercy/build-FinalProject-Desktop_Qt_5_8_0_GCC_64bit-Debug/.tmp/FinalProject1.0.0
 LINK          = g++
 LFLAGS        = 
 LIBS          = $(SUBLIBS) -lpodofo 
@@ -75,6 +75,7 @@ OBJECTS       = main.o \
 DIST          = ../FinalProject/xrayingpregnantbitches.pdf \
 		../FinalProject/StopWords \
 		StopWords \
+		index.txt \
 		index.txt \
 		/opt/Qt/5.8/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.8/gcc_64/mkspecs/common/unix.conf \
@@ -590,11 +591,13 @@ main.o: ../FinalProject/main.cpp ../FinalProject/pdfparser.h \
 		../FinalProject/porter2_stemmer.h \
 		../FinalProject/util/string_view.h \
 		../FinalProject/util/hash.h \
-		../FinalProject/avlindex.h \
-		../FinalProject/indexinterface.h \
 		../FinalProject/searcher.h \
 		../FinalProject/hashtable.h \
-		../FinalProject/indexhandler.h
+		../FinalProject/indexinterface.h \
+		../FinalProject/queryprocessor.h \
+		../FinalProject/indexhandler.h \
+		../FinalProject/avlindex.h \
+		../FinalProject/hashindex.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../FinalProject/main.cpp
 
 word.o: ../FinalProject/word.cpp ../FinalProject/word.h \
@@ -617,8 +620,8 @@ searcher.o: ../FinalProject/searcher.cpp ../FinalProject/searcher.h \
 		../FinalProject/util/hash.h \
 		../FinalProject/pdfparser.h \
 		../FinalProject/stopwords.h \
-		../FinalProject/avlindex.h \
-		../FinalProject/indexinterface.h
+		../FinalProject/indexinterface.h \
+		../FinalProject/queryprocessor.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o searcher.o ../FinalProject/searcher.cpp
 
 streamparser.o: ../FinalProject/streamparser.cpp ../FinalProject/streamparser.h \
@@ -646,24 +649,26 @@ pdfparser.o: ../FinalProject/pdfparser.cpp ../FinalProject/pdfparser.h \
 		../FinalProject/porter2_stemmer.h \
 		../FinalProject/util/string_view.h \
 		../FinalProject/util/hash.h \
-		../FinalProject/avlindex.h \
-		../FinalProject/indexinterface.h \
 		../FinalProject/searcher.h \
-		../FinalProject/hashtable.h
+		../FinalProject/hashtable.h \
+		../FinalProject/indexinterface.h \
+		../FinalProject/queryprocessor.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o pdfparser.o ../FinalProject/pdfparser.cpp
 
 indexhandler.o: ../FinalProject/indexhandler.cpp ../FinalProject/indexhandler.h \
 		../FinalProject/avltree.h \
-		../FinalProject/pdfparser.h \
-		../FinalProject/stopwords.h \
+		../FinalProject/avlindex.h \
+		../FinalProject/indexinterface.h \
 		../FinalProject/word.h \
 		../FinalProject/porter2_stemmer.h \
 		../FinalProject/util/string_view.h \
 		../FinalProject/util/hash.h \
-		../FinalProject/avlindex.h \
-		../FinalProject/indexinterface.h \
+		../FinalProject/hashindex.h \
+		../FinalProject/hashtable.h \
+		../FinalProject/pdfparser.h \
+		../FinalProject/stopwords.h \
 		../FinalProject/searcher.h \
-		../FinalProject/hashtable.h
+		../FinalProject/queryprocessor.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o indexhandler.o ../FinalProject/indexhandler.cpp
 
 porter2_stemmer.o: ../FinalProject/porter2_stemmer.cpp ../FinalProject/porter2_stemmer.h \
@@ -681,7 +686,6 @@ queryprocessor.o: ../FinalProject/queryprocessor.cpp ../FinalProject/queryproces
 		../FinalProject/searcher.h \
 		../FinalProject/hashtable.h \
 		../FinalProject/pdfparser.h \
-		../FinalProject/avlindex.h \
 		../FinalProject/indexinterface.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o queryprocessor.o ../FinalProject/queryprocessor.cpp
 
@@ -695,8 +699,8 @@ predictivesearch.o: ../FinalProject/predictivesearch.cpp ../FinalProject/predict
 		../FinalProject/util/hash.h \
 		../FinalProject/pdfparser.h \
 		../FinalProject/stopwords.h \
-		../FinalProject/avlindex.h \
-		../FinalProject/indexinterface.h
+		../FinalProject/indexinterface.h \
+		../FinalProject/queryprocessor.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o predictivesearch.o ../FinalProject/predictivesearch.cpp
 
 hashindex.o: ../FinalProject/hashindex.cpp ../FinalProject/hashindex.h \

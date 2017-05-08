@@ -19,12 +19,15 @@ class IndexHandler {
         //AvlTree<Word> index;
         int numDocuments;
         PDFParser parser;
+        vector<string> txtFiles;
     public:
         IndexHandler();
         IndexInterface* returnIndex();
+        vector<string> getTextFiles();
         void chooseIndex();
         void getIndex();
         int getNumDocuments();
+        int getNumPages();
         bool doesIndexExist();
         void writeToIndex(AvlTree<Word>&);
         void readFromIndex();

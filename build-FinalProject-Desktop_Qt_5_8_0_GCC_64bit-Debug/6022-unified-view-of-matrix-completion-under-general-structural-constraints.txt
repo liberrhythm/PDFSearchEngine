@@ -1,0 +1,846 @@
+Unified View of Matrix Completion under General
+Structural Constraints
+Suriya Gunasekar
+UT at Austin, USA
+suriya@utexas.edu
+
+Arindam Banerjee
+UMN Twin Cities, USA
+banerjee@cs.umn.edu
+
+Joydeep Ghosh
+UT at Austin, USA
+ghosh@ece.utexas.edu
+
+Abstract
+In this paper, we present a unified analysis of matrix completion under general
+low-dimensional structural constraints induced by any norm regularization. We
+consider two estimators for the general problem of structured matrix completion,
+and provide unified upper bounds on the sample complexity and the estimation
+error. Our analysis relies on results from generic chaining, and we establish
+two intermediate results of independent interest: (a) in characterizing the size
+or complexity of low dimensional subsets in high dimensional ambient space, a
+certain partial complexity measure encountered in the analysis of matrix completion problems is characterized in terms of a well understood complexity measure
+of Gaussian widths, and (b) it is shown that a form of restricted strong convexity
+holds for matrix completion problems under general norm regularization. Further,
+we provide several non-trivial examples of structures included in our framework,
+notably the recently proposed spectral k-support norm.
+
+1
+
+Introduction
+
+The task of completing the missing entries of a matrix from an incomplete subset of (potentially
+noisy) entries is encountered in many applications including recommendation systems, data imputation, covariance matrix estimation, and sensor localization among others. Traditionally ill–posed
+high dimensional estimation problems, where the number of parameters to be estimated is much
+higher than the number of observations, has been extensively studied in the recent literature. However, matrix completion problems are particularly ill–posed as the observations are both limited
+(high dimensional), and the measurements are extremely localized, i.e., the observations consist of
+individual matrix entries. The localized measurement model, in contrast to random Gaussian or
+sub–Gaussian measurements, poses additional complications in high dimensional estimation.
+For well–posed estimation in high dimensional problems including matrix completion, it is imperative that low dimensional structural constraints are imposed on the target. For matrix completion,
+the special case of low–rank constraint has been widely studied. Several existing work propose
+tractable estimators with near–optimal recovery guarantees for (approximate) low–rank matrix completion [8, 7, 28, 26, 18, 19, 22, 11, 20, 21]. A recent work [16] addresses the extension to structures
+with decomposable norm regularization. However, the scope of matrix completion extends for low
+dimensional structures far beyond simple low–rankness or decomposable norm structures.
+In this paper, we present a unified statistical analysis of matrix completion under a general set of low
+dimensional structures that are induced by any suitable norm regularization. We provide statistical
+analysis of two generalized matrix completion estimators, the constrained norm minimizer, and the
+generalized matrix Dantzig selector (Section 2.2). The main results in the paper (Theorem 1a–1b)
+provide unified upper bounds on the sample complexity and estimation error of these estimators for
+matrix completion under any norm regularization. Existing results on matrix completion with low
+rank or other decomposable structures can be obtained as special cases of our general results.
+1
+
+Our unified analysis of sample complexity is motivated by recent work on high dimensional estimation using global (sub) Gaussian measurements [10, 1, 35, 3, 37, 5]. A key ingredient in the recovery
+analysis of high dimensional estimation involves establishing a certain variation of Restricted Isometry Property (RIP) [9] of the measurement operator. It has been shown that such properties are satisfied by Gaussian and sub–Gaussian measurement operators with high probability. Unfortunately,
+as has been noted before by Candes et al. [8], owing to highly localized measurements, such conditions are not satisfied in the matrix completion problem, and the existing results based on global
+(sub) Gaussian measurements are not directly applicable. In fact, a key question we consider is:
+given the radically limited measurement model in matrix completion, by how much would the sample complexity of estimation increase beyond the known sample complexity bounds for global (sub)
+Gaussian measurements. Our results upper bounds the sample complexity for matrix completion to
+within a log d factor over that for estimation under global (sub) Gaussian measurements [10, 3, 5].
+While the result was previously known for low rank matrix completion using nuclear norm minimization [26, 20], with a careful use of generic chaining, we show that the log d factor suffices
+for structures induced by any norm! As a key intermediate result, we show that a useful form of
+restricted strong convexity (RSC) [27] holds for the localized measurements encountered in matrix
+completion under general norm regularized structures. The result substantially generalizes existing
+RSC results for matrix completion under the special cases of nuclear norm and decomposable norm
+regularization [26, 16].
+For our analysis, we use tools from generic chaining [33] to characterize the main results (Theorem 1a–1b) in terms of the Gaussian width (Definition 1) of certain error sets. Gaussian widths
+provide a powerful geometric characterization for quantifying the complexity of a structured low dimensional subset in a high dimensional ambient space. Numerous tools have been developed in the
+literature for bounding the Gaussian width of structured sets. A unified characterization of results in
+terms of Gaussian width has the advantage that this literature can be readily leveraged to derive new
+recovery guarantees for matrix completion under suitable structural constraints (Appendix D.2).
+In addition to the theoretical elegance of such a unified framework, identifying useful but potentially
+non–decomposable low dimensional structures is of significant practical interest. The broad class
+of structures enforced through symmetric convex bodies and symmetric atomic sets [10] can be
+analyzed under this paradigm (Section 2.1). Such specialized structures can capture the constraints
+in certain applications better than simple low–rankness. In particular, we discuss in detail, a non–
+trivial example of the spectral k–support norm introduced by McDonald et al. [25].
+To summarize the key contributions of the paper:
+• Theorem 1a–1b provide unified upper bounds on sample complexity and estimation error for
+matrix completion estimators using general norm regularization: a substantial generalization of the
+existing results on matrix completion under structural constraints.
+• Theorem 1a is applied to derive statistical results for the special case of matrix completion under
+spectral k–support norm regularization.
+• An intermediate result, Theorem 5 shows that under any norm regularization, a variant of Restricted Strong Convexity (RSC) holds in the matrix completion setting with extremely localized
+measurements. Further, a certain partial measure of complexity of a set is encountered in matrix
+completion analysis (12). Another intermediate result, Theorem 2 provides bounds on the partial complexity measures in terms of a better understood complexity measure of Gaussian width.
+These intermediate results are of independent interest beyond the scope of the paper.
+Notations and Preliminaries
+Indexes i, j are typically used to index rows and columns respectively of matrices, and index k is
+used to index the observations. ei , ej , ek , etc. denote the standard basis in appropriate dimensions∗ .
+Notation G and g are used to denote a matrix and vector respectively, with independent standard
+Gaussian random variables. P(.) and E(.) denote the probability of an event and the expectation of
+a random variable, respectively. Given
+p an integer N , let [N ] = {1, 2, . . . , N }. Euclidean norm in a
+vector space is denoted as kxk2 = hx, xi. For a matrix
+≥ . . .,
+pPX with singular values σ1 ≥ σ2 P
+2 , the nuclear norm kXk =
+common norms include the Frobenius norm kXkF =
+σ
+∗
+i i
+i σi ,
+d1 d2 −1
+the spectral norm kXkop = σ1 , and the maximum norm kXk∞ = maxij |Xij |. Also let, S
+=
+∗
+
+for brevity we omit the explicit dependence of dimension unless necessary
+
+2
+
+{X ∈ Rd1×d2 : kXkF = 1} and Bd1 d2 = {X ∈ Rd1×d2 : kXkF ≤ 1}. Finally, given a norm k.k
+defined on a vectorspace V, its dual norm is given by kXk∗ = supkY k≤1 hX, Y i.
+Definition 1 (Gaussian Width). Gaussian width of a set S ⊂ Rd1×d2 is a widely studied measure of
+complexity of a subset in high dimensional ambient space and is given by:
+wG (S) = EG sup hX, Gi,
+(1)
+X∈S
+
+where recall that G is a matrix of independent standard Gaussian random variables. Some key results
+on Gaussian width are discussed in Appendix D.2.
+Definition 2 (Sub–Gaussian Random Variable [36]). The sub–Gaussian norm of a random variable
+X is given by: kXkΨ2 = supp≥1 p−1/2 (E|X|p )1/p . X is b–sub–Gaussian if kXkΨ2 ≤ b < ∞.
+Equivalently, X is sub–Gaussian if one of the following conditions are satisfied for some constants
+k1 , k2 , and k3 [Lemma 5.5 of [36]].
+2
+2 2
+√
+(1) ∀p ≥ 1, (E|X|p )1/p ≤ b p,
+(2) ∀t > 0, P(|X| > t) ≤ e1−t /k1 b ,
+2
+2
+2 2
+(3) E[ek2 X /b ] ≤ e, or
+(4) if EX = 0, then ∀s > 0, E[esX ] ≤ ek3 s b /2 .
+Definition 3 (Restricted Strong Convexity (RSC)). A function L is said to satisfy Restricted Strong
+Convexity (RSC) at Θ with respect to a subset S, if for some RSC parameter κL > 0,
+∀∆ ∈ S, L(Θ + ∆) − L(Θ) − h∇L(Θ), ∆i ≥ κL k∆k2F .
+(2)
+1×d2
+Definition 4 (Spikiness Ratio [26]). For X ∈ Rd√
+, a measure of its “spikiness” is given by:
+d1 d2 kXk∞
+.
+(3)
+αsp (X) =
+kXkF
+Definition 5 (Norm Compatibility Constant [27]). The compatibility constant of a norm R : V → R
+under a closed convex cone C ⊂ V is defined as follows:
+R(X)
+ΨR (C) = sup
+.
+(4)
+X∈C\{0} kXkF
+
+2
+
+Structured Matrix Completion
+
+Denote the ground truth target matrix as Θ∗ ∈ Rd1×d2 ; let d = d1 + d2 . In the noisy matrix completion, observations consists of individual entries of Θ∗ observed through an additive noise channel.
+Sub–Gaussian Noise: Given, a list of independently sampled standard basis Ω = {Ek = eik e>
+jk :
+ik ∈ [d1 ], jk ∈ [d2 ]} with potential duplicates, observations (yk )k ∈ R|Ω| are given by:
+yk = hΘ∗ , Ek i + ξηk , for k = 1, 2, . . . , |Ω|,
+(5)
+|Ω|
+where η ∈ R is the noise vector of independent sub–Gaussian random variables with E[ηk ] = 0
+and Var(ηk ) = 1, and ξ 2 is scaled variance of noise per observation. Further let kηk kΨ2 ≤ b for a
+constant b (recall k.kΨ2 from Definition 2). Also, without loss of generality, assume normalization
+kΘ∗ kF = 1.
+Uniform Sampling: Assume that the entries in Ω are drawn independently and uniformly:
+Ek ∼ uniform{ei e>
+(6)
+j : i ∈ [d1 ], j ∈ [d2 ]}, for Ek ∈ Ω.
+Let {ek } be the standard basis of R|Ω| . Given Ω, define PΩ : Rd1×d2 → R|Ω| as:
+P|Ω|
+PΩ (X) = k=1 hX, Ek iek
+(7)
+Structural Constraints For matrix completion with |Ω| < d1 d2 , low dimensional structural constraints on Θ∗ are necessary for well–posedness. We consider a generalized constraint setting
+wherein for some low–dimensional model space M, Θ∗ ∈ M is enforced through a surrogate
+norm regularizer R(.). We make no further assumptions on R other than it being a norm in Rd1×d2 .
+Low Spikiness In matrix completion under uniform sampling model, further restrictions on Θ∗ (beyond low dimensional structure) are required to ensure that the most informative entries of the matrix
+are observed with high probability [8]. Early work assumed stringent matrix incoherence conditions
+for low–rank completion to preclude such matrices [7, 18, 19], while more recent work [11, 26], relax these assumptions to a more intuitive restriction of the spikiness ratio, defined in (3). However,
+under this relaxation only an approximate recovery is typically guaranteed in low–noise regime, as
+opposed to near exact recovery under incoherence assumptions [26, 11].
+Assumption 1 (Spikiness Ratio). There exists α∗ > 0, such that
+∗
+∗
+kF
+√
+≤ √dα d .
+
+kΘ∗ k∞ = αsp (Θ∗ ) kΘ
+d d
+1 2
+
+3
+
+1 2
+
+2.1
+
+Special Cases and Applications
+
+We briefly introduce some interesting examples of structural constraints with practical applications.
+Example 1 (Low Rank and Decomposable Norms). Low–rankness is the most common structure
+used in many matrix estimation problems including collaborative filtering, PCA, spectral clustering,
+etc. Convex estimators using nuclear norm kΘk∗ regularization has been widely studied statistically
+[8, 7, 28, 26, 18, 19, 22, 11, 20, 21]. A recent work [16] extends the analysis of low rank matrix
+completion to general decomposable norms, i.e. R : ∀X, Y ∈ (M, M⊥ ), R(X+Y ) = R(X)+R(Y ).
+Example 2 (Spectral k–support Norm). A non–trivial and significant example of norm regularization that is not decomposable is the spectral k–support norm recently introduced by McDonald et al. [25]. Spectral k–support norm is essentially the vector k–support norm [2] applied on the
+singular values σ(Θ) of a matrix Θ ∈ Rd1×d2 . Without loss of generality, let d¯ = d1 = d2 .
+¯ : |g| ≤ k} be the set of all subsets [d]
+¯ of cardinality at most k, and let
+Let Gk = {g ⊆ [d]
+d¯
+V(Gk ) = {(vg )g∈Gk : vg ∈ R , supp(vg ) ⊆ g}. The spectral k–support norm is given by:
+nX
+o
+X
+kΘkk–sp = inf
+kvg k2 :
+vg = σ(Θ) ,
+(8)
+v∈V(Gk )
+
+g∈Gk
+
+g∈Gk
+
+McDonald et al. [25] showed that spectral k–support norm is a special case of cluster norm [17]. It
+was further shown that in multi–task learning, wherein the tasks (columns of Θ∗ ) are assumed to be
+clustered into dense groups, the cluster norm provides a trade–off between intra–cluster variance,
+(inverse) inter–cluster variance, and the norm of the task vectors. Both [17] and [25] demonstrate
+superior empirical performance of cluster norms (and k–support norm) over traditional trace norm
+and spectral elastic net minimization on bench marked matrix completion and multi–task learning
+datasets. However, statistical analysis of consistent matrix completion using spectral k–support
+norm regularization has not been previously studied. In Section 3.2, we discuss the consequence of
+our main theorem for this non–trivial special case.
+Example 3 (Additive Decomposition). Elementwise sparsity is a common structure often assumed
+in high–dimensional estimation problems. However, in matrix completion, elementwise sparsity
+conflicts with Assumption 1 (and more traditional incoherence assumptions). Indeed, it is easy to
+see that with high probability most of the |Ω|  d1 d2 uniformly sampled observations will be
+zero, and an informed prediction is infeasible. However, elementwise sparse
+P structures can often
+be modelled within an additive decomposition framework, wherein Θ∗ = k Θ(k) , such that each
+component matrix Θ(k) is in turn structured (e.g. low rank+sparse used for robust PCA [6]). In
+such structures, there is no scope for recovering sparse components outside the observed indices,
+and it is assumed that: Θ(k) is sparse ⇒ supp(Θ(k) ) ⊆ Ω. In such cases, our results are applicable
+under additional regularity assumptions that enforces non–spikiness on the superposed matrix. A
+candidate norm regularizer for such structures is the weighted infimum convolution of individual
+structure inducing norms [6, 39],
+X
+X
+	
+Rw (Θ) = inf
+wk Rk (Θ(k) ) :
+Θ(k) = Θ .
+k
+
+k
+
+Example 4 (Other Applications). Other potential applications including cut matrices [30, 10], structures induced by compact convex sets, norms inducing structured sparsity assumptions on the spectrum of Θ∗ , etc. can also be handled under the paradigm of this paper.
+2.2
+
+Structured Matrix Estimator
+
+Let R be the norm surrogate for the structural constraints on Θ∗ , and R∗ denote its dual norm. We
+propose and analyze two convex estimators for the task of structured matrix completion:
+Constrained Norm Minimizer
+b cn = argmin R(Θ)
+Θ
+s.t. kPΩ (Θ) − yk2 ≤ λcn .
+∗
+(9)
+kΘk∞ ≤ √α
+d1 d2
+
+Generalized Matrix Dantzig Selector
+b ds =
+Θ
+
+argmin
+
+R(Θ)
+
+√
+
+d1 d2 ∗ ∗
+R PΩ (PΩ (Θ) − y) ≤ λds ,
+|Ω|
+
+s.t.
+
+α∗
+
+kΘk∞ ≤ √
+
+d1 d2
+
+4
+
+(10)
+
+where recall that PΩ∗ : RΩ → Rd1×d2 is the linear adjoint of PΩ , i.e. hPΩ (X), yi = hX, PΩ∗ (y)i.
+Note: Theorem 1a–1b gives consistency results for (9) and (10), respectively, under certain conditions on the parameters λcn > 0, λds > 0, and α∗ > 1. In particular, these conditions assume
+knowledge of the noise variance ξ 2 and spikiness ratio αsp (Θ∗ ). In practice, typically ξ and αsp (Θ∗ )
+are unknown and the parameters are tuned by validating on held out data.
+
+3
+
+Main Results
+
+We define the following “restricted” error cone and its subset:
+TR = TR (Θ∗ ) = cone{∆ : R(Θ∗ + ∆) ≤ R(Θ∗ )}, and ER = TR ∩ Sd1 d2 −1 .
+
+(11)
+
+b cn and Θ
+b ds be the estimates from (9) and (10), respectively. If λcn and λds are chosen such that
+Let Θ
+∗
+b cn = Θ
+b cn − Θ∗
+Θ belongs to the feasible sets in (9) and (10), respectively, then the error matrices ∆
+∗
+b ds = Θ
+b ds − Θ are contained in TR .
+and ∆
+b cn = Θ∗ +
+Theorem 1a (Constrained Norm Minimizer).pUnder the problem setup in Section 2, let Θ
+2 2
+b
+∆cn be the estimate from (9) with λcn = 2ξ |Ω|. For large enough
+c0 
+, if |Ω| > c0 wG (ER ) log d,
+
+1
+√
+then there exists an RSC parameter κc0 > 0 with κc0 ≈ 1 − o log d , and constants c1 and c2
+2
+2
+(ER ) log d),
+(ER ))−2 exp(−c2 wG
+such that, with probability greater than 1−exp(−c1 wG
+s
+(
+)
+2 (E ) log d
+c20 wG
+1 b 2
+ξ 2 α∗2
+R
+k∆cn kF ≤ 4 max
+,
+.
+d1 d2
+κc0 d1 d2
+|Ω|
+
+b ds =
+Theorem 1b (Matrix Dantzig Selector). Under the √problem setup in Section 2, let Θ
+d1 d2 ∗ ∗
+∗
+b
+Θ + ∆ds be the estimate from (10) with λds ≥ 2ξ |Ω| R PΩ (η). For large enough c0 , if
+
+
+1
+2
+(ER ) log d, then there exists an RSC parameter κc0 > 0 with κc0 ≈ 1 − o √log
+|Ω| > c20 wG
+,
+d
+2
+(ER )),
+and a constant c1 such that, with probability greater than 1−exp(−c1 wG
+s
+)
+(
+2 (E ) log d
+c20 wG
+1 b 2
+λ2ds Ψ2R (TR ) α∗2
+R
+,
+.
+k∆ds kF ≤ 16 max
+d1 d2
+κ2c0
+d1 d2
+|Ω|
+
+Recall Gaussian width wG and subspace compatibility constant ΨR from (1) and (4), respectively.
+Remarks:
+2
+(ER ) ≤ 3dr, ΨR (TR ) ≤ 2r and
+1. If R(Θ) = kΘk∗ q
+and rank(Θ∗ ) = r, then wG
+√
+
+log d
+≤ 2 d |Ω|
+w.h.p [10, 14, 26]. Using these bounds in Theorem 1b recovers
+near–optimal results for low rank matrix completion under spikiness assumption [26].
+For both estimators, upper bound on sample complexity is dominated by the square of Gaussian
+width which is often considered the effective dimension of a subset in high dimensional space
+and plays a key role in high dimensional estimation under Gaussian measurement ensembles.
+The results show that, independent of R(.), the upper bound on sample complexity for consistent
+matrix completion with highly localized measurements is within a log d factor of the known
+2
+sample complexity of ∼ wG
+(ER ) for estimation from Gaussian measurements [3, 10, 37, 5].
+First term in estimation error bounds in Theorem 1a–1b scales with ξ 2 which is the per observation noise variance (upto constant). The second term is an upper bound on error that arises due
+to unidentifiability of Θ∗ within a certain radius under the spikiness constraints [26]; in contrast
+[7] show exact recovery when ξ = 0 using more stringent matrix incoherence conditions.
+b cn from Theorem 1a is comparable to the result by Candés et al. [7] for low rank
+Bound on ∆
+matrix completion under non–low–noise regime, where the first term dominates, and those of [10,
+2
+35] for high dimensional estimation under Gaussian measurements. With a bound on wG
+(ER ), it
+is easy to specialize this result for new structural constraints. However, this bound is potentially
+loose and asymptotically converges to a constant error proportional to the noise variance ξ 2 .
+The estimation error bound in Theorem 1b is typically sharper than that in Theorem 1a. However,
+for specific structures, using application of Theorem 1b requires additional bounds on R∗ PΩ∗ (η)
+2
+and ΨR (TR ) besides wG
+(ER ).
+d1 d2
+∗
+|Ω| kPΩ (η)k2
+
+2.
+
+3.
+
+4.
+
+5.
+
+5
+
+3.1
+
+Partial Complexity Measures
+
+Recall that for wG (S) = E supX∈S hX, Gi and R|Ω| 3 g ∼ N (0, I|Ω| ) is a standard normal vector.
+Definition 6 (Partial Complexity Measures). Given a randomly sampled Ω = {Ek ∈ Rd1×d2 }, and
+a centered random vector η ∈ R|Ω| , the partial η–complexity measure of S is given by:
+wΩ,η (S) = EΩ,η sup hX, PΩ∗ (η)i.
+(12)
+X∈S−S
+
+Special cases of η being a vector of standard Gaussian g, or standard Rademacher  (i.e. k ∈
+{−1, 1} w.p. 1/2) variables, are of particular interest.
+Note: In the case of symmetric η, like g and , wΩ,η (S) = 2EΩ,η supX∈S hX, PΩ∗ (η)i, and the later
+expression will be used interchangeably ignoring the constant term.
+
+Theorem 2 (Partial Gaussian Complexity). Let S ⊆ Bd1 d2 with non–empty interior, and let Ω be
+sampled according to (6). ∃ universal constants k1 , k2 , K1 and K2 such that:
+s
+r
+|Ω|
+wΩ,g (S) ≤ k1
+wG (S) + k2 EΩ sup kPΩ (X − Y )k22
+d1 d2
+X,Y ∈S
+(13)
+s
+|Ω|
+wΩ,g (S) ≤ K1
+wG (S) + K2 sup kX − Y k∞ .
+d1 d2
+X,Y ∈S
+Also, for centered i.i.d. sub–Gaussian vector η ∈ R|Ω| , ∃ constant K3 s.t. wΩ,η (S) ≤ K3 wΩ,g (S).
+Note: For Ω ( [d1 ] × [d2 ], the second term in (13) is a consequence of the localized measurements.
+3.2
+
+Spectral k–Support Norm
+
+We introduced spectral k–support norm in Section 2.1. The estimators from (9) and (10) for spectral
+k–support norm can be efficiently solved via proximal methods using the proximal operators derived
+in [25]. We are interested in the statistical guarantees for matrix completion using spectral k–support
+norm regularization. We extend the analysis for upper bounding the Gaussian width of the descent
+cone for the vector k–support norm by [29] to the case of spectral k–support norm. WLOG let
+¯ Let σ ∗ ∈ Rd¯ be the vector of singular values of Θ∗ sorted in non–ascending order.
+d1 = d2 = d.
+Pp
+1
+∗
+∗
+∗
+Let r ∈ {0, 1, 2, . . . , k − 1} be the unique integer satisfying: σk−r−1
+> r+1
+i=k−r σi ≥ σk−r .
+¯
+Denote I2 = {1, 2, . . . , k − r − 1} and I1 = {k − r, k − r + 1, . . . , s}. Finally, for I ⊆ [d],
+∗
+c
+∗
+∗
+(σI )i = 0 ∀i ∈ I , and (σI )i = σi ∀i ∈ I.
+Lemma 3. If rank of Θ∗ is s and ER is the error set for R(Θ) = kΘkk–sp , then
+ (r + 1)2 kσ ∗ k2
+
+I2 2
+2
+wG
+(ER ) ≤ s(2d¯ − s) +
++
+|I
+|
+(2d¯ − s).
+1
+kσI∗1 k21
+Proof of the above lemma is provided in the appendix. Lemma 3 can be combined with Theorem 1a
+to obtain recovery guarantees for matrix completion under spectral k–support norm.
+
+4
+
+Discussions and Related Work
+
+Sample Complexity: For consistent recovery in high dimensional convex estimation, it is desirable
+that the descent cone at the target parameter Θ∗ is “small” relative to the feasible set (enforced by the
+observations) of the estimator. Thus, it is not surprising that the sample complexity and estimation
+error bounds of an estimator depends on some measure of complexity/size of the error cone at
+Θ∗ . Results in this paper are largely characterized in terms of a widely used complexity measure
+of Gaussian width wG (.), and can be compared with the literature on estimation from Gaussian
+measurements.
+Error Bounds: Theorem 1a provides estimation error bounds that depends only on the Gaussian
+width of the descent cone. In non–low–noise regime, this result is comparable to analogous results
+of constrained norm minimization [6, 10, 35]. However, this bound is potentially loose owing to
+mismatched data–fit term using squared loss, and asymptotically converges to a constant error proportional to the noise variance ξ 2 .
+6
+
+A tighter analysis on the estimation error can be obtained for the matrix Dantzig selector (10) from
+Theorem 1b. However, application of Theorem 1b requires computing high probability upper bound
+on R∗ PΩ∗ (η). The literature on norms of random matrices [13, 24, 36, 34] can be exploited in computing such bounds. Beside, in special cases: if R(.) ≥ Kk.k∗ , then KR∗ (.) ≤ k.kop can be used
+to obtain asymptotically consistent results.
+Finally, under near zero–noise, the second term in the results of Theorem 1 dominates, and bounds
+are weaker than that of [6, 19] owing to the relaxation of stronger incoherence assumption.
+Related Work and Future Directions: The closest related work is the result on consistency of
+matrix completion under decomposable norm regularization by [16]. Results in this paper are a strict
+generalization to general norm regularized (not necessarily decomposable) matrix completion. We
+provide non–trivial examples of application where structures enforced by such non–decomposable
+norms are of interest. Further, in contrast to our results that are based on Gaussian width, the RSC
+parameter in [16] depends on a modified complexity measure κR (d, |Ω|) (see definition in [16]). An
+advantage of results based on Gaussian width is that, application of Theorem 1 for special cases can
+greatly benefit from the numerous tools in the literature for the computation of wG (.).
+Another closely related line of work is the non–asymptotic analysis of high dimensional estimation
+under random Gaussian or sub–Gaussian measurements [10, 1, 35, 3, 37, 5]. However, the analysis
+from this literature rely on variants of RIP of the measurement ensemble [9], which is not satisfied by
+the the extremely localized measurements encountered in matrix completion[8]. In an intermediate
+result, we establish a form of RSC for matrix completion under general norm regularization: a result
+that was previously known only for nuclear norm and decomposable norm regularization.
+In future work, it is of interest to derive matching lower bounds on estimation error for matrix
+completion under general low dimensional structures, along the lines of [22, 5] and explore special
+case applications of the results in the paper. We also plan to derive explicit characterization of λds
+in terms of Gaussian width of unit balls by exploiting generic chaining results for general Banach
+spaces [33].
+
+5
+
+Proof Sketch
+
+Proofs of the lemmas are provided in the Appendix.
+5.1 Proof of Theorem 1
+Define the following set of β–non–spiky
+matrices in√Rd1×d2 for constant
+(
+) c0 from Theorem 1:
+d1 d2 kXk∞
+A(β) = X : αsp (X) =
+<β .
+(14)
+kXkF
+s
+|Ω|
+2
+Define,
+βc0 =
+(15)
+2 (E ) log d
+c20 wG
+R
+Case 1: Spiky Error Matrix When the error matrix from (9) or (10) has large spikiness ratio,
+√
+b ∞ ≤ kΘk
+b ∞ +kΘ∗ k∞≤2α∗ / d1 d2 in (3).
+following bound on error is immediate using k∆k
+b cn ) ∈
+Proposition 4 (Spiky Error
+For the constant c0 in Theorem 1a, if αsp (∆
+/ A(βc0 ), then
+q Matrix).
+2 w 2 (E ) log d
+∗2
+c
+R
+4α
+2
+∗2
+0 G
+b cn k ≤ 2 = 4α
+b ds .
+k∆
+. An analogous result also holds for ∆
+
+F
+β
+|Ω|
+c0
+
+b ds , ∆
+b cn ∈ A(β). Recall from (5), that y − PΩ (Θ∗ ) = ξη,
+Case 2: Non–Spiky Error Matrix Let ∆
+|Ω|
+where η ∈ R consists of independent sub–Gaussian random variables with E[ηk ] = 0, Var(ηk ) =
+1, and kηk kΨ2 ≤ b for a constant b.
+5.1.1
+
+Restricted Strong Convexity (RSC)
+
+Recall TR and ER from (11). The most significant step in the proof of Theorem 1 involves showing
+that over a useful subset of TR , a form of RSC (2) is satisfied by a squared loss penalty.
+2
+Theorem 5 (Restricted Strong Convexity). Let |Ω| > c20 wG
+(ER ) log
+ d, for large enough constant
+c0 . There exists a RSC parameter κc0 > 0 with κc0 ≈ 1 − o
+
+the following holds w.p. greater that 1 −
+
+2
+exp(−c1 wG
+(ER )),
+
+7
+
+√1
+log d
+
+, and a constant c1 such that,
+
+∀X ∈ TR ∩ A(βc0 ),
+
+d1 d2
+kPΩ (X)k22 ≥ κc0 kXk2F .
+|Ω|
+
+Proof in Appendix A combines empirical process tools along with Theorem 2.
+5.1.2
+
+
+
+Constrained Norm Minimizer
+
+Lemma 6. Under the conditions of Theorem 1, letp
+b be a constant such that ∀k, kηk kΨ2 ≤ b. There
+exists a universal constant c2 such that, if λcn ≥ 2ξ |Ω|, then w.p. greater than 1 − 2 exp (−c2 |Ω|),
+b ds ∈ TR , and (b) kPΩ (∆
+b cn )k2 ≤ 2λcn .
+(a) ∆
+
+p
+b cn ∈ A(βc ), then using Theorem 5 and Lemma 6, w.h.p.
+Using λcn = 2ξ |Ω| in (9), if ∆
+0
+b cn k2
+b cn )k2 4ξ 2
+k∆
+1 kPΩ (∆
+2
+F
+≤
+≤
+.
+d1 d2
+κc0
+|Ω|
+κc0
+5.1.3
+
+(16)
+
+Matrix Dantzig Selector
+√
+
+√
+
+Proposition 7. λds ≥ ξ
+
+d1 d2 ∗ ∗
+|Ω| R PΩ (η)
+
+b ds ∈ TR ; (b)
+⇒ w.h.p. (a) ∆
+
+d1 d2 ∗ ∗
+b
+|Ω| R PΩ (PΩ (∆ds )) ≤ 2λds .
+
+b ds and triangle inequality. Also,
+Above result follows from optimality of Θ
+√
+√
+d1 d2
+b ds )k2 ≤ d1 d2 R∗ P ∗ (PΩ (∆
+b ds ))R(∆
+b ds ) ≤ 2λds ΨR (TR )k∆
+b ds kF ,
+kPΩ (∆
+2
+Ω
+|Ω|
+|Ω|
+where recall norm compatibility constant ΨR (TR ) from (4). Finally, using Theorem 5, w.h.p.
+b k
+b ds k2
+b ds )k2 4λds ΨR (TR ) k∆
+k∆
+1 kPΩ (∆
+2
+F
+√ ds F .
+≤
+≤
+d1 d2
+|Ω|
+κc0
+κc0
+d1 d2
+5.2
+
+(17)
+
+Proof of Theorem 2
+
+|Ω|
+Let the entries of Ω = {Ek = eik e>
+jk : k = 1, 2, . . . , |Ω|} be sampled as in (6). Recall that g ∈ R
+is a standard normal vector. For a compact S ⊆ Rd1×d2 , it suffices to prove Theorem 2 for a dense
+countable subset of S. Overloading S to such a countable subset, define following random process:
+P
+(XΩ,g (X))X∈S , where XΩ,g (X) = hX, PΩ∗ (g)i = k hX, Ek igk .
+(18)
+
+We start with a key lemma in the proof of Theorem 2. Proof of this lemma, provided in Appendix B,
+uses tools from the broad topic of generic chaining developed in recent works [31, 33].
+Lemma 8. For a compact subset Ss⊆ Rd1×d2 with non–empty interior, ∃ constants k1 , k2 such that:
+r
+|Ω|
+wG (S) + k2 E sup kPΩ (X − Y )k22 .
+
+wΩ,g (S) = E sup XΩ,g (X) ≤ k1
+d1 d2
+X,Y ∈S
+X∈S
+Lemma 9. There exists constants k3 , k4 , such that for compact S ⊆ Bd1 d2 with non–empty interior
+E sup kPΩ (X − Y )k22 ≤ k3
+X,Y ∈S
+
+|Ω| 2
+w (S) + k4 ( sup kX − Y k∞ )wΩ,g (S)
+d1 d2 G
+X,Y ∈S
+
+Theorem
+2 follows by combining Lemma 8 and Lemma 9, and simple algebraic manipulations using
+√
+ab ≤ a/2 + b/2 and triangle inequality (See Appendix B.4).
+The statement in Theorem 2 about partial sub–Gaussian complexity follows from a standard result
+in empirical process given in Lemma 11 in the appendix.
+
+Acknowledgments We thank the anonymous reviewers for helpful comments and suggestions. S.
+Gunasekar and J. Ghosh acknowledge funding from NSF grants IIS-1421729, IIS-1417697, and
+IIS1116656. A. Banerjee acknowledges NSF grants IIS-1447566, IIS-1422557, CCF-1451986,
+CNS-1314560, IIS-0953274, IIS-1029711, and NASA grant NNX12AQ39A.
+
+8
+
+References
+[1] D. Amelunxen, M. Lotz, M. B. McCoy, and J. A. Tropp. Living on the edge: A geometric theory of phase
+transitions in convex optimization. Inform. Inference, 2014.
+[2] A. Argyriou, R. Foygel, and N. Srebro. Sparse prediction with the k-support norm. In NIPS, 2012.
+[3] A. Banerjee, S. Chen, F. Fazayeli, and V. Sivakumar. Estimation with norm regularization. In NIPS, 2014.
+[4] A. Banerjee, S. Merugu, I. S. Dhillon, and J. Ghosh. Clustering with bregman divergences. JMLR, 2005.
+[5] T. Cai, T. Liang, and A. Rakhlin. Geometrizing local rates of convergence for linear inverse problems.
+arXiv preprint, 2014.
+[6] E. J. Candés, X. Li, Y. Ma, and J. Wright. Robust principal component analysis? ACM, 2011.
+[7] E. J. Candés and Y. Plan. Matrix completion with noise. Proceedings of the IEEE, 2010.
+[8] E. J. Candés and B. Recht. Exact matrix completion via convex optimization. FoCM, 2009.
+[9] Emmanuel J Candes and Terence Tao. Decoding by linear programming. Information Theory, IEEE
+Transactions on, 2005.
+[10] V. Chandrasekaran, B. Recht, P. A. Parrilo, and A. S. Willsky. The convex geometry of linear inverse
+problems. Foundations of Computational Mathematics, 2012.
+[11] M. A. Davenport, Y. Plan, E. Berg, and M. Wootters. 1-bit matrix completion. Inform. Inference, 2014.
+[12] R. M. Dudley. The sizes of compact subsets of hilbert space and continuity of gaussian processes. Journal
+of Functional Analysis, 1967.
+[13] A. Edelman. Eigenvalues and condition numbers of random matrices. Journal on Matrix Analysis and
+Applications, 1988.
+[14] M. Fazel, H Hindi, and S. P. Boyd. A rank minimization heuristic with application to minimum order
+system approximation. In American Control Conference, 2001.
+[15] J. Forster and M. Warmuth. Relative expected instantaneous loss bounds. Journal of Computer and
+System Sciences, 2002.
+[16] S. Gunasekar, P. Ravikumar, and J. Ghosh. Exponential family matrix completion under structural constraints. In ICML, 2014.
+[17] L. Jacob, J. P. Vert, and F. R. Bach. Clustered multi-task learning: A convex formulation. In NIPS, 2009.
+[18] R. H. Keshavan, A. Montanari, and S. Oh. Matrix completion from a few entries. IEEE Trans. IT, 2010.
+[19] R. H. Keshavan, A. Montanari, and S. Oh. Matrix completion from noisy entries. JMLR, 2010.
+[20] O. Klopp. Noisy low-rank matrix completion with general sampling distribution. Bernoulli, 2014.
+[21] O. Klopp. Matrix completion by singular value thresholding: sharp bounds. arXiv preprint arXiv, 2015.
+[22] Vladimir Koltchinskii, Karim Lounici, Alexandre B Tsybakov, et al. Nuclear-norm penalization and
+optimal rates for noisy low-rank matrix completion. The Annals of Statistics, 2011.
+[23] M. Ledoux and M. Talagrand. Probability in Banach Spaces: isoperimetry and processes. Springer, 1991.
+[24] A. E. Litvak, A. Pajor, M. Rudelson, and N. Tomczak-Jaegermann. Smallest singular value of random
+matrices and geometry of random polytopes. Advances in Mathematics, 2005.
+[25] A. M. McDonald, M. Pontil, and D. Stamos. New perspectives on k-support and cluster norms. arXiv
+preprint, 2014.
+[26] S. Negahban and M. J. Wainwright. Restricted strong convexity and weighted matrix completion: Optimal
+bounds with noise. JMLR, 2012.
+[27] S. Negahban, B. Yu, M. J. Wainwright, and P. Ravikumar. A unified framework for high-dimensional
+analysis of m-estimators with decomposable regularizers. In NIPS, 2009.
+[28] B. Recht. A simpler approach to matrix completion. JMLR, 2011.
+[29] E. Richard, G. Obozinski, and J.-P. Vert. Tight convex relaxations for sparse matrix factorization. In
+ArXiv e-prints, 2014.
+[30] N. Srebro and A. Shraibman. Rank, trace-norm and max-norm. In Learning Theory. Springer, 2005.
+[31] M. Talagrand. Majorizing measures: the generic chaining. The Annals of Probability, 1996.
+[32] M. Talagrand. Majorizing measures without measures. Annals of probability, 2001.
+[33] M. Talagrand. Upper and Lower Bounds for Stochastic Processes. Springer, 2014.
+[34] J. A. Tropp. User-friendly tail bounds for sums of random matrices. Foundations of Computational
+Mathematics, 2012.
+[35] J. A. Tropp. Convex recovery of a structured signal from independent random linear measurements. arXiv
+preprint, 2014.
+[36] R. Vershynin. Introduction to the non-asymptotic analysis of random matrices. Compressed sensing,
+pages 210–268, 2012.
+[37] R. Vershynin. Estimation in high dimensions: a geometric perspective. ArXiv e-prints, 2014.
+[38] A. G. Watson. Characterization of the subdifferential of some matrix norms. Linear Algebra and its
+Applications, 1992.
+[39] E. Yang and P. Ravikumar. Dirty statistical models. In NIPS, 2013.
+
+9
+
+

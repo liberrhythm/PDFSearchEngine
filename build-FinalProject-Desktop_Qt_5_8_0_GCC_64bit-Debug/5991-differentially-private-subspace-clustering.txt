@@ -1,0 +1,980 @@
+Differentially Private Subspace Clustering
+
+Yining Wang, Yu-Xiang Wang and Aarti Singh
+Machine Learning Department, Carnegie Mellon Universty, Pittsburgh, USA
+{yiningwa,yuxiangw,aarti}@cs.cmu.edu
+
+Abstract
+Subspace clustering is an unsupervised learning problem that aims at grouping
+data points into multiple “clusters” so that data points in a single cluster lie approximately on a low-dimensional linear subspace. It is originally motivated by
+3D motion segmentation in computer vision, but has recently been generically
+applied to a wide range of statistical machine learning problems, which often involves sensitive datasets about human subjects. This raises a dire concern for
+data privacy. In this work, we build on the framework of differential privacy
+and present two provably private subspace clustering algorithms. We demonstrate
+via both theory and experiments that one of the presented methods enjoys formal
+privacy and utility guarantees; the other one asymptotically preserves differential
+privacy while having good performance in practice. Along the course of the proof,
+we also obtain two new provable guarantees for the agnostic subspace clustering
+and the graph connectivity problem which might be of independent interests.
+
+1
+
+Introduction
+
+Subspace clustering was originally proposed to solve very specific computer vision problems having
+a union-of-subspace structure in the data, e.g., motion segmentation under an affine camera model
+[11] or face clustering under Lambertian illumination models [15]. As it gains increasing attention
+in the statistics and machine learning community, people start to use it as an agnostic learning tool in
+social network [5], movie recommendation [33] and biological datasets [19]. The growing applicability of subspace clustering in these new domains inevitably raises the concern of data privacy, as
+many such applications involve dealing with sensitive information. For example, [19] applies subspace clustering to identify diseases from personalized medical data and [33] in fact uses subspace
+clustering as a effective tool to conduct linkage attacks on individuals in movie rating datasets. Nevertheless, privacy issues in subspace clustering have been less explored in the past literature, with
+the only exception of a brief analysis and discussion in [29]. However, the algorithms and analysis
+presented in [29] have several notable deficiencies. For example, data points are assumed to be incoherent and it only protects the differential privacy of any feature of a user rather than the entire user
+profile in the database. The latter means it is possible for an attacker to infer with high confidence
+whether a particular user is in the database, given sufficient side information.
+It is perhaps reasonable why there is little work focusing on private subspace clustering, which
+is by all means a challenging task. For example, a negative result in [29] shows that if utility is
+measured in terms of exact clustering, then no private subspace clustering algorithm exists when
+neighboring databases are allowed to differ on an entire user profile. In addition, state-of-the-art
+subspace clustering methods like Sparse Subspace Clustering (SSC, [11]) lack a complete analysis of
+its clustering output, thanks to the notorious “graph connectivity” problem [21]. Finally, clustering
+could have high global sensitivity even if only cluster centers are released, as depicted in Figure 1.
+As a result, general private data releasing schemes like output perturbation [7, 8, 2] do not apply.
+In this work, we present a systematic and principled treatment of differentially private subspace
+clustering. To circumvent the negative result in [29], we use the perturbation of recovered low1
+
+dimensional subspace from the ground truth as the utility measure. Our contributions are two-fold.
+First, we analyze two efficient algorithms based on the sample-aggregate framework [22] and established formal privacy and utility guarantees when data are generated from some stochastic model or
+satisfy certain deterministic separation conditions. New results on (non-private) subspace clustering
+are obtained along our analysis, including a fully agnostic subspace clustering on well-separated
+datasets using stability arguments and exact clustering guarantee for thresholding-based subspace
+clustering (TSC, [14]) in the noisy setting. In addition, we employ the exponential mechanism [18]
+and propose a novel Gibbs sampler for sampling from this distribution, which involves a novel tweak
+in sampling from a matrix Bingham distribution. The method works well in practice and we show it
+is closely related to the well-known mixtures of probabilistic PCA model [27].
+Related work Subspace clustering can be thought as a generalization of PCA and k-means clustering. The former aims at finding a single low-dimensional subspace and the latter uses zerodimensional subspaces as cluster centers. There has been extensive research on private PCA
+[2, 4, 10] and k-means [2, 22, 26]. Perhaps the most similar work to ours is [22, 4]. [22] applies the
+sample-aggregate framework to k-means clustering and [4] employs the exponential mechanism to
+recover private principal vectors. In this paper we give non-trivial generalization of both work to the
+private subspace clustering setting.
+
+2
+2.1
+
+Preliminaries
+Notations
+
+P
+For a vector x ∈ Rd , its p-norm is defined as kxkp = ( i xpi )1/p . If p is not explicitly specified
+then the 2-norm is used. For a matrix A ∈ Rn×m , we use σ1 (A) ≥ · · · ≥ σn (A) ≥ 0 to
+denote its singular values (assuming without loss of generality that n ≤ m). We use k · kξ to
+denote matrix norms, with ξ = 2 the
+spectral norm and ξ = F the Frobenious norm. That
+pmatrix
+Pn
+d
+2
+is, kAk2 = σ1 (A) and kAkF =
+i=1 σi (A) . For a q-dimensional subspace S ⊆ R , we
+d×q
+associate with a basis U ∈ R , where the q columns in U are orthonormal and S = range(U).
+We use Sdq to denote the set of all q-dimensional subspaces in Rd .
+Given x ∈ Rd and S ⊆ Rd , the distance d(x, S) is defined as d(x, S) = inf y∈S kx − yk2 . If S is
+a subspace associated with a basis U, then we have d(x, S) = kx − PS (x)k2 = kx − UU> xk2 ,
+where PS (·) denotes the projection operator onto subspace S. For two subspaces S, S 0 of dimension
+q, the distance d(S, S 0 ) is defined as the Frobenious norm of the sin matrix of principal angles; i.e.,
+d(S, S 0 ) = k sin Θ(S, S 0 )kF = kUU> − U0 U0> kF ,
+
+(1)
+
+where U, U0 are orthonormal basis associated with S and S 0 , respectively.
+2.2
+
+Subspace clustering
+
+Given n data points x1 , · · · , xn ∈ Rd , the task of subspace clustering is to cluster the data points
+into k clusters so that data points within a subspace lie approximately on a low-dimensional subspace. Without loss of generality, we assume kxi k2 ≤ 1 for all i = 1, · · · , n. We also use
+X = {x1 , · · · , xn } to denote the dataset and X ∈ Rd×n to denote the data matrix by stacking
+all data points in columnwise order. Subspace clustering seeks to find k q-dimensional subspaces
+Cˆ = {Ŝ1 , · · · , Ŝk } so as to minimize the Wasserstein’s distance or distance squared defined as
+ˆ C∗) =
+d2W (C,
+
+min
+π:[k]→[k]
+
+k
+X
+
+∗
+d2 (Ŝi , Sπ(i)
+),
+
+i=1
+∗
+
+(2)
+
+where π are taken over all permutations on [k] and S are the optimal/ground-truth subspaces. In a
+model based approach, C ∗ is fixed and data points {xi }ni=1 are generated either deterministically or
+stochastically from one of the ground-truth subspaces in C ∗ with noise corruption; for a completely
+agnostic setting, C ∗ is defined as the minimizer of the k-means subspace clustering objective:
+n
+1X
+C ∗ := argminC={S1 ,··· ,Sk }⊆Sdq cost(C; X ) = argminC={S1 ,··· ,Sk }⊆Sdq
+min d2 (xi , Sj ). (3)
+n i=1 j
+To simplify notations, we use ∆k (X ) = cost(C ∗ ; X ) to denote cost of the optimal solution.
+2
+
+Algorithm 1 The sample-aggregate framework [22]
+1: Input: X = {xi }n
+⊆ Rd , number
+of subsets m, privacy parameters ε, δ; f , dM .
+p
+√ i=1
+2: Initialize: s = m, α = ε/(5 2 ln(2/δ)), β = ε/(4(D + ln(2/δ))).
+3: Subsampling: Select m random subsets of size n/m of X independently and uniformly at
+
+4:
+5:
+6:
+7:
+
+2.3
+
+random
+without replacement. Repeat this step until no single data point appears in more than
+√
+m of the sets. Mark the subsampled subsets XS1 , · · · , XSm .
+D
+Separate queries: Compute B = {si }m
+i=1 ⊆ R , where si = f (XSi ).
+m+s
+∗
+Aggregation: Compute g(B) = si∗ where i = argminm
+i=1 ri (t0 ) with t0 = ( 2 + 1). Here
+ri (t0 ) denotes the distance dM (·, ·) between si and the t0 -th nearest neighbor to si in B.
+Noise calibration: Compute S(B) = 2 maxk (ρ(t0 + (k + 1)s) · e−βk ), where ρ(t) is the mean
+of the top bs/βc values in {r1 (t), · · · , rm (t)}.
+Output: A(X ) = g(B) + S(B)
+α u, where u is a standard Gaussian random vector.
+Differential privacy
+
+Definition 2.1 (Differential privacy, [7, 8]). A randomized algorithm A is (ε, δ)-differentially private
+if for all X , Y satisfying d(X , Y) = 1 and all sets S of possible outputs the following holds:
+Pr[A(X ) ∈ S] ≤ eε Pr[A(Y) ∈ S] + δ.
+
+(4)
+
+In addition, if δ = 0 then the algorithm A is ε-differentially private.
+In our setting, the distance d(·, ·) between two datasets X and Y is defined as the number of different
+columns in X and Y. Differential privacy ensures the output distribution is obfuscated to the point
+that every user has a plausible deniability about being in the dataset, and in addition any inferences
+about individual user will have nearly the same confidence before and after the private release.
+
+3
+
+Sample-aggregation based private subspace clustering
+
+In this section we first summarize the sample-aggregate framework introduced in [22] and argue
+why it should be preferred to conventional output perturbation mechanisms [7, 8] for subspace clustering. We then analyze two efficient algorithms based on the sample-aggregate framework and
+prove formal privacy and utility guarantees. We also prove new results in our analysis regarding
+the stability of k-means subspace clustering (Lem. 3.3) and graph connectivity (i.e., consistency) of
+noisy threshold-based subspace clustering (TSC, [14]) under a stochastic model (Lem. 3.5).
+3.1
+
+Smooth local sensitivity and the sample-aggregate framework
+
+Most existing privacy frameworks [7, 8] are
+based on the idea of global sensitivity, which
+is defined as the maximum output perturbation
+kf (X1 ) − f (X2 )kξ , where maximum is over
+all neighboring databases X1 , X2 and ξ = 1 or
+2. Unfortunately, global sensitivity of clustering problems is usually high even if only cluster centers are released. For example, Figure
+1 shows that the global sensitivity of k-means
+subspace clustering could be as high as O(1), Figure 1: Illustration of instability of k-means
+subspace clustering solutions (d = 2, k = 2, q =
+which ruins the algorithm utility.
+1). Blue dots represent evenly spaced data points
+To circumvent the above-mentioned chal- on the unit circle; blue crosses indicate an addilenges, Nissim et al. [22] introduces the tional data point. Red lines are optimal solutions.
+sample-aggregate framework based on the concept of a smooth version of local sensitivity.
+Unlike global sensitivity, local sensitivity measures the maximum perturbation kf (X ) − f (X 0 )kξ
+over all databases X 0 neighboring to the input database X . The proposed sample-aggregate framework (pseudocode in Alg. 1) enjoys local sensitivity and comes with the following guarantee:
+Theorem 3.1 ([22], Theorem 4.2). Let f : D → RD be an efficiently computable function where
+D is the collection of all databases and D is the output dimension. Let dM (·, ·) be a semimetric on
+3
+
+√
+the outer space of f . 1 Set ε > 2D/ m and m = ω(log2 n). The sample-aggregate algorithm
+A in Algorithm 1 is an efficient (ε, δ)-differentially private algorithm. Furthermore, if f and m are
+chosen such that the `1 norm of the output of f is bounded by Λ and
+Pr [dM (f (XS ), c) ≤ r] ≥
+
+XS ⊆X
+
+3
+4
+
+(5)
+
+for some c ∈ RD and r√ > 0, then the standard deviation of Gaussian noise added is upper bounded
+ε m
+by O(r/ε) + Λε e−Ω( D ) . In addition, when m satisfies m = ω(D2 log2 (r/Λ)/ε2 ), with high
+probability each coordinate of A(X ) − c̄ is upper bounded by O(r/ε), where c̄ depending on A(X )
+satisfies dM (c, c̄) = O(r).
+Let f be any subspace clustering solver that outputs k estimated low-dimensional subspaces and
+dM be the Wasserstein’s distance as defined in Eq. (2). Theorem 3.1 provides privacy guarantee
+for an efficient meta-algorithm with any f . In addition, utility guarantee holds with some more
+assumptions on input dataset X . In following sections we establish utility guarantees. The main
+idea is to prove stability results as outlined in Eq. (5) for particular subspace clustering solvers and
+then apply Theorem 3.1.
+3.2
+
+The agnostic setting
+
+We first consider the setting when data points {xi }ni=1 are arbitrarily placed. Under such agnostic
+setting the optimal solution C ∗ is defined as the one that minimizes the k-means cost as in Eq. (3).
+The solver f is taken to be any (1 + )-approximation2 of optimal k-means subspace clustering; that
+ˆ X ) ≤ (1 + )cost(C ∗ ; X ). Efficient core-set
+is, f always outputs subspaces Cˆ satisfying cost(C;
+based approximation algorithms exist, for example, in [12]. The key task of this section it to identify
+assumptions under which the stability condition in Eq. (5) holds with respect to an approximate
+solver f . The example given in Figure 1 also suggests that identifiability issue arises when the input
+data X itself cannot be well clustered. For example, no two straight lines could well approximate
+data uniformly distributed on a circle. To circumvent the above-mentioned difficulty, we impose the
+following well-separation condition on the input data X :
+Definition 3.2 (Well-separation condition for k-means subspace clustering). A dataset X is
+(φ, η, ψ)-well separated if there exist constants φ, η and ψ, all between 0 and 1, such that
+
+	
+∆2k (X ) ≤ min φ2 ∆2k−1 (X ), ∆2k,− (X ) − ψ, ∆2k,+ (X ) + η ,
+(6)
+where ∆k−1 , ∆k,− and ∆k,+ are defined as ∆2k−1 (X ) = minS1:k−1 ∈Sdq cost({Si }; X ); ∆2k,− (X ) =
+minS1 ∈Sdq−1 ,S2:k ∈Sdq cost({Si }; X ); and ∆2k,+ (X ) = minS1 ∈Sdq+1 ,S2:k ∈Sdq cost({Si }; X ).
+The first condition in Eq. (6), ∆2k (X ) ≤ φ2 ∆2k−1 (X ), constrains that the input dataset X cannot
+be well clustered using k − 1 instead of k clusters. It was introduced in [23] to analyze stability of
+k-means solutions. For subspace clustering, we need another two conditions regarding the intrinsic
+dimension of each subspace. The ∆2k (X ) ≤ ∆2k,− (X ) − ψ asserts that replacing a q-dimensional
+subspace with a (q − 1)-dimensional one is not sufficient, while ∆2k (X ) ≤ ∆2k,+ (X ) + η means an
+additional subspace dimension does not help much with clustering X .
+The following lemma is our main stability result for subspace clustering on well-separated datasets.
+It states that when a candidate clustering Cˆ is close to the optimal clustering C ∗ in terms of clustering
+cost, they are also close in terms of the Wasserstein distance defined in Eq. (2).
+Lemma 3.3 (Stability of agnostic k-means subspace clustering). Assume X is (φ, η, ψ)-well separated with φ2 < 1/1602, ψ > η. Suppose a candidate clustering Cˆ = {Ŝ1 , · · · , Ŝk } ⊆ Sdq satisfies
+2
+ˆ X ) ≤ a · cost(C ∗ ; X ) for some a < 1−802φ
+cost(C;
+Then √
+the following holds:
+800φ2 . √
+2
+600
+2φ
+k
+ˆ C∗) ≤
+dW (C,
+.
+(7)
+2
+(1 − 150φ )(ψ − η)
+The following theorem is then a simple corollary, with a complete proof in Appendix B.
+1
+2
+
+dM (·, ·) satisfies dM (x, y) ≥ 0, dM (x, x) = 0 and dM (x, y) ≤ dM (x, z) + dM (y, z) for all x, y, z.
+Here  is an approximation constant and is not related to the privacy parameter ε.
+
+4
+
+Algorithm 2 Threshold-based subspace clustering (TSC), a simplified version
+d
+1: Input: X = {xi }n
+i=1 ⊆ R , number of clusters k and number of neighbors s.
+2: Thresholding: construct G ∈ {0, 1}n×n by connecting xi to the other s data points in X with
+
+the largest absolute inner products |hxi , x0 i|. Complete G so that it is undirected.
+3: Clustering: Let X (1) , · · · , X (`) be the connected components in G. Construct X̄ (`) by sampling q points from X (`) uniformly at random without replacement.
+4: Output: subspaces Cˆ = {Ŝ(`) }k`=1 ; Ŝ(`) is the subspace spanned by q arbitrary points in X̄ (`) .
+
+Theorem 3.4. Fix a (φ, η, ψ)-well separated dataset X with n data points and φ2 < 1/1602,
+ψ > η. Suppose XS ⊆ X is a subset of X with size m, sampled uniformly at random without
+replacement. Let Cˆ = {Ŝ1 , · · · , Ŝ2 } be an (1 + )-approximation of optimal k-means subspace
+2
+kqd log(qd/γ 0 ∆2k (X ))
+clustering computed on XS . If m = Ω(
+) with γ 0 < 1−802φ
+800φ2 − 2(1 + ), then we
+γ 02 ∆4k (X )
+have:
+#
+"
+√ 2√
+3
+600
+2φ
+k
+∗
+ˆC )≤
+≥ ,
+Pr dW (C,
+(8)
+XS
+(1 − 150φ2 )(ψ − η)
+4
+where C ∗ = {S1∗ , · · · , Sk∗ } is the optimal clustering on X ; that is, cost(C ∗ ; X ) = ∆2k (X ).
+Consequently, applying Theorem 3.4 together with the sample-aggregate framework we obtain a
+weak polynomial-time ε-differentially private algorithm for agnostic k-means subspace
+clustering,
+√
+φ2 k
+with additional amount of per-coordinate Gaussian noise upper bounded by O( ε(ψ−η) ). Our bound
+is comparable to the one obtained in [22] for private k-means clustering, except for the (ψ − η) term
+which characterizes the well-separatedness under the subspace clustering scenario.
+3.3
+
+The stochastic setting
+
+We further consider the case when data points are stochastically generated from some underlying
+“true” subspace set C ∗ = {S1∗ , · · · , Sk∗ }. Such settings were extensively investigated in previous
+development of subspace clustering algorithms [24, 25, 14]. Below we give precise definition of the
+considered stochastic subspace clustering model:
+(`)
+
+The stochastic model For every cluster ` associated with subspace S`∗ , a data point xi ∈ Rd
+(`)
+(`)
+(`)
+(`)
+belonging to cluster ` can be written as xi = y i + εi , where y i is sampled uniformly at
+random from {y ∈ S`∗ : kyk2 = 1} and εi ∼ N (0, σ 2 /d · Id ) for some noise parameter σ.
+Under the stochastic setting we consider the solver f to be the Threshold-based Subspace Clustering
+(TSC, [14]) algorithm. A simplified version of TSC is presented in Alg. 2. An alternative idea is to
+apply results in the previous section since the stochastic model implies well-separated dataset when
+noise level σ is small. However, the running time of TSC is O(n2 d), which is much more efficient
+than core-set based methods. TSC is provably correct in that the similarity graph G has no false
+connections and is connected per cluster, as shown in the following lemma:
+Lemma 3.5 (Connectivity of TSC). Fix γ > 1 and assume max 0.04n` ≤ s ≤ min n` /6. If for
+every ` ∈ {1, · · · , k}, the number of data points n` and the noise level σ satisfy
+s
+√
+√
+d2 (S`∗ , S`∗0 )
+n`
+γπ 2q(12π)q−1
+σ(1 + σ) q
+1
+√ ≤
+>
+; √
+− 1 − min0
+;
+`6=`
+log n`
+0.01(q/2 − 1)(q − 1)
+15 log n
+q
+log n d
+s
+"
+ 1 !
+ 1 !#
+ √
+
+γ 2πq log n` q−1
+0.01(q/2 − 1)(q − 1) q−1
+d
+√
+cos 12π
+− cos
+σ̄ <
+,
+24 log n
+n`
+π
+√
+√
+P
+where σ̄ = 2 5σ + σ 2 . Then with probability at least 1 − n2 e− d − n ` e−n` /400 −
+P 1−γ
+P
+/(γ log n` ) − 12/n − ` n` e−c(n` −1) , the connected components in G correspond ex` n`
+actly to the k subspaces.
+Conditions in Lemma 3.5 characterize the interaction between sample complexity n` , noise level
+σ and “signal” level min`6=`0 d(S`∗ , S`∗0 ). Theorem 3.6 is then a simple corollary of Lemma 3.5.
+Complete proofs are deferred to Appendix C.
+5
+
+Theorem 3.6 (Stability of TSC on stochastic data). Assume conditions in Lemma 3.5 hold with
+respect to n0 = n/m for ω(log2 n) ≤ m ≤ o(n). Assume in addition that limn→∞ n` = ∞ for all
+` = 1, · · · , L and the failure probability does not exceed 1/8. Then for every  > 0 we have
+h
+i
+ˆ C ∗ ) >  = 0.
+lim Pr dW (C,
+(9)
+n→∞ XS
+
+Compared to Theorem 3.4 for the agnostic model, Theorem 3.6 shows that one can achieve consistent estimation of underlying subspaces under a stochastic model. It is an interesting question to
+derive finite sample bounds for the differentially private TSC algorithm.
+3.4
+
+Discussion
+
+It is worth noting that the sample-aggregate framework is an (ε, δ)-differentially private mechanism
+for any computational subroutine f . However, the utility claim (i.e., the O(r/ε) bound on each
+coordinate of A(X ) − c) requires the stability of the particular subroutine f , as outlined in Eq.
+(5). It is unfortunately hard to theoretically argue for stability of state-of-the-art subspace clustering
+methods such as sparse subspace cluster (SSC, [11]) due to the “graph connectivity” issue [21]3 .
+Nevertheless, we observe satisfactory performance of SSC based algorithms in simulations (see
+Sec. 5). It remains an open question to derive utility guarantee for (user) differentially private SSC.
+
+4
+
+Private subspace clustering via the exponential mechanism
+
+In Section 3 we analyzed two algorithms with provable privacy and utility guarantees for subspace clustering based on the sample-aggregate framework. However, empirical evidence shows
+that sample-aggregate based private clustering suffers from poor utility in practice [26]. In this section, we propose a practical private subspace clustering algorithm based on the exponential mechanism [18]. In particular, given the dataset X with n data points, we propose to samples parameters
+θ = ({S` }k`=1 , {zi }ni=1 ) where S` ∈ Sqd , zj ∈ {1, · · · , k} from the following distribution:
+!
+n
+ε X 2
+p(θ; X ) ∝ exp − ·
+d (xi , Szi ) ,
+(10)
+2 i=1
+where ε > 0 is the privacy parameter. The following proposition shows that exact sampling from
+the distribution in Eq. (10) results in a provable differentially private algorithm. Its proof is trivial
+and is deferred to Appendix D.1. Note that unlike sample-aggregate based methods, the exponential
+mechanism can privately release clustering assignment z. This does not violate the lower bound in
+[29] because the released clustering assignment z is not guaranteed to be exactly correct.
+Proposition 4.1. The random algorithm A : X 7→ θ that outputs one sample from the distribution
+defined in Eq. (10) is ε-differential private.
+4.1
+
+A Gibbs sampling implementation
+
+It is hard in general to sample parameters from distributions as complicated as in Eq. (10). We
+present a Gibbs sampler that iteratively samples subspaces {Si } and cluster assignments {zj } from
+their conditional distributions.
+Update of zi : When {S` } and z−i are fixed, the conditional distribution of zi is
+p(zi |{S` }k`=1 , z−i ; X ) ∝ exp(−ε/2 · d2 (xi , Szi )).
+(11)
+Since d(xi , Szi ) can be efficiently computed (given an orthonormal basis of Szi ), update of zi can
+be easily done by sampling zj from a categorical distribution.
+Update of S` : Let Xe(`) = {xi ∈ X : zi = `} denote data points that are assigned to cluster ` and
+e (`) ∈ Rd×ñ` as the matrix with columns corresponding to all data points in
+ñ` = |Xe(`) |. Denote X
+(`)
+e
+X . The distribution over S` conditioned on z can then be written as
+d×q
+p(S` = range(U` )|z; X ) ∝ exp(ε/2 · tr(U>
+, U>
+(12)
+` A` U` )); U` ∈ R
+` U` = Iq×q ,
+>
+e (`) X
+e (`) is the unnormalized sample covariance matrix. Distribution of the form in
+where A` = X
+Eq. (12) is a special case of the matrix Bingham distribution, which admits a Gibbs sampler [16]. We
+give implementation details in Appendix D.2 with modifications so that the resulting Gibbs sampler
+is empirically more efficient for a wide range of parameter settings.
+3
+
+Recently [28] established full clustering guarantee for SSC, however, under strong assumptions.
+
+6
+
+4.2 Discussion
+The proposed Gibbs sampler resembles the k-plane algorithm for subspace clustering [3]. It is
+in fact a “probabilistic” version of k-plane since sampling is performed at each iteration rather
+than deterministic updates. Furthermore, the proposed Gibbs sampler could be viewed as posterior
+sampling for the following generative model: first sample U` uniformly at random from Sdq for
+each subspace S` ; afterwards, cluster assignments {zi }ni=1 are sampled such that Pr[zi = j] = 1/k
+wi , where y i is sampled uniformly at random from the qand xi is set as xi = U` y i + PU⊥
+`
+dimensional unit ball and wi ∼ N (0, Id /ε). Connection between the above-mentioned generative
+model and Gibbs sampler is formally justified in Appendix D.3. The generative model is strikingly
+similar to the well-known mixtures
+of probabilistic PCA (MPPCA, [27]) model by setting variance
+p
+parameters σ` in MPPCA to 1/ε. The only difference is that y i are sampled uniformly at random
+from a unit ball 4 and noise wi is constrained to U⊥
+` , the complement space of U` . Note that this is
+closely related to earlier observation that “posterior sampling is private” [20, 6, 31], but different in
+that we constructed a model from a private procedure rather than the other way round.
+As the privacy parameter ε → ∞ (i.e., no privacy guarantee), we arrive immediately at the exact
+k-plane algorithm and the posterior distribution concentrates around the optimal k-means solution
+(C ∗ , z ∗ ). This behavior is similar to what a small-variance asymptotic analysis on MPPCA models
+reveals [30]. On the other hand, the proposed Gibbs sampler is significantly different from previous
+Bayesian probabilisitic PCA formulation [34, 30] in that the subspaces are sampled from a matrix
+Bingham distribution. Finally, we remark that the proposed Gibbs sampler is only asymptotically
+private because Proposition 4.1 requires exact (or nearly exact [31]) sampling from Eq. (10).
+
+5
+
+Numerical results
+
+We provide numerical results of both the sample-aggregate and Gibbs sampling algorithms on synthetic and real-world datasets. We also compare with a baseline method implemented based on the
+k-plane algorithm [3] with perturbed sample covariance matrix via the SuLQ framework [2] (details presented in Appendix E). Three solvers are considered for the sample-aggregate framework:
+threshold-based subspace clustering (TSC, [14]), which has provable utility guarantee with sampleaggregation on stochastic models, along with sparse subspace clustering (SSC, [11]) and low-rank
+representation (LRR, [17]), the two state-of-the-art methods for subspace clustering. For Gibbs
+sampling, we use non-private SSC and LRR solutions as initialization for the Gibbs sampler. All
+methods are implemented using Matlab.
+For synthetic datasets, we first generate k random q-dimensional linear subspaces. Each subspace is
+generated by first sampling a d × q random Gaussian matrix and then recording its column space. n
+data points are then assigned to one of the k subspaces (clusters) uniformly at random. To generate
+a data point xi assigned with subspace S` , we first sample y i ∈ Rq with ky i k2 = 1 uniformly
+at random from the q-dimensional unit sphere. Afterwards, xi is set as xi = U` y i + wi , where
+U` ∈ Rd×q is an orthonormal basis associated with S` and wi ∼ N (0, σ 2 Id ) is a noise vector.
+ˆ X ) and the WasserFigure 2 compares the utility (measured in terms of k-means objective cost(C;
+∗
+ˆ C )) of sample aggregation, Gibbs sampling and SuLQ subspace clustering.
+stein’s distance dW (C,
+As shown in the plots, sample-aggregation algorithms have poor utility unless the privacy parameter
+ε is truly large (which means very little privacy protection). On the other hand, both Gibbs sampling
+and SuLQ subspace clustering give reasonably good performance. Figure 2 also shows that SuLQ
+scales poorly with the ambient dimension d. This is because SuLQ subspace clustering requires
+calibrating noise to a d × d sample covariance matrix, which induces much error when d is large.
+Gibbs sampling seems to be robust to various d settings.
+We also experiment on real-world datasets. The right two plots in Figure 2 report utility on a subset of the extended Yale Face Dataset B [13] for face clustering. 5 random individuals are picked,
+forming a subset of the original dataset with n = 320 data points (images). The dataset is preprocessed by projecting each individual onto a 9D affine subspace via PCA. Such preprocessing step
+was adopted in [32, 29] and was theoretically justified in [1]. Afterwards, ambient dimension of
+the entire dataset is reduced to d = 50 by random Gaussian projection. The plots show that Gibbs
+sampling significantly outperforms the other algorithms.
+4
+
+In MPPCA latent variables y i are sampled from a normal distribution N (0, ρ2 Iq ).
+
+7
+
+0.2
+
+0.7
+
+0.15
+0.1
+0.05
+
+0.5
+0.4
+0.3
+0.2
+0.1
+
+−0.5
+
+0
+
+0.5
+
+1
+
+Log10ε
+
+1.5
+
+2
+
+2.5
+
+0
+−1
+
+3
+
+s.a., SSC
+s.a., TSC
+s.a., LRR
+exp., SSC
+exp. LRR
+SuLQ−10
+SuLQ−50
+−0.5
+
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+
+0
+
+0.5
+
+1
+
+Log10ε
+
+1.5
+
+2
+
+2.5
+
+0
+−1
+
+3
+
+4
+
+9
+
+3.5
+
+8
+
+2
+1.5
+1
+0.5
+0
+−0.5
+−1
+
+s.a., SSC
+s.a., TSC
+s.a., LRR
+exp., SSC
+exp. LRR
+SuLQ−10
+SuLQ−50
+−0.5
+
+0
+
+0.5
+
+3
+2.5
+2
+1.5
+1
+0.5
+
+1
+
+Log10ε
+
+1.5
+
+2
+
+2.5
+
+0
+−1
+
+3
+
+Wasserstein distance
+
+3
+2.5
+
+Wasserstein distance
+
+Wasserstein distance
+
+0
+−1
+
+0.8
+
+K−means cost
+
+0.25
+
+0.9
+
+0.6
+
+K−means cost
+
+K−means cost
+
+0.7
+
+s.a., SSC
+s.a., TSC
+s.a., LRR
+exp., SSC
+exp. LRR
+SuLQ−10
+SuLQ−50
+
+0.3
+
+s.a., SSC
+s.a., TSC
+s.a., LRR
+exp., SSC
+exp. LRR
+SuLQ−10
+SuLQ−50
+−0.5
+
+0
+
+0.5
+
+1
+
+Log10ε
+
+1.5
+
+2
+
+2.5
+
+−0.5
+
+0
+
+0.5
+
+1
+
+1.5
+
+2
+
+2.5
+
+3
+
+1
+
+1.5
+
+2
+
+2.5
+
+3
+
+Log10ε
+
+7
+
+s.a., SSC
+s.a., TSC
+s.a., LRR
+exp., SSC
+exp. LRR
+SuLQ−10
+SuLQ−50
+
+6
+5
+4
+3
+2
+−1
+
+3
+
+s.a., SSC
+s.a., TSC
+s.a., LRR
+exp., SSC
+exp. LRR
+SuLQ−10
+SuLQ−50
+
+−0.5
+
+0
+
+0.5
+
+Log10ε
+
+Figure 2: Utility under fixed privacy budget ε. Top row shows k-means cost and bottom row shows
+ˆ C ∗ ). From left to right: synthetic dataset, n = 5000, d = 5, k =
+the Wasserstein’s distance dW (C,
+3, q = 3, σ = 0.01; n = 1000, d = 10, k = 3, q = 3, σ = 0.1; extended Yale Face Dataset B
+(a subset). n = 320, d = 50, k = 5, q = 9, σ = 0.01. δ is set to 1/(n ln n) for (ε, δ)-privacy
+algorithms. “s.a.” stands for smooth sensitivity and “exp.” stands for exponential mechanism.
+“SuLQ-10” and “SuLQ-50” stand for the SuLQ framework performing 10 and 50 iterations. Gibbs
+sampling is run for 10000 iterations and the mean of the last 100 samples is reported.
+
+Test statistic
+
+0.8
+0.6
+
+K−means cost
+
+ε=0.1
+ε=1
+ε=10
+ε=100
+
+0.4
+
+0.8
+
+4
+
+0.7
+
+3.5
+
+Wasserstein distance
+
+1
+
+0.6
+0.5
+0.4
+0.3
+0.2
+
+0.2
+
+0.1
+0
+0
+
+20
+
+40
+60
+× 100 iterations
+
+80
+
+100
+
+0
+0
+
+3
+2.5
+2
+1.5
+1
+0.5
+
+20
+
+40
+60
+× 100 iterations
+
+80
+
+100
+
+0
+0
+
+20
+
+40
+60
+× 100 iterations
+
+80
+
+100
+
+ˆ C ∗ ) of 8 trials of the Gibbs sampler under different
+Figure 3: Test statistics, k-means cost and dW (C,
+privacy settings. Synthetic dataset setting: n = 1000, d = 10, k = 3, q = 3, σ = 0.1.
+In Figure 3 we investigate the mixing behavior of proposed Gibbs sampler. We plot for multiple
+√
+trials of Gibbs sampling the k-means objective, Wasserstein’s distance and a test statistic 1/ kq ·
+Pk
+PT
+(t)
+(t)
+( `=1 k1/T · t=1 U` k2F )1/2 , where U` is a basis sample of S` at the tth iteration. The test
+statistic has mean zero under distribution in Eq. (10) and a similar statistic was used in [4] as a
+diagnostic of the mixing behavior of another Gibbs sampler. Figure 3 shows that under various
+privacy parameter settings, the proposed Gibbs sampler mixes quite well after 10000 iterations.
+
+6
+
+Conclusion
+
+In this paper we consider subspace clustering subject to formal differential privacy constraints. We
+analyzed two sample-aggregate based algorithms with provable utility guarantees under agnostic and
+stochastic data models. We also propose a Gibbs sampling subspace clustering algorithm based on
+the exponential mechanism that works well in practice. Some interesting future directions include
+utility bounds for state-of-the-art subspace clustering algorithms like SSC or LRR.
+Acknowledgement This research is supported in part by grant NSF CAREER IIS-1252412, NSF
+Award BCS-0941518, and a grant by Singapore National Research Foundation under its International Research Centre @ Singapore Funding Initiative administered by the IDM Programme Office.
+8
+
+References
+[1] R. Basri and D. Jacobs. Lambertian reflectance and linear subspaces. IEEE Transactions on Pattern
+Analysis and Machine Intelligence, 25(2):218–233, 2003.
+[2] A. Blum, C. Dwork, F. McSherry, and K. Nissim. Practical privacy: the SULQ framework. In PODS,
+2015.
+[3] P. S. Bradley and O. L. Mangasarian. k-plane clustering. Journal of Global Optimization, 16(1), 2000.
+[4] K. Chaudhuri, A. Sarwate, and K. Sinha. Near-optimal algorithms for differentially private principal
+components. In NIPS, 2012.
+[5] Y. Chen, A. Jalali, S. Sanghavi, and H. Xu. Clustering partially observed graphs via convex optimization.
+The Journal of Machine Learning Research, 15(1):2213–2238, 2014.
+[6] C. Dimitrakakis, B. Nelson, A. Mitrokotsa, and B. I. Rubinstein. Robust and private bayesian inference.
+In Algorithmic Learning Theory, pages 291–305. Springer, 2014.
+[7] C. Dwork, K. Kenthapadi, F. McSherry, I. Mironov, and M. Naor. Our data, ourselves: Privacy via
+distributed noise generation. In EUROCRYPT, 2006.
+[8] C. Dwork, F. McSherry, K. Nissim, and A. Smith. Calibrating noise to sensitivity in private data analysis.
+In TCC, 2006.
+[9] C. Dwork and A. Roth. The algorithmic foundations of differential privacy. Foundations and Trends in
+Theoretical Computer Science, 9(3–4):211–407, 2014.
+[10] C. Dwork, K. Talwar, A. Thakurta, and L. Zhang. Analyze Gauss: Optimal bounds for privacy-preserving
+principal component analysis. In STOC, 2014.
+[11] E. Elhamifar and R. Vidal. Sparse subspace clustering: Algorithm, theory and applications. IEEE Transactions on Pattern Analysis and Machine Intelligence, 35(11):2765–2781, 2013.
+[12] D. Feldman, M. Schmidt, and C. Sohler. Turning big data into tiny data: Constant-size coresets for
+k-means, pca and projective clustering. In SODA, 2013.
+[13] A. Georghiades, P. Belhumeur, and D. Kriegman. From few to many: Illumination cone models for
+face recognition under variable lighting and pose. IEEE Transactions on Pattern Analysis and Machine
+Intelligence, 23(6):643–660, 2001.
+[14] R. Heckel and H. Bölcskei. Robust subspace clustering via thresholding. arXiv:1307.4891, 2013.
+[15] J. Ho, M.-H. Yang, J. Lim, K.-C. Lee, and D. Kriegman. Clustering appearances of objects under varying
+illumination conditions. In CVPR, 2003.
+[16] P. Hoff. Simulation of the matrix bingham-conmises-fisher distribution, with applications to multivariate
+and relational data. Journal of Computational and Graphical Statistics, 18(2):438–456, 2009.
+[17] G. Liu, Z. Lin, S. Yan, J. Sun, Y. Ma, and Y. Yu. Robust recovery of subspace structures by low-rank
+representation. IEEE Transactions on Pattern Analysis and Machine Intelligence, 35(1):171–184, 2012.
+[18] F. McSherry and K. Talwar. Mechanism design via differential privacy. In FOCS, 2007.
+[19] B. McWilliams and G. Montana. Subspace clustering of high-dimensional data: a predictive approach.
+Data Mining and Knowledge Discovery, 28(3):736–772, 2014.
+[20] D. J. Mir. Differential privacy: an exploration of the privacy-utility landscape. PhD thesis, Rutgers
+University, 2013.
+[21] B. Nasihatkon and R. Hartley. Graph connectivity in sparse subspace clustering. In CVPR, 2011.
+[22] K. Nissim, S. Raskhodnikova, and A. Smith. Smooth sensitivity and sampling in private data analysis. In
+STOC, 2007.
+[23] R. Ostrovksy, Y. Rabani, L. Schulman, and C. Swamy. The effectiveness of Lloyd-type methods for the
+k-means problem. In FOCS, 2006.
+[24] M. Soltanolkotabi, E. J. Candes, et al. A geometric analysis of subspace clustering with outliers. The
+Annals of Statistics, 40(4):2195–2238, 2012.
+[25] M. Soltanolkotabi, E. Elhamifa, and E. Candes. Robust subspace clustering. The Annals of Statistics,
+42(2):669–699, 2014.
+[26] D. Su, J. Cao, N. Li, E. Bertino, and H. Jin. Differentially private k-means clustering. arXiv, 2015.
+[27] M. Tipping and C. Bishop. Mixtures of probabilistic principle component anlyzers. Neural computation,
+11(2):443–482, 1999.
+[28] Y. Wang, Y.-X. Wang, and A. Singh. Clustering consistent sparse subspace clustering. arXiv, 2015.
+[29] Y. Wang, Y.-X. Wang, and A. Singh. A deterministic analysis of noisy sparse subspace clustering for
+dimensionality-reduced data. In ICML, 2015.
+[30] Y. Wang and J. Zhu. DP-space: Bayesian nonparametric subspace clustering with small-variance asymptotic analysis. In ICML, 2015.
+[31] Y.-X. Wang, S. Fienberg, and A. Smola. Privacy for free: Posterior sampling and stochastic gradient
+monte carlo. In ICML, 2015.
+[32] Y.-X. Wang and H. Xu. Noisy sparse subspace clustering. In ICML, pages 89–97, 2013.
+[33] A. Zhang, N. Fawaz, S. Ioannidis, and A. Montanari. Guess who rated this movie: Identifying users
+through subspace clustering. arXiv, 2012.
+[34] Z. Zhang, K. L. Chan, J. Kwok, and D.-Y. Yeung. Bayesian inference on principal component analysis
+using reversible jump markov chain monte carlo. In AAAI, 2004.
+
+9
+
+

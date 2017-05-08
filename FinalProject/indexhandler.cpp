@@ -8,6 +8,10 @@ IndexInterface* IndexHandler::returnIndex() {
     return index;
 }
 
+vector<string> IndexHandler::getTextFiles() {
+    return txtFiles;
+}
+
 void IndexHandler::chooseIndex() {
     int choice;
 
@@ -33,16 +37,22 @@ void IndexHandler::chooseIndex() {
         cout << "That is not a valid index option. Please select AVL or hash.";
         chooseIndex();
     }
+    cout << endl;
 }
 
 void IndexHandler::getIndex() {
     parser.readDirectory();
     writeToIndex(parser.getWords());
     numDocuments = parser.getNumDocs();
+    txtFiles = parser.getOutputFiles();
 }
 
 int IndexHandler::getNumDocuments() {
     return numDocuments;
+}
+
+int IndexHandler::getNumPages() {
+    return parser.getNumWordsIndexed()/400;
 }
 
 bool IndexHandler::doesIndexExist() {
@@ -89,11 +99,10 @@ void IndexHandler::readFromIndex() {
         }
 
         index->addWord(entry);
-        cout << entry;
         f >> word;
     }
 
-    index->printWords();
+    //index->printWords();
 
     f.close();
 }

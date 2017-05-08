@@ -1,0 +1,1128 @@
+A Normative Theory of Adaptive Dimensionality
+Reduction in Neural Networks
+Cengiz Pehlevan
+Simons Center for Data Analysis
+Simons Foundation
+New York, NY 10010
+cpehlevan@simonsfoundation.org
+
+Dmitri B. Chklovskii
+Simons Center for Data Analysis
+Simons Foundation
+New York, NY 10010
+dchklovskii@simonsfoundation.org
+
+Abstract
+To make sense of the world our brains must analyze high-dimensional datasets
+streamed by our sensory organs. Because such analysis begins with dimensionality reduction, modeling early sensory processing requires biologically plausible
+online dimensionality reduction algorithms. Recently, we derived such an algorithm, termed similarity matching, from a Multidimensional Scaling (MDS) objective function. However, in the existing algorithm, the number of output dimensions is set a priori by the number of output neurons and cannot be changed. Because the number of informative dimensions in sensory inputs is variable there is a
+need for adaptive dimensionality reduction. Here, we derive biologically plausible
+dimensionality reduction algorithms which adapt the number of output dimensions
+to the eigenspectrum of the input covariance matrix. We formulate three objective
+functions which, in the offline setting, are optimized by the projections of the input
+dataset onto its principal subspace scaled by the eigenvalues of the output covariance matrix. In turn, the output eigenvalues are computed as i) soft-thresholded,
+ii) hard-thresholded, iii) equalized thresholded eigenvalues of the input covariance matrix. In the online setting, we derive the three corresponding adaptive
+algorithms and map them onto the dynamics of neuronal activity in networks with
+biologically plausible local learning rules. Remarkably, in the last two networks,
+neurons are divided into two classes which we identify with principal neurons and
+interneurons in biological circuits.
+
+1
+
+Introduction
+
+Our brains analyze high-dimensional datasets streamed by our sensory organs with efficiency and
+speed rivaling modern computers. At the early stage of such analysis, the dimensionality of sensory
+inputs is drastically reduced as evidenced by anatomical measurements. Human retina, for example,
+conveys signals from ≈125 million photoreceptors to the rest of the brain via ≈1 million ganglion
+cells [1] suggesting a hundred-fold dimensionality reduction. Therefore, biologically plausible dimensionality reduction algorithms may offer a model of early sensory processing.
+In a seminal work [2] Oja proposed that a single neuron may compute the first principal component
+of activity in upstream neurons. At each time point, Oja’s neuron projects a vector composed of firing rates of upstream neurons onto the vector of synaptic weights by summing up currents generated
+by its synapses. In turn, synaptic weights are adjusted according to a Hebbian rule depending on the
+activities of only the postsynaptic and corresponding presynaptic neurons [2].
+Following Oja’s work, many multineuron circuits were proposed to extract multiple principal components of the input, for a review see [3]. However, most multineuron algorithms did not meet the
+same level of rigor and biological plausibility as the single-neuron algorithm [2, 4] which can be
+derived using a normative approach, from a principled objective function [5], and contains only lo1
+
+cal Hebbian learning rules. Algorithms derived from principled objective functions either did not
+posess local learning rules [6, 4, 7, 8] or had other biologically implausible features [9]. In other
+algorithms, local rules were chosen heuristically rather than derived from a principled objective
+function [10, 11, 12, 9, 3, 13, 14, 15, 16].
+There is a notable exception to the above observation but it has other shortcomings. The twolayer circuit with reciprocal synapses [17, 18, 19] can be derived from the minimization of the
+representation error. However, the activity of principal neurons in the circuit is a dummy variable
+without its own dynamics. Therefore, such principal neurons do not integrate their input in time,
+contradicting existing experimental observations.
+Other normative approaches use an information theoretical objective to compare theoretical limits with experimentally measured information in single neurons or populations [20, 21, 22] or to
+calculate optimal synaptic weights in a postulated neural network [23, 22].
+Recently, a novel approach to the problem has been proposed [24]. Starting with the Multidimensional Scaling (MDS) strain cost function [25, 26] we derived an algorithm which maps onto a
+neuronal circuit with local learning rules. However, [24] had major limitations, which are shared by
+vairous other multineuron algorithms:
+1. The number of output dimensions was determined by the fixed number of output neurons precluding adaptation to the varying number of informative components. A better solution would be
+to let the network decide, depending on the input statistics, how many dimensions to represent
+[14, 15]. The dimensionality of neural activity in such a network would be usually less than the
+maximum set by the number of neurons.
+2. Because output neurons were coupled by anti-Hebbian synapses which are most naturally implemented by inhibitory synapses, if these neurons were to have excitatory outputs, as suggested by
+cortical anatomy, they would violate Dale’s law (i.e. each neuron uses only one fast neurotransmitter). Here, following [10], by anti-Hebbian we mean synaptic weights that get more negative
+with correlated activity of pre- and postsynaptic neurons.
+3. The output had a wide dynamic range which is difficult to implement using biological neurons
+with a limited range. A better solution [27, 13] is to equalize the output variance across neurons.
+In this paper, we advance the normative approach of [24] by proposing three new objective functions which allow us to overcome the above limitations. We optimize these objective functions by
+proceeding as follows. In Section 2, we formulate and solve three optimization problems of the
+form:
+Offline setting : Y∗ = arg min L (X, Y) .
+
+(1)
+
+Y
+
+Here, the input to the network, X = [x1 , . . . , xT ] is an n × T matrix with T centered input data
+samples in Rn as its columns and the output of the network, Y = [y1 , . . . , yT ] is a k×T matrix with
+corresponding outputs in Rk as its columns. We assume T >> k and T >> n. Such optimization
+problems are posed in the so-called offline setting where outputs are computed after seeing all data.
+Whereas the optimization problems in the offline setting admit closed-form solution, such setting
+is ill-suited for modeling neural computation on the mechanistic level and must be replaced by the
+online setting. Indeed, neurons compute an output, yT , for each data sample presentation, xT ,
+before the next data sample is presented and past outputs cannot be altered. In such online setting,
+optimization is performed at every time step, T , on the objective which is a function of all inputs
+and outputs up to time T . Moreover, an online algorithm (also known as streaming) is not capable
+of storing all previous inputs and outputs and must rely on a smaller number of state variables.
+In Section 3, we formulate three corresponding online optimization problems with respect to yT ,
+while keeping all the previous outputs fixed:
+Online setting : yT ← arg min L (X, Y) .
+
+(2)
+
+yT
+
+Then we derive algorithms solving these problems online and map their steps onto the dynamics of
+neuronal activity and local learning rules for synaptic weights in three neural networks.
+We show that the solutions of the optimization problems and the corresponding online algorithms
+remove the limitations outlined above by performing the following computational tasks:
+2
+
+C
+output eig.
+
+α
+
+B
+output eig.
+
+output eig.
+
+A
+
+α
+α
+
+input eig.
+E
+
+D
+yk
+
+y1
+x1
+
+z1
+
+x2
+
+Principal
+
+x1
+
+...
+
+z1
+
+zl
+
+y1
+xn
+
+x1
+
+yk
+x2
+
+...
+
+xn
+
+anti-Hebbian synapses
+
+Hebbian
+
+Inter-neurons
+
+input eig.
+
+F
+
+zl
+yk
+
+x2
+
+α
+
+input eig.
+
+y1
+
+. . . xn
+
+β
+
+Figure 1: Input-output
+functions of the three
+offline solutions and
+neural network implementations of the
+corresponding online
+algorithms. A-C. Inputoutput functions of
+covariance eigenvalues.
+A. Soft-thresholding.
+B. Hard-thresholding.
+C. Equalization after
+thresholding.
+D-F.
+Corresponding network
+architectures.
+
+1. Soft-thresholding the eigenvalues of the input covariance matrix, Figure 1A: eigenvalues below
+the threshold are set to zero and the rest are shrunk by the threshold magnitude. Thus, the number of output dimensions is chosen adaptively. This algorithm maps onto a single-layer neural
+network with the same architecture as in [24], Figure 1D, but with modified learning rules.
+2. Hard-thresholding of input eigenvalues, Figure 1B: eigenvalues below the threshold vanish as
+before, but eigenvalues above the threshold remain unchanged. The steps of such algorithm map
+onto the dynamics of neuronal activity in a network which, in addition to principal neurons, has a
+layer of interneurons reciprocally connected with principal neurons and each other, Figure 1E.
+3. Equalization of non-zero eigenvalues, Figure 1C. The corresponding network’s architecture, Figure 1F, lacks reciprocal connections among interneurons. As before, the number of abovethreshold eigenvalues is chosen adaptively and cannot exceed the number of principal neurons. If
+the two are equal, this network whitens the output.
+In Section 4, we demonstrate that the online algorithms perform well on a synthetic dataset and, in
+Discussion, we compare our neural circuits with biological observations.
+
+2
+
+Dimensionality reduction in the offline setting
+
+In this Section, we introduce and solve, in the offline setting, three novel optimization problems
+whose solutions reduce the dimensionality of the input. We state our results in three Theorems
+which are proved in the Supplementary Material.
+2.1
+
+Soft-thresholding of covariance eigenvalues
+
+We consider the following optimization problem in the offline setting:
+
+2
+min X> X − Y> Y − αT IT F ,
+Y
+
+(3)
+
+where α ≥ 0 and IT is the T ×T identity matrix. To gain intuition behind this choice of the objective
+function let us expand the squared norm and keep only the Y-dependent terms:
+
+2
+
+2
+
+arg min X> X − Y> Y − αT IT F = arg min X> X − Y> YF + 2αT Tr Y> Y , (4)
+Y
+
+Y
+
+where the first term matches the similarity of input and output[24] and the second term is a nuclear
+norm of Y> Y known to be a convex relaxation of the matrix rank used for low-rank matrix modeling
+[28]. Thus, objective function (3) enforces low-rank similarity matching.
+We show that the optimal output Y is a projection of the input data, X, onto its principal subspace.
+The subspace dimensionality is set by m, the number of eigenvalues of the data covariance matrix,
+PT
+C = T1 XX> = T1 t=1 xt x>
+t , that are greater than or equal to the parameter α.
+3
+
+>
+
+Theorem 1. Suppose
+an eigen-decomposition of X> X = VX ΛX VX , where ΛX =
+
+X
+X
+X
+diag λX
+,
+.
+.
+.
+,
+λ
+with
+λX
+1
+1 ≥ . . . ≥ λT . Note that Λ has at most n nonzero eigenvalues coinT
+ciding with those of T C. Then,
+>
+
+Y∗ = Uk STk (ΛX , αT )1/2 VkX ,
+(5)
+
+
+X
+X
+X
+are optima of (3), where STk (Λ , αT ) = diag ST λ1 , αT , . . . , ST λk , αT , ST is the softX
+X
+thresholding function, ST(a, b) = max(a
+k consists of the columns of V corresponding
+ X− b, 0), V
+X
+X
+to the top k eigenvalues, i.e. Vk = v1 , . . . , vk and Uk is any k × k orthogonal matrix, i.e.
+Uk ∈ O(k). The form (5) uniquely defines all optima of (3), except when k < m, λX
+k > αT and
+X
+λX
+k = λk+1 .
+2.2
+
+Hard-thresholding of covariance eigenvalues
+
+Consider the following minimax problem in the offline setting:
+2
+2 
+
+min max X> X − Y> YF − Y> Y − Z> Z − αT IT F ,
+Y
+
+(6)
+
+Z
+
+where α ≥ 0 and we introduced an internal variable Z, which is an l × T matrix Z = [z1 , . . . , zT ]
+with zt ∈ Rl . The intuition behind this objective function is again based on similarity matching but
+rank regularization is applied indirectly via the internal variable, Z.
+>
+
+Theorem 2. Suppose
+an eigen-decomposition of X> X = VX ΛX VX , where ΛX
+
+X
+X
+X
+diag λ1 , . . . , λT with λX
+1 ≥ . . . ≥ λT ≥ 0. Assume l ≥ min(k, m). Then,
+>
+
+=
+
+>
+
+Y∗ = Uk HTk (ΛX , αT )1/2 VkX ,
+
+Z∗ = Ul STl,min(k,m) (ΛX , αT )1/2 VlX ,
+(7)
+
+
+X
+X
+X
+are optima of (6), where HTk (Λ , αT ) = diag HT λ1 , αT , . . . , HT λk , αT , HT(a, b) =
+aΘ(a − b) with Θ() being the step function: Θ(a − b) = 1if a ≥ b and Θ(a
+ − b) = 0 if a <
+
+X
+X
+X
+b, STl,min(k,m) (Λ , αT ) = diag ST λ1 , αT , . . . , ST λmin(k,m) , αT , 0, . . . , 0 ,VpX =
+| {z }
+l−min(k,m)
+ X
+
+v1 , . . . , vpX and Up ∈ O(p). The form (7) uniquely defines all optima (6) except when either
+X
+1) α is an eigenvalue of C or 2) k < m and λX
+k = λk+1 .
+2.3
+
+Equalizing thresholded covariance eigenvalues
+
+Consider the following minimax problem in the offline setting:
+
+min max Tr −X> XY> Y + Y> YZ> Z + αT Y> Y − βT Z> Z ,
+Y
+
+Z
+
+(8)
+
+where α ≥ 0 and β > 0. This objective function follows from (6) after dropping the quartic Z term.
+>
+
+Theorem 3. Suppose
+of X> X is X> X = VX ΛX VX , where ΛX =
+ an eigen-decomposition
+X
+X
+X
+diag λX
+,
+.
+.
+.
+,
+λ
+with
+λ
+≥
+.
+.
+.
+≥
+λ
+≥
+0.
+Assume
+l ≥ min(k, m). Then,
+1
+1
+T
+T
+p
+>
+>
+Y∗ = Uk βT Θk (ΛX , αT )1/2 VkX ,
+Z∗ = Ul Σl×T OΛY ∗ VX ,
+(9)
+
+
+X
+X
+X
+are optima of (8), where Θk (Λ , αT ) = diag Θ λ1 − αT , . . . , Θ λk − αT , Σl×T is an
+l × T rectangular diagonal matrix with top min(k, m) diagonals are set to arbitrary nonnegative
+constants and the rest are zero, OΛY ∗ is a block-diagonal orthogonal matrix that has two blocks:
+the
+ min(k, m) dimensional and the bottom block is T − min(k, m) dimensional, Vp =
+ Xtop blockX is
+v1 , . . . , vp , and Up ∈ O(p). The form (9) uniquely defines all optima of (8) except when either
+X
+1) α is an eigenvalue of C or 2) k < m and λX
+k = λk+1 .
+Remark 1. If k = m, then Y is full-rank and
+equalizing variance across all channels.
+
+3
+
+1
+T
+
+YY> = βIk , implying that the output is whitened,
+
+Online dimensionality reduction using Hebbian/anti-Hebbian neural nets
+
+In this Section, we formulate online versions of the dimensionality reduction optimization problems
+presented in the previous Section, derive corresponding online algorithms and map them onto the dynamics of neural networks with biologically plausible local learning rules. The order of subsections
+corresponds to that in the previous Section.
+4
+
+3.1
+
+Online soft-thresholding of eigenvalues
+
+Consider the following optimization problem in the online setting:
+
+2
+yT ← arg min X> X − Y> Y − αT IT F .
+
+(10)
+
+yT
+
+By keeping only the terms that depend on yT we get the following objective for (2):
+!
+!
+T
+−1
+T
+−1
+X
+X
+2
+2
+4
+>
+>
+>
+>
+L = −4xT
+xt yt yT + 2yT
+yt yt + αT Im yT − 2kxT k kyT k + kyT k . (11)
+t=1
+
+t=1
+
+In the large-T limit, the last two terms can be dropped since the first two terms grow linearly with T
+and dominate. The remaining cost is a positive definite quadratic form in yT and the optimization
+problem is convex. At its minimum, the following equality holds:
+!
+!
+T
+−1
+T
+−1
+X
+X
+>
+>
+yt yt + αT Im yT =
+yt xt xT .
+(12)
+t=1
+
+t=1
+
+While a closed-form analytical solution via matrix inversion exists for yT , we are interested in
+biologically plausible algorithms. Instead, we use a weighted Jacobi iteration where yT is updated
+according to:
+
+yT ← (1 − η) yT + η WTY X xT − WTY Y yT ,
+(13)
+
+where η is the weight parameter, and WTY X and WTY Y are normalized input-output and outputoutput covariances,
+TP
+−1
+TP
+−1
+yt,i xt,k
+yt,i yt,j
+t=1
+YY
+YY
+YX
+WT,ik
+= t=1 T −1
+,
+WT,i,j6
+=
+,
+WT,ii
+= 0.
+(14)
+=i
+TP
+−1
+P 2
+2
+αT +
+αT +
+yt,i
+yt,i
+t=1
+
+t=1
+
+Iteration (13) can be implemented by the dynamics of neuronal activity in a single-layer network,
+Figure 1D. Then, WTY X and WTY Y represent the weights of feedforward (xt → yt ) and lateral
+(yt → yt ) synaptic connections, respectively. Remarkably, synaptic weights appear in the online
+solution despite their absence in the optimization problem formulation (3). Previously, nonnormalized covariances have been used as state variables in an online dictionary learning algorithm [29].
+To formulate a fully online algorithm, we rewrite (14) in a recursive form. This requires introducing
+Y
+Y
+=
+representing cumulative activity of a neuron i up to time T − 1, DT,i
+a scalar variable DT,i
+TP
+−1
+2
+αT +
+yt,i
+. Then, at each data sample presentation, T , after the output yT converges to a steady
+t=1
+
+state, the following updates are performed:
+Y
+2
+DTY +1,i ← DT,i
++ α + yT,i
+,
+
+ Y X
+X
+YX
+2
+WTY+1,ij
+← WT,ij
++ yT,i xT,j − α + yT,i
+WT,ij /DTY +1,i ,
+
+
+Y
+YY
+2
+YY
+Y
+WTY+1,i,j6
+=i ← WT,ij + yT,i yT,j − α + yT,i WT,ij /DT +1,i .
+
+(15)
+
+Hence, we arrive at a neural network algorithm that solves the optimization problem (10) for streaming data by alternating between two phases. After a data sample is presented at time T , in the first
+phase of the algorithm (13), neuron activities are updated until convergence to a fixed point. In the
+second phase of the algorithm, synaptic weights are updated for feedforward connections according
+to a local Hebbian rule (15) and for lateral connections according to a local anti-Hebbian rule (due
+to the (−) sign in equation (13)). Interestingly, in the α = 0 limit, these updates have the same
+form as the single-neuron Oja rule [24, 2], except that the learning rate is not a free parameter but is
+determined by the cumulative neuronal activity 1/DTY +1,i [4, 5].
+3.2
+
+Online hard-thresholding of eigenvalues
+
+Consider the following minimax problem in the online setting, where we assume α > 0:
+
+2 
+2
+{yT , zT } ← arg min arg max X> X − Y> Y − Y> Y − Z> Z − αT IT  .
+yT
+
+F
+
+zT
+
+F
+
+(16)
+
+By keeping only those terms that depend on yT or zT and considering the large-T limit, we get the
+5
+
+following objective:
+2
+
+L = 2αT kyT k − 4x>
+T
+
+T
+−1
+X
+
+!
+xt yt>
+
+t=1
+
+yT − 2z>
+T
+
+T
+−1
+X
+
+!
+zt z>
+t + αT Ik
+
+zT + 4yT>
+
+t=1
+
+T
+−1
+X
+
+!
+yt z>
+t
+
+zT .
+
+t=1
+
+(17)
+Note that this objective is strongly convex in yT and strongly concave in zT . The solution of this
+minimax problem is the saddle-point of the objective function, which is found by setting the gradient
+of the objective with respect to {yT , zT } to zero [30]:
+!
+!
+!
+!
+T
+−1
+T
+−1
+T
+−1
+T
+−1
+X
+X
+X
+X
+>
+>
+>
+>
+yt xt xT −
+y t zt zT ,
+zt zt + αT Ik zT =
+zt y t y T .
+αT yT =
+t=1
+
+t=1
+
+t=1
+
+t=1
+
+(18)
+To obtain a neurally plausible algorithm, we solve these equations by a weighted Jacobi iteration:
+
+
+yT ← (1 − η) yT + η WTY X xT − WTY Z zT , zT ← (1 − η) zT + η WTZY yT − WTZZ zT .
+(19)
+Here, similarly to (14), WT are normalized covariances that can be updated recursively:
+Y
+DTY +1,i ← DT,i
++ α,
+
+Z
+2
+DTZ+1,i ← DT,i
++ α + zT,i
+
+X
+YX
+YX
+WTY+1,ij
+← WT,ij
++ yT,i xT,j − αWT,ij
+/DTY +1,i
+
+Z
+YZ
+YZ
+WTY+1,ij
+← WT,ij
++ yT,i zT,j − αWT,ij
+/DTY +1,i
+ ZY 
+ZY
+2
+Z
+WTZY
++1,i,j ← WT,ij + zT,i yT,j − α + zT,i WT,ij /DT +1,i
+
+
+ZZ
+2
+ZZ
+Z
+ZZ
+WTZZ
+WT,ii
+= 0.
+(20)
++1,i,j6=i ← WT,ij + zT,i zT,j − α + zT,i WT,ij /DT +1,i ,
+Equations (19) and (20) define an online algorithm that can be naturally implemented by a neural
+network with two populations of neurons: principal and interneurons, Figure 1E. Again, after each
+data sample presentation, T , the algorithm proceeds in two phases. First, (19) is iterated until
+convergence by the dynamics of neuronal activities. Second, synaptic weights are updated according
+to local, anti-Hebbian (for synapses from interneurons) and Hebbian (for all other synapses) rules.
+
+3.3
+
+Online thresholding and equalization of eigenvalues
+
+Consider the following minimax problem in the online setting, where we assume α > 0 and β > 0:
+
+
+{yT , zT } ← arg min arg max Tr −X> XY> Y + Y> YZ> Z + αTY> Y − βTZ> Z . (21)
+yT
+
+zT
+
+By keeping only those terms that depend on yT or zT and considering the large-T limit, we get the
+following objective:
+!
+!
+T
+−1
+T
+−1
+X
+X
+2
+2
+>
+>
+>
+>
+L = αT kyT k − 2xT
+xt yt yT − βT kzT k + 2yT
+y t zt zT .
+(22)
+t=1
+
+t=1
+
+This objective is strongly convex in yT and strongly concave in zT and its saddle point is given by:
+!
+!
+!
+T
+−1
+T
+−1
+T
+−1
+X
+X
+X
+αT yT =
+yt x>
+xT −
+yt z>
+zT ,
+βT zT =
+zt yt> yT .
+(23)
+t
+t
+t=1
+
+t=1
+
+t=1
+
+To obtain a neurally plausible algorithm, we solve these equations by a weighted Jacobi iteration:
+
+yT ← (1 − η) yT + η WTY X xT − WTY Z zT ,
+zT ← (1 − η) zT + ηWTZY yT ,
+(24)
+As before, WT are normalized covariances which can be updated recursively:
+Y
+DTY +1,i ← DT,i
++ α,
+
+Z
+DTZ+1,i ← DT,i
++β
+
+YX
+YX
+YX
+WT +1,ij ← WT,ij + yT,i xT,j − αWT,ij /DTY +1,i
+
+Z
+YZ
+YZ
+WTY+1,ij
+← WT,ij
++ yT,i zT,j − αWT,ij
+/DTY +1,i
+
+ZY
+ZY
+Z
+WTZY
+(25)
++1,i,j ← WT,ij + zT,i yT,j − βWT,ij /DT +1,i .
+Equations (24) and (25) define an online algorithm that can be naturally implemented by a neural
+network with principal neurons and interneurons. As beofre, after each data sample presentation at
+
+6
+
+10
+
+10
+1
+10
+
+102 103 104
+
+T
+
+∝ T -1.56
+
+-1
+
+10-2
+10
+10-4
+
+-3
+
+1
+
+10
+
+102 103 104
+
+T
+
+C
+∝T
+∝ T -1.80
+10
+
+102 103 104
+
+T
+
+10
+
+∝ T -1.53
+
+1
+10-1
+
+∝T
+
+10-2
+
+-1.33
+
+-1.43
+
+10-3
+1
+
+10
+
+Eigenvalue Error
+
+∝T
+
+-1.50
+
+103
+102
+10
+1
+10-1
+10-2
+10-3
+1
+
+102 103 104
+
+T
+
+Subspace Error
+
+B
+Eigenvalue Error
+
+103
+102
+10
+1
+10-1
+10-2
+10-3
+1
+
+Subspace Error
+
+Subspace Error
+
+Eigenvalue Error
+
+A
+
+103
+102
+10
+1
+10-1
+10-2
+
+∝ T -1.48
+
+1
+
+10
+
+102 103 104
+
+T
+
+10
+1
+10-1
+10-2
+10-3
+1
+
+∝ T -1.41
+∝ T -1.38
+10
+
+102 103 104
+
+T
+
+Figure 2: Performance of the three neural networks: soft-thresholding (A), hard-thresholding (B),
+equalization after thresholding (C). Top: eigenvalue error, bottom: subspace error as a function
+of data presentations. Solid lines - means and shades - stds over 10 runs. Red - principal, blue inter-neurons. Dashed lines - best-fit power laws. For metric definitions see text.
+time T , the algorithm, first, iterates (24) by the dynamics of neuronal activities until convergence
+and, second, updates synaptic weights according to local anti-Hebbian (for synapses from interneurons) and Hebbian (25) (for all other synapses) rules.
+While an algorithm similar to (24), (25), but with predetermined learning rates, was previously given
+in [15, 14], it has not been derived from an optimization problem. Plumbley’s convergence analysis
+of his algorithm [14] suggests that at the fixed point of synaptic updates, the interneuron activity is
+also a projection onto the principal subspace. This result is a special case of our offline solution, (9),
+supported by the online numerical simulations (next Section).
+
+4
+
+Numerical simulations
+
+Here, we evaluate the performance of the three online algorithms on a synthetic dataset, which is
+generated by an n = 64 dimensional colored Gaussian process with a specified covariance matrix.
+In this covariance matrix, the eigenvalues, λ1..4 = {5, 4, 3, 2} and the remaining λ5..60 are chosen
+uniformly from the interval [0, 0.5]. Correlations are introduced in the covariance matrix by generating random orthonormal eigenvectors. For all three algorithms, we choose α = 1 and, for the
+equalizing algorithm, we choose β = 1. In all simulated networks, the number of principal neurons,
+k = 20, and, for the hard-thresholding and the equalizing algorithms, the number of interneurons,
+l = 5. Synaptic weight matrices were initialized randomly, and synaptic update learning rates,
+Y
+Z
+1/D0,i
+and 1/D0,i
+were initialized to 0.1. Network dynamics is run with a weight η = 0.1 until the
+relative change in yT and zT in one cycle is < 10−5 .
+To quantify the performance of these algorithms, we use two different metrics. The first metric,
+eigenvalue error, measures the deviation of output covariance eigenvalues from their optimal offline
+values given in Theorems 1, 2 and 3. The eigenvalue error at time T is calculated by summing
+squared differences between the eigenvalues of T1 YY> or T1 ZZ> , and their optimal offline values
+at time T . The second metric, subspace error, quantifies the deviation of the learned subspace from
+the true principal subspace. To form such metric, at each T , we calculate the linear transformation that maps inputs, xT , to outputs, yT = FYT X xT and zT = FZX
+T xT , at the fixed points of
+the neural dynamics stages ((13), (19), (24)) of the three algorithms. Exact expressions for these
+matrices for all algorithms are given in the Supplementary Material. Then, at each T , the deviation
+
+
+X
+X > 2
+is Fm,T F>
+m,T − Um,T Um,T F , where Fm,T is an n × m matrix whose columns are the top m
+right singular vectors of FT , Fm,T F>
+m,T is the projection matrix to the subspace spanned by these
+X
+singular vectors, Um,T is an n×m matrix whose columns are the principal eigenvectors of the input
+X>
+covariance matrix C at time T , UX
+m,T Um,T is the projection matrix to the principal subspace.
+7
+
+Further numerical simulations comparing the performance of the soft-thresholding algorithm with
+α = 0 with other neural principal subspace algorithms can be found in [24].
+
+5
+
+Discussion and conclusions
+
+We developed a normative approach for dimensionality reduction by formulating three novel optimization problems, the solutions of which project the input onto its principal subspace, and rescale
+the data by i) soft-thresholding, ii) hard-thresholding, iii) equalization after thresholding of the input
+eigenvalues. Remarkably we found that these optimization problems can be solved online using
+biologically plausible neural circuits. The dimensionality of neural activity is the number of either
+input covariance eigenvalues above the threshold, m, (if m < k) or output neurons, k (if k ≤ m).
+The former case is ubiquitous in the analysis of experimental recordings, for a review see [31].
+Interestingly, the division of neurons into two populations, principal and interneurons, in the last
+two models has natural parallels in biological neural networks. In biology, principal neurons and
+interneurons usually are excitatory and inhibitory respectively. However, we cannot make such an
+assignment in our theory, because the signs of neural activities, xT and yT , and, hence, the signs of
+synaptic weights, W, are unconstrained. Previously, interneurons were included into neural circuits
+[32], [33] outside of the normative approach.
+Similarity matching in the offline setting has been used to analyze experimentally recorded neuron activity lending support to our proposal. Semantically similar stimuli result in similar neural
+activity patterns in human (fMRI) and monkey (electrophysiology) IT cortices [34, 35]. In addition, [36] computed similarities among visual stimuli by matching them with the similarity among
+corresponding retinal activity patterns (using an information theoretic metric).
+We see several possible extensions to the algorithms presented here: 1) Our online objective functions may be optimized by alternative algorithms, such as gradient descent, which map onto different
+circuit architectures and learning rules. Interestingly, gradient descent-ascent on convex-concave objectives has been previously related to the dynamics of principal and interneurons [37]. 2) Inputs
+coming from a non-stationary distribution (with time-varying covariance matrix) can be processed
+by algorithms derived from the objective functions where contributions from older data points are
+“forgotten”, or “discounted”. Such discounting results in higher learning rates in the corresponding
+online algorithms, even at large T , giving them the ability to respond to variations in data statistics
+[24, 4]. Hence, the output dimensionality can track the number of input dimensions whose eigenvalues exceed the threshold. 3) In general, the output of our algorithms is not decorrelated. Such
+decorrelation can be achieved by including a correlation-penalizing term in our objective functions
+[38]. 4) Choosing the threshold parameter α requires an a priori knowledge of input statistics. A
+better solution, to be presented elsewhere, would be to let the network adjust such threshold adaptively, e.g. by filtering out all the eigenmodes with power below the mean eigenmode power. 5)
+Here, we focused on dimensionality reduction using only spatial, as opposed to the spatio-temporal,
+correlation structure.
+We thank L. Greengard, A. Sengupta, A. Grinshpan, S. Wright, A. Barnett and E. Pnevmatikakis.
+References
+[1] David H Hubel. Eye, brain, and vision. Scientific American Library/Scientific American Books, 1995.
+[2] E Oja. Simplified neuron model as a principal component analyzer. J Math Biol, 15(3):267–273, 1982.
+[3] KI Diamantaras and SY Kung. Principal component neural networks: theory and applications. John
+Wiley & Sons, Inc., 1996.
+[4] B Yang. Projection approximation subspace tracking. IEEE Trans. Signal Process., 43(1):95–107, 1995.
+[5] T Hu, ZJ Towfic, C Pehlevan, A Genkin, and DB Chklovskii. A neuron as a signal processing device. In
+Asilomar Conference on Signals, Systems and Computers, pages 362–366. IEEE, 2013.
+[6] E Oja. Principal components, minor components, and linear neural networks. Neural Networks, 5(6):927–
+935, 1992.
+[7] R Arora, A Cotter, K Livescu, and N Srebro. Stochastic optimization for pca and pls. In Allerton Conf.
+on Communication, Control, and Computing, pages 861–868. IEEE, 2012.
+[8] J Goes, T Zhang, R Arora, and G Lerman. Robust stochastic principal component analysis. In Proc. 17th
+Int. Conf. on Artificial Intelligence and Statistics, pages 266–274, 2014.
+
+8
+
+[9] Todd K Leen. Dynamics of learning in recurrent feature-discovery networks. NIPS, 3, 1990.
+[10] P Földiak. Adaptive network for optimal linear feature extraction. In Int. Joint Conf. on Neural Networks,
+pages 401–405. IEEE, 1989.
+[11] TD Sanger. Optimal unsupervised learning in a single-layer linear feedforward neural network. Neural
+networks, 2(6):459–473, 1989.
+[12] J Rubner and P Tavan. A self-organizing network for principal-component analysis. EPL, 10:693, 1989.
+[13] MD Plumbley. A hebbian/anti-hebbian network which optimizes information capacity by orthonormalizing the principal subspace. In Proc. 3rd Int. Conf. on Artificial Neural Networks, pages 86–90, 1993.
+[14] MD Plumbley. A subspace network that determines its own output dimension. Tech. Rep., 1994.
+[15] MD Plumbley. Information processing in negative feedback neural networks. Network-Comp Neural,
+7(2):301–305, 1996.
+[16] P Vertechi, W Brendel, and CK Machens. Unsupervised learning of an efficient short-term memory
+network. In NIPS, pages 3653–3661, 2014.
+[17] BA Olshausen and DJ Field. Sparse coding with an overcomplete basis set: A strategy employed by v1?
+Vision Res, 37(23):3311–3325, 1997.
+[18] AA Koulakov and D Rinberg. Sparse incomplete representations: a potential role of olfactory granule
+cells. Neuron, 72(1):124–136, 2011.
+[19] S Druckmann, T Hu, and DB Chklovskii. A mechanistic model of early sensory processing based on
+subtracting sparse representations. In NIPS, pages 1979–1987, 2012.
+[20] AL Fairhall, GD Lewen, W Bialek, and RRR van Steveninck. Efficiency and ambiguity in an adaptive
+neural code. Nature, 412(6849):787–792, 2001.
+[21] SE Palmer, O Marre, MJ Berry, and W Bialek. Predictive information in a sensory population. PNAS,
+112(22):6908–6913, 2015.
+[22] E Doi, JL Gauthier, GD Field, J Shlens, et al. Efficient coding of spatial information in the primate retina.
+J Neurosci, 32(46):16256–16264, 2012.
+[23] R Linsker. Self-organization in a perceptual network. Computer, 21(3):105–117, 1988.
+[24] C Pehlevan, T Hu, and DB Chklovskii. A hebbian/anti-hebbian neural network for linear subspace learning: A derivation from multidimensional scaling of streaming data. Neural Comput, 27:1461–1495, 2015.
+[25] G Young and AS Householder. Discussion of a set of points in terms of their mutual distances. Psychometrika, 3(1):19–22, 1938.
+[26] WS Torgerson. Multidimensional scaling: I. theory and method. Psychometrika, 17(4):401–419, 1952.
+[27] HG Barrow and JML Budd. Automatic gain control by a basic neural circuit. Artificial Neural Networks,
+2:433–436, 1992.
+[28] EJ Candès and B Recht. Exact matrix completion via convex optimization. Found Comput Math,
+9(6):717–772, 2009.
+[29] J Mairal, F Bach, J Ponce, and G Sapiro. Online learning for matrix factorization and sparse coding.
+JMLR, 11:19–60, 2010.
+[30] S. Boyd and L. Vandenberghe. Convex optimization. Cambridge university press, 2004.
+[31] P Gao and S Ganguli. On simplicity and complexity in the brave new world of large-scale neuroscience.
+Curr Opin Neurobiol, 32:148–155, 2015.
+[32] M Zhu and CJ Rozell. Modeling inhibitory interneurons in efficient sensory coding models. PLoS Comput
+Biol, 11(7):e1004353, 2015.
+[33] PD King, J Zylberberg, and MR DeWeese. Inhibitory interneurons decorrelate excitatory cells to drive
+sparse code formation in a spiking model of v1. J Neurosci, 33(13):5475–5485, 2013.
+[34] N Kriegeskorte, M Mur, DA Ruff, R Kiani, et al. Matching categorical object representations in inferior
+temporal cortex of man and monkey. Neuron, 60(6):1126–1141, 2008.
+[35] R Kiani, H Esteky, K Mirpour, and K Tanaka. Object category structure in response patterns of neuronal
+population in monkey inferior temporal cortex. J Neurophysiol, 97(6):4296–4309, 2007.
+[36] G Tkačik, E Granot-Atedgi, R Segev, and E Schneidman. Retinal metric: a stimulus distance measure
+derived from population neural responses. PRL, 110(5):058104, 2013.
+[37] HS Seung, TJ Richardson, JC Lagarias, and JJ Hopfield.
+excitatory-inhibitory networks. NIPS, 10:329–335, 1998.
+
+Minimax and hamiltonian dynamics of
+
+[38] C Pehlevan and DB Chklovskii. Optimization theory of hebbian/anti-hebbian networks for pca and
+whitening. In Allerton Conf. on Communication, Control, and Computing, 2015.
+
+9
+
+

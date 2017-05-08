@@ -1,0 +1,979 @@
+Probabilistic Line Searches
+for Stochastic Optimization
+
+Maren Mahsereci and Philipp Hennig
+Max Planck Institute for Intelligent Systems
+Spemannstraße 38, 72076 Tübingen, Germany
+[mmahsereci|phennig]@tue.mpg.de
+
+Abstract
+In deterministic optimization, line searches are a standard tool ensuring stability
+and efficiency. Where only stochastic gradients are available, no direct equivalent
+has so far been formulated, because uncertain gradients do not allow for a strict
+sequence of decisions collapsing the search space. We construct a probabilistic line
+search by combining the structure of existing deterministic methods with notions
+from Bayesian optimization. Our method retains a Gaussian process surrogate of
+the univariate optimization objective, and uses a probabilistic belief over the Wolfe
+conditions to monitor the descent. The algorithm has very low computational cost,
+and no user-controlled parameters. Experiments show that it effectively removes
+the need to define a learning rate for stochastic gradient descent.
+
+1
+
+Introduction
+
+Stochastic gradient descent (SGD) [1] is currently the standard in machine learning for the optimization
+of highly multivariate functions if their gradient is corrupted by noise. This includes the online or
+batch training of neural networks, logistic regression [2, 3] and variational models [e.g. 4, 5, 6]. In all
+these cases, noisy gradients arise because an exchangeable loss-function L(x) of the optimization
+parameters x ∈ RD , across a large dataset {di }i=1 ...,M , is evaluated only on a subset {dj }j=1,...,m :
+M
+m
+1 X
+1 X
+L(x) :=
+`(x, di ) ≈
+`(x, dj ) =: L̂(x)
+M i=1
+m j=1
+
+m  M.
+
+(1)
+
+If the indices j are i.i.d. draws from [1, M ], by the Central Limit Theorem, the error L̂(x) − L(x)
+is unbiased and approximately normal distributed. Despite its popularity and its low cost per step,
+SGD has well-known deficiencies that can make it inefficient, or at least tedious to use in practice.
+Two main issues are that, first, the gradient itself, even without noise, is not the optimal search
+direction; and second, SGD requires a step size (learning rate) that has drastic effect on the algorithm’s
+efficiency, is often difficult to choose well, and virtually never optimal for each individual descent
+step. The former issue, adapting the search direction, has been addressed by many authors [see 7, for
+an overview]. Existing approaches range from lightweight ‘diagonal preconditioning’ approaches
+like ADAGRAD [8] and ‘stochastic meta-descent’[9], to empirical estimates for the natural gradient
+[10] or the Newton direction [11], to problem-specific algorithms [12], and more elaborate estimates
+of the Newton direction [13]. Most of these algorithms also include an auxiliary adaptive effect on
+the learning rate. And Schaul et al. [14] recently provided an estimation method to explicitly adapt
+the learning rate from one gradient descent step to another. None of these algorithms change the
+size of the current descent step. Accumulating statistics across steps in this fashion requires some
+conservatism: If the step size is initially too large, or grows too fast, SGD can become unstable and
+‘explode’, because individual steps are not checked for robustness at the time they are taken.
+1
+
+function value f (t)
+
+6.5
+À
+Á
+
+6
+
+Ã
+
+Â
+Ï
+Ä
+
+5.5
+0
+
+0.5
+1
+distance t in line search direction
+
+Figure 1: Sketch: The task of a classic line search is to tune
+the step taken by a optimization algorithm along a univariate
+search direction. The search starts at the endpoint À of the
+previous line search, at t = 0. A sequence of exponentially
+growing extrapolation steps Á,Â,Ã finds a point of positive
+gradient at Ã. It is followed by interpolation steps Ä,Ï until an acceptable point Ï is found. Points of insufficient
+decrease, above the line f (0) + c1 tf 0 (0) (gray area) are excluded by the Armijo condition W-I, while points of steep
+gradient (orange areas) are excluded by the curvature condition W-II (weak Wolfe conditions in solid orange, strong
+extension in lighter tone). Point Ï is the first to fulfil both
+conditions, and is thus accepted.
+
+The principally same problem exists in deterministic (noise-free) optimization problems. There,
+providing stability is one of several tasks of the line search subroutine. It is a standard constituent of
+algorithms like the classic nonlinear conjugate gradient [15] and BFGS [16, 17, 18, 19] methods [20,
+§3].1 In the noise-free case, line searches are considered a solved problem [20, §3]. But the methods
+used in deterministic optimization are not stable to noise. They are easily fooled by even small
+disturbances, either becoming overly conservative or failing altogether. The reason for this brittleness
+is that existing line searches take a sequence of hard decisions to shrink or shift the search space.
+This yields efficiency, but breaks hard in the presence of noise. Section 3 constructs a probabilistic
+line search for noisy objectives, stabilizing optimization methods like the works cited above. As
+line searches only change the length, not the direction of a step, they could be used in combination
+with the algorithms adapting SGD’s direction, cited above. The algorithm presented below is thus a
+complement, not a competitor, to these methods.
+
+2
+
+Connections
+
+2.1
+
+Deterministic Line Searches
+
+There is a host of existing line search variants [20, §3]. In essence, though, these methods explore a
+univariate domain ‘to the right’ of a starting point, until an ‘acceptable’ point is reached (Figure 1).
+More precisely, consider the problem of minimizing L(x) : RD _ R, with access to ∇L(x) :
+RD _ RD . At iteration i, some ‘outer loop’ chooses, at location xi , a search direction si ∈ RD
+(e.g. by the BFGS rule, or simply si = −∇L(xi ) for gradient descent). It will not be assumed that
+si has unit norm. The line search operates along the univariate domain x(t) = xi + tsi for t ∈ R+ .
+Along this direction it collects scalar function values and projected gradients that will be denoted
+f (t) = L(x(t)) and f 0 (t) = s|i ∇L(x(t)) ∈ R. Most line searches involve an initial extrapolation
+phase to find a point tr with f 0 (tr ) > 0. This is followed by a search in [0, tr ], by interval nesting or
+by interpolation of the collected function and gradient values, e.g. with cubic splines.2
+2.1.1
+
+The Wolfe Conditions for Termination
+
+As the line search is only an auxiliary step within a larger iteration, it need not find an exact root
+of f 0 ; it suffices to find a point ‘sufficiently’ close to a minimum. The Wolfe [21] conditions are a
+widely accepted formalization of this notion; they consider t acceptable if it fulfills
+f (t) ≤ f (0) + c1 tf 0 (0)
+
+(W-I)
+
+and
+
+f 0 (t) ≥ c2 f 0 (0)
+
+(W-II),
+
+(2)
+
+using two constants 0 ≤ c1 < c2 ≤ 1 chosen by the designer of the line search, not the user. W-I is
+the Armijo [22], or sufficient decrease condition. It encodes that acceptable functions values should
+lie below a linear extrapolation line of slope c1 f 0 (0). W-II is the curvature condition, demanding
+1
+
+In these algorithms, another task of the line search is to guarantee certain properties of surrounding
+estimation rule. In BFGS, e.g., it ensures positive definiteness of the estimate. This aspect will not feature here.
+2
+This is the strategy in minimize.m by C. Rasmussen, which provided a model for our implementation. At
+the time of writing, it can be found at http://learning.eng.cam.ac.uk/carl/code/minimize/minimize.m
+
+2
+
+f (t)
+
+6.5
+6
+
+ÀÁ
+
+Â
+
+Ä
+
+Ï
+
+Ã
+
+1
+
+ρ(t)
+
+0
+1
+
+0
+1
+0
+−1
+
+pWolfe (t)
+
+pb (t) pa (t)
+
+5.5
+
+1
+0.8
+0.6
+0.4
+0.2
+0
+
+weak
+strong
+
+0
+
+0.5
+1
+distance t in line search direction
+
+Figure 2: Sketch of a probabilistic line search. As in
+Fig. 1, the algorithm performs extrapolation (Á,Â,Ã)
+and interpolation (Ä,Ï), but receives unreliable, noisy
+function and gradient values. These are used to construct a GP posterior (top. solid posterior mean, thin
+lines at 2 standard deviations, local pdf marginal as
+shading, three dashed sample paths). This implies a
+bivariate Gaussian belief (§3.3) over the validity of the
+weak Wolfe conditions (middle three plots. pa (t) is the
+marginal for W-I, pb (t) for W-II, ρ(t) their correlation).
+Points are considered acceptable if their joint probability pWolfe (t) (bottom) is above a threshold (gray). An
+approximation (§3.3.1) to the strong Wolfe conditions
+is shown dashed.
+
+a decrease in slope. The choice c1 = 0 accepts any value below f (0), while c1 = 1 rejects all
+points for convex functions. For the curvature condition, c2 = 0 only accepts points with f 0 (t) ≥ 0;
+while c2 = 1 accepts any point of greater slope than f 0 (0). W-I and W-II are known as the weak
+form of the Wolfe conditions. The strong form replaces W-II with |f 0 (t)| ≤ c2 |f 0 (0)| (W-IIa). This
+guards against accepting points of low function value but large positive gradient. Figure 1 shows a
+conceptual sketch illustrating the typical process of a line search, and the weak and strong Wolfe
+conditions. The exposition in §3.3 will initially focus on the weak conditions, which can be precisely
+modeled probabilistically. Section 3.3.1 then adds an approximate treatment of the strong form.
+2.2
+
+Bayesian Optimization
+
+A recently blossoming sample-efficient approach to global optimization revolves around modeling
+the objective f with a probability measure p(f ); usually a Gaussian process (GP). Searching for
+extrema, evaluation points are then chosen by a utility functional u[p(f )]. Our line search borrows
+the idea of a Gaussian process surrogate, and a popular utility, expected improvement [23]. Bayesian
+optimization methods are often computationally expensive, thus ill-suited for a cost-sensitive task
+like a line search. But since line searches are governors more than information extractors, the kind of
+sample-efficiency expected of a Bayesian optimizer is not needed. The following sections develop a
+lightweight algorithm which adds only minor computational overhead to stochastic optimization.
+
+3
+
+A Probabilistic Line Search
+
+We now consider minimizing y(t) = L̂(x(t)) from Eq. (1). That is, the algorithm can access only
+noisy function values and gradients yt , yt0 at location t, with Gaussian likelihood
+  
+  2
+
+σf
+0
+yt
+f (t)
+p(yt , yt0 | f ) = N
+;
+,
+.
+(3)
+yt0
+f 0 (t)
+0 σf2 0
+The Gaussian form is supported by the Central Limit argument at Eq. (1), see §3.4 regarding estimation
+of the variances σf2 , σf2 0 . Our algorithm has three main ingredients: A robust yet lightweight Gaussian
+process surrogate on f (t) facilitating analytic optimization; a simple Bayesian optimization objective
+for exploration; and a probabilistic formulation of the Wolfe conditions as a termination criterion.
+3.1
+
+Lightweight Gaussian Process Surrogate
+
+We model information about the objective in a probability measure p(f ). There are two requirements
+on such a measure: First, it must be robust to irregularity of the objective. And second, it must allow
+analytic computation of discrete candidate points for evaluation, because a line search should not call
+yet another optimization subroutine itself. Both requirements are fulfilled by a once-integrated Wiener
+process, i.e. a zero-mean Gaussian process prior p(f ) = GP(f ; 0, k) with covariance function
+
+
+k(t, t0 ) = θ2 1/3 min3 (t̃, t̃0 ) + 1/2|t − t0 | min2 (t̃, t̃0 ) .
+(4)
+3
+
+Here t̃ := t + τ and t̃0 := t0 + τ denote a shift by a constant τ > 0. This ensures this kernel is positive
+semi-definite, the precise value τ is irrelevant as the algorithm only considers positive values of t
+(our implementation uses τ = 10). See §3.4 regarding the scale θ2 . With the likelihood of Eq. (3),
+this prior gives rise to a GP posterior whose mean function is a cubic spline3 [25]. We note in passing
+that regression on f and f 0 from N observations of pairs (yt , yt0 ) can be formulated as a filter [26]
+and thus performed in O(N ) time. However, since a line search typically collects < 10 data points,
+generic GP inference, using a Gram matrix, has virtually the same, low cost.
+Because Gaussian measures are closed under linear maps [27, §10], Eq. (4) implies a Wiener process
+(linear spline) model on f 0 :
+ 
+
+
+f
+k
+k∂
+p(f ; f 0 ) = GP
+;
+0,
+,
+(5)
+∂
+f0
+k ∂k∂
+with (using the indicator function I(x) = 1 if x, else 0)
+
+
+2
+02
+k ∂ (t, t0 ) = θ2 I(t < t0 )t /2 + I(t ≥ t0 )(tt0 − t /2)
+i+j
+0
+i
+j
+∂ k(t, t )
+02
+2
+∂ ∂
+∂
+, thus
+k =
+k (t, t0 ) = θ2 I(t0 < t)t /2 + I(t0 ≥ t)(tt0 − t /2) .
+∂ti ∂t0 j
+∂ ∂
+0
+2
+0
+k (t, t ) = θ min(t, t )
+
+(6)
+
+Given a set of evaluations (t, y, y 0 ) (vectors, with elements ti , yti , yt0 i ) with independent likelihood
+(3), the posterior p(f | y, y 0 ) is a GP with posterior mean µ and covariance and k̃ as follows:
+
+
+| 
+−1  
+
+ktt + σf2 I
+k ∂ tt
+ktt0
+ktt
+y
+0
+|
+0
+. (7)
+µ(t) = ∂
+, k̃(t, t ) = ktt − g (t) ∂
+∂
+∂ ∂
+y0
+k tt0
+k tt
+k tt
+k tt + σf2 0 I
+|
+{z
+}
+=:g | (t)
+
+The posterior marginal variance will be denoted by V(t) = k̃(t, t). To see that µ is indeed piecewise
+cubic (i.e. a cubic spline), we note that it has at most three non-vanishing derivatives4 , because
+∂2
+∂
+
+3
+
+∂2 ∂
+
+k (t, t0 ) = θ2 I(t ≤ t0 )(t0 − t)
+
+k (t, t0 ) = θ2 I(t ≤ t0 )
+
+k (t, t0 ) = −θ2 I(t ≤ t0 )
+
+∂
+
+3
+
+k ∂ (t, t0 ) = 0.
+
+(8)
+
+This piecewise cubic form of µ is crucial for our purposes: having collected N values of f and
+f 0 , respectively, all local minima of µ can be found analytically in O(N ) time in a single sweep
+through the ‘cells’ ti−1 < t < ti , i = 1, . . . , N (here t0 = 0 denotes the start location, where (y0 , y00 )
+are ‘inherited’ from the preceding line search. For typical line searches N < 10, c.f. §4). In each
+cell, µ(t) is a cubic polynomial with at most one minimum in the cell, found by a trivial quadratic
+computation from the three scalars µ0 (ti ), µ00 (ti ), µ000 (ti ). This is in contrast to other GP regression
+models—for example the one arising from a Gaussian kernel—which give more involved posterior
+means whose local minima can be found only approximately. Another advantage of the cubic spline
+interpolant is that it does not assume the existence of higher derivatives (in contrast to the Gaussian
+kernel, for example), and thus reacts robustly to irregularities in the objective.
+0
+In our algorithm, after each evaluation of (yN , yN
+), we use this property to compute a short list
+of candidates for the next evaluation, consisting of the ≤ N local minimizers of µ(t) and one
+additional extrapolation node at tmax + α, where tmax is the currently largest evaluated t, and α is
+an extrapolation step size starting at α = 1 and doubled after each extrapolation step.
+
+3.2
+
+Choosing Among Candidates
+
+The previous section described the construction of < N + 1 discrete candidate points for the next
+evaluation. To decide at which of the candidate points to actually call f and f 0 , we make use of
+a popular utility from Bayesian optimization. Expected improvement [23] is the expected amount,
+3
+Eq. (4) can be generalized to the ‘natural spline’, removing the need for the constant τ [24, §6.3.1]. However,
+this notion is ill-defined in the case of a single observation, which is crucial for the line search.
+4
+There is no well-defined probabilistic belief over f 00 and higher derivatives—sample paths of the Wiener
+process are almost surely non-differentiable almost everywhere [28, §2.2]. But µ(t) is always a member of the
+reproducing kernel Hilbert space induced by k, thus piecewise cubic [24, §6.1].
+
+4
+
+σf = 0.0028
+
+σf = 0.28
+
+σf 0 = 0.0049
+
+σf 0 = 0.0049
+
+σf = 0.082
+
+σf = 0.17
+
+σf = 0.24
+
+σf 0 = 0.014
+
+σf 0 = 0.012
+
+σf 0 = 0.011
+
+0.5
+
+2
+f (t)
+
+0
+−2
+
+pWolfe (t)
+
+−0.2
+1
+
+1
+0 0.5 1 1.5
+t – constraining
+
+0
+
+0
+
+0
+
+−0.2
+
+−0.5
+
+−0.2
+
+1
+
+1
+
+1
+
+0
+
+0
+
+0
+
+0.2
+
+0.2
+
+0.2
+
+0
+2
+4
+t – extrapolation
+
+0
+
+0 0.5 1 1.5
+t – interpolation
+
+0
+
+0
+0 0.5 1 1.5
+0 0.5 1 1.5
+t – immediate accept t – high noise interpolation
+
+Figure 3: Curated snapshots of line searches (from MNIST experiment, §4), showing variability of
+the objective’s shape and the decision process. Top row: GP posterior and evaluations, bottom row:
+approximate pWolfe over strong Wolfe conditions. Accepted point marked red.
+under the GP surrogate, by which the function f (t) might be smaller than a ‘current best’ value η (we
+set η = mini=0,...,N {µ(ti )}, where ti are observed locations),
+uEI (t) = Ep(ft | y,y0 ) [min{0, η − f (t)}]
+! r
+
+
+η − µ(t)
+V(t)
+η − µ(t)
+(η − µ(t))2
+=
+1 + erf p
++
+exp −
+.
+2
+2π
+2V(t)
+2V(t)
+
+(9)
+
+The next evaluation point is chosen as the candidate maximizing this utility, multiplied by the
+probability for the Wolfe conditions to be fulfilled, which is derived in the following section.
+3.3
+
+Probabilistic Wolfe Conditions for Termination
+
+The key observation for a probabilistic extension of W-I and W-II is that they are positivity constraints
+on two variables at , bt that are both linear projections of the (jointly Gaussian) variables f and f 0 :
+
+
+  
+ f0(0)
+at
+1 c1 t −1 0 f (0)
+=
+≥ 0.
+(10)
+bt
+0 −c2 0 1  f (t) 
+f 0 (t)
+The GP of Eq. (5) on f thus implies, at each value of t, a bivariate Gaussian distribution
+   a   aa
+
+mt
+at
+Ct
+Ctab
+p(at , bt ) = N
+;
+,
+,
+bt
+mbt
+Ctba Ctbb
+with
+
+mat = µ(0) − µ(t) + c1 tµ0 (0)
+
+and
+Ctaa
+Ctbb
+Ctab = Ctba
+
+=
+=
+=
+
+and
+
+mbt = µ0 (t) − c2 µ0 (0)
+
+∂
+∂
+k̃00 + (c1 t)2 ∂ k̃00
++ k̃tt + 2[c1 t(k̃00
+− ∂ k̃0t ) − k̃0t ]
+∂
+∂
+∂
+c22 ∂ k̃00
+− 2c2 ∂ k̃0t
++ ∂ k̃tt
+∂
+∂
+∂
+−c2 (k̃00
++ c1 t ∂ k̃00
+) + (1 + c2 ) ∂ k̃0t + c1 t ∂ k̃ ∂0t − k̃tt
+.
+
+(11)
+(12)
+(13)
+
+The quadrant probability pWolfe
+= p(at > 0 ∧ bt > 0) for the Wolfe conditions to hold is an integral
+t
+over a bivariate normal probability,
+    
+
+Z ∞
+Z ∞
+a
+0
+1 ρt
+Wolfe
+da db,
+(14)
+pt
+=
+N
+;
+,
+ma
+mb
+b
+0
+ρt 1
+− √ taa − √ t
+C
+bb
+t
+
+Ct
+
+p
+with correlation coefficient ρt = Ctab / Ctaa Ctbb . It can be computed efficiently [29], using readily
+available code5 (on a laptop, one evaluation of pWolfe
+cost about 100 microseconds, each line search
+t
+requires < 50 such calls). The line search computes this probability for all evaluation nodes, after
+each evaluation. If any of the nodes fulfills the Wolfe conditions with pWolfe
+> cW , greater than
+t
+some threshold 0 < cW ≤ 1, it is accepted and returned. If several nodes simultaneously fulfill this
+requirement, the t of the lowest µ(t) is returned. Section 3.4 below motivates fixing cW = 0.3.
+5
+
+e.g. http://www.math.wsu.edu/faculty/genz/software/matlab/bvn.m
+
+5
+
+3.3.1
+
+Approximation for strong conditions:
+
+As noted in Section 2.1.1, deterministic optimizers tend to use the strong Wolfe conditions, which
+use |f 0 (0)| and |f 0 (t)|. A precise extension of these conditions to the probabilistic setting is numerically taxing, because the distribution over |f 0 | is a non-central χ-distribution, requiring customized
+computations. However, a straightforward variation to (14) captures the spirit of the strong Wolfe
+conditions, that large positive derivatives should not be accepted: Assuming f 0 (0) < 0 (i.e. that the
+search direction is a descent direction), the strong second Wolfe condition can be written exactly as
+0 ≤ bt = f 0 (t) − c2 f (0) ≤ −2c2 f 0 (0).
+
+(15)
+
+The value −2c2 f 0 (0) is bounded to 95% confidence by
+−2c2 f 0 (0) . −2c2 (|µ0 (0)| + 2
+
+p
+
+V0 (0)) =: b̄.
+
+(16)
+
+Hence, an approximation to the strong Wolfe conditions
+p can be reached by replacing the infinite
+upper integration limit on b in Eq. (14) with (b̄ − mbt )/ Ctbb . The effect of this adaptation, which
+adds no overhead to the computation, is shown in Figure 2 as a dashed line.
+3.4
+
+Eliminating Hyper-parameters
+
+As a black-box inner loop, the line search should not require any tuning by the user. The preceding
+section introduced six so-far undefined parameters: c1 , c2 , cW , θ, σf , σf 0 . We will now show that
+c1 , c2 , cW , can be fixed by hard design decisions. θ can be eliminated by standardizing the optimization objective within the line search; and the noise levels can be estimated at runtime with low
+overhead for batch objectives of the form in Eq. (1). The result is a parameter-free algorithm that
+effectively removes the one most problematic parameter from SGD—the learning rate.
+Design Parameters c1 , c2 , cW Our algorithm inherits the Wolfe thresholds c1 and c2 from its
+deterministic ancestors. We set c1 = 0.05 and c2 = 0.8. This is a standard setting that yields a
+‘lenient’ line search, i.e. one that accepts most descent points. The rationale is that the stochastic
+aspect of SGD is not always problematic, but can also be helpful through a kind of ‘annealing’ effect.
+The acceptance threshold cW is a new design parameter arising only in the probabilistic setting. We
+fix it to cW = 0.3. To motivate this value, first note that in the noise-free limit, all values 0 < cW < 1
+are equivalent, because pWolfe then switches discretely between 0 and 1 upon observation of the
+function. A back-of-the-envelope computation (left out for space), assuming only two evaluations
+at t = 0 and t = t1 and the same fixed noise level on f and f 0 (which then cancels out), shows
+that function values barely fulfilling the conditions, i.e. at1 = bt1 = 0, can have pWolfe ∼ 0.2 while
+function values at at1 = bt1 = − for  _ 0 with ‘unlucky’ evaluations (both function and gradient
+values one standard-deviation from true value) can achieve pWolfe ∼ 0.4. The choice cW = 0.3
+balances the two competing desiderata for precision and recall. Empirically (Fig. 3), we rarely
+observed values of pWolfe close to this threshold. Even at high evaluation noise, a function evaluation
+typically either clearly rules out the Wolfe conditions, or lifts pWolfe well above the threshold.
+Scale θ The parameter θ of Eq. (4) simply scales the prior variance. It can be eliminated by scaling
+0
+the optimization objective: We set θ = 1 and scale yi ^ (yi −y0 )/|y00 |, yi0 ^ yi/|y00 | within the code of
+0
+the line search. This gives y(0) = 0 and y (0) = −1, and typically ensures the objective ranges in
+the single digits across 0 < t < 10, where most line searches take place. The division by |y00 | causes
+a non-Gaussian disturbance, but this does not seem to have notable empirical effect.
+Noise Scales σf , σf 0 The likelihood (3) requires standard deviations for the noise on both function
+values (σf ) and gradients (σf 0 ). One could attempt to learn these across several line searches.
+However, in exchangeable models, as captured by Eq. (1), the variance of the loss and its gradient
+can be estimated directly within the batch, at low computational overhead—an approach already
+advocated by Schaul et al. [14]. We collect the empirical statistics
+m
+
+Ŝ(x) :=
+
+1 X 2
+` (x, yj ),
+m j
+
+m
+
+and
+
+6
+
+1 X
+ˆ
+∇S(x)
+:=
+∇`(x, yj ).2
+m j
+
+(17)
+
+(where .2 denotes the element-wise square) and estimate, at the beginning of a line search from xk ,
+
+
+
+1  ˆ
+1 
+|
+σf2 =
+Ŝ(xk ) − L̂(xk )2
+and
+σf2 0 = si .2
+∇S(xk ) − (∇L̂).2 .
+m−1
+m−1
+(18)
+This amounts to the cautious assumption that noise on the gradient is independent. We finally scale
+the two empirical estimates as described in §3.4: σf ^ σf /|y 0 (0)|, and ditto for σf 0 . The overhead of
+this estimation is small if the computation of `(x, yj ) itself is more expensive than the summation over
+j (in the neural network examples of §4, with their comparably simple `, the additional steps added
+only ∼ 1% cost overhead to the evaluation of the loss). Of course, this approach requires a batch size
+m > 1. For single-sample batches, a running averaging could be used instead (single-sample batches
+are not necessarily a good choice. In our experiments, for example, vanilla SGD with batch size 10
+converged faster in wall-clock time than unit-batch SGD). Estimating noise separately for each input
+dimension captures the often inhomogeneous structure among gradient elements, and its effect on the
+noise along the projected direction. For example, in deep models, gradient noise is typically higher
+on weights between the input and first hidden layer, hence line searches along the corresponding
+directions are noisier than those along directions affecting higher-level weights.
+3.4.1
+
+Propagating Step Sizes Between Line Searches
+
+As will be demonstrated in §4, the line search can find good step sizes even if the length of the
+direction si (which is proportional to the learning rate α in SGD) is mis-scaled. Since such scale
+issues typically persist over time, it would be wasteful to have the algorithm re-fit a good scale in each
+line search. Instead, we propagate step lengths from one iteration of the search to another: We set the
+initial search direction to s0 = −α0 ∇L̂(x0 ) with some initial learning rate α0 . Then, after each line
+search ending at xi = xi−1 + t∗ si , the next search direction is set to si+1 = −1.3 · t∗ α0 ∇L̂(xi ).
+Thus, the next line search starts its extrapolation at 1.3 times the step size of its predecessor.
+Remark on convergence of SGD with line searches: We note in passing that it is straightforward
+to ensure that SGD instances using the line search inherit the convergence guarantees of SGD:
+Putting even an extremely
+P
+P∞ 2 loose bound ᾱi on the step sizes taken by the i-th line search, such that
+∞
+i ᾱi = ∞ and
+i ᾱi < ∞, ensures the line search-controlled SGD converges in probability [1].
+
+4
+
+Experiments
+
+Our experiments were performed on the well-worn problems of training a 2-layer neural net with
+logistic nonlinearity on the MNIST and CIFAR-10 datasets.6 In both cases, the network had 800 hidden units, giving optimization problems with 636 010 and 2 466 410 parameters, respectively. While
+this may be ‘low-dimensional’ by contemporary standards, it exhibits the stereotypical challenges
+of stochastic optimization for machine learning. Since the line search deals with only univariate
+subproblems, the extrinsic dimensionality of the optimization task is not particularly relevant for an
+empirical evaluation. Leaving aside the cost of the function evaluations themselves, computation cost
+associated with the line search is independent of the extrinsic dimensionality.
+The central nuisance of SGD is having to choose the learning rate α, and potentially also a schedule for
+its decrease. Theoretically, a decaying learning rate is necessary to guarantee convergence of SGD [1],
+but empirically, keeping the rate constant, or only decaying it cautiously, often work better (Fig. 4). In
+a practical setting, a user would perform exploratory experiments (say, for 103 steps), to determine a
+good learning rate and decay schedule, then run a longer experiment in the best found setting. In our
+networks, constant learning rates of α = 0.75 and α = 0.08 for MNIST and CIFAR-10, respectively,
+achieved the lowest test error after the first 103 steps of SGD. We then trained networks with vanilla
+SGD with and without α-decay (using the schedule α(i) = α0 /i), and SGD using the probabilistic
+line search, with α0 ranging across five orders of magnitude, on batches of size m = 10.
+Fig. 4, top, shows test errors after 10 epochs as a function of the initial learning rate α0 (error bars
+based on 20 random re-starts). Across the broad range of α0 values, the line search quickly identified
+good step sizes α(t), stabilized the training, and progressed efficiently, reaching test errors similar
+6
+
+http://yann.lecun.com/exdb/mnist/ and http://www.cs.toronto.edu/˜kriz/cifar.html. Like other authors, we only used the “batch 1” sub-set of CIFAR-10.
+
+7
+
+MNIST 2layer neural net
+
+CIFAR10 2layer neural net
+SGD fixed α
+
+SGD decaying α
+
+Line Search
+
+100
+
+test error
+
+0.9
+0.8
+10−1
+0.7
+0.6
+10−4
+
+10−3
+
+10−2
+10−1
+intial learning rate
+
+100
+
+10−2 −4
+10
+
+101
+
+1
+
+10−3
+
+10−2
+10−1
+intial learning rate
+
+100
+
+101
+
+1
+
+test error
+
+0.8
+0.8
+
+0.6
+0.4
+
+0.6
+
+0.2
+0 2 4 6 8 10
+
+0 2 4 6 8 10
+epoch
+
+0 2 4 6 8 10
+
+0
+
+0 2 4 6 8 10
+
+0 2 4 6 8 10
+epoch
+
+0 2 4 6 8 10
+
+Figure 4: Top row: test error after 10 epochs as function of initial learning rate (note logarithmic
+ordinate for MNIST). Bottom row: Test error as function of training epoch (same color and symbol
+scheme as in top row). No matter the initial learning rate, the line search-controlled SGD perform
+close to the (in practice unknown) optimal SGD instance, effectively removing the need for exploratory
+experiments and learning-rate tuning. All plots show means and 2 std.-deviations over 20 repetitions.
+
+to those reported in the literature for tuned versions of this kind of architecture on these datasets.
+While in both datasets, the best SGD instance without rate-decay just barely outperformed the line
+searches, the optimal α value was not the one that performed best after 103 steps. So this kind of
+exploratory experiment (which comes with its own cost of human designer time) would have led to
+worse performance than simply starting a single instance of SGD with the linesearch and α0 = 1,
+letting the algorithm do the rest.
+Average time overhead (i.e. excluding evaluation-time for the objective) was about 48ms per line
+search. This is independent of the problem dimensionality, and expected to drop significantly with
+optimized code. Analysing one of the MNIST instances more closely, we found that the average
+length of a line search was ∼ 1.4 function evaluations, 80% − 90% of line searches terminated
+after the first evaluation. This suggests good scale adaptation and thus efficient search (note that an
+‘optimally tuned’ algorithm would always lead to accepts).
+The supplements provide additional plots, of raw objective values, chosen step-sizes, encountered
+gradient norms and gradient noises during the optimization, as well as test-vs-train error plots, for each
+of the two datasets, respectively. These provide a richer picture of the step-size control performed by
+the line search. In particular, they show that the line search chooses step sizes that follow a nontrivial
+dynamic over time. This is in line with the empirical truism that SGD requires tuning of the step size
+during its progress, a nuisance taken care of by the line search. Using this structured information for
+more elaborate analytical purposes, in particular for convergence estimation, is an enticing prospect,
+but beyond the scope of this paper.
+
+5
+
+Conclusion
+
+The line search paradigm widely accepted in deterministic optimization can be extended to noisy
+settings. Our design combines existing principles from the noise-free case with ideas from Bayesian
+optimization, adapted for efficiency. We arrived at a lightweight “black-box” algorithm that exposes
+no parameters to the user. Our method is complementary to, and can in principle be combined with,
+virtually all existing methods for stochastic optimization that adapt a step direction of fixed length.
+Empirical evaluations suggest the line search effectively frees users from worries about the choice of
+a learning rate: Any reasonable initial choice will be quickly adapted and lead to close to optimal
+performance. Our matlab implementation will be made available at time of publication of this article.
+8
+
+References
+[1] H. Robbins and S. Monro. A stochastic approximation method. The Annals of Mathematical Statistics,
+22(3):400–407, Sep. 1951.
+[2] T. Zhang. Solving large scale linear prediction problems using stochastic gradient descent algorithms. In
+Twenty-first International Conference on Machine Learning (ICML 2004), 2004.
+[3] L. Bottou. Large-scale machine learning with stochastic gradient descent. In Proceedings of the 19th Int.
+Conf. on Computational Statistic (COMPSTAT), pages 177–186. Springer, 2010.
+[4] M.D. Hoffman, D.M. Blei, C. Wang, and J. Paisley. Stochastic variational inference. Journal of Machine
+Learning Research, 14(1):1303–1347, 2013.
+[5] J. Hensman, M. Rattray, and N.D. Lawrence. Fast variational inference in the conjugate exponential family.
+In Advances in Neural Information Processing Systems (NIPS 25), pages 2888–2896, 2012.
+[6] T. Broderick, N. Boyd, A. Wibisono, A.C. Wilson, and M.I. Jordan. Streaming variational Bayes. In
+Advances in Neural Information Processing Systems (NIPS 26), pages 1727–1735, 2013.
+[7] A.P. George and W.B. Powell. Adaptive stepsizes for recursive estimation with applications in approximate
+dynamic programming. Machine Learning, 65(1):167–198, 2006.
+[8] J. Duchi, E. Hazan, and Y. Singer. Adaptive subgradient methods for online learning and stochastic
+optimization. Journal of Machine Learning Research, 12:2121–2159, 2011.
+[9] N.N. Schraudolph. Local gain adaptation in stochastic gradient descent. In Ninth International Conference
+on Artificial Neural Networks (ICANN) 99, volume 2, pages 569–574, 1999.
+[10] S.-I. Amari, H. Park, and K. Fukumizu. Adaptive method of realizing natural gradient learning for
+multilayer perceptrons. Neural Computation, 12(6):1399–1409, 2000.
+[11] N.L. Roux and A.W. Fitzgibbon. A fast natural Newton method. In 27th International Conference on
+Machine Learning (ICML), pages 623–630, 2010.
+[12] R. Rajesh, W. Chong, D. Blei, and E. Xing. An adaptive learning rate for stochastic variational inference.
+In 30th International Conference on Machine Learning (ICML), pages 298–306, 2013.
+[13] P. Hennig. Fast Probabilistic Optimization from Noisy Gradients. In 30th International Conference on
+Machine Learning (ICML), 2013.
+[14] T. Schaul, S. Zhang, and Y. LeCun. No more pesky learning rates. In 30th International Conference on
+Machine Learning (ICML-13), pages 343–351, 2013.
+[15] R. Fletcher and C.M. Reeves. Function minimization by conjugate gradients. The Computer Journal,
+7(2):149–154, 1964.
+[16] C.G. Broyden. A new double-rank minimization algorithm. Notices of the AMS, 16:670, 1969.
+[17] R. Fletcher. A new approach to variable metric algorithms. The Computer Journal, 13(3):317, 1970.
+[18] D. Goldfarb. A family of variable metric updates derived by variational means. Math. Comp., 24(109):23–
+26, 1970.
+[19] D.F. Shanno. Conditioning of quasi-Newton methods for function minimization. Math. Comp., 24(111):647–
+656, 1970.
+[20] J. Nocedal and S.J. Wright. Numerical Optimization. Springer Verlag, 1999.
+[21] P. Wolfe. Convergence conditions for ascent methods. SIAM Review, pages 226–235, 1969.
+[22] L. Armijo. Minimization of functions having Lipschitz continuous first partial derivatives. Pacific Journal
+of Mathematics, 16(1):1–3, 1966.
+[23] D.R. Jones, M. Schonlau, and W.J. Welch. Efficient global optimization of expensive black-box functions.
+Journal of Global Optimization, 13(4):455–492, 1998.
+[24] C.E. Rasmussen and C.K.I. Williams. Gaussian Processes for Machine Learning. MIT, 2006.
+[25] G. Wahba. Spline models for observational data. Number 59 in CBMS-NSF Regional Conferences series
+in applied mathematics. SIAM, 1990.
+[26] S. Särkkä. Bayesian filtering and smoothing. Cambridge University Press, 2013.
+[27] A. Papoulis. Probability, Random Variables, and Stochastic Processes. McGraw-Hill, New York, 3rd ed.
+edition, 1991.
+[28] R.J. Adler. The Geometry of Random Fields. Wiley, 1981.
+[29] Z. Drezner and G.O. Wesolowsky. On the computation of the bivariate normal integral. Journal of
+Statistical Computation and Simulation, 35(1-2):101–107, 1990.
+
+9
+
+

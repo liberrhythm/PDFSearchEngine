@@ -1,0 +1,944 @@
+Empirical Localization of Homogeneous Divergences
+on Discrete Sample Spaces
+
+Takashi Takenouchi
+Department of Complex and Intelligent Systems
+Future University Hakodate
+116-2 Kamedanakano, Hakodate, Hokkaido, 040-8655, Japan
+ttakashi@fun.ac.jp
+Takafumi Kanamori
+Department of Computer Science and Mathematical Informatics
+Nagoya University
+Furocho, Chikusaku, Nagoya 464-8601, Japan
+kanamori@is.nagoya-u.ac.jp
+
+Abstract
+In this paper, we propose a novel parameter estimator for probabilistic models on
+discrete space. The proposed estimator is derived from minimization of homogeneous divergence and can be constructed without calculation of the normalization
+constant, which is frequently infeasible for models in the discrete space. We investigate statistical properties of the proposed estimator such as consistency and
+asymptotic normality, and reveal a relationship with the information geometry.
+Some experiments show that the proposed estimator attains comparable performance to the maximum likelihood estimator with drastically lower computational
+cost.
+
+1
+
+Introduction
+
+Parameter estimation of probabilistic models on discrete space is a popular and important issue in
+the fields of machine learning and pattern recognition. For example, the Boltzmann machine (with
+hidden variables) [1] [2] [3] is a very popular probabilistic model to represent binary variables, and
+attracts increasing attention in the context of Deep learning [4]. A training of the Boltzmann machine, i.e., estimation of parameters is usually done by the maximum likelihood estimation (MLE).
+The MLE for the Boltzmann machine cannot be explicitly solved and the gradient-based optimization is frequently used. A difficulty of the gradient-based optimization is that the calculation of the
+gradient requires calculation of a normalization constant or a partition function in each step of the optimization and its computational cost is sometimes exponential order. The problem of computational
+cost is common to the other probabilistic models on discrete spaces and various kinds of approximation methods have been proposed to solve the difficulty. One approach tries to approximate the
+probabilistic model by a tractable model by the mean-field approximation, which considers a model
+assuming independence of variables [5]. Another approach such as the contrastive divergence [6]
+avoids the exponential time calculation by the Markov Chain Monte Carlo (MCMC) sampling.
+In the literature of parameters estimation of probabilistic model for continuous variables, [7] employs a score function which is a gradient of log-density with respect to the data vector rather than
+parameters. This approach makes it possible to estimate parameters without calculating the normalization term by focusing on the shape of the density function. [8] extended the method to discrete
+variables, which defines information of “neighbor” by contrasting probability with that of a flipped
+1
+
+variable. [9] proposed a generalized local scoring rules on discrete sample spaces and [10] proposed
+an approximated estimator with the Bregman divergence.
+In this paper, we propose a novel parameter estimator for models on discrete space, which does not
+require calculation of the normalization constant. The proposed estimator is defined by minimization
+of a risk function derived by an unnormalized model and the homogeneous divergence having a weak
+coincidence axiom. The derived risk function is convex for various kind of models including higher
+order Boltzmann machine. We investigate statistical properties of the proposed estimator such as the
+consistency and reveal a relationship between the proposed estimator and the α-divergence [11].
+
+2
+
+Settings
+
+Let X be a d-dimensional vector of random variables in a discrete space∑
+X (typically {+1, −1}d )
+and a bracket ⟨f ⟩ be summation of a function f (x) on X , i.e., ⟨f ⟩ = x∈X f (x). Let M and
+P be a space of all non-negative finite measures on X and a subspace consisting of all probability
+measures on X , respectively.
+M = {f (x) |⟨f ⟩ < ∞, f (x) ≥ 0 } , P = {f (x) |⟨f ⟩ = 1, f (x) ≥ 0 } .
+In this paper, we focus on parameter estimation of a probabilistic model q̄θ (x) on X , written as
+q̄θ (x) =
+
+qθ (x)
+Zθ
+
+(1)
+
+where θ is an m-dimensional vector of parameters, qθ (x) is an unnormalized model in M and
+Zθ = ⟨qθ ⟩ is a normalization constant. A computation of the normalization constant Zθ sometimes
+requires calculation of exponential order and is sometimes difficult for models
+∑ on the discrete space.
+Note that the unnormalized model qθ (x) is not normalized and ⟨qθ ⟩ = x∈X qθ (x) = 1 does not
+necessarily hold. Let ψθ (x) be a function on X and throughout the paper, we assume without loss
+of generality that the unnormalized model qθ (x) can be written as
+qθ (x) = exp(ψθ (x)).
+
+(2)
+
+Remark 1. By setting ψθ (x) as ψθ (x) − log Zθ , the normalized model (1) can be written as (2).
+Example 1. The Bernoulli distribution on X = {+1, −1} is a simplest example of the probabilistic
+model (1) with the function ψθ (x) = θx.
+Example 2. With a function ψθ,k (x) = (x1 , . . . , xd , x1 x2 , . . . , xd−1 xd , x1 x2 x3 , . . .)θ, we can define a k-th order Boltzmann machine [1, 12].
+d1
+Example 3. Let xo ∈ {+1,
+−1}d2 be an observed vector and hidden vector,
+( T −1}
+) and xh ∈ {+1,
+T
+d1 +d2
+respectively, and x = xo , xh ∈ {+1, −1}
+where T indicates the transpose, be a concatenated vector. A function ψh,θ (xo ) for the Boltzmann machine with hidden variables is written
+as
+∑
+ψh,θ (xo ) = log
+exp(ψθ,2 (x)),
+(3)
+where
+
+xh
+
+∑
+xh
+
+is the summation with respect to the hidden variable xh .
+
+Let us assume that a dataset D = {xi }ni=1 generated by an underlying distribution p(x), is given and
+Z be a set of all patterns which appear in the dataset D. An empirical distribution p̃(x) associated
+with the dataset D is defined as
+{ nx
+x ∈ Z,
+p̃(x) = n
+0
+otherwise,
+∑n
+where nx = i=1 I(xi = x) is a number of pattern x appeared in the dataset D.
+Definition 1. For the unnormalized model (2) and distributions p(x) and p̃(x) in P , probability
+functions rα,θ (x) and r̃α,θ (x) on X are defined by
+rα,θ (x) =
+
+p̃(x)α qθ (x)1−α
+p(x)α qθ (x)1−α
+⟨
+⟩ , r̃α,θ (x) =
+⟨
+⟩ .
+1−α
+α
+p qθ
+p̃α qθ1−α
+2
+
+The distribution rα,θ (r̃α,θ ) is an e-mixture model of the unnormalized model (2) and p(x) (p̃(x))
+with ratio α [11].
+Remark 2. We observe that r0,θ (x) = r̃0,θ (x) = q̄θ (x), r1,θ (x) = p(x), r̃1,θ (x) = p̃(x). Also if
+p(x) = q̄θ0 (x), rα,θ0 (x) = q̄θ0 (x) holds for an arbitrary α.
+To estimate the parameter θ of probabilistic
+∑n model q̄θ , the MLE defined by θ̂ mle = argmaxθ L(θ) is
+frequently employed, where L(θ) = i=1 log q̄θ (xi ) is the log-likelihood of the parameter θ with
+the model q̄θ . Though the MLE is asymptotically consistent and efficient estimator, a main drawback
+of the MLE is that computational cost for probabilistic models on the discrete space sometimes
+becomes exponential. Unfortunately the MLE does not have an explicit solution in general, the
+estimation of the parameter can be done by the gradient based optimization with a gradient ⟨p̃ψθ′ ⟩ −
+θ
+⟨q̄θ ψθ′ ⟩ of log-likelihood, where ψθ′ = ∂ψ
+∂θ . While the first term can be easily calculated, the second
+term includes calculation of the normalization term Zθ , which requires 2d times summation for
+X = {+1, −1}d and is not feasible when d is large.
+
+3
+
+Homogeneous Divergences for Statistical Inference
+
+Divergences are an extension of the squared distance and are often used in statistical inference. A
+formal definition of the divergence D(f, g) is a non-negative valued function on M×M or on P ×P
+such that D(f, f ) = 0 holds for arbitrary f . Many popular divergences such as the Kullback-Leilber
+(KL) divergence defined on P × P enjoy the coincidence axiom, i.e., D(f, g) = 0 leads to f = g.
+The parameter in the statistical model q̄θ is estimated by minimizing the divergence D(p̃, q̄θ ), with
+respect to θ.
+In the statistical inference using unnormalized models, the coincidence axiom of the divergence is
+not suitable, since the probability and the unnormalized model do not exactly match in general. Our
+purpose is to estimate the underlying distribution up to a constant factor using unnormalized models.
+Hence, divergences having the property of the weak coincidence axiom, i.e., D(f, g) = 0 if and only
+if g = cf for some c > 0, are good candidate. As a class of divergences with the weak coincidence
+axiom, we focus on homogeneous divergences that satisfy the equality D(f, g) = D(f, cg) for any
+f, g ∈ M and any c > 0.
+A representative of homogeneous divergences is the pseudo-spherical (PS) divergence [13], or in
+other words, γ-divergence [14], that is defined from the Hölder inequality. Assume that γ is a
+positive constant. For all non-negative functions f, g in M, the Hölder inequality
+γ
+1
+⟨ γ+1 ⟩ γ+1
+⟨ γ+1 ⟩ γ+1
+f
+g
+− ⟨f g γ ⟩ ≥ 0
+holds. The inequality becomes an equality if and only if f and g are linearly dependent. The PSdivergence Dγ (f, g) for f, g ∈ M is defined by
+⟨
+⟩
+⟨
+⟩
+1
+γ
+Dγ (f, g) =
+log f γ+1 +
+log g γ+1 − log ⟨f g γ ⟩ , γ > 0.
+(4)
+1+γ
+1+γ
+The PS divergence is homogeneous, and the Hölder inequality ensures the non-negativity and the
+weak coincidence axiom of the PS-divergence. One can confirm that the scaled PS-divergence,
+γ −1 Dγ , converges to the extended KL-divergence defined on M×M, as γ → 0. The PS-divergence
+is used to obtain a robust estimator [14].
+As shown in (4), the standard PS-divergence from the empirical distribution p̃ to the unnormalized
+model qθ requires the computation of ⟨qθγ+1 ⟩, that may be infeasible in our setup. To circumvent
+such an expensive computation, we employ a trick and substitute a model p̃qθ localized by the
+empirical distribution for qθ , which makes it possible to replace the total sum in ⟨qθγ+1 ⟩ with the
+1
+empirical mean. More precisely, let us consider the PS-divergence from f = (pα q 1−α ) 1+γ to
+1
+′
+′
+g = (pα q 1−α ) 1+γ for the probability distribution p ∈ P and the unnormalized model q ∈ M,
+where α, α′ are two distinct real numbers. Then, the divergence vanishes if and only if pα q 1−α ∝
+′
+′
+pα q 1−α , i.e., q ∝ p. We define the localized PS-divergence Sα,α′ ,γ (p, q) by
+′
+
+′
+
+Sα,α′ ,γ (p, q) = Dγ ((pα q 1−α )1/(1+γ) , (pα q 1−α )1/(1+γ) )
+⟨
+⟩
+⟨
+⟩
+′
+′
+1
+γ
+=
+log pα q 1−α +
+log⟨pα q 1−α ⟩ − log pβ q 1−β ,
+1+γ
+1+γ
+3
+
+(5)
+
+where β = (α + γα′ )/(1 + γ). Substituting the empirical distribution
+p, the( total
+⟨ α 1−α ⟩ p̃ into
+) sum over
+∑
+nx α 1−α
+X is replaced with a variant of the empirical mean such as p̃ q
+=
+q
+(x)
+x∈Z
+n
+for a non-zero real number α. Since Sα,α′ ,γ (p, q) = Sα′ ,α,1/γ (p, q) holds, we can assume α > α′
+without loss of generality. In summary, the conditions of the real parameters α, α′ , γ are given by
+γ > 0, α > α′ , α ̸= 0, α′ ̸= 0, α + γα′ ̸= 0,
+where the last condition denotes β ̸= 0.
+Let us consider another aspect of the computational issue about the localized PS-divergence. For the
+probability distribution p and the unnormalized exponential model qθ , we show that the localized
+PS-divergence Sα,α′ ,γ (p, qθ ) is convex in θ, when the parameters α, α′ and γ are properly chosen.
+Theorem 1. Let p ∈ P be any probability distribution, and let qθ be the unnormalized exponential
+model qθ (x) = exp(θ T ϕ(x)), where ϕ(x) is any vector-valued function corresponding to the sufficient statistic in the (normalized) exponential model q̄θ . For a given β, the localized PS-divergence
+Sα,α′ ,γ (p, qθ ) is convex in θ for any α, α′ , γ satisfying β = (α + γα′ )/(1 + γ) if and only if β = 1.
+∂ 2 log⟨pα qθ1−α ⟩
+Proof. After some calculation, we have
+= (1 − α)2 Vrα,θ [ϕ], where Vrα,θ [ϕ] is the
+∂θ∂θ T
+covariance matrix of ϕ(x) under the probability rα,θ (x). Thus, the Hessian matrix of Sα,α′ ,γ (p, qθ )
+is written as
+(1 − α)2
+γ(1 − α′ )2
+∂2
+′ ,γ (p, qθ ) =
+S
+V
+[ϕ]
++
+Vrα′ ,θ [ϕ] − (1 − β)2 Vrβ,θ [ϕ].
+α,α
+r
+α,θ
+1+γ
+1+γ
+∂θ∂θ T
+The Hessian matrix is non-negative definite if β = 1. The converse direction is deferred to the
+supplementary material.
+
+Up to a constant factor, the localized PS-divergence with β = 1 characterized by Theorem 1 is
+denotes as Sα,α′ (p, q) that is defined by
+⟨
+⟩
+′
+′
+1
+1
+Sα,α′ (p, q) =
+log pα q 1−α +
+log⟨pα q 1−α ⟩
+′
+α−1
+1−α
+′
+′
+for α > 1 > α ̸= 0. The parameter α can be negative if p is positive on X . Clearly, Sα,α′ (p, q)
+satisfies the homogeneity and the weak coincidence axiom as well as Sα,α′ ,γ (p, q).
+
+4
+
+Estimation with the localized pseudo-spherical divergence
+
+Given the empirical distribution p̃ and the unnormalized model qθ , we define a novel estimator with
+the localized PS-divergence Sα,α′ ,γ (or Sα,α′ ). Though the localized PS-divergence plugged-in
+the empirical distribution is not well-defined when α′ < 0, we can formally define the following
+estimator by restricting the domain X to the observed set of examples Z, even for negative α′ :
+θ̂ = argmin Sα,α′ ,γ (p̃, qθ )
+θ
+
+(6)
+
+∑ ( n x )α
+∑ ( n x )α ′
+′
+1
+γ
+log
+qθ (x)1−α +
+log
+qθ (x)1−α
+1+γ
+n
+1+γ
+n
+x∈Z
+x∈Z
+∑ ( n x )β
+− log
+qθ (x)1−β .
+n
+
+= argmin
+θ
+
+x∈Z
+
+Remark 3. The summation in (6) is defined on Z and then is computable even when α, α′ , β < 0.
+Also the summation includes only Z(≤ n) terms and its computational cost is O(n).
+Proposition 1. For the unnormalized model (2), the estimator (6) is Fisher consistent.
+Proof. We observe
+
+
+(
+)
+
+⟩
+∂
+α + γα′ ⟨
+Sα,α′ ,γ (q̄θ0 , qθ )
+= β−
+q̄θ0 ψθ′ 0 = 0
+∂θ
+1+γ
+θ=θ 0
+
+implying the Fisher consistency of θ̂.
+4
+
+Theorem 2. Let qθ (x) be the unnormalized model (2), and θ 0 be the true parameter of underlying
+distribution p(x) = q̄θ0 (x). Then an asymptotic distribution of the estimator (6) is written as
+√
+n(θ̂ − θ 0 ) ∼ N (0, I(θ 0 )−1 )
+where I(θ 0 ) = Vq̄θ0 [ψθ′ 0 ] is the Fisher information matrix.
+Proof. We shall sketch a proof and the detailed proof is given in supplementary material. Let us
+assume that the empirical distribution is written as
+p̃(x) = q̄θ0 (x) + ϵ(x).
+Note that ⟨ϵ⟩ = 0 because p̃, q̄θ0 ∈ P. The asymptotic expansion of the equilibrium condition for
+the estimator (6) around θ = θ 0 leads to
+
+
+∂
+Sα,α′ ,γ (p̃, qθ )
+0=
+∂θ
+θ=θ̂
+
+
+
+∂
+∂2
+
+=
++
+Sα,α′ ,γ (p̃, qθ )
+(θ̂ − θ 0 ) + O(||θ̂ − θ 0 ||2 )
+Sα,α′ ,γ (p̃, qθ )
+T
+∂θ
+∂θ∂θ
+θ=θ 0
+θ=θ 0
+By the delta method [15], we have
+
+
+
+
+⟨
+⟩
+∂
+∂
+γ
+−
+≃−
+Sα,α′ ,γ (p̃, qθ )
+Sα,α′ ,γ (p, qθ )
+(α − α′ )2 ψθ′ 0 ϵ
+2
+∂θ
+∂θ
+(1 + γ)
+θ=θ 0
+θ=θ 0
+and from the central limit theorem, we observe that
+n
+( ′
+⟨
+⟩)
+√ ⟨ ′ ⟩ √ 1∑
+ψθ0 (xi ) − q̄θ0 ψθ′ 0
+n ψθ 0 ϵ = n
+n i=1
+asymptotically follows the normal distribution with mean 0, and variance I(θ 0 ) = Vq̄θ0 [ψθ′ 0 ], which
+is known as the Fisher information matrix. Also from the law of large numbers, we have
+
+
+∂2
+γ
+S ′ (p̃, qθ )
+(α − α′ )2 I(θ 0 ),
+(θ̂ − θ 0 ) →
+T α,α ,γ
+2
+(1
++
+γ)
+∂θ∂θ
+θ=θ 0
+in the limit of n → ∞. Consequently, we observe that (2).
+Remark 4. The asymptotic distribution of (6) is equal to that of the MLE, and its variance does not
+depend on α, α′ , γ.
+Remark 5. As shown in Remark 1, the normalized model (1) is a special case of the unnormalized
+model (2) and then Theorem 2 holds for the normalized model.
+
+5
+
+Characterization of localized pseudo-spherical divergence Sα,α′
+
+Throughout this section, we assume that β = 1 holds and investigate properties of the localized PSdivergence Sα,α′ . We discuss influence of selection of α, α′ and characterization of the localized
+PS-divergence Sα,α′ in the following subsections.
+5.1
+
+Influence of selection of α, α′
+
+We investigate influence of selection of α, α′ for the localized PS-divergence Sα,α′ with a view of
+the estimating equation. The estimator θ̂ derived from Sα,α′ satisfies
+
+⟨
+⟩ ⟨
+⟩
+∂Sα,α′ (p̃, qθ ) 
+′
+′
+∝
+r̃
+ψ
+−
+r̃
+ψ
+= 0.
+(7)
+′
+α
+,
+θ̂
+α,
+θ̂
+
+θ̂
+θ̂
+∂θ
+θ=θ̂
+
+which is a moment matching with respect to two distributions r̃α,θ and r̃α′ ,θ (α, α′ ̸= 0, 1). On the
+other hand, the estimating equation of the MLE is written as
+
+⟨
+⟩
+⟨
+⟩ ⟨
+⟩
+∂L(θ) 
+∝ p̃ψθ′ mle − ⟨q̄θmle ψθmle ⟩ = r̃1,θmle ψθ′ mle − r̃0,θmle ψθ′ mle = 0, (8)
+∂θ 
+θ=θ mle
+
+which is a moment matching with respect to the empirical distribution p̃ = r̃1,θmle and the
+normalized model q̄θ = r̃0,θmle . While the localized PS-divergence Sα,α′ is not defined with
+(α, α′ ) = (0, 1), comparison of (7) with (8) implies that behavior the estimator θ̂ becomes similar to that of the MLE in the limit of α → 1 and α′ → 0.
+5
+
+5.2
+
+Relationship with the α-divergence
+
+The α-divergence between two positive measures f, g ∈ M is defined as
+⟨
+⟩
+1
+Dα (f, g) =
+αf + (1 − α)g − f α g 1−α ,
+α(1 − α)
+where α is a real number. Note that Dα (f, g) ≥ 0 and 0 if and only if f = g, and the α-divergence
+reduces to KL(f, g) and KL(g, f ) in the limit of α → 1 and 0, respectively.
+Remark 6. An estimator defined by minimizing α-divergence Dα (p̃, q̄θ ) between the empirical
+distribution and normalized model, satisfies
+⟩
+∂Dα (p̃, q̄θ ) ⟨ α 1−α ′
+∝ p̃ qθ (ψθ − ⟨q̄θ ψθ′ ⟩) = 0
+∂θ
+and requires calculation proportional to |X | which is infeasible. Also the same hold for an estimator
+defined by minimizing α-divergence Dα (p̃, qθ ) between the empirical distribution and unnormalized
+⟨
+⟩
+(p̃,qθ )
+model, satisfying ∂Dα∂θ
+∝ (1 − α)qθ ψθ′ − p̃α qθ1−α = 0.
+Here, we assume that α, α′ ̸= 0, 1 and consider a trick to cancel out the term ⟨g⟩ by mixing two
+α-divergences as follows.
+(
+)
+−α′
+Dα,α′ (f, g) =Dα (f, g) +
+Dα′ (f, g)
+α
+⟨(
+)
+⟩
+1
+α′
+1
+1
+α 1−α
+α′ 1−α′
+=
+−
+f
+−
+f
+g
++
+f
+g
+.
+1 − α α(1 − α′ )
+α(1 − α)
+α(1 − α′ )
+Remark 7. Dα,α′ (f, g) ≥ 0 is divergence when αα′ < 0 holds, i.e., Dα,α′ (f, g) ≥ 0 and
+Dα,α′ (f, g) = 0 if and only if f = g. Without loss of generality, we assume α > 0 > α′ for
+Dα,α′ .
+Firstly, we consider an estimator defined by the minmizer of
+}
+∑ { 1 ( nx )α′
+1 ( n x )α
+1−α′
+1−α
+min
+q
+(x)
+−
+q
+(x)
+.
+θ
+θ
+θ
+1 − α′ n
+1−α n
+
+(9)
+
+x∈Z
+
+Note that the summation in (9) includes only Z(≤ n) terms. We remark the following.
+Remark 8. Let q̄θ0 (x) be the underlying distribution and qθ (x) be the unnormalized model (2).
+Then an estimator defined by minimizing Dα,α′ (q̄θ0 , qθ ) is not in general Fisher consistent, i.e.,
+
+⟨ ′
+⟩ (
+)
+⟩
+′
+∂Dα,α′ (q̄θ0 , qθ ) 
+−α′
+−α ⟨
+∝ q̄θα0 qθ1−α
+ψθ′ 0 − q̄θα0 qθ1−α
+ψθ′ 0 = ⟨qθ0 ⟩
+− ⟨qθ0 ⟩
+qθ0 ψθ′ 0 ̸= 0.
+
+0
+0
+∂θ
+θ=θ 0
+
+This remark shows that an estimator associated with Dα,α′ (p̃, qθ ) does not have suitable properties
+such as (asymptotic) unbiasedness and consistency while required computational cost is drastically
+reduced. Intuitively, this is because the (mixture of) α-divergence satisfies the coincidence axiom.
+To overcome this drawback, we consider the following minimization problem for estimation of the
+parameter θ of model q̄θ (x).
+(θ̂, r̂) = argmin Dα,α′ (p̃, rqθ )
+θ,r
+
+where r is a constant corresponding to an inverse of the normalization term Zθ = ⟨qθ ⟩.
+Proposition 2. Let qθ (x) be the unnormalized model (2). For α > 1 and 0 > α′ , the minimization
+of Dα,α′ (p̃, rqθ ) is equivalent to the minimization of
+Sα,α′ (p̃, qθ ).
+Proof. For a given θ, we observe that
+1
+(⟨
+⟩ ) α−α
+′
+p̃α qθ1−α
+.
+r̂θ = argmin Dα,α′ (p̃, rqθ ) = ⟨ ′ 1−α′ ⟩
+r
+p̃α qθ
+
+6
+
+(10)
+
+Note that computation of (10) requires only sample order O(n) calculation. By plugging (10) into
+Dα,α′ (p̃, rqθ ), we observe
+θ̂ = argmin Dα,α′ (p̃, r̂θ qθ ) = argmin Sα,α′ (p̃, qθ ).
+θ
+
+(11)
+
+θ
+
+If α > 1 and α′ < 0 hold, the estimator (11) is equivalent to the estimator associated with the
+localized PS-divergence Sα,α′ , implying that Sα,α′ is characterized by the mixture of α-divergences.
+Remark 9. From a viewpoint of the information geometry [11], a metric (information geometrical
+structure) induced by the α-divergence is the Fisher metric induced by the KL-divergence. This implies that the estimation based on the (mixture of) α-divergence is Fisher efficient and is an intuitive
+explanation of the Theorem 2. The localized PS divergence Sα,α′ ,γ and Sα,α′ with αα′ > 0 can be
+interpreted as an extension of the α-divergence, which preserves Fisher efficiency.
+
+6
+
+Experiments
+
+We especially focus on a setting of β = 1, i.e., convexity of the risk function with the unnormalized
+model exp(θ T ϕ(x)) holds (Theorem 1) and examined performance of the proposed estimator.
+6.1
+
+Fully visible Boltzmann machine
+
+In the first experiment, we compared the proposed estimator with parameter settings (α, α′ ) =
+(1.01, 0.01), (1.01, −0.01), (2, −1), with the MLE and the ratio matching method [8]. Note that
+the ratio matching method also does not require calculation of the normalization constant, and the
+proposed method with (α, α′ ) = (1.01, ±0.01) may behave like the MLE as discussed in section
+5.1.
+All methods were optimized with the optim function in R language [16]. The dimension d of input
+was set to 10 and the synthetic dataset was randomly generated from the second order Boltzmann
+machine (Example 2) with a parameter θ ∗ ∼ N (0, I). We repeated comparison 50 times and
+observed averaged performance. Figure 1 (a) shows median of the root mean square errors (RMSEs)
+between θ ∗ and θ̂ of each method over 50 trials, against the number n of examples. We observe that
+the proposed estimator works well and is superior to the ratio matching method. In this experiment,
+the MLE outperforms the proposed method contrary to the prediction of Theorem 2. This is because
+observed patterns were only a small portion of all possible patterns, as shown in Figure 1 (b). Even
+in such a case, the MLE can take all possible patterns (210 = 1024) into account through the
+normalization term log Zθ ≃ Const + 12 ||θ||2 that works like a regularizer. On the other hand, the
+proposed method genuinely uses only the observed examples, and the asymptotic analysis would not
+be relevant in this case. Figure 1 (c) shows median of computational time of each method against
+n. The computational time of the MLE does not vary against n because the computational cost is
+dominated by the calculation of the normalization constant. Both the proposed estimator and the
+ratio matching method are significantly faster than the MLE, and the ratio matching method is faster
+than the proposed estimator while the RMSE of the proposed estimator is less than that of the ratio
+matching.
+
+6.2
+
+Boltzmann machine with hidden variables
+
+In this subsection, we applied the proposed estimator for the Boltzmann machine with hidden variables whose associated function is written as (3). The proposed estimator with parameter settings
+(α, α′ ) = (1.01, 0.01), (1.01, −0.01), (2, −1) was compared with the MLE. The dimension d1 of
+observed variables was fixed to 10 and d2 of hidden variables was set to 2, and the parameter θ ∗
+was generated as θ ∗ ∼ N (0, I) including parameters corresponding to hidden variables. Note
+that the Boltzmann machine with hidden variables is not identifiable and different values of the parameter do not necessarily generate different probability distributions, implying that estimators are
+influenced by local minimums. Then we measured performance of each estimator by the averaged
+7
+
+500
+
+300
+
+200
+
+250
+
+20
+
+50
+
+Time[s]
+
+100
+
+200
+150
+
+MLE
+Ratio matching
+a1=1.01,a2=0.01
+a1=1.01,a2=−0.01
+a1=2,a2=−1
+
+0
+
+2
+
+0.1
+
+5
+
+50
+
+10
+
+0.2
+
+100
+
+Number |Z| of unique patterns
+
+1.0
+RMSE
+
+0.5
+
+MLE
+Ratio matching
+a1=1.01,a2=0.01
+a1=1.01,a2=−0.01
+a1=2,a2=−1
+
+0
+
+5000
+
+10000
+
+15000
+
+20000
+
+25000
+
+100
+
+200
+
+400
+
+800
+
+1600
+
+n
+
+3200
+
+6400
+
+0
+
+12800 25600
+
+5000
+
+10000
+
+15000
+
+20000
+
+25000
+
+n
+
+n
+
+Figure 1: (a) Median of RMSEs of each method against n, in log scale. (b) Box-whisker plot of
+number |Z| of unique patterns in the dataset D against n. (c) Median of computational time of each
+method against n, in log scale.
+
+1000
+200
+
+MLE
+a1=1.01,a2=0.01
+a1=1.01,a2=−0.01
+a1=2,a2=−1
+
+5
+
+10
+
+20
+
+−15
+
+50
+
+MLE
+a1=1.01,a2=0.01
+a1=1.01,a2=−0.01
+a1=2,a2=−1
+
+100
+
+Time[s]
+
+500
+
+−5
+−10
+
+Averaged Log likelihood
+
+−10
+
+MLE
+a1=1.01,a2=0.01
+a1=1.01,a2=−0.01
+a1=2,a2=−1
+
+−15
+
+Averaged Log likelihood
+
+−5
+
+∑n
+log-likelihood n1 i=1 log q̄θ̂ (xi ) rather than the RMSE. An initial value of the parameter was set
+by N (0, I) and commonly used by all methods. We repeated the comparison 50 times and observed the averaged performance. Figure 2 (a) shows median of averaged log-likelihoods of each
+method over 50 trials, against the number n of example. We observe that the proposed estimator is
+comparable with the MLE when the number n of examples becomes large. Note that the averaged
+log-likelihood of MLE once decreases when n is samll, and this is due to overfitting of the model.
+Figure 2 (b) shows median of averaged log-likelihoods of each method for test dataset consists of
+10000 examples, over 50 trials. Figure 2 (c) shows median of computational time of each method
+against n, and we observe that the proposed estimator is significantly faster than the MLE.
+
+0
+
+5000
+
+10000
+
+15000
+
+20000
+
+25000
+
+0
+
+5000
+
+10000
+
+15000
+
+n
+
+n
+
+20000
+
+25000
+
+0
+
+5000
+
+10000
+
+15000
+
+20000
+
+25000
+
+n
+
+Figure 2: (a) Median of averaged log-likelihoods of each method against n. (b) Median of averaged
+log-likelihoods of each method calculated for test dataset against n. (c) Median of computational
+time of each method against n, in log scale.
+
+7
+
+Conclusions
+
+We proposed a novel estimator for probabilistic model on discrete space, based on the unnormalized model and the localized PS-divergence which has the homogeneous property. The proposed
+estimator can be constructed without calculation of the normalization constant and is asymptotically
+efficient, which is the most important virtue of the proposed estimator. Numerical experiments show
+that the proposed estimator is comparable to the MLE and required computational cost is drastically
+reduced.
+
+8
+
+References
+[1] Hinton, G. E. & Sejnowski, T. J. (1986) Learning and relearning in boltzmann machines. MIT
+Press, Cambridge, Mass, 1:282–317.
+[2] Ackley, D. H., Hinton, G. E. & Sejnowski, T. J. (1985) A learning algorithm for boltzmann
+machines. Cognitive Science, 9(1):147–169.
+[3] Amari, S., Kurata, K. & Nagaoka, H. (1992) Information geometry of Boltzmann machines.
+In IEEE Transactions on Neural Networks, 3: 260–271.
+[4] Hinton, G. E. & Salakhutdinov, R. R. (2012) A better way to pretrain deep boltzmann machines. In Advances in Neural Information Processing Systems, pp. 2447–2455 Cambridge,
+MA: MIT Press.
+[5] Opper, M. & Saad, D. (2001) Advanced Mean Field Methods: Theory and Practice. MIT
+Press, Cambridge, MA.
+[6] Hinton, G.E. (2002) Training Products of Experts by Minimizing Contrastive Divergence.
+Neural Computation, 14(8):1771–1800.
+[7] Hyvärinen, A. (2005) Estimation of non-normalized statistical models by score matching.
+Journal of Machine Learning Research, 6:695–708.
+[8] Hyvärinen, A. (2007) Some extensions of score matching. Computational statistics & data
+analysis, 51(5):2499–2512.
+[9] Dawid, A. P., Lauritzen, S. & Parry, M. (2012) Proper local scoring rules on discrete sample
+spaces. The Annals of Statistics, 40(1):593–608.
+[10] Gutmann, M. & Hirayama, H. (2012) Bregman divergence as general framework to estimate
+unnormalized statistical models. arXiv preprint arXiv:1202.3727.
+[11] Amari, S & Nagaoka, H. (2000) Methods of Information Geometry, volume 191 of Translations of Mathematical Monographs. Oxford University Press.
+[12] Sejnowski, T. J. (1986) Higher-order boltzmann machines. In American Institute of Physics
+Conference Series, 151:398–403.
+[13] Good, I. J. (1971) Comment on “measuring information and uncertainty,” by R. J. Buehler.
+In Godambe, V. P. & Sprott, D. A. editors, Foundations of Statistical Inference, pp. 337–339,
+Toronto: Holt, Rinehart and Winston.
+[14] Fujisawa, H. & Eguchi, S. (2008) Robust parameter estimation with a small bias against heavy
+contamination. Journal of Multivariate Analysis, 99(9):2053–2081.
+[15] Van der Vaart, A. W. (1998) Asymptotic Statistics. Cambridge University Press.
+[16] R Core Team. (2013) R: A Language and Environment for Statistical Computing. R Foundation
+for Statistical Computing, Vienna, Austria.
+
+9
+
+
