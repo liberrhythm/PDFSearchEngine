@@ -59,7 +59,11 @@ int main(int argc, char *argv[]) {
                         break;
                     }
                     case '3': ih.printStatistics(); break;
-                    case '4': cout << "Do predictive search" << endl; break;
+                    case '4': {
+                        Searcher se(ih.returnIndex(), ih.getNumDocuments());
+                        se.doPredictiveSearch();
+                        break;
+                    }
                     default: cout << "That is not a valid choice. Please enter another choice." << endl; break;
                 }
                 qchoice = printQueryMenu();

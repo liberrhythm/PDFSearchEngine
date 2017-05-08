@@ -3,31 +3,25 @@
 #include <string>
 #include <vector>
 #include "searcher.h"
+#include "indexinterface.h"
 #include <iostream>
 #include <algorithm>
 
 using namespace std;
 
-
-
-
-class predictiveSearch
-{
-
+class predictiveSearch {
 private:
-
     int count=0;
+    string data;
+    IndexInterface* index;
     vector<pair<string,int>> possibleWords;
 
 public:
-
-    predictiveSearch();
-    void combo(string);
-    void permutation(string);
-    void vecManager();
-
-
-
+    predictiveSearch(IndexInterface*);
+    void combo();
+    void permutation();
+    string vecManager();
+    bool doesWordExist(string);
 };
 
 

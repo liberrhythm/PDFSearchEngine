@@ -32,6 +32,10 @@ string Word::getText() {
     return text;
 }
 
+int Word::getTotalFrequency() {
+    return totalFrequency;
+}
+
 void Word::addFile(string file) {
     totalFrequency += 1;
     int index = findFile(file);

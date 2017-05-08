@@ -27,7 +27,10 @@ class Word {
         Word(string);
         Word(string, string);
         Word(string, pair<string, int>);
+
         string getText();
+        int getTotalFrequency();
+
         void addFile(string);
         void addFileFromIndex(pair<string, int>);
         vector<pair<string, int>>& getFiles();

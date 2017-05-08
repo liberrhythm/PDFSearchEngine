@@ -1,12 +1,12 @@
 #ifndef SEARCHER_H
 #define SEARCHER_H
-//#include "queryprocessor.h"
 #include "avltree.h"
 #include "hashtable.h"
 #include "word.h"
 #include "pdfparser.h"
 #include "indexinterface.h"
 #include "queryprocessor.h"
+#include "predictivesearch.h"
 #include <queue>
 #include <cmath>
 
@@ -18,10 +18,11 @@ class Searcher {
         queue<string> input;
         int numDocs;
         vector<pair<string, int>> tfidfRankings;
-
+        bool isPredictive = false;
     public:
         Searcher();
         Searcher(IndexInterface*, int);
+        void doPredictiveSearch();
         bool checkForWord(string);
         void getQuery();
         void receiveRequest(string, int);

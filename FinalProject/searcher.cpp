@@ -11,6 +11,14 @@ Searcher::Searcher(IndexInterface* ih, int docs) {
     numDocs = docs;
 }
 
+void Searcher::doPredictiveSearch() {
+    isPredictive = true;
+    predictiveSearch ps(index);
+    ps.combo();
+    simpleQuery(ps.vecManager());
+    isPredictive = false;
+}
+
 void Searcher::getQuery() {
     queryProcessor qr;
     input = qr.requestInput();
@@ -91,7 +99,12 @@ void Searcher::calculateTFIDF(vector<pair<string, int>> files) {
 
 void Searcher::printPDF() {
     string doc;
-    cout << "Which pdf would you like to view?" << endl << endl;
+    cout << "Which pdf would you like to view?" << endl;
+
+    if (isPredictive) {
+        cin.ignore();
+    }
+
     getline(cin, doc);
 
     doc = doc.substr(0, doc.length()-4);
@@ -116,8 +129,6 @@ void Searcher::printPDF() {
     inFile.close();
 }
 
-
-
 void Searcher::simpleQuery(string s) {
 
     vector<pair<string, int>> data;
@@ -125,7 +136,7 @@ void Searcher::simpleQuery(string s) {
         data=receiveStringRequest(s);//equals a vector
     }
 
-    input.pop();
+    //input.pop();
     printResults(data);
 }
 
@@ -257,18 +268,6 @@ vector<pair<string, int>> Searcher::vecUnion(vector<pair<string, int>>& overall,
         }
     }
 
-    /*
-    sort(overall.begin(), overall.end(), [](const pair<string, int>& left, const pair<string, int>& right)
-    {return left.first > right.first;});
-    sort(temp.begin(), temp.end(), [](const pair<string, int>& left, const pair<string, int>& right)
-    {return left.first > right.first;});
-
-    it=set_union(overall.begin(), overall.end(), temp.begin(), temp.end(), final.begin(),
-                 [](const pair<string, int>& left, const pair<string, int>& right)
-    {return left.first > right.first;});
-    final.resize(it-final.begin());
-    */
-
     for (pair<string, int> p: temp) {
         overall.push_back(p);
     }
@@ -278,21 +277,6 @@ vector<pair<string, int>> Searcher::vecUnion(vector<pair<string, int>>& overall,
 
 vector<pair<string, int>> Searcher::vecDiff(vector<pair<string, int>>& overall, vector<pair<string, int>>& temp)
 {
-    /*
-    vector<pair<string, int>> final;
-    vector<pair<string, int>>::iterator it;
-
-    sort(overall.begin(), overall.end(), [](const pair<string, int>& left, const pair<string, int>& right)
-    {return left.first > right.first;});
-    sort(temp.begin(), temp.end(), [](const pair<string, int>& left, const pair<string, int>& right)
-    {return left.first > right.first;});
-
-    it=set_difference(overall.begin(), overall.end(), temp.begin(), temp.end(), final.begin(),
-                      [](const pair<string, int>& left, const pair<string, int>& right)
-                        {return left.first > right.first;});
-    final.resize(it-final.begin());
-    */
-
     for(int i=0; i<overall.size(); i++){
         for(int j=0; j<temp.size(); j++){
             if(overall[i].first==temp[j].first){
