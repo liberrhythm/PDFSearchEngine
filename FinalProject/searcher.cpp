@@ -15,7 +15,10 @@ void Searcher::doPredictiveSearch() {
     isPredictive = true;
     predictiveSearch ps(index);
     ps.combo();
-    simpleQuery(ps.vecManager());
+    string str = ps.vecManager();
+    if (str != "") {
+        simpleQuery(str);
+    }
     isPredictive = false;
 }
 

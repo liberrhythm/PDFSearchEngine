@@ -13,6 +13,7 @@ class HashIndex : public IndexInterface {
         Word& find(string);
         bool contains(string);
         void printWords();
+        ~HashIndex() = default;
 };
 
 #endif // HASHINDEX_H

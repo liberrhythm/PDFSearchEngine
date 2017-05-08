@@ -121,8 +121,8 @@ string predictiveSearch::vecManager() {
         cin >> choice;
         cout << endl;
         if (choice < possibleWords.size()) {
-            cout << possibleWords[choice-1].first << endl;
-            return possibleWords[choice-1].first;
+            string str = possibleWords[choice-1].first;
+            return str;
         }
         else {
             possibleWords.clear();
@@ -132,6 +132,7 @@ string predictiveSearch::vecManager() {
         cout << "Oops! Predictive Search wasn't able to find any possible matches in the corpus." << endl;
         //return to the main menu
     }
+    return "";
 }
 
 bool predictiveSearch::doesWordExist(string str) {

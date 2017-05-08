@@ -14,6 +14,7 @@ class AvlIndex: public IndexInterface {
         Word& find(string);
         bool contains(string);
         void printWords();
+        ~AvlIndex() = default;
 };
 
 #endif // AVLINDEX_H
