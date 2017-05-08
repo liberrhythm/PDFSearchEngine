@@ -1,3 +1,15 @@
+/*!
+ *
+ *
+ * \Team Muaz and Sabrina
+ *
+ * \Version 1.0
+ *
+ * \data 2017-05-08
+ *
+ * \oop class, used to hold the string and anything associated with it
+ */
+
 #ifndef WORD_H
 #define WORD_H
 

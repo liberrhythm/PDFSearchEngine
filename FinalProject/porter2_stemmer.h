@@ -1,3 +1,16 @@
+/*!
+ *
+ *
+ * \Team Muaz and Sabrina
+ *
+ *
+ * \Version 1.0
+ *
+ * \data 2017-05-08
+ *
+ */
+
+
 /**
  * @file porter2_stemmer.h
  * @author Sean Massung

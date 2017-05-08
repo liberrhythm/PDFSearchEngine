@@ -1,3 +1,17 @@
+/*!
+ *
+ *
+ * \Team Muaz and Sabrina
+ *
+ * \Version 1.0
+ *
+ * \data 2017-05-08
+ *
+ *\implementation based on porter2_stemmer clarification follows
+ *
+ */
+
+
 /**
  * @file porter2_stemmer.cpp
  * @author Sean Massung

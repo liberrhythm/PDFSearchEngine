@@ -1,3 +1,18 @@
+/*!
+ *
+ *
+ * \Team Muaz and Sabrina
+ *
+ * \Version 1.0
+ *
+ * \data 2017-05-08
+ *
+ *
+ * \ imliments the index interface to search for queries
+ */
+
+
+
 #ifndef SEARCHER_H
 #define SEARCHER_H
 #include "avltree.h"

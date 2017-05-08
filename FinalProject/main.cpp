@@ -1,3 +1,16 @@
+/*!
+ *
+ *
+ * \Team Muaz and Sabrina
+ *
+ * \Version 1.0
+ *
+ * \data 2017-05-08
+ *
+ * \main funciton, includes part of the UI
+ */
+
+
 #include <iostream>
 #include <podofo/podofo.h>
 #include <string>
@@ -28,6 +41,12 @@ char printMaintenanceMenu();
 char printQueryMenu();
 
 int main(int argc, char *argv[]) {
+
+    /*!
+     *\UI begins here, the usere is taken to the print menu part
+     *
+     * \most of the pasing and managing the user experiance is done in the main class
+     */
 
     cout << "PDF Search Engine by Muaz and Sabrina!" << endl;
 
@@ -70,6 +89,7 @@ int main(int argc, char *argv[]) {
             }
         }
         else {
+
             cout << "That is not a valid selection. Please enter one of the choices above." << endl;
         }
         choice = printModeMenu();
@@ -80,6 +100,10 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 
+
+/*!
+ *\standard menue items are displayed and called as part of the user interface
+ */
 char printModeMenu() {
     cout << "Choose a mode: " << endl;
     cout << "1) Maintenance mode" << endl;
@@ -93,6 +117,9 @@ char printModeMenu() {
     return choice;
 }
 
+/*!
+ *\this is a helper menue to facilitiate the loading and adjusting of the index
+ */
 char printMaintenanceMenu() {
     cout << "Maintenance Menu: " << endl;
     cout << "1) Add documents to the index" << endl;
@@ -104,6 +131,10 @@ char printMaintenanceMenu() {
     cout << endl;
     return choice;
 }
+
+/*!
+ *\this is a helper menue to help with the query part of the engin
+ */
 
 char printQueryMenu() {
     cout << "Query mode: " << endl;

@@ -1,4 +1,16 @@
-//takes care of stopwords
+/*!
+ *
+ *
+ * \Team Muaz and Sabrina
+ *
+ * \Version 1.0
+ *
+ * \data 2017-05-08
+ *
+ * \ takes in a directory and reads it into the index
+ */
+
+
 
 #ifndef STREAMPARSER_H
 #define STREAMPARSER_H

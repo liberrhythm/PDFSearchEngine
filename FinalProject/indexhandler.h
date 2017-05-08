@@ -10,6 +10,19 @@
 #include "pdfparser.h"
 #include "word.h"
 
+/*!
+ *
+ *
+ * \Team Muaz and Sabrina
+ *
+ * \Version 1.0
+ *
+ * \data 2017-05-08
+ *
+ * \takes care of the managing and holding the index
+ */
+
+
 using namespace std;
 
 class IndexHandler {

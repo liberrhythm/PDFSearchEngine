@@ -1,3 +1,17 @@
+/*!
+ *
+ *
+ * \Team Muaz and Sabrina
+ *
+ * \Version 1.0
+ *
+ * \data 2017-05-08
+ *
+ */
+
+
+
+
 #include "streamparser.h"
 
 StreamParser::StreamParser() {

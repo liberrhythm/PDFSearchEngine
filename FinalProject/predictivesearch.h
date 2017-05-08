@@ -1,3 +1,19 @@
+/*!
+ *
+ *
+ * \Team Muaz and Sabrina
+ *
+ * \Version 1.0
+ *
+ * \data 2017-05-08
+ *
+ *
+ * \predictive search uses diffrent combination of words to searh the corpus
+ */
+
+
+
+
 #ifndef PREDICTIVESEARCH_H
 #define PREDICTIVESEARCH_H
 #include <string>

@@ -1,3 +1,17 @@
+/*!
+ *
+ *
+ * \Team Muaz and Sabrina
+ *
+ * \Version 1.0
+ *
+ * \data 2017-05-08
+ *
+ *
+ * \ recives queryies from user, manuplates the data and passes it to the searcher
+ */
+
+
 #ifndef QUERYPROCESSOR_H
 #define QUERYPROCESSOR_H
 #include <queue>

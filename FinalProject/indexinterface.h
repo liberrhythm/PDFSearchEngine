@@ -1,3 +1,16 @@
+/*!
+ *
+ *
+ * \Team Muaz and Sabrina
+ *
+ * \Version 1.0
+ *
+ * \data 2017-05-08
+ *
+ * \ pure virutal class for inhrtance between either hashtable or AVl tree
+ */
+
+
 #ifndef INDEXINTERFACE_H
 #define INDEXINTERFACE_H
 
