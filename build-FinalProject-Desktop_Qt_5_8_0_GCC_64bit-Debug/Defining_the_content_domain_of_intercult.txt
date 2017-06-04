@@ -1,0 +1,1053 @@
+The current issue and full text archive of this journal is available at
+www.emeraldinsight.com/0268-3946.htm
+
+JMP
+25,8
+
+Defining the content domain of
+intercultural competence for
+global leaders
+
+810
+
+Allan Bird
+
+Received September 2008
+Revised August 2009
+Accepted October 2009
+
+Northeastern University, Boston, Massachusetts, USA
+
+Mark Mendenhall
+College of Business Administration, University of Tennessee-Chattanooga,
+Chattanooga, Tennessee, USA
+
+Michael J. Stevens
+Goddard School of Business and Economics, Weber State University,
+Ogden, Utah, USA
+
+Gary Oddou
+College of Business Administration, California State University, San Marcos,
+San Marcos, California, USA
+Abstract
+Purpose – Research on expatriation and global leadership has been characterized by wide variations
+in defining what constitutes intercultural competence. Greater progress can be achieved if a
+comprehensive definition of the intercultural competence domain can be established, particularly with
+regard to the specific context of global leadership. This paper aims to focus on the issues.
+Design/methodology/approach – The authors conduct an extensive review of the global
+leadership and expatriation literatures, integrating and synthesizing prior theoretical and empirical
+efforts to develop a comprehensive domain definition for intercultural competence in the context of
+global leadership.
+Findings – The domain of intercultural competence in the context of global leadership comprised
+three dimensions – perception management, relationship management and self management. Each
+dimension is characterized by facets that further delineate aspects of intercultural competence.
+Research limitations/implications – The domain definition of intercultural competence for global
+leadership appears to be well supported in prior theoretical and empirical work focusing on
+expatriation and global leadership; however that work was fragmented in nature. A test of the
+comprehensive model, i.e. all three dimensions and 17 facets, is called for, as well as the validation of
+an instrument that measures them.
+Originality/value – The paper integrates and synthesizes the extensive body of theoretical and
+empirical work related to intercultural competence and clearly establishes the content domain, thereby
+enhancing the efficacy of future theoretical and empirical efforts.
+Keywords Leadership, Human resource management, Multinational companies,
+Cross-cultural management
+Paper type Conceptual paper
+Journal of Managerial Psychology
+Vol. 25 No. 8, 2010
+pp. 810-828
+q Emerald Group Publishing Limited
+0268-3946
+DOI 10.1108/02683941011089107
+
+Intercultural competence is increasingly necessary in today’s global workplace as
+collaborative and coordinating demands increasingly stretch leaders’ capacities to
+perceive, interpret and act in ways that achieve organizational goals. Since the early
+
+1990s, an increasing number of scholars have been studying effective global leaders
+and attempting to delineate the competencies that are critical to their success. Reviews
+of this literature (Bird and Osland, 2004; Jokinen, 2005; Mendenhall, 2001; Mendenhall
+and Osland, 2002a, b; Osland, 2008; Osland et al., n.d., in press) find that social
+scientists have delineated over fifty competencies that influence global leadership
+effectiveness; however, many of these competencies overlap conceptually and are often
+separated only by semantic differences (Jokinen, 2005; Osland, 2008).
+Greater clarity can be brought to the study of global leadership by delineating the
+specific content domain of constructs identified as essential to it. Progress in
+delineating the relationship of intercultural competence to global leadership
+effectiveness and performance is presently hampered due to varying
+conceptualizations of the content domain of intercultural competence, particularly
+with regard to the context of global leadership. In this paper, we will review the
+empirical findings from the global leadership and expatriation literatures related to
+intercultural competence and present a comprehensive formulation of intercultural
+competence.
+Defining intercultural competence and global leadership
+Perhaps because it has been widely addressed across a range of disciplines – from
+psychology to international management to education, to name a few – intercultural
+competency has been broadly defined as the ability to function effectively in another
+culture (see Dinges and Baldwin, 1996; Gertsen, 1990). As Deardorff (2004) notes, there
+is widespread disparity in delineating what specifically comprises intercultural
+competence. In their review of literature, Chen and Starosta (1996) point out that it is
+often described as involving affective, cognitive and behavioral perspectives.
+Leiba-O’Sullivan (1999) further distinguishes between stable and dynamic
+competencies, noting that the former are stable and enduring, while the latter are
+more susceptible to development through training. Dynamic competencies are also
+highly context- and task-dependent. Within this paper we retain the broad definition
+and define the relevant content domain in terms of stable competencies, which are also
+often defined in terms of personality traits or predispositions.
+The definition of global leadership is similarly challenging. As both Jokinen (2005)
+and Osland (2008) point out in their review of global leadership research, distinctions
+between domestic and global leadership and between global managers and global
+leaders consistently emerge as central issues. Osland (2008) suggests, and we adopt, a
+definition of global leadership as “the process of influencing the thinking, attitudes,
+and behaviors of a global community to work together synergistically toward a
+common vision and common goal”. This definition applies not only to individuals in
+clearly identifiable leadership positions, but to anyone whose effective role involves
+this process.
+A review of the global leadership and expatriation literatures
+Mendenhall and Osland (2002a, b) categorized the global leadership literature as
+exhibiting six core dimensions of competencies, with numerous facets within each
+dimension (see Table I).
+When they subsequently compared the dimensions of global leadership and
+attendant competencies to the literature of expatriate effectiveness, they found
+
+Defining the
+content domain
+
+811
+
+Table I.
+The terrain of global
+leadership constructs
+Courage
+Commitment
+Hardiness
+Maturity
+Results-orientation
+Personal literacy
+
+Conflict management
+
+Negotiation expertise
+
+Empowering others
+
+Managing cross-cultural
+ethical issues
+Social literacy
+
+Cultural literacy
+
+Global business
+expertise
+
+Global business
+Team building
+savvy
+Global
+Continuity building
+organizational savvy
+Thinking agility
+Business acumen
+Organizational
+networking
+Improvisation
+Stakeholder
+Creating learning
+orientation
+systems
+Pattern recognition External orientation Architecting and
+designing
+Cognitive
+Results-orientation
+Global networking
+complexity
+Cosmopolitanism
+Strong customer
+orientation
+Managing
+Business literacy
+uncertainty
+Local vs global
+Change agentry
+paradoxes
+Behavioral
+flexibility
+
+Environmental
+scanning
+Global mindset
+
+Source: Adapted from Mendenhall and Osland (2002b)
+
+Tenacity
+Emotional
+intelligence
+
+Accountability
+Integrity
+
+Inquisitiveness and
+curiosity
+Continual learner
+
+Cross-cultural
+communication skills
+Ability to emotionally
+connect
+Inspire, motivate others
+
+Building relationships
+
+Cognitive
+orientation
+
+Catalyst for strategic change
+
+Catalyst for cultural change
+
+Entrepreneurial spirit
+
+Articulating a tangible vision
+and strategy
+Envisioning
+
+Global business competencies
+Macro level
+Global organizing
+expertise
+Visioning
+
+812
+
+Intercultural competencies
+Person/group level
+Cross-cultural relationship
+skills
+Traits and values
+
+JMP
+25,8
+
+significant overlap between three of the competency domains of global leadership that
+relate specifically to intercultural effectiveness and competencies that are important to
+living and working in a foreign country as an expatriate ( Jokinen, 2005; Mendenhall,
+2001; Mendenhall and Osland, 2002a, b; Osland et al., 2006; Osland, 2008). The six
+dimensions can be conceptually divided between those that involve competencies
+directly related to intercultural interaction at the person and small group level (which
+are critical to expatriate effectiveness and global leadership), and those that involve the
+mastery of more macro, global business knowledge and skills. All the reviews agree
+that a major dimension of global leadership involves the mastery of intercultural
+competencies ( Jokinen, 2005; Mendenhall, 2001; Mendenhall and Osland, 2002a, b;
+Osland et al., 2006; Osland, 2008). However, none of the reviews to date are able to
+definitively delineate which intercultural competencies form the nomological net in
+terms of their valence and cogence to manifestations of effective global leadership.
+Review of the expatriation literature
+Because the reviews of global leadership competencies clearly indicated a strong
+overlap with the expatriate adjustment competency domain when it comes to
+intercultural effectiveness, we analyzed reviews of the empirical expatriate adjustment
+literature since 1984 (Arthur and Bennett, 1995; Bhaskar-Shrinivas et al., 2005; Dinges
+and Baldwin, 1996; Gertsen, 1990; Harrison et al., 2004; Hechanova et al., 2003; Jordan
+and Cartwright, 1998; Kealey, 1996; Mendenhall et al., 2002; Mendenhall and Oddou,
+1985; Mol et al., 2005; Oddou and Mendenhall, 1984; Ones and Viswesvaran, 1997;
+Ronen, 1989; Stahl, 2001; Thomas, 1998; Thomas and Lazarova, 2006) to evaluate their
+assessment of the state of the field. Additionally, we have included empirical studies
+that were not included in the aforementioned reviews or that were published after the
+appearance of these reviews. To assess the empirical literature of the global leadership
+field, we analyzed the most prominent reviews of that literature to date (Jokinen, 2005;
+Mendenhall, 2001; Mendenhall and Osland, 2002a, b; Osland, 2008; Osland et al., n.d.).
+Expatriate adjustment competencies
+The ability to adjust to the work, social, and general cultural dimensions of a new
+culture has been shown to influence subsequent productivity in an overseas
+assignment (Kraimer et al., 2001; Harrison and Shaffer, 2005). Successful expatriate
+adjustment predicts task completion and relationship building effectiveness during the
+overseas assignment (Harrison and Shaffer, 2005), thus an understanding of what
+competencies influence expatriate adjustment is critical to an understanding of
+enhancing individual performance in the global workplace.
+Mendenhall and Oddou (1985) undertook a review and categorization of
+competencies associated with expatriate adjustment. They found that factors
+influencing expatriate adjustment could be grouped into one of three categories: the
+self-oriented dimension, the others-oriented dimension, and the perceptual dimension.
+The self-oriented dimension includes “activities and attributes that serve to
+strengthen the expatriate’s self-esteem, self-confidence, and mental hygiene”
+Mendenhall and Oddou (1985, pp. 40, 41, 42). The others-oriented dimension
+includes “activities and attributes that enhance the expatriate’s ability to interact
+effectively with host-nationals”, while the perceptual dimension contains cognitive
+processes that facilitate an expatriate’s “ability to understand why foreigners behave
+
+Defining the
+content domain
+
+813
+
+JMP
+25,8
+
+814
+
+the way they do”, thus enhancing their “ability to make correct attributions about the
+reasons or causes of host-nationals’ behavior”).
+This categorization has been), in part, the basis for the most rigorously tested,
+influential and robust model of expatriate adjustment in the field, the international
+adjustment model (IA). The IA model was developed by Black et al. (1991) and
+comprehensive reviews and empirical validation of this model have been conducted by
+Bhaskar-Shrinivas et al. (2005), Hechanova et al. (2003) Mendenhall et al. (2002) and
+Shaffer et al. (1999).
+In the IA model Mendenhall and Oddou’s (1985) earlier categories were renamed:
+self-orientation became self-efficacy, reflecting the degree to which an individual
+believes he or she has the ability to succeed in new tasks and settings (Bandura, 1977);
+others-oriented and perceptual, were respectively renamed relational and perceptual.
+These three dimensions constituted the Individual dimension of the IA model,
+which focused on traits and competencies that had been shown in the literature to
+positively influence heightened levels of success in interacting with people from other
+cultures in overseas or cross-culturally significant settings. The Individual dimension
+constituted one of four dimensions of direct determinants of expatriate adjustment (the
+others were job, organizational, and nonwork).
+A comprehensive meta-analysis of the IA model by Bhaskar-Shrinivas et al. (2005) of
+over 50 determinants of expatriate adjustment using data from 8,474 expatriates in 66
+studies emphasized the “centrality, criticality, and complexity of adjustment, strongly
+supporting Black et al.’s (1991, pp. 257, 272) model.” They also concluded that the
+“meta-analytic findings attest to the importance of some individual factors – overall
+self-efficacy and relational skills – in predicting expatriate adjustment. The variance
+explained by the latter exceeded that explained by other predictors by 30 percent”.
+To summarize, empirical evidence suggests that the content domain of intercultural
+competence can be usefully organized using three broad dimensions for individuals:
+the cognitive/perceptual, other/relationship, and self/self-efficacy domains
+(Bhaskar-Shrinivas et al., 2005; Mendenhall and Oddou, 1985; Black et al., 1991;
+Thomas, 1998, p. 247). For clarity purposes, these three dimensions have been re-titled
+the Perception Management, Relationship Management, and Self Management factors.
+These three major intercultural competency factors will be reviewed below, along
+with their dimensions; a brief discussion of the empirical support for each dimension is
+included as well. It is important to note that based on the global leadership/expatriate
+adjustment literatures, there are many competencies that can be classified within one
+of the three aforementioned competency factors. Based on the reviews of the literature
+we conducted we determined that seventeen intercultural competency dimensions
+most prominently emerged in terms of:
+.
+consistency of appearance in empirical studies in the literature;
+.
+influence on interpersonal processes important to global leadership as reported
+in the expatriate and global leadership literatures; and
+.
+generative impact, i.e. influence the impact, development or acquisition of
+dynamic competencies.
+There is a strong need in this nascent field for parsimony of content domain; that is, an
+enormous list of competencies is unwieldy, and does not assist either social scientists
+or practitioners to advance the field effectively. Our desire is that this three factor
+
+framework of 17 intercultural competency dimensions can serve as a starting point for
+scholars and practitioners working in this area to build from, with the anticipated
+outcome of a future understanding of global leadership competencies that is more
+nuanced, refined, and complex in nature. Currently, however, the vast number of
+intercultural competencies that can serve as candidates for being important to global
+leadership leave scholars in the field working haphazardly; for the field to progress in a
+more refined understanding of its phenomenon, a parsimonious framework is needed.
+Perception management
+Perception management addresses how people cognitively approach cultural
+differences. It assesses people’s mental flexibility when confronted with cultural
+differences, their tendency to make rapid judgments about those differences, their
+ability to manage their perceptions when confronted with situations that differ from
+what they expect, and finally, it also assesses people’s innate interest in, and curiosity
+about, other cultures. This factor comprised five facets.
+Nonjudgmentalness refers to the extent to which one is inclined to withhold or
+suspend judgment about persons or situations or behaviors that are new or unfamiliar.
+In both the global leadership and expatriate literatures this facet relates to intercultural
+effectiveness (Hudson and Inkson, 2006; McCall and Hollenbeck, 2002; Moro Bueno and
+Tubbs, 2004).
+Inquisitiveness reflects openness towards, and an active pursuit of understanding,
+ideas, values, norms, situations, and behaviors that are new and different. It involves
+the willingness to seek to understand the underlying reasons for cultural differences
+and to avoid stereotyping people from other cultures. It also includes one’s capacity to
+actively take advantage of opportunities for growth and learning. Tucker et al. (2004,
+p. 230) conceptualize it as “the capability to accept new ideas and see more than one’s
+own way of approaching and solving problems”.
+This dimension also emerged in reviews of the global leadership literature (Bird and
+Osland, 2004; Jokinen, 2005; Osland, 2008) and has also found support in work by
+Kealey and his associates (Kealey, 1996; Kealey and Ruben, 1989) and others in the
+expatriate literature (Arthur and Bennett, 1997; Black and Gregersen, 1991; Hudson
+and Inkson, 2006; Mol et al., 2005). Black et al. (1999) found that inquisitiveness was the
+most important factor within the constellation of competencies identified in their study.
+Tolerance of ambiguity refers to the ability to manage uncertainty in new and
+complex situations where there is not necessarily a “right” way to interpret things.
+People may be open to new ideas and experiences, but not necessarily manage the
+ambiguity and uncertainty associated with them.
+Tolerance of ambiguity has commonly been found to be an important competency
+contributing to intercultural effectiveness in both the global leadership (Jokinen, 2005;
+Mendenhall and Osland, 2002a, b) and expatriate literatures (Arthur and Bennett, 1995,
+1997; Cui and Awa, 1992; Hermann et al., 2008).
+For example, Black et al.(1999) found that the ability to not only manage
+uncertainty – but to embrace it and find it challenging and motivating, is an important
+competency of global leaders. Ruben and Kealey (1979) found that tolerance for
+ambiguity acts as an important contributor to the ability to communicate well with
+people from other cultures, indicating that this competency combines with relationship
+management competencies to enhance overall intercultural effectiveness.
+
+Defining the
+content domain
+
+815
+
+JMP
+25,8
+
+816
+
+Cosmopolitanism refers to a natural interest in and curiosity about different
+countries and cultures, as well as the degree of interest in world and international
+events. To be effective in a global or cross-cultural milieu, it is necessary to have a
+perspective of time and space that extends beyond one’s local setting (Kedia and
+Mukherji, 1999; Flango and Brumbaugh, 1974; Goldberg, 1976). This is an important
+orientation for global leaders to possess and emerged in reviews of the literature on
+effective global leadership competencies (Bird and Osland, 2004; Mendenhall and
+Osland, 2002; Osland et al., 2006).
+Our conceptualization of cosmopolitanism reflects that of Levy et al. (2007, p. 240)
+who argue that cosmopolitanism “represents a state of mind that is manifested as an
+orientation toward the outside, the Other [. . .] a willingness to explore and learn from
+alternative systems of meaning held by others”.
+Category inclusiveness refers to the tendency to cognitively include and accept
+things (including people) based on commonalities rather than dividing things into
+groups or categories (even though noticeable categories for differentiating things or
+people may exist. Detweiler (1975, 1978, 1980) identified category width as a construct
+that captures the tendency of people to apply cognitive categories more loosely. He
+found empirical support for the thesis that people with broader categories (i.e. people
+who define categories to be more inclusive) will be similarly more inclusive when it
+comes to people who are perceived to be culturally different. Category Inclusiveness
+represents a refinement of the construct label by denoting how individuals use their
+categorizing activities – to include rather than exclude.
+Relationship management
+Relationship management addresses people’s orientation toward the importance of
+relationships in general; how aware they are of others and their interaction styles,
+values, etc., and the level of awareness they have of themselves and their impact on
+others. This factor complements the Perception Management factor in that it focuses
+on how mental structures shape behaviors, especially with respect to the development
+and management of intercultural, interpersonal relationships.
+It should be noted that relationships also provide a source of information to help
+people understand other cultures as well as serve as a source of social support. The
+development of positive relationships is a critical aspect of effective intercultural job
+performance (Harrison and Shaffer, 2005; Mol et al., 2005). Five dimensions comprised
+this factor.
+Relationship interest refers to the extent to which people exhibit interest in, and
+awareness of, their social environment. People may be high in relationship interest, yet
+nevertheless still lack the actual ability to develop effective relationships with those in
+whom they are interested.
+In the literature this intercultural competency is often bundled together
+conceptually with other skills into broader conceptualizations of interpersonal skills;
+for example, Shaffer et al. (2006, p. 113) conceptualize their people orientation variable
+as encompassing “a desire to understand and relate to HCNs [what we term,
+Relationship Interest] and to develop close relationships with them [what we term
+Interpersonal Engagement]”. In their meta-analytic review of the expatriate
+performance literature, Mol et al. (2005) found that the factor, interpersonal interest
+emerged as a solid predictor of expatriate job performance.
+
+This facet of the Relationship management factor has been noted in both the
+expatriate literature (Arthur and Bennett, 1997; Kühlmann and Stahl, 1996; Sinangil and
+Ones, 1997) and in the global leadership literature (Mendenhall and Osland, 2002a, b).
+Interpersonal engagement refers to the degree to which people have a desire and
+willingness to initiate and maintain relationships with people from other cultures.
+Different terms have been used to denote this facet, including: people orientation
+(Shaffer et al., 2006) interaction management (Ruben and Kealey, 1979), relationship
+building (Kealey, 1996), outgoingness or extraversion (Arthur and Bennett, 1995;
+Ronen, 1989), relational abilities ( Jordan and Cartwright, 1998; Thomas, 1998),
+sociability and interest in other people (Kealey and Ruben, 1983; Stahl, 2001),
+interpersonal skills (Hechanova et al., 2003) and intercultural competence (Dinges and
+Baldwin, 1996). Global leadership literature reviews similarly note that this is an
+important competency for effective intercultural interaction ( Jokinen, 2005;
+Mendenhall and Osland, 2002).
+Emotional sensitivity refers to the extent to which people have an awareness of, and
+sensitivity to, the emotions and feelings of others. Emotional sensitivity is akin to the
+Big Five personality factor of agreeableness, which refers to a prosocial and communal
+orientation towards others without antagonism ( John and Srivastava, 1999; Shaffer
+et al., 2006) and displaying courtesy and tact, empathy, kindness, and respect (Ones
+and Viswesvaran, 1997; Shaffer et al., 2006). Mol et al. (2005) found in their
+meta-analysis of the expatriate literature that Agreeableness is a predictor of
+expatriate job performance. Similarly, Shaffer et al.(2006) found it to be a key predictor
+of interaction adjustment.
+Research in both the global leadership and expatriate literatures has found that
+emotional sensitivity is critical to intercultural effectiveness as it contributes to an
+individual’s ability to: show appropriate respect to others (Jordan and Cartwright,
+1998; Moro Bueno and Tubbs, 2004), display both interpersonal and cultural empathy
+(Cui and Van den Berg, 1991; Martin and Hammer, 1989), and show tolerance for
+differences in others (Hudson and Inkson, 2006; Selmer, 2001).
+Self-awareness refers to the degree to which people are aware of:
+.
+their strengths and weaknesses in interpersonal skills;
+.
+their own philosophies and values;
+.
+how past experiences have helped shape them into who they are as a person; and
+.
+the impact their values and behavior have on relationships with others.
+High self-awareness provides a foundation for strategically acquiring new
+competencies and skills, whereas low self-awareness promotes self-deception and
+arrogance.
+Jokinen (2005) categorizes this dimension as being one of the primary intercultural
+competencies fundamental to effective global leadership. Similarly, Varner and Palmer
+(2005, p. 1) argue from a theoretical standpoint that “conscious cultural self-knowledge
+is a crucial variable in adapting to other cultures”. Goldsmith et al. (2003) include
+self-awareness as an important competency in the personal mastery component of their
+global leadership model. Wills and Barnham (1994) found that emotional
+self-awareness was an important predictor of intercultural effectiveness, and Chen
+(1987) found that it related to intercultural communication competence. Similarly, Bird
+
+Defining the
+content domain
+
+817
+
+JMP
+25,8
+
+818
+
+and Osland (2004) concluded that one of the byproducts of the competency of
+self-awareness, a sense of humility, is an important competency for successful
+intercultural interaction.
+Social flexibility refers to the extent to which individuals present themselves to others
+in order to create favorable impressions and to facilitate relationship building. Kealey
+(1996, p. 86) refers to this as “the ability to modify ideas and behavior, to compromise,
+and to be receptive to new ways of doing things”. This is commonly manifested in both
+the global leadership research literature (Mendenhall and Osland, 2002a, b) and the
+expatriate research literature as being important to intercultural effectiveness
+(Kühlmann and Stahl, 1996, 1998; Martin and Hammer, 1989; Ward, 1996).
+Scholars have operationalized social flexibility in a variety of ways. One approach is
+via the constructs of self-monitoring or impression management. Mendenhall and Wiley
+(1994) hypothesized a relationship between impression management and expatriate
+adjustment, and Montagliani (1996) found that it significantly correlated with cultural
+adjustment scores, suggesting that individuals who use behavioral cues in the social
+environments of new cultures will increase their potential to enhance their ability to adjust
+and be effective in those new cultures. Similarly, in their metanalysis of the expatriate
+literature, Hechanova et al. (2003) reported that Caligiuri (1995) found that self-monitoring
+correlated with general expatriate adjustment and Harrison, Chadwick, and Scales (1996)
+found it was associated with interactional adjustment on the part of expatriates.
+Self-management
+The self-management factor takes into account people’s strength of identity and their
+ability to effectively manage their emotions and stress. To be successful in
+intercultural situations, it is critical that people have a clear sense of themselves and a
+clear understanding of their fundamental values. To be effective in a global context,
+people must be able to understand, change and adapt appropriately to the foreign work
+and intercultural environment, yet at the same time, they must also have a stable sense
+of self in order to remain mentally and emotionally healthy. Seven competency scales
+comprise this factor. Of the seven dimensions, three relate to sense of self and four
+relate to managing emotions and stress.
+Optimism refers to the extent to which people maintain a positive, buoyant outlook
+toward other people, events, situations and outcomes. Optimism and its derivative
+benefits are found both in the global leadership and expatriate literatures (Caligiuri,
+2004; Gertsen, 1990; Kühlmann and Stahl, 1996; McCall and Hollenbeck, 2002).
+Caligiuri (2004), in a study of 256 global leaders, found that they were significantly
+higher in the realm of “conscientiousness” and significantly lower on the dimension of
+“neuroticism” in terms of their Big Five personality scores than less effective global
+leaders. Some of the lexical markers of Conscientiousness are being purposeful,
+strong-willed, and determined (Ones and Viswesvaran, 1997), all manifestations of
+optimism.
+Self-confidence refers to the degree to which people have confidence in themselves
+and have a tendency to take action to overcome obstacles and master challenges.
+Although people may be optimistic regarding cross-cultural situations, they may
+nevertheless lack the self-confidence to act positively on their optimism.
+Self-confidence was noted by Kealey (1996, p. 84) in his review as being an
+important competency “that is needed to be successful in another culture”. Similarly,
+
+other scholars have found self-confidence or self-efficacy to be important variables in
+intercultural effectiveness and adjustment (Arthur and Bennett, 1995, 1997;
+Bhaskar-Shrinivas et al., 2005; Gertsen, 1990; Goldsmith et al., 2003; Harrison et al.,
+2004; Hechanova et al., 2003; Jordan and Cartwright, 1998; Shaffer et al., 1999; Smith,
+1966). In their meta-analyses of the expatriate adjustment literature, Bhaskar-Shrinivas
+et al. (2005) and Hechanova et al. (2003) found that self-efficacy was a significant
+predictor of expatriate adjustment.
+Self-confidence relates to the Big Five personality dimension of extraversion, which,
+among other things, reflects an energetic approach toward the social and material
+world, sociability, and positive emotionality (John and Srivastava, 1999). Extraversion
+has been shown to empirically predict expatriate performance (Mol et al., 2005)
+Self-identity refers to the extent to which people maintain personal values
+independent of situational factors and have a strong sense of personal identity. A
+strong self-identity allows people to integrate their new cultural knowledge into
+existing mental models, whereas those low in self-identity are either unable to integrate
+new knowledge, or when they do, they experience life crises that overwhelm them.
+Self-identity is akin to the construct of independent self-construal (Markus and
+Kitayama, 1991, p. 226), which involves “construing oneself as an individual whose
+behavior is organized and made meaningful primarily by reference to one’s own
+internal repertoire of thoughts, feelings, and actions rather than by reference to
+thoughts, feelings, and actions of others”. Research findings suggest that expatriates
+with independent self-construals have higher levels of psychological adjustment
+overseas than expatriates with interdependent self-construals (Oguri and Gudykunst,
+2002; Pi-Ju Yang et al., 2006; Yamaguchi and Wiseman, 2001)
+Emotional resilience refers to the extent to which a person has emotional strength
+and resilience to cope with challenging cross-cultural situations. Emotional resilience
+reflects the psychological hardiness that allows a global manager to carry on through
+difficult challenges. Individuals who can manage and control their emotions are also
+better equipped to deploy other global competencies than those who are low in
+emotional resilience.
+This dimension emerged in Mendenhall and Osland’s (2002a, b) review of the global
+leadership literature, where they labeled it “hardiness”. It similarly emerged from the
+ION review of global competencies (Bird and Osland, 2004). Emotional resilience is a
+common indicator of intercultural effectiveness in the expatriate literature as well
+(Arthur and Bennett, 1995, 1997; Caligiuri, 2000; Kealey, 1996).
+Non-stress tendency refers to the scope of the dysfunctional stressors that may
+influence people in their daily work and social life in intercultural situations. The
+greater the tendency people have to experience stress, the more likely it is that they will
+find it difficult to deploy their inercultural competencies in an effective way. Shaffer
+et al. (2006, p. 112) label this emotional stability and define it as “the tendency to
+experience positive emotional states and to respond calmly to stressful events”. Kealey
+(1996, p. 86) refers to this competency as “the ability to be calm and steadfast despite
+opposition, difficulties, or adversity [. . .] Learning to be patient is critical for success”.
+Sometimes referred to as patience in the literature, it has been shown to be a critical
+element of intercultural effectiveness (Gertsen, 1990; Kealey, 1994, 1996).
+Responding to events naturally, with a calm, consistent bearing (Arthur and
+Bennett, 1995, 1997; Mischel, 1965; Smith, 1966) or not being “easily worried [or]
+
+Defining the
+content domain
+
+819
+
+JMP
+25,8
+
+820
+
+nervous” (Mol et al., 2005, p. 612) is an important competency in living and working in
+cross-cultural settings. In their meta-analysis of 30 primary empirical studies in the
+expatriate literature on predictors of expatriate job performance, Mol and associates
+found that an orientation toward neuroticism was antithetical to performance in
+cross-cultural settings.
+Stress management refers to the degree to which individuals actively utilize stress
+reduction techniques in their personal lives and are willing to use new techniques in the
+future. People who consistently use stress reduction techniques are better able to
+manage or enhance their emotional resilience and innate tendency to be unaffected by
+typical stressors and gain energy to deploy other global competencies effectively.
+Empirical evidence on the relationship of stress to expatriate adjustment provides
+strong support for the importance of this facet (Coyle, 1988; Feldman and Tompson,
+1993; Redmond and Bunyi, 1991; Searle and Ward, 1990).
+Interest flexibility refers to the willingness to substitute important personal interests
+from one’s own background and culture with similar, yet different interests in the host
+culture. The ability to find new interests and activities to replace existing ones that do
+not fit within the new culture is important in being successful in global or intercultural
+settings (Brein and David, 1973; David, 1976; Mumford, 1975).
+Recent research on this variable has supported the concept of interest flexibility as a
+positive influence on expatriate adjustment. Zimmerman et al. (2003, p. 58) found that
+German expatriates in the People’s Republic of China had higher levels of adjustment if
+they were able to adjust their habits to fit what was available in the host culture.
+Regarding leisure activities, they concluded that “the principal mode of adjusting to the
+perceived lack of leisure possibilities was to change their habits [. . .] [such as changing]
+their sports, such as giving up mountain-biking for playing squash”.
+Discussion
+Social scientists and practitioners working in the field of global leadership suffer from
+the lack of a common agreement regarding the domain of intercultural competencies
+that influence global leadership effectiveness. Working without such a framework
+exacerbates tendencies toward atheoretical, survey-oriented, conceptual mapping
+studies that often reproduce similar findings but couch them in new terminology. Such
+efforts are not entirely unproductive, however enough of these studies now exist in the
+field to warrant an integration of their findings into a working framework from which
+more refined empirical and theoretical research should ensue.
+The primary contribution of this paper is the delineation of the content domain of
+intercultural competence as it applies to the phenomenon of global leadership. A
+comprehensive review of the empirical literatures of global leadership and the closely
+related area of expatriate adjustment suggests that three broad factors that constitute
+intercultural competence in this particular context exist. The three factors that
+emerged are consistent with both the theoretical (Mendenhall and Oddou, 1985; Black
+et al., 1991) and empirical literatures (Bhaskar-Shrinivas et al., 2005; Hechanova et al.,
+2003; Mendenhall et al., 2002; Shaffer et al., 1999) and at the same time extend the field
+through the identification and categorization of dimensions for each faactor.
+We propose that these three factors – perception management, relationship
+management and self management – comprised 17 dimensions that have been shown
+to consistently emerge from the extant empirical literature (five each for perception
+
+management and relationship management and seven for self management). We
+reiterate that whether more competencies should be added to these dimensions is an
+empirical question for the field. The value of the framework provided in this paper is
+not as a final categorization of intercultural competencies associated with global
+leadership, but rather as a foundation upon which scholars can build a more
+sophisticated, nuanced understanding of intercultural competencies associated with
+global leadership and their interrelationships.
+Caution is warranted regarding the proposed framework, as no published empirical
+investigations have as yet examined the full set of dimensions embodied in this
+presentation of the intercultural competence construct. A test of the comprehensive
+framework, i.e. all three factors and 17 dimensions is called for, as well as the
+validation of an instrument that measures them. In this vein, of particular interest
+would be the examination of the internal consistency of the dimensions for each factor
+as well as the a more rigorous understanding of the nomological net of intercultural
+competence, including its antecedents and its impact on global leadership
+effectiveness, especially as that influences key organizational outcomes.
+A preliminary empirical investigation of the overall framework has yielded
+promising findings that suggest the framework has rich potential. In a study of
+Japanese expatriate managers, Furuya and associates (Furuya et al., 2009) found the
+framework had predictive value with regard to several positive outcomes related to
+global leadership. Specifically, they found that intercultural competency as defined and
+measured using this framework positively influenced several global leadership-related
+variables, including global business acumen (Black et al., 1999), interpersonal skills
+(Bird and Osland, 2004) and systems management skills (Bird and Osland, 2004).
+Because these variables fall under Leiba-O’Sullivan’s (1999) definition of dynamic
+skills, these findings suggest that the three factors encompass intercultural
+competencies that serve as “building blocks” in the development of other global
+leadership capabilities. Moreover, the set of intercultural competencies was associated
+with higher levels of competency transfer as well as higher levels of job performance.
+The findings by Furuya and associates points to an important issue – how does this
+set of intercultural competency factors with their attendant dimensions relate to the
+larger set of global leadership competencies? One established model of global
+leadership competencies is the global leadership pyramid (see Figure 1), developed by
+Bird and Osland (2004) and subsequently refined by Osland (2008). The perception
+management and self-management factors match up well with the threshold trait and
+attitudes and orientations levels of the pyramid. Additionally, the relationship
+management factor aligns with the interpersonal skills level of the pyramid. The 17
+intercultural competency dimensions flesh out in detail the foundational layers of Bird
+and Osland’s, 2004 model, allowing for more concrete hypothesis development and
+subsequent empirical testing of the hypotheses. More specifically, it can be argued that
+relationship interest, interpersonal engagement, emotional sensitivity, self-awareness
+and social flexibility provide foundational competencies that allow for and support
+mindful communication in intercultural contexts, contribute to the creation and
+maintenance of trust relationships and facilitate the effective participation and
+leadership of multicultural teams.
+For practitioners, the lack of an integrative framework that provides direction
+regarding intercultural competencies that are important for inclusion in global
+
+Defining the
+content domain
+
+821
+
+JMP
+25,8
+
+822
+
+Figure 1.
+Global leadership
+competency pyramid
+
+leadership development and assessment initiatives has been a hindrance to
+organizations. This lack of guidance from social science forces practitioners to
+continually wonder, “What competencies should we build our global leadership
+programs upon?” Similarly, the intense need to develop and retain global talent
+requires that global leadership competencies be measurable so that firms can assess
+and develop those competencies within their human capital. Knowing that you can
+develop global skills has the potential to enhance ambition and allow managers to see
+themselves as growing in their skill set, thus producing loyalty and productivity
+within a firm’s talent base (see Capelli, 2008). Indeed, the findings of Furuya et al. (2009)
+appear to support Capelli’s thesis.
+Without a foundational framework they are forced to traverse the entire field in
+search of which competencies to include and which to exclude in their program
+designing efforts. Or, conversely, often the idea of scouring through the research
+literature proves daunting, and instead decision making regarding competency
+inclusion in global leadership programs relies upon intuition, copying what other
+companies have done, armchair theorizing, guesswork, or abandonment of the effort
+altogether. The outcome is idiosyncratic leadership development programs that vary
+widely in terms of competencies addressed both within industries and across
+industries, and the lack of successful development of actual global leaders within firms.
+The value-added of the proposed framework for organizations is that it can serve as a
+ready template upon which practitioners can operate from in their global leadership
+
+development design efforts. Operating in tandem with social scientists, assessment of
+their development efforts would serve to refine the framework incrementally over time,
+and allow for more focused training and assessment refinements to ensue within
+organizational development programs.
+References
+Arthur, W. Jr. and Bennett, W. Jr. (1995), “The international assignee: the relative importance of
+factors perceived to contribute to success”, Personnel Psychology, Vol. 48, pp. 99-113.
+Arthur, W. Jr. and Bennett, W. Jr. (1997), “A comparative test of alternative models of
+international assignee job performance”, in Aycan, Z. (Ed.), New Approaches to Employee
+Management. Expatriate Management: Theory and Research, Vol. 4, JAI Press, Greenwich,
+CT, pp. 141-72.
+Bandura, A. (1977), “Self-efficacy: toward a unifying theory of behavioral change”, Psychological
+Review, Vol. 84, pp. 191-215.
+Bhaskar-Shrinivas, P., Harrison, D.A., Shaffer, M.A. and Luk, D.M. (2005), “Input-based and
+time-based models of international adjustment: meta-analytic evidence and theoretical
+extensions”, Academy of Management Journal, Vol. 48, pp. 259-81.
+Bird, A. and Osland, J. (2004), “Global competencies: an introduction”, in Lane, H. (Ed.)
+Maznevski, M., Mendenhall, M. and McNett, J. (Eds), Handbook of Global Management,
+Blackwell, Oxford, pp. 57-80.
+Black, J.S. and Gregersen, H.B. (1991), “The other half of the picture. Antecedents of spouse
+cross-cultural adjustment”, Journal of International Business Studies, Vol. 22, pp. 461-77.
+Black, J.S., Mendenhall, M. and Oddou, G. (1991), “Toward a comprehensive model of
+international adjustment: an integration of multiple theoretical perspectives”, Academy of
+Management Review, Vol. 16 No. 2, pp. 291-317.
+Black, J.S., Morrison, A. and Gregersen, H.B. (1999), Global Explorers: The Next Generation of
+Leaders, Routledge, New York, NY.
+Brein, M. and David, K.H. (1973), Improving Cross-cultural Training and Measurement of
+Cross-Cultural Learning, Vol. 1, Center for Research and Education, Denver, CO.
+Caligiuri, P.M. (1995), “Individual characteristics related to effective performance in
+cross-cultural work settings (expatriate)”, unpublished doctoral dissertation,
+Pennsylvania State University, University Park, PA.
+Caligiuri, P.M. (2000), “The big five personality characteristics as predictors of expatriate’s desire
+to terminate the assignment and supervisor-rated performance”, Personnel Psychology,
+Vol. 53, pp. 67-88.
+Caligiuri, P.M. (2004), “Global leadership development through expatriate assignments and other
+international experiences”, paper presented at the Academy of Management, New Orleans,
+LA, August.
+Capelli, P. (2008), “Talent management for the twenty first century”, Harvard Business Review,
+March, pp. 74-81.
+Chen, G. (1987), Dimensions of Intercultural Communication Competence, Publication No. AAT
+8719577, PhD dissertation, Kent State University, Ohio.
+Chen, G.M. and Starosta, W.J. (1996), “Intercultural communication competence: a synthesis”,
+Communication Yearbook, Vol. 19, pp. 353-83.
+Coyle, W. (1988), On the Move: Minimizing the Stress and Maximizing the Benefit of Relocation,
+Hampden, Sydney.
+Cui, G. and Awa, N.E. (1992), “Measuring intercultural effectiveness: an integrative approach”,
+International Journal of Intercultural Relations, Vol. 16 No. 3, pp. 311-26.
+
+Defining the
+content domain
+
+823
+
+JMP
+25,8
+
+824
+
+Cui, G. and Van den Berg, S. (1991), “Testing the construct validity of intercultural effectiveness”,
+International Journal of Intercultural Relations, Vol. 15, pp. 227-41.
+David, K.H. (1976), “The use of social learning theory in preventing intercultural adjustment
+problems”, in Pedersen, P., Lonner, W.J. and Draguns, J. (Eds), Counseling Across Cultures,
+University of Hawaii Press, Honolulu, HI, pp. 123-37.
+Deardorff, D. (2004), “The identification and assessment of intercultural competence as a student
+outcome of internationalization at institutions of higher education in the United States”,
+PhD dissertation, North Carolina State University, Raleigh, NC.
+Detweiler, R.A. (1975), “On inferring the intentions of a person from another culture”, Journal of
+Personality, Vol. 43, pp. 591-611.
+Detweiler, R.A. (1978), “Culture, category width, and attributions: a model-building approach to
+the reasons for cultural effect”, Journal of Cross-cultural Psychology, Vol. 9, pp. 259-84.
+Detweiler, R.A. (1980), “Intercultural interaction and the categorization process: a conceptual
+analysis and behavioral outcome”, International Journal of Intercultural Relations, Vol. 4,
+pp. 275-93.
+Dinges, N.G. and Baldwin, K.D. (1996), “Intercultural competence: a research perspective”,
+in Landis, D. and Bhagat, R.S. (Eds), Handbook of Intercultural Training, 2nd ed.,
+pp. 106-23.
+Feldman, D.C. and Tompson, H.B. (1993), “Expatriation, repatriation, and domestic geographical
+relocation: an empirical investigation of adjustment to new job assignments”, Journal of
+International Business Studies, Vol. 24 No. 3, pp. 507-29.
+Flango, V.E. and Brumbaugh, R.B. (1974), “The dimensionality of the cosmopolitan-local
+construct”, Administrative Science Quarterly, Vol. 19, pp. 198-210.
+Furuya, N., Stevens, M., Bird, A., Oddou, G. and Mendenhall, M. (2009), “Managing the learning
+and transfer of global management competence: antecedents and outcomes of Japanese
+repatriation effectiveness”, Journal of International Business Studies, Vol. 40, pp. 200-15.
+Gertsen, M.C. (1990), “Intercultural competence and expatriates”, International Journal of Human
+Resource Management, Vol. 3, pp. 341-62.
+Goldberg, A.I. (1976), “The relevance of cosmopolitan/local orientations to professional values
+and behavior”, Sociology of Work and Occupation, Vol. 3 No. 3, pp. 331-56.
+Goldsmith, M., Greenberg, C., Robertson, A. and Hu-Chan, M. (2003), Global Leadership: The Next
+Generation, Prentice-Hall, Upper Saddle River, NJ.
+Harrison, D.A. and Shaffer, M.A. (2005), “Mapping the criterion space for expatriate success:
+task- and relationship-based performance, effort and adaptation”, International Journal of
+Human Resource Management, Vol. 16 No. 8, pp. 1454-74.
+Harrison, D.A., Shaffer, M.A. and Bhaskar-Shrinivas, P. (2004), “Going places: roads more and
+less traveled in research on expatriate experiences”, Research in Personnel and Human
+Resources Management, Vol. 23, pp. 199-247.
+Harrison, J.K., Chadwick, M. and Scales, M. (1996), “The relationship between cross-cultural
+adjustment and the personality variables of self-efficacy and self-monitoring”,
+International Journal of Intercultural Relations, Vol. 20, pp. 167-88.
+Hechanova, R., Beehr, T.A. and Christiansen, N.D. (2003), “Antecedents and consequences of
+employees adjustment to overseas assignment: a meta-analytic review”, Applied
+Psychology: An International Review, Vol. 52 No. 2, pp. 213-36.
+Herman, J., Stevens, M. and Bird, A. (2008), “Tolerance for ambiguity: a refined measure for
+international management research”, unpublished manuscript.
+Hudson, S. and Inkson, K. (2006), “Overseas development workers: ‘Big Five’ personality scores”,
+Journal of Pacific Rim Psychology, Vol. 1 No. 1, pp. 5-9.
+
+John, O.P. and Srivastava, S. (1999), “The big-five trait taxonomy: history, measurement, and
+theoretical perspective”, in Pervin, L. and Johns, O.P. (Eds), Handbook of Personality:
+Theory and Research, 2nd ed., Guilford, New York, NY.
+Jokinen, T. (2005), “Global leadership competencies: a review and discussion”, Journal of
+European Industrial Training, Vol. 29 Nos 2/3, pp. 199-216.
+Jordan, J. and Cartwright, S. (1998), “Selecting expatriate managers: key traits and
+competencies”, Leadership & Organization Development Journal, Vol. 19 No. 2, pp. 89-96.
+Kealey, D.J. (1994), Overseas Screening and Selection: A Survey of Current Practice and Future
+Trends, CIDA, Hull.
+Kealey, D.J. (1996), “The challenge of international personnel selection”, in Landis, D. and
+Bhagat, R.S. (Eds), Handbook of Intercultural Training, 2nd ed., Sage Publications,
+Thousand Oaks, CA, pp. 81-105.
+Kealey, D.J. and Ruben, B.D. (1983), “Cross-cultural personnel selection: criteria, issues and
+methods”, in Landis, D. and Brislin, R.W. (Eds), Handbook of Intercultural Training, Vol. 1,
+Pergamon Press, New York, NY, pp. 155-75.
+Kedia, B. and Mukherji, A. (1999), “Global managers: developing a mindset for global
+competitiveness”, Journal of World Business, Vol. 34 No. 3, pp. 230-47.
+Kraimer, M.L., Wayne, S.J. and Jaworski, R.A. (2001), “Sources of support and expatriate
+performance: the mediating role of expatriate adjustment”, Personnel Psychology, Vol. 54
+No. 1, pp. 71-99.
+Kühlmann, T.M. and Stahl, G.K. (1996), “Fachkompetenz alien genügt nicht – Interkulturelle
+Assessment Center unterstützen die gezielte Personalauswahl”, Personalführung Plus,
+Vol. 96, pp. 22-4.
+Kühlmann, T.M. and Stahl, G.K. (1998), “Diagnose interkultureller Kompetenz: Entwicklung und
+Evaluierung eines Assessment Centers”, in Barmeyer, C. and Bolten, J. (Eds),
+Interkulturelle personalorganisation, Verlag Wissenschaft & Praxis, Berlin, pp. 213-23.
+Leiba-O’Sullivan, S. (1999), “The distinction between stable and dynamic cross-cultural
+competencies: implications for expatriate trainability”, Journal of International Business
+Studies, Vol. 30, pp. 709-25.
+Levy, O., Beechler, S., Taylor, S. and Boyacigiller, N. (2007), “What do we talk about when we
+talk about global mindset: Managerial cognition in multinational corporations”, Journal of
+International Business Studies, Vol. 38, pp. 231-58.
+McCall, M.W. Jr. and Hollenbeck, G.P. (2002), Developing Global Executives: The Lessons of
+International Experience, Harvard Business School Press, Boston, MA.
+Markus, H. and Kitayama, S. (1991), “Culture and the self: implications for cognition, emotion,
+and motivation”, Psychological Review, Vol. 98, pp. 224-53.
+Martin, J.N. and Hammer, M.R. (1989), “Behavioral categories of intercultural communication
+competence: everyday communicators’ perceptions”, International Journal of Intercultural
+Relations, Vol. 13, pp. 303-32.
+Mendenhall, M. (2001), “New perspectives on expatriate adjustment and its relationship to global
+leadership development”, in Mendenhall, M., Kühlmann, T. and Stahl, G. (Eds), Developing
+Global Business Leaders: Policies, Processes, and Innovations, Quorum Books, Westport,
+CT, pp. 1-16.
+Mendenhall, M. and Oddu, G. (1985), “The dimensions of expatriate acculturation: a review”,
+Academy of Management Review, Vol. 10 No. 1, pp. 39-47.
+Mendenhall, M. and Osland, J.S. (2002a), “An overview of the extant global leadership research”,
+paper presented at the Academy of International Business, San Juan, June.
+
+Defining the
+content domain
+
+825
+
+JMP
+25,8
+
+826
+
+Mendenhall, M. and Osland, J.S. (2002b), “Mapping the terrain of the global leadership
+construct”, paper presented at the Academy of International Business, San Juan, June 29.
+Mendenhall, M. and Wiley, C. (1994), “Strangers in a strange land: the relationship between
+expatriate adjustment and impression management”, American Behavioral Scientist,
+Vol. 37 No. 5, pp. 605-20.
+Mendenhall, M., Kühlmann, T., Stahl, G. and Osland, J. (2002), “Employee development and
+expatriate assignments: a review of the expatriate adjustment theory literature”,
+in Gannon, M. and Newman, K. (Eds), Handbook of Cross-cultural Management, Blackwell
+Publishers, Oxford, pp. 155-83.
+Mischel, W. (1965), “Predicting the success of Peace Corp volunteers in Nigeria”, Journal of
+Personality and Social Psychology, Vol. 1 No. 5, pp. 517-20.
+Mol, S.T., Born, M.P., Willemson, M.E. and Van der Molen, H. (2005), “Predicting expatriate job
+performance for selection purposes: a quantitative review”, Journal of Cross-cultural
+Psychology, Vol. 36 No. 5, pp. 590-620.
+Montagliani, A.J. (1996), Impression Management and Cross-cultural Adaptation Measures,
+dissertation, Publication No. AAT 0665820, University of Richmond, Richmond, VA.
+Moro Bueno, C. and Tubbs, S. (2004), “Identifying global leadership competencies: an exploratory
+study”, Journal of American Academy of Business, Vol. 5 Nos 1/2, pp. 80-7.
+Mumford, S.J. (1975), “Overseas adjustment as measured by a mixed standard scale”, paper
+presented at the meetings of the Western Psychological Association, Sacramento, CA.
+Oddou, G. and Mendenhall, M. (1984), “Cross-cultural person perception: a review of
+cross-cultural and related literature”, International Journal of Intercultural Relations,
+Vol. 10 No. 2, pp. 77-96.
+Oguri, M. and Gudykunst, W.B. (2002), “The influence of self-construals and communication
+styles on sojourners’ psychological and sociocultural adjustment”, International Journal of
+Intercultural Relations, Vol. 26 No. 5, pp. 577-93.
+Ones, D.S. and Viswesvaran, C. (1997), “Personality determinants in the prediction of aspects of
+expatriate job success”, in Aycan, Z. (Ed.), New Approaches to Employee Management, JAI
+Press, Greenwich, CT, pp. 63-92.
+Osland, J.S. (2008), “Overview of the global leadership literature”, in Mendenhall, M., Osland, J.S.,
+Bird, A., Oddou, G. and Maznevski, M. (Eds), Global Leadership: Research, Practice and
+Development, Routledge, London, pp. 34-63.
+Osland, J.S., Taylor, S. and Mendenhall, M.E. (n.d.), “Global leadership: progress and challenges”,
+in Bhagat, R.S. and Steers, R.M. (Eds), Handbook of Culture, Organizations, and Work,
+Cambridge University Press, Oxford (in press).
+Osland, J.S., Bird, A., Mendenhall, M.E. and Osland, A. (2006), “Developing global leadership
+capabilities and global mindset: a review”, in Stahl, G.K. and Björkman, I. (Eds), Handbook
+of Research in International Human Resource Management, Edward Elgar Publishing,
+Cheltenham, pp. 197-222.
+Pi-JuYang, R., Noels, K.A. and Saumure, K.D. (2006), “Multiple routes to cross-cultural adaptation
+for international students: mapping the paths between self-construals, English language
+confidence, and adjustment”, International Journal of Intercultural Relations, Vol. 30 No. 4,
+pp. 487-506.
+Redmond, M.V. and Bunyi, J.M. (1991), “The relationship of intercultural communication
+competence with stress and the handling of stress as reported by international students”,
+International Journal of Intercultural Relations, Vol. 17, pp. 235-54.
+Ronen, S. (1989), “Training the international assignee, in”, in Goldsten, I.L. (Ed.), Training and
+Development in Organizations, Jossey-Bass, San Francisco, CA, pp. 417-53.
+
+Ruben, B.D. (1989), “The study of cross-cultural competence: traditions and contemporary
+issues”, International Journal of Intercultural Relations, Vol. 13, pp. 229-39.
+Ruben, B.D. and Kealey, D.J. (1979), “Behavioral assessment of communication competency and
+the prediction of cross-cultural adaptation”, International Journal of Intercultural
+Relations, Vol. 3, pp. 15-47.
+Searle, W. and Ward, C. (1990), “The prediction of psychological and socio-cultural adjustment
+during cross-cultural transitions”, International Journal of Intercultural Relations, Vol. 14,
+pp. 449-64.
+Selmer, J. (2001), “Psychological barriers to adjustment and how they affect coping strategies:
+Western business expatriates in China”, International Journal of Human Resource
+Management, Vol. 12 No. 2, pp. 151-65.
+Shaffer, M.A., Harrison, D.A. and Gilley, K.M. (1999), “Dimensions, determinants, and differences
+in the expatriate adjustment process”, Journal of International Business Studies, Vol. 30,
+pp. 557-81.
+Shaffer, M.A., Harrison, D.A., Gregersen, H., Black, J.S. and Ferzandi, L.A. (2006), “You can take
+it with you: individual differences and expatriate effectiveness”, Journal of Applied
+Psychology, Vol. 9 No. 1, pp. 109-25.
+Sinangil, H.K. and Ones, D.S. (1997), “Empirical investigations of the host country perspective in
+expatriate management”, in Saunders, D.M. (Series Ed.) and Z. Aycan (Vol. Ed),
+New Approaches to Employee Management: Vol. 4. Expatriate Management Theory and
+Research, JAI, Greenwich, CT.
+Smith, M.B. (1966), “Explorations in competence: a study of Peace Corps teachers in Ghana”,
+American Psychologist, Vol. 21, pp. 555-66.
+Stahl, G.K. (2001), “Using assessment centers as tools for global leadership development:
+an exploratory study”, in Mendenhall, M.E., Kühlmann, T.M. and Stahl, G.K. (Eds),
+Developing Global Business Leaders, Quorum Books, Westport, CT, pp. 197-210.
+Thomas, D.C. (1998), “The expatriate experience: a critical review and synthesis”, Advances in
+International Comparative Management, Vol. 12, pp. 237-73.
+Thomas, D.C. and Lazarova, M.B. (2006), “Expatriate adjustment and performance: a critical
+review”, in Stahl, G.K. and Björkman, I. (Eds), Handbook of Research in International
+Human Resource Management, Edward Elgar Publishing, Cheltenham, pp. 247-64.
+Tucker, M.F., Bonial, R. and Lahti, K. (2004), “The definition, measurement and prediction of
+intercultural adjustment and job performance among corporate expatriates”, International
+Journal of Intercultural Relations, Vol. 28 Nos 3/4, pp. 221-51.
+Varner, I.I. and Palmer, T.M. (2005), “Role of cultural self-knowledge in successful expatriation”,
+Singapore Management Review, Vol. 27 No. 1, pp. 1-25.
+Ward, C. (1996), “Acculturation”, in Landis, D. and Bhagat, R.S. (Eds), Handbook of Intercultural
+Training, Sage, Thousand Oaks, CA, pp. 124-47.
+Wills, S. and Barham, K. (1994), “Being an international manager”, European Management
+Journal, Vol. 12 No. 1, pp. 49-58.
+Yamaguchi, Y. and Wiseman, R.L. (2001), “Locus of control, self construals, intercultural
+effectiveness, and cross-cultural adjustment”, paper presented at the annual meeting of the
+International Communication Association, Washington, DC.
+Zimmerman, A., Holman, D. and Sparrow, P. (2003), “Unraveling adjustment mechanisms:
+adjustment of German expatriates to intercultural interactions, work, and living
+conditions in the People’s Republic of China”, International Journal of Cross Cultural
+Management, Vol. 3 No. 1, pp. 45-66.
+
+Defining the
+content domain
+
+827
+
+JMP
+25,8
+
+828
+
+Further reading
+Lane, H.W., Maznevski, M.L. and Mendenhall, M.E. (2004), “Hercules meets Buddha”,
+in Lane, H.W., Maznevski, M.,, Mendenhall, M.E. and McNett, J. (Eds), The Handbook of
+Global Management: A Guide to Managing Complexity, Blackwell Publishing, Oxford,
+pp. 3-25.
+Lane, H.W., Maznevski, M., Mendenhall, M.E. and McNett, J. (2004), The Handbook of Global
+Management: A Guide to Managing Complexity, Blackwell Publishing, Oxford.
+Shaffer, M.A., Ferzandi, L.A., Harrison, D.A., Gregersen, H. and Black, J.S. (2003), “You can take
+it with you: individual differences and expatriate effectiveness”, BRC Papers on
+Cross-cultural Management, No. 200308, Business Research Center, Hong Kong Baptist
+University, Hong Kong.
+About the authors
+Allan Bird is the Darla and Frederick Brodsky Trustee Professor in Global Business at
+Northeastern University. With more than 90 articles and book chapters, his work has appeared
+in leading management and international business journals. He is the author/editor of five books,
+including most recently Global Leadership: Research, Practice and Development (Routledge). His
+research interests focus on effective management in intercultural contexts, with a particular
+focus on intercultural sensemaking and global leadership development. Allan Bird is the
+corresponding author and can be contacted at: abird@umsl.edu
+Mark Mendenhall holds the J. Burton Frierson Chair of Excellence in Business Leadership in
+the College of Business Administration at the University of Tennessee, Chattanooga. He has
+coauthored numerous books, the most recent being Global Leadership: Research, Practice and
+Development (Routledge), and has published numerous scholarly journal articles on global
+leadership and international human resource management.
+Michael J. Stevens is an Associate Professor of Management and a D. Smith Research Fellow
+at the Goddard School of Business and Economics at Weber State University. His research
+interests are in the general areas of improving organizational performance through teamwork,
+empowerment and cross-cultural effectiveness. He is the lead author of the commercially
+distributed Teamwork-KSA employment test and a member of the development team for the
+Global Competencies Inventory. He is also an experienced corporate trainer and executive
+development coach who has consulted with a wide variety of organizations, has held leadership
+and board positions in industry, government, and not-for-profit enterprises.
+Gary Oddou is a Professor at CSU San Marcos and former Director of the Global Business
+Management program. He regularly teaches at Ecole de Management Lyon in Lyon, France, and
+the National Economics University in Hanoi, Vietnam. He has also taught in Thailand, England,
+Switzerland and former Yugoslavia. He earned his PhD in organizational psychology at Brigham
+Young University. His research interests and publications are about international human
+resource issues, including expatriation and repatriation adjustment and knowledge transfer;
+global leadership and intercultural competencies. He is a partner in the Kozai Group
+(kozaigrop.com), which specializes in identifying and developing people to work effectively with
+foreigners.
+
+To purchase reprints of this article please e-mail: reprints@emeraldinsight.com
+Or visit our web site for further details: www.emeraldinsight.com/reprints
+
+

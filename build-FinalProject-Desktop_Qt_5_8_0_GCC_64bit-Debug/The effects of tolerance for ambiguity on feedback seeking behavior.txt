@@ -1,0 +1,523 @@
+Journal of Occupational Psychology (1990), 6i,Hl>-i'i9'
+© 1990 The British Psychological Society
+
+Printed in Great Britain
+
+The effects of tolerance for ambiguity
+on feedback-seeking behaviour
+Nathan Bennett*
+Department of Management, Louisiana State University, Baton Rouge, LA 70803, USA
+
+David M. Herold
+Georgia Institute of Technology
+
+Susan J. Ashford
+Dartmouth College, Hanover, NH
+
+In an article that appeared in thisjoumal in 1985, Ashford & Cummings found that tolerance for ambiguity
+(TA) moderated the relationship between feedback-seeking behaviours (FSB) and ambiguity or uncertainty
+about one's role or outcome contingencies. The authors concluded that, ia uncertain situations, individuals
+who are low in TA will consider feedback an especially valuable resource, and will engage in higher levels of
+FSB.
+The aim of this article is to expand and reinterpret the Ashford & Cummings' (1985)findingsby reanalysing
+their data with two substantive differences. First, while job-related and problem-solving TA were proposed as
+conceptually distinct by Norton (1975), and loaded on separate factors in the factor analysis performed by
+Ashford & Cummings (1985), they were grouped together in their analysis, thus raising the question of how
+these two aspects of TA might operate differently with respect to FSB.
+Second, in investigating the consequences of TA for FSB, Ashford & Cummings used a global measure of
+FSB which combined feedback specifically sought from boss or co-workers, and feedback inferred from
+comparisons with others, social cues and other events. This measure also combined feedback sought for a
+variety of purposes beyond simply assessing performance. Based on earlier work by Ashford & Cummings
+(1983), Greller & Herold (1975) and others, it is possible that this global measure of FSB is masking
+important differences due to either the specific seeking strategy, the reason for seeking or even the source from
+which feedback is sought.
+To investigate the above theoretical distinctions between different types of TA and FSB using the Ashford &
+Cummings' (1985) data, two hypotheses were tested. First, since FSB could be considered an attempt to
+reduce uncertainty in one's work environment (Ashford, 1986), job-related TA, which involves an
+individual's concern about his/her standing at work, should be associated with FSB for determining the
+adequacy of performance or potential for advancement. Problem..solving TA, which reflects a general
+intolerance for ambiguity in any task, should not be associated with FSB about workplace issues, because the
+sources of the uncertainty which the person low in problem-solving TA finds aversive are not necessarily at
+work. Second, when allowing for different types of FSB (monitoring the work environment, solicitations from
+supervisors and solicitations from co-workers), low job-related TA should be associated with greater soliciting
+behaviours rather than monitoririg behaviours because of the less ambiguous nature of the resulting feedback
+(Ashford & Cummings, 1983). In other words, feedback which an individual gathers through monitoring the
+environment may itself be more difficult to interpret than solicited feedback, and thus have less value in
+reducing ambiguity.
+* Requestsforreprints.
+
+343
+
+344
+
+hSathan Bennett, David M, Herold and Susan J. Ashford
+Method
+
+The questionnaire data used in this analysis were collected from 172 employees at a public utility in the
+mid-western United States by Ashford & Cummings (1985). The questionnaire included the Rizzo, House &
+Lirtzman (1970) measure of role ambiguity, an original measure of contextual uncertainty, and selected items
+from the Norton (1975) tolerance for ambiguity scale. Feedback-seeking behaviour was assessed using 16
+items reflecting solicitations from supervisors and co-workers, as well as efforts to monitor the feedback
+environment, for the purpose of assessing one's performance and potential for advancement. For further details
+on the sample and questionnaire, the reader is referred to Ashford & Cummings (1985).
+Measures
+In Ashford & Cummings' (1985) analysis, the Norton TA items loaded on two factors. Scales for the analysis
+reported here were created based on those loadings. Tolerance for ambiguity in problem solving was computed
+by summing four items stressing the uncertainty of success in pursuing a task (e.g. 'A problem has very little
+attraction for me if I don't think it has a solution'). Tolerance for job-related ambiguity was computed by
+summing three items emphasizing the quality of information concerning the job situation (e.g. 'I function
+very poorly whenever there is a lack of communication in a job situation'). The items in this scale describe an
+'information-poor' environment.
+The feedback-seeking items were divided into three groups based on previous research (Greller & Herold,
+1975; Herold & Parsons, 1985; Parsons & Herold, 1986): those asking respondents how often they solicit
+feedback information from supervisors (one item) or co-workers (one item) and those asking how often they
+glean feedback information by monitoring the feedback environment (six items). An example of a feedback
+solicitation item is: 'In order to find out how well you are performing your job, how frequently do you seek
+feedback from your supervisor about your work performance?' An example of a feedback-monitoring item is:
+'In order to determine your potential for advancement within [company name], how frequently do you observe
+what behaviours your boss rewards and use this as feedback on your own performance?' Each of these three
+strategies can be applied for each of the two feedback purposes — performance and advancement potential.
+Following these theoretical distinctions, six variables were created and served as the dependent variables for
+the remaining analyses.
+
+Results
+Table 1 presents the correlations and internal consistencies for all measures used in the study. The
+factor-analytic distinction between the two TA scales and their moderate correlation (.38) suggest that the
+separate use of the two measures is warranted. The correlation matrix also indicates that problem-solving TA is
+significantly, but weakly, correlated only with monitored feedback for determining performance and solicited
+feedback from supervisor for assessing advancement potential. The positive sign of the latter correlation is
+opposite to that predicted. The correlations between job-related TA and all of the feedback-seeking behaviours
+are significant, generally stronger than those for problem-solving TA and in the predicted direction. These
+patterns suggest that combining the two measures, as Ashford & Cummings (1985) did, may have created an
+averaging effect which underestimated the tolerance for ambiguity—feedback-seeking behaviour link.
+The next analysis consisted of a series of OLS multiple regressions using the measures of feedback-seeking
+behaviour as dependent variables. Independent variables were entered together into the equation. They
+included the two TA scales developed above, the Rizzo etat. (1970) measure of role ambiguity and the measure
+of contingency uncertainty developed by Ashford & Cummings.
+The regression analysis results are presented in Table 2. As predicted, the two tolerance for ambiguity
+measures differentially affect the dependent variables. Specifically, problem-solving TA does not significantly
+predict FSB to assess performance. Job-related TA, on the other hand, predicts both feedback solicitation from
+supervisors and monitoring behaviours to assess performance (?«(^promotion potential. Contrary to prediction,
+problem-solving TA positively predicts feedback solicitation from supervisors concerning advancement
+potential. As expected, individuals high in job-related TA engage in less feedback solicitation from
+supervisors and less monitoring regarding both performance and advancement potential.
+A further significant point is that when feedback-seeking behaviours are segmented into the three
+strategies, and the two TA components are separared, role ambiguity and contingency uncertainty do not
+
+345
+
+Tolerance for ambiguity
+
+o
+o
+
+O
+
+o
+
+o
+o
+
+O
+O
+
+-H
+on
+
+o
+o
+
+oo
+o
+
+o
+o
+
+s
+3
+*
+*
+*
+
+**<N
+CN
+
+>
+ID
+
+o
+o
+
+SO
+CN
+
+r
+
+00
+
+!N
+
+r
+
+r
+
+00
+
+on
+O
+
+OS
+
+CO
+
+CN
+
+r
+O
+
+l'
+o
+
+o
+
+00
+
+OS
+
+CN
+
+rj
+
+rt
+
+c
+
+CN
+
+r
+o
+
+so
+
+OS
+
+Csi
+
+T-H
+
+IN
+
+r
+#
+o
+r r
+sor
+o
+'-'
+
+T3
+
+so
+
+o
+
+_L
+
+CN
+
+r
+
+.21***
+
+.00
+o
+
+OS
+
+o
+
+cr.
+
+'—'
+*
+*
+
+*
+*
+*
+XT
+
+1
+00
+CN
+
+o
+
+~^
+
+•<*'
+
+CO
+
+CN
+
+cs
+
+so
+
+r
+*
+sor
+,—[
+
+rc^
+CN
+O
+00
+
+-L
+V
+
+o
+
+o
+
+u
+
+60
+
+o
+a,
+
+^
+
+IS
+
+^
+
+8 "§ II - g
+
+^-^ 1^
+
+.^
+
+Xl
+
+-Q
+
+I T3
+
+J :§ P
+
+-O
+
+T3
+
+il
+
+o
+
+QA
+
+a.)
+
+0)
+
+m _Q
+
+v
+
+o
+
+_Q
+
+><
+
+I|'si'|'ia|i||l1
+
+•73
+
+!o
+
+V
+•a.
+
+346
+Nathan Bennett, David M. Herold and Susan J. Ashford
+Table 2. Betas from multiple regression analysis (N = 172)
+Dependent variables
+Feedback seeking behaviour concerning:
+Performance
+Independent variables
+
+Potential
+
+Solicit
+Solicit
+supervisor co-workers
+
+Gleaned
+
+Solicit
+Solicit
+supervisor co-workers
+
+Gleaned
+
+Role ambiguity
+
+.03
+
+.13
+
+-.06
+
+.03
+
+.06
+
+-.04
+
+Contingency uncertainty
+
+.02
+
+-.07
+
+.16
+
+.11
+
+.12
+
+.10
+
+Tolerance for ambiguity
+Problem solving
+
+.04
+
+.00
+
+-.05
+
+.27**
+
+.07
+
+.15
+
+-.24**
+
+-.26**
+
+-.16
+
+.07
+
+.08
+
+Tolerance for ambiguity
+Job related
+Adjusted R^
+
+-.16
+.17
+
+.02
+
+.03
+
+25***
+
+.09
+
+* p< .05; ** p < .01; *** p < .001.
+significantly predict FSB, whereas they did in Ashford & Cummings' (1985) analysis. This finding, that
+job-related TA is of more help in explaining variance in FSB than are two contextual variables, is of
+considerable interest, considering the short shrift typically given to individual difference variables in
+organizational behaviour models (e.g. Weiss & Adler, 1984).
+
+Discussion
+This research offers two extensions to Ashford & Cummings' (1985) previous empirical work on feedback
+seeking. First, it examined the role of tolerance for ambiguity in the feedback-seeking process in a manner
+consistent with theoretical discussions of the tolerance for ambiguity construct. Second, it differentiated
+among three feedback-seeking strategies resulting in a better specification of individuals' feedback-seeking
+behaviours. Each of these extensions will be discussed in turn.
+Tolerance for ambiguity is an important variable for three reasons. First, TA clearly plays a role in an
+individual's decisions to seek feedback. Those who could tolerate ambiguity sought feedback less frequently
+than those who could not. This research, however, highlights that the specific referent of the tolerance makes a
+difference. Future feedback research should focus primarily on job-related TA in examining the role of TA in
+the feedback process. Apparently, a general intolerance of ambiguity does not motivate the seeking of
+job-specific feedback. Second, uncertainty has become an increasingly frequent organizational reality. Even in
+situations where individuals' roles are relatively fixed, the contexts surrounding those roles are often highly
+ambiguous as organizations restructure, merge, divest and so forth (Kimberly & Quinn, 1984). Differences in
+tolerance for ambiguity should affect people's reactions to these situations.
+Third, given the reality of greater uncertainty in organizations, it would also seem to be important to
+identify those individuals who are likely to react to uncertainty with stress and anxiety. An intolerance for
+ambiguity is one important predictor of such reactions (Schweiger & Ivancevich, 1985). Determining how
+these individuals will respond is also of practical utility. For example, if we know that those low in TA are
+particularly likely to react to the uncertainty surrounding organizational transitions by seeking feedback, then
+we can explicitly train upper level managers either to provide more feedback during these periods or to be more
+ready for and accepting of individuals' seeking attempts.
+A further practical implication has to do with thefindingsregarding those with high TA. Such individuals
+did not respond to uncertainty by seeking out feedback. It is important to remember that, while these
+individuals may seek less because they do not find the uncertainty aversive, feedback also serves other
+
+Tolerance for ambiguity
+
+347
+
+important functions besides reducing uncertainty. In particular, Ashford & Cummings (1985) argue that
+feedback seeking is instrumental in that it allows individuals to correct errors in their performance. If high
+TAs are seeking less because they find the uncertainty less aversive, they may be missing out on
+error-corrective information that they may actually need to perform their tasks. In an analogous finding,
+individuals with low self-esteem tended to seek out more information about how a task should be structured
+than did individuals with high self-esteem (Weiss, V)ll). As a result, low self-esteem individuals had
+important task-relevant information at their disposal. Similarly, low TAs may endup with more feedback, an
+equally important type of task-relevanr information, while their counterparts with high tolerance for
+ambiguity may not.
+One finding contrary to prediction was that high TAs sought more, not less, feedback about their
+advancement potential from their supervisors than did low TAs. It may be that, given the inherent
+ambiguities and political realities involved in the promotion process in organizations, individuals have learned
+over time that feedback from their supervisors regarding advancement potential is of little utility as an
+uncertainty reduction mechanism and may, in fact, increase uncertainty rather than reduce it. This being the
+case, it may be that only those who can tolerate ambiguity can afford to seek feedback.
+This article also extends previous empirical efforts in the feedback area by more precisely delineating the
+several possible feedback-seeking strategies and using a measure that allowed for possible differences among
+the strategies to emerge. This measurement approach is consistent with Ashford & Cummings' (1983)
+arguments that there are different costs and benefits involved in the different strategies. While in this study
+tolerance for ambiguity affected each of the strategies similarly, future studies may find differences. Research
+on feedback should continue specifically to delineate the various feedback strategies discussed here and to
+assess their individual relationships with various predictors.
+
+References
+Ashford, S. J. (1986). Feedback-seeking in individual adaptation: A resource perspective. Academy of
+Management Journal, 29, 4 6 5 ^ 8 7 .
+Ashford, S. J. & Cummings, L. L. (1983). Feedback as an individual resource: Personal strategies of creating
+information. Organizational Behavior and Human Performance, 32, 370-398.
+Ashford, S. J . & Cummings, L. L. (1985). Proactive feedback seeking: The instrumental use of the
+information eavitoaraent. Journal of Occupational Psychology, 58, 61—91.
+Greller, M. M. & Herold, D. M. (1975). Sources of feedback: A preliminary investigation. Organizational
+Behavior and Human Performance, 13, 244—256.
+Herold, D. M. & Parsons, C. K. (1985). Individual differences in seeking and processing performance
+feedback information. Paper presented at the National Meetings of the American Psychological Association, Los Angeles, California.
+Kimberly, J. R. & Quinn, R. E. (Eds) (1984). New Futures: The Challenge of Managing Corporate Transitions.
+Homewood, IL: Dow Jones—Irwin.
+Norton, R. W . (1975). }Ae3.svirtn\eM oi ambiguity to\et&nce. Journal of Personality Assessment, 39, 607-619.
+Parsons, C. K. & Herold, D. M. (1986). The impact of congruence between individual feedback preferences
+and organizational feedback environments. Paper presented at the Academy of Management Meetings,
+Chicago, Illinois.
+Rizzo, J. R., House, R, J. & Lirtzman, S. I. (1970). Role conflict and ambiguity in complex organizations.
+Administrative Science Quarterly, 15, 150—163.
+Schweiger, D. L. & Ivancevich, J. M. (1985). Human resources: The forgotten factor in mergers and
+acquisitions. Personnel Administrator, 30(11), 47—61.
+Weiss, H. M. (1977). Subordinate imitation of supervisory behavior: The role of modeling in organizational
+socialization. Organizational Behavior and Human Performance, 19, 89-105.
+Weiss, H. M. & Adler, S. (1984). Personality and organizational behavior. In B. M. Staw & L. L. Cummings
+(Eds), Research in Organizational Behavior, vol. 6, pp. 1-50. Greenwich, CT: JAI Press.
+Received 3 July 1989; revised version received 2 January 1990
+
+The author has requested enhancement of the downloaded file. All in-text references underlined in blue are linked to publications on ResearchGate.
+
+

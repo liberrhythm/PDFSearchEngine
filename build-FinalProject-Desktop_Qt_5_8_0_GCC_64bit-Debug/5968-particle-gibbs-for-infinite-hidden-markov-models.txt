@@ -1,0 +1,831 @@
+Particle Gibbs for Infinite Hidden Markov Models
+Nilesh Tripuraneni*
+University of Cambridge
+nt357@cam.ac.uk
+
+Shixiang Gu*
+University of Cambridge
+MPI for Intelligent Systems
+sg717@cam.ac.uk
+
+Hong Ge
+University of Cambridge
+hg344@cam.ac.uk
+
+Zoubin Ghahramani
+University of Cambridge
+zoubin@eng.cam.ac.uk
+
+Abstract
+Infinite Hidden Markov Models (iHMM’s) are an attractive, nonparametric generalization of the classical Hidden Markov Model which can automatically infer the
+number of hidden states in the system. However, due to the infinite-dimensional
+nature of the transition dynamics, performing inference in the iHMM is difficult.
+In this paper, we present an infinite-state Particle Gibbs (PG) algorithm to resample state trajectories for the iHMM. The proposed algorithm uses an efficient
+proposal optimized for iHMMs and leverages ancestor sampling to improve the
+mixing of the standard PG algorithm. Our algorithm demonstrates significant convergence improvements on synthetic and real world data sets.
+
+1
+
+Introduction
+
+Hidden Markov Models (HMM’s) are among the most widely adopted latent-variable models used
+to model time-series datasets in the statistics and machine learning communities. They have also
+been successfully applied in a variety of domains including genomics, language, and finance where
+sequential data naturally arises [Rabiner, 1989; Bishop, 2006].
+One possible disadvantage of the finite-state space HMM framework is that one must a-priori specify the number of latent states K. Standard model selection techniques can be applied to the finite state-space
+HMM but bear a high computational overhead since they require the repetitive
+
+training exploration of many HMM’s of different sizes.
+Bayesian nonparametric methods offer an attractive alternative to this problem by adapting their
+effective model complexity to fit the data. In particular, Beal et al. [2001] constructed an HMM over
+a countably infinite state-space using a Hierarchical Dirichlet Process (HDP) prior over the rows
+of the transition matrix. Various
+ approaches have been taken to perform full posterior inference
+over the latent states, transition emission distributions and hyperparameters since it is impossible
+to directly apply the forward-backwards algorithm due to the infinite-dimensional size of the state
+space. The original Gibbs sampling approach proposed in Teh et al. [2006] suffered from slow
+mixing due to the strong correlations between nearby time steps often present in time-series data
+[Scott, 2002]. However, Van Gael et al. [2008] introduced a set of auxiliary slice variables to
+dynamically “truncate” the state space to be finite (referred to as beam sampling), allowing them
+to use dynamic programming to jointly resample the latent states thus circumventing the problem.
+Despite the power of the beam-sampling scheme, Fox et al. [2008] found that application of the
+beam sampler to the (sticky) iHMM resulted in slow mixing relative to an inexact, blocked sampler
+due to the introduction of auxiliary slice variables in the sampler.
+*equal contribution.
+
+1
+
+The main contributions of this paper are to derive an infinite-state PG algorithm for the iHMM
+using the stick-breaking construction for the HDP, and constructing an optimal importance proposal
+to efficiently resample its latent state trajectories. The proposed algorithm is compared to existing
+state-of-the-art inference algorithms for iHMMs, and empirical evidence suggests that the infinitestate PG algorithm consistently outperforms its alternatives. Furthermore, by construction the time
+complexity of the proposed algorithm is O(T N K). Here T denotes the length of the sequence, N
+denotes the number of particles in the PG sampler, and K denotes the number of “active” states
+in the model. Despite the simplicity of sampler, we find in a variety of synthetic and real-world
+experiments that these particle methods dramatically improve convergence of the sampler, while
+being more scalable.
+We will first define the iHMM/sticky iHMM in Section 2, and review the Dirichlet Process (DP) and
+Hierarchical Dirichlet Process (HDP) in our appendix. Then we move onto the description of our
+MCMC sampling scheme in Section 3. In Section 4 we present our results on a variety of synthetic
+and real-world datasets.
+
+2
+
+Model and Notation
+
+2.1
+
+Infinite Hidden Markov Models
+
+We can formally define the iHMM (we review the theory of the HDP in our appendix) as follows:
+β ∼ GEM(γ),
+iid
+iid
+(1)
+π j |β ∼ DP(α, β), φj ∼ H, j = 1, . . . , ∞
+st |st−1 ∼ Cat(·|π st−1 ), yt |st ∼ f (·|φst ), t = 1, . . . , T.
+Here β is the shared DP measure defined on integers Z. Here s1:T = (s1 , ..., sT ) are the latent
+states of the iHMM, y1:T = (y1 , ..., yT ) are the observed data, and φj parametrizes the emission
+distribution f . Usually H and f are chosen to be conjugate to simplify the inference. βk0 can be
+interpreted as the prior mean for transition probabilities into state k 0 , with α governing the variability
+of the prior mean across the rows of the transition matrix. The hyper-parameter γ controls how
+concentrated or diffuse the probability mass of β will be over the states of the transition
+P∞ matrix. To
+0
+connect the HDP with the iHMM, note that given a draw from the HDP Gk =
+k0 =1 π kk δφk0
+we identify π kk0 with the transition probability from state k to state k 0 where φk0 parametrize the
+emission distributions.
+1
+1
+Note that fixing β = ( K
+, ...., K
+, 0, 0...) implies only transitions between the first K states of the
+transition matrix are ever possible, leaving us with the finite Bayesian HMM. If we define a finite,
+hierarchical Bayesian HMM by drawing
+β ∼ Dir(γ/K, ..., γ/K)
+(2)
+π k ∼ Dir(αβ)
+with joint density over the latent/hidden states as
+pφ (s1:T , y1:T ) = ΠTt=1 π(st |st−1 )fφ (yt |st )
+then after taking K → ∞, the hierarchical prior in Equation (2) approaches the HDP.
+
+Figure 1: Graphical Model for the sticky HDP-HMM (setting κ = 0 recovers the HDP-HMM)
+2
+
+2.2
+
+Prior and Emission Distribution Specification
+
+The hyperparameter α governs the variability of the prior mean across the rows of the transition
+matrix and γ controls how concentrated or diffuse the probability mass of β will be over the states
+of the transition matrix. However, in the HDP-HMM we have each row of the transition matrix
+is drawn as π j ∼ DP(α, β). Thus the HDP prior doesn’t differentiate self-transitions from jumps
+between different states. This can be especially problematic in the non-parametric setting, since
+non-Markovian state persistence in data can lead to the creation of unnecessary extra states and unrealistically, rapid switching dynamics in our model. In Fox et al. [2008], this problem is addressed
+by including a self-transition bias parameter into the distribution of transitioning probability vector
+πj :
+αβ + κδj
+π j ∼ DP(α + κ,
+)
+(3)
+α+κ
+to incorporate prior beliefs that smooth, state-persistent dynamics are more probable. Such a construction only involves the introduction of one further hyperparameter κ which controls the “stickiness” of the transition matrix (note a similar self-transition was explored in Beal et al. [2001]).
+For the standard iHMM, most approaches to inference have placed vague gamma hyper-priors on
+the hyper-parameters α and γ, which can be resampled efficiently as in Teh et al. [2006]. Similarly
+in the sticky iHMM, in order to maintain tractable resampling of hyper-parameters Fox et al. [2008]
+chose to place vague gamma priors on γ, α+κ, and a beta prior on κ/(α+κ). In this work we follow
+Teh et al. [2006]; Fox et al. [2008] and place priors γ ∼ Gamma(aγ , bγ ), α + κ ∼ Gamma(as , bs ),
+and κ ∼ Beta(aκ , bκ ) on the hyper-parameters.
+We consider two conjugate emission models for the output states of the iHMM – a multinomial
+emission distribution for discrete data, and a normal emission distribution for continuous data. For
+discrete data we choose φk ∼ Dir(αφ ) with f (· | φst ) = Cat(·|φk ). For continuous data we choose
+φk = (µ, σ 2 ) ∼ N IG(µ, λ, αφ , βφ ) with f (· | φst ) = N (·|φk = (µ, σ 2 )).
+
+3
+
+Posterior Inference for the iHMM
+
+Let us first recall the collection of variables we need to sample: β is a shared DP base measure, (π k )
+is the transition matrix acting on the latent states, while φk parametrizes the emission distribution
+f , k = 1, . . . , K. We can then resample the variables of the iHMM in a series of Gibbs steps:
+Step 1:
+Step 2:
+Step 3:
+Step 4:
+Step 5:
+
+Sample s1:T | y1:T , φ1:K , β, π 1:K .
+Sample β | s1:T , γ.
+Sample π 1:K | β, α, κ, s1:T .
+Sample φ1:K | y1:T , s1:T , H.
+Sample (α, γ, κ) | s1:T , β, π 1:K .
+
+Due to the strongly correlated nature of time-series data, resampling the latent hidden states in Step
+1, is often the most difficult since the other variables can be sampled via the Gibbs sampler once a
+sample of s1:T has been obtained. In the following section, we describe a novel efficient sampler for
+the latent states s1:T of the iHMM, and refer the reader to our appendix and Teh et al. [2006]; Fox
+et al. [2008] for a detailed discussion on steps for sampling variables α, γ, κ, β, π 1:K , φ1:K .
+3.1
+
+Infinite State Particle Gibbs Sampler
+
+Within the Particle MCMC framework of Andrieu et al. [2010], Sequential Monte Carlo (or particle
+filtering) is used as a complex, high-dimensional proposal for the Metropolis-Hastings algorithm.
+The Particle Gibbs sampler is a conditional SMC algorithm resulting from clamping one particle to
+an apriori fixed trajectory. In particular, it is a transition kernel that has p(s1:T |y1:T ) as its stationary
+distribution.
+The key to constructing a generic, truncation-free sampler for the iHMM to resample the latent
+states, s1:T , is to note that the finite number of particles in the sampler are “localized” in the latent
+space to a finite subset of the infinite set of possible states. Moreover, they can only transition
+to finitely many new states as they are propagated through the forward pass. Thus the “infinite”
+measure β, and “infinite” transition matrix π only need to be instantiated to support the number of
+“active” states (defined as being {1, ..., K}) in the state space. In the particle Gibbs algorithm, if a
+particle transitions to a state outside the “active” set, the objects β and π can be lazily expanded via
+3
+
+the stick-breaking constructions derived for both objects in Teh et al. [2006] and stated in equations
+(2), (4) and (5). Thus due to the properties of both the stick-breaking construction and the PGAS
+kernel, this resampling procedure will leave the target distribution p(s1:T |y1:T ) invariant. Below we
+first describe our infinite-state particle Gibbs algorithm for the iHMM then detail our notation (we
+provide further background on SMC in our supplement):
+Step 1: For iteration t = 1 initialize as:
+(a) sample si1 ∼ q1 (·), for i ∈ 1, ..., N . 
+(b) initialize weights w1i = p(s1 )f1 (y1 |s1 ) q1 (s1 ) for i ∈ 1, ..., N .
+Step 2: For iteration t > 1 use trajectory s01:T from t − 1, β, π, φ, and K:
+1:N
+(a) sample the index ait−1 ∼ Cat(·|Wt−1
+) of the ancestor of particle i for i ∈ 1, ..., N − 1.
+ai
+
+t−1
+(b) sample sit ∼ qt (· | st−1
+) for i ∈ 1, ..., N − 1. If sit = K + 1 then create a new state using the
+stick-breaking construction for the HDP:
+(i) Sample a new transition probability vector π K+1 ∼ Dir(αβ).
+(ii) Use stick-breaking construction to iteratively expand β ← [β, βK+1 ] as:
+
+iid
+
+0
+βK+1
+∼ Beta(1, γ),
+
+0
+0
+βK+1 = βK+1
+ΠK
+`=1 (1 − β` ).
+
+(iii) Expand transition probability vectors (π k ), k = 1, . . . , K + 1, to include transitions
+to K + 1st state via the HDP stick-breaking construction as:
+π j ← [πj1 , πj2 , . . . , πj,K+1 ],
+
+∀j = 1, . . . , K + 1.
+
+where
+π 0jK+1 ∼ Beta α0 βK , α0 (1 −
+
+K+1
+X
+
+
+0
+βl ) , π jK+1 = π 0jK+1 ΠK
+`=1 (1 − π j` ).
+
+`=1
+
+(iv) Sample a new emission parameter φK+1 ∼ H.
+i
+i
+(c) compute the ancestor weights w̃t−1|T
+= wt−1
+π(s0t |sit−1 ) and resample aN
+t as
+i
+P(aN
+t = i) ∝ w̃t−1|T .
+
+(d) recompute and normalize particle weights using:
+ai
+
+ai
+
+t−1
+t−1
+wt (sit ) = π(sit | st−1
+)f (yt | sit )/qt (sit | st−1
+)
+
+Wt (sit ) = wt (sit )/(
+
+N
+X
+
+wt (sit ))
+
+i=1
+
+Step 3: Sample k with P(k = i) ∝
+
+wTi
+
+and return s∗1:T = sk1:T .
+
+In the particle Gibbs sampler, at each step t a weighted particle system {sit , wti }N
+i=1 serves as an
+empirical point-mass approximation to the distribution p(s1:T ), with the variables ait denoting the
+‘ancestor’ particles of sit . Here we have used π(st |st−1 ) to denote the latent transition distribution,
+f (yt |st ) the emission distribution, and p(s1 ) the prior over the initial state s1 .
+3.2
+
+More Efficient Importance Proposal qt (·)
+
+In the PG algorithm described above, we have a choice of the importance sampling density qt (·) to
+ai
+
+ai
+
+t−1
+t−1
+use at every time step. The simplest choice is to sample from the “prior” – qt (·|st−1
+) = π(sit |st−1
+)
+– which can lead to satisfactory performance when then observations are not too informative and the
+dimension of the latent variables are not too large. However using the prior as importance proposal
+in particle MCMC is known to be suboptimal. In order to improve the mixing rate of the sampler, it
+
+ai
+
+ai
+
+t−1
+t−1
+is desirable to sample from the partial “posterior” – qt (· | st−1
+) ∝ π(sit |st−1
+)f (yt |sit ) – whenever
+possible.
+
+an
+
+an
+
+t−1
+t−1
+In general, sampling from the “posterior”, qt (· | st−1
+) ∝ π(snt |st−1
+)f (yt |snt ), may be impossible,
+but in the iHMM we can show that it is analytically tractable. To see this, note that we have lazily
+
+4
+
+represented π(·|snt−1 ) as a finite vector – [πsnt−1 ,1:K , πsnt−1 ,K+1 ]. Moreover, we can easily evaluate
+the likelihood f (ytn |snt ,Rφ1:K ) for all snt ∈ 1, ..., K. However, if snt = K + 1, we need to compute
+f (ytn |snt = K + 1) = f (ytn |snt = K + 1, φ)H(φ)dφ. If f and H are conjugate, we can analytically compute the marginal likelihood of the K + 1st state, but this can also be approximated by
+Monte Carlo sampling for non-conjugate likelihoods – see Neal [2000] for a more detailed discusPK+1
+sion of this argument. Thus, we can compute p(yt |snt−1 ) = k=1 π(k | snt−1 )f (yt | φk ) for each
+particle snt where n ∈ 1, ..., N − 1.
+We investigate the impact of “posterior” vs. “prior” proposals in Figure 5. Based on the convergence
+of the number of states and joint log-likelihood, we can see that sampling from the “posterior”
+improves the mixing of the sampler. Indeed, we see from the “prior” sampling experiments that
+increasing the number of particles from N = 10 to N = 50 does seem to marginally improve the
+mixing the sampler, but have found N = 10 particles sufficient to obtain good results. However,
+we found no appreciable gain when increasing the number of particles from N = 10 to N = 50
+when sampling from the “posterior” and omitted the curves for clarity. It is worth noting that the
+PG sampler (with ancestor resampling) does still perform reasonably even when sampling from the
+“prior”.
+3.3
+
+Improving Mixing via Ancestor Resampling
+
+It has been recognized that the mixing properties of the PG kernel can be poor due to path degeneracy
+[Lindsten et al., 2014]. A variant of PG that is presented in Lindsten et al. [2014] attempts to
+address this problem for any non-Markovian state-space model with a modification – resample a new
+value for the variable aN
+t in an “ancestor sampling” step at every time step, which can significantly
+improve the mixing of the PG kernel with little extra computation in the case of Markovian systems.
+To understand ancestor sampling, for t ≥ 2 consider the reference trajectory s0t:T ranging from the
+current time step t to the final time T . Now, artificially assign a candidate history to this partial path,
+by connecting s0t:T to one of the other particles history up until that point {si1:t−1 }N
+i=1 which can be
+N
+achieved by simply assigning a new value to the variable at ∈ 1, ..., N . To do this, we first compute
+the weights:
+pT (si1:t−1 , s0t:T |y1:T )
+i
+i
+w̃t−1|T
+≡ wt−1
+, i = 1, ..., N
+(4)
+pt−1 (si1:t−1 |y1:T )
+N
+i
+Then aN
+t is sampled according to P(at = i) ∝ w̃t−1|T . Remarkably, this ancestor sampling
+step leaves the density p(s1:T | y1:T ) invariant as shown in Lindsten et al. [2014] for arbitrary, nonMarkovian state-space models. However since the infinite HMM is Markovian, we can show the
+computation of the ancestor sampling weights simplifies to
+i
+i
+w̃t−1|T
+= wt−1
+π(s0t |sit−1 )
+
+(5)
+
+Note that the ancestor sampling step does not change the O(T N K) time complexity of the infinitestate PG sampler.
+3.4
+
+Resampling π, φ, β, α, γ, and κ
+
+Our resampling scheme for π, β, φ, α, γ, and κ will follow straightforwardly from this scheme in
+Fox et al. [2008]; Teh et al. [2006]. We present a review of their methods and related work in our
+appendix for completeness.
+
+4
+
+Empirical Study
+
+In the following experiments we explore the performance of the PG sampler on both the iHMM
+and the sticky iHMM. Note that throughout this section we have only taken N = 10 and N =
+50 particles for the PG sampler which has time complexity O(T N K) when sampling from the
+“posterior” compared to the time complexity of O(T K 2 ) of the beam sampler. For completeness,
+we also compare to the Gibbs sampler, which has been shown perform worse than the beam sampler
+[Van Gael et al., 2008], due to strong correlations in the latent states.
+4.1
+
+Convergence on Synthetic Data
+
+To study the mixing properties of the PG sampler on the iHMM and sticky iHMM, we consider
+two synthetic examples with strongly positively correlated latent states. First as in Van Gael et al.
+5
+
+4-State: K
+
+40
+
+4-State: JLL
+
+-5000
+
+PG
+
+35
+
+Beam
+
+Truth
+
+-6000
+
+30
+25
+
+-7000
+
+20
+-8000
+
+15
+10
+
+PGAS-S
+PGAS
+PGAS-S
+Beam
+PGAS
+Gibbs
+Beam
+Gibbs
+
+-9000
+
+5
+0
+
+0
+
+500
+iteration
+
+1000
+
+-10000
+
+0
+
+500
+iteration
+
+Figure 3: Learned Latent Transition Matrices for the PG sampler and Beam Sampler
+vs Ground Truth (Transition Matrix for Gibbs
+Sampler omitted for clarity). PG correctly recovers strongly correlated self-transition matrix, while the Beam Sampler supports extra
+“spurious” states in the latent space.
+
+1000
+
+Figure 2: Comparing the performance of the PG
+sampler, PG sampler on sticky iHMM (PG-S), beam
+sampler, and Gibbs sampler on inferring data from
+a 4 state strongly correlated HMM. Left: Number
+of “Active” States K vs. Iterations Right: Joint-Log
+Likelihood vs. Iterations (Best viewed in color)
+
+[2008], we generate sequences of length 4000 from a 4 state HMM with self-transition probability
+of 0.75, and residual probability mass distributed uniformly over the remaining states where the
+emission distributions are taken to be normal with fixed standard deviation 0.5 and emission means
+of −2.0, −0.5, 1.0, 4.0 for the 4 states. The base distribution, H for the iHMM is taken to be normal
+with mean 0 and standard deviation 2, and we initialized the sampler with K = 10 “active” states.
+In the 4-state case, we see in Figure 2 that the PG sampler applied to both the iHMM and the
+sticky iHMM converges to the “true” value of K = 4 much quicker than both the beam sampler
+and Gibbs sampler – uncovering the model dimensionality, and structure of the transition matrix
+by more rapidly eliminating spurious “active” states from the space as evidenced in the learned
+transition matrix plots in Figure 3. Moreover, as evidenced by the joint log-likelihood in Figure 2,
+we see that the PG sampler applied to both the iHMM and the sticky iHMM converges quickly to a
+good mode, while the beam sampler has not fully converged within a 1000 iterations, and the Gibbs
+sampler is performing poorly.
+To further explore the mixing of the PG sampler vs. the beam sampler we consider a similar inference problem on synthetic data over a larger state space. We generate data from sequences of length
+4000 from a 10 state HMM with self-transition probability of 0.75, and residual probability mass
+distributed uniformly over the remaining states, and take the emission distributions to be normal
+with fixed standard deviation 0.5 and means equally spaced 2.0 apart between −10 and 10. The
+base distribution, H, for the iHMM is also taken to be normal with mean 0 and standard deviation
+2. The samplers were initialized with K = 3 and K = 30 states to explore the convergence and
+robustness of the infinite-state PG sampler vs. the beam sampler.
+10-State: K
+
+30
+
+10-State: JLL
+
+-7000
+
+10-State: K
+
+30
+
+25
+
+-7500
+
+25
+
+20
+
+-8000
+
+20
+
+-8000
+
+15
+
+-8500
+
+15
+
+-8500
+
+10
+
+-9000
+
+10
+
+-9000
+
+5
+
+-9500
+
+5
+0
+
+PGAS-initK30
+PGAS-initK30
+PGAS-initK30-S
+PGAS-initK30-S
+PGAS-initK3
+PGAS-initK3
+PGAS-initK3-S
+PGAS-initK3-S
+Beam-initK30
+Beam-initK30
+Beam-initK3
+Beam-initK3
+
+-9500
+
+0
+
+200
+
+400
+
+600
+
+800
+
+1000
+
+-10000
+
+0
+
+200
+
+400
+
+600
+
+800
+
+0
+
+1000
+
+Figure 4: Comparing the performance of the
+PG sampler vs. beam sampler on inferring data
+from a 10 state strongly correlated HMM with
+different initializations. Left: Number of “Active” States K from different Initial K vs. Iterations Right: Joint-Log Likelihood from different Initial K vs. Iterations
+
+0
+
+200
+
+400
+
+600
+
+10-State: JLL
+
+-7000
+
+PGAS-n10-post-initK30
+PGAS-n10-post-initK3
+PGAS-n10-pri-initK30
+PGAS-n10-pri-initK3
+PGAS-n50-pri-initK30
+PGAS-n50-pri-initK3
+
+800
+
+1000
+
+-7500
+
+-10000
+
+PGAS-n10-post-initK30
+PGAS-n10-post-initK3
+PGAS-n10-pri-initK30
+PGAS-n10-pri-initK3
+PGAS-n50-pri-initK30
+PGAS-n50-pri-initK3
+
+0
+
+200
+
+400
+
+600
+
+800
+
+1000
+
+Figure 5: Influence of “Posterior” vs. “Prior”
+proposal and Number of Particles in PG sampler on iHMM. Left: Number of “Active” States
+K from different Initial K, Numbers of Particles, and “Prior”/“Posterior” proposal vs. Iterations Right: Joint-Log Likelihood from different Initial K, Numbers of Particles, and
+“Prior”/”Posterior” proposal vs. Iterations
+
+6
+
+As observed in Figure 4, we see that the PG sampler applied to the iHMM and sticky iHMM,
+converges far more quickly from both “small” and “large” initialization of K = 3 and K = 30
+“active” states to the true value of K = 10 hidden states, as well as converging in JLL more quickly.
+Indeed, as noted in Fox et al. [2008], the introduction of the extra slice variables in the beam
+sampler can inhibit the mixing of the sampler, since for the beam sampler to consider transitions
+with low prior probability one must also have sampled an unlikely corresponding slice variable so
+as not to have truncated that state out of the space. This can become particularly problematic if
+one needs to consider several of these transitions in succession. We believe this provides evidence
+that the infinite-state Particle Gibbs sampler presented here, which does not introduce extra slice
+variables, is mixing better than beam sampling in the iHMM.
+4.2
+
+Ion Channel Recordings
+
+For our first real dataset, we investigate the behavior of the PG sampler and beam sampler on an ion
+channel recording. In particular, we consider a 1MHz recording from Rosenstein et al. [2013] of
+a single alamethicin channel previously investigated in Palla et al. [2014]. We subsample the time
+series by a factor of 100, truncate it to be of length 2000, and further log transform and normalize it.
+We ran both the beam and PG sampler on the iHMM for 1000 iterations (until we observed a convergence in the joint log-likelihood). Due to the large fluctuations in the observed time series, the
+beam sampler infers the number of “active” hidden states to be K = 5 while the PG sampler infers
+the number of “active” hidden states to be K = 4. However in Figure 6, we see that beam sampler
+infers a solution for the latent states which rapidly oscillates between a subset of likely states during
+temporal regions which intuitively seem to be better explained by a single state. However, the PG
+sampler has converged to a mode which seems to better represent the latent transition dynamics, and
+only seems to infer “extra” states in the regions of large fluctuation. Indeed, this suggests that the
+beam sampler is mixing worse with respect to the PG sampler.
+Beam: Latent States
+
+0.5
+
+1
+2
+3
+4
+
+0
+
+-0.5
+
+y
+
+y
+
+0
+
+PG: Latent States
+
+0.5
+
+1
+2
+3
+4
+5
+
+-0.5
+
+-1
+
+-1
+
+-1.5
+
+-1.5
+0
+
+500
+
+1000
+
+1500
+
+2000
+
+0
+
+t
+
+500
+
+1000
+
+1500
+
+2000
+
+t
+
+Figure 6: Left: Observations colored by an inferred latent trajectory using beam sampling inference.
+Right: Observations colored by an inferred latent state trajectory using PG inference.
+4.3
+
+Alice in Wonderland Data
+
+For our next example we consider the task of predicting sequences of letters taken from Alice’s
+Adventures in Wonderland. We trained an iHMM on the 1000 characters from the first chapter of the
+book, and tested on 4000 subsequent characters from the same chapter using a multinomial emission
+model for the iHMM.
+Once again, we see that the PG sampler applied to the iHMM/sticky iHMM converges quickly in
+joint log-likelihood to a mode where it stably learns a value of K ≈ 10 as evidenced in Figure 7.
+Though the performance of the PG and beam samplers appear to be roughly comparable here, we
+would like to highlight two observations. Firstly, the inferred value of K obtained by the PG sampler quickly converges independent of the initialization K in the rightmost of Figure 7. However,
+the beam sampler’s prediction for the number of active states K still appears to be decreasing and
+more rapidly fluctuating than both the iHMM and sticky iHMM as evidenced by the error bars in
+the middle plot in addition to being quite sensitive to the initialization K as shown in the rightmost plot. Based on the previous synthetic experiment (Section 4.1), and this result we suspect
+that although both the beam sampler and PG sampler are quickly converging to good solutions as
+evidenced by the training joint log-likelihood, the beam sampler is learning a transition matrix with
+unnecessary spurious “active” states. Next we calculate the predictive log-likelihood of the Alice
+7
+
+K
+
+JLL
+
+PGAS (N=50)
+PGAS (N=10)
+
+PGAS (N=50)
+PGAS (N=10)
+Beam
+
+s
+iteration
+
+iteration
+
+Figure 7: Left: Comparing the Joint Log-Likelihood vs. Iterations for the PG sampler and Beam
+sampler. Middle: Comparing the convergence of the “active” number of states for the iHMM and
+sticky iHMM for the PG sampler and Beam sampler. Right: Trace plots of the number of states for
+different initializations for K.
+in Wonderland test data averaged over 2500 different realizations and find that the infinite-state PG
+sampler with N = 10 particles achieves a predictive log-likelihood of −5918.4 ± 123.8 while the
+beam sampler achieves a predictive log-likelihood of −6099.0 ± 106.0, showing the PG sampler
+applied to the iHMM and Sticky iHMM learns hyperparameter and latent variable values that obtain
+better predictive performance on the held-out dataset. We note that in this experiment as well, we
+have only found it necessary to take N = 10 particles in the PG sampler achieve good mixing and
+empirical performance, although increasing the number of particles to N = 50 does improve the
+convergence of the sampler in this instance. Given that the PG sampler has a time complexity of
+O(T N K) for a single pass, while the beam sampler (and truncated methods) have a time complexity of O(T K 2 ) for a single pass, we believe that the PG sampler is a competitive alternative to the
+beam sampler for the iHMM.
+
+5
+
+Discussions and Conclusions
+
+In this work we derive a new inference algorithm for the iHMM using the particle MCMC framework based on the stick-breaking construction for the HDP. We also develop an efficient proposal
+inside PG optimized for iHMM’s, to efficiently resample the latent state trajectories for iHMM’s.
+The proposed algorithm is empirically compared to existing state-of-the-art inference algorithms
+for iHMMs, and shown to be promising because it converges more quickly and robustly to the true
+number of states, in addition to obtaining better predictive performance on several synthetic and
+realworld datasets. Moreover, we argued that the PG sampler proposed here is a competitive alternative to the beam sampler since the time complexity of the particle samplers presented is O(T N K)
+versus the O(T K 2 ) of the beam sampler.
+Another advantage of the proposed method is the simplicity of the PG algorithm, which doesn’t
+require truncation or the introduction of auxiliary variables, also making the algorithm easily adaptable to challenging inference tasks. In particular, the PG sampler can be directly applied to the sticky
+HDP-HMM with DP emission model considered in Fox et al. [2008] for which no truncation-free
+sampler exists. We leave this development and application as an avenue for future work.
+
+References
+Andrieu, C., Doucet, A., and Holenstein, R. (2010). Particle Markov chain Monte Carlo methods.
+Journal of the Royal Statistical Society: Series B (Statistical Methodology), 72(3):269–342.
+Beal, M. J., Ghahramani, Z., and Rasmussen, C. E. (2001). The infinite hidden Markov model. In
+Advances in neural information processing systems, pages 577–584.
+Bishop, C. M. (2006). Pattern recognition and machine learning, volume 4. Springer New York.
+Fox, E. B., Sudderth, E. B., Jordan, M. I., and Willsky, A. S. (2008). An HDP–HMM for systems
+with state persistence. In Proceedings of the 25th international conference on Machine learning,
+pages 312–319. ACM.
+Lindsten, F., Jordan, M. I., and Schön, T. B. (2014). Particle Gibbs with ancestor sampling. The
+Journal of Machine Learning Research, 15(1):2145–2184.
+8
+
+Neal, R. M. (2000). Markov chain sampling methods for Dirichlet process mixture models. Journal
+of Computational and Graphical Statistics, 9:249–265.
+Palla, K., Knowles, D. A., and Ghahramani, Z. (2014). A reversible infinite hmm using normalised
+random measures. arXiv preprint arXiv:1403.4206.
+Rabiner, L. (1989). A tutorial on hidden markov models and selected applications in speech recognition. Proceedings of the IEEE, 77(2):257–286.
+Rosenstein, J. K., Ramakrishnan, S., Roseman, J., and Shepard, K. L. (2013). Single ion channel
+recordings with cmos-anchored lipid membranes. Nano letters, 13(6):2682–2686.
+Scott, S. L. (2002). Bayesian methods for hidden Markov models. Journal of the American Statistical Association, 97(457).
+Teh, Y. W., Jordan, M. I., Beal, M. J., and Blei, D. M. (2006). Hierarchical Dirichlet processes.
+Journal of the American Statistical Association, 101(476):1566–1581.
+Van Gael, J., Saatci, Y., Teh, Y. W., and Ghahramani, Z. (2008). Beam sampling for the infinite
+hidden Markov model. In Proceedings of the International Conference on Machine Learning,
+volume 25.
+
+9
+
+

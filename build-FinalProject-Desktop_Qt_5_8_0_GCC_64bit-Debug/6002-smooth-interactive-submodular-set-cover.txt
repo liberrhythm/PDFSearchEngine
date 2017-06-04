@@ -1,0 +1,1367 @@
+Smooth Interactive Submodular Set Cover
+Yisong Yue
+California Institute of Technology
+yyue@caltech.edu
+
+Bryan He
+Stanford University
+bryanhe@stanford.edu
+
+Abstract
+Interactive submodular set cover is an interactive variant of submodular set cover
+over a hypothesis class of submodular functions, where the goal is to satisfy
+all sufficiently plausible submodular functions to a target threshold using as few
+(cost-weighted) actions as possible. It models settings where there is uncertainty
+regarding which submodular function to optimize. In this paper, we propose a new
+extension, which we call smooth interactive submodular set cover, that allows the
+target threshold to vary depending on the plausibility of each hypothesis. We
+present the first algorithm for this more general setting with theoretical guarantees
+on optimality. We further show how to extend our approach to deal with realvalued functions, which yields new theoretical results for real-valued submodular
+set cover for both the interactive and non-interactive settings.
+
+1
+
+Introduction
+
+In interactive submodular set cover (ISSC) [10, 11, 9], the goal is to interactively satisfy all plausible
+submodular functions in as few actions as possible. ISSC is a wide-encompassing framework that
+generalizes both submodular set cover [24] by virtue of being interactive, as well as some instances
+of active learning by virtue of many active learning criteria being submodular [12, 9].
+A key characteristic of ISSC is the a priori uncertainty regarding the correct submodular function to
+optimize. For example, in personalized recommender systems, the system does not know the user’s
+preferences a priori, but can learn them interactively via user feedback. Thus, any algorithm must
+choose actions in order to disambiguate between competing hypotheses as well as optimize for the
+most plausible ones – this issue is also known as the exploration-exploitation tradeoff.
+In this paper, we propose the smooth interactive submodular set cover problem, which addresses
+two important limitations of previous work. The first limitation is that conventional ISSC [10, 11, 9]
+only allows for a single threshold to satisfy, and this “all or nothing” nature can be inflexible for
+settings where the covering goal should vary smoothly (e.g., based on plausibility). In smooth ISSC,
+one can smoothly vary the target threshold of the candidate submodular functions according to their
+plausibility. In other words, the less plausible a hypothesis is, the less we emphasize maximizing
+its associated utility function. We present a simple greedy algorithm for smooth ISSC with provable guarantees on optimality. We also show that our smooth ISSC framework and algorithm fully
+generalize previous instances of and algorithms for ISSC by reducing back to just one threshold.
+One consequence of smooth ISSC is the need to optimize for real-valued functions, which leads
+to the second limitation of previous work. Many natural classes of submodular functions are realvalued (cf. [25, 5, 17, 21]). However, submodular set cover (both interactive and non-interactive)
+has only been rigorously studied for integral or rational functions with fixed denominator, which
+highlights a significant gap between theory and practice. We propose a relaxed version of smooth
+ISSC using an approximation tolerance , such that one needs only to satisfy the set cover criterion to
+within . We extend our greedy algorithm to provably optimize for real-valued submodular functions
+within this  tolerance. To the best of our knowledge, this yields the first theoretically rigorous
+algorithm for real-valued submodular set cover (both interactive and non-interactive).
+1
+
+Problem 1 Smooth Interactive Submodular Set Cover
+1: Given:
+1.
+2.
+3.
+4.
+5.
+
+Hypothesis class H (does not necessarily contain h∗ )
+Query set Q and response set R with known q(h) ⊆ R for q ∈ Q, h ∈ H
+Modular query cost function c defined over Q
+Monotone submodular objective functions Fh : 2Q×R → R≥0 for h ∈ H
+Monotone submodular distance functions Gh : 2Q×R → R≥0 for h ∈ H, with Gh (S ⊕(q, r))−
+Gh (S) = 0 for any S if r ∈ q(h)
+6. Threshold function α : R≥0 → R≥0 mapping a distance to required objective function value
+2: Protocol: For i = 1, . . . , ∞: ask a question q̂i ∈ Q and receive a response r̂i ∈ q̂i (h∗ ).
+P
+3: Goal: Using minimal cost i c(q̂i ), terminate when Fh (Ŝ) ≥ α(Gh (S ∗ )) for all h ∈ H, where Ŝ =
+4 S
+{(q̂i , r̂i )}i and S ∗ = q∈Q,r∈q(h∗ ) {(q, r)}.
+
+2
+
+Background
+
+Submodular Set Cover. In the basic submodular set cover problem [24], we are given an action
+set Q and a monotone submodular set function F : 2Q → R≥0 that maps subsets A ⊆ Q to
+non-negative scalar values. A set function F is monotone and submodular if and only if:
+∀A ⊆ B ⊆ Q, q ∈ Q :
+
+F (A ⊕ q) ≥ F (A)
+
+and
+
+F (A ⊕ q) − F (A) ≥ F (B ⊕ q) − F (B),
+
+respectively, where ⊕ denotes set addition (i.e., A ⊕ q ≡ A ∪ {q}). In other words, monotonicity
+implies that adding a set always yields non-negative gain, and submodularity implies that adding to
+a smaller set A results in a larger gain than adding to a larger set B. We also assume that F (∅) = 0.
+Each q ∈ Q is associated with a modular or additive cost c(q). Given
+Pa target threshold α, the goal is
+to select a set A that satisfies F (A) ≥ α with minimal cost c(A) = q∈A c(q). This problem is NPhard; but for integer-valued F , simple greedy forward selection can provably achieve near-optimal
+cost of at most (1 + ln(maxa∈Q F ({a}))OP T [24], and is typically very effective in practice.
+One motivating application is content recommendation [5, 4, 25, 11, 21], where Q are items to
+recommend, F (A) captures the utility of A ⊆ Q, and α is the satisfaction goal. Monotonicity
+of F captures the property that total utility never decreases as one recommends more items, and
+submodularity captures the the diminishing returns property when recommending redundant items.
+Interactive Submodular Set Cover. In the basic interactive setting [10], the decision maker must
+optimize over a hypothesis class H of submodular functions Fh . The setting is interactive, whereby
+the decision maker chooses an action (or query) q ∈ Q, and the environment provides a response r ∈
+R. Each query q is now a function mapping hypotheses H to responses R (i.e., q(h) ∈ R), and the
+environment provides responses according to an unknown true hypothesis h∗ ∈ H (i.e., r ≡ q(h∗ )).
+This process iterates until Fh∗ (S) ≥ α, where S denotes the set of observed question/response
+pairs:
+P
+S = {(q, r)} ⊆ Q×R. The goal is to satisfy Fh∗ (S) ≥ α with minimal cost c(S) = (q,r)∈S c(q).
+For example, when recommending movies to a new user with unknown interests (cf. [10, 11]), H
+can be a set of user types or movie genres (e.g., H = {Action, Drama, Horror, . . .}). Then Q would
+contain individual movies that can be recommended, and R would be a “yes” or “no” response or
+an integer rating representing how interested the user (modeled as h∗ ) is in a given movie.
+
+The interactive setting is both a learning and covering problem, as opposed to just a covering problem. The decision maker must balance between disambiguating between hypotheses in H (i.e.,
+identifying which is the true h∗ ) and satisfying the covering goal Fh∗ (S) ≥ α; this issue is also
+known as the exploration-exploitation tradeoff. Noisy ISSC [11] extends basic ISSC by no longer
+assuming the true h∗ is in H, and uses a distance function Gh and tolerance κ such that the goal is
+to satisfy Fh (S) ≥ α for all sufficiently plausible h, where plausibility is defined as Gh (S) ≤ κ.
+
+3
+
+Problem Statement
+
+We now present the smooth interactive submodular set cover problem, which generalizes basic
+and noisy ISSC [10, 11] (described in Section 2). Like basic ISSC, each hypothesis h ∈ H is
+associated with a utility function Fh : 2Q×R → R≥0 that maps sets of query/response pairs to
+2
+
+α1
+
+α1
+
+α2
+Fh
+
+α2
+Fh
+
+α3
+
+α3
+κ1κ2
+
+Gh
+(a)
+
+κ3
+
+
+
+Fh
+
+Fh
+
+
+κ1κ2
+
+Gh
+(b)
+
+κ3
+
+Gh
+(c)
+
+Gh
+(d)
+
+Figure 1: Examples of (a) multiple thresholds, (b) approximate multiple thresholds, (c) a continuous
+convex threshold, and (d) an approximate continuous convex threshold. For the approximate setting,
+we essentially allow for satisfying any threshold function that resides in the yellow region.
+
+non-negative scalars. Like noisy ISSC, the hypothesis class H does not necessarily contain the true
+h∗ (i.e., the agnostic setting). Each h ∈ H is associated with a distance or disagreement function
+Gh : 2Q×R → R≥0 which maps sets of question/response pairs to a disagreement score (i.e., the
+larger Gh (S) is, the more h disagrees with S). We further require that Fh (∅) = 0 and Gh (∅) = 0.
+4 S
+Problem 1 describes the general problem setting. Let S ∗ = q∈Q,r∈q(h∗ ) {(q, r)} denote the set of
+all possible question/responses pairs given by h∗ . The goal is to construct a question/response set
+Ŝ with minimal cost such that, for every h ∈ H we have Fh (Ŝ) ≥ α(Gh (S ∗ )), where α(·) maps
+disagreement values to desired utilities. In general, α(·) is a non-increasing function, since the goal
+is to optimize more the most plausible hypotheses in H. We describe two versions of α(·) below.
+Version 1: Step Function (Multiple Thresholds). The first version uses a decreasing step function
+(see Figure 1(a)). Given a pair of sequences α1 > . . . > αN > 0 and 0 < κ1 < . . . < κN ,
+the threshold function is α(v) = αnκ (v) where nκ (v) = min{n ∈ {0, . . . , N + 1}|v < κn }, and
+4
+
+4
+
+4
+
+4
+
+α0 = ∞, αN +1 = 0, κ0 = 0, κN +1 = ∞. The goal in Problem 1 is equivalently: “ ∀h ∈ H and
+n = 1, . . . , N : satisfy Fh (Ŝ) ≥ αn whenever Gh (S ∗ ) < κn .” This version is a strict generalization
+of noisy ISSC, which uses only a single α and κ.
+Version 2: Convex Threshold Curve. The second version uses a convex α(·) that decreases continuously as Gh (S ∗ ) increases (see Figure 1(c)), and is not a strict generalization of noisy ISSC.
+Approximate Thresholds. Finally, we also consider a relaxed version of smooth ISSC, whereby
+we only require that the objectives Fh be satisfied to within some tolerance  ≥ 0. More formally,
+we say that we approximately solve Problem 1 with tolerance  if its goal is redefined as: “using
+P
+minimal cost, i c(q̂i ), guarantee Fh (Ŝ) ≥ α(Gh (S ∗ )) −  for all h ∈ H.” See Figure 1(b) & 1(d)
+for the approximate versions of the multiple tresholds and convex versions, respectively.
+ISSC has only been rigorously studied when the utility functions are Fh are rational-valued with
+a fixed denominator. We show in Section 4.3 how to efficiently solve the approximate version of
+smooth ISSC when Fh are real-valued, which also yields a new approach for approximately solving
+the classical non-interactive submodular set cover problem with real-valued objective functions.
+
+4
+
+Algorithm & Main Results
+
+A key question in the study of interactive optimization is how to balance the exploration-exploitation
+tradeoff. On the one hand, one should exploit current knowledge to efficiently satisfy the plausible
+submodular functions. However, hypotheses that seem plausible might actually not be due to imperfections in the algorithm’s knowledge. One should thus explore by playing actions that disambiguate
+the plausibility of competing hypotheses. Our setting is further complicated due to also solving a
+combinatorial optimization problem (submodular set cover), which is in general intractable.
+4.1
+
+Approach Outline
+
+We present a general greedy algorithm, described in Algorithm 1 below, for solving smooth ISSC
+with provably near-optimal cost. Algorithm 1 requires as input a submodular meta-objective F̄
+3
+
+Algorithm 1 Worst Case Greedy Algorithm for Smooth Interactive Submodular Set Cover
+1:
+2:
+3:
+4:
+5:
+6:
+7:
+8:
+9:
+10:
+
+input: F̄
+input: F̄max
+input: Q
+input: R
+S←∅
+while F̄ (S) < F̄max do
+
+q̂ ← argmaxq∈Q minr∈R F̄ (S ⊕ (q, r)) − F̄ (S) /c(q)
+Play q̂, observe r̂
+S ← S ⊕ (q̂, r̂)
+end while
+Variable
+H
+Q
+R
+Fh
+Gh
+F̄
+F̄max
+DF
+DG
+α(·)
+αi
+κi
+N
+
+Fh0
+0
+αn
+
+// Submodular Meta-Objective
+// Termination Threshold for F̄
+// Query or Action Set
+// Response Set
+
+Definition
+Set of hypotheses
+Set of actions or queries
+Set of responses
+Monotone non-decreasing submodular utility function
+Monotone non-decreasing submodular distance function
+Monotone non-decreasing submodular function unifying Fh , Gh and the thresholds
+Maximum value held by F̄
+Denominator for Fh (when rational)
+Denominator for Gh (when rational)
+Continuous convex threshold
+Thresholds for F (α1 is largest)
+Thresholds for G (κ1 is smallest)
+Number of thresholds
+Approximation tolerance for the real-valued case
+Surrogate utility function for the approximate version
+Surrogate thresholds for the approximate version
+
+Figure 2: Summary of notation used. The top portion is used in all settings. The middle portion is
+used for the multiple thresholds setting. The bottom portion is used for real-valued functions.
+that quantifies the exploration-exploitation trade-off, and the specific instantiation of F̄ depends on
+which version of smooth ISSC is being solved. Algorithm 1 greedily optimizes for the worst case
+outcome at each iteration (Line 7) until a termination condition F̄ ≥ F̄max has been met (Line 6).
+
+The construction of F̄ is essentially a reduction of smooth ISSC to a simpler submodular set cover
+problem, and generalizes the reduction approach in [11]. In particular, we first lift the analysis of
+[11] to deal with multiple thresholds (Section 4.2). We then show how to deal with approximate
+thresholds in the real-valued setting (Section 4.3), which finally allows us to address the continuous
+threshold setting (Section 4.4). Our cost guarantees are stated relative to the general cover cost
+(GCC), which lower bounds the optimal cost, as stated in Definition 4.1 and Lemma 4.2 below. Via
+this reduction, we can show that our approach achieves cost bounded by (1 + ln F̄max )GCC ≤
+(1 + ln F̄max )OP T . For clarity of exposition, all proofs are deferred to the supplementary material.
+Definition 4.1 (General Cover Cost (GCC)). Define oracles T ∈ RQ to be functions mapping
+∆ S
+questions to responses and T (Q̂) = q̂i ∈Q̂ {(q̂i , T (q̂i ))}. T (Q̂) is the set of question-response pairs
+
+given by T for the set of questions Q̂. Define the General Cover Cost as:
+
+
+∆
+
+GCC = max
+
+T ∈RQ
+
+min
+
+
+c(Q̂) .
+
+Q̂:F̄ (T (Q̂))≥F̄max
+
+Lemma 4.2 (Lemma 3 from [11]). If there is a question asking strategy for satisfying F̄ (Ŝ) ≥ F̄max
+with worst case cost C ∗ , then GCC ≤ C ∗ . Thus GCC ≤ OP T .
+4.2
+
+Multiple Thresholds Version
+
+We begin with the multiple thresholds version. In this section, we assume that each Fh and Gh
+are rational-valued with fixed denominators DF and DG , respectively.1 We first define a doubly
+1
+
+When each Fh and/or Gh are integer-valued, then DF = 1 and/or DG = 1, respectively.
+
+4
+
+224
+225
+226
+227
+228
+Figure
+229
+
+Fh i
+
+↵N
+
+Gh i
+
+N
+
+F̄hi ,1
+
+_
+
+F̄h1
+
+F̄hi ,N
+
+F̄hmax
+···
+
+1
+
+···
+F̄h,1max
+^
+
+F̄hi
+
+F̄h,N max
+
+^
+
+F̄hmax
+
+F̄
+
+F̄max
+
+···
+
+Gh i
+
+_
+
+···
+
+↵1
+
+···
+
+218
+219
+220
+221
+222
+223
+
+Fh i
+
+···
+
+216
+217
+
+···
+
+F̄h|H|
+
+F̄hmax
+C
+
+B
+
+A
+
+Figure 2: This figure shows the relationship between the terms defined in Definition 4.3. (A) For
+
+3:F̄hDepicting
+the=relationship
+between
+terms
+(A) the
+If F̄hi ,n ≥
+F̄hi ,nmax
+(↵n ↵n+1 )(
+n 1the
+), either
+Fhidefined
+↵n or in
+GhDefinition
+n . This4.3.
+generates
+n
+i ,n
+i
+F̄hi ,nmaxtradeoff
+= (αnbetween
+−αn+1satisfying
+)(κn −κthe
+), then
+Fhi ≥ α(B)
+;
+this
+generates
+the
+tradeoff
+either
+of theeither
+two thresholds.
+ForG
+F̄hhi ≥F̄κhn
+,
+F̄
+F̄
+n−1
+n or
+h
+,n
+h
+,n
+max
+i
+i
+max
+230
+for
+all i 2 {1,the
+. . . ,either
+N }. This
+creates
+the thresholds.
+requirement that
+allIfofF̄
+the thresholds
+must
+be satisfied.
+(C)F̄
+between
+satisfying
+of
+the
+two
+(B)
+≥
+F̄
+,
+then
+F̄
+≥
+h
+h
+h
+,n
+hi ,nmax
+i
+max
+i
+231
+For F̄
+F̄max , F̄h F̄hmax for all h 2 H. This creates the requirement
+that
+all of the hypotheses
+∀i232
+∈ {1, must
+. . . , be
+N };
+this
+enforces
+that
+all
+i,
+at
+least
+one
+of
+the
+thresholds
+α
+or
+κ
+must
+be
+satisfied.
+(C)
+i
+i
+satisfied.
+If233
+F̄ ≥ F̄max , then F̄h ≥ F̄hmax ∀h ∈ H; this enforces that all hypotheses must be satisfied.
+234
+
+235
+Using
+(1) and
+(2), we
+define the general
+forms ofutility
+F̄ and and
+F̄maxdistance
+used in Sections
+4.2, 4.3, and 4.4.
+truncated
+version
+of each
+hypothesis
+submodular
+function:
+236
+237
+238
+239
+240
+
+Each of these sections will apply this definition to different choices of Fh , Gh , N , ↵1 , . . . , ↵N , and
+1 , . . . , N to solve their
+of4the problem. In this definition, X is a constant to make F̄h
+Fh,αvariants
+n ,αj (Ŝ) = max(min(Fh (Ŝ), αn ), αj ) − αj ,
+to be integer-valued, Y is the contribution to the maximum value from Fh and ↵n , and Z is the
+4
+contribution to the maximum
+from
+Gh and n .
+Gh,κn ,κvalue
+j (Ŝ) = max(min(Gh (Ŝ), κn ), κj ) − κj .
+
+(1)
+(2)
+
+(General F̄ and F̄max ).
+In241
+other Definition
+words, F4.3
+at αj and from above at αn (it is assumed that
+h,α⇣n ,αj is truncated from below
+⌘
+4
+α242
+is
+offset
+by
+−α
+so
+that
+F
+(∅)
+= 0. Gh,κ
+is constructed
+n > αj ),F̄and
+j
+h,α
+,α
+(
+Ŝ)
+=
+(
+
+)
+G
+(
+Ŝ)
+F
+↵n+1 ),analogously.
+n
+jh,↵n ,↵n+1 (Ŝ) + G
+nn,κ
+h,n
+n
+n 1
+h,n ,n 1
+h,
+,jn 1 (Ŝ)(↵n
+2define
+0
+1 forms3of F̄ and F̄max , which can be instantiated to
+Using
+(1) and (2), we can
+the
+general
+243
+N
+X
+Y
+4
+244
+address
+different
+of
+4@smooth
+F̄h (Ŝ)versions
+=X
+(j ISSC.
+j 1 )A F̄h,n (Ŝ)5 ,
+245
+Definition
+4.3 (Generaln=1
+form j6of
+=nF̄ and F̄max ).
+246
+247
+248
+249
+250
+251
+252
+
+4 X
+
+4
+4
+=n − κ
+F̄n−1
+|H|Y Z
+F̄h,n (Ŝ)F̄=(Ŝ)(κ
+) −F̄G
+h (Ŝ),
+max
+h,κ=
+n ,κn−1 (Ŝ) Fh,αn ,αn+1 (Ŝ) + Gh,κn ,κn−1 (Ŝ)(αn − αn+1 ),
+h2H
+
+
+N
+X
+Y
+Definition
+4 4.4 (Multiple Thresholds). To solve the multiple thresholds version of the problem, Fh ,
+
+F̄G
+=C
+(κj − κj−1 ) F̄h,n (Ŝ) ,
+h (Ŝ)
+h , N , ↵1 ,F̄. . . , ↵N , and 1 , . . . , N are used without modification. The constants are set as the
+following:
+4
+
+n=1
+
+j6=n
+
+X
+
+4
+
+N
+
+Y
+253
+F̄ (Ŝ) =
+F̄h (Ŝ), F̄max =
+|H|CF CG .
+N
+N
+X = DF DG
+, Y = DF ↵1 , Z = DG
+(n n 1 )
+254
+h∈H
+n=1
+255
+The
+coefficient CF̄ converts each F̄h to be integer-valued, CF is the contribution to F̄max
+256
+and
+α , and
+to F̄maxexploitation
+from Gh(maximizing
+and κn . the most plausible Fh ) and exThis C
+definition
+F̄ trades off between
+G is theofcontribution
+257 n
+
+from Fh
+
+ploration
+(distinguishing
+between Version
+more andof
+less
+plausible
+Fh ) by
+each
+F̄i κ
+to ,reach
+its
+Definition
+4.4 (Multiple
+Thresholds
+ISSC).
+Given
+α allowing
+, . . . , αN
+and
+258
+1 . . . , κN , we inmaximum value either by having Fh reach ↵i or having Gh reach 1i . In other
+words, each
+of the
+259
+stantiate thresholds
+F̄ and F̄can
+Definition
+4.3 via:
+maxbeinsatisfied
+with either
+a sufficiently large utility Fh or a sufficiently large distance
+260
+261
+262
+263
+
+N
+Y
+Gh . Figure 2 shows the logical relationships between these components.
+
+C = DF DN ,
+
+CF = DF α1 ,
+
+CG = D N
+
+(κn − κn−1 ).
+
+G
+G
+F̄
+We prove in Appendix
+A that
+F̄ is monotone submodular, and that
+finding a S such that F̄ (S)
+F̄max is equivalent to solving Problem 1. For Definition 4.4, we alson=1
+require that ↵n and n thresholds satisfy
+4.5between
+for F̄ to beexploitation
+submodular. (maximizing the plausible Fh ’s) and exploration
+in Definition
+4.4Condition
+trades off
+
+F̄264
+↵i by
+↵n+1
+N
+(disambiguating
+in Fhh’s)
+allowing
+each F̄h to reach its maximum by either Fh reachConditionplausibility
+4.5. The sequence
+265
+n n 1 ii=1 is non-increasing.
+ing
+α
+or
+G
+reaching
+κ
+.
+In
+other
+words,
+each
+F̄
+i
+h
+i
+h can be satisfied with either a sufficiently large
+266
+Theorem 4.6. Let Fh and Gh be monotone submodular
+and rational-valued with fixed denominator
+utility
+large
+distance
+G
+.
+Figure
+3
+shows
+the
+relationships
+between
+theseF̄ components.
+267 FhDor and
+h
+DG , respectively. Then, if Condition 4.5 logical
+holds, then
+applying Algorithm
+1 using
+and
+F
+268
+
+from
+4.4 solves the multiple
+thresholds version of Problem 1 with cost at most
+⇣ max
+⇣ Definition
+We
+proveF̄
+in Appendix
+AN that
+is monotone⌘⌘submodular,
+and that finding an S such that F̄ (S) ≥
+QF̄
+N
+269
+1
++
+ln
+|H|D
+D
+↵
+(
+
+)
+GCC.
+F
+1
+n
+n
+1
+G
+n=1
+F̄max is equivalent to solving Problem 1. For F̄ to be submodular, we also require Condition 4.5,
+which is essentially a discrete analogue to the condition that a continuous α(·) should be convex.
+−αn+1 N
+5
+i
+is non-increasing.
+Condition 4.5. The sequence h ακnn −κ
+n−1 n=1
+
+Theorem 4.6. Given Condition 4.5, Algorithm
+1using Definition 4.4 solves the multiple
+
+ thresholds
+QN
+N
+version of Problem 1 using cost at most 1 + ln |H|DF DG α1 n=1 (κn − κn−1 ) GCC.
+
+If each Gh is integral and κn = κn−1 + 1, then the bound simplifies to (1 + ln (|H|DF α1 )) GCC.
+We present an alternative formulation in Appendix D.2 that has better bounds when DG is large, but
+is less flexible and cannot be easily extended to the real-valued and convex threshold curve settings.
+5
+
+4.3
+
+Approximate Thresholds for Real-Valued Functions
+
+Solving even non-interactive submodular set cover is extremely challenging when the utility functions Fh are real-valued. For example, Appendix B.1 describes a setting where the greedy algorithm
+performs arbitrarily poorly. We now extend the results from Section 4.2 to real-valued Fh and
+α1 , . . . , αN .
+Rather than trying to solve the problem exactly, we instead solve a relaxed or approximate version,
+which will be useful for the convex threshold curve setting. Let  > 0 denote a pre-specified
+approximation tolerance for Fh , d·eγ denote rounding up to the nearest multiple of γ, and b·cγ
+denote rounding down to the nearest multiple of γ. We define a surrogate problem:
+Definition 4.7 (Approximate Thresholds for Real-Valued Functions). Define the following approximations to Fh and αn :
+
+
+|Ŝ|
+D
+ X
+Fh (Ŝ) +
+(|Q| + 1 − i)
+ ,
+ 
+D i=1
+
+
+D
+#%
+$
+"
+n
+N
+X
+Y
+D
+
+4
+0
+N −i+1
+αn =
+(κj − κj−1 )
+αn −
+(2N − 2i)DG
+
+D i=1
+j=i
+
+4
+Fh0 (Ŝ) =
+
+
+D
+
+
+#
+N
+N
+Y
+X
+X
+N
+−i+1
+(κj − κj−1 ) + 2
+(2N − 2i)DG
+D =  (|Q| + 1 − i) +
+
+
+|Q|
+
+"
+
+4
+
+i=1
+
+j=i
+
+i=1
+
+Instantiate F̄ and F̄max in Definition 4.3 using Fh0 , αn0 above, Gh , κn and:
+N
+N
+CF̄ = DG
+, CF = α10 , CG = DG
+
+N
+Y
+
+(κn − κn−1 ).
+
+n=1
+
+We prove in Appendix B that Definition 4.7 is an instance of a smooth ISSC problem, and that
+solving Definition 4.7 will approximately solve the original real-valued smooth ISSC problem.
+Theorem 4.8. Given Condition 4.5, Algorithm 1 using Definition 4.7 will approximately solve
+the
+multiple thresholds version
+ real-valued
+
+ of Problem 1 with tolerance  using cost at most
+QN
+0
+N
+1 + ln |H|α1 DG n=1 (κn − κn−1 ) GCC.
+
+We show in Appendix B.2 how to apply this result to approximately solve the basic submodular set
+cover problem with real-valued objectives. Note that if  is selected as the smallest distinct difference
+between values in Fh , then the approximation will be exact.
+4.4
+
+Convex Threshold Curve Version
+
+We now address the setting where the threshold curve α(·) is continuous and convex. We again
+solve the approximate version, since the threshold curve α(·) is necessarily real-valued. Let  > 0
+be the pre-specified tolerance for Fh0 . Let N be defined so that N DG is the maximal value of Gh .
+We convert the continuous version α(·) to a multiple threshold version (with N thresholds) that is
+within an -approximation of the former, as shown below.
+Definition 4.9 (Equivalent Multiple Thresholds for Continuous Convex Curve). Instantiate F̄ and
+F̄max in Definition 4.3 using Gh without modification, and a sequence of thresholds:
+
+
+|Ŝ|
+ X
+D
+Fh (Ŝ) +
+(|Q| + 1 − i)
+ ,
+ 
+D i=1
+
+
+D
+$
+"
+#%
+n
+N
+X
+Y
+D
+
+4
+0
+N −i+1
+αn =
+α(n) −
+(2N − 2i)DG
+(κj − κj−1 )
+
+D i=1
+j=i
+
+4
+Fh0 (Ŝ) =
+
+4
+
+κn = DG n
+
+6
+
+
+D
+
+with constants set as:
+CF = α10 ,
+
+CF̄ = 1,
+
+N
+Y
+
+N
+CG = DG
+
+N
+(κn − κn−1 ) = DG
+.
+
+n=1
+
+Note that the Fh0 are not too expensive to compute. We prove in Appendix C that satisfying this set of
+thresholds is equivalent to satisfying the original curve α(·) within -error. Note also that Definition
+4.9 uses the same form as Definition 4.7 to handle the approximation of real-valued functions.
+Theorem 4.10. Applying Algorithm 1 using Definition 4.9 approximately solves 
+the convex threshN
+old version of Problem 1 with tolerance  using cost at most: 1 + ln |H|α10 DG
+GCC.
+
+Note that if  is sufficiently large, then N could in principle be smaller, which can lead to less
+conservative approximations. There may also be more precise approximations by reducing to other
+formulations for the multi-threshold setting (e.g., Appendix D.2).
+
+5
+
+Simulation Experiments
+
+Comparison of Methods to Solve Multiple Thresholds. We compared our multiple threshold
+method against multiple baselines (see Appendix D for more details) in a range of simulation settings
+(see Appendix E.1). Figure 4 shows the results. We see that our approach is consistently amongst the
+best performing methods. The primary competitor is the circuit of constraints approach from [11]
+(see Appendix D.3 for a comparison of the theoretical guarantees). We also note that all approaches
+dramatically outperform their worst-case guarantees.
+Cost for Setting A
+
+50
+
+Cost for Setting B
+
+35
+
+Cost for Setting C
+
+35
+
+35
+
+Multiple Threshold (Def 4.4)
+Alternative (Def D.1)
+Circuit (Def D.6)
+Forward (Sec D.1)
+Backward (Sec D.1)
+
+30
+
+Cost
+
+30
+
+40
+
+Cost
+
+Cost
+
+45
+
+25
+
+25
+
+30
+25
+0
+
+50
+
+100
+
+20
+
+20
+0
+
+50
+
+Percentile
+
+100
+
+0
+
+50
+
+Percentile
+
+100
+
+Percentile
+
+Figure 4: Comparison against baselines in three simulation settings.
+Validating Approximation Tolerances. We also validated the efficacy of our approximate thresholds relaxation (see Appendix E.2 for more details of the setup). Figure 5 shows the results. We see
+that the actual deviation from the original smooth ISSC problem is much smaller than the specified
+, which suggests that our guarantees are rather conservative. For instance, at  = 15, the algorithm
+is allowed to terminate immediately. We also see that the cost to completion steadily decreases as 
+increases, which agrees with our theoretical results.
+Cost vs 0
+
+34
+32
+
+0
+
+1.5
+
+Deviation
+
+Cost
+
+Deviation vs
+
+2
+
+30
+28
+26
+
+1
+0.5
+0
+
+5
+
+10
+
+15
+
+20
+
+25
+
+5
+
+0
+
+10
+
+15
+
+20
+
+25
+
+0
+
+Figure 5: Comparing cost and deviation from the exact function for varying .
+
+6
+
+Summary of Results & Discussion
+
+0
+Figure 6 summarizes the size of F̄max (or F̄max
+for real-valued functions) for the various settings.
+Recall that our cost guarantees take the form (1 + ln F̄max )OP T . When Fh are real-valued, then
+0
+we instead solve the smooth ISSC problem approximately with cost guarantee (1 + ln F̄max
+)OP T .
+
+Our results are well developed for many different versions of the utility functions Fh , but are less
+flexible for the distance functions Gh . For example, even for rational-valued Gh , F̄max scales as
+N
+DG
+, which is not desirable. The restriction of Gh to be rational (or integral) leads to a relatively
+straightforward reduction of the continuous convex version of α(·) to a multiple thresholds version.
+7
+
+In fact, our formulation can be extended to deal with real-valued Gh and κn in the multiple thresholds version; however the resulting F̄ is no longer guaranteed to be submodular. It is possible that a
+different assumption than the one imposed in Condition 4.5 is required to prove more general results.
+F
+
+G
+
+Rational
+
+Rational
+
+Real
+
+Rational
+
+Multiple Thresholds
+N QN
+|H|α1 DF DG
+i=1 (κi − κi−1 )
+N QN
+|H|α10 DG
+i=1 (κi − κi−1 )
+
+Convex Threshold Curve
+N
+|H|α1 DF DG
+N
+|H|α10 DG
+
+0
+Figure 6: Summarizing F̄max . When Fh are real-valued, we show F̄max
+instead.
+
+Our analysis appears to be overly conservative for many settings. For instance, all the approaches we
+evaluated empirically achieved much better performance than their worst-case guarantees. It would
+be interesting to identify ways to constrain the problem and develop tighter theoretical guarantees.
+
+7
+
+Other Related Work
+
+Submodular optimization is an important problem that arises across many settings, including sensor
+placements [16, 15], summarization [26, 17, 23], inferring latent influence networks [8], diversified
+recommender systems [5, 4, 25, 21], and multiple solution prediction [1, 3, 22, 19]. However, the
+majority of previous work has focused on offline submodular optimization whereby the submodular
+function to be optimized is fixed a priori (i.e., does not vary depending on feedback).
+There are two typical ways that a submodular optimization problem can be made interactive. The
+first is in online submodular optimization, where an unknown submodular function must be reoptimized repeatedly over many sessions in an online or repeated-games fashion [20, 25, 21]. In
+this setting, feedback is typically provided only at the conclusion of a session, and so adapting from
+feedback is performed between sessions. In other words, each session consists of a non-interactive
+submodular optimization problem, and the technical challenge stems from the fact that the submodular function is unknown a priori and must be learned from feedback provided post optimization in
+each session – this setting is often referred to as inter-session interactive optimization.
+The other way to make submodular optimization interactive, which we consider in this paper, is to
+make feedback available immediately after each action taken. In this way, one can simultaneously
+learn about and optimize for the unknown submodular function within a single optimization session
+– this setting is often referred to as intra-session interactive optimization. One can also consider
+settings that allow for both intra-session and inter-session interactive optimization.
+Perhaps the most well-studied application of intra-session interactive submodular optimization is
+active learning [10, 7, 11, 9, 2, 14, 13], where the goal is to quickly reduce the hypothesis class
+to some target residual uncertainty for planning or decision making. Many instances of noisy and
+approximate active learning can be formulated as an interactive submodular set cover problem [9].
+A related setting is adaptive submodularity [7, 2, 6, 13], which is a probabilistic setting that essentially requires that the conditional expectation over the hypothesis set of submodular functions is
+itself a submodular function. In contrast, we require that the hypothesis class be pointwise submodular (i.e., each hypothesis corresponds to a different submodular utility function). Although neither
+adaptive submodularity nor pointwise submodularity is a strict generalization of the other (cf. [7, 9]),
+in practice it can often be easier to model application settings using pointwise submodularity.
+The “flipped” problem is to maximize utility with a bounded budget, which is commonly known as
+the budgeted submodular maximization problem [18]. Interactive budgeted maximization has been
+analyzed rigorously for adaptive submodular problems [7], but it remains a challenge to develop
+provably near-optimal interactive algorithms for pointwise submodular utility functions.
+
+8
+
+Conclusions
+
+We introduced smooth interactive submodular set cover, a smoothed generalization of previous ISSC
+frameworks. Smooth ISSC allows for the target threshold to vary based on the plausibility of the
+hypothesis. Smooth ISSC also introduces an approximate threshold solution concept that can be
+applied to real-valued functions, which also applies to basic submodular set cover with real-valued
+objectives. We developed the first provably near-optimal algorithm for this setting.
+8
+
+References
+[1] Dhruv Batra, Payman Yadollahpour, Abner Guzman-Rivera, and Gregory Shakhnarovich. Diverse m-best
+solutions in markov random fields. In European Conference on Computer Vision (ECCV), 2012.
+[2] Yuxin Chen and Andreas Krause. Near-optimal batch mode active learning and adaptive submodular
+optimization. In International Conference on Machine Learning (ICML), 2013.
+[3] Debadeepta Dey, Tommy Liu, Martial Hebert, and J. Andrew Bagnell. Contextual sequence prediction
+via submodular function optimization. In Robotics: Science and Systems Conference (RSS), 2012.
+[4] Khalid El-Arini and Carlos Guestrin. Beyond keyword search: discovering relevant scientific literature.
+In ACM Conference on Knowledge Discovery and Data Mining (KDD), 2011.
+[5] Khalid El-Arini, Gaurav Veda, Dafna Shahaf, and Carlos Guestrin. Turning down the noise in the blogosphere. In ACM Conference on Knowledge Discovery and Data Mining (KDD), 2009.
+[6] Victor Gabillon, Branislav Kveton, Zheng Wen, Brian Eriksson, and S. Muthukrishnan. Adaptive submodular maximization in bandit setting. In Neural Information Processing Systems (NIPS), 2013.
+[7] Daniel Golovin and Andreas Krause. Adaptive submodularity: A new approach to active learning and
+stochastic optimization. In Conference on Learning Theory (COLT), 2010.
+[8] Manuel Gomez Rodriguez, Jure Leskovec, and Andreas Krause. Inferring networks of diffusion and
+influence. In ACM Conference on Knowledge Discovery and Data Mining (KDD), 2010.
+[9] Andrew Guillory. Active Learning and Submodular Functions. PhD thesis, University of Washington,
+2012.
+[10] Andrew Guillory and Jeff Bilmes. Interactive submodular set cover. In International Conference on
+Machine Learning (ICML), 2010.
+[11] Andrew Guillory and Jeff Bilmes. Simultaneous learning and covering with adversarial noise. In International Conference on Machine Learning (ICML), 2011.
+[12] Steve Hanneke. The complexity of interactive machine learning. Master’s thesis, Carnegie Mellon University, 2007.
+[13] Shervin Javdani, Yuxin Chen, Amin Karbasi, Andreas Krause, J. Andrew Bagnell, and Siddhartha Srinivasa. Near optimal bayesian active learning for decision making. In Conference on Artificial Intelligence
+and Statistics (AISTATS), 2014.
+[14] Shervin Javdani, Matthew Klingensmith, J. Andrew Bagnell, Nancy Pollard, and Siddhartha Srinivasa.
+Efficient touch based localization through submodularity. In IEEE International Conference on Robotics
+and Automation (ICRA), 2013.
+[15] Andreas Krause, Ajit Singh, and Carlos Guestrin. Near-optimal sensor placements in gaussian processes.
+In International Conference on Machine Learning (ICML), 2005.
+[16] Jure Leskovec, Andreas Krause, Carlos Guestrin, Christos Faloutsos, Jeanne VanBriesen, and Natalie
+Glance. Cost-effective outbreak detection in networks. In ACM Conference on Knowledge Discovery and
+Data Mining (KDD), 2007.
+[17] Hui Lin and Jeff Bilmes. Learning mixtures of submodular shells with application to document summarization. In Conference on Uncertainty in Artificial Intelligence (UAI), 2012.
+[18] George Nemhauser, Laurence Wolsey, and Marshall Fisher. An analysis of approximations for maximizing submodular set functions. Mathematical Programming, 14(1):265–294, 1978.
+[19] Adarsh Prasad, Stefanie Jegelka, and Dhruv Batra. Submodular meets structured: Finding diverse subsets
+in exponentially-large structured item sets. In Neural Information Processing Systems (NIPS), 2014.
+[20] Filip Radlinski, Robert Kleinberg, and Thorsten Joachims. Learning diverse rankings with multi-armed
+bandits. In International Conference on Machine Learning (ICML), 2008.
+[21] Karthik Raman, Pannaga Shivaswamy, and Thorsten Joachims. Online learning to diversify from implicit
+feedback. In ACM Conference on Knowledge Discovery and Data Mining (KDD), 2012.
+[22] Stephane Ross, Jiaji Zhou, Yisong Yue, Debadeepta Dey, and J. Andrew Bagnell. Learning policies for
+contextual submodular prediction. In International Conference on Machine Learning (ICML), 2013.
+[23] Sebastian Tschiatschek, Rishabh Iyer, Haochen Wei, and Jeff Bilmes. Learning mixtures of submodular
+functions for image collection summarization. In Neural Information Processing Systems (NIPS), 2014.
+[24] Laurence A Wolsey. An analysis of the greedy algorithm for the submodular set covering problem.
+Combinatorica, 2(4):385–393, 1982.
+[25] Yisong Yue and Carlos Guestrin. Linear submodular bandits and their application to diversified retrieval.
+In Neural Information Processing Systems (NIPS), 2011.
+[26] Yisong Yue and Thorsten Joachims. Predicting diverse subsets using structural svms. In International
+Conference on Machine Learning (ICML), 2008.
+
+9
+
+

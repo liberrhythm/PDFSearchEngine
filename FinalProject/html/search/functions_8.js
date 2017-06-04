@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['searcher',['Searcher',['../classSearcher.html#a46e9a9fa3aad21131cf6bd25237e3a80',1,'Searcher']]],
+  ['stopwords',['StopWords',['../classStopWords.html#a14fb35f6b2f88be4cf255a95ec12bcc7',1,'StopWords']]],
+  ['streamparser',['StreamParser',['../classStreamParser.html#a86ce0603794dc45b5205c5375c325c40',1,'StreamParser']]]
+];

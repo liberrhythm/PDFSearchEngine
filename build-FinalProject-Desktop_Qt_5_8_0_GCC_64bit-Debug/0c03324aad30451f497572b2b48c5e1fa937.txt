@@ -1,0 +1,2111 @@
+Journal of Applied Psychology
+2003, Vol. 88, No. 4, 680 – 693
+
+Copyright 2003 by the American Psychological Association, Inc.
+0021-9010/03/$12.00 DOI: 10.1037/0021-9010.88.4.680
+
+Resistance to Change: Developing an Individual Differences Measure
+Shaul Oreg
+Cornell University
+The Resistance to Change Scale was designed to measure an individual’s dispositional inclination to
+resist changes. In Study 1, exploratory analyses indicated 4 reliable factors: Routine Seeking, Emotional
+Reaction to Imposed Change, Cognitive Rigidity, and Short-Term Focus. Studies 2, 3, and 4 confirmed
+this structure and demonstrated the scale’s convergent and discriminant validities. Studies 5, 6, and 7
+demonstrated the concurrent and predictive validities of the scale in 3 distinct contexts. The scale can be
+used to account for the individual-difference component of resistance to change and to predict reactions
+to specific change.
+
+moving from a well-defined to an ill-defined laboratory task and
+from high school to college (Mumford, Baughman, Threlfall, &
+Uhlman, 1993).
+Judge, Thoresen, Pucik, and Welbourne (1999) linked several
+other traits to a work-oriented concept of coping with change. This
+was measured with a 12-item scale that tapped employees’ evaluations of a need for changes in the organization, perceptions
+regarding their ability to cope with such changes, and their perceptions of themselves as initiators of change. Personality traits
+were combined to create two factors: the Positive Self-Concept
+factor and the Risk Tolerance factor. The Positive Self-Concept
+factor comprises locus of control, generalized self-efficacy, selfesteem, and positive affectivity. Previous research (Judge, Locke,
+& Durham, 1997; Judge, Locke, Durham, & Kluger, 1998) has
+found this factor to reflect an individual’s core evaluations of the
+self and the ability to cope with difficult or stressful situations. The
+Risk Tolerance factor comprises openness to experience, tolerance
+for ambiguity, and risk aversion. Both factors predicted managers’
+coping with change. A similar study by Wanberg and Banas (2000)
+reported that self-esteem, optimism, and perceived control—interpreted as measures of psychological resilience—predicted employees’ willingness to accept changes at work.
+All these studies used assessment instruments that had been
+designed for other purposes and that are only indirectly related to
+an individual’s inclination to resist change. In contrast, the present
+research was designed to formulate a conception of a generalized
+disposition to resist change and to develop an instrument that
+would assess this disposition directly. The starting point was a
+review of the literature on resistance to change, with particular
+attention to sources of resistance that appeared to derive from an
+individual’s personality. Six such sources were identified: (a)
+reluctance to lose control, (b) cognitive rigidity, (c) lack of psychological resilience, (d) intolerance to the adjustment period
+involved in change, (e) preference for low levels of stimulation and
+novelty, and (f) reluctance to give up old habits.
+1. Reluctance to lose control. Some researchers have emphasized loss of control as the primary cause of resistance (Conner,
+1992). Individuals may resist changes because they feel that control over their life situation is taken away from them with changes
+that are imposed on them rather than being self-initiated. Organizational studies that advocate employee involvement and participation in organizational decision making (e.g., Coch & French,
+
+Most modern industrial societies value the person who is willing
+and able to initiate and respond positively to change, and yet,
+organizations that attempt to initiate such changes are often stymied by individuals or groups within the organization who resist
+the changes. Often the reasons for the resistance are not far to seek:
+The benefits to the organization are not necessarily consonant
+with—and are often antithetical to—the interests of the individuals
+being asked to make the change (e.g., Coch & French, 1948;
+Tichy, 1983; Zaltman & Duncan, 1977; Zander, 1950). Nevertheless, some individuals seem to resist even changes that are consonant with their interests. Who are these people? What are the
+personality characteristics that drive such resistances? The research described in this article sought to answer these questions.
+In particular, this article describes the development of a scale—
+the Resistance to Change Scale— designed to tap an individual’s
+tendency to resist or avoid making changes, to devalue change
+generally, and to find change aversive across diverse contexts and
+types of change. It was anticipated that resistance to change would
+be a multidimensional disposition that comprises behavioral, cognitive, and affective components (cf. Piderit, 2000).
+Most approaches to resistance to change have focused on situational antecedents (e.g., Coch & French, 1948; Tichy, 1983;
+Zander, 1950). Only recently have studies begun to explore concepts that are related to resistance to change from an individual
+difference perspective. For example, self-discipline, an orientation
+toward creative achievement, and a lack of defensive rigidity were
+suggested to reflect people’s adaptability to change on the basis of
+their contribution to the maintenance of high performance when
+
+Shaul Oreg, Department of Organizational Behavior, School of Industrial and Labor Relations, Cornell University.
+This research was partially funded by a grant from the Center for
+Advanced Human Resource Studies (CAHRS) at the School of Industrial
+and Labor Relations, Cornell University. The ideas expressed herein,
+however, are my own and are not necessarily endorsed by CAHRS. I thank
+Daryl Bem and Tove Hammer for their insightful and astute inputs
+throughout this research project. I also thank David Levy, Lisa Moynihan,
+and Mahmut Bayazıt for their useful ideas and helpful comments on earlier
+versions of this article.
+Correspondence concerning this article should be addressed to Shaul
+Oreg, who is now at the Department of Sociology and Anthropology,
+University of Haifa, Haifa, Israel 31999. E-mail: oreg@soc.haifa.ac.il
+680
+
+RESISTANCE TO CHANGE SCALE
+
+1948; Sagie & Koslowsky, 2000) as a means of overcoming
+resistance to change focus on this source of resistance.
+2. Cognitive rigidity. Among researchers who have examined
+the cognitive processes underlying people’s responses to organizational change (Bartunek, Lacey, & Wood, 1992; Bartunek &
+Moch, 1987; Lau & Woodman, 1995), some have suggested that
+the trait of dogmatism (Rokeach, 1960) might predict an individual’s approach to change (Fox, 1999). Dogmatic individuals are
+characterized by rigidity and closed-mindedness and therefore
+might be less willing and able to adjust to new situations. Although
+one empirical study failed to find support for this hypothesis (Lau
+& Woodman, 1995), it still seems likely that some form of cognitive rigidity would be implicated in an individual’s resistance to
+change.
+3. Lack of psychological resilience. Other researchers suggest
+that change is a stressor, and therefore resilience should predict an
+individual’s ability to cope with change (e.g., Ashforth & Lee,
+1990; Judge et al., 1999). As noted above, resilient individuals
+were in fact more willing to participate in an organizational change
+(Wanberg & Banas, 2000) and exhibited improved coping with
+change (Judge et al., 1999). It may also be that less resilient
+individuals are more reluctant to make changes because to do so is
+to admit that past practices were faulty, and therefore change
+entails a loss of face (e.g., Kanter, 1985; Zaltman & Duncan,
+1977).
+4. Intolerance to the adjustment period involved in change. A
+distinct aspect of individuals’ psychological resilience is their
+ability to adjust to new situations. Some researchers have suggested that people resist change because it often involves more
+work in the short term (Kanter, 1985). New tasks require learning
+and adjustment, and it may be that some individuals are more
+willing and able to endure this adjustment period. Others who may
+support a particular change in principle may still resist it because
+of their reluctance to undergo the required adjustment period.
+5. Preference for low levels of stimulation and novelty. A
+number of studies established a distinction between adaptive individuals, who are best at performing within a well-defined and
+familiar framework, and innovators, who are better at finding
+novel solutions outside the given framework (Kirton, 1980, 1989).
+One study found that innovative individuals generally exhibit a
+greater need for novel stimuli (Goldsmith, 1984). It is thus reasonable to expect that people who resist change would exhibit a
+weaker need for novelty. In addition, because change often involves an increase in stimulation, those who prefer lower levels of
+stimulation may resist change.
+6. Reluctance to give up old habits. Several organizational
+theorists discuss reluctance to give up old habits as a common
+characteristic of resistance to change (e.g., Tichy, 1983; Watson,
+1971). Some have explained this reluctance by arguing that “familiarity breeds comfort” (Harrison, 1968; Harrison & Zajonc,
+1970). When individuals encounter new stimuli, familiar responses
+may be incompatible with the situation, thus producing stress,
+which then becomes associated with the new stimulus.
+These several sources of resistance to change were used in
+Study 1—an exploratory study—to generate initial items for the
+Resistance to Change Scale. Studies 2, 3, and 4 follow to describe
+the scale’s structure validation and to establish convergent and
+discriminant validities. Studies 5, 6, and 7 then establish the
+concurrent and predictive validities of the scale.
+
+681
+
+Study 1: Building the Resistance to Change Scale
+Method
+For each of the sources of resistance mentioned above, 4 –10 items were
+generated. In addition, four items were written to tap an individual’s
+general attitude toward change (e.g., “generally, change is good,” “I
+generally dislike changes”), yielding an initial pool of 48 items. Five
+independent reviewers, experienced in the scale-development process, examined the initial item pool to identify ambiguous wording, doublebarreled items, and redundant items. As a result, 6 items were discarded, 2
+were rephrased, and 2 new items were generated, reducing the pool to 44.
+These were formatted as 6-point Likert scales, which ranged from 1
+(strongly disagree) to 6 (strongly agree).
+Sampling was based on the “snowball” method. Volunteers were solicited by the author to participate in the study and were encouraged to recruit
+their acquaintances to participate as well. The scale was administered to
+102 women, 122 men, and 2 respondents who did not identify their gender.
+The respondents’ age ranged from 18 to 67 years (M ⫽ 31, SD ⫽ 13.5).
+Fifty-seven percent of the respondents identified themselves as students.
+No significant differences were found in the mean item scores or in the
+factor structures of the different groups (i.e., men vs. women, students vs.
+nonstudents, and different age groups).
+
+Analyses and Results
+Prior to conducting the factor analysis, the interitem correlation
+matrix was examined. Any item that correlated at less than .4 with
+all other items was deleted from the analyses (Hinkin, 1998).
+Eleven items were discarded for this reason.
+An exploratory factor analysis was conducted on the data using
+a principle components analysis with an oblique rotation.1 After
+the successive deletion of items that either did not load significantly on any factor or loaded highly on more than one factor, a
+four-factor solution was obtained. These factors were maintained
+based on the obtained Scree plot, the Keiser–Guttman criterion,
+and the theoretical meaningfulness of the factors. The results of
+this analysis are presented in Table 1.
+The first factor contained eight items that pertained to the
+incorporation of routines into one’s life (e.g., “I prefer having a
+stable routine to experiencing changes in my life”). This factor
+included items from both the “preference for low levels of stimulation and novelty” and the “reluctance to give up old habits”
+dimensions.
+The second factor contained six items that reflect emotional
+reactions to imposed change (e.g., “When things don’t go according to plans it stresses me out,” “When I am informed of a change
+of plans, I tense up a bit”). This factor combined items from the
+“psychological resilience” and “reluctance to lose control”
+dimensions.
+The third factor consisted of four items that reflect a short-term
+focus when addressing change (e.g., “Often, I feel a bit uncom1
+
+Nunnally and Bernstein (1994) recommended the use of the principalcomponents extraction method for factor analytic procedures with more
+than 20 variables. The oblique rotation was selected because trait dimensions are theoretically expected to correlate with one another. For comparison, the analyses were also conducted using a varimax rotation and the
+principle axis extraction method, with both varimax and promax rotations.
+Although factors were sometimes ordered differently, these analyses produced equivalent structures.
+
+OREG
+
+682
+
+Table 1
+Resistance to Change Factor Loadings for the Final Item Pool Exploratory Factor Analysis in
+Study 1
+Factor (F) loadings
+Item
+
+F1
+
+Routine Seeking—eigenvalue of 8.9, 38.7% variance explained
+I’d rather be bored than surprised.
+Generally, change is good.b, c
+I’ll take a routine day over a day full of unexpected events any time.
+Whenever my life forms a stable routine, I look for ways to change it.c
+I prefer having a stable routine to experiencing changes in my life.b
+I generally consider changes to be a negative thing.
+I like to do the same old things rather than try new and different ones.
+I like to experience novelty and change in my daily routine.b, c
+Emotional Reaction—eigenvalue of 1.9, 8% variance explained
+If I were to be informed that there’s going to be a significant change
+regarding the way things are done at work, I would probably feel stressed.
+If I were to be informed that there is going to be a change in one of my
+assignments at work, prior to knowing what the change actually is, it would
+probably stress me out.b
+When I am informed of a change of plans, I tense up a bit.
+When things don’t go according to plans, it stresses me out.
+If my boss changed the criteria for evaluating employees, it would probably
+make me feel uncomfortable even if I thought I’d do just as well without
+having to do any extra work.
+If in the middle of the work year, I were to be informed that there’s going to
+be a change in the schedule of deadlines, prior to knowing what the change
+actually is, I would probably presume that the change is for the worse.b
+Short-Term focus—eigenvalue of 1.3, 5.6% variance explained
+Changing plans seems like a real hassle to me.
+When someone pressures me to change something, I tend to resist it even if I
+think the change may ultimately benefit me.
+Once I’ve made plans, I’m not likely to change them.
+Often, I feel a bit uncomfortable even about changes that may potentially
+improve my life.
+Cognitive Rigidity—eigenvalue of 1.2, 5% variance explained
+I don’t change my mind easily.
+I often change my mind.c
+My views are very consistent over time.
+
+F2
+
+F3
+
+F4
+
+.829a
+.826
+.761
+.686
+.569
+.503
+.496
+.490
+.902
+.862
+.699
+.675
+.639
+.633
+.749
+.680
+.444
+.418
+.740
+.711
+.668
+
+a
+Loadings lower than .3 are not listed. b These items were ultimately eliminated at the reliability-analysis
+phase to remove redundancy. These items did not appear to add substantial theoretical content and were highly
+correlated with the remaining subscale items. c These items were reverse coded prior to running the analysis.
+
+fortable even about changes that may potentially improve my life,”
+“When someone pressures me to change something, I tend to resist
+it even if I think the change may ultimately benefit me”). The focus
+here appears to be on the immediate inconvenience or adverse
+effects of the change. The items can be viewed as involving an
+irrational component in that they all reflect resistance that arises in
+spite of one’s awareness to the potential long-term benefits involved in the change. The items of this factor were originally
+generated for the “intolerance for the adjustment involved in
+change,” and “reluctance to lose control” categories.
+The fourth factor reflected the suggested cognitive rigidity dimension. This factor contained three items that address the ease
+and frequency with which individuals change their minds (e.g., “I
+don’t change my mind easily”).
+The four factors explain just over 57% of the variance. When
+five factors were extracted, 62% of the variance was explained, but
+the added factor was both statistically and theoretically very similar to the third factor in the four-factor solution just described (r ⫽
+.48).
+
+Interfactor correlations are presented in Table 2. The fact that
+prior to the rotation, all of the items loaded significantly on the first
+factor and that the factors are not independent supports the assumption that these are all dimensions of the same trait.
+Total scale’s reliability coefficient alpha (Cronbach’s) was .92.
+Alphas for the Routine Seeking subscale, the Emotional Reaction
+subscale, and the Short-Term Focus subscale were all acceptable
+(.89, .86, and .71, respectively). The alpha for the Cognitive
+Table 2
+Resistance to Change Subscale Intercorrelations in Study 1
+Factor
+1.
+2.
+3.
+4.
+
+Routine Seeking
+Emotional Reaction
+Short-Term Focus
+Cognitive Rigidity
+
+Note.
+
+1
+
+2
+
+3
+
+4
+
+—
+.65
+.57
+.23
+
+—
+.52
+.11
+
+—
+.21
+
+—
+
+All correlations are significant at p ⬍ .01.
+
+RESISTANCE TO CHANGE SCALE
+
+Rigidity subscale, which contained only three items, was marginally acceptable (.68).
+To remove redundancy, three items were removed from the
+Routine Seeking subscale, and two were removed from the Emotional Reaction subscales. These items did not add substantial
+theoretical content to the subscale and were highly correlated with
+other items on their subscales. The alpha coefficients of the reduced Routine Seeking and the Emotional Reaction subscales were
+.81 and .82, respectively.
+
+Discussion
+The purpose of this study was to establish the existence of a
+disposition to resist change and to reveal its underlying structure.
+The analyses yielded a 16-item scale with four factors: (a) Routine
+Seeking, (b) Emotional Reaction to Imposed Change, (c) ShortTerm Focus, and (d) Cognitive Rigidity. These factors can be
+conceptualized as reflecting behavioral, affective, and cognitive
+aspects of resistance to change, respectively.2
+The behavioral dimension consists of people’s inclination to
+adopt routines. The affective dimension comprises two components: First, the Emotional Reaction factor reflects the amount of
+stress and uneasiness the individual experiences when confronted
+with change. Second, the extent to which individuals are distracted
+by the short-term inconveniences involved in change, such that
+they refrain from choosing a rationally valued long-term benefit,
+also reflects an affective reaction to change.3 The cognitive dimension is represented by the Cognitive Rigidity factor, which
+taps the frequency and ease with which people change their minds.
+The existence of moderate-to-high intercorrelations among factors
+reflects the existence of a general disposition to resist change.
+
+Studies 2, 3, and 4: Confirming the Factor Structure of
+the Resistance to Change Scale and Establishing its
+Convergent and Discriminant Validities
+The purpose of Studies 2 and 3 was to confirm the factor
+structure of the Resistance to Change Scale and to establish its
+convergent and discriminant validities (Cronbach & Meehl, 1955).
+Study 4 further probed the scale’s discriminant validity by assessing the relationship between resistance to change and cognitive
+ability.
+
+Study 2: Validating the Resistance to Change Scale’s
+Structure
+Because the Cognitive Rigidity subscale obtained in Study 1
+contained only three items and yielded only marginally acceptable
+reliability, an additional item was written for this dimension:
+“Once I’ve come to a conclusion, I’m not likely to change my
+mind.” An additional item was also written for the Short-Term
+Focus subscale to improve its reliability as well: “I sometimes find
+myself avoiding changes that I know will be good for me.”
+
+Method
+One hundred ninety-seven employees from three of Cornell University’s
+colleges filled out the Resistance to Change Scale. Faculty and staff
+members were contacted via e-mail and were asked to fill out an electronic
+version of the questionnaire. Sixty-eight percent of respondents were
+
+683
+
+women, 32% were men; 69% were staff employees, 31% were faculty
+members. The mean age was 42 years (SD ⫽ 11.5). The response rate was
+27%. As in Study 1, there were no significant gender, age, or occupational
+differences in mean item scores or in the scale factor structures.
+
+Results and Discussion
+In order to validate the scale structure obtained in Study 1, a
+confirmatory factor analysis was applied to the data. A secondorder latent factor represented the general resistance to change
+disposition, and four first-order latent factors each represented one
+of the Resistance to Change facets identified in Study 1. All four
+first-order factors loaded significantly on the second-order factor
+( p ⬍ .01). Item standardized regression weight estimates are
+presented in Table 3. All but one of the items loaded significantly
+on their expected factor. This four-factor model presented good fit
+(Hu & Bentler, 1999) to the data, ␹2(104, N ⫽ 197) ⫽ 135.64, p ⬍
+.01 (Tucker–Lewis Index [TLI] ⫽ .958, comparative fit index
+[CFI] ⫽ .968, root-mean-square error of approximation [RMSEA]
+⫽ .039) and thus validated the trait structure obtained in Study 1.
+The alpha coefficient obtained for the full Resistance to Change
+Scale was .87. Subscale alphas were .75 for the routine seeking
+facet, .71 for the emotional reaction facet, .71 for the short-term
+thinking facet, and .69 for the cognitive rigidity facet.
+
+Study 3: Personality Correlates of the Resistance to
+Change Scale and a Reconfirmation of its Structure
+Several traits have been linked to a work-oriented construct of
+coping with change (Judge et al., 1999). As noted, the various
+traits considered in the Judge et al. (1999) study were reduced to
+two factors: Risk Tolerance (which comprises tolerance for ambiguity, risk aversion, and openness to experience), and Positive
+Self-Concept (which comprises self-esteem, generalized selfefficacy, positive affectivity, and locus of control). Both factors
+were related to individuals’ scores on a coping-with-change scale.
+On the basis of Judge et al.’s findings, openness to experience,
+tolerance for ambiguity and risk aversion were measured in this
+study and were expected to yield significant correlations with the
+Resistance to Change Scale. Specifically, individuals who are less
+open to experiences, who are less tolerant of ambiguity, and who
+are more risk-averse are expected to exhibit higher resistance to
+change. Generalized self-efficacy, self-esteem, and locus of control were also measured in this study and were expected to present
+significant yet weaker correlations with resistance to change because these traits are related to people’s perceptions regarding their
+ability to cope in general and not necessarily to their particular
+attitude toward change. Because research suggests that dogmatism
+is related to employees’ willingness to cooperate with change (e.g.,
+Fox, 1999), it, too, was measured in this study and was also
+expected to correlate with resistance to change.
+2
+Although this resembles Piderit’s (2000) tripartite conceptualization of
+resistance to change, in our study resistance to change was conceptualized
+as a disposition rather than an attitude toward a particular organizational
+change.
+3
+The value of maintaining the distinction between these two affective
+factors was tested in Study 2, in which a three-factor model was found to
+be of lower fit than the four-factor model.
+
+OREG
+
+684
+
+Table 3
+Estimated Standardized Regression Weights for the Four-Factor Model Confirmatory Factor
+Analysis in Study 2
+Factor/item
+
+Estimate
+
+Routine Seeking
+I generally consider changes to be a negative thing.
+I’ll take a routine day over a day full of unexpected events any time.
+I like to do the same old things rather than try new and different ones.
+Whenever my life forms a stable routine, I look for ways to change it.
+I’d rather be bored than surprised.
+Emotional Reaction
+If I were to be informed that there’s going to be a significant change regarding the way
+things are done at work, I would probably feel stressed.
+When I am informed of a change of plans, I tense up a bit.
+When things don’t go according to plans, it stresses me out.
+If my boss changed the criteria for evaluating employees, it would probably make me feel
+uncomfortable even if I thought I’d do just as well without having to do any extra work.
+Short-Term Thinking
+Changing plans seems like a real hassle to me.
+Often, I feel a bit uncomfortable even about changes that may potentially improve my life.
+When someone pressures me to change something, I tend to resist it even if I think the
+change may ultimately benefit me.
+I sometimes find myself avoiding changes that I know will be good for me.
+Once I’ve made plans, I’m not likely to change them.
+Cognitive Rigidity
+I often change my mind.
+Once I’ve come to a conclusion, I’m not likely to change my mind.
+I don’t change my mind easily.
+My views are very consistent over time.
+
+.809a
+.747
+.679
+.626
+.539
+.475
+.910a
+.715
+.692
+.663
+.414
+1.210a
+.665
+.494
+.460
+.381
+.141b
+.540a
+.831
+.569
+.556
+.291
+
+a
+
+Estimates for first-order factor loadings on the second-order Resistance to Change factor. b This was the only
+nonsignificant loading. The item was not used in subsequent studies. All other loadings were significant at p ⬍
+.001.
+
+Considering that several of the Resistance to Change Scale
+items were designed to reflect resistance to change that is due to a
+preference for low levels of stimulation, Zuckerman’s (1994a;
+1968) Sensation-Seeking Scale was expected to show a strong
+negative correlation with resistance to change, in particular with
+the Resistance to Change routine-seeking dimension. Individuals
+who are high on routine seeking are, in a sense, expressing a desire
+for low levels of stimulation and would thus be expected to score
+low on sensation seeking.
+In addition to these traits, it would also be interesting to assess
+the relationships between resistance to change and each of the Big
+Five (Digman, 1990) personality dimensions. In addition to openness to experience, neuroticism—which is negatively related to
+Judge et al.’s (1999) Positive Self-Concept factor—was also hypothesized to correlate with resistance to change. Individuals who
+are less stable emotionally (i.e., higher on neuroticism) are expected to have less faith in their abilities to deal with change and
+are therefore more likely to feel threatened by it and resist it (see
+also Mumford et al., 1993). There is also a reason to believe that
+resistance to change would be indirectly related to extraversion.
+Both extraverted and sensation-seeking individuals are characterized as dynamic and active, hence extraversion may be related to
+resistance to change through its link to sensation seeking. The two
+other Big Five dimensions (i.e., conscientiousness and agreeableness) were not expected to correlate with resistance to change.
+To summarize, resistance to change was expected to correlate
+with tolerance for ambiguity, risk aversion, openness to experience, dogmatism, and sensation seeking. Weaker correlations were
+
+expected with self-esteem, generalized self-efficacy, locus of control, neuroticism, and extraversion.
+
+Method
+Participants and procedure. One hundred thirty-four undergraduates
+who were enrolled in introductory courses in organizational behavior and
+human resources management filled out the study’s questionnaires. Students were offered $5 each in return for their participation in the study. Of
+the respondents, 54% were women and 46% were men, and the mean age
+was 19.5 years (SD ⫽ 1.4). The response rate was 34%.
+Measures. Resistance to change was measured using the Resistance to
+Change Scale established in the previous two studies. The alpha coefficient
+for the scale was .87. Alphas for routine seeking, emotional reaction,
+short-term focus, and cognitive rigidity were .74, .75, .74, and .84,
+respectively.
+Risk aversion was measured using Slovic’s (1972) four-item scale (e.g.,
+“I prefer a low-risk/high-security job with a steady salary over a job that
+offers high risks and high rewards,” “I view risk on a job as a situation to
+be avoided at all costs”). The measure has been used in organizational
+research and has exhibited high reliability (Gomez-Mejia & Balkin, 1989;
+Judge et al., 1999). Its reliability alpha coefficient in the present study was
+.79.
+Locus of control was measured using Levenson’s (1981) internality
+scale. Like Rotter’s (1966) original scale, this scale measures the extent to
+which people believe in their personal control over their own lives (internal
+locus of control) versus the belief that external factors are responsible for
+the outcomes in one’s life. The Levenson eight-item internality scale has
+been shown to overcome some of the problems involved in the use of
+Rotter’s scale (e.g., high social desirability; cf. Lefcourt, 1991). The scale’s
+alpha was .64.
+
+RESISTANCE TO CHANGE SCALE
+
+685
+
+Table 4
+Descriptive Statistics and Correlations Between Resistance to Change (RTC) and Subscales and
+Personality Traits in Study 3 (N ⫽ 134)
+Variable
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+15.
+16.
+17.
+
+RTC
+Routine seeking
+Emotional reaction
+Short-term focus
+Cognitive rigidity
+Sensation seeking
+Generalized self-efficacy
+Risk aversion
+Dogmatism
+Self-esteem
+Locus of control
+Tolerance for ambiguity
+Extraversion
+Agreeableness
+Conscientiousness
+Openness to Experience
+Neuroticism
+
+* p ⬍ .05.
+
+M
+
+SD
+
+1
+
+2
+
+3
+
+4
+
+5
+
+3.36
+3.03
+3.58
+3.06
+3.49
+9.38
+4.79
+3.13
+3.17
+4.82
+3.93
+3.63
+6.13
+6.90
+6.76
+6.87
+5.04
+
+0.59
+0.64
+0.83
+0.89
+0.95
+4.48
+0.73
+0.85
+0.53
+0.76
+0.68
+0.65
+1.38
+1.12
+1.33
+0.99
+1.29
+
+—
+.74**
+.80**
+.74**
+.63**
+⫺.48**
+⫺.07
+.47**
+.28**
+⫺.17
+.11
+⫺.42**
+⫺.16
+⫺.07
+.12
+⫺.19*
+.28**
+
+—
+.45**
+.51**
+.21*
+⫺.58**
+⫺.26**
+.46**
+.13
+⫺.27**
+⫺.07
+⫺.56**
+⫺.29**
+.06
+.09
+⫺.21*
+.26**
+
+—
+.59**
+.30**
+⫺.40**
+⫺.01
+.47**
+.22*
+⫺.15
+.15
+⫺.37**
+⫺.11
+⫺.02
+.10
+⫺.15
+.33**
+
+—
+.17
+⫺.27**
+⫺.23**
+.38**
+.27**
+⫺.32**
+.02
+⫺.34**
+⫺.22*
+⫺.11
+⫺.02
+⫺.14
+.33**
+
+—
+⫺.15
+.22*
+.10
+.21*
+.17
+.19*
+⫺.00
+.11
+⫺.12
+.14
+⫺.06
+⫺.04
+
+** p ⬍ .01.
+
+Dogmatism was measured using the Short-Form Dogmatism Scale developed by Troldahl and Powell (1965). The short form uses 20 items from
+Rokeach’s (1960) original scale that have been shown to maintain the
+reliability and validity of the measuring instrument. Example items are “In
+this complicated world of ours the only way we can know what’s going on
+is to rely on leaders or experts who can be trusted” and “My blood boils
+whenever a person stubbornly refuses to admit he’s wrong.” The scale’s
+alpha coefficient in this study was .79.
+Tolerance for ambiguity was assessed using the seven-item Tolerance
+for Ambiguity Scale developed by Lorsch and Morse (1974). The scale
+includes items such as “A really satisfying life is a life of problems. When
+one is solved, one moves on to the next problem” and “It’s satisfying to
+know pretty much what is going to happen on the job from day to day.” In
+the present study, the scale’s alpha coefficient was .77.
+Generalized self-efficacy was measured using Chen, Gully, and Eden’s
+(2001) New General Self-Efficacy Scale. In their study, the scale was
+shown to have high reliability and higher construct validity in comparison
+with previously established general self-efficacy scales. The scale consists
+of eight items (e.g., “I will be able to achieve most of the goals that I have
+set for myself,” “When facing difficult tasks, I am certain that I will
+accomplish them”). The alpha coefficient for the scale in the present study
+was .93.
+Self-esteem was measured with Rosenberg’s (1965) 10-item scale. The
+scale is the most commonly used measure of self-esteem, and considerable
+empirical data support its validity (Blascovich & Tomaka, 1991). Example
+items include “I feel that I have a number of good qualities” and “I take a
+positive attitude toward myself.” The scale’s alpha coefficient obtained in
+this study was .90.
+Sensation-seeking was measured using the Impulsive Sensation Seeking
+Scale (ImpSS) from the Zuckerman–Kuhlman Personality Questionnaire
+(Zuckerman, Kuhlman, Joireman, & Teta, 1993). In Zuckerman et al.’s
+(1993) study, items concerning the two traits (i.e., impulsivity and sensation seeking) emerged as one factor and was in line with his previous
+research on the relationship between the two constructs (Zuckerman,
+1994b). Zuckerman concluded that the ImpSS measures the general
+sensation-seeking tendency. The scale contains 19 items and uses a true–
+false response format. It has good psychometric properties (e.g., high
+reliability, zero correlation with social desirability and acquiescence scales)
+(Zuckerman, 1994a), and its reliability coefficient (Kuder–Richardson coefficient [KR20]) in the present study was .84.4
+
+The Big Five (openness to experience, neuroticism, agreeableness, extraversion, and conscientiousness) were measured with Saucier’s (1994)
+Big-Five Mini-Markers. Measurements of extraversion, agreeableness, and
+conscientiousness were used in an exploratory manner given that no
+specific predictions were raised regarding their relationship with resistance
+to change. Saucier’s Mini-Markers consist of 40 adjectives (e.g., creative,
+intellectual, rude; eight for each of the Big Five dimensions) in response to
+which subjects are asked to indicate how accurately or inaccurately the
+adjectives describe them. The response scale is a 9-point Likert scale
+running from 1 (extremely inaccurate) to 9 (extremely accurate). Subscale
+reliabilities in the present study were .78 for openness to experience, .84 for
+agreeableness, .79 for neuroticism, .87 for extraversion, and .84 for
+conscientiousness.
+
+Results
+Structure validation. First, a confirmatory factor analysis was
+applied to the resistance-to-change data to revalidate the scale’s
+structure. All first-order latent factors (i.e., subscale factors)
+loaded significantly on the second-order latent factor (i.e., the full
+Resistance to Change factor) and all items loaded significantly on
+their expected factor. The fit of the data to the four-factor model
+proposed in Studies 1 and 2 was good, ␹2(104, N ⫽ 134) ⫽
+132.36, p ⬍ .01 (CFI ⫽ .964, TLI ⫽ .953, RMSEA ⫽ .045).
+Convergent and discriminant validities. Table 4 shows means
+and standard deviations of study variables along with correlations
+between Resistance to Change and its subscales and the other
+personality traits measured in the study.
+As expected, the highest correlates of resistance to change were
+sensation seeking (r ⫽ ⫺.48, p ⬍ .01), risk aversion (r ⫽ .47, p ⬍
+.01), and tolerance for ambiguity (r ⫽ ⫺.42, p ⬍ .01). Participants
+who were high in sensation seeking, were not risk averse, and
+scored high on tolerance for ambiguity generally scored low on
+4
+Because the items of this scale have only two response categories (true
+vs. false), the Kuder–Richardson coefficient—which is the appropriate
+index for dichotomous data—was computed rather than Cronbach’s alpha.
+
+OREG
+
+686
+
+resistance to change. In particular, among the resistance-to-change
+facets, sensation seeking and tolerance for ambiguity were most
+strongly related to the routine seeking dimension (r ⫽ ⫺.58 and
+⫺.56, respectively, p ⬍ .01); risk aversion was similarly related to
+both the emotional reaction and the routine seeking dimensions
+(r ⫽ .47 and .46, respectively, p ⬍ .01).
+Weaker, yet significant, relationships were exhibited between
+resistance to change and dogmatism (r ⫽ .28, p ⬍ .01), neuroticism (r ⫽ .28, p ⬍ .01), and openness to experience (r ⫽ ⫺.19,
+p ⬍ .05). Neuroticism was most strongly related to the emotional
+reaction (r ⫽ .33, p ⬍ .01) and short-term focus (r ⫽ .33, p ⬍ .01)
+dimensions. Dogmatism exhibited its highest correlation with the
+short-term focus facet (r ⫽ .27, p ⬍ .01), and significant, yet
+somewhat lower, correlations with routine-seeking (r ⫽ .22, p ⬍
+.05) and cognitive rigidity (r ⫽ .21, p ⬍ .05). Again, as expected,
+individuals who were high on dogmatism and neuroticism and who
+were low on openness to experience were more likely to score high
+on resistance to change.
+Except for neuroticism, none of the traits with which resistance
+to change was expected to show weaker relationships yielded
+significant correlations. However, some of the Resistance to
+Change subscales exhibited significant and theoretically meaningful relationships with these traits. Self-esteem exhibited low-tomoderate negative correlations with the Short-Term Focus and
+Routine Seeking subscales (r ⫽ ⫺.32 and ⫺.27, respectively, p ⬍
+.01).
+Both extraversion and generalized self-efficacy exhibited a low
+yet significant negative correlation with routine seeking (r ⫽ ⫺.29
+and ⫺.26, respectively, p ⬍ .01) and with short-term focus (r ⫽
+⫺.22, p ⬍ .01 and r ⫽ ⫺.23, p ⬍ .05). It is interesting to note that
+generalized self-efficacy had a low, yet significant positive correlation with the cognitive rigidity facet. This may be explained by
+the fact that people who have greater faith in their abilities (i.e.,
+high on generalized self-efficacy) are also more likely to rigidly
+hold on to their views. In line with this proposition, cognitive
+rigidity was the only dimension to exhibit a significant relationship
+with the locus of control scale, and this relationship, too, was in the
+direction that individuals with an internal locus of control (i.e.,
+who have a greater sense of personal control over their lives)
+exhibit increased cognitive rigidity.
+
+Discussion
+This study provided evidence for the construct validity of the
+resistance-to-change construct. As expected, resistance to change
+
+was associated with traits such as sensation seeking, tolerance for
+ambiguity, and risk aversion. Anticipated relationships were also
+found with openness to experience, dogmatism, neuroticism, and
+extraversion. In addition, the fact that correlations were only
+moderate and were substantially lower than the scales’ reliabilities
+provides evidence for the construct’s discriminant validity (Campbell & Fiske, 1959).
+Although study variables were all assessed with the same paperand-pencil method, it is reasonable to assume that the impact of
+such a method bias would primarily be to elevate all of the
+intervariable correlations. The patterns of relationships would not
+have been affected. Moreover, the fact that several variables did
+not correlate with resistance to change, in spite of the existence of
+a single method for collecting data, goes to further alleviate concerns regarding the impact of a monomethod bias.
+The study also reconfirmed the four-factor structure of the scale.
+The existence of significant intersubscale correlations and the fact
+that all subscale factors load significantly on the second order
+general Resistance to Change factor, indicate that the subscales all
+represent facets of the same overarching disposition. The fact that
+conceptually relevant personality traits exhibit varying correlations
+with the different subscales demonstrates the value of maintaining
+the distinction between the different facets.
+
+Study 4: Resistance to Change and Cognitive Ability
+Method
+Cognitive ability was assessed with the Wonderlic Personnel Test (Wonderlic, 1999), which is a well validated and commonly used index of
+general cognitive ability. Eighty-nine undergraduates from Cornell University took the Wonderlic Personnel Test and filled out the Resistance to
+Change Scale in return for extra credit in a course or a $5 cash reward.
+Sixty-two percent of participants were women, 38% were men, and the
+mean age was 19.6 years (SD ⫽ .89).
+
+Results and Discussion
+Resistance to change alpha coefficients were: .88 for the total
+resistance-to-change score and .82, .78, .78, and .78 for the Routine Seeking, Emotional Reaction, Short Term Focus, and Cognitive Rigidity subscales, respectively. Descriptive statistics and
+correlations between study variables are presented in Table 5.
+A power analysis indicated that the study’s sample size (N ⫽
+89) was large enough to identify a correlation of .28 or larger
+(Murphy & Myors, 1998). As can be seen in Table 5, neither the
+
+Table 5
+Descriptive Statistics and Correlations Between Variables in Study 4 (N ⫽ 89)
+Variable
+1.
+2.
+3.
+4.
+5.
+6.
+
+Resistance to change
+Routine seeking
+Emotional reaction
+Short-term focus
+Cognitive rigidity
+Cognitive ability (WPT)
+
+M
+
+SD
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+3.19
+2.91
+3.57
+3.15
+3.22
+31.64
+
+0.63
+0.84
+0.89
+0.81
+0.86
+5.18
+
+—
+.85**
+.79**
+.76**
+.56**
+.18
+
+—
+.54**
+.57**
+.33**
+.17
+
+—
+.59**
+.23**
+.17
+
+—
+.12
+.13
+
+—
+.03
+
+—
+
+Note. WPT ⫽ Wonderlic Personnel Test.
+** p ⬍ .01.
+
+RESISTANCE TO CHANGE SCALE
+
+total resistance-to-change score nor any of the subscales were
+significantly related to scores on the Wonderlic Personnel Test.
+Therefore, any relationship that may exist between resistance-tochange and cognitive ability is likely to be small.
+
+Studies 5, 6, and 7: Establishing the Scale’s Concurrent
+and Predictive Validities
+The purpose of the following three studies was to assess relationships between individuals’ scores on the Resistance to Change
+Scale and their responses to change in a variety of contexts.
+
+Study 5: Predicting Voluntary Change
+The setting for this study involved undergraduates at the beginning of the semester shortly after students have had the opportunity
+to make changes to their course schedules. It was expected that
+respondents who score high on the Resistance to Change Scale
+would be less likely to report making changes to their academic
+schedules. As further evidence for the validity of the construct,
+resistance to change was expected to be the strongest predictor of
+schedule changes in comparison with conceptually related traits.
+
+Method
+Participants and procedure. Forty-four undergraduates who were enrolled in a variety of psychology courses participated in the study in return
+for extra credit toward the fulfillment of course requirements. Seventythree percent of participants were women, 27% were men, and the mean
+age was 20 years (SD ⫽ 1.2).
+Participants filled out study questionnaires that contained the Resistance
+to Change Scale as well as a set of related personality scales. Following
+this, respondents were asked to fill out a separate Enrollment Procedures
+Questionnaire that contained questions regarding changes they may have
+made in their course schedules at the beginning of the semester. Before the
+semester begins, most students reserve spaces in classes by preenrolling.5
+Once the semester starts, a “changing period” of several weeks begins in
+which students may add or drop courses from their schedules. The Enrollment Procedures Questionnaire asked about these additions or deletions of
+courses.
+Measures. The Resistance to Change Scale and the other personality
+measures were the same as those used in Study 3. The Enrollment Procedures Questionnaire asked whether the students had preenrolled for
+courses, and if so, whether they had added or dropped any courses from
+their schedule during the changing period.
+
+Results and Discussion
+Table 6 shows means and standard deviations of study variables
+along with correlations between resistance to change and the
+schedule change variable and the other personality traits measured
+in the study. Resistance to Change Scale reliabilities were as
+follows: .81 for the total Resistance to Change score, and .78, .79,
+.73, and .81 for the Routine Seeking, Emotional Reaction, ShortTerm Focus, and Cognitive Rigidity subscales, respectively. Because the dependent variable in this study was dichotomous (have
+made or have not made schedule changes), logistic regression
+analyses were used to determine the relationship between resistance to change and the various personality traits and the change
+behavior.
+
+687
+
+As predicted, respondents who scored high on resistance to
+change were less likely to have changed their academic schedules
+(B ⫽ ⫺2.645, SE ⫽ 1.164, p ⫽ .02; ⫺2 log likelihood ⫽ 28.940);
+␹2(1, N ⫽ 44) ⫽ 7.366, p ⬍ .01. Similar logistic regression
+analyses were conducted for the other personality variables in the
+study, and none of them approached significance ( p ⬎ .15 for all
+variables).
+When testing the predictive power of the specific Resistance to
+Change subscales, the cognitive rigidity facet showed a significant
+improvement over the null model (B ⫽ ⫺1.239, SE ⫽ .626, p ⫽
+.05; ⫺2 log likelihood ⫽ 31.433); ␹2(1, N ⫽ 44) ⫽ 4.873, p ⫽ .03,
+and the Short-Term Focus subscale showed a marginally significant improvement over the null model (B ⫽ ⫺1.231, SE ⫽.628,
+p ⫽ .05; ⫺2 log likelihood ⫽ 31.687); ␹2(1, N ⫽ 44) ⫽ 4.619, p ⫽
+.03.
+This study provides initial support for the concurrent validity of
+the Resistance to Change Scale. Resistance to change was the only
+personality trait that significantly predicted students’ choice to
+make or not to make changes in their course schedules. Students
+who were dispositionally inclined to resist changes were less likely
+to report making changes to their schedules. In particular, the
+Cognitive Rigidity and Short-Term Focus subscales were the more
+relevant among the four subscales for predicting this specific type
+of resistance-to-change behavior. This finding implies that the
+main factors that lead students to maintain their original schedules
+(i.e., those high on resistance to change) were their cognitive
+disinclination to change their minds and their focus on the shortterm inconvenience of conducting the change rather than on its
+potential long-term benefits (e.g., enjoying a more interesting
+course).
+Because the change addressed in this study is self-initiated, it
+makes sense that the Emotional Reaction to Imposed Change
+subscale did not contribute to the predictive power of resistance to
+change. Similarly, the change does not involve a change in routines because the course changing period takes place before students have had a chance to grow accustomed to their preenrollment
+schedule. Therefore, it is not surprising that the Routine Seeking
+subscale was also not a significant predictor.
+
+Study 6: Predicting Resistance to Innovation
+The purpose of this study was to test whether the Resistance to
+Change Scale could predict people’s resistance to try out new
+products. Three years ago, Cornell University introduced to its
+faculty members the option of using CourseInfo—a template for
+creating course Web sites. Until that time, professors in most of the
+school’s colleges either had no course Web sites or they constructed one on their own. CourseInfo offers great versatility in the
+creation of Web sites and provides many useful administrative and
+interactive communication features that would not be available
+otherwise. It was expected that faculty members who are more
+resistant to change would be less likely, or take more time, to adopt
+this new service. Because, as in Study 5, this study also involves
+a voluntary change, one that does not have substantial implications
+5
+Forty-eight students initially participated in the study; however, four of
+them did not preenroll. Therefore, only data from the remaining 44 participants were used in the analyses.
+
+OREG
+
+688
+
+Table 6
+Descriptive Statistics and Correlations Between Resistance to Change (RTC) and Schedule
+Change and Personality Traits in Study 5 (N ⫽ 44)
+Variable
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+15.
+16.
+17.
+18.
+
+RTC
+Routine seeking
+Emotional reaction
+Short-term focus
+Cognitive rigidity
+Schedule change
+Sensation seeking
+Generalized self-efficacy
+Risk aversion
+Dogmatism
+Self-esteem
+Locus of control
+Tolerance for ambiguity
+Extraversion
+Agreeableness
+Conscientiousness
+Openness to Experience
+Neuroticism
+
+* p ⬍ .05.
+
+M
+
+SD
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+3.08
+2.88
+3.35
+2.99
+3.19
+0.72
+8.36
+4.58
+2.99
+3.00
+4.65
+3.89
+3.57
+5.75
+7.16
+6.48
+6.68
+4.86
+
+0.47
+0.62
+0.85
+0.75
+0.75
+0.39
+4.09
+0.77
+0.84
+0.41
+0.58
+0.66
+0.59
+1.59
+1.12
+1.70
+0.94
+1.05
+
+—
+.71**
+.65**
+.69**
+.55**
+⫺.42**
+⫺.52**
+.24
+.58**
+.28
+.09
+.25
+⫺.45**
+⫺.13
+⫺.07
+.21
+⫺.21
+⫺.17
+
+—
+.30*
+.24
+.18
+⫺.30
+⫺.69**
+.11
+.46**
+.13
+⫺.10
+.08
+⫺.58**
+⫺.20
+⫺.15
+.20
+⫺.23
+.06
+
+—
+.45**
+⫺.01
+⫺.15
+⫺.26
+.28
+.62**
+0.00
+⫺.02
+⫺.06
+⫺.33*
+.01
+.03
+.21
+⫺.39**
+.04
+
+—
+.19
+⫺.34*
+⫺.17
+.36*
+.30*
+.37*
+.06
+.28
+⫺.12
+⫺.09
+⫺.01
+.05
+⫺.01
+⫺.23
+
+—
+⫺.36*
+⫺.16
+⫺.08
+.14
+.24
+.29
+.36*
+⫺.07
+⫺.03
+⫺.03
+.23
+.09
+⫺.32*
+
+—
+.30
+⫺.23
+⫺.26
+⫺.19
+⫺.04
+⫺.13
+.22
+.24
+.22
+⫺.07
+.04
+.11
+
+** p ⬍ .01.
+
+on one’s daily routines, the Emotional Reaction and Routine
+Seeking subscales seem less relevant for predicting the particular
+outcome of this study (i.e., adopting a new product). Because the
+main reason for avoiding the use of CourseInfo appears to be the
+hassle involved in learning how to use the new service, the
+short-term thinking was expected to be the strongest contributor to
+the scale’s predictive power.
+
+Method
+Sixty-seven faculty members from eight departments at Cornell University filled out a questionnaire with the Resistance to Change scale and
+answered a number of questions regarding their use of course Web sites. Of
+these, only 47 faculty members had been at the university for more than 3
+years (before the introduction of the CourseInfo service), and therefore
+only their responses were included in the analyses. Sixty-two percent of
+participants were men, 38% were women, and the average tenure at the
+university was 16 years (SD ⫽ 9.5). The response rate was 27%.
+
+Results and Discussion
+Resistance to Change Scale reliabilities were as follows: .82 for
+the complete scale, .68 for the Routine Seeking subscale, .78 for
+the Emotional Reaction subscale, .76 for the Short-Term Thinking
+subscale, and .76 for the Cognitive Rigidity subscale. Table 7
+presents descriptive statistics and correlations between study
+variables.
+A logistic regression analysis showed that the higher the professors’ resistance-to-change score, the less likely were they to be
+using the CourseInfo Web sites (B ⫽ ⫺1.531, SE ⫽ .720, p ⫽ .03;
+⫺2 log likelihood ⫽ 59.734); ␹2(1, N ⫽ 47) ⫽ 5.401, p ⫽ .02. A
+linear regression analysis demonstrated that resistance to change
+also significantly predicted the amount of time after the introduction of the service it took professors to start using CourseInfo (B ⫽
+⫺.88, SE ⫽ .403, p ⫽ .03), with higher resistance-to-change
+scores predicting more time prior to adoption.
+
+Table 7
+Descriptive Statistics and Correlations Between Variables in Study 6 (N ⫽ 47)
+Variable
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+
+Resistance to change
+Routine seeking
+Emotional reaction
+Short-term focus
+Cognitive rigidity
+Tenure
+Time using CourseInfoa
+
+M
+
+SD
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+3.00
+2.63
+3.28
+2.77
+3.42
+16.34
+1.34
+
+0.51
+0.65
+0.75
+0.79
+0.75
+9.54
+1.40
+
+—
+.74**
+.67**
+.79**
+.62**
+⫺.07
+⫺.31*
+
+—
+.28
+.43**
+.32*
+.03
+⫺.15
+
+—
+.48**
+.13
+⫺.15
+⫺.10
+
+—
+.33*
+⫺.13
+⫺.34*
+
+—
+.01
+⫺.30*
+
+—
+.15
+
+—
+
+This variable contained four categories: 0 ⫽ not using CourseInfo, 1 ⫽ less than 1 year, 2 ⫽ between 1 year
+and 2 years, and 3 ⫽ more than 2 years.
+* p ⬍ .05. ** p ⬍ .01.
+
+a
+
+RESISTANCE TO CHANGE SCALE
+
+When testing the predictive power of the specific Resistance to
+Change subscales, as predicted, the Short-Term Thinking subscale
+significantly predicted whether professors used CourseInfo (B ⫽
+⫺.927, SE ⫽ .429, p ⫽ .03; ⫺2 log likelihood ⫽ 59.754); ␹2(1,
+N ⫽ 47) ⫽ 5.381, p ⫽ .02, and the time it took them to try it out
+(B ⫽ ⫺.608, SE ⫽ .248, p ⫽ .02). The Cognitive Rigidity subscale
+was marginally significant in predicting the amount of time it took
+professors to use CourseInfo sites (B ⫽ ⫺.586, SE ⫽ .299, p ⫽ .06).
+This study thus provides additional support for the concurrent
+validity of the Resistance to Change Scale. Professors who exhibited higher levels of resistance to change were less likely to try out
+a new system for designing course Web sites. Among those who
+did adopt the new system, higher levels of resistance were associated with a longer wait time before starting to use the system.
+The analyses of relationships between Resistance to Change subscales and professors’ product-adoption behavior confirmed that it
+would take those who are oriented toward the short-term inconvenience involved in change and who are more cognitively rigid
+longer before they would try out a new product, if they would try
+it at all.
+
+Study 7: Predicting Reactions to Imposed Change
+The previous two studies demonstrated that the Resistance to
+Change Scale predicts people’s inclination versus disinclination to
+initiate voluntary changes. The purpose of Study 7 was to test the
+predictive ability of the Resistance to Change scale in the context
+of imposed change. The study involved the office relocation of 98
+university staff members, faculty members, and graduate students from one of Cornell University’s colleges. Some moved
+to temporary offices, whereas others moved to their permanent
+new offices. Those who are dispositionally inclined to resist
+changes—as measured by the Resistance to Change Scale—
+were expected to react more negatively to the change and report
+increased stress and a decreased motivation and ability to work in
+light of the office move. Because the move involved a substantial
+change in people’s routines and because of its imposed nature, the
+Routine Seeking subscale and the two affective subscales (i.e., the
+Emotional Reaction and the Short-Term Focus subscales) were
+expected to contribute most strongly to the predictive power of the
+Resistance to Change Scale.
+
+689
+
+Method
+Procedure. The employees and graduate students involved in the move
+were asked to fill out questionnaires on two occasions: first, as the move
+started to take place—a small number of days before or after relocating to
+their new offices—and a second time, 1 month later. At Time 1, the
+Resistance to Change Scale was presented first, following which were the
+questions about people’s reactions to the office move. At Time 2, the order
+of the questionnaires was reversed.
+Measures. The Resistance to Change Scale was administered along
+with a second questionnaire with questions about people’s affective response to the move, questions about their cognitive evaluation of the move,
+and several questions about various aspects of their functioning at work
+(see Appendix). A principle axis factor analysis with an oblique rotation
+suggested that the questions about functioning fell into three categories:
+avoiding work from the office, work effectiveness, and work relationships.
+Participants. Forty-eight of those moving filled out questionnaires at
+Time 1. Fifteen participants were graduate students, 9 were faculty members, and the remaining 24 were staff employees. Fifty-eight percent were
+women, 42% were men, and the average age was 40 years (SD ⫽ 10). The
+overall participation rate was 49%. Time 2 involved 43 participants, 20 of
+whom also participated at Time 1. Eighteen participants were graduate
+students, 10 were faculty members, and 15 were staff employees. Sixtyfive percent of participants were women, 35% were men, and the average
+age was 38 years (SD ⫽ 11). The participation rate was 44%.
+
+Results
+Scale alpha coefficients at Time 1 were: .91 for the total
+resistance-to-change score and .80, .87, .84, and .86 for the Routine Seeking, Emotional Reaction, Short-Term Focus, and Cognitive Rigidity subscales, respectively. At Time 2, the alphas were:
+.93 for the total score and .79, .86, .87, and .77 for the four
+subscales. The correlation between Time 1 and Time 2 resistanceto-change scores was calculated to form an index of the Scale’s
+test–retest reliability, which was .91. Descriptive statistics and
+correlations between study variables at Time 1 and Time 2 are
+presented in Tables 8 and 9, respectively.
+In a regression analysis, the resistance-to-change score at
+Time 1 significantly predicted people’s affective reactions to the
+move (B ⫽ .52, SE ⫽.16, p ⬍ .01) and their functioning at work
+at the time of the move (B ⫽ .42, SE ⫽ .16, p ⬍ .01), but not their
+cognitive evaluation of the move. This was the case even when
+
+Table 8
+Descriptive Statistics and Correlations Between Variables in Study 7 at Time 1 (N ⫽ 48)
+Variable
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+
+Resistance to change
+Routine seeking
+Emotional reaction
+Short-term focus
+Cognitive rigidity
+Affective reaction
+Cognitive evaluation
+Total work functioning
+Avoiding office
+Work effectiveness
+Social relationships
+Age
+
+* p ⬍ .05.
+
+** p ⬍ .01.
+
+M
+
+SD
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+3.09
+2.74
+3.48
+2.93
+3.37
+3.00
+3.29
+2.70
+2.86
+2.91
+2.14
+40.40
+
+0.70
+0.77
+0.93
+0.91
+0.88
+0.82
+1.16
+0.77
+1.16
+1.12
+0.80
+10.68
+
+—
+.88**
+.85**
+.83**
+.62**
+.45**
+⫺.01
+.39**
+⫺.02
+.41**
+.40**
+.17
+
+—
+.66**
+.71**
+.43**
+.38**
+⫺.07
+.40**
+.04
+.40**
+.38**
+.00
+
+—
+.70**
+.37**
+.40**
+⫺.08
+.35*
+⫺.03
+.37*
+.41**
+.09
+
+—
+.22
+.48**
+⫺.11
+.41**
+.06
+.45**
+.31*
+.11
+
+—
+.15
+.17
+.05
+⫺.16
+.09
+.19
+.33*
+
+—
+.37*
+.68**
+.27
+.60**
+.63**
+⫺.06
+
+—
+.20
+.26
+.08
+.09
+⫺.35*
+
+—
+.55**
+.86**
+.74**
+⫺.18
+
+—
+.15
+.15
+⫺.27
+
+—
+.60**
+⫺.08
+
+—
+⫺.02
+
+—
+
+OREG
+
+690
+
+Table 9
+Descriptive Statistics and Correlations Between Variables in Study 7 at Time 2 (N ⫽ 43)
+Variable
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+
+Resistance to change
+Routine seeking
+Emotional reaction
+Short-term focus
+Cognitive rigidity
+Affective reaction
+Cognitive evaluation
+Total work functioning
+Avoiding office
+Work effectiveness
+Social relationships
+
+* p ⬍ .05.
+
+M
+
+SD
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+3.17
+2.87
+3.53
+2.98
+3.42
+3.01
+3.25
+2.86
+3.04
+3.15
+2.26
+
+0.61
+0.71
+0.90
+0.83
+0.76
+0.95
+1.14
+1.01
+1.29
+1.31
+0.98
+
+—
+.80**
+.87**
+.84**
+.48**
+⫺.09
+.09
+.37*
+.08
+.32*
+.29
+
+—
+.62**
+.55**
+.16
+⫺.00
+⫺.09
+.42**
+.20
+.30*
+.28
+
+—
+.74**
+.18
+⫺.01
+.17
+.38*
+.07
+.37*
+.27
+
+—
+.20
+⫺.06
+.10
+.34*
+⫺.05
+.36*
+.39*
+
+—
+⫺.14
+.17
+.00
+.01
+⫺.05
+⫺.03
+
+—
+.25
+.48**
+.56**
+.38*
+.56**
+
+—
+.18
+.25
+.23
+.12
+
+—
+.65**
+.90**
+.79**
+
+—
+.32*
+.29
+
+—
+.70**
+
+—
+
+** p ⬍ .01.
+
+controlling for the move’s destination (permanent vs. temporary
+offices). When regressing the move reaction variables onto the
+Resistance to Change subscales, all subscales were significant
+except for the Cognitive Rigidity subscale. When using the
+resistance-to-change score to predict the three work-functioning
+subcategories, the resistance-to-change score was significant for
+the work effectiveness (B ⫽ .66, SE ⫽ .22, p ⬍ .01) and work
+relationships (B ⫽ .55, SE ⫽ .16, p ⬍ .01) categories, but not for
+the “Avoiding work from the office” category.
+At Time 2, the resistance-to-change score significantly predicted
+participants’ work effectiveness (B ⫽ .67, SE ⫽ .31, p ⫽ .04) and
+was marginally significant in predicting their work relationships
+(B ⫽.49, SE ⫽ .26, p ⫽ .07) but did not predict their affective
+reaction to the move. Participants’ work effectiveness (B ⫽ 1.19,
+SE ⫽ .33, p ⬍ .01) and work relationships (B ⫽ .93, SE ⫽ .36, p ⫽
+.02) at Time 2 were also significantly predicted by the resistanceto-change score at Time 1.
+No significant differences were found in the reactions of the
+different occupational groups, the different genders, or different
+age groups. Although the move’s destination did not predict people’s affective reactions or work functioning at Time 1 or at
+Time 2, it was significant at predicting people’s cognitive evaluation of the move. Not surprisingly, employees and students who
+moved to their permanent offices tended to view the move more
+positively than did those who moved to temporary offices.
+
+Discussion
+As expected, the Resistance to Change Scale predicted people’s
+affective reactions to the move as well as their functioning at work.
+Those who were dispositionally inclined to resist changes were
+more distraught by the change and reported an increased difficulty
+to work effectively. Evidently, even though resistant individuals’
+affective reactions to the change waned over time, they did not
+recover from the negative impact of the move on their functioning,
+even 1 month after moving. In support to the scale’s predictive
+validity across contexts, even among those participants who
+moved into permanent new offices and provided a positive cognitive evaluation of the move, high–resistance-to-change individuals
+were still more upset about the move and had a more difficult time
+maintaining effective functioning, compared with nonresistant
+participants.
+
+The fact that the Routine Seeking, Emotional Reaction, and
+Short-Term Focus subscales, but not the Cognitive Rigidity subscale, were significant predictors of people’s reactions to the
+move, falls in line with the particular nature of the change and
+lends further support to the scale’s validity.
+Although the collection of data for both the Resistance to
+Change Scale and the reactions to the move in the same questionnaire may raise concerns of a monomethod bias, the fact that the
+Resistance to Change Scale did not predict participants’ cognitive
+evaluation of the move and that not all subscales were significant
+at predicting reactions to the move suggests that the findings
+reflect genuine, nonartifactual relationships. Even more compelling in alleviating such concerns is the fact that participants’
+resistance-to-change score at Time 1 was significant at predicting
+their functioning at work 1 month later at Time 2.
+
+General Discussion
+The purpose of this project was to establish and validate a scale
+for the measurement of individual differences in resistance to
+change. The results of seven studies indicate a four-facet structure
+to the disposition: (a) routine seeking, (b) emotional reaction to
+imposed change, (c) short-term focus, and (d) cognitive rigidity.
+The structure was established in the first study and was validated
+on two additional, independent samples (in Studies 2 and 3).
+Studies 3 and 4 helped establish convergent and discriminant
+validities, and Studies 5–7 provided evidence for the scale’s concurrent and predictive validities. In all seven studies, Resistance to
+Change and its subscales achieved satisfactory reliabilities.
+The fact that the scale, which was not tailored to correspond to
+any specific type of change, predicted resistance behavior across a
+variety of settings, demonstrates its value in explaining resistances
+above and beyond any contextual causes. In addition, the fact that
+different Resistance to Change subscales were highlighted in different contexts, in accordance with their theoretical content, further demonstrates the validity of the scale and the breadth of its
+relevance.
+As noted above, other research has recently advocated the
+measurement of traits, such as risk aversion, as predictors of
+employees’ reactions to change (e.g., Judge et al., 1999). Contrary
+to measures of these traits, the Resistance to Change Scale was
+designed to assess directly the dispositional component that con-
+
+RESISTANCE TO CHANGE SCALE
+
+tributes to people’s reactions to change. On a practical level,
+assessing the dispositional aspect of resistance to change with the
+Resistance to Change Scale would be far more economical than
+using a broad range of measures, such as risk aversion, tolerance
+for ambiguity, and self-esteem, that each tap into a different aspect
+of resistance to change.
+The findings described in this article have a number of implications. First, they complement work on the institutional determinants of resistance to change (e.g., Hannan & Freeman, 1984) and
+on the psychological processes underlying resistance (e.g., George
+& Jones, 2001) by bringing individual differences to this important
+domain of organizational behavior. Researchers interested in resistance to change and its interaction with other variables now
+have a tool for measuring the dispositional component of resistance. Moreover, by using the Resistance to Change Scale, even
+studies that are interested in the more macro, situational predictors
+of resistance could enhance their findings by controlling for the
+individual differences component.
+The Resistance to Change Scale also has potential uses for
+personnel selection and training. The scale could be used simply to
+select change-resilient employees for those positions or assignments that inherently entail frequent changes. Furthermore, the
+scale may also be used to identify employees who could benefit
+from a training program in which strategies for coping with the
+upcoming change would be taught. Interventions can be designed
+and tailored for individual employees in accordance with the
+sources of resistance as suggested by the scale (e.g., short-term
+focus, emotional reaction to imposed change).
+Another field for which the Resistance to Change Scale may be
+useful is that of consumer behavior. Consumers’ resistance to try
+new products is considered a significant obstacle for most companies that attempt to introduce new products. Similar to the
+research on organizational change, the literature on consumer
+behavior has mainly considered situational antecedents of customer’s resistance to try new products (e.g., Ram & Sheth, 1989).
+Among individual difference variables that have been considered
+are consumer demographics (e.g., Dickerson & Gentry, 1983;
+LaBay & Kinnear, 1981) or personality traits such as creativity
+(Hirschman, 1980) or optimum stimulation level (Raju, 1980) that
+were expected to relate to customer resistance to adopt new products. As has been shown in Study 6 in this article, the Resistance
+to Change Scale can be successful at predicting such disinclination
+to adopt new products.
+
+References
+Ashforth, B. E., & Lee, R. T. (1990). Defensive behavior in organizations:
+A preliminary model. Human Relations, 43, 621– 648.
+Bartunek, J. M., Lacey, C. A., & Wood, D. R. (1992). Social cognition in
+organizational change: An insider– outsider approach. Journal of Applied Behavioral Science, 28, 204 –223.
+Bartunek, J. M., & Moch, M. K. (1987). First-order, second-order, and
+third-order change and organization development interventions: A cognitive approach. Journal of Applied Behavioral Science, 23, 483–500.
+Blascovich, J., & Tomaka, J. (1991). Measures of self-esteem. In J. P.
+Robinson (Ed.), Measures of personality and social psychological attitudes (pp. 115–160). San Diego, CA: Academic Press.
+Campbell, D. T., & Fiske, D. W. (1959). Convergent and discriminant
+validation by the multitrait–multimethod matrix. Psychological Bulletin,
+56, 81–105.
+
+691
+
+Chen, G., Gully, S. M., & Eden, D. (2001). Validation of a new general
+self-efficacy scale. Organizational Research Methods, 4, 62– 83.
+Coch, L., & French, J. R. P., Jr. (1948). Overcoming resistance to change.
+Human Relations, 1, 512–532.
+Conner, D. (1992). Managing at the speed of change: How resilient
+managers succeed and prosper where others fail (1st ed.). New York:
+Villard Books.
+Cronbach, L. J., & Meehl, P. E. (1955). Construct validity in psychological
+tests. Psychological Bulletin, 52, 281–302.
+Dickerson, M. D., & Gentry, J. W. (1983). Characteristics of adopters and
+non-adopters of home computers. Journal of Consumer Research, 10,
+225–235.
+Digman, J. M. (1990). Personality structure: Emergence of the five-factor
+model. Annual Review of Psychology, 41, 417– 440.
+Fox, S. (1999). The psychology of resistance to change [In Hebrew]. Ramat
+Gan, Israel: Bar-Ilan University.
+Goldsmith, R. E. (1984). Personality characteristics associated with
+adaptation-innovation. Journal of Psychology, 117(2), 159 –165.
+Gomez-Mejia, L. R., & Balkin, D. B. (1989). Effectiveness of individual
+and aggregate compensation strategies. Industrial Relations, 28, 431–
+445.
+Hannan, M., & Freeman, J. (1984). Structural inertia and organizational
+change. American Sociological Review, 49, 149 –164.
+Harrison, A. A. (1968). Response competition, frequency, exploratory
+behavior, and liking. Journal of Personality and Social Psychology, 9,
+363–368.
+Harrison, A. A., & Zajonc, R. B. (1970). The effects of frequency and
+duration of exposure on response competition and affective ratings.
+Journal of Psychology, 7, 163–169.
+Hinkin, T. R. (1998). A brief tutorial on the development of measures for
+use in survey questionnaires. Organizational Research Methods, 1,
+104 –121.
+Hirschman, E. C. (1980). Innovativeness, novelty seeking, and consumer
+creativity. Journal of Consumer Research, 7, 283–295.
+Hu, L. T., & Bentler, P. M. (1999). Cutoff criteria for fit indexes in
+covariance structure analysis: Conventional criteria versus new alternatives. Structural Equation Modeling, 6, 1–55.
+Judge, T. A., Locke, E. A., & Durham, C. C. (1997). The dispositional
+causes of job satisfaction: A core evaluations approach. In L. L. Cummings & B. Staw (Eds.), Research in organizational behavior (Vol. 19,
+pp. 151–188). Greenwich, CT: JAI Press.
+Judge, T. A., Locke, E. A., Durham, C. C., & Kluger, A. N. (1998).
+Dispositional effects on job and life satisfaction: The role of core
+evaluations. Journal of Applied Psychology, 83, 17–34.
+Judge, T. A., Thoresen, C. J., Pucik, V., & Welbourne, T. M. (1999).
+Managerial coping with organizational change: A dispositional perspective. Journal of Applied Psychology, 84, 107–122.
+Kanter, R. M. (1985). Managing the human side of change. Management
+Review, 74, 52–56.
+Kirton, M. (1980). Adaptors and innovators in organizations. Human
+Relations, 33, 213.
+Kirton, M. (Ed.). (1989). Adaptors and innovators: Styles of creativity and
+problem-solving. New York: Routledge.
+LaBay, D. G., & Kinnear, T. C. (1981). Exploring the consumer decision
+process in the adoption of solar energy systems. Journal of Consumer
+Research, 8, 271–278.
+Lau, C. M., & Woodman, R. W. (1995). Understanding organizational
+change: A schematic perspective. Academy of Management Journal, 38,
+537.
+Lefcourt, H. M. (1991). Locus of control. In J. P. Robinson (Ed.), Measures
+of personality and social psychological attitudes (pp. 413– 499). San
+Diego, CA: Academic Press.
+Levenson, H. (1981). Differentiating between internality, powerful others,
+
+692
+
+OREG
+
+and chance. In H. M. Lefcourt (Ed.), Research with the locus of control
+construct (Vol. 1, pp. 15– 63). New York: Academic Press.
+Lorsch, J. W., & Morse, J. J. (1974). Organizations and their members: A
+contingency approach. New York: Harper & Row.
+Mumford, M. D., Baughman, W. A., Threlfall, K. V., & Uhlman, C. E.
+(1993). Personality, adaptability, and performance: Performance on
+well-defined and ill-defined problem-solving tasks. Human Performance, 6, 241–285.
+Murphy, K. R., & Myors, B. (1998). Statistical power analysis: A simple
+and general model for traditional and modern hypothesis tests. Mahwah,
+NJ: Erlbaum.
+Nunnally, J. C., & Bernstein, I. H. (1994). Psychometric theory (3rd ed.).
+New York: McGraw-Hill.
+Piderit, S. K. (2000). Rethinking resistance and recognizing ambivalence:
+A multidimensional view of attitudes toward an organizational change.
+The Academy of Management Review, 25, 783–794.
+Raju, P. S. (1980). Optimum stimulation level: Its relationship to personality, demographics, and exploratory behavior. Journal of Consumer
+Research, 7, 272–282.
+Ram, S., & Sheth, J. N. (1989). Consumer resistance to innovations: The
+marketing problem and its solutions. The Journal of Consumer Marketing, 6, 5–14.
+Rokeach, M. (1960). The open and closed mind. New York: Basic Books.
+Rosenberg, M. (1965). Society and the adolescent self-image. Princeton,
+NJ: Princeton University Press.
+Rotter, J. B. (1966). Generalized expectancies for internal versus external
+control of reinforcement. Psychological Monographs: General and Applied, 80, 1–28.
+Sagie, A., & Koslowsky, M. (2000). Participation and empowerment in
+organizations: Modeling, effectiveness, and applications. Thousand
+Oaks, CA: Sage.
+Saucier, G. (1994). Mini-markers: A brief version of Goldberg’s unipolar
+Big-Five markers. Journal of Personality Assessment, 63, 506 –516.
+
+Slovic, P. (1972). Information processing, situation specificity, and the
+generality of risk taking behavior. Journal of Personality and Social
+Psychology, 22, 128 –134.
+Tichy, N. M. (1983). Managing strategic change: Technical, political, and
+cultural dynamics. New York: Wiley.
+Troldahl, V. C., & Powell, F. A. (1965). A short-form dogmatism scale for
+use in field studies. Social Forces, 44, 211–215.
+Wanberg, C. R., & Banas, J. T. (2000). Predictors and outcomes of
+openness to changes in a reorganizing workplace. Journal of Applied
+Psychology, 85, 132–142.
+Watson, G. (1971). Resistance to change. American Behavioral Scientist,
+14, 745–766.
+Wonderlic, E. F. (1999). Wonderlic Personnel Test user’s manual. Libertyville, IL: Wonderlic Inc.
+Zaltman, G., & Duncan, R. (1977). Strategies for planned change. New
+York: Wiley.
+Zander, A. (1950). Resistance to change—its analysis and prevention.
+Advanced Management Journal, 15, 9 –11.
+Zuckerman, M. (1994a). Behavioral expressions and biosocial bases of
+sensation seeking. New York: Cambridge University Press.
+Zuckerman, M. (1994b). Impulsive unsocialized sensation seeking: The
+biological foundations of a basic dimension of personality. In J. E. Bates
+& T. D. Wachs (Eds.), Temperament: Individual differences at the
+interface of biology and behavior. APA science volumes (pp. 219 –255).
+Washington, DC: American Psychological Association.
+Zuckerman, M., Kuhlman, D. M., Joireman, J., & Teta, P. (1993). A
+comparison of three structural models for personality: The Big Three,
+the Big Five, and the Alternative Five. Journal of Personality and Social
+Psychology, 65, 757–768.
+Zuckerman, M., & Link, K. (1968). Construct validity for the SensationSeeking Scale. Journal of Consulting and Clinical Psychology, 32,
+420 – 426.
+
+RESISTANCE TO CHANGE SCALE
+
+693
+
+Appendix
+Office-Move Reactions Questionnaire
+Affective response to the office move
+1. I’m worried about what things will be like after the move.
+2. I’m overwhelmed by all the things that need to be done because of the move.
+3. I try not to think about the move because when I do I get too stressed out.
+4. I’m excited about the move.a
+5. This whole move makes me kind of angry.
+6. I’m really sad we’re moving.
+Cognitive evaluation of the move
+7. I don’t really think the move was necessary.
+8. I’ll be better off after the move, in comparison with my situation before.a
+9. I think it is good that we’re going through this move.a
+10. The move will do us all good.a
+Functioning
+Avoiding work from the office
+11. When possible, I try to work out of the office as much as I can these days.
+12. I find myself trying to minimize the amount of time I spend in the office (longer coffee breaks,
+etc.).
+Work effectiveness
+13. Due to the move I tend to be very distracted these days.
+14. I find that I’m not as efficient or productive as usual these days.
+15. These days of the move I find it particularly difficult to motivate myself to do the things I know I
+should.
+Work relationships
+16. During this period I find that I am less tolerant to others.
+17. My relationships with my co-workers are negatively influenced by this change.
+a
+
+These items are reverse coded.
+
+Received May 29, 2002
+Revision received November 28, 2002
+Accepted December 10, 2002 䡲
+
+

@@ -1,0 +1,919 @@
+Available online at www.sciencedirect.com
+
+Journal of Business Venturing 23 (2008) 482 – 496
+
+The contrasting interaction effects of improvisational behavior with
+entrepreneurial self-efficacy on new venture performance
+and entrepreneur work satisfaction
+Keith M. Hmieleski a,⁎, Andrew C. Corbett b,1
+b
+
+a
+Texas Christian University, M. J. Neeley School of Business, TCU Box 298530, Fort Worth, TX 76129, United States
+Rensselaer Polytechnic Institute, Lally School of Management and Technology, 110 Eighth Street, Troy, NY 12180-3590, United States
+
+Received 1 June 2006; received in revised form 1 April 2007; accepted 1 April 2007
+
+Abstract
+Although improvisation is often considered to be an elemental component of entrepreneurship, little work has been done to
+evaluate factors that influence the relationship of entrepreneur improvisational behavior with important outcome variables. In an
+attempt to partly fill this gap, the current study examines the moderating effect of entrepreneurial self-efficacy on the relationship of
+founders' improvisational behavior with both the performance of their startups and their individual level of work satisfaction using
+a national (United States) random sample of 159 entrepreneurs. In alignment with our predictions, improvisational behavior was
+found to have a positive relationship with new venture performance (i.e., sales growth) when exhibited by founders who were high
+in entrepreneurial self-efficacy, whereas improvisational behavior was found to have a negative relationship with new venture
+performance when exhibited by founders who were low in entrepreneurial self-efficacy. Contrary to our expectations, entrepreneurial self-efficacy was found to have a negative moderating effect on the relationship between entrepreneur improvisational
+behavior and work satisfaction.
+© 2007 Elsevier Inc. All rights reserved.
+Keywords: Decision making; Entrepreneurship; Improvisation; New venture performance
+
+1. Executive summary
+In a world defined by constant opportunity and change, deciding whether to “stay the course” or reach for a
+promising new prospect can mean the difference between success and failure. For entrepreneurs this situation is
+exacerbated. Virtually by definition, most entrepreneurs must be able to work efficiently with limited resources and
+under intense time pressure. Additionally, they are often faced with unique problems and opportunities for which they
+have no available heuristics or pre-composed plans to guide them. For these reasons, the ability of entrepreneurs to
+extemporaneously compose and execute novel plans is likely to have important implications for the performance of
+
+⁎ Corresponding author. Tel.: +1 817 257 7280.
+E-mail addresses: k.hmieleski@tcu.edu (K.M. Hmieleski), corbea@rpi.edu (A.C. Corbett).
+1
+Tel.: +1 518 276 2223.
+0883-9026/$ - see front matter © 2007 Elsevier Inc. All rights reserved.
+doi:10.1016/j.jbusvent.2007.04.002
+
+K.M. Hmieleski, A.C. Corbett / Journal of Business Venturing 23 (2008) 482–496
+
+483
+
+their new ventures. Although improvisation appears to be an important component of the entrepreneurial process, we
+know little about why some entrepreneurs are more effective improvisers than others. Similarly, it is not known what
+effects that improvisational behavior has on the work satisfaction of entrepreneurs. For example, we do not know if
+improvisational behavior tends to energize versus exhaust entrepreneurs, and which factors may enhance or reduce
+such effects. To this end, the current study examined the linkage of entrepreneur improvisational behavior with both
+performance and satisfaction.
+Across a wide variety of domains, there appears to be a consensus that improvisation is not inherently good or bad;
+instead the effectiveness of improvisational behavior appears to be dependent on multiple factors. Perhaps most
+importantly, improvisation requires domain-specific confidence in one's abilities. It is not enough to be highly skilled
+within a domain — improvisers must be confident in their ability to effectively apply their knowledge (i.e., be high in
+domain-specific self-efficacy). This is because improvisation can be very risky and highly stressful, especially for those
+who lack confidence in their abilities. New venture founders who lack confidence in their entrepreneurial abilities are likely
+to experience cognitive overload during improvisational episodes and have a more difficult time recognizing unique ways
+in which resources may be recombined. For these reasons, entrepreneurial self-efficacy was expected to have a positive
+moderating effect on the relationship of entrepreneur improvisational behavior with new venture performance.
+Work satisfaction is another important outcome of improvisational behavior, and one that has been underrepresented
+in entrepreneurship research. Entrepreneurs who are not satisfied with their work are less likely to persist in their efforts
+over time, experience greater health concerns, and treat their employees more poorly. Although work on improvisation
+within organizations has been relatively silent with respect to work satisfaction, we point again to the fact that
+improvisation can be a highly stressful endeavor, especially when acting under the pressure filled situations that often
+characterize the new venture development process. In this context, we suggest that improvisation may act as a role
+stressor for entrepreneurs. Congruent with the literature on workplace role stressors, entrepreneurial self-efficacy should
+help to reduce the degree of psychological strain experienced by improvising entrepreneurs. Based on this logic, we
+anticipated that perceived confidence in one's ability to perform the roles and tasks of entrepreneurship would positively
+moderate the linkage between the improvisational behavior of founders and the level of their work satisfaction.
+We tested our hypotheses using a national random sample of 159 entrepreneurs who were both founders and top
+management team leaders of their firms. The results of the study supported our prediction that entrepreneurial selfefficacy positively enhances the effects of improvisational behavior on performance. Those entrepreneurs who were
+avid improvisers and high in entrepreneurial self-efficacy were found to be the highest performers. The results in terms
+of work satisfaction were, however, found to be contrary to our expectations. Entrepreneurial self-efficacy had a
+significant negative moderating effect on the relationship between improvisational behavior and work satisfaction.
+Rather than reducing the psychological strain of improvisational behavior, it seems that entrepreneurs high in
+entrepreneurial self-efficacy may have been burning themselves out by over-engaging in their work and improvising to
+a greater extent than what may have been good for their well-being. Despite being the highest performers in our study,
+those entrepreneurs who rated highly in both improvisational behavior and entrepreneurial self-efficacy were among
+the least satisfied with their work — suggesting that new venture performance and entrepreneur work satisfaction
+might not necessarily go hand-in-hand.
+2. Introduction
+Recently it has been suggested by several authors that the entrepreneurial process might be best viewed as an
+improvisational activity (Baker et al., 2003; Baker and Nelson, 2005; Hmieleski and Corbett, 2006; Miner et al., 2001;
+Weick, 2002). Perhaps the most appealing aspect of this perspective is that improvisation blends together both planned
+and emergent behavior (Cunha et al., 2003; Weick, 1998). It is clear that new ventures almost always begin with a goal
+or vision of some form, implying an initial rational outlook (Baum et al., 1998; Shane and Venkataraman, 2000). In this
+regard, new venture creation — much like improvisation — is a deliberate and intentional process (Bird, 1992;
+Krueger et al., 2000). Inevitably, however, environmental conditions, resource constraints and cognitive limitations
+almost always prevent entrepreneurs from executing their plans as initially intended (Baker et al., 2003; Baron, 1998).
+This implies that entrepreneurs must be able to effectively deviate from their plans in order to adapt to their
+environmental conditions, which in many cases are changing both quickly and unpredictably (Hmieleski and Ensley,
+2004). Therefore, the ability to extemporaneously create and execute new plans on the fly would seem to be an
+important ability for entrepreneurs to possess. Research by Baker et al. (2003) drives home this point by demonstrating
+
+484
+
+K.M. Hmieleski, A.C. Corbett / Journal of Business Venturing 23 (2008) 482–496
+
+that new venture founders are often forced to make decisions extemporaneously, using only the resources available to
+them in the moment. This does not imply that improvisational behavior will always result in positive outcomes for
+entrepreneurs or the new ventures that they lead. As has been noted by many authors, improvisation is not inherently
+good or bad (Crossan et al., 2005; Crossan and Sorrenti, 1997; Vera and Crosson, 2005). Instead, the effects of
+entrepreneur improvisational behavior are likely to be moderated by context specific factors. The current study makes
+the case for entrepreneurial self-efficacy as a particularly important moderating variable. In so doing, we examine
+the moderating effects of entrepreneurial self-efficacy on the relationship of entrepreneurs' improvisational behavior
+with both the performance of their new ventures and the perceived level of their work satisfaction. These are important
+outcomes because the pace of change in today's markets (Drucker, 1992; Foster and Kaplan, 2001) and the pressure
+placed upon decision-makers to move quickly (Baron, 1998) are likely to affect both firm performance and
+entrepreneurs' satisfaction with their work (Brigham and DeCastro, 2003).
+Our review of the literature suggests that this is the first study to link improvisational behavior to measures of firm
+performance and work satisfaction. Over the past decade a burgeoning literature has evolved that connects improvisation to organizational processes. This research has extended our understanding of the role of improvisation within
+organizations by examining it with respect to innovation (Akgun et al., 2002; Eisenhardt and Tabrizi, 1995; Miner et
+al., 2001; Moorman and Miner, 1998b; Vera and Crosson, 2005), learning (Miner et al., 2001; Vera and Crosson, 2005),
+and organizational change (Brown and Eisenhardt, 1997; Cunha and Cunha, 2003; Orlikowski, 1996). To date,
+however, the literature has been relatively silent with respect to improvisation by top executives. This presents a critical
+gap in the literature, because these are the individuals who are likely to have the greatest impact on the performance of
+their firms (Hambrick and Mason, 1984). Further, although the relationship between improvisational behavior and
+satisfaction has been speculated about (Barrett, 1998; Hatch, 1999; Kamoche et al., 2003), there is a dearth of empirical
+research on this relationship. This is an important point considering that individuals start new businesses primarily for
+intrinsic reasons, as opposed to extrinsic rewards (Cooper and Artz, 1995). Therefore, work satisfaction may be an even
+more important indicator of success for individual entrepreneurs than financial performance. After all, money is only a
+means through which one may potentially use in the pursuit of finding satisfaction. Lack of money is sure to reduce
+satisfaction if one's basic needs cannot be met, but excess amounts of money will not guarantee happiness (Diener and
+Seligman, 2004). Not surprisingly, the results of the current study fail to uncover a significant relationship between the
+financial performance of new ventures and the work satisfaction of their founders.
+In the following section, we review relevant literature on improvisational behavior. Afterward, the case is made in
+further detail for why entrepreneurial self-efficacy is likely to moderate the effects of improvisational behavior with
+both performance and satisfaction. Finally, the methodology and results of the study are reviewed, and the findings are
+discussed.
+3. Improvisational behavior
+We adopt the Moorman and Miner (1998a) definition of improvisational behavior as the deliberate extemporaneous
+composition and execution of novel action. An individual can engage in an improvisational episode at any given
+moment. The cause may be the presentation of a problem, an opportunity for which the actor has no acceptable precomposed solution, or simply the desire to try something new and spontaneous. Further, as Baker et al. (2003) suggest,
+improvisation can be utilized to see how current resources can be used to either meet pre-existing goals (i.e., causation)
+or to explore what outcomes are possible (i.e., effectuation).
+Although work on improvisation is just beginning to emerge in entrepreneurship (e.g., Baker et al., 2003; Baker and
+Nelson, 2005; Hmieleski and Corbett, 2006), there have been several noteworthy investigations of improvisation
+within the context of larger, established organizations. Several studies have focused on the linkage between improvisation and new product development. Eisenhardt and Tabrizi's (1995) study contrasting rational versus improvisational
+processes of new product development suggests that a real-time, hands-on approach to product development tends to be
+more effective than rational, efficiency-oriented approaches. Moorman and Miner (1998b) found that environmental
+turbulence, organizational memory, and real-time information flow are related to the effectiveness of improvisation.
+Miner, Bassoff, and Moorman (2001) indicates that improvisation can be accepted and incorporated into formal
+organizational activities, such that firms may be able to plan for improvisation. Akgun, Lynn, and Reily (2002) study of
+new product development teams found that improvisation can have a positive impact on speed to market, especially
+under turbulent market and technology conditions.
+
+K.M. Hmieleski, A.C. Corbett / Journal of Business Venturing 23 (2008) 482–496
+
+485
+
+Other studies of improvisation have considered its relationship with change management, leadership, and
+innovation and learning. Brown and Eisenhardt (1997) examined continuous change processes within large
+technology-oriented firms and found that those organizations most successful at change tend to have a greater
+capacity for improvisation. Similarly, Orlikowski (1996) and Cunha and Cunha (2003) found improvisation to be
+an effective tool for achieving organizational change. A study by Cunha, Kamoche, and Cunha (2003) revealed
+three major antecedents of improvisational leadership: (1) the environmental turbulence felt by the group, (2) the
+importance of the event to the leader, and (3) the ease of use of resources. Garud and Karnoe (2003) found
+improvisational-type strategies to be superior to strictly planned strategies that focused on developing breakthrough technologies. Research by Vera and Crosson (2005) identified organizational culture and real-time
+information as positive moderators of the linkage between improvisation and innovation. In addition, these
+scholars found no main effect of improvisation on innovation, suggesting that improvisation is not inherently good
+or bad. Finally, these authors found that training programs can be developed to enhance the effectiveness of
+improvisation.
+In regard to entrepreneurship, there are several important points that can be drawn from these studies. First,
+improvisation seems to be an effective behavioral strategy for dealing with change, particularly in dynamic conditions — such as those in which new ventures operating in high-growth industries commonly face. In fact, a recent study
+by Hmieleski and Ensley (2004) demonstrates that startups led by entrepreneurs with a proclivity toward
+improvisational behavior tend to outperform their less improvisational counterparts — especially within highly
+dynamic industrial environments. Second, it appears that improvisational activities can be incorporated into specific
+work processes, as well as an organization's culture. Thus, entrepreneurs might consider actively managing the degree
+to which their firms improvise, while taking into account the demands of their environment. Third, improvisation is not
+necessarily good and its effectiveness is moderated by several factors. To this end, there may be some moderating
+factors unique to the entrepreneurial context that might be worth searching for. Finally, it seems that individuals can be
+trained to become more effective improvisers. Therefore, research focusing on the improvisational behavior of
+entrepreneurs might help to inform the development of entrepreneurship curriculums and, as a result, potentially help to
+increase the survival and growth of new ventures.
+Considering the centrality of improvisation within the entrepreneurial process, we suggest that further and more indepth empirical investigations of entrepreneur improvisational behavior may lead to a greater understanding of the
+central research question of entrepreneurship, namely, how are opportunities for future goods and services are
+discovered, evaluated and exploited (Shane and Venkataraman, 2000; Venkataraman, 1997). The current study is an
+attempt to move in this direction. In the following section we consider the moderating effect of entrepreneurial selfefficacy on the relationship of entrepreneur improvisational behavior with performance and satisfaction. As stated
+previously and congruent with extant literature (Vera and Crosson, 2005), we do not anticipate a direct relationship of
+improvisational behavior with either of these outcome variables.
+4. The moderating effects of entrepreneurial self-efficacy
+Self-efficacy relates to the general belief in one's ability to produce high levels of performance in tasks undertaken
+in life (Bandura, 1977). Self-efficacy has been found to influence cognition and behavior. It is considered a state-like
+characteristic that generally increases with experience and is highly related to actual ability (Phillips and Gully, 1997).
+People with high levels of self-efficacy tend to set challenging goals; persist toward the achievement of their goals,
+even under difficult and stressful circumstances; recover quickly from failure, even in the face of conditions that would
+appear to be overwhelming to the average person; be more satisfied with their jobs; and experience greater levels of life
+satisfaction (Bandura, 1997). In organizational research, separate meta-analyses by both Stajkovic and Luthans (1998)
+and Judge and Bono (2001) have demonstrated a robust positive relationship between employee self-efficacy and
+performance. Similarly, several studies have shown a significant positive relationship between self-efficacy and work
+satisfaction (Dormann et al., 2006; Judge and Bono, 2001).
+In regard to entrepreneurship research, Markman, Balkin, and Baron (2002) found that patent holders who are
+actively involved in the formation of new businesses tend to have higher levels of general self-efficacy than patent
+holders that decide not to start new businesses. Similar findings were observed in a later study by Markman, Baron, and
+Balkin (2005). These findings suggest that self-efficacy might be an important mechanism for overcoming perceptions
+of risk that are often associated with new venture creation.
+
+486
+
+K.M. Hmieleski, A.C. Corbett / Journal of Business Venturing 23 (2008) 482–496
+
+Other entrepreneurship studies have examined a context-specific measure of self-efficacy, called “entrepreneurial self-efficacy.” This research focuses on the belief of individuals in their ability to perform entrepreneurship-related tasks. For example, Chen et al. (1998) created a measure of entrepreneurial self-efficacy
+comprised of dimensions related to marketing, innovation, management, risk-taking, and financial control. Using
+this measure, Chen et al. (1998) found entrepreneurial self-efficacy to significantly differentiate entrepreneurs
+from non-entrepreneurs. De Noble, Jung and Ehrlich (1999) built upon the work of Chen et al. (1998) to create a
+measure that was even more focused toward the entrepreneurship context. The dimensions for their measure
+include developing new product and market opportunities, building an innovative environment, initiating investor
+relationships, defining core purpose, coping with unexpected challenges, and developing critical human resources.
+Similar to the results of Markman et al. (2002), who used a measure of general self-efficacy, De Noble et al.
+(1999) found scores from their measure of entrepreneurial self-efficacy to be positively related to persons'
+intentions to start a new venture.
+Forbes (2005) developed a measure of entrepreneurial self-efficacy based on one's confidence in his/her ability to
+perform activities related to financial, marketing, management, and risk-taking aspects of entrepreneurship. The results
+of his study found a positive relationship between entrepreneurial self-efficacy and subjective measures of new venture
+performance. Perhaps more interestingly, Forbes (2005) found entrepreneurs to develop higher levels of entrepreneurial
+self-efficacy when involved in startups in which decision making was comprehensive, included multiple inputs of
+external decision advisors, and made use of current information. Therefore, it seems that the more exposure to factors
+traditionally related to decision making quality, the greater the individual's confidence in his/her ability to perform the
+roles and tasks of entrepreneurship.
+Baum, Locke, and Smith (2001) and Baum and Locke (2004) have used measures of entrepreneurial self-efficacy,
+relating to entrepreneurs' confidence in their ability to achieve high-growth, rather than their confidence in performing
+specific entrepreneurship-related tasks. Both studies identified a positive relationship between entrepreneurial selfefficacy and new venture growth. These findings suggest that entrepreneurs who are confident in their ability to achieve
+high-growth are likely to set challenging growth expectations for their firms and persist in their leadership efforts
+toward the accomplishment of those goals.
+We suggest here that entrepreneurial self-efficacy should have a positive effect on the effectiveness of entrepreneur
+improvisational behavior. If faced with the likelihood of failure, entrepreneurs without sufficient belief in their abilities
+are likely to give up mid-way through improvisational episodes rather than persisting through the process until reaching
+a successful result. As such, the “persistent” aspect of self-efficacy would appear to be a critical component of effective
+entrepreneur improvisational behavior. This is to say that improvisers must be able to persevere after an error has been
+made, since most improvisational episodes are likely to contain several missteps (Barrett, 1998). The key is to be able
+to continue forward until a successful outcome has been achieved. In this vein, Crossan et al. (2005, p. 134) suggest that
+having faith in one's ability to “make do” is critical to effective improvisation. This is in alignment with Kanter's (2002,
+p. 79) argument that improvisation requires confidence in one's ability to perform under distress. Therefore, we offer
+the following hypothesis:
+Hypothesis 1. Entrepreneurial self-efficacy will have a positive moderating effect on the linkage between entrepreneur
+improvisational behavior and performance.
+In addition, we suspect that entrepreneurial self-efficacy also moderates important affective outcomes of entrepreneur improvisational behavior — such as work satisfaction. Although little has been mentioned about the
+relationship between improvisational behavior and work satisfaction, several authors have pointed out that
+improvisation can be an inherently stressful activity to undertake within organizations (Cunha et al., 2003; Eisenhardt
+and Tabrizi, 1995; Moorman and Miner, 1998a; Vera and Crosson, 2005). Further, we would expect the psychological
+strain of improvisational behavior to be even greater for entrepreneurs, since failure for them is likely to have
+exceptionally profound consequences — affecting their personal well-being, as well as that of their families,
+employees, and outside investors. Therefore, improvisational behavior may be a role stressor for some entrepreneurs,
+potentially decreasing their level of work satisfaction. This view would be in opposition to findings from jazz and
+theater that have found improvisational performers to experience a “personal feeling of transience” (Kamoche et al.,
+2003, p. 2030) or a sense of “being in the groove” (Barrett, 1998, p. 614). Due to the intense pressures involved in
+establishing and growing new ventures, we would expect even successful entrepreneur improvisational behavior to be
+
+K.M. Hmieleski, A.C. Corbett / Journal of Business Venturing 23 (2008) 482–496
+
+487
+
+met more often with feelings of relief, as apposed to the positive affect that may be experienced by those improvising in
+aesthetic endeavors that carry with them lower levels of risk and more closely resemble hobbies than jobs.
+Following this view, we look to relevant research from the organizational behavior literature that has found selfefficacy to reduce the negative effects of role stressors on work satisfaction (Lent and Brown, 2006). This work
+suggests that confidence in one's abilities can partly mitigate psychological strain caused by role stressors (Brown
+et al., 2005; Jex and Bliese, 1999). For example, efficacious entrepreneurs are likely to be less distressed when
+spontaneously developing and executing plans for exploiting rapidly shifting business opportunities, as compared to
+their less efficacious counterparts. This is because higher levels of self-efficacy tend to be associated with a belief in
+one's ability to overcome losses (Bandura, 1997). Therefore, self-efficacious entrepreneurs should be less fearful of the
+potential losses that they might incur through improvisation. In addition, prior research would suggest that selfefficacious entrepreneurs are more likely to attribute failed improvisational attempts to external sources, whereas those
+who are comparatively lower in self-efficacy are more apt to internalize failure as being due to their own ineptitude
+(Silver et al., 1995), thereby potentially heightening their frustration with their job. For these reasons, we expect
+entrepreneurial self-efficacy to reduce the potential negative effects of improvisational behavior on the work satisfaction of entrepreneurs. To this end, we offer our second and final hypothesis:
+Hypothesis 2. Entrepreneurial self-efficacy will have a positive moderating effect on the linkage between entrepreneur
+improvisational behavior and work satisfaction.
+To summarize, we anticipate that entrepreneurial self-efficacy will be a positive moderator of the relationships of
+improvisational behavior with new venture performance and improvisational behavior with work satisfaction. In the
+next section, we review the methodology used to examine our hypotheses.
+5. Methodology
+5.1. Sample and procedure
+A random sample of 1000 new ventures was drawn from Dun and Bradstreet's Selectory Database of 14 million U.S.
+firms for use in the current study. Dun and Bradstreet compiles what is considered to be one of the most exhaustive
+database of young firms founded in the United States (Kalleberg et al., 1990). Thus, a random sample of firms drawn from
+their database — although perhaps not a completely random sample — is arguably as close of a random sample of
+startups as can be feasibly drawn. Dun and Bradstreet provided the names and address of the firms and their top
+management team leaders. A packet containing our survey, along with a cover letter and pre-paid business reply envelope
+was sent to the top management team leader of each firm. An initial and one follow-up mailing were sent. The first
+mailing resulted in 115 responses and the follow-up mailing provided 44 additional completed surveys. The follow-up
+mailing was sent approximately 8 weeks after the initial mailing. In total, 178 of the mailings were returned as nondeliverable. This resulted in a total response rate of 19.3%. Although this might not be considered a high response rate, it
+is in alignment with those produced by other studies using similar samples of top management (e.g., Neck et al., 2004).
+Non-response bias was examined using t test on firm age, revenues, number of employees, and firm growth. In each case,
+the results were non-significant.
+The participants, who were each founders and top management team leaders of their firms, included 133 males and
+26 females, with an averaged age of 52 years (SD = 9.74). The highest educational degree earned by participants
+included high school (n = 31), associates (n = 12), bachelors (n = 67), masters (n = 34), and doctoral (n = 15). Seventyfour of the participants had previous entrepreneurial experience as business founders of other firms. Finally, the
+location of participants' firms ranged across 40 different states, with primary operations in 105 different industries (as
+classified by 4-digit Standard Industrial Classification codes).
+5.2. Measures
+5.2.1. Improvisational behavior
+A 12-item scale adapted from the work of Hmieleski and Corbett (2006) was used to measure the degree to
+which individuals display improvisational behavior at their job. Participants rated the extent to which they
+
+488
+
+K.M. Hmieleski, A.C. Corbett / Journal of Business Venturing 23 (2008) 482–496
+
+agreed that each item was descriptive of their job-related behavior using a seven-point Likert-type scale
+ranging from (1) Strongly disagree to (7) Strongly agree. The following are some example items: “I improvise
+solutions to problems,” “I find new uses for existing methods or equipment,” and “I deviate from plans in
+order to take advantage of opportunities in the moment.” High scores indicate a proclivity to partake in
+improvisational behavior at work. This scale produced a Cronbach's coefficient alpha of .86 in the current
+study.
+5.2.2. Entrepreneurial self-efficacy
+This construct was measured using an instrument designed by De Noble, Jung, and Ehrlich (1999). The measure
+comprises 23 items requiring participants to rate their perceived ability to perform well on various behaviors that
+have been established within the literature as being robust predictors of entrepreneurial performance (Chandler and
+Jansen, 1992). Example items include “I can develop and maintain favorable relationships with potential investors”
+and “I can recruit and train key employees.” Respondents rated their level of agreement with each item using a
+seven-point Likert-type scale ranging from (1) Strongly disagree to (7) Strongly agree. These scores were summed
+to form an overall measure of entrepreneurial self-efficacy. This measure produced a Cronbach's coefficient alpha
+of .92.
+5.2.3. New venture performance
+Following previous work examining new ventures (Ensley et al., 2006), sales growth was used as our primary
+performance variable. Multi-year sales trend data could be considered a measure of sustainable growth, which has been
+suggested as the most important outcome of new ventures (Ireland et al., 2003). This is a particularly suitable measure
+for use with the current sample, since the age of the firms averages about 7 years. The performance data were acquired
+from Dun and Bradstreet, which were reported as average annual sales growth rate over the most recent three-year
+period. Further, recent studies have confirmed the accuracy of sales growth figures reported by Dun and Bradstreet
+(Baum et al., 2001; Baum and Locke, 2004).
+5.2.4. Work satisfaction
+Work satisfaction was measured using the “work itself satisfaction” scale of Spector's (1985) Job Satisfaction
+Survey. This scale is comprised of 4 items relating to the extent that the individual enjoys performing his/her job.
+Example items include “I like doing the things I do at work” and “My job is enjoyable.” Respondents rated their level of
+agreement with each item using a seven-point Likert-type scale ranging from (1) Strongly disagree to (7) Strongly
+agree. These scores were summed to form an overall measure of satisfaction with one's work. This measure produced a
+Cronbach's coefficient alpha of .85.
+5.2.5. Control variables
+Following previous research on new venture performance, firm age, industry, and revenue were used as
+control variables for examining the hypothesis related to new venture performance (Keats and Hitt, 1988;
+Schaefer et al., 1990). Firm age was measured as the number of years since the firm had been established.
+Revenue was measured as the total revenue generated by the firm for the current year. Considering the large
+number of repeat entrepreneurs in the sample, we also controlled for the number of startups founded by
+participants. Firm age, new venture performance, and number of ventures founded were used as control
+variables for examining the hypothesis related to work satisfaction.
+5.2.6. Confirmatory factor analysis
+To examine the within and between statistical structure of the measurement scales used, we conducted a threefactor confirmatory analysis in AMOS 6.0 using the indicators for improvisational behavior, entrepreneurial selfefficacy, and work satisfaction. The chi-square for the model was non-significant (χ2 = 342.58, DF = 348, p = .57) and
+results from absolute fit (GFI = .91), parsimony fit (RMSEA = .00), and relative fit (CFI = .99) indices each
+demonstrated good fit. In addition, there were no single modification indices over 3.84. The factor loading ranged
+from .43 to .69 for improvisational behavior, .43 to .75 for entrepreneurial self-efficacy, and .57 to .77 for work
+satisfaction. Overall these findings suggest that the within and between statistical structure for each of the constructs
+is sound.
+
+K.M. Hmieleski, A.C. Corbett / Journal of Business Venturing 23 (2008) 482–496
+
+489
+
+Table 1
+Descriptive statistics and variable intercorrelations
+Variable
+
+M
+
+SD
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+1. Firm age
+2. Total revenue (Log)
+3. # of ventures founded
+4. Improvisation
+5. Entrepreneurial self-efficacy
+6. Improvisation × entrepreneurial self-efficacy
+7. New venture performance
+8. Work satisfaction
+
+7.81
+6.20
+.99
+5.65
+5.68
+.49
+3.02
+6.25
+
+2.36
+.81
+1.33
+.77
+.68
+1.13
+.40
+.94
+
+− .06
+− .04
+− .06
+− .10
+.02
+− .23⁎⁎
+− .13
+
+− .23⁎⁎
+.01
+− .16⁎
+.20⁎
+− .13
+
+.21⁎⁎
+.25⁎⁎
+−.14
+.10
+.23⁎⁎
+
+.49⁎⁎
+− .08
+.07
+.34⁎⁎
+
+−.14
+.16⁎
+.48⁎⁎
+
+.02
+− .29⁎⁎
+
+.06
+
+N = 159; ⁎p b .05; ⁎⁎p b .01.
+
+5.3. Statistical procedures
+Moderated hierarchical regression analysis was utilized as the main statistical procedure for examining the
+interaction effects of improvisational behavior × entrepreneurial self-efficacy on new venture performance and work
+satisfaction. In addition, all interactions were graphed using procedures described by Cohen, Cohen, West and Aiken
+(2003). Each graph was plotted at 1 standard deviate above and below the mean for entrepreneurial self-efficacy.
+6. Results
+Means, standard deviations, and bi-variate correlations for all measured items are shown in Table 1. The results for
+the hierarchical regression model for new venture performance and work satisfaction are shown in Tables 2 and 3,
+respectively. The interactions of improvisational behavior × entrepreneurial self-efficacy on new venture performance
+and on work satisfaction are illustrated in Figs. 1 and 2, respectively.
+Multiple analyses were conducted to investigate the threat of multicollinearity and for potential outliers. In terms of
+examining the threat of multicollinearity, the highest correlation between any pair of independent variables was .49
+(see Table 1), no variance inflation scores were greater than 1.47, and all conditional index scores were less than 23.49.
+These tests show multicollinearity not to be a concern, as each of these results falls well within acceptable ranges
+(Fox, 1997; Neter et al., 1996; Tabachnick and Fidell, 2001). Potential outliers were assessed using leverage values
+(Neter et al., 1996) and DfBetas (Tabachnick and Fidell, 2001). These analyses found no leverage scores higher than
+.46 and no standardized DfBetas greater than an absolute value of .86. The evidence from the leverage scores and
+DfBetas are well within accepted ranges and suggest that there are no outliers.
+
+Table 2
+Hierarchical regression model of new venture performance
+Variable
+
+Firm age
+Total revenue (Log)
+# of ventures founded
+Improvisation
+Entrepreneurial self-efficacy
+Improvisation × entrepreneurial self-efficacy
+F-change
+ΔR2
+F-ratio
+R2
+Adjusted R2
+
+New venture performance
+Model 1
+
+Model 2
+
+Model 3
+
+β
+− .11
+.25⁎⁎
+.10
+
+β
+− .09
+.26⁎⁎
+.04
+.07
+.19⁎
+
+β
+−.08
+.29⁎⁎
+.06
+.08
+.24⁎⁎
+.21⁎⁎
+6.40⁎⁎
+.04
+4.31⁎⁎
+.17
+.14
+
+3.64⁎⁎
+.09
+.07
+
+N = 159; ⁎p b .05; ⁎⁎p b .01; Note: Standardized beta coefficients are shown.
+
+3.88⁎
+.04
+3.82⁎⁎
+.13
+.10
+
+490
+
+K.M. Hmieleski, A.C. Corbett / Journal of Business Venturing 23 (2008) 482–496
+
+Table 3
+Hierarchical regression model of work satisfaction
+Variable
+
+Work satisfaction
+
+Firm age
+Total revenue (Log)
+New venture performance
+# of ventures founded
+Improvisation
+Entrepreneurial self-efficacy
+Improvisation × entrepreneurial self-efficacy
+F-change
+ΔR2
+F-ratio
+R2
+Adjusted R2
+
+Model 1
+
+Model 2
+
+Model 3
+
+− .09
+− .07
+.03
+.22⁎⁎
+
+− .05
+− .05
+− .05
+.08
+.13
+.48⁎⁎
+
+− .05
+− .10
+− .03
+.05
+.11
+.47⁎⁎
+− .23⁎⁎
+11.65⁎⁎
+.05
+13.77⁎⁎
+.39
+.37
+
+2.59⁎
+.06
+.05
+
+32.33⁎⁎
+.28
+13.20⁎⁎
+.34
+.32
+
+N = 159; ⁎p b .05; ⁎⁎p b .01; Note: Standardized beta coefficients are shown.
+
+Before moving forward, there are a few non-hypothesized relationships worth noting. First, as anticipated, no direct
+relationship between improvisational behavior and new venture performance was identified. The correlation between
+improvisational behavior and new venture performance was non-significant (R = .07, p N .10) and the beta-coefficient
+for improvisational behavior on new venture performance was non-significant (β = .07, p N .10). Second, somewhat
+surprisingly, a positive correlation was found between improvisational behavior and work satisfaction (R = .34, p b .01).
+However, when controlling for entrepreneurial self-efficacy (as shown in Model 2 of Table 2), the relationship between
+improvisational behavior and work satisfaction became non-significant (β = .13, p N .10). Finally, entrepreneurial selfefficacy was found to have a significant positive relationship with both new venture performance (R = .16, p b .05;
+β = .18, p b .05) and work satisfaction (R = .34, p b .01; β = .48, p b .01). The results of the study will now be discussed in
+terms of the specific hypotheses.
+Hypothesis 1 stated that entrepreneurial self-efficacy will have a positive moderating effect on the linkage between
+entrepreneur improvisational behavior and performance. The results of the hierarchical regression analysis (see Table 2)
+indicate that the interaction of improvisational behavior × entrepreneurial self-efficacy on new venture performance is
+indeed positive and significant (β = .21, p b .01). As illustrated in Fig. 1, startups led by founders who were high in
+entrepreneurial self-efficacy tended to grow at a greater rate when their founders exhibited high levels of improvisational
+behavior, whereas startups led by founders who were low in entrepreneurial self-efficacy tended to grow at a comparatively
+lower rate when their founders exhibited high levels of improvisational behavior. Therefore, Hypothesis 1 is supported.
+Hypothesis 2 stated that entrepreneurial self-efficacy will have a positive moderating effect on the linkage between
+entrepreneur improvisational behavior and work satisfaction. The results of the hierarchical regression analysis
+(see Table 3) indicate that the interaction of improvisational behavior × entrepreneurial self-efficacy on work satisfaction is negative and significant (β = − .23, p b .01). As illustrated in Fig. 2, founders who were high in entrepreneurial
+self-efficacy experienced decreased levels of work satisfaction when exhibiting high levels of improvisational
+
+Fig. 1. Interaction graph of improvisational behavior and entrepreneurial self-efficacy on new venture performance.
+
+K.M. Hmieleski, A.C. Corbett / Journal of Business Venturing 23 (2008) 482–496
+
+491
+
+Fig. 2. Interaction graph of improvisational behavior and entrepreneurial self-efficacy on work satisfaction.
+
+behavior, whereas founders who were low in entrepreneurial self-efficacy experienced increased levels of work
+satisfaction when exhibiting high levels of improvisational behavior. Thus, Hypothesis 2 is not supported. Instead,
+evidence for the opposite relationships was found.
+Overall, the findings support our general thesis that the interaction between improvisational behavior and
+entrepreneurial self-efficacy has important effects on both performance and satisfaction. The implications of these
+results will now be discussed.
+7. Discussion
+The results of the study suggest that (1) there is no direct relationship between entrepreneur improvisational
+behavior and new venture performance, (2) there is no direct relationship between entrepreneur improvisational
+behavior and work satisfaction, (3) entrepreneurial self-efficacy positively moderates the relationship between entrepreneur improvisational behavior and new venture performance, and (4) entrepreneurial self-efficacy negatively
+moderates the relationship between entrepreneur improvisational behavior and work satisfaction. Our discussion
+reviews the implications of these findings.
+7.1. New venture performance
+Consistent with the extant literature, we found no direct relationship between improvisational behavior and
+performance. Therefore our results uphold the notion that improvisation is not inherently good or bad for organizations
+(Crossan et al., 2005; Crossan and Sorrenti, 1997; Vera and Crosson, 2005). We did, however, find entrepreneur
+improvisational behavior to be positively related to new venture performance within startups led by entrepreneurs
+who were high in entrepreneurial self-efficacy, as compared to startups led by entrepreneurs who were comparatively
+lower in entrepreneurial self-efficacy. Thus, domain-specific self-efficacy appears to be an important moderator of the
+linkage between improvisational behavior and performance. This represents a novel contribution to the literature on
+improvisation in organizations. Previous research has linked improvisational behavior to specific organizational
+processes (e.g., Akgun et al., 2002; Brown and Eisenhardt, 1997; Cunha and Cunha, 2003; Eisenhardt and Tabrizi,
+1995; Miner et al., 2001; Moorman and Miner, 1998b; Orlikowski, 1996; Vera and Crosson, 2005), but not to measures
+of firm performance.
+Further, our results support the notion that improvisation is not for the faint of heart (Kanter, 2002). It seems that
+entrepreneurs who are low in self-efficacy and frequently improvise might be shooting themselves in the foot.
+Improvisation for such individuals is more of a “craps shoot,” because they do not have the confidence to actively seek
+out how resources might be recombined. Moreover, their lack of confidence in their abilities is likely to stifle their
+attempts to improvise. It does, however, appear that many entrepreneurs in our sample may have recognized these facts,
+as those low in entrepreneurial self-efficacy did not rate themselves as partaking in improvisational behavior in their
+work as much as those higher in entrepreneurial self-efficacy (R = .49, p b .01).
+Finally, our results found entrepreneurial self-efficacy to share a significant and positive relationship with new
+venture performance. This finding suggests that there is similar credence in the common notion that, like improvisation,
+entrepreneurship — in general — is also not for those lacking in confidence (Chen et al., 1998). Thus, nascent
+entrepreneurs might want to consider developing confidence in their entrepreneurial abilities before attempting to
+
+492
+
+K.M. Hmieleski, A.C. Corbett / Journal of Business Venturing 23 (2008) 482–496
+
+develop a high-growth new venture. Some good starting points for developing one's entrepreneurial self-efficacy might
+include starting a small business in a stable industry or working for a high-growth new venture.
+7.2. Work satisfaction
+Contrary to our initial expectations, we found entrepreneurial self-efficacy to have a negative moderating effect on
+the relationship between improvisational behavior and entrepreneurs' level of satisfaction with their work. Even though
+the entrepreneurs in our study who exhibited high levels of entrepreneurial self-efficacy rated themselves as being
+higher in work satisfaction whether high or low in improvisational behavior than those comparatively lower in
+entrepreneurial self-efficacy, their level of satisfaction decreased as their level of improvisational behavior increased.
+Further, the firms led by these individuals (i.e., entrepreneurs who were high in both entrepreneurial self-efficacy and
+improvisational behavior) were by far the fastest growing startups in our sample. This last fact may help to explain this
+finding. The rapid pace at which these firms were growing may have been causing distress for the entrepreneurs leading
+them. As their firms grow, their improvisational behavior becomes inherently more risky because they now have firm
+assets to protect (Thaler, 1991). Therefore, in the entrepreneurship context it may be possible for entrepreneurs to overengage in their work. The financial reward that such efforts might bring apparently does not necessarily carry a promise
+of work satisfaction for entrepreneurs. This assumption is congruent with the research of Cooper and Artz (1995),
+which found that entrepreneurs who focus on non-economic goals tend to display higher levels of satisfaction than
+entrepreneurs who focus on economic goals.
+A similar explanation for these findings might be found in the recent research of Baker and Nelson (2005), who
+found entrepreneurs engaging in extremely high levels of improvisational-type behavior often have a tendency to take
+on too many unrelated tasks. Even though this led to growth for many of the firms they studied, it also led to chaos and
+undermined the long-term sustainability of the firms. In contrast, others who employed improvisational-type behavior
+across only related projects that built upon each other were more successful at achieving sustainable growth. Further,
+the amount of chaos and distress that these entrepreneurs experienced appeared to be considerably lower. Similarly, we
+wonder if the entrepreneurs in our study who were high in both entrepreneurial self-efficacy and improvisational
+behavior were simply taking on more than they could handle. As Hatch (1999, p.84) notes, “excessive improvisation
+can lead to stress and psychological burnout.” This very well could have been the case for these entrepreneurs and is
+congruent with our assumption that improvisation may sometimes act as a role stressor within the entrepreneurship
+context. What is interesting here is that rather than reducing the negative effects of role stressors (Jex and Bliese, 1999),
+it seems that very high levels of self-efficacy may increase psychological distress by driving entrepreneurs to take on
+greater and greater challenges — that eventually become overwhelming. This is in alignment with research by Krueger
+and Dickson (1994), which found the level of individuals' confidence in their abilities to be positively related to
+increased levels of risk-taking in a study of entrepreneurial opportunity recognition.
+In contrast, entrepreneurs low in entrepreneurial self-efficacy reported themselves as having higher work satisfaction
+when comparatively higher in improvisational behavior than those exhibiting lower levels of improvisational behavior.
+Since the entrepreneurs in our study who where lower in entrepreneurial self-efficacy led firms that were growing at a much
+slower rate than those higher in entrepreneurial self-efficacy, there likely was not as much risk associated with their
+improvisational activities. Even though the improvisational behavior of these individuals was found to be negatively
+related to the growth of their firms, the engagement that improvisation provided may have been driving them up the
+learning curve. Effective improvisation requires confidence in one's abilities, but improvisation also helps to develop
+abilities — as a form of learning (Barrett, 1998; Garud and Karnoe, 2003; Kamoche et al., 2003; Miner et al., 2001; Vera
+and Crosson, 2005; Weick, 1998). Considering the established linkage between workplace learning and work satisfaction
+(Rowden, 2002; Rowden and Conine, 2005), improvisation may have driven learning for these individuals and
+subsequently had a positive effect on their work satisfaction. There was likely a greater opportunity for these individuals to
+learn more than the entrepreneurs who were comparative higher in entrepreneurial self-efficacy, because they had more to
+learn. This is, of course, a speculative assumption, since we did not measure learning in the current study.
+7.3. A note about repeat entrepreneurs
+Due to the fact that our sample contained a large number of repeat entrepreneurs, we took the opportunity to examine
+how experience founding multiple startups related to entrepreneurial self-efficacy and improvisational behavior. First,
+
+K.M. Hmieleski, A.C. Corbett / Journal of Business Venturing 23 (2008) 482–496
+
+493
+
+we found repeat entrepreneurs (i.e., those who had founded multiple business in their career) to be significantly higher in
+entrepreneurial self-efficacy than novice entrepreneurs (i.e., those who were first-time entrepreneurs) (t = 3.16, p b .01).
+This finding is congruent with the general literature on self-efficacy, demonstrating that individuals' confidence in their
+abilities tends to increase over time and with experience (Bandura, 1997).
+Secondly, repeat entrepreneurs were found to rate higher in levels of improvisational behavior than were novice
+entrepreneurs (t = 3.10, p b .01). This finding would run counter to the notion that entrepreneurs improvise simply out
+of necessity and lack of resources. Despite the fact that repeat entrepreneurs are likely to have greater levels of
+financial, social, and human capital than novice entrepreneurs, they appear to exhibit higher levels of improvisational
+behavior. There are several reasons why this relationship may exist. One reason may be that repeat entrepreneurs
+simply become more comfortable with improvising over time, thus increasing their likelihood of engaging in such
+behavior. Another explanation would be that repeat entrepreneurs may share a different set of personality characteristics than those who wish only to create and grow a single business. This explanation would be congruent with
+research by Hmieleski and Corbett (2006), demonstrating that individuals high in entrepreneurial intentions tend to
+have a proclivity toward improvisational behavior.
+7.4. Limitations and future directions
+There are some noteworthy limitations of the study, which also pose opportunity for future research. First, the
+correlational design of our study does not allow us to assume causation. Longitudinal designs could be used in future
+research to further establish the linkages of improvisational behavior and entrepreneurial self-efficacy with the
+performance and work satisfaction of entrepreneurs. In terms of performance, different outcomes may need to be
+considered depending on the stage of the venture in the organizational life cycle.
+Secondly, the age of the firms in the current study were not as “young” as some other studies of new ventures. The focus
+of the current study was on entrepreneurs, which we defined as being the founders and the current top management team
+leaders of their firms. New venture performance was treated as a reflection of the performance of the “lead entrepreneurs”
+who we studied. The use of sales growth may be a less appropriate measure of performance when considering the
+performance of entrepreneurs leading their firms through more nascent stages of development, but consistent with extant
+literature (Baum et al., 2001; Ensley et al., 2006), it seemed to be a relevant indicator of performance for our sample.
+Thirdly, we chose to study the lead founder based on research suggesting that an individual usually emerges as the
+leader within new venture top management teams — and that this person tends to have an inordinate impact on the
+decision making of the firm (Ensley et al., 2000). By following this path in the current study, we do not mean to
+discount the value of the founding team. Future studies might extend our research by considering the interaction of
+improvisational behavior at the team level (Vera and Crosson, 2005) with the collective efficacy of the team (Watson
+et al., 2001) on the performance and satisfaction of the team.
+In addition, we would like to point out that — although we have alluded to the importance of persistence to the
+improvisational process — we did not directly measure this construct. Instead we drew from previous research linking
+persistence as an outcome of self-efficacy (Bandura, 1997). Therefore, there seems to be an opportunity for future
+research to examine persistence or related constructs such as personal initiative (Frese et al., 1997) as a potential
+pathway through which the effects of entrepreneurial self-efficacy might be exhibited.
+Further, our findings suggest that there may be some inherent limitations involved in drawing parallel connections
+from improvisation within jazz and theater to that of improvisation within entrepreneurship. For example, contrary to
+predictions that would be derived from studies of efficacious jazz and theater performers, who are often described as
+finding themselves “in flow” or “in the groove” while improvising, we found improvisational behavior to have a
+significantly negative relationship with work satisfaction for those entrepreneurs who were high in entrepreneurial selfefficacy. Jazz musicians and theater performers rarely have as much on the line in the decisions that they make as do
+entrepreneurs, who could potentially lose their entire life's savings over a bad business decision. These increased stakes
+of “entrepreneurial performers” may therefore carry a different set of requirements for effective improvisation. Other
+moderating variables worth investigating may include psychological hardiness (Rush et al., 1995) and tolerance for
+ambiguity (Teoh and Foo, 1997), which have each been demonstrated to reduce the negative effects of role stressors.
+Finally, we would like to highlight the potential for improvisation to be incorporated into entrepreneurship
+education programs. Our experience has been that the majority of entrepreneurship courses tend to be comprised of
+topics based primarily on strategic planning and linear decision making (e.g., business plan writing, opportunity
+
+494
+
+K.M. Hmieleski, A.C. Corbett / Journal of Business Venturing 23 (2008) 482–496
+
+assessment, market analysis, competitive positioning, product life-cycle planning). Such content is an important and
+necessary component of any entrepreneurship curriculum. Educators should, however, be careful to make the
+distinction that most entrepreneurs, due to the various constraints mentioned throughout the current paper, are often
+unable to apply the strategies that are taught in business school classrooms. In so doing, the utility of these tools need
+not be downplayed. Rather, the importance in understanding the value of strategic planning should be underscored,
+since those who firmly comprehend the principals of strategic planning will be better able to identify when improvised
+courses of action are most appropriate. To emphasize the important role of improvisation in entrepreneurship, we
+suggest that students be placed in scenarios that test their ability to function under time pressure and with limited
+resources such that they are forced to make tradeoffs and extemporaneously formulate and enact strategy. Feedback
+from such experiences should help to build students' improvisational skills and self-confidence, and provide a realistic
+preview of the entrepreneurial experience.
+7.5. Conclusions
+The entrepreneurial environment is complex and often uncertain. As a result, no entrepreneur is able to successfully
+plan for every scenario that he or she will face. Similarly, no entrepreneur is able to survive by always making things
+up on the fly. Effective entrepreneurial behavior tends to comprise of a blending between planned and spontaneous
+action — a problem space that is characteristic of improvisational behavior. In order to be successful within this
+context, confidence in one's entrepreneurial-related skills is essential. Entrepreneurs must be confident in their ability
+to recognize critical resources and how they might be recombined to solve problems and exploit opportunities. They
+must have similar confidence in their ability to improvise in their interactions with employees, customers, and
+suppliers — not necessarily as a need to use improvisation as a strategic tool, but rather because they will often be
+required to do so out of necessity if they are attempting to lead their venture toward high-growth.
+Finally, we hope that our findings will stimulate other scholars to conduct further research on the linkage between
+improvisation and satisfaction, especial in turbulent environments such as those of high-growth new ventures. Our findings
+suggest that entrepreneurs who are highly confident in their abilities ought to be careful in deciding which activities that
+they choose to improvise. Even though these individuals are often highly skilled at improvisation, this competency might
+lead them to overextend themselves and cause potential burnout. In our personal experience, we have witnessed several
+such cases of confident entrepreneurs whose firms have excelled; all the while their individual emotional states have
+rapidly deteriorated. This is a cautionary tale that should be known by all nascent and experienced entrepreneurs.
+References
+Akgun, A.E., Lynn, G.S., Reily, R., 2002. Multi-dimensionality of learning in new product development teams. European Journal of Innovation
+Management 5 (2), 57–72.
+Baker, T., Nelson, R.E., 2005. Creating something from nothing: resource construction through entrepreneurial bricolage. Administrative Science
+Quarterly 50 (3), 329–366.
+Baker, T., Miner, A., Eesley, D., 2003. Improvising firms: bricolage, account giving, and improvisational competency in the founding process.
+Research Policy 32, 255–276.
+Bandura, A., 1977. Self-efficacy: toward a unifying theory of behavioral change. Psychological Review 84 (2), 191–215.
+Bandura, A., 1997. Self-Efficacy: The Exercise of Control. W. H. Freeman, New York.
+Baron, R.A., 1998. Cognitive mechanisms in entrepreneurship: why and when entrepreneurs think differently than other people. Journal of Business
+Venturing 13, 275–294.
+Barrett, F.J., 1998. Creativity and improvisation in jazz and organizations: implications for organizational learning. Organization Science 9 (5),
+605–622.
+Baum, J.R., Locke, E.A., 2004. The relationship of entrepreneurial traits, skill, and motivation to subsequent venture growth. Journal of Applied
+Psychology 89 (4), 587–598.
+Baum, J.R., Locke, E.A., Kirkpatrick, S.A., 1998. A longitudinal study of the relation of vision and vision communication to venture growth in
+entrepreneurial firms. Journal of Applied Psychology 83 (1), 43–54.
+Baum, J.R., Locke, E.A., Smith, K.G., 2001. A multidimensional model of venture growth. Academy of Management Journal 44 (2), 292–303.
+Bird, B.J., 1992. The operation of intentions in time: the emergence of the new venture. Entrepreneurship Theory and Practice 17, 11–20.
+Brigham, K.H., DeCastro, J.O., 2003. Entrepreneurial fit: the role of cognitive misfit. In: Katz, J.A., Shepherd, D.A. (Eds.), Cognitive Approaches to
+Entrepreneurship Research. JAI Press/Elsevier, Amsterdam.
+Brown, S.L., Eisenhardt, K.M., 1997. The art of continuous change: linking complexity theory and time-paced evolution in relentlessly shifting
+organizations. Administrative Science Quarterly 42 (1), 1–34.
+
+K.M. Hmieleski, A.C. Corbett / Journal of Business Venturing 23 (2008) 482–496
+
+495
+
+Brown, S.P., Jones, E., Leigh, T.W., 2005. The attenuating effect of role overload in relationships linking self-efficacy and goal level to work
+performance. Journal of Applied Psychology 90 (5), 972–979.
+Chandler, G., Jansen, E., 1992. The founder's self-assessed competence and venture performance. Journal of Business Venturing 7 (3), 295–316.
+Chen, C.C., Greene, P.G., Crick, A., 1998. Does entrepreneurial self-efficacy distinguish entrepreneurs from managers? Journal of Business
+Venturing 13, 295–316.
+Cohen, J., Cohen, P., West, S.G., Aiken, L.S., 2003. Applied multiple regression/correlation analysis for the behavior sciences. Lawrence Erlbaum
+Associates, Mahwah, NJ.
+Cooper, A.C., Artz, K.W., 1995. Determinants of satisfaction for entrepreneurs. Journal of Business Venturing 10, 439–457.
+Crossan, M.M., Sorrenti, M., 1997. Making sense of improvisation. Advances in Strategic Management 14, 155–180.
+Crossan, M., Cunha, M.P., Vera, D., Da Cunha, J., 2005. Time and organizational improvisation. Academy of Management Review 30 (1), 129–145.
+Cunha, M.P., Cunha, J.V., 2003. Organizational improvisation and change: two syntheses and a filled gap. Journal of Organizational Change 16 (2),
+169–185.
+Cunha, M.P., Kamoche, K., Cunha, R.C., 2003. Organizational improvisation and leadership. International Studies of Management & Organization
+33 (1), 34–57.
+De Noble, A.F., Jung, D., Ehrlich, S.B., 1999. Entrepreneurial self-efficacy: the development of a measure and its relationship to entrepreneurial
+action. In: Reynolds, P., et al. (Eds.), Frontiers of Entrepreneurship Research. Babson College, Babson Park, MA.
+Diener, E., Seligman, M.E.P., 2004. Beyond money: toward an economy of well-being. Psychological Science in the Public Interest 5 (1), 1–31.
+Dormann, C., Fay, D., Zapf, D., Frese, M., 2006. A state-trait analysis of job satisfaction: on the effect of core self-evaluations. Applied Psychology:
+An International Review 55, 27–51.
+Drucker, P.F., 1992. The age of discontinuity. Harper & Row, New York.
+Eisenhardt, K.M., Tabrizi, B.N., 1995. Accelerating adaptive processes: product innovation in the global computer industry. Administrative Science
+Quarterly 40 (1), 84–110.
+Ensley, M.D., Carland, J.W., Carland, J.C., 2000. Investigating the existence of the lead entrepreneur. Journal of Small Business Management 38 (4),
+59–77.
+Ensley, M.D., Pearce, C.L., Hmieleski, K.M., 2006. The moderating effect of environmental dynamism on the relationship on entrepreneur leadership
+behavior and new venture performance. Journal of Business Venturing 21 (2), 243–263.
+Forbes, D.P., 2005. The effects of strategic decision making on entrepreneurial self-efficacy. Entrepreneurship Theory and Practice 29 (5), 599–626.
+Foster, R.N., Kaplan, S., 2001. Creative Destruction: Why Companies that are Built to Last Underperform the Market — And How to Successfully
+Transform Them. Random House, New York.
+Fox, J., 1997. Applied Regression, Linear Models, and Related Methods. Sage, Thousand Oaks, CA.
+Frese, M., Fay, D., Hilburger, T., Leng, K., Tag, A., 1997. The concept of personal initiative: operationalization, reliability and validity in two German
+samples. Journal of Occupational and Organizational Psychology 70, 139–161.
+Garud, R., Karnoe, P., 2003. Bricolage versus breakthrough: distributed and embedded agency in technology entrepreneurship. Research Policy 32 (2),
+277–300.
+Hambrick, D.C., Mason, P.A., 1984. Upper echelons: the organization as a reflection of its top managers. Academy of Management Review 9,
+193–206.
+Hatch, M.J., 1999. Exploring the empty spaces of organizing: how improvisational jazz helps redescribe organizational structure. Organization
+Studies 20 (1), 75–100.
+Hmieleski, K.M., Ensley, M.D., 2004. An investigation of improvisation as a strategy for exploiting dynamic opportunities. In: Bygrave, W.D., et al.
+(Eds.), Frontiers of Entrepreneurship Research. Babson College, Babson Park, MA, pp. 596–606.
+Hmieleski, K.M., Corbett, A.C., 2006. Proclivity for improvisation as a predictor of entrepreneurial intentions. Journal of Small Business
+Management 41 (1), 45–63.
+Ireland, R.D., Hitt, M.A., Sirmon, D.G., 2003. A model of strategic entrepreneurship: the construct and its dimensions. Journal of Management 29 (6),
+963–989.
+Jex, S.M., Bliese, P.D., 1999. Efficacy beliefs as a moderator of the impact of work-related stressors: a multilevel study. Journal of Applied
+Psychology 84 (3), 349–361.
+Judge, T.A., Bono, J.E., 2001. Relationship of core self-evaluations traits-self-esteem, generalized self-efficacy, locus of control, and emotional
+stability-with job satisfaction and job performance: a meta-analysis. Journal of Applied Psychology 86 (1), 80–92.
+Kalleberg, A.L., Marsden, P.V., Aldrich, H.E., Cassell, J.W., 1990. Comparing organizational sampling frames. Administrative Science Quarterly 35 (4),
+658–688.
+Kamoche, K., Cunha, M.P., Cunha, J.V., 2003. Towards a theory of organizational improvisation: looking beyond the jazz metaphor. Journal of
+Management Studies 40 (8), 2023–2051.
+Kanter, R.M., 2002. Strategy as improvisational theater. Sloan Management Review 43, 76–81.
+Keats, B.W., Hitt, M.A., 1988. A causal model of linkages among environmental dimensions, macro organizational characteristics, and performance.
+Academy of Management Journal 31, 570–598.
+Krueger, N., Dickson, P., 1994. How believing in ourselves increases risk taking: perceived self-efficacy and opportunity recognition. Decision
+Sciences 25 (3), 385–400.
+Krueger, N.F., Reilly, M.D., Carsrud, A.L., 2000. Competing models of entrepreneurial intentions. Journal of Business Venturing 15, 411–432.
+Lent, R.W., Brown, S.D., 2006. Integrating person and situation perspectives on work satisfaction: a social-cognitive view. Journal of Vocational
+Behavior 69 (2), 236–247.
+Markman, G., Balkin, D., Baron, R., 2002. Inventors and new venture formation: the effects of general self-efficacy and regretful thinking.
+Entrepreneurship Theory and Practice 27 (2), 149–166.
+
+496
+
+K.M. Hmieleski, A.C. Corbett / Journal of Business Venturing 23 (2008) 482–496
+
+Markman, G.D., Baron, R.A., Balkin, D.B., 2005. Are perseverance and self-efficacy costless? Assessing entrepreneurs' regretful thinking. Journal of
+Organizational Behavior 26, 1–19.
+Miner, A.S., Bassoff, P., Moorman, C., 2001. Organizational improvisation and learning: a field study. Administrative Science Quarterly 46,
+304–337.
+Moorman, C., Miner, A.S., 1998a. The convergence of planning and execution: improvisation in new product development. Journal of Marketing 61,
+1–20.
+Moorman, C., Miner, A.S., 1998b. Organizational improvisation and organizational memory. Academy of Management Review 23 (4), 698–723.
+Neck, H.M., Meyer, G.D., Cohen, B., Corbett, A.C., 2004. An entrepreneurial system view of new venture creation. Journal of Small Business
+Management 42 (2), 190–208.
+Neter, J., Kutner, M.H., Nachtsheim, C.J., Wasserman, W., 1996. Applied Linear Statistical Models. Irwin, Chicago.
+Orlikowski, W.J., 1996. Improvising organizational transformation over time: a situated change perspective. Information Systems Research 7 (1),
+63–92.
+Phillips, J.M., Gully, S.M., 1997. Role of goal orientation, ability, need for achievement, and locus of control in the self-efficacy and goal-setting
+process. Journal of Applied Psychology 82 (5), 792–802.
+Rowden, R.W., 2002. The relationship between workplace learning and job satisfaction in U.S. small to midsize businesses. Human Resource
+Development Quarterly 13 (4), 407–425.
+Rowden, R.W., Conine, C.T., 2005. The impact of workplace learning on job satisfaction in small US commercial banks. Journal of Workplace
+Learning 17 (4), 215–230.
+Rush, M.C., Schoel, W.A., Barnard, S.M., 1995. Psychological resiliency in the public sector: ‘hardiness’ and pressure for change. Journal of
+Vocational Behavior 46 (1), 17–39.
+Schaefer, A.D., Kenny, J.T., Bost, J.E., 1990. Performance measures and strategy: a review, critique, and extension. Advances in Marketing 152–157.
+Shane, S., Venkataraman, S., 2000. The promise of entrepreneurship as a field of research. Academy of Management Review 25 (1), 217–226.
+Silver, W.S., Mitchell, T.R., Gist, M.E., 1995. Responses to successful and unsuccessful performance: the moderating effect of self-efficacy on the
+relationship between performance and attributions. Organizational Behavior and Human Decision Processes 62 (3), 286–299.
+Spector, P.E., 1985. Measurement of human service staff satisfaction: development of the Job Satisfaction Survey. American Journal of Community
+Psychology 1 (6), 693–713.
+Stajkovic, A., Luthans, F., 1998. Self-efficacy and work-related performance: a meta-analysis. Psychological Bulletin 124 (2), 240–261.
+Teoh, H.Y., Foo, S.L., 1997. Moderating effects of tolerance for ambiguity and risk-taking propensity on the role conflict-perceived performance
+relationship: evidence from Singaporean entrepreneurs. Journal of Business Venturing 12 (1), 67–81.
+Tabachnick, B.G., Fidell, L.S., 2001. Using Multivariate Statistics. Allyn and Bacon, Boston.
+Thaler, R.H., 1991. Quasi Rational Economics. Russell Sage Foundation, New York.
+Venkataraman, S., 1997. The distinctive domain of entrepreneurship research. In: Katz, J.A. (Ed.), Advances in Entrepreneurship, Firm Emergence,
+and Growth, 3. JAI Press, Greenwich, CT, pp. 119–138.
+Vera, D., Crosson, M., 2005. Improvisation and innovative performance in teams. Organization Science 16 (3), 203–224.
+Watson, C.B., Chemers, M.M., Preiser, N., 2001. Collective efficacy: a multilevel analysis. Personality and Social Psychology Bulletin 27 (8),
+1057–1068.
+Weick, K.E., 1998. Improvisation as a mindset for organizational analysis. Organization Science 9 (5), 543–555.
+Weick, K.E., 2002. The aesthetic of imperfection in orchestras and organizations. In: Kamoche, K.N., Cunha, M.P., Cunha, J.V. (Eds.), Organizational
+Improvisation. Routledge, New York, pp. 166–184.
+
+

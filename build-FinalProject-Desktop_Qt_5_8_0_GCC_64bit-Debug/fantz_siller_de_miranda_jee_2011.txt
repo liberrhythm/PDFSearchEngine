@@ -1,0 +1,547 @@
+Journal of Engineering Education
+July 2011, Vol. 100, No. 3, pp. 604–623
+© 2011 ASEE. http://www.jee.org
+
+Pre-Collegiate Factors Influencing the
+Self-Efficacy of Engineering Students
+TODD D. FANTZ, THOMAS J. SILLERa, AND MICHAEL A. DEMIRANDAa
+Old Dominion University, Colorado State University a
+BACKGROUND
+Many engineering colleges have the goal of increasing the quality and number of students choosing
+to pursue engineering and therefore are heavily invested in programs that expose pre-collegiate students to engineering. Most commonly, these institutions are involved with summer outreach programs and weekend or fieldtrip opportunities for students to visit engineering campuses, and some
+curriculum development. A lesser, often untapped resource for engineering colleges is through K-12
+technology and pre-engineering teacher training.
+PURPOSE (HYPOTHESIS)
+This study addresses the long term effects of pre-collegiate engineering experiences on student selfefficacy. It is hypothesized that the greater the rigor of a pre-colligate experience, the more it will contribute to a student’s self-efficacy related to engineering studies. The pre-collegiate experiences examined
+in this study include pre-engineering classes, multi-day programs, engineering hobbies, working in an
+engineering environment, extra-curricular engineering programs, and single-day field trips.
+DESIGN/METHOD
+The long term effects of pre-collegiate experiences were evaluated by comparing the self-efficacy of firstyear students who had the experiences to first-year students who did not have the experiences.
+RESULTS
+Significant differences in self-efficacy were only found between groups of students who had pre-engineering classes and engineering hobbies versus students who did not have these experiences.
+CONCLUSIONS
+Based on the findings, engineering colleges with the goal of increasing the self-efficacy of engineering students should consider focusing resources on developing K-12 technology and pre-engineering teachers.
+Additional recommendations for practice, pedagogical implications, and areas for further research are
+offered.
+KEYWORDS
+pipeline, pre-engineering, self-efficacy
+
+INTRODUCTION
+Since the Industrial Revolution, economic prosperity in the U.S. can be largely attributed to engineering endeavors (Committee on Science, Engineering, and Public Policy,
+2007). Almost every aspect of life today is a direct result of the investment in scientific research and engineering. Evidence of prosperity from this investment can be seen in the
+areas of transportation, communication, agriculture, education, health, defense, and employment opportunities (Popper & Wagner, 2002). Since the early 1900s, the U.S. has
+been considered by countries around the world to be the leader of science and engineering
+
+604
+
+100 (July 2011) 3
+
+Journal of Engineering Education
+
+activities. With only 5% of the world’s population, the U.S. has about 30% of the world’s
+scientists and engineers, accounts for 40% of the world’s research and development spending, publishes 35% of the engineering and scientific articles, and houses 17 of the world’s
+top 20 universities (Freeman, 2005).
+Over the past two decades, the world has witnessed a large growth in global competitiveness that threatens the dominance of the U.S. in science and engineering. In a paper
+provided to the National Bureau of Economic Research, Freeman (2005) gave four examples that showed how the changes in the global job market are undermining U.S. dominance in engineering and science.
+1. Of the world’s science and engineering graduates, the percentage representing the
+United States has decreased at every degree level. This is due, in part, to an unchanging number of U.S. graduates and rapidly increasing college enrollments in
+other countries.
+2. The job market for U.S. scientists and engineers has deteriorated compared to
+other high-level occupations. Additionally, rewards are large enough to attract immigrants to study in the U.S.
+3. The traditional pattern of international trade in which more advanced countries
+specialize in high tech areas and less advanced countries specialize in manufacturing is being threatened by low-income, large population countries, such as China
+and India.
+4. Without a high-tech advantage in the U.S., more jobs will be outsourced to other
+countries; research and development facilities will relocate to developing countries,
+and there will be limited growth in high-tech productions and exports. (pp. 2–3)
+A supply of engineers capable of keeping pace with the growth in technology is needed
+for the U.S. to remain economically prosperous and maintain national security. The
+changing global market requires the U.S. not only to produce enough engineers but also to
+produce the quality of engineer needed to be worldwide leaders in the industry. However, a
+shortage of U.S. trained engineers has been predicted for the near future. In 2003, The
+National Science Board warned that the competitiveness of the U.S. science and engineering workforce was in jeopardy from global competition and a shortage of scientific and engineering trained professionals. This sentiment was echoed by participants of the National
+Academy of Sciences and the National Academy of Engineering when they stated concerns about social and economic conditions in the United States rapidly declining if the nation’s ability to perform science and engineering weakens (Committee on Science, 2007).
+The Shortage Crisis
+Those concerned about a potential shortage of U.S. trained engineers identified the declining number of high school graduates pursuing engineering degrees and a growing need
+for engineering professionals as evidence (Noeth, Cruce, & Harmston, 2003). A twelve
+year comprehensive study (1991–2002) of data from over 750,000 ACT tests showed a
+steady decrease from 8.5% of high school students choosing to study engineering in 1991
+to 5.5% in 2002 (Noeth, Cruce, & Harmston, 2003). Further, less than half the freshmen
+who begin with engineering as their major will finish with an engineering degree, and at
+least half of the students who do not persist leave the program during their freshman year
+(Besterfield-Sacre, Atman, & Shuman, 1997).
+With stagnant or even decreasing numbers of high school students pursing engineering
+as a career and a high attrition rate for the students who do, the United States is certain to
+
+605
+
+Journal of Engineering Education
+
+100 (July 2011) 3
+
+have fewer U.S. citizens earning engineering degrees in the future. This is compounded by
+the increasing need for more engineers due to the rapid increases in technology and global
+issues. One method used to address the problem involves increasing the number of students choosing to study engineering. This is often referred to as increasing the flow of the
+engineering pipeline. It is most commonly accomplished by exposing more students to engineering content during their primary and secondary school years.
+Engineering Exposure
+To address the growing concern about the lack of students entering and finishing engineering programs, much effort has been made to expose students to engineering content
+during their K-12 years. The assumption is that a student exposed to engineering content
+will be more likely to pursue and succeed in engineering. There are a variety of ways students can be exposed to engineering. For the purposes of this study, both formal and informal engineering exposures were considered. In particular, formal exposures included middle school or high school courses, summer and out-of-school programs, and single-day
+field trips. Informal exposures consisted of work experiences and personal experiences with
+toys and hobbies.
+The primary difference in the formal exposures is the time students spent working with
+engineering concepts. Middle school and high school courses, such as technology education or engineering education, often have fully developed curriculum and grading rubrics.
+Summer or out-of-school engineering programs are more likely to only span a few days to
+a few weeks and therefore, do not have the time to cover the same amount of material. On
+a smaller scale, some students participate in single-day field trip activities sponsored by engineering programs. These field trips offer students minimal exposure to engineering degree programs, engineering design, and engineering careers.
+Alternatively, students may be exposed to engineering concepts through informal experiences. They may find work in engineering, technology, or construction jobs involving direct contact with engineering professionals in the field. These students are exposed to a
+real-life engineering environment. Another source of engineering exposure is through the
+use of toys or hobbies by the students. Many toys and hobbies were directly developed from
+engineering principles. Some relationships between engineering disciplines and toys/hobbies include: civil engineering and LEGO® building blocks and Lincoln Logs™, mechanical engineering and Erector Sets®, aerospace engineering and Estes Rockets® and model
+airplanes, biological engineering and microscopes, electrical engineering and electronic
+sets, and computer engineering and video game production.
+The question to be answered is: What are the long term effects of different pre-collegiate exposures in preparing students to study engineering? One way to start answering this question is
+by examining the differences between students who have had the engineering exposures
+and those who have not. One indication of the long-term effects of pre-collegiate engineering experiences is the self-efficacy of first year engineering students. Herein, selfefficacy serves as a proxy for measuring students’ preparation to study engineering as it can
+be shown that self-efficacy is positively related to student performance (Multon, Brown, &
+Lent, 1991).
+SELF-EFFICACY
+This study explored relationships between pre-collegiate experiences and self-efficacy
+for first-year engineering students. The self-efficacy of students who had the pre-collegiate
+
+606
+
+100 (July 2011) 3
+
+Journal of Engineering Education
+
+experiences was compared to students who had not had the same experiences. While
+causal inferences cannot be made based on the results, we can gain some insight into possible sources of engineering self-efficacy.
+Definition and Background of Self-Efficacy
+The concept of self-efficacy has developed on a foundation from social cognitive theory.
+The concept was first developed by Bandura (1977) in his publication “Self-Efficacy:
+Toward a Unifying Theory of Behavioral Change.” Self-efficacy can be defined as “people’s judgment of their capabilities to organize and execute courses of action required to attain designated types of performances” (Bandura, 1986, p. 391). It is an individual’s level of
+confidence in his/her ability to organize and implement actions needed to effectively perform the task at hand (Schunk, 1989). Since the introduction of self-efficacy in 1977, the
+concept has been used in a variety of fields. Some applications include analyzing self-efficacy with phobias, depression, social skills, assertiveness, smoking behavior, pain performance, and in educational research, primarily in conjunction with academic motivation
+(Pajares, 1996).
+According to Bandura (1977), efficacy perceptions are gained through four major informational sources:
+1. Personal performance and accomplishments—one’s patterns of past successes and
+failures.
+2. Vicarious learning—comparing oneself to the performance of others.
+3. Social persuasion—encouragement or discouragement one receives from others.
+4. Physiological states and reactions—pleasant or unpleasant emotional or physical
+reactions (anxiety, fatigue, happiness, etc.).
+All four sources are believed by Bandura to act simultaneously and interactively in the
+development of one’s perception of self-efficacy. The three behavioral consequences of the
+perceived self-efficacy were also described by Bandura (1977) as follows:
+1. Approach versus avoidance—what one is willing to try and what one stays away
+from.
+2. Performance—ability demonstrated on any form of assessment.
+3. Persistence—not giving up the pursuit of one’s goals.
+The development of one’s self-efficacy can be self-perpetuating. For example, an individual with high self-efficacy may perform better on assessments, which leads to an increase in perceived self-efficacy because of comparisons to how others performed on the
+same assessment and received positive consequences (Bandura, 1977, 1982).
+Link between Self-Efficacy and Success in Engineering
+The literature relating self-efficacy beliefs and achievement begins with Bandura
+(1982) who posited “In causal tests, the higher the level of induced self-efficacy, the higher
+the performance accomplishments and the lower the emotional arousal” (p. 122). In 1991,
+several studies linking self-efficacy to academic success were combined into a meta-analytic
+synthesis by Multon, Brown, and Lent. Across a wide variety of subjects, experimental designs, and assessment methods, the researchers found a statistically significant positive relationship between self-efficacy beliefs and academic performance and persistence
+(Multon et al., 1991). More specifically, when researchers looked at engineering selfefficacy among college engineering students, they found that students were significantly
+affected by their self-efficacy beliefs in their choices to pursue and persist in engineering
+(Bandura, 1977, 1997; Pajares, 1996).
+
+607
+
+Journal of Engineering Education
+
+100 (July 2011) 3
+
+There also have been studies specifically investigating the role of self-efficacy in engineering education (Ponton, Edmister, Ukeiley, & Seiner, 2001), measuring engineering
+students’ self-efficacy (Hutchinson, Follman, & Bodner, 2006; Marra, Bogue, Rodgers, &
+Shen, 2007; Towle et al., 2005), increasing students’ self-efficacy (Hutchinson, Follman,
+Sumpter, & Bodner, 2006; Ponton, 2002), and sources of students’ self-efficacy (Hutchinson et al., 2006). In the studies looking specifically at the sources of students’ self-efficacy,
+the focus has been on what factors in the engineering education programs were having an
+impact on the students. All of these studies reinforce the importance of student self-efficacy for success in engineering. What is missing from these studies is an understanding of
+which pre-collegiate experiences contribute to students’ self-efficacy.
+While the research indicates a strong relationship between self-efficacy and academic
+success, attention needs to be given to the measurement of self-efficacy. The participants
+need to relate the self-efficacy scale to the topic of interest. As stated by Pajares (1996),
+“…judgments of self-efficacy are task and domain specific, global or inappropriately defined self-efficacy assessments weaken effects” (p. 547). The students’ general self-efficacy
+may not be applicable to all areas of their studies or life. Therefore, the instrument measuring self-efficacy needs to apply directly to the engineering coursework to determine the
+students’ engineering self-efficacy.
+METHODS
+For this study, the concept of self-efficacy was used to compare pre-collegiate engineering experiences. The guiding research question for this study was as follows:
+Are some types of engineering exposure (e.g., class, field trip, summer camp, etc.)
+associated with higher self-efficacy than others?
+Population and Instrumentation
+The sample for this study was drawn from first-year engineering students enrolled at
+Colorado State University (CSU). Participants were enrolled in the departments of
+Chemical & Biological Engineering, Civil & Environmental Engineering, Electrical &
+Computer Engineering, Mechanical Engineering, or the interdepartmental Engineering
+Science program. Data were primarily collected through close-ended questions on self-administered questionnaires. The questionnaires surveyed students about their previous experiences with pre-collegiate engineering classes, extra-curricular programs, work experiences, multi-day programs focused on engineering, single-day workshops or field trips,
+engineering related toys and hobbies, and influences to study engineering. In addition to
+the close-ended questions, participants were given the opportunity to write about additional experiences or influences in their decision to study engineering.
+Pilot testing was used to determine the validity and reliability of the instrument as well
+as additional engineering experiences not covered by the instrument. To avoid using students within the population of first-year engineering students at CSU for the pilot, a junior-level engineering class (n  78) was surveyed. After pilot testing, 53 types of
+engineering experiences were identified and conceptually grouped into six categories. See
+Table 1 for the categories and experiences listed on the final instrument. While this list is
+not exhaustive, the researchers believe that it is a good representation of pre-collegiate engineering activities that students at CSU engaged in during their K-12 grade years.
+
+608
+
+100 (July 2011) 3
+
+Journal of Engineering Education
+
+TABLE 1
+Pre-Collegiate Engineering Experiences
+
+609
+
+Journal of Engineering Education
+
+100 (July 2011) 3
+
+To measure the students’ engineering self-efficacy, the Motivated Strategies for Learning Questionnaire (MSLQ) was used. The MSLQ was developed by Pintrich, Smith, Garcia, and McKeachie (1991, 1993) and improved by VanderStoep and Pintrich (2003). The
+MSLQ is described as, “a self-report instrument designed to assess college students’ motivational orientation and the use of different strategies for college courses” (Pintrich, Smith,
+Garcia, & McKeachie, 1991, p. 3). The 81 item instrument measures 15 different scales,
+which can be used by researchers as a whole or independently. Each item is a statement with
+a seven-point Likert scale used to determine the students’ agreement with the statement.
+For this study, the eight items relating to the self-efficacy scale for learning and performance
+were used. However, one item regarding assignments and tests was broken into two items,
+one for assignments and one for tests. The MSLQ self-efficacy items include statements
+such as, “I believe I will receive an excellent grade in this class,” and “I’m certain I can understand the most difficult material presented in the readings for this course.”
+When researchers determine what they wish to study, they must modify the basic selfefficacy instrument to their chosen domain (Betz, 2000). To measure the engineering selfefficacy of the students, the concept of engineering was integrated into the MSLQ. To add
+the domain of engineering to the instrument, the only modification was to replace the
+generic label of “class” with “engineering classes.”
+A single self-efficacy score was determined for each student based on the level of agreement with the nine statements. Each statement had seven levels of agreement ranging
+from Strongly Agree to Strongly Disagree. The statements were scored with a 3 for
+Strongly Agree, 2 for Agree, 1 for Somewhat Agree, 0 for Neither Agree nor Disagree, 1 for Somewhat Disagree, 2 for Disagree, and 3 for Strongly Disagree. The
+single self-efficacy score was calculated by adding the scores for each statement together.
+Table 2 lists the self-efficacy statistics for the whole sample.
+Validity
+Content validity and construct validity were tested through open-ended questions during the development and pilot study of the instrument. Students were asked about questions
+that were unclear or confusing and asked for additional questions that should be added to
+the survey to help measure influences to study engineering and self-efficacy. Construct validity was also checked through comparison to empirical research. DeVellis (2003) wrote,
+“The extent to which empirical correlations match the predicted pattern provides some evidence of how well the measure ‘behaves’ like the variable it is supposed to measure” (p. 53).
+Empirical data show students’ high school GPA should be positively correlated to the students’ first semester GPA and both high school GPA and first semester GPA should be
+positively correlated to their self-efficacy (Astin, 1971; Levin & Wyckoff, 1990; Mendez,
+Buskirk, Lohr, & Haag, 2008; Zhang, Anderson, Ohland, Carter, & Thorndyke, 2004).
+Results from the pilot test show a statistically significant correlation between high school
+GPA and current semester GPA, r  0.36, p  .003 and current semester GPA and selfefficacy, r  0.25, p  .04. While not statistically significant, there was also a positive correlation between high school GPA and self-efficacy, r  0.12, p  .32. As the results from the
+pilot survey agree with empirical research, the instrument was deemed valid.
+Reliability
+Cronbach’s  was used to measure the internal consistency of the responses for the developed instrument. For this study a value of 0.70 for Cronbach’s  was considered acceptable. As stated by Morgan, Leech, Gloeckner, and Barrett (2007), “alpha should be
+
+610
+
+100 (July 2011) 3
+
+Journal of Engineering Education
+
+TABLE 2
+Means and Percentages for Engineering Self-Efficacy Statements
+
+positive and usually greater than 0.70 in order to provide good support for internal consistency reliability” (p. 129). The pilot instrument had a Cronbach’s   0.88 for the engineering self-efficacy scale. As this instrument proved to measure those scales consistently,
+it was unaltered for the final instrument. The final instrument produced similar results
+with a Cronbach’s   0.83 for the engineering self-efficacy scale.
+The MSLQ has been shown to have both construct validity and internal consistency
+and reliability (Garcia & Pintrich, 1995). The reliability for the self-efficacy portion of the
+MSLQ instrument was determined to be strong with a measured Cronbach’s   0.93
+(VanderStoep & Pintrich, 2003). The pilot instrument containing slightly modified selfefficacy questions produced a similar result with Cronbach’s   0.90. The pilot instrument was determined to consistently measure the self-efficacy scale and remained unaltered for the final instrument. The final instrument resulted in a Cronbach’s   0.92 for
+the self-efficacy questions.
+Data Collection
+A total of 332 students participated in the study. The population for this study was the
+449 students enrolled in the first-year College of Engineering course sequence in the fall
+semester, 2008. Therefore, the response rate was about 74%.
+The majority of students were white (81%), male (81%), between the ages of 18 and 19
+(85.5%), residents of Colorado (79.5%), and not first-generation students (80.7%). The
+demographic characteristics of the sample are shown in Table 3.
+
+611
+
+Journal of Engineering Education
+
+TABLE 3
+Demographics of the Study’s Sample
+
+612
+
+100 (July 2011) 3
+
+100 (July 2011) 3
+
+Journal of Engineering Education
+DATA ANALYSIS
+
+The data were entered and analyzed using the Statistical Package for the Social Sciences (SPSS) version 17 and Microsoft Excel software. Descriptive statistics including
+means and standard deviations were performed for all demographic variables. The demographic data were compared to the known population data of first-year CSU engineering
+students to check for proportionality. It was determined that the sample’s demographic
+data was representative of the population for this study. Descriptive statistics were also
+used to find the skewness and kurtosis of the variables to determine normality of the data.
+Descriptive statistics, residual plots, and scatterplots for each variable were performed and
+visually inspected for any violations. The data were found to be within appropriate limits
+for the assumptions of the general linear model and adequate for this study.
+RESULTS
+Types of Engineering Exposure and Self-Efficacy
+To examine individual engineering exposures, participants were sorted into two groups
+of “did not experience” and “experienced” for the 53 types of engineering exposures. An independent samples t-test was performed for each type of engineering exposure to compare
+the self-efficacy scores of those who experienced exposure versus those who had not experienced the exposure. Out of the 53 types of engineering exposure, seven had statistically
+significant differences in self-efficacy scores. Those seven are ranked from largest mean
+difference to smallest mean difference and are shown in Table 4. In addition, effect sizes
+were calculated using Cohen’s d for each type of exposure. Effect sizes provide a standardized method of comparing results to determine the strength of relationship between variables (Field, 2005). An effect size of 0 means there was no effect from the engineering exposure and an effect size of 0.8 corresponds to a large effect from the exposure (Morgan,
+Leech, Gloeckner & Barrett, 2007). Cohen’s d was calculated by finding the difference between the means of the two groups and dividing by the pooled standard deviation.
+When examining the importance of the results, both effect size and statistical significance should be considered. While some engineering experiences showed large effect sizes,
+the number of participants was too small to achieve statistical significance. Therefore, the
+complete list of exposures in order from highest to lowest mean self-efficacy difference between the two groups is shown in Appendix A.
+Of the seven statistically significant engineering experiences, five were pre-collegiate
+hobbies, numbers 1, 2, 4, 6, and 7 in Table 4. The greatest difference in self-efficacy scores
+occurred between students who identified programming as a hobby and those who did not
+(mean difference  2.88, t  2.88, p  .01). The effect size d is approximately 0.46, which
+is a medium effect. The next largest difference was between students who did and did not
+have electronics as a hobby (mean difference  2.25, t  2.63, p  .01, d  0.35). The
+other hobbies that were significantly different were producing video games (mean difference  2.17, t  2.08, p  .04, d  0.33), robotics (mean difference  1.66, t  2.12,
+p .04, d  0.26), and model rockets (mean difference  1.64, t  2.22, p  .03, d 
+0.24). The two engineering exposures that were not related to hobbies were both pre-engineering classes. In particular, they were technology classes (mean difference  2.18, t 
+3.03, p  .01, d  0.33) and engineering classes (mean difference  2.10, t  1.97, p 
+.05, d  0.33). No engineering exposures from multi-day engineering programs, working
+
+613
+
+Journal of Engineering Education
+
+100 (July 2011) 3
+
+TABLE 4
+Engineering Self-Efficacy
+
+in engineering environments, school related extra-curricular engineering programs, or single-day workshops/field trips that focused on engineering were associated with significant
+differences in self-efficacy scores between those who experienced the exposure and those
+who did not.
+The types of engineering exposure that were associated with significant differences in
+engineering self-efficacy were hobbies and formal classes with structured curriculum, usually designed around national standards. In particular, the hobbies of programming, electronics, producing video games, robotics, and model rockets had statistically significant
+differences between students who had the hobby and the students who did not. The formal classes that were associated with statistically significant differences were technology
+and engineering classes.
+
+614
+
+100 (July 2011) 3
+
+Journal of Engineering Education
+DISCUSSION/CONCLUSION
+
+In general, the results suggest that more exposure to engineering content during the K12 years is associated with a higher self-efficacy in engineering. While this has been
+demonstrated in previous studies, this study provides some insight into the types of exposure that are most related to higher self-efficacy in future engineering students.
+The formal experiences that produced the greatest differences in self-efficacy between
+the students who had the experience versus those who did not were semester-long classes
+at the high-school or middle-school level. In particular, students who participated in technology education classes and pre-engineering classes had significantly higher self-efficacy
+scores. Higher self-efficacy scores lead to better performance and persistence in engineering (Bandura 1977, 1997; Pajares, 1996). This result would suggest that participation in
+technology and pre-engineering classes should lead to higher student self-efficacy and
+therefore lower the attrition levels in engineering schools and increase the performance of
+students choosing to major in engineering.
+In regard to informal experiences, significant differences in self-efficacy were found between students who had engineering-related hobbies and the students who did not. In particular, students who had the hobbies of programming, electronics, producing video
+games, robotics, and model rockets all had statistically significant higher self-efficacy
+scores. Some common attributes among these hobbies include the following:
+• Self-motivation
+• Use of problem-solving strategies
+• Hands-on application of complex subject matter
+• Use of computer applications (with the exception of model rockets)
+• Immediate feedback on success of effort
+Even as some individual formal programs showed large differences in mean self-efficacy scores, they did not achieve statistical significance. This may be attributed to the small
+number of students reporting to have been exposed to those programs or experiences. The
+nature of the statistical analysis allows for an inverse relationship between the sample size
+and the size of the coefficient needed for statistical significance (Morgan, Gliner, & Harmon, 2006). A large sample size can easily lead to trivial statistical significant results and a
+small sample size may not provide statistical significance where important results exist. For
+example, the Science Olympiad (mean difference  2.3, n  25, p  .10) showed substantial mean differences, but did not have statistical significance due to the low statistical
+power. However, the moderate effect sizes and potentially meaningful result suggests that
+further studies with larger sample sizes should be used to determine the program’s association with higher self-efficacy.
+While it must be noted that time on task is a critical factor in learning and development
+of self-efficacy, the results from this study do not imply that time on task is the only factor
+involved. For example, working in an engineering related environment provides more contact hours than a middle school or high school pre-engineering class, but higher self-efficacy correlations were only found for the latter. Another category with high levels of time on
+task is the extra-curricular school programs. Many of these programs meet for hours outside of the school day for a semester, school year, or longer. No differences in self-efficacy
+were found between students who participated in those programs and those who did not.
+While time on task should be considered when evaluating the results of this study, it
+should used as a lens for interpreting the results instead of an explanation.
+
+615
+
+Journal of Engineering Education
+
+100 (July 2011) 3
+
+RECOMMENDATIONS FOR PRACTICE
+This study was concerned with the association between types of engineering exposure
+(e.g., class, field trip, summer camp, etc.) and engineering self-efficacy. It is intended to be
+the first step in evaluating the ability of K-12 outreach programs to prepare students to
+study engineering in college. The results revealed that there was not a significant difference
+in self-efficacy scores between the students who participated in most engineering outreach
+experiences and those who did not. In other words, students who experienced the outreach
+programs did not have a significantly higher self-efficacy than those who did not. The only
+formal programs that produced significant differences in student self-efficacy were the
+technology and pre-engineering classes. If it is true that participating in these classes can
+increase a student’s self-efficacy, engineering colleges interested in increasing the level of
+preparation of students in the engineering pipeline may benefit from being involved in formal K-12 technology and pre-engineering programs.
+The results from this study regarding the correlation between the informal experiences
+of engineering hobbies and self-efficacy could hint about how to teach engineering concepts. From a pedagogical perspective, pre-engineering programs could benefit from using
+the same principles as students experience with their personal hobbies. The results indicate
+that personal hobbies are associated with an increased self-efficacy and therefore, lead to
+higher performance and increased persistence for students studying engineering in college.
+These hobbies share the elements of hands-on experiences, self-motivated learning, reallife application, immediate feedback, and problem-based projects. The same principles
+should be utilized by outreach programs when delivering content or in the general pedagogy of the program. For example, outreach programs using computer programming, electronics, and robotics with student-based exploration would provide learning opportunities
+that are similar to what the students experience with their hobbies and may result in higher
+student engineering self-efficacy.
+The conclusions here also suggest that outreach programs focused on preparing students to study engineering in college should be academically rigorous. This study determined that those students who participated in technology classes and pre-engineering
+classes were more likely to have a higher engineering self-efficacy than those students who
+did not. Since they are part of a graded curriculum, technology and pre-engineering classes
+are inherently more rigorous than most outreach programs. They are more likely to use
+mathematical and engineering analysis to solve problems and design solutions. College engineering programs require high levels of mathematical and engineering analysis to solve
+problems. Therefore, outreach programs intended to prepare students to study engineering
+should have grade appropriate levels of academic rigor. For example, a high school summer
+camp should incorporate algebra and trigonometry usage as part of the experience. Handson experiences without an analytical component give students a false sense of collegiate engineering programs.
+Another area of potential exploration for the engineering community involves designing methods to identify individuals with a pre-disposition toward engineering. The hobbies identified as possible sources for increasing self-efficacy in this study are self-selected
+and require the use of computer programming and electronics. If the engineering community is looking for students who are pre-disposed to study engineering, they may want to
+look at informal activities that are easily accessible. Examples of easily accessible activities
+include robotics clubs, gaming groups, and other community organizations directly involved with hobbies involving high-levels of engineering principles.
+
+616
+
+100 (July 2011) 3
+
+Journal of Engineering Education
+
+Exposing K-12 students to engineering concepts and principles may lead to an increase
+in the flow of the engineering pipeline. K-12 engineering education is a developing discipline with a need for additional research to guide what students experience and how they
+experience it. The results from this study point to pre-engineering and technology courses
+and the personal hobbies of students as possible sources for increasing the self-efficacy of
+engineering students in U.S. colleges. If this self-efficacy is developed during the K-12
+years, it might contribute to more students choosing to study engineering, hence avoiding
+a future shortage of U.S. trained engineers.
+REFERENCES
+Astin, A. W. (1971). Predicting academic performance in college. New York, NY: Free Press.
+Bandura, A. (1977). Self-efficacy: Toward a unifying theory of behavioral change. Phychological
+Review 84(2), 191–215.
+Bandura, A. (1982). Self-efficacy mechanism in human agency. American Psychologist 37(2),
+122–147.
+Bandura, A. (1997). Self-efficacy: The exercise of control. New York, NY: W. H. Freeman.
+Besterfield-Sacre, M., Atman, C. J., & Shuman, L. J. (1997). Characteristics of freshman engineering students: Models for determining student attrition in engineering. Journal of Engineering Education 86(2), 139–149.
+Committee on Science, Engineering, and Public Policy. (2007). Rising above the gathering
+storm: Energizing and employing America for a brighter economic future. Washington, DC: The
+National Academies Press.
+DeVellis, R. F. (2003). Scale development: Theory and applications. Thousand Oaks, CA: Sage
+Publications, Inc.
+Field, A. (2005). Discovering statistics: Using SPSS. Second edition. Thousand Oaks, CA:
+SAGE Publications.
+Freeman, R. B. (2005). Does globalization of the scientific/engineering workforce threaten U.S. economic leadership? Cambridge, MA: National Bureau of Economic Research.
+French, B. F., Immekus, J. C., & Oakes, W. C. (2005). An examination of indicators of engineering students’ success and persistence. Journal of Engineering Education 94(4), 419–425.
+Garcia, T., & Pintrich, P. R. (1995). Assessing students’ motivation and learning strategies: The
+motivated strategies for learning questionnaire. Document No: Ed 383770. Retrieved from
+http://www.eric.ed.gov/PDFS/ED383770.pdf
+Hutchinson, M., Follman, D., & Bodner, G. (2005). Shaping the self-efficacy beliefs of firstyear engineering students: What is the role we play? Proceedings of the American Society for
+Engineering Education (ASEE) Annual Conference and Exposition, Portland, OR.
+Hutchinson, M., Follman, D., & Bodner, G. (2006). Self-efficacy beliefs of first-year engineering students: In their own words. Proceedings of the American Society for Engineering Education
+Conference, Chicago, IL.
+Hutchinson, M., Follman, D., Sumpter, M., & Bodner, G. (2006). Factors influencing the
+self-efficacy beliefs of first year engineering students. Journal of Engineering Education 95(1),
+39–47.
+
+617
+
+Journal of Engineering Education
+
+100 (July 2011) 3
+
+Levin, J., & Wyckoff, J. (1990). Identification of student characteristics that predict persistence and
+success in an engineering college at the end of the sophomore year: Informing the practice of academic
+advising. Division of Undergraduate Studies Report No. 1990.1: University Park, Pennsylvania State University.
+Marra, R., Bogue, B., Rodgers, K., & Shen, D. (2007). Self-efficacy of women engineering students? Three years of data at U.S. institutions. Proceedings of the 2007 ASEE Annual Conference and Exposition, Honolulu, HI.
+Mendez, G., Buskirk, T. D., Lohr, S., & Haag, S. (2008). Factors associated with persistence in
+science and engineering majors: An exploratory study using classification trees and random
+forests. Journal of Engineering Education 97(1), 57–70.
+Morgan, G. A., Gliner, J. A., & Harmon, R. J. (2006). Understanding and evaluating research
+in applied and clinical settings. Mahwah, NJ: Lawrence Erlbaum Associates.
+Morgan, G. A., Leech, N. L., Gloeckner, G. W., & Barrett, K. C. (2007). SPSS for introductory statistics: Use and interpretation. Third edition. Mahwah, NJ: Lawrence Erlbaum
+Associates.
+Multon, K., Brown, S., & Lent, R. (1991). Relation of self-efficacy beliefs to academic outcomes: A meta-analytic investigation. Journal of Counseling Psychology 38(1), 30–38.
+National Science Board. (2003, September). The science and engineering workforce realizing America’s potential. Retrieved from http://www.nsf.gov/nsb/documents/2003/nsb0369/
+nsb0369.pdf
+Noeth, R. J., Cruce, T., & Harmston, M. T. (2003). Maintaining a strong engineering workforce:
+ACT policy report. Iowa City, IA: ACT.
+Pajares, F. (1996). Self-efficacy beliefs in academic settings. Review of Educational Research
+66(4), 543–578.
+Pintrich, P. K., Smith, D. A., Garcia, T., & McKeachie, W. J. (1991). A manual for the use of the
+Motivated Strategies for Learning Questionnaire. Ann Arbor, MI: National Center for Research to Improve Postsecondary Teaching and Learning.
+Pintrich, P. R., Smith, D. A., Garcia, T., & McKeachie, W. J. (1993). Reliability and predictive
+validity of the motivated strategies for learning questionnaire (MSLQ). Educational and Psychological Measurement 53(3), 801–813.
+Ponton, M. (2002). Motivating students by building self-efficacy. Journal of Professional Issues in
+Engineering Education and Practice 128(2), 54–57.
+Ponton, M., Edmister, J., Ukeiley, L., & Seiner, J. (2001). Understanding the role of self-efficacy in engineering education. Journal of Engineering Education 90(2), 247–251.
+Popper, S. W., & Wagner, C. S. (2002). New foundations for growth: The U.S. innovative system
+today and tomorrow. Santa Monica, CA: Rand Corporation.
+Purzer, S., Baker, D., Roberts, C., & Krause, S. (2008). Development of a team interaction observation protocol and a self-efficacy survey using social cognative theory as a framework.
+Proceedings of the ASEE Annual Conference and Exposition, Pittsburgh, PA.
+Schunk, D. (1989). Self-efficacy and cognitive skill learning. In C. Ames, & R. Ames (Eds.),
+Research on motivation in education: Vol 3. Goals and cognitions (pp. 13–44). San Diego, CA:
+Academic Press.
+
+618
+
+100 (July 2011) 3
+
+Journal of Engineering Education
+
+Sumpter, M., Follman, D. & Hutchinson, M. (2006). What affects student self-efficacy in an
+honors first-year engineering course? Proceedings of the ASEE Annual Conference and Exposition, Chicago, IL.
+Towle, E., Mann, J., Kinsey, B., O’Brien, E., Bauer, C., & Champoux, R. (2005). Assessing
+the self efficacy and spatial ability of engineering students from multiple disciplines
+(pp. S2C-15-S2C-20). Proceedings from ASEE/IEEE Frontiers in Education Conference,
+Indianapolis, IN.
+VanderStoep, S. W., & Pintrich, P. R. (2003). Learning to learn: The skill and will of college
+success. Upper Saddle River, NJ: Prentice Hall.
+Zhang, G., Anderson, T., Ohland, M., Carter, R., & Thorndyke, B. (2004). Identifying factors
+influencing engineering student graduation and retention: A longitudinal and cross-institutional study. Journal of Engineering Education 93(4), 313–320.
+
+AUTHORS
+Todd D. Fantz is an assistant professor of Technology Education, Old Dominion University, 268 Education Building, Norfolk, VA 23529; tfantz@odu.edu.
+Thomas J. Siller is associate dean and associate professor of Civil and Environmental
+Engineering, Colorado State University, Engineering 102, Fort Collins, CO 80523;
+thomas.siller@colostate.edu.
+Michael A. De Miranda is a professor of Engineering Education, Colorado State University, Education 105H, Fort Collins, CO 80523; mdemira@engr.colostate.edu.
+
+619
+
+Journal of Engineering Education
+Appendix A.
+Engineering Self-Efficacy Results
+
+620
+
+100 (July 2011) 3
+
+100 (July 2011) 3
+
+Journal of Engineering Education
+
+Appendix A.
+Continued
+
+621
+
+Journal of Engineering Education
+
+Appendix A.
+Continued
+
+622
+
+100 (July 2011) 3
+
+100 (July 2011) 3
+
+Journal of Engineering Education
+
+Appendix A.
+Continued
+
+623
+
+

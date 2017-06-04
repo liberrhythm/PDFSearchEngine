@@ -1,0 +1,136 @@
+\hypertarget{classAvlTree}{}\section{Avl\+Tree$<$ T $>$ Class Template Reference}
+\label{classAvlTree}\index{Avl\+Tree$<$ T $>$@{Avl\+Tree$<$ T $>$}}
+
+
+{\ttfamily \#include $<$avltree.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAvlTree_a9c433f951e9ac8adf2e5efc623c5dab1}{Avl\+Tree} ()
+\item 
+\hyperlink{classAvlTree_a12fd9519b87e0ab2a36533bdaeebe400}{Avl\+Tree} (T)
+\item 
+\hyperlink{classAvlTree_a10dfdf3b57e19b6efd924c75487401a6}{Avl\+Tree} (\hyperlink{classAvlTree}{Avl\+Tree} \&rhs)
+\item 
+\hyperlink{classAvlTree_aaa39ec526cf6755aea4fa6c7f4535fb8}{$\sim$\+Avl\+Tree} ()
+\item 
+\hyperlink{classAvlTree}{Avl\+Tree}$<$ T $>$ \& \hyperlink{classAvlTree_af4f30735dc504fc098161ba51f8774e0}{operator=} (\hyperlink{classAvlTree}{Avl\+Tree}$<$ T $>$ \&)
+\item 
+void \hyperlink{classAvlTree_a1a8cce4ba7b2752e11a4664c0854fc36}{clean} ()
+\item 
+void \hyperlink{classAvlTree_a463a2d4f0e55e1a7a2934c8254d92d9e}{insert} (T)
+\item 
+void \hyperlink{classAvlTree_a517bcdf90107a92fc37ea1cae4b88d7c}{print\+In\+Order} ()
+\item 
+bool \hyperlink{classAvlTree_a79f68d748e25b4f410f3d9e37c04ec74}{is\+Empty} ()
+\item 
+bool \hyperlink{classAvlTree_a73313a55466ff14a718bcc49b6a72a47}{contains} (T)
+\item 
+T \& \hyperlink{classAvlTree_a6634bf175be821be1a7929869eab544d}{find} (T)
+\item 
+void \hyperlink{classAvlTree_a274042708843e9ec80848946085da0de}{output\+In\+Order} (ostream \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\\*
+class Avl\+Tree$<$ T $>$}
+
+avl tree is a container class that is a binary search tree that balances itself 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Avl\+Tree@{Avl\+Tree}!Avl\+Tree@{Avl\+Tree}}
+\index{Avl\+Tree@{Avl\+Tree}!Avl\+Tree@{Avl\+Tree}}
+\subsubsection[{\texorpdfstring{Avl\+Tree()}{AvlTree()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Avl\+Tree}$<$ T $>$\+::{\bf Avl\+Tree} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAvlTree_a9c433f951e9ac8adf2e5efc623c5dab1}{}\label{classAvlTree_a9c433f951e9ac8adf2e5efc623c5dab1}
+Defult Constructor \index{Avl\+Tree@{Avl\+Tree}!Avl\+Tree@{Avl\+Tree}}
+\index{Avl\+Tree@{Avl\+Tree}!Avl\+Tree@{Avl\+Tree}}
+\subsubsection[{\texorpdfstring{Avl\+Tree(\+T)}{AvlTree(T)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Avl\+Tree}$<$ T $>$\+::{\bf Avl\+Tree} (
+\begin{DoxyParamCaption}
+\item[{T}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{classAvlTree_a12fd9519b87e0ab2a36533bdaeebe400}{}\label{classAvlTree_a12fd9519b87e0ab2a36533bdaeebe400}
+head constructor for elements a tree starting with one element \index{Avl\+Tree@{Avl\+Tree}!Avl\+Tree@{Avl\+Tree}}
+\index{Avl\+Tree@{Avl\+Tree}!Avl\+Tree@{Avl\+Tree}}
+\subsubsection[{\texorpdfstring{Avl\+Tree(\+Avl\+Tree \&rhs)}{AvlTree(AvlTree &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Avl\+Tree}$<$ T $>$\+::{\bf Avl\+Tree} (
+\begin{DoxyParamCaption}
+\item[{{\bf Avl\+Tree}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{classAvlTree_a10dfdf3b57e19b6efd924c75487401a6}{}\label{classAvlTree_a10dfdf3b57e19b6efd924c75487401a6}
+Copy constructor takes in another tree and assignes all of the elements of the rhs to the current tree if the right hand tree is not a null pointer
+
+the current elements of the tree are cleaned and then the root of the rhs tree is copied\index{Avl\+Tree@{Avl\+Tree}!````~Avl\+Tree@{$\sim$\+Avl\+Tree}}
+\index{````~Avl\+Tree@{$\sim$\+Avl\+Tree}!Avl\+Tree@{Avl\+Tree}}
+\subsubsection[{\texorpdfstring{$\sim$\+Avl\+Tree()}{~AvlTree()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Avl\+Tree}$<$ T $>$\+::$\sim${\bf Avl\+Tree} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAvlTree_aaa39ec526cf6755aea4fa6c7f4535fb8}{}\label{classAvlTree_aaa39ec526cf6755aea4fa6c7f4535fb8}
+Destractor (rule of three) 
+
+\subsection{Member Function Documentation}
+\index{Avl\+Tree@{Avl\+Tree}!clean@{clean}}
+\index{clean@{clean}!Avl\+Tree@{Avl\+Tree}}
+\subsubsection[{\texorpdfstring{clean()}{clean()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf Avl\+Tree}$<$ T $>$\+::clean (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAvlTree_a1a8cce4ba7b2752e11a4664c0854fc36}{}\label{classAvlTree_a1a8cce4ba7b2752e11a4664c0854fc36}
+public clean method \index{Avl\+Tree@{Avl\+Tree}!contains@{contains}}
+\index{contains@{contains}!Avl\+Tree@{Avl\+Tree}}
+\subsubsection[{\texorpdfstring{contains(\+T)}{contains(T)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf Avl\+Tree}$<$ T $>$\+::contains (
+\begin{DoxyParamCaption}
+\item[{T}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{classAvlTree_a73313a55466ff14a718bcc49b6a72a47}{}\label{classAvlTree_a73313a55466ff14a718bcc49b6a72a47}
+public contains function \index{Avl\+Tree@{Avl\+Tree}!find@{find}}
+\index{find@{find}!Avl\+Tree@{Avl\+Tree}}
+\subsubsection[{\texorpdfstring{find(\+T)}{find(T)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T \& {\bf Avl\+Tree}$<$ T $>$\+::find (
+\begin{DoxyParamCaption}
+\item[{T}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{classAvlTree_a6634bf175be821be1a7929869eab544d}{}\label{classAvlTree_a6634bf175be821be1a7929869eab544d}
+public find function \index{Avl\+Tree@{Avl\+Tree}!insert@{insert}}
+\index{insert@{insert}!Avl\+Tree@{Avl\+Tree}}
+\subsubsection[{\texorpdfstring{insert(\+T)}{insert(T)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf Avl\+Tree}$<$ T $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{T}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{classAvlTree_a463a2d4f0e55e1a7a2934c8254d92d9e}{}\label{classAvlTree_a463a2d4f0e55e1a7a2934c8254d92d9e}
+public insert function \index{Avl\+Tree@{Avl\+Tree}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Avl\+Tree@{Avl\+Tree}}
+\subsubsection[{\texorpdfstring{is\+Empty()}{isEmpty()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf Avl\+Tree}$<$ T $>$\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAvlTree_a79f68d748e25b4f410f3d9e37c04ec74}{}\label{classAvlTree_a79f68d748e25b4f410f3d9e37c04ec74}
+is empty method checks is the root is pointing to something to rerurn a boolean \index{Avl\+Tree@{Avl\+Tree}!operator=@{operator=}}
+\index{operator=@{operator=}!Avl\+Tree@{Avl\+Tree}}
+\subsubsection[{\texorpdfstring{operator=(\+Avl\+Tree$<$ T $>$ \&)}{operator=(AvlTree< T > &)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Avl\+Tree}$<$ T $>$ \& {\bf Avl\+Tree}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Avl\+Tree}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{classAvlTree_af4f30735dc504fc098161ba51f8774e0}{}\label{classAvlTree_af4f30735dc504fc098161ba51f8774e0}
+overloaded assignment operatior, used to handel deep copy, same as copy constructor \index{Avl\+Tree@{Avl\+Tree}!output\+In\+Order@{output\+In\+Order}}
+\index{output\+In\+Order@{output\+In\+Order}!Avl\+Tree@{Avl\+Tree}}
+\subsubsection[{\texorpdfstring{output\+In\+Order(ostream \&)}{outputInOrder(ostream &)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf Avl\+Tree}$<$ T $>$\+::output\+In\+Order (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{output}
+\end{DoxyParamCaption}
+)}\hypertarget{classAvlTree_a274042708843e9ec80848946085da0de}{}\label{classAvlTree_a274042708843e9ec80848946085da0de}
+print method to output data inside a tree to a ostream \index{Avl\+Tree@{Avl\+Tree}!print\+In\+Order@{print\+In\+Order}}
+\index{print\+In\+Order@{print\+In\+Order}!Avl\+Tree@{Avl\+Tree}}
+\subsubsection[{\texorpdfstring{print\+In\+Order()}{printInOrder()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ void {\bf Avl\+Tree}$<$ T $>$\+::print\+In\+Order (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAvlTree_a517bcdf90107a92fc37ea1cae4b88d7c}{}\label{classAvlTree_a517bcdf90107a92fc37ea1cae4b88d7c}
+public print function 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+avltree.\+h\end{DoxyCompactItemize}

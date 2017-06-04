@@ -1,0 +1,741 @@
+World Academy of Science, Engineering and Technology 16 2008
+
+Creative Thinking Skill Approach
+Through Problem-Based Learning: Pedagogy
+and Practice in the Engineering Classroom
+Halizah Awang, and Ishak Ramly
+
+curricular activities [3]-[4]. Teachers are encouraged to use
+methodologies to promote creative thinking and students are
+encouraged to be innovative and come up with creative
+products. Students can be encouraged to participate in this
+process by enabling them to become aware of the ways in
+which they think, learn and problem-solve. The way of
+thinking will also attempts to involve students in the teachinglearning process through evaluations of what is taking place
+during learning and can provide a window into the student’s
+thinking processes.
+
+Abstract—Problem-based learning (PBL) is one of the student
+centered approaches and has been considered by a number of higher
+educational institutions in many parts of the world as a method of
+delivery. This paper presents a creative thinking approach for
+implementing Problem-based Learning in Mechanics of Structure
+within a Malaysian Polytechnics environment. In the learning
+process, students learn how to analyze the problem given among the
+students and sharing classroom knowledge into practice. Further,
+through this course’s emphasis on problem-based learning, students
+acquire creative thinking skills and professional skills as they tackle
+complex, interdisciplinary and real-situation problems. Once the
+creative ideas are generated, there are useful additional techniques
+for tender ideas that will grow into a productive concept or solution.
+The combination of creative skills and technical abilities will enable
+the students to be ready to “hit-the-ground-running” and produce in
+industry when they graduate.
+
+II. PROBLEM-BASED LEARNING
+Problem-based learning (PBL) is one of the student
+centered approaches and has been considered by a number of
+higher educational institutions in many parts of the world as a
+method of delivery. PBL is a total pedagogical approach to
+education that focuses on helping students develop selfdirected learning skills. It derives from the theory that
+learning is a process in which the learner actively constructs
+new knowledge on the basis of current knowledge. PBL
+provides students with the opportunity to gain theory and
+content knowledge and comprehension. PBL helps students
+develop advanced cognitive abilities such as creative thinking,
+problem solving and communication skills [2]-[4].
+Through Problem-based learning (PBL), students use
+“triggers” from the problem case or scenario to define their
+own learning objectives. Subsequently they do independent,
+self directed learning before returning to the group to discuss
+and refine their acquired knowledge. Thus, PBL is not only
+about problem solving, but rather it uses appropriate problems
+to increase knowledge and understanding.
+Group learning facilitates not only the acquisition of
+knowledge but also several other desirable attributes such as
+communication skills, teamwork, problem solving,
+independent responsibility for learning, sharing information
+and respect for others. PBL can therefore be thought of as a
+small group teaching method that combines the acquisition of
+knowledge with the development of generic skills and
+attitudes. Presentation of technical material as the stimulus for
+learning enables students to understand the relevance of
+underlying scientific knowledge and principles in technical
+practice.
+However, when PBL is introduced into a curriculum,
+
+Keywords—Creative Thinking Skills, Problem-based Learning,
+Problem Solving.
+I. INTRODUCTION
+
+S
+
+OCIETY nowadays becomes complicated and dynamic.
+In order to suit society’s needs, it is undesirable for
+universities and colleges to produce graduates who can only
+work within the restricted framework of solving textbook
+problems. People are expected to accommodate variations in
+the demands of everyday tasks [1]. Thus, universities or
+colleges should also modify their education system to match
+the requirements of industry and commerce. Curriculum
+should be reformed to create classroom in which students are
+challenged to think creatively about subjects by discovering,
+understanding, analyzing and applying knowledge in new
+situations [2].
+In Malaysia, efforts are being made to foster creative
+thinking and problem solving through curricular and coThis study was supported by the Ministry of Higher Education, Malaysia,
+Polytechnic of Malaysia, Universiti Sains Malaysia and Universiti Tun
+Hussein Onn Malaysia.
+Halizah Awang is with the Faculty of Technical Education, Universiti
+Teknologi Tun Hussein Onn, Malaysia, 86400 Parit Raja, Batu Pahat, Johor,
+Malaysia (phone: 605-7174762; fax: 605-7174762; e-mail: halizah@
+uthm.edu.my).
+Ishak Ramly is with the School of Education, Universiti Sains Malaysia,
+11800, Penang, Malaysia (phone: 604-65333235; fax: 604-6572907; e-mail:
+rishak@usm.my).
+
+635
+
+World Academy of Science, Engineering and Technology 16 2008
+
+III. PROBLEM SOLVING
+
+several other issues for curriculum design and implementation
+need to be tackled. PBL is generally introduced in the context
+of a define core curriculum and integration of basic and
+sciences. It has implications for staffing and learning
+resources and demands a different approach to timetabling,
+workload and assessment.
+Recently, modified PBL
+techniques have been introduced into technical education with
+real problem being used as the stimulus for learning.
+
+Teaching students to provide, as fast as possible, the one
+correct answer to a problem, does not contribute towards
+fostering students problem-solving abilities. If the emphasis is
+on the correct solution, the student’s originality and creativity
+can be stifled [6]. In the learning process, students learn how
+to analyze the problem given among the students and sharing
+classroom knowledge into practice. Further, through this
+course’s emphasis on problem-based learning, students
+acquire creative thinking skills and professional skills as they
+tackle complex, interdisciplinary and real-situation problems.
+There’s nothing as theoretically interesting as good
+practice. This is particularly true of efforts to relate
+constructivism and creative thinking as a theory of learning to
+the practice of instruction and for helping students become
+more effective problem solvers. Problem solving is often seen
+as an experimental study requiring first-hand student
+participation and gathering evidence that permits a question
+posed to be answered. There is the need for students to think
+creatively forwarding hypotheses, point out ways of solving
+the problem and carry out a careful analysis of the results.
+
+Ideas, prior knowledge, learning issues
+
+Identify Problem
+
+Self-directed
+Learning
+
+No
+Group Discussion
+Yes
+No
+Problem
+Solving/Decision
+
+IV. CREATIVE THINKING SKILLS
+Yes
+
+At the simplest level “creative” means bringing into being
+something that was not there before and has been brought into
+being. The word “creativity” covers a wide range of different
+skills. Creative skills needed to change concepts and
+perceptions.
+In most descriptions of problem solving, there is usually a
+step called “search for alternatives”. This implies that
+creativity is needed in this step. Creativity is poorly
+understood and difficult to teach but there are positive
+techniques that everyone can learn. Edward de Bono notes
+creative techniques such as focus, challenge, alternatives,
+concepts etc [7]. Creative thinking should take its place
+alongside our other methods of handling information. A
+person sitting down with the deliberate intention of generating
+an idea in a certain area and then proceeding to use a creative
+thinking technique systematically should represent a normal
+state of affairs.
+Creative thinking will make students move “sideways” to
+try different perceptions, different concepts, different points of
+entry.
+Students can use various methods including
+provocations to solve the problems. Creative thinking has
+very much to do with perception to put forward different
+views. The different views are not derived each from the
+other but are independently produced. In this sense, creative
+thinking has to do with exploration just as perception has to
+do with exploration.
+What causes creativity in the individual? Can the creative
+process be identified? A widely used of creativity tests is
+Torrance Tests of Creative Thinking (TTCT)[9]-[10]. Three
+creative abilities measured by these tests are originality,
+fluency and flexibility. These abilities are defined as;
+originality: the ability to produce uncommon or unique
+
+Presentation
+
+Assessment
+
+Debrief the Problem
+(Students Interaction,
+Applying Generic Skills)
+
+Final Solution
+
+Fig. 1 Flowchart of Problem Solving Process in PBL
+
+Fig. 1 shows the flowchart of problem solving process in
+Problem-based Learning approach. PBL exercises typically
+proceed through four phases – problem presentation, problem
+investigation, problem solution and process evaluation. The
+problem would be a real-world situation, complex and openended that will challenge higher-order thinking, creativity and
+synthesis of knowledge [5]. Problem-Based Learning helps
+students develop creative thinking skills such as cooperative
+and interdisciplinary problem solving. Students learn to work
+both independently and collaboratively. Even though students
+engage in self-directed learning through PBL, they regularly
+convene to share, evaluate and critique each other’s work
+during the group meeting. They deal with multiple and often
+conflicting goals and values, work with constraints and
+determine the most appropriate action to take.
+
+636
+
+World Academy of Science, Engineering and Technology 16 2008
+
+group that has the concern or problem will organize its own
+deliberate creative thinking session to tackle the problem.
+
+responses; fluency: ability to produce a large number of ideas;
+flexibility: the ability to produce a variety of ideational themes
+or categories.
+Originality in the technical context is the ability to find new
+ways to adapt existing ideas to new conditions. The habit of
+always asking questions about a situation will make student
+creative in thinking. They are always asking questions such
+as: “Why do we do this?” How can we improve this design?”
+Is this really safe for the building?” Originality is nurtured
+when students are willing to challenge the obvious.
+Idea fluency is the ability to generate a large number of
+ideas from which to choose. Research has indicated that the
+more ideas one has the greater is the likelihood of finding a
+usable solution. Delaying evaluation of the ideas during the
+process of generating ideas can facilitate idea fluency.
+Students can make notes, records their observations and
+opinions of problems in a way to assist in the process of idea
+fluency. A different way for developing idea fluency is to use
+special times or locations in which students tend to make a
+discussion in creative way.
+Flexibility is the ability to consider a wide variety of rather
+dissimilar approaches to a solution. To be flexible, students
+need to be aware of mental blocks that can lock them into a
+fixed way of doing a particular thing in a specific manner.
+In their work habits, the creative students were more
+flexible and more willing to shift approaches when faced with
+a complex problem [4]. They tend to spend more time in the
+initial steps of problem identification and desired greater
+variety of potential solutions in the solution finding stage.
+Edward De Bono identified that there are two broad and
+distinguishable uses of creativity. One of these is “everyday”
+creativity in which creativity becomes part of normal thinking
+and can therefore be applied to any situations that require
+thinking [7]. This should happen without any formal or
+deliberate effort. Then there is specific creativity where a
+definite need has been defined. In this case there is a formal
+and deliberate effort to use the systematic techniques of
+creative thinking to generate new ideas. There are three
+aspects to for creativity:
+1.
+2.
+3.
+
+Evaluation and Implementation
+The group that has the creative focus may also be involved
+in evaluating the ideas that come out of the deliberate creative
+thinking. In such cases the process is continuous. If the
+“thinking” group is different from the “implementation”
+group, attention has to be paid to the transfer of ideas so that
+those expected to act on the idea are brought in at an early
+enough stage to feel some ownership in the new ideas.
+Learning with creative thinking is important to be creative
+at each stage of discussion. The definition of thinking task
+needs to be creative. The structure for applying thinking
+process needs to be creative. The output of thinking effort
+needs to be creative.
+Finally, the evaluation and
+implementation needs to be creative.
+Creative thinking needs a framework of application;
+otherwise, students are not going to find themselves in a
+position where they are expected to generate new ideas. No
+matter how good the techniques may be, if they are not used,
+they will not achieve much.
+V. METHOD AND IMPLEMENTATION
+A quasi-experimental pretest-posttest was used in the study.
+The population for this study consisted 60 students of
+Diploma in Civil Engineering in Malaysian Polytechnics.
+From the targeted population, samples were randomly divided
+into two groups of learning method as shown in Fig. 2.
+Phase I
+
+PBL Briefing
+
+Week 1-8
+
+Teaching & Learning Process
+(Dip. in Civil Eng.)
+
+Phase II
+
+PBL,A
+(N=30)
+
+Defining the focus or creative task
+Structure for the deliberate application of the
+systematic creative thinking tools
+Evaluation and implementation of the output of the
+creative thinking
+
+Convensional,B
+(N=30)
+
+Week 9-10
+
+Assessment
+
+Collect &
+Data Analyze
+
+Conclusion
+
+Defining the Focus
+There may be problems that arise and identify themselves.
+Individuals make definite creative focuses. There may be an
+obvious creative need. All these are ways in which creative
+focuses can emerge.
+
+Fig. 2 Flowchart of Quasi-experimental Design
+
+They are group A as an experimental group and group B as
+a control group for the session. The measured dependent
+variables in this study were the students skills in creative
+thinking and the independent variables were the mode of
+teaching. The instrument used to determine the dependent
+variables were the pre-test and post-test of Torrance Test of
+Creative Thinking (TTCT)[8].
+
+Structure for Creative Thinking
+Once the creative focus has been defined, it can be
+subjected to deliberate creative thinking. This can be done by
+groups or individuals or a combination of both in a discussion
+session among group members. It often happens that the
+
+637
+
+World Academy of Science, Engineering and Technology 16 2008
+
+This paper proposes a Problem-Based Learning model of
+Howard Barrows that uses the McKinsey strategic problemsolving model and the SSCS model for teaching structural
+problems in Mechanics of Structure in Polytechnic of
+Malaysia [9]-[10]. The McKinsey model was adapted for
+engineering need. This need comes from an engineering
+problem. Once a problem has been identified, the next step is
+analyzing the problem. McKinsey calls this step “framing the
+problem” and breaking it down into its component elements in
+order to come up with an initial hypothesis as to the solution
+[11]. Designing the analysis is the next step in this model.
+Student must determine the analysis that must be done to
+prove the hypothesis. This step also includes developing
+work plans for group study efforts. Next, is gathering the data
+by emphasizing the use of fact finding and interviewing as a
+source of information gathering.
+
+Managing:
+Team, self, time
+
+Information
+
+Problem
+
+Solution
+Intuition
+
+Data
+Analyzing information::
+o
+Framing-hypothesis-issue trees
+o
+Designing outline-work plan
+o
+Gathering data-facts-interview
+o
+Interpreting-analyzing-evaluating
+
+Fig. 3 McKinsey Model
+
+TABLE I
+PROBLEM-BASED LEARNING MODEL
+
+A : Form
+Student
+Group
+Assign work :
+Assign group
+leader
+Plans, manages
+and controls
+the session
+Assistant
+Take notes
+during
+discussion
+Group
+members
+Participate
+actively in the
+meeting
+
+B : Student
+Preparation
+(Giving the
+problem)
+Problem
+discussion
+Stating
+hypothesis,
+assign
+tasks
+among
+the
+group
+
+LEARNING PROCESS AND PROBLEM SOLVING
+C : Tutorial 1
+D : SelfE : Tutorial 2
+(Building by
+directed
+(Bridging the
+group process)
+Learning
+processing
+skills)
+Tutor guidance Explore the
+Tutor guidance
+using creative information
+using cognitive
+thinking skills
+and creative
+Notes,
+thinking
+Discussion
+references,
+approach
+among group internet
+members
+Concept map,
+students
+Define problem
+discussion,
+decision
+Describe
+making on
+problem
+problem
+scenario
+solution.
+according to
+prior
+knowledge
+
+F:
+Presentation
+
+Tutor guidance
+using cognitive
+skills
+Students
+enhance their
+ability on
+generic skills
+
+G : Debrief
+the problem
+
+Tutor
+evaluation
+Evaluation/
+Conclusion
+from students
+for the
+presentation
+
+Discussion and
+assign tasks
+CREATIVE THINKING SKILLS (adapted from Infor Resources System)
+Explore the Challenge
+Generate Ideas
+Prepare for Action
+Goal:Generate many ideas to help you solve your well- Goal:Turn promising ideas into
+Goal:Fully understand the
+workable solutions.
+defined problem.
+problem by examining the
+situation and restating the problem Start here when:You need novel approach, useful
+Start here when:You have some
+in as many ways as possible.
+good ideas that need strengthening.
+ideas to solve your problem.
+Start here when:You want to
+Diverge: Phrase your best ideas as
+Diverge: Come up with many ideas that might solve
+pinpoint the right problem to
+solutions, using the statement
+your problem. Keep going!Even as you see good ideas
+solve.
+starter:”What I see myself doing
+emerge, keep pushing for novelty.
+is....”Consider what you like,
+Diverge: Restate the issue from as Converge: Select the most promising and intriguing
+Potentials (what it might lead to if
+many perspectives as possible.
+ideas to pursue.
+implemented) and Concerns(ask
+Use the statement starters:How
+Finish with:An idea or selected list of ideas to help
+“How to...” “How might...” or “In
+to...How might...In what ways
+solve the problem.
+what ways might...”.Generate ideas
+might....
+to overcome the concerns.
+Converge: Select the statement
+Converge: Select the best ideas to
+that best identifies the issue you
+overcome your concerns.
+want to work on.
+Rephrase those ideas into a new
+Finish with:A well defined
+and improved statement of the
+statement of the problem.
+solution using the statement starter:
+“What I now see myself doing
+is.....”
+Finish with:A well developed,
+detailed and improved solution.
+
+638
+
+World Academy of Science, Engineering and Technology 16 2008
+
+problem. During this process, students focused on what they
+did not know and hence found out materials in order to solve
+the problem outside class time. The role of the tutor was to
+facilitate the students as to identify the location of the
+necessary resources. After the session, the all student engage
+in self-directed learning. There are no assigned texts. Rather
+the students are totally responsible for gathering the
+information from the available library and computer database
+resources. After self-directed learning, the students meet
+again to emphasize the use of fact finding and interviewing as
+a source of information gathering. At these stages (stage C, D
+& E), Student was expected to come up with many ideas that
+might solve the problem. The last parts of the model are
+creating the final presentation and debrief the problem and the
+students have to share their knowledge during the
+presentation.
+
+As shown in Fig. 3, time management is very important in
+McKinsey model. There is never enough time to get all
+possible data. It is up to the student to find the most pertinent
+data in the least amount of time. Interpreting the results is the
+final step, analyzing and evaluating to test the hypothesis.
+SSCS model specifically for science instruction on the
+premise that for a problem to be meaningful to a student, it
+needs to be identified and defined by the student and that
+students meaningfully learn problem-solving skills and
+science concepts. As shown in Fig. 4, this model consists of
+four phases; Search, Solve, Create and Share as shown in Fig.
+3[6].
+
+Search
+
+Solve
+
+Create
+
+Share
+
+Brainstorming to identify problem,
+generate a list of ideas to explore, put
+into question format and focus on
+investigation
+
+VI. FINDINGS AND DISCUSSION
+
+Generate and implement plans for
+finding a solution, develope critical
+and creative thinking skills, form
+hypothesis, select the method for
+solving the problem, collect data and
+analyze
+
+Table II shows the results of Creative Thinking Skills
+referred to originality, fluency and flexibility components for
+students with different learning approaches in both
+experimental and control classes.
+TABLE II
+
+Student create a product in a small
+scale to the problem solution, reduce
+the data to simpler levels of
+explanation, present the results as
+creatively as possible such using
+charts, poster or model.
+
+MEAN SCORES FOR CREATIVE THINKING
+
+Method
+PBL
+Conventional
+
+Originality
+Pre
+Post
+38.27
+46.77
+34.58
+40.22
+
+Fluency
+Pre
+Post
+48.45
+58.91
+41.56
+49.88
+
+Flexibility
+Pre
+Post
+35.18
+39.19
+29.51
+30.51
+
+The findings indicate that the overall creativity of students
+is characterized mainly by two component abilities names
+originality and fluency. Students who achieve a high score on
+originality have the ability to produce ideas which are
+unexpected. The highest score on fluency shows that students
+are capable of producing a large number of ideas in response
+to problem-solving situations. The flexibility scores defined
+that most of students not flexible in their approach to learning
+and acquisition of concepts.
+The results of the study indicate that Problem-based
+Learning approach could raise-up the creative thinking skills
+of students compared to Conventional Learning approach.
+
+Students communicate their findings,
+solution and conclusions with
+teacher and students, articulate their
+thinking, receive feedback and
+evaluate the solutions.
+
+Fig. 4 Model SSCS
+
+Problem-based Learning that used in this paper begin with
+the group assign as shown in Table I. The member of each
+group 4-5 students consist of group leader, assistant and
+members. This PBL model started with a unstructured
+problem that given to the group of students. These problems
+were similar in nature to the real problem but on a smaller
+scale. Students need to explore creatively in thinking the
+issues of the problem by using the statement starters; How
+to...How might.... to identify the problem [12]. Once the
+problem has been identified, the next step is framing the
+problem and breaking it down in its component elements in
+order to come up with an initial hypothesis, identifying
+relevant facts in the case and identifying learning issues.
+Tutor guidance was provided in the first tutorial sessions.
+Each student has an opportunity to verbally reflect on their
+current beliefs about the diagnosis and assume responsibility
+for particular learning that was identified. The students
+generate the learning issues based on their analysis of the
+
+VII. CONCLUSION
+Our goal in this paper was to present PBL as an
+instructional model that could encourage the creative thinking
+skills during the learning process. Once the creative ideas are
+generated, there are useful additional techniques for tender
+ideas that will grow into a productive concept or solution.
+Even though students perceived that learning through PBL
+was difficult, they said that they did more thinking than
+memorizing, understood the lessons better through discussion
+and could accept this method of instruction.
+Creative skills must be practiced until the thought patterns
+in our minds become comfortable with these creative lateral
+thinking techniques. We can create these creative grooves in
+
+639
+
+World Academy of Science, Engineering and Technology 16 2008
+
+[3]
+
+Yong, L.S.M. (1986). A study a creativity and its correlates among form
+4 pupils. Tesis Ph.D yang tidak diterbitkan, Universiti Malaya.
+[4] Yong, L.S.M. (1993). Study in Creativity. Incotrends (M) Sdn Bhd.
+Kuala Lumpur.
+[5] Steinemann, A., (2003). Implementing Sustainable Development
+Through Problem-Based Learning:Pedagogy and Practice. Journal of
+Professional Issues in Engineering Education and Practice. Oct.
+[6] Chin, C. (1997). Promoting Higher Cognitive Learning in Science
+through a Problem Solving Approach REACT, Issue No.1.
+[7] De Bono, E. (1993). Serious Creativity: Using the Power of Interal
+Thinking To Create New Ideas. New York: Harper Collins.
+[8] Torrance, E.P. (1966). Thinking Creatively with Words: Verbal Booklet
+A. Benseville, IL: Scholastic Testing Service, Inc.
+[9] Barrows, H. (2003). Response To “The Problem with Problem Based
+Medical Education: Promises Not Kept” by R.H Gkew. Biochemistry
+and Molecular Biology Education. Vol. 31, no.4, pp. 255-256.
+[10] Barrows, H.S. (1996). Problem-Based Learning In Medicine And
+Beyond:Abrief Overview. In Lory and Practice (Vol.68, Pp3-12. San
+Francisco:Jossey-Bass.
+[11] Donaldson, C.A (2004). Information Literacy and the McKinsey Model:
+Literacy to Graduate Business Students. Library Philosophy and Practice
+Vol. 6, no.2.
+[12] Infor Resources System Sdn. Bhd. (2001). Creativity and Creative
+Problem Solving. IRSSB Selangor.
+
+our mind so these techniques will be utilized. This also can
+help students produce better, more satisfying and more
+creative. The combination of creative skills and technical
+abilities will enable the students to be ready for industry needs
+when they graduate.
+ACKNOWLEDGMENT
+The authors acknowledge the Ministry of Higher Education,
+Malayia, Polytechnic of Malaysia, Universiti Sains Malaysia
+and Universiti Teknologi Tun Hussein Onn Malaysia for their
+cooperation.
+
+REFERENCES
+[1]
+[2]
+
+Soden, R., Teaching Problem Solving in Vocational Education. London:
+Routledge (1994).
+Claire Major (2001). Assessing The Effectiveness Of Problem Based
+Learning in Higher Education: Lessons From The Literature, vol. 5(1).
+
+640
+
+

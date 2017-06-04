@@ -1,0 +1,785 @@
+Spectral Norm Regularization of Orthonormal
+Representations for Graph Transduction
+
+Rakesh Shivanna
+Google Inc.
+Mountain View, CA, USA
+rakeshshivanna@google.com
+
+Bibaswan Chatterjee
+Dept. of Computer Science & Automation
+Indian Institute of Science, Bangalore
+bibaswan.chatterjee@csa.iisc.ernet.in
+
+Raman Sankaran, Chiranjib Bhattacharyya
+Dept. of Computer Science & Automation
+Indian Institute of Science, Bangalore
+ramans,chiru@csa.iisc.ernet.in
+
+Francis Bach
+INRIA - Sierra Project-team
+École Normale Supérieure, Paris, France
+francis.bach@ens.fr
+
+Abstract
+Recent literature [1] suggests that embedding a graph on an unit sphere leads to
+better generalization for graph transduction. However, the choice of optimal embedding and an efficient algorithm to compute the same remains open. In this
+paper, we show that orthonormal representations, a class of unit-sphere graph embeddings are PAC learnable. Existing PAC-based analysis do not apply as the VC
+dimension of the function class is infinite. We propose an alternative PAC-based
+bound, which do not depend on the VC dimension of the underlying function
+class, but is related to the famous Lovász ϑ function. The main contribution of the
+paper is SPORE, a SPectral regularized ORthonormal Embedding for graph transduction, derived from the PAC bound. SPORE is posed as a non-smooth convex
+function over an elliptope. These problems are usually solved as semi-definite programs (SDPs) with time complexity O(n6 ). We present, Infeasible Inexact proximal (IIP): an Inexact proximal method which performs subgradient procedure
+on an approximate projection, not necessarily feasible. IIP is more scalable than
+SDP, has an O( √1T ) convergence, and is generally applicable whenever a suitable approximate projection is available. We use IIP to compute SPORE where
+the approximate projection step is computed by FISTA, an accelerated gradient
+descent procedure. We show that the method has a convergence rate of O( √1T ).
+The proposed algorithm easily scales to 1000’s of vertices, while the standard
+SDP computation does not scale beyond few hundred vertices. Furthermore, the
+analysis presented here easily extends to the multiple graph setting.
+
+1
+
+Introduction
+
+Learning problems on graph-structured data have received significant attention in recent years [11,
+17, 20]. We study an instance of graph transduction, the problem of learning labels on vertices of
+simple graphs1 . A typical example is webpage classification [20], where a very small part of the
+entire web is manually classified. Even for simple graphs, predicting binary labels of the unlabeled
+vertices is NP-complete [6].
+More formally: let G = (V, E), V = [n] be a simple graph with unknown labels y ∈ {±1}n .
+Without loss of generality, let the labels of first m ∈ [n] vertices be observable, let u := n − m.
+1
+
+A simple graph is an unweighted, undirected graph with no self loops or multiple edges.
+
+1
+
+Let yS and yS̄ be the labels of S = [m] andP
+S̄ = V \S. Given G and yS , the goal is to learn soft
+predictions ŷ ∈ Rn , such that erS̄` [ŷ] := S̄1
+`(yj , ŷj ) is small, where ` is any loss function. The
+| | j∈S̄
+following formulation has been extensively used [19, 20]
+min erS` [ŷ] + λŷ> K−1 ŷ,
+
+ŷ∈Rn
+
+(1)
+
+where K is a graph-dependent kernel and λ > 0 is a regularizer constant. Let ŷ∗ be the solution
+to (1), given G and S ⊆ V, |S| = m. [1] proposed the following generalization bound
+
+p
+h
+i
+
+
+trp (K)
+ES⊆V erS̄` [ŷ∗ ] ≤ c1 infn erV` [ŷ] + λŷ> K−1 ŷ + c2
+,
+(2)
+ŷ∈R
+λ|S|
+1/p
+P
+where c1 , c2 are dependent on ` and trp (K) = n1 i∈[n] Kpii
+, p > 0. [1] argued that trp (K)
+should be a constant and can be enforced by normalizing the diagonal entries of K to be 1. This
+is an important advice in graph transduction, however it is to be noted that the set of normalized
+kernels is quite large and (2) gives little insight in choosing the optimal kernel.
+Normalizing the diagonal entries of K can be viewed geometrically as embedding the graph on a
+unit sphere. Recently, [16] studied a rich class of unit sphere graph embeddings, called orthonormal
+representations [13], and find that it is statistically consistent for graph transduction. However, the
+choice of the optimal orthonormal embedding is not clear. We study orthonormal representations
+1
+for the following equivalent [19] kernel learning formulation of (1), with C = λm
+,
+ωC (K, yS ) = maxn
+α∈R
+
+X
+i∈S
+
+αi −
+
+1 X
+αi αj yi yj Kij s.t. 0 ≤ αi ≤ C ∀i ∈ S, αj = 0 ∀j ∈
+/ S, (3)
+2
+i,j∈S
+
+from a probably approximately
+correctly (PAC) learning point of view. Note that the final predictions
+P
+are given by ŷi = j∈S Kij αj∗ yj ∀i ∈ [n], where α∗ is the optimal solution to (3).
+Contributions. We make the following contributions:
+– Using (3) we show the class of orthonormal representations are efficiently PAC learnable over a
+large class of graph families, including power-law and random graphs.
+– The above analysis suggests that spectral norm regularization could be beneficial in computing
+the best embedding. To this end we pose the problem of SPectral norm regularized ORthonormal
+Embedding (SPORE) for graph Transduction, namely that of minimizing a convex function
+over an elliptope. One could solve such problems as SDPs which unfortunately do not scale
+well beyond few hundred vertices.
+– We propose an infeasible inexact proximal (IIP) method, a novel projected subgradient descent
+algorithm, in which the projection is approximated by an inexact proximal method. We suggest
+a novel approximation criteria which approximates the proximal operator for the support function of the feasible set within a given precision. One could compute an approximation to the
+projection from the inexact proximal point which may not be feasible hence the name IIP. We
+prove√that IIP converges to the optimal minimum of a non-smooth convex function with rate
+O(1/ T ) in T iterations.
+– The IIP algorithm is then applied to the case when the set of interest is composed of the intersection of two convex sets. The proximal operator for the support function of the set of interest
+can be obtained using the FISTA algorithm, once we know the proximal operator for the support
+functions of the individual sets involved.
+– Our analysis paves the way for learning labels on multiple graphs by using the embedding by
+adopting an MKL style approach. We present both algorithmic and generalization results.
+Notations. Let k · k, k · kF denote the Euclidean and Frobenius norm respectively. Let Sn and
+Sn+ denote the set of n × n square symmetric and square symmetric
+positive
+semi-definite
+matrices
+
+
+	
+respectively. Let Rn+ be a non-negative orthant. Let S n−1 = u ∈ Rn+  kuk1 = 1 denote the n−1
+dimensional simplex. Let [n] := {1, . . . , n}. For any M ∈ Sn , let λ1 (M) ≥ . . . ≥ λn (M) denote
+its Eigenvalues. We denote the adjacency matrix of a graph G by A. Let Ḡ denote the complement
+graph of G, with the adjacency matrix Ā = 11> − I − A; where 1 is a vector of all 1’s, and I is the
+identity matrix. Let Y = {±1}, Yb = R be the label and soft-prediction spaces over V . Given y ∈ Y
+2
+
+b we use `0-1 (y, ŷ) = 1[y ŷ < 0], `hng (y, ŷ) = (1 − y ŷ)+ 2 to denote 0-1 and hinge loss
+and ŷ ∈ Y,
+respectively. The notations O, o, Ω, Θ will denote standard measures in asymptotic analysis [4].
+Related work. [1]’s analysis was restricted to Laplacian matrices, and does not give insights in
+choosing the optimal unit sphere embedding. [2] studied graph transduction using PAC model,
+however for graph orthonormal embeddings, there is no known sample complexity estimate. [16]
+showed that working with orthonormal embeddings leads to consistency. However, the choice of
+optimal embedding and an efficient algorithm to compute the same remains an open issue. Furthermore, we show that [16]’s sample complexity estimate is sub-optimal.
+Preliminaries. An orthonormal embedding [13] of a simple graph G = (V, E), V = [n], is
+defined by a matrix U = [u1 , . . . , un ] ∈ Rd×n such that u>
+/ E and
+i uj = 0 whenever (i, j) ∈
+kui k = 1 ∀i ∈ [n]. Let Lab(G) denote the set of all possible
+orthonormal
+embeddings
+of the
+	
+graph G, Lab(G) := U | U is an orthonormal embedding . Recently, [8] showed an interesting
+connection to the set of graph kernel matrices
+
+	
+K(G) := K ∈ Sn+ | Kii = 1, ∀i ∈ [n]; Kij = 0, ∀(i, j) ∈
+/E .
+Note that K ∈ K(G) is positive semidefinite, and hence there exists U ∈ Rd×n such that K =
+U> U. Note that Kij = u>
+i uj where ui is the i-th column of U. Hence by inspection it is clear
+that U ∈ Lab(G). Using a similar argument, we can show that for any U ∈ Lab(G), the matrix
+K = U> U ∈ K(G). Thus, the two sets, Lab(G) and K(G) are equivalent.
+Furthermore, orthonormal embeddings are associated with an interesting quantity, the Lovász ϑ
+function [13, 7]. However, computing ϑ requires solving an SDP, which is impractical.
+
+2
+
+Generalization Bound for Graph Transduction using Orthonormal
+Embeddings
+
+In this section we derive a generalization bound, used in the sequel for PAC analysis. We derive the
+following error bound, valid for any orthonormal embedding (supplementary material, Section B).
+Theorem 1 (Generalization bound). Let G = (V, E) be a simple graph with unknown binary labels
+y ∈ Y n on the vertices V . Let K ∈ K(G). Given G, and labels of a randomly drawn subgraph
+S, let ŷ ∈ Ybn be the predictions learnt by ωC (K, yS ) in (3). Then, for m ≤ n/2, with probability
+≥ 1 − δ over the choice of S ⊂ V , such that |S| = m
+r 1
+p
+1 X hng
+1
+0-1
+erS̄ [ŷ] ≤
+` (yi , ŷi ) + 2C 2λ1 (K) + O
+log
+.
+(4)
+m
+m
+δ
+i∈S
+
+Note that the above is a high-probability bound, in comparison to the expected analysis in (2). Also,
+the above result suggests that graph embeddings with low spectral norm and empirical error lead to
+better generalization. [1]’s analysis in (2) suggests that we should embed a graph on a unit sphere,
+however, does not help to choose the optimal embedding for graph transduction. Exploiting our
+analysis from (4), we present a spectral norm regularized algorithm in Section 3.
+We would also like to study PAC learnability of orthonormal embeddings, where PAC learnability
+is defined as follows: given G, y; does there exist an m̃ < n, such that w.p. ≥ 1 − δ over
+S ⊂ V, |S| ≥ m̃; the generalization error erS̄0-1 ≤ . The quantity m̃ is termed as labelled sample
+complexity [2]. Existing analysis [2] do not apply to orthonormal embeddings as discussed in related
+work, Section 1. Theorem 1 allows us to derive improved statistical estimates (Section 3).
+
+3
+
+SPORE Formulation and PAC Analysis
+
+Theorem 1 suggests that penalizing the spectral norm of K would lead to better generalization. To
+this end we motivate the following formulation.
+
+ΨC,β (G, yS ) = min g K
+where g(K) = ωC (K, yS ) + βλ1 (K).
+(5)
+K∈K(G)
+
+2
+
+(a)+ = max(a, 0) ∀a ∈ R
+
+3
+
+(5) gives an optimal orthonormal embedding, the optimal K, which we will refer to as SPORE. In
+this section we first study the PAC learnability of SPORE, and derive a labelled sample complexity
+estimate. Next, we study efficient computation of SPORE. Though SPORE can be posed as an SDP,
+we show in Section 4 that it is possible to exploit the structure, and solve efficiently.
+Given G and yS , the function ωC (K, yS ) is convex in K as it is the maximum of affine functions
+of K. The spectral norm of K, λ1 (K) is also convex, and hence g(K) is a convex function. Furthermore K(G) is an Elliptope [5], a convex body which can be described by the intersection of
+a positive semi-definite and affine constraints. It follows that hence (5) is convex. Usually these
+formulations are posed as SDPs which do not scale beyond few hundred vertices. In Section 4 we
+derive an efficient first order method which can solve for 1000’s of vertices. Let K∗ be the optimal
+embedding computed from (5). Note that once the kernel is fixed, the predictions are only dependent
+on ωC (K∗ , ySP
+). Let α∗ be the solution to ωC (K∗ , yS ) as in (3), then the final predictions of (5) is
+∗ ∗
+given by ŷi = j∈S Kij
+αj yj , ∀i ∈ [n].
+At this point, we derive an interesting graph-dependent error convergence rate. We gather two
+important results, the proof of which appears in the supplementary material, Section C.
+Lemma 2. Given a simple graph G = (V, E), maxK∈K(G) λ1 (K) = ϑ(Ḡ).
+Lemma 3. Given G and y, for any S ⊆ V and C > 0, minK∈K(G) ωC (K, yS ) ≤ ϑ(G)/2.
+In the standard PAC setting, there is a complete disconnection between the data distribution and
+target hypothesis. However, in the presence of unlabeled nodes, without any assumption on the
+data, it is impossible to learn labels. Following existing literature [1, 9], we work with similarity
+graphs – where presence of an edge would mean two nodes are similar; and derive the following
+(supplementary material, Section C).
+Theorem 4. Let G = (V, E), V = [n] be a simple graph with unknown binary labels y ∈ Y n
+on the vertices V . Given G, and labels of a randomly drawn subgraph S ⊂ V , m = |S|; let ŷ be
+
+ 12
+ϑ(G)
+q
+the predictions learnt by SPORE (5), for parameters C =
+. Then, for
+and β = ϑϑ(G)
+(Ḡ)
+m ϑ(Ḡ)
+m ≤ n/2, with probability ≥ 1 − δ over the choice of S ⊂ V , such that |S| = m
+ 1 p
+1  21
+erS̄0-1 [ŷ] = O
+nϑ(G) + log
+.
+(6)
+m
+δ
+Proof. (Sketch) Let K∗ be the kernel learnt by SPORE (5). Using Theorem 1 and Lemma 2 for ŷ
+q
+r 1
+
+1 X hng
+1
+0-1
+erS̄ [ŷ] ≤
+` (yi , ŷi ) + 2C 2ϑ Ḡ + O
+log
+.
+(7)
+m
+m
+δ
+i∈S
+
+From the primal formulation of (3), using Lemma 2 and 3, we get
+X
+
+ϑ(G)
++ βϑ Ḡ .
+C
+`hng (yi , ŷi ) ≤ ωC (K∗ , yS ) ≤ ΨC,β (G, yS ) ≤
+2
+i∈S
+q
+
+
+β
+Plugging back in (7), choosing β such that Cm
+ϑ Ḡ = 2C 2ϑ Ḡ and optimizing for C gives
+us the choice of parameters as stated. Finally, using ϑ(G)ϑ(Ḡ) = n [13] proves the result.
+In the theorem above, Ḡ is the complement graph of G. The optimal orthonormal embedding K∗
+tend to embed vertices to nearby regions if they have connecting edges, hence, the notion of similarity is implicitly captured in the embedding. From (6), for a fixed n and m, note that the error
+converges at a faster rate for a dense graph (ϑ is small), than for a sparse graph (ϑ is large). Such
+connections relating to graph structural properties were previously unavailable [1].
+We also
+√ estimate the labelled sample complexity, by bounding (6) by  > 0, to obtain m̃ =
+Ω 12 ( ϑn + log 1δ ) . This connection helps to reason the intuition that for a sparse graph one
+would need a larger number of labelled vertices, than for a dense graph. For constants , δ, we
+1
+obtain a fractional labelled sample complexity estimate of m̃/n = Ω ϑ/n 2 , which is a signif1
+icant improvement over the recently proposed Ω ϑ/n 3 [16]. The use of stronger machinery of
+4
+
+Rademacher averages (supplementary material, Section C), instead of VC-dimension [2], and specializing to SPORE allows us to improve over existing analysis [1, 16]. The proposed sample
+complexity estimate
+√ is interesting for ϑ = o(n), examples√of such graphs include: random graphs
+(ϑ(G(n, p)) = Θ( n)) and power-law graphs (ϑ̄ = O( n)).
+
+4
+
+Inexact Proximal methods for SPORE
+
+In this section, we propose an efficient algorithm to solve SPORE (see (5)). The optimization problem SPORE can be posed as an SDP. Generic SDP solvers have a runtime complexity of O(n6 )
+and often does not scale well for large graphs. We study first-order methods, such as projected
+subgradient procedures, as an alternative to SDPs, for minimizing g(K). The main computational
+challenge in developing such procedures is that it is difficult to compute the projection on the elliptope. One could potentially use the seminal Dykstra’s algorithm [3] of finding a feasible point in the
+intersection of two convex sets. The algorithm asymptotically finds a point in the intersection. This
+asymptotic convergence is a serious disadvantage in the usage of Dykstra’s algorithm as a projection
+sub-routine. It would be useful to have an algorithm which after a finite number of iterations yield
+an approximate projection and a subsequent descent algorithm can yield a convergent algorithm.
+Motivated by SPORE, we study the problem of minimizing non-smooth convex functions where
+the projection onto the feasible set can be computed only approximately. Recently there has been
+increasing interest in studying Inexact proximal
+√ methods [15, 18]. In the sequel we design an inexact proximal method which yields an O(1/ T ) algorithm to solve (5). The algorithm is based
+on approximating the prox function by an iterative procedure which satisfies a suitably designed
+criterion.
+4.1
+
+An Infeasible Inexact Proximal (IIP) algorithm
+
+Let f be a convex function with properly defined sub-differential ∂f (x) at every x ∈ X . Consider
+the following optimization problem.
+min f (x).
+(8)
+x∈X ⊂Rd
+
+A subgradient projection iteration of the form
+xk+1 = PX (xk − αk hk ),
+
+hk ∈ ∂f (xk )
+
+(9)
+
+accurate solution by running the iterations O( 12 ) number of times,
+of v ∈ Rd on X ⊂ Rd if PX (v) = argminx∈X 21 kv − xk2F . In many
+
+is often used to arrive at an 
+where PX (v) is the projection
+situations, such as X = K(G), it is not possible to accurately compute the projection in finite amount
+of time and one may obtain only an approximate projection. Using the Moreau decomposition
+PX (v) + ProxσX (v) = v [14], one can compute the projection if one could compute proxσX , where
+σA (a) = maxa∈X x> a is the support function of X , and proxσX refers to the proximal operator for
+the function g 0 at v as defined below3 .
+
+ 1
+(10)
+proxg0 (v) = argmin pg0 (z; v) = kv − zk2 + g 0 (z) .
+2
+z∈Dom(g 0 )
+
+We assume that one could compute zX
+(v), not necessarily in X , such that
+
+pσX (zX
+(v); v) ≤ minn pσX (z; v) + ,
+z∈R
+
+
+and PX (v) = v − zX
+.
+
+(11)
+
+
+See that zX
+is an inexact prox and the resultant estimate of the projection PX can be infeasible but
+hopefully not too far away. Note that  = 0 recovers the exact case. The next theorem confirms that
+it is possible to converge to the true optimum for a non-zero  (supplementary material, Section D.5).
+Theorem 5. Consider the optimization problem (8). Starting from any kx0 − x∗ k ≤ R, where x∗ is
+a solution of (8), for every k let us assume that we could obtain PX (yk ) such that zk = yk q
+− PX (yk )
+
+satisfy (11), where yk = xk − αk hk , αk = khsk k , khk k ≤ L, kxk − x∗ k ≤ R, s =
+Then the iterates
+xk+1 = PX (xk − αk hk ), hk ∈ ∂f (xk )
+3
+
+A more general definition of the proximal operator is – proxτg0 (v) = argminz∈Dom(g0 )
+
+5
+
+1
+2τ
+
+R2
+T
+
++ .
+
+(12)
+
+kv−zk2 +g 0 (z)
+
+r
+yield
+
+fT∗
+
+∗
+
+−f ≤L
+
+R2
++ .
+T
+
+(13)
+
+Related Work on Inexact Proximal methods: There has been recent interest in deriving inexact proximal methods such as projected gradient descent, see [15, 18] for a comprehensive list of
+references. To the best of our knowledge, composite functions have been analyzed but no one has explored the case that f is non-smooth. The results presented here are thus complementary to [15, 18].
+Note the subtlety in using the proper approximation criteria. Using a distance criterion between the
+true projection and the approximate projection, or an approximate optimality criteria on the optimal
+distance would lead to a worse bound; using a dual approximate optimality criterion (here through
+the proximal operator for the support function) is key (as noted in [15, 18] and references therein).
+As an immediate consequence of Theorem 5, note that suppose we have an algorithm to compute
+proxσX which guarantees after S iterations that
+pσX (zS ; v) − min pσX (z; v) ≤
+z∈Rd
+
+R̂2
+,
+S2
+
+for a constant R̂ particular to the set over which pσX is defined. We can initialize  =
+√
+that may suggest that one could use S = T iterations to yield
+q
+LR̄
+∗
+∗
+fT − f ≤ √
+where R̄ = R2 + R̂2 .
+T
+
+(14)
+R̂2
+S2
+
+in (13),
+
+(15)
+
+Remarks: Computational efficiency dictates that the number of projection steps should√be kept at a
+minimum. To this end we see that number of projection steps need to be at least S = T with the
+current choice of stepsizes. Let cp be the cost of one iteration of FISTA step and c0 be the cost of
+one outer iteration. The total computation cost can be then estimated as T 3/2 · cp + T · c0 .
+4.2
+
+Applying IIP to compute SPORE
+
+The problem of computing SPORE can be posed as minimizing a non-smooth convex function over
+an intersection of two sets: K(G) = Sn+ ∩ P (G), intersection of positive semi-definite cone Sn+
+and a polytope of equality constraints P (G) := {M ∈ Sn |Mii = 1, Mij = 0 ∀(i, j) ∈
+/ E}.
+The algorithm described in Theorem 5 readily applies to the new setting if the projection can be
+computed efficiently. The proximal operator for σX can be derived as 4
+
+
+1
+2
+ProxσX (v) = argmin pσX (a, b; v) = k(a + b) − vk + σA (a) + σB (b) .
+(16)
+2
+a,b∈Rd
+This means that even if we do not have an efficient procedure for computing ProxσX (v) directly,
+we can devise an algorithm to guarantee the approximation (11) if we can compute ProxσA (v) and
+ProxσB (v) efficiently. This can be done through the application of the popular FISTA algorithm for
+(16), which also guarantees (14). Algorithm 1 (detailed in the supplementary, named IIP F IST A),
+computes the following simple steps followed by the usual FISTA variable updates at each iteration
+t : (a) gradient descent step on a and b with respect to the smooth term 12 k(a + b) − vk2 and (b)
+proximal step with respect to σA and σB using the expressions (14), (21) (supplementary material).
+Using the tools discussed above, we design Algorithm 1 to solve the SPORE formulation (5) using
+IIP. The proposed algorithm readily applies to general convex sets. However, we confine ourselves
+to specific sets of interest in our problem. The following theorem states the convergence rate of the
+proposed procedure.
+T
+Theorem 6. Consider the optimization problem (8) with X = A B, where A and B are Sn+ and
+P (G) respectively. Starting from any K0 ∈ A the iterates Kt in Algorithm (1) satisfy
+q
+L
+∗
+min f (Kt ) − f (K ) ≤ √
+R2 + R̂2 .
+t=0,...,T
+T
+Proof. Is an immediate extension of Theorem 5 – supplementary material, Section D.6.
+4
+
+The derivation is presented in supplementary material, Claim 6.
+
+6
+
+Algorithm 1 IIP for SPORE
+1: function A PPROX
+ (K0 , L, R, R̂, T )
+p - PROJ - SUBG
+
+. compute stepsize
+s = √LT ·
+R2 + R̂2
+Initialize t0 = 1.
+for t = 1, . . . , T do
+compute ht−1
+. subgradient of f (K) at Kt−1 see equation (5)
+s
+vt = Kt−1 − kht−1
+h
+t−1
+k
+√
+√
+. FISTA for T steps. Use Algorithm 1 (supp.)
+K̃t = IIP F IST A(vt , T )
+Kt = P rojA (K̃t ) = Kt − proxσA (Kt )
+. Kt needs to be psd for the next SVM call. Use (14) (supp.)
+end for
+end function
+
+2:
+3:
+4:
+5:
+6:
+
+7:
+8:
+9:
+10:
+11:
+
+Equating the problem (8) with the SPORE problem (5), we have f (K) = ωC (K,
+ yS1 ) + βλ>1 (K).
+The set of subgradients of f at the iteration t is given by ∂f (Kt ) =
+− 	2 Yαt αt Y +
+>
+βvt vt |αt is returned by SVM, and vt is the eigen vector corresponding to λ1 (Kt ) 5 , where Y be
+a diagonal matrix such that Yii = yi , for i ∈ S, and 0 otherwise. The step size is calculated using
+estimates of L, R and R̂, which can be derived as L = nC 2 , R = n, R̂ = n2.5 for the SPORE problem. Check the supplementary material for the derivations.
+
+5
+
+Multiple Graph Transduction
+
+Multiple graph transduction is of recent interest in a multi-view setting, where individual views are
+expressed by a graph. This includes many practical problems in bioinformatics [17], spam detection
+[21], etc. We propose an MKL style extension of SPORE, with improved PAC bounds.
+Formally, the problem of multiple graph transduction is stated as – let G = {G(1) , . . . , G(M ) } be a
+set of simple graphs G(k) = (V, E (k) ), defined on a common vertex set V = [n]. Given G and yS
+as before, the goal is to accurately predict yS̄ . Following the standard technique of taking convex
+combination of graph kernels [16], we propose the following MKL-SPORE formulation
+
+
+X
+
+ηk K(k) , yS + β max λ1 (K(k) ) .
+(17)
+ΦC,β (G, yS ) =
+min
+min ωC
+K(k) ∈K(G(k) )
+
+η∈S M −1
+
+k∈[M ]
+
+k∈[M ]
+
+Similar to Theorem 4, we can show the following (supplementary material, Theorem 8)
+erS̄0-1 [ŷ] = O
+
+ 1 p
+1  21
+nϑ(G) + log
+m
+δ
+
+where
+
+ϑ(G) ≤ min ϑ(G(k) ).
+k∈[M ]
+
+(18)
+
+It immediately follows that combining multiple graphs improves the error convergence rate (see (6)),
+and hence the labelled sample complexity. Also, the bound suggests that the presence of at least one
+“good” graph is sufficient for MKL-SPORE to learn accurate predictions. This motivates us to use
+the proposed formulation in the presence of noisy graphs (Section 6). We can also apply the IIP
+algorithm described in Section 4 to solve for (17) (supplementary material, Section F).
+
+6
+
+Experiments
+
+We conducted experiments on both real world and synthetic graphs, to illustrate our theoretical
+observations. All experiments were run on CPU with 2 Xeon Quad-Core processors (2.66GHz,
+12MB L2 Cache) and 16GB memory running CentOS 5.3.
+5
+
+αt = argmaxα∈Rn+ , kαk∞ ≤C α> 1 − 12 α> YKt Yα and vt = argmaxv∈Rn ,kvk=1 v> Kt v
+αj =0 ∀j ∈S
+/
+
+7
+
+Table 1: SPORE comparison.
+Dataset
+Un-Lap N-Lap KS SPORE
+breast-cancer 88.22 93.33 92.77 96.67
+diabetes
+68.89 69.33 69.44 73.33
+70.00 70.00 70.44 78.00
+fourclass
+heart
+71.97 75.56 76.42 81.97
+ionosphere
+67.77 68.00 68.11 76.11
+sonar
+58.81 58.97 59.29 63.92
+mnist-1vs2
+75.55 80.55 79.66 85.77
+mnist-3v8
+76.88 81.88 83.33 86.11
+mnist-4v9
+68.44 72.00 72.22 74.88
+
+Table 2: Large Scale – 2000 Nodes.
+Dataset
+Un-Lap N-Lap KS SPORE
+mnist-1vs2 83.80 96.23 94.95 96.72
+mnist-3vs8 55.15 87.35 87.35 91.35
+mnist-5vs6 96.30 94.90 92.05 97.35
+mnist-1vs7 90.65 96.80 96.55 97.25
+mnist-4vs9 65.55 65.05 61.30 87.40
+
+Graph Transduction (SPORE): We use two datasets UCI [12] and MNIST [10]. For the UCI
+datasets, we use the RBF kernel6 and threshold with the mean, and for the MNIST datasets we construct a similarity matrix using cosine distance for a random sample of 500 nodes, and threshold
+with 0.4 to obtain unweighted graphs. With 10% labelled nodes, we compare SPORE with formulation (3) using graph kernels – Unnormalized Laplacian (c1 I + L)−1 , Normalized Laplacian
+1
+1 −1
+c2 I + D− 2 LD− 2
+and K-Scaling [1], where L = D − A, D being a diagonal matrix of
+degrees. We choose parameters c1 , c2 , C and β by cross validation. Table 1 summarizes the results, averaged over 5 different labelled samples, with each entry being accuracy in % w.r.t. 0-1 loss
+function. As expected from Section 3, SPORE significantly outperforms existing methods. We also
+tackle large scale graph transduction problems, Table 2 shows superior performance of Algorithm 1
+for a random sample of 2000 nodes, with only 5 outer iterations and 20 inner projections.
+Multiple Graph Transduction (MKL-SPORE): We illustrate the effectiveness of combining
+multiple graphs, using mixture of random graphs – G(p, q), p, q ∈ [0, 1] where we fix |V | = n =
+100 and the labels y ∈ Y n such that yi = 1 if i ≤ n/2; −1 otherwise. An edge (i, j) is present with
+probability p if yi = yj ; otherwise present with probability q. We generate three datasets to simulate
+homogenous, heterogenous and noisy case, shown in Table 3.
+Table 4: Superior performance of MKL-SPORE.
+Graph
+Homo. Heter. Noisy
+Table 3: Synthetic multiple graphs dataset.
+G(1)
+84.4 69.2 84.4
+Graph Homo.
+Heter.
+Noisy
+G(2)
+84.8 68.6 68.2
+G(1) G(0.7, 0.3) G(0.7, 0.5) G(0.7, 0.3)
+G(3)
+86.4 72.0 54.4
+G(2) G(0.7, 0.3) G(0.6, 0.4) G(0.6, 0.4)
+Union
+85.5 69.3 69.3
+Intersection
+83.8 67.5 69.0
+G(3) G(0.7, 0.3) G(0.5, 0.3) G(0.5, 0.5)
+Majority
+93.7 76.9 76.6
+Multiple Graphs 95.6 80.6 81.9
+MKL-SPORE was compared with individual graphs; and with the union, intersection and majority
+graphs7 . We use SPORE to solve for single graph transduction, and the results were averaged over
+10 random samples of 5% labelled nodes. For the comparison metric as before, Table 4 shows that
+combining multiple graphs improves classification accuracy. Furthermore, the noisy case illustrates
+the robustness of the proposed formulation, a key observation from (18).
+
+7
+
+Conclusion
+
+We show that the class of orthonormal graph embeddings are efficiently PAC learnable. Our analysis
+motivates a Spectral Norm regularized formulation – SPORE for graph transduction. Using inexact
+proximal method, we design an efficient first order method to solve for the proposed formulation.
+The algorithm and analysis presented readily generalize to the multiple graphs setting.
+Acknowledgments
+We acknowledge support from a grant from Indo-French Center for Applied Mathematics (IFCAM).
+
+
+kxi −xj k2
+2σ 2
+
+
+
+6
+
+The (i, j)th entry of an RBF kernel is given by exp
+
+7
+
+Majority graph is a graph where an edge (i, j) is present, if a majority of the graphs have the edge (i, j).
+
+8
+
+, where σ is set as the mean distance.
+
+References
+[1] R. K. Ando and T. Zhang. Learning on graph with Laplacian regularization. In NIPS, 2007.
+[2] N. Balcan and A. Blum. An augmented PAC model for semi-supervised learning. In O. Chapelle,
+B. Schölkopf, and A. Zien, editors, Semi-supervised learning. MIT press Cambridge, 2006.
+[3] J. P. Boyle and R. L. Dykstra. A Method for Finding Projections onto the Intersection of Convex Sets
+in Hilbert Spaces. In Advances in Order Restricted Statistical Inference, volume 37 of Lecture Notes in
+Statistics, pages 28–47. Springer New York, 1986.
+[4] T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein. Introduction to algorithms, volume 2. MIT
+press Cambridge, 2001.
+[5] M. Eisenberg-Nagy, M. Laurent, and A. Varvitsiotis. Forbidden minor characterizations for low-rank
+optimal solutions to semidefinite programs over the elliptope. J. Comb. Theory, Ser. B, 108:40–80, 2014.
+[6] A. Erdem and M. Pelillo. Graph transduction as a Non-Cooperative Game. Neural Computation,
+24(3):700–723, 2012.
+[7] M. X. Goemans. Semidefinite programming in combinatorial optimization. Mathematical Programming,
+79(1-3):143–161, 1997.
+[8] V. Jethava, A. Martinsson, C. Bhattacharyya, and D. P. Dubhashi. The Lovász ϑ function, SVMs and
+finding large dense subgraphs. In NIPS, pages 1169–1177, 2012.
+[9] R. Johnson and T. Zhang. On the Effectiveness of Laplacian Normalization for Graph Semi-supervised
+Learning. JMLR, 8(7):1489–1517, 2007.
+[10] Y. LeCun and C. Cortes. The MNIST database of handwritten digits, 1998.
+[11] M. Leordeanu, A. Zanfir, and C. Sminchisescu. Semi-supervised learning and optimization for hypergraph
+matching. In ICCV, pages 2274–2281. IEEE, 2011.
+[12] M. Lichman. UCI machine learning repository, 2013.
+[13] L. Lovász. On the shannon capacity of a graph. Information Theory, IEEE Transactions on, 25(1):1–7,
+1979.
+[14] N. Parikh and S. Boyd. Proximal algorithms. Foundations and Trends in optimization, 1(3):123–231,
+2013.
+[15] M. Schmidt, N. L. Roux, and F. R. Bach. Convergence rates of inexact proximal-gradient methods for
+convex optimization. In NIPS, pages 1458–1466, 2011.
+[16] R. Shivanna and C. Bhattacharyya. Learning on graphs using Orthonormal Representation is Statistically
+Consistent. In NIPS, pages 3635–3643, 2014.
+[17] L. Tran. Application of three graph Laplacian based semi-supervised learning methods to protein function
+prediction problem. IJBB, 2013.
+[18] S. Villa, S. Salzo, L. Baldassarre, and A. Verri. Accelerated and Inexact Forward-Backward Algorithms.
+SIAM Journal on Optimization, 23(3):1607–1633, 2013.
+[19] T. Zhang and R. K. Ando. Analysis of spectral kernel design based semi-supervised learning. NIPS,
+18:1601, 2005.
+[20] D. Zhou, O. Bousquet, T. N. Lal, J. Weston, and B. Schölkopf. Learning with local and global consistency.
+NIPS, 16(16):321–328, 2004.
+[21] D. Zhou and C. J. C. Burges. Spectral clustering and transductive learning with multiple views. In ICML,
+pages 1159–1166. ACM, 2007.
+
+9
+
+

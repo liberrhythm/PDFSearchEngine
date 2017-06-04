@@ -1,0 +1,931 @@
+A Convergent Gradient Descent Algorithm for
+Rank Minimization and Semidefinite Programming
+from Random Linear Measurements
+John Lafferty
+University of Chicago
+lafferty@galton.uchicago.edu
+
+Qinqing Zheng
+University of Chicago
+qinqing@cs.uchicago.edu
+
+Abstract
+We propose a simple, scalable, and fast gradient descent algorithm to optimize
+a nonconvex objective for the rank minimization problem and a closely related
+family of semidefinite programs. With O(r3 κ2 n log n) random measurements of
+a positive semidefinite n×n matrix of rank r and condition number κ, our method
+is guaranteed to converge linearly to the global optimum.
+
+1
+
+Introduction
+
+Semidefinite programming has become a key optimization tool in many areas of applied mathematics, signal processing and machine learning. SDPs often arise naturally from the problem structure,
+or are derived as surrogate optimizations that are relaxations of difficult combinatorial problems
+[7, 1, 8]. In spite of the importance of SDPs in principle—promising efficient algorithms with polynomial runtime guarantees—it is widely recognized that current optimization algorithms based on
+interior point methods can handle only relatively small problems. Thus, a considerable gap exists
+between the theory and applicability of SDP formulations. Scalable algorithms for semidefinite programming, and closely related families of nonconvex programs more generally, are greatly needed.
+A parallel development is the surprising effectiveness of simple classical procedures such as gradient
+descent for large scale problems, as explored in the recent machine learning literature. In many areas
+of machine learning and signal processing such as classification, deep learning, and phase retrieval,
+gradient descent methods, in particular first order stochastic optimization, have led to remarkably
+efficient algorithms that can attack very large scale problems [3, 2, 10, 6]. In this paper we build on
+this work to develop first-order algorithms for solving the rank minimization problem under random
+measurements and a closely related family of semidefinite programs. Our algorithms are efficient
+and scalable, and we prove that they attain linear convergence to the global optimum under natural
+assumptions.
+The affine rank minimization problem is to find a matrix X ? ∈ Rn×p of minimum rank satisfying
+constraints A(X ? ) = b, where A : Rn×p −→ Rm is an affine transformation. The underdetermined
+case where m  np is of particular interest, and can be formulated as the optimization
+min
+
+rank(X)
+
+X∈Rn×p
+
+(1)
+
+subject to A(X) = b.
+This problem is a direct generalization of compressed sensing, and subsumes many machine learning problems such as image compression, low rank matrix completion and low-dimensional metric
+embedding [18, 12]. While the problem is natural and has many applications, the optimization is
+nonconvex and challenging to solve. Without conditions on the transformation A or the minimum
+rank solution X ? , it is generally NP hard [15].
+1
+
+Existing methods, such as nuclear norm relaxation [18], singular value projection (SVP) [11], and
+alternating least squares (AltMinSense) [12], assume that a certain restricted isometry property
+(RIP) holds for A. In the random measurement setting, this essentially means that at least O(r(n +
+p) log(n + p)) measurements are available, where r = rank(X ? ) [18]. In this work, we assume that
+(i) X ? is positive semidefinite and (ii) A : Rn×n −→ Rm is defined as A(X)i = tr(Ai X), where
+each Ai is a random n × n symmetric matrix from the Gaussian Orthogonal Ensemble (GOE), with
+(Ai )jj ∼ N (0, 2) and (Ai )jk ∼ N (0, 1) for j 6= k. Our goal is thus to solve the optimization
+min
+
+rank(X)
+
+subject to
+
+tr(Ai X) = bi , i = 1, . . . , m.
+
+X0
+
+(2)
+
+In addition to the wide applicability of affine rank minimization, the problem is also closely connected to a class of semidefinite programs. In Section 2, we show that the minimizer of a particular
+class of SDP can be obtained by a linear transformation of X ? . Thus, efficient algorithms for problem (2) can be applied in this setting as well.
+Noting that a rank-r solution X ? to (2) can be decomposed as X ? = Z ? Z ? > where Z ? ∈ Rn×r ,
+our approach is based on minimizing the squared residual
+f (Z) =
+
+m
+X
+
+2
+1 
+A(ZZ > ) − b2 = 1
+tr(Z > Ai Z) − bi .
+4m
+4m i=1
+
+While this is a nonconvex function, we take motivation from recent work for phase retrieval by
+Candès et al. [6], and develop a gradient descent algorithm for optimizing f (Z), using a carefully
+constructed initialization and step size. Our main contributions concerning this algorithm are as
+follows.
+• We prove that with O(r3 n log n) constraints our gradient descent scheme can exactly recover X ? with high probability. Empirical experiments show that this bound may potentially be improved to O(rn log n).
+• We show that our method converges linearly, and has lower computational cost compared
+with previous methods.
+• We carry out a detailed comparison of rank minimization algorithms, and demonstrate that
+when the measurement matrices Ai are sparse, our gradient method significantly outperforms alternative approaches.
+In Section 3 we briefly review related work. In Section 4 we discuss the gradient scheme in detail.
+Our main analytical results are presented in Section 5, with detailed proofs contained in the supplementary material. Our experimental results are presented in Section 6, and we conclude with a brief
+discussion of future work in Section 7.
+
+2
+
+Semidefinite Programming and Rank Minimization
+
+Before reviewing related work and presenting our algorithm, we pause to explain the connection
+between semidefinite programming and rank minimization. This connection enables our scalable
+gradient descent algorithm to be applied and analyzed for certain classes of SDPs.
+Consider a standard form semidefinite program
+min
+
+e X)
+e
+tr(C
+
+e
+X0
+
+subject to
+
+(3)
+ei X)
+e = bi , i = 1, . . . , m
+tr(A
+
+e A
+e1 , . . . , A
+em ∈ Sn . If C
+e is positive definite, then we can write C
+e = LL> where L ∈ Rn×n
+where C,
+is invertible. It follows that the minimum of problem (3) is the same as
+min
+
+tr(X)
+
+subject to
+
+tr(Ai X) = bi , i = 1, . . . , m
+
+X0
+
+(4)
+
+2
+
+ei L−1 > . In particular, minimizers X
+e ∗ of (3) are obtained from minimizers X ∗ of
+where Ai = L−1 A
+(4) via the transformation
+e ∗ = L−1 > X ∗ L−1 .
+X
+Since X is positive semidefinite, tr(X) is equal to kXk∗ . Hence, problem (4) is the nuclear norm
+relaxation of problem (2). Next, we characterize the specific cases where X ∗ = X ? , so that the SDP
+and rank minimization solutions coincide. The following result is from Recht et al. [18].
+Theorem 1. Let A : Rn×n −→ Rm be a linear map. For every integer k with 1 ≤ k ≤ n, define
+the k-restricted isometry constant to be the smallest value δk such that
+(1 − δk ) kXkF ≤ kA(X)k ≤ (1 + δk ) kXkF
+holds for any matrix X of rank at most k. Suppose that there exists a rank r matrix X ? such that
+A(X ? ) = b. If δ2r < 1, then X ? is the only matrix of rank at most r satisfying A(X) = b.
+Furthermore, if δ5r < 1/10, then X ? can be attained by minimizing kXk∗ over the affine subset.
+In other words, since δ2r ≤ δ5r , if δ5r < 1/10 holds for the transformation A and one finds a matrix
+X of rank r satisfying the affine constraint, then X must be positive semidefinite. Hence, one can
+ignore the semidefinite constraint X  0 when solving the rank minimization (2). The resulting
+problem then can be exactly solved by nuclear norm relaxation. Since the minimum rank solution
+is positive semidefinite, it then coincides with the solution of the SDP (4), which is a constrained
+nuclear norm optimization.
+The observation that one can ignore the semidefinite constraint justifies our experimental comparison
+with methods such as nuclear norm relaxation, SVP, and AltMinSense, described in the following
+section.
+
+3
+
+Related Work
+
+Burer and Monteiro [4] proposed a general approach for solving semidefinite programs using factored, nonconvex optimization, giving mostly experimental support for the convergence of the algorithms. The first nontrivial guarantee for solving affine rank minimization problem is given by
+Recht et al. [18], based on replacing the rank function by the convex surrogate nuclear norm, as
+already mentioned in the previous section. While this is a convex problem, solving it in practice is
+nontrivial, and a variety of methods have been developed for efficient nuclear norm minimization.
+The most popular algorithms are proximal methods that perform singular value thresholding [5] at
+every iteration. While effective for small problem instances, the computational expense of the SVD
+prevents the method from being useful for large scale problems.
+Recently, Jain et al. [11] proposed a projected gradient descent algorithm SVP (Singular Value
+Projection) that solves
+2
+min
+kA(X) − bk
+n×p
+X∈R
+
+subject to
+
+rank(X) ≤ r,
+
+where k·k is the `2 vector norm and r is the input rank. In the (t+1)th iteration, SVP updates X t+1 as
+the best rank r approximation to the gradient update X t − µA> (A(X t ) − b), which is constructed
+from the SVD. If rank(X ? ) = r, then SVP can recover X ? under a similar RIP condition as the
+nuclear norm heuristic, and enjoys a linear numerical rate of convergence. Yet SVP suffers from the
+expensive per-iteration SVD for large problem instances.
+Subsequent work of Jain et al. [12] proposes an alternating least squares algorithm AltMinSense
+that avoids the per-iteration SVD. AltMinSense factorizes X into two factors U ∈ Rn×r , V ∈
+
+2
+Rp×r such that X = U V > and minimizes the squared residual A(U V > ) − b by updating U and
+V alternately. Each update is a least squares problem. The authors show that the iterates obtained
+by AltMinSense converge to X ? linearly under a RIP condition. However, the least squares
+problems are often ill-conditioned, it is difficult to observe AltMinSense converging to X ? in
+practice.
+As described above, considerable progress has been made on algorithms for rank minimization and
+certain semidefinite programming problems. Yet truly efficient, scalable and provably convergent
+3
+
+algorithms have not yet been obtained. In the specific setting that X ? is positive semidefinite, our
+algorithm exploits this structure to achieve these goals. We note that recent and independent work of
+Tu et al. [21] proposes a hybrid algorithm called Procrustes Flow (PF), which uses a few iterations
+of SVP as initialization, and then applies gradient descent.
+
+4
+
+A Gradient Descent Algorithm for Rank Minimization
+
+Our method is described in Algorithm 1. It is parallel to the Wirtinger Flow (WF) algorithm for
+phase retrieval [6], to recover a complex vector x ∈ Cn given the squared magnitudes of its linear
+measurements bi = |hai , xi|2 , i ∈ [m], where a1 , . . . , am ∈ Cn . Candès et al. [6] propose a
+first-order method to minimize the sum of squared residuals
+n
+X
+2
+fWF (z) =
+|hai , zi|2 − bi .
+(5)
+i=1
+
+The authors establish the convergence of WF to the global optimum—given sufficient measurements,
+the iterates of WF converge linearly to x up to a global phase, with high probability.
+If z and the ai s are real-valued, the function fWF (z) can be expressed as
+n
+X
+2
+>
+>
+fWF (z) =
+z > ai a>
+,
+i z − x ai ai x
+i=1
+?
+which is a special case of f (Z) where Ai = ai a>
+i and each of Z and X are rank one. See Figure
+1a for an illustration; Figure 1b shows the convergence rate of our method. Our methods and results
+are thus generalizations of Wirtinger flow for phase retrieval.
+
+Before turning to the presentation of our technical results in the following section, we present some
+intuition and remarks about how and why this algorithm works. For simplicity, let us assume that
+the rank is specified correctly.
+Initialization is of course crucial in nonconvex optimization, as many local minima may be present.
+To obtain a sufficiently accurate initialization, we use a spectral method, similar to those used in
+[17, 6]. The starting point is the observation that a linear combination of the constraint values and
+matrices yields an unbiased estimate of the solution.
+Pm
+1
+1
+?
+Lemma 1. Let M = m
+i=1 bi Ai . Then 2 E(M ) = X , where the expectation is with respect to
+the randomness in the measurement matrices Ai .
+Based on this fact, let X ? = U ? ΣU ? > be the eigenvalue decomposition of X ? , where U ? =
+[u?1 , . . . , u?r ] and Σ = diag(σ1 , . . . , σr ) such that σ1 ≥ . . . ≥ σr are the nonzero eigenvalues of
+1
+of E(M ) associated with
+X ? . Let Z ? = U ? Σ 2 . Clearly, u?s = zs? / kzs? k is the top sth eigenvector
+q
+
+eigenvalue 2 kzs? k . Therefore, we initialize according to zs0 = |λ2s | vs where (vs , λs ) is the top
+sth eigenpair of M . For sufficiently large m, it is reasonable to expect that Z 0 is close to Z ? ; this is
+confirmed by concentration of measure arguments.
+2
+
+Certain key properties of f (Z) will be seen to yield a linear rate of convergence. In the analysis
+of convex functions, Nesterov [16] shows that for unconstrained optimization, the gradient descent
+scheme with sufficiently small step size will converge linearly to the optimum if the objective function is strongly convex and has a Lipschitz continuous gradient. However, these two properties are
+global and do not hold for our objective function f (Z). Nevertheless, we expect that similar conditions hold for the local area near Z ? . If so, then if we start close enough to Z ? , we can achieve the
+global optimum.
+In our subsequent analysis, we establish the convergence of Algorithm 1 with a constant step size of
+2
+the form µ/ kZ ? kF , where µ is a small constant. Since kZ ? kF is unknown, we replace it by Z 0 F .
+
+5
+
+Convergence Analysis
+
+In this section we present our main result analyzing the gradient descent algorithm, and give a
+sketch of the proof. To begin, note that the symmetric decomposition of X ? is not unique, since
+4
+
+100
+
+103
+
+dist(Z,Z ⋆ )
+kZ ⋆ kF
+
+f (Z)
+
+102
+101
+100
+10-1
+-2
+
+2
+2
+
+-2
+
+10-10
+
+10-15
+
+0
+
+0
+
+Z1
+
+10-5
+
+0
+
+200
+
+Z2
+
+400
+
+600
+
+800
+
+iteration
+
+(a)
+
+(b)
+
+Figure 1: (a) An instance of f (Z) where X ? ∈ R2×2 is rank-1 and Z ∈ R2 . The underlying truth
+is Z ? = [1, 1]> . Both Z ? and −Z ? are minimizers. (b) Linear convergence of the gradient scheme,
+for n = 200, m = 1000 and r = 2. The distance metric is given in Definition 1.
+Algorithm 1: Gradient descent for rank minimization
+input: {Ai , bi }m
+i=1 , r, µ
+initialization
+Set (v1 , λ1 ), . . . , (vr , λr ) to the top r eigenpairs of
+q
+Z 0 = [z10 , . . . , zr0 ] where zs0 = |λ2s | · vs , s ∈ [r]
+k←0
+repeat
+
+m 
+P
+>
+1
+∇f (Z k ) = m
+tr(Z k Ai Z k ) − bi Ai Z k
+
+1
+m
+
+Pm
+
+i=1 bi Ai
+
+s.t. |λ1 | ≥ · · · ≥ |λr |
+
+i=1
+
+Z
+
+k+1
+
+k
+
+µ
+∇f (Z k )
+|λ
+|/2
+s
+s=1
+
+= Z − Pr
+
+k ←k+1
+until convergence;
+b = ZkZk>
+output: X
+
+X ? = (Z ? U )(Z ? U )> for any r × r orthonormal matrix U . Thus, the solution set is
+o
+n
+e = Z ? U for some U with U U > = U > U = I .
+S = Ze ∈ Rn×r | Z
+e 2 = kX ? k for any Ze ∈ S. We define the distance to the optimal solution in terms of
+Note that kZk
+F
+∗
+this set.
+Definition 1. Define the distance between Z and Z ? as
+
+
+d(Z, Z ? ) =
+min
+kZ − Z ? U k = min Z − Ze .
+F
+
+U U > =U > U =I
+
+e
+Z∈S
+
+F
+
+Our main result for exact recovery is stated below, assuming that the rank is correctly specified.
+Since the true rank is typically unknown in practice, one can start from a very low rank and gradually
+increase it.
+Theorem 2. Let the condition number κ = σ1 /σr denote the ratio of the largest to the smallest
+nonzero eigenvalues of X ? . There exists a universal constant c0 such that if m ≥ c0 κ2 r3 n log n,
+with high probability the initialization Z 0 satisfies
+q
+3
+σr .
+(6)
+d(Z 0 , Z ? ) ≤ 16
+2
+
+Moreover, there exists a universal constant c1 such that when using constant step size µ/ kZ ? kF
+c1
+with µ ≤
+and initial value Z 0 obeying (6), the kth step of Algorithm 1 satisfies
+κn
+q
+
+µ k/2
+3
+d(Z k , Z ? ) ≤ 16
+σr 1 −
+12κr
+with high probability.
+5
+
+We now outline the proof, giving full details in the supplementary material. The proof has four main
+steps. The first step is to give a regularity condition under which the algorithm converges linearly if
+we start close enough to Z ? . This provides a local regularity property that is similar to the Nesterov
+[16] criteria that the objective function is strongly convex and has a Lipschitz continuous gradient.
+
+
+e denote the matrix closest to Z in the solution set.
+Definition 2. Let Z = arg min e Z − Z
+Z∈S
+
+F
+
+We say that f satisfies the regularity condition RC(ε, α, β) if there exist constants α, β such that
+for any Z satisfying d(Z, Z ? ) ≤ ε, we have
+2
+1 
+1
+2
+h∇f (Z), Z − Zi ≥ σr Z − Z F +
+2 k∇f (Z)kF .
+α
+β kZ ? kF
+
+Using this regularity condition, we show that the iterative step of the algorithm moves closer to the
+optimum, if the current iterate is sufficiently close.
+µ
+k
+Theorem 3. Consider the update Z k+1 = Z k −
+2 ∇f (Z ). If f satisfies RC(ε, α, β),
+kZ ? kF
+d(Z k , Z ? ) ≤ ε, and 0 < µ < min(α/2, 2/β), then
+r
+2µ
+k+1
+?
+d(Z
+,Z ) ≤ 1 −
+d(Z k , Z ? ).
+ακr
+In the next step of the proof, we condition on two events that will be shown to hold with high
+probability using concentration results. Let δ denote a small value to be specified later.
+
+
+m
+1 P
+
+√
+n
+>
+>
+
+A1 For any u ∈ R such that kuk ≤ σ1 ,  m
+(u Ai u)Ai − 2uu  ≤ rδ .
+i=1
+
+"
+#
+
+ ∂ 2 f (Z)
+2
+e
+e
+∂ f (Z)  δ
+e ∈ S, 
+−E
+A2 For any Z
+ ≤ , for all s, k ∈ [r].
+
+ ∂e
+zs ∂e
+zk>
+∂e
+zs ∂e
+zk>  r
+Here the expectations are with respect to the random measurement matrices. Under these assumptions, we can show that the objective satisfies the regularity condition with high probability.
+1
+Theorem 4. Suppose that A1 and A2 hold. If δ ≤ 16
+σr , then f satisfies the regularity condition
+q
+3
+RC( 16 σr , 24, 513κn) with probability at least 1 − mCe−ρn , where C, ρ are universal constants.
+
+Next we show that under A1, a good initialization can be found.
+m
+P
+r
+1
+Theorem 5. Suppose that A1 holds. Let {vs , λs }s=1 be the top r eigenpairs of M = m
+bi Ai
+i=1
+q
+such that |λ1 | ≥ · · · ≥ |λr |. Let Z 0 = [z1 , . . . , zr ] where zs = |λ2s | · vs , s ∈ [r]. If δ ≤ 4σ√rr , then
+p
+d(Z 0 , Z ? ) ≤ 3σr /16.
+Finally, we show that conditioning on A1 and A2 is valid since these events have high probability
+as long as m is sufficiently large.
+42
+n
+Theorem 6. If the number of samples m ≥
+2 , δ/rσ ) n log n, then for any u ∈ R
+2
+2
+min(δ
+/r
+σ
+1
+1
+√
+satisfying kuk ≤ σ1 ,
+
+
+m
+1 X
+
+
+>
+>
+(u Ai u)Ai − 2uu  ≤ rδ
+
+m
+
+i=1
+
+holds with probability at least 1 − mCe−ρn −
+
+2
+n2 ,
+
+where C and ρ are universal constants.
+128
+e∈S
+Theorem 7. For any x ∈ Rn , if m ≥
+n log n, then for any Z
+min(δ 2 /4r2 σ12 , δ/2rσ1 )
+
+"
+#
+ ∂ 2 f (Z)
+e
+e 
+∂ 2 f (Z)
+ δ
+
+−E
+
+ ≤ , for all s, k ∈ [r],
+ ∂e
+zs ∂e
+zk>
+∂e
+zs ∂e
+zk>  r
+
+with probability at least 1 − 6me−n −
+
+4
+n2 .
+
+6
+
+Note that since we need δ ≤ min
+
+
+
+1
+1
+√
+16 , 4 r
+
+
+
+σr , we have
+
+δ
+rσ1
+
+≤ 1, and the number of measure-
+
+3 2
+
+ments required by our algorithm scales as O(r κ n log n), while only O(r2 κ2 n log n) samples are
+required by the regularity condition. We conjecture this bound could be further improved to be
+O(rn log n); this is supported by the experimental results presented below.
+Recently, Tu et al. [21] establish a tighter O(r2 κ2 n) bound overall. Specifically, when only one SVP
+step is used in preprocessing, the initialization of PF is also the spectral decomposition of 21 M . The
+√
+authors show that O(r2 κ2 n) measurements are sufficient for Z 0 to satisfy d(Z 0 , Z ? ) ≤ O( σr )
+with high probability, and demonstrate an O(rn) sample complexity for the regularity condition.
+
+6
+
+Experiments
+
+In this section we report the results of experiments on synthetic datasets. We compare our gradient
+descent algorithm with nuclear norm relaxation, SVP and AltMinSense for which we drop the
+positive semidefiniteness constraint, as justified by the observation in Section 2. We use ADMM
+for the nuclear norm minimization, based on the algorithm for the mixture approach in Tomioka
+et al. [19]; see Appendix G. For simplicity, we assume that AltMinSense, SVP and the gradient
+scheme know the true rank. Krylov subspace techniques such as the Lanczos method could be used
+compute the partial eigendecomposition; we use the randomized algorithm of Halko et al. [9] to
+compute the low rank SVD. All methods are implemented in MATLAB and the experiments were
+run on a MacBook Pro with a 2.5GHz Intel Core i7 processor and 16 GB memory.
+6.1
+
+Computational Complexity
+
+It is instructive to compare the per-iteration cost of the different approaches; see Table 1. Suppose
+that the density (fraction of nonzero entries) of each Ai is ρ. For AltMinSense, the cost of solving
+the least squares problem is O(mn2 r2 + n3 r3 + mn2 rρ). The other three methods have O(mn2 ρ)
+cost to compute the affine transformation. For the nuclear norm approach, the O(n3 ) cost is from
+the SVD and the O(m2 ) cost is due to the update of the dual variables. The gradient scheme requires
+>
+2n2 r operations to compute Z k Z k and to multiply Z k by n × n matrix to obtain the gradient. SVP
+2
+needs O(n r) operations to compute the top r singular vectors. However, in practice this partial
+SVD is more expensive than the 2n2 r cost required for the matrix multiplies in the gradient scheme.
+Method
+
+Complexity
+
+nuclear norm minimization via ADMM
+gradient descent
+SVP
+AltMinSense
+
+O(mn2 ρ + m2 + n3 )
+O(mn2 ρ) + 2n2 r
+O(mn2 ρ + n2 r)
+O(mn2 r2 + n3 r3 + mn2 rρ)
+
+Table 1: Per-iteration computational complexities of different methods.
+Clearly, AltMinSense is the least efficient. For the other approaches, in the dense case (ρ large),
+the affine transformation dominates the computation. Our method removes the overhead caused by
+the SVD. In the sparse case (ρ small), the other parts dominate and our method enjoys a low cost.
+6.2
+
+Runtime Comparison
+
+We conduct experiments for both dense and sparse measurement matrices. AltMinSense is indeed slow, so we do not include it here.
+In the first scenario, we randomly generate a 400×400 rank-2 matrix X ? = xx> +yy > where x, y ∼
+N (0, I). We also generate m = 6n matrices A1 , . . . , Am from the GOE, and then take b = A(X ? ).
+b − X ? kF /kX ? kF . For
+We report the relative error measured in the Frobenius norm defined as kX
+the nuclear norm approach, we set the regularization parameter to λ = 10−5 . We test three values
+η = 10, 100, 200 for the penalty parameter and select η = 100 as it leads to the fastest convergence.
+Similarly, for SVP we evaluate the three values 5 × 10−5 , 10−4 , 2 × 10−4 for the step size, and select
+10−4 as the largest for which SVP converges. For our approach, we test the three values 0.6, 0.8, 1.0
+for µ and select 0.8 in the same way.
+7
+
+100
+
+100
+
+10-2
+
+1
+
+probability of successful recovery
+
+10
+
+10-4
+
+b−X ⋆ kF
+kX
+kX ⋆ kF
+
+b−X ⋆ kF
+kX
+kX ⋆ kF
+
+10-4
+
+10-6
+10-8
+
+10-14
+
+10-6
+
+10
+
+10-10
+10-12
+
+rank=1 n=60
+
+0.9
+-2
+
+10-10
+
+nuclear norm
+SVP
+gradient descent
+10
+
+1
+
+-8
+
+10
+
+2
+
+time (seconds)
+
+10
+
+3
+
+10-12
+
+10
+
+0
+
+10
+
+1
+
+time (seconds)
+
+(a)
+
+(b)
+
+10
+
+2
+
+gradient
+SVP
+nuclear
+
+0.8
+
+rank=2 n=60
+
+0.7
+
+gradient
+SVP
+nuclear
+
+0.6
+0.5
+
+rank=1 n=100
+
+0.4
+0.3
+
+gradient
+SVP
+nuclear
+
+0.2
+
+rank=2 n=100
+
+0.1
+
+gradient
+SVP
+nuclear
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+m/n
+
+(c)
+
+Figure 2: (a) Runtime comparison where X ? ∈ R400×400 is rank-2 and Ai s are dense. (b) Runtime
+comparison where X ? ∈ R600×600 is rank-2 and Ai s are sparse. (c) Sample complexity comparison.
+In the second scenario, we use a more general and practical setting. We randomly generate a rank-2
+matrix X ? ∈ R600×600 as before. We generate m = 7n sparse Ai s whose entries are i.i.d. Bernoulli:
+
+1 with probability ρ,
+(Ai )jk =
+0 with probability 1 − ρ,
+where we use ρ = 0.001. For all the methods we use the same strategies as before to select parameters. For the nuclear norm approach, we try three values η = 10, 100, 200 and select η = 100. For
+SVP, we test the three values 5 × 10−3 , 2 × 10−3 , 10−3 for the step size and select 10−3 . For the
+gradient algorithm, we check the three values 0.8, 1, 1.5 for µ and choose 1.
+The results are shown in Figures 2a and 2b. In the dense case, our method is faster than the nuclear
+norm approach and slightly outperforms SVP. In the sparse case, it is significantly faster than the
+other approaches.
+6.3
+
+Sample Complexity
+
+We also evaluate the number of measurements required by each method to exactly recover X ? ,
+which we refer to as the sample complexity. We randomly generate the true matrix X ? ∈ Rn×n and
+compute the solutions of each method given m measurements, where the Ai s are randomly drawn
+from the GOE. A solution with relative error below 10−5 is considered to be successful. We run 40
+trials and compute the empirical probability of successful recovery.
+We consider cases where n = 60 or 100 and X ? is of rank one or two. The results are shown in
+Figure 2c. For SVP and our approach, the phase transitions happen around m = 1.5n when X ? is
+rank-1 and m = 2.5n when X ? is rank-2. This scaling is close to the number of degrees of freedom
+in each case; this confirms that the sample complexity scales linearly with the rank r. The phase
+transition for the nuclear norm approach occurs later. The results suggest that the sample complexity
+of our method should also scale as O(rn log n) as for SVP and the nuclear norm approach [11, 18].
+
+7
+
+Conclusion
+
+We connect a special case of affine rank minimization to a class of semidefinite programs with
+random constraints. Building on a recently proposed first-order algorithm for phase retrieval [6],
+we develop a gradient descent procedure for rank minimization and establish convergence to the
+optimal solution with O(r3 n log n) measurements. We conjecture that O(rn log n) measurements
+are sufficient for the method to converge, and that the conditions on the sampling matrices Ai can be
+significantly weakened. More broadly, the technique used in this paper—factoring the semidefinite
+matrix variable, recasting the convex optimization as a nonconvex optimization, and applying firstorder algorithms—first proposed by Burer and Monteiro [4], may be effective for a much wider class
+of SDPs, and deserves further study.
+Acknowledgements
+Research supported in part by NSF grant IIS-1116730 and ONR grant N00014-12-1-0762.
+8
+
+References
+[1] Arash A. Amini and Martin J. Wainwright. High-dimensional analysis of semidefinite relaxations for sparse principal components. The Annals of Statistics, 37(5):2877–2921, 2009.
+[2] Francis Bach. Adaptivity of averaged stochastic gradient descent to local strong convexity for
+logistic regression. The Journal of Machine Learning Research, 15(1):595–627, 2014.
+[3] Francis Bach and Eric Moulines. Non-asymptotic analysis of stochastic approximation algorithms for machine learning. In Advances in Neural Information Processing Systems (NIPS),
+2011.
+[4] Samuel Burer and Renato DC Monteiro. A nonlinear programming algorithm for solving
+semidefinite programs via low-rank factorization. Mathematical Programming, 95(2):329–
+357, 2003.
+[5] Jian-Feng Cai, Emmanuel J Candès, and Zuowei Shen. A singular value thresholding algorithm
+for matrix completion. SIAM Journal on Optimization, 20(4):1956–1982, 2010.
+[6] Emmanuel Candès, Xiaodong Li, and Mahdi Soltanolkotabi. Phase retrieval via wirtinger flow:
+Theory and algorithms. arXiv preprint arXiv:1407.1065, 2014.
+[7] A. d’Aspremont, L. El Ghaoui, M. I. Jordan, and G. Lanckriet. A direct formulation for
+sparse PCA using semidefinite programming. In S. Thrun, L. Saul, and B. Schoelkopf (Eds.),
+Advances in Neural Information Processing Systems (NIPS), 2004.
+[8] Michel X. Goemans and David P. Williamson. Improved approximation algorithms for maximum cut and satisfiability problems using semidefinite programming. Journal of the ACM, 42
+(6):1115–1145, November 1995. ISSN 0004-5411.
+[9] Nathan Halko, Per-Gunnar Martinsson, and Joel A Tropp. Finding structure with randomness:
+Probabilistic algorithms for constructing approximate matrix decompositions. SIAM review,
+53(2):217–288, 2011.
+[10] Matt Hoffman, David M. Blei, Chong Wang, and John Paisley. Stochastic variational inference.
+The Journal of Machine Learning Research, 14, 2013.
+[11] Prateek Jain, Raghu Meka, and Inderjit S Dhillon. Guaranteed rank minimization via singular
+value projection. In Advances in Neural Information Processing Systems, pages 937–945,
+2010.
+[12] Prateek Jain, Praneeth Netrapalli, and Sujay Sanghavi. Low-rank matrix completion using
+alternating minimization. In Proceedings of the forty-fifth annual ACM symposium on Theory
+of computing, pages 665–674. ACM, 2013.
+[13] Beatrice Laurent and Pascal Massart. Adaptive estimation of a quadratic functional by model
+selection. Annals of Statistics, pages 1302–1338, 2000.
+[14] Michel Ledoux and Brian Rider. Small deviations for beta ensembles. Electron. J. Probab.,
+15:no. 41, 1319–1343, 2010. ISSN 1083-6489. doi: 10.1214/EJP.v15-798. URL http:
+//ejp.ejpecp.org/article/view/798.
+[15] Raghu Meka, Prateek Jain, Constantine Caramanis, and Inderjit S Dhillon. Rank minimization
+via online learning. In Proceedings of the 25th International Conference on Machine learning,
+pages 656–663. ACM, 2008.
+[16] Yurii Nesterov. Introductory lectures on convex optimization, volume 87. Springer Science &
+Business Media, 2004.
+[17] Praneeth Netrapalli, Prateek Jain, and Sujay Sanghavi. Phase retrieval using alternating minimization. In Advances in Neural Information Processing Systems, pages 2796–2804, 2013.
+[18] Benjamin Recht, Maryam Fazel, and Pablo A Parrilo. Guaranteed minimum-rank solutions of
+linear matrix equations via nuclear norm minimization. SIAM review, 52(3):471–501, 2010.
+[19] Ryota Tomioka, Kohei Hayashi, and Hisashi Kashima. Estimation of low-rank tensors via
+convex optimization. arXiv preprint arXiv:1010.0789, 2010.
+[20] Joel A Tropp. An introduction to matrix concentration inequalities. arXiv preprint
+arXiv:1501.01571, 2015.
+[21] Stephen Tu, Ross Boczar, Mahdi Soltanolkotabi, and Benjamin Recht. Low-rank solutions of
+linear matrix equations via procrustes flow. arXiv preprint arXiv:1507.03566, 2015.
+9
+
+

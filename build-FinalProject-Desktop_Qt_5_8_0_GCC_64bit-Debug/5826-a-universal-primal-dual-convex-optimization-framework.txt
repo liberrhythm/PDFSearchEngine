@@ -1,0 +1,923 @@
+A Universal Primal-Dual Convex Optimization Framework
+
+Alp Yurtsever:
+:
+
+Quoc Tran-Dinh;
+
+Volkan Cevher:
+
+Laboratory for Information and Inference Systems, EPFL, Switzerland
+{alp.yurtsever, volkan.cevher}@epfl.ch
+;
+Department of Statistics and Operations Research, UNC, USA
+quoctd@email.unc.edu
+
+Abstract
+We propose a new primal-dual algorithmic framework for a prototypical constrained convex optimization template. The algorithmic instances of our framework are universal since they can automatically adapt to the unknown Hölder
+continuity degree and constant within the dual formulation. They are also guaranteed to have optimal convergence rates in the objective residual and the feasibility
+gap for each Hölder smoothness degree. In contrast to existing primal-dual algorithms, our framework avoids the proximity operator of the objective function. We
+instead leverage computationally cheaper, Fenchel-type operators, which are the
+main workhorses of the generalized conditional gradient (GCG)-type methods. In
+contrast to the GCG-type methods, our framework does not require the objective
+function to be differentiable, and can also process additional general linear inclusion constraints, while guarantees the convergence rate on the primal problem.
+
+1
+
+Introduction
+
+This paper constructs an algorithmic framework for the following convex optimization template:
+f ‹ :“ min tf pxq : Ax ´ b P Ku ,
+xPX
+
+(1)
+
+where f : Rp Ñ R Y t`8u is a convex function, A P Rnˆp , b P Rn , and X and K are nonempty,
+closed and convex sets in Rp and Rn respectively. The constrained optimization formulation (1) is
+quite flexible, capturing many important learning problems in a unified fashion, including matrix
+completion, sparse regularization, support vector machines, and submodular optimization [1–3].
+Processing the inclusion Ax ´ b P K in (1) requires a significant computational effort in the largescale setting [4]. Hence, the majority of the scalable numerical solution methods for (1) are of
+the primal-dual-type, including decomposition, augmented Lagrangian, and alternating direction
+methods: cf., [4–9]. The efficiency guarantees of these methods mainly depend on three properties
+of f : Lipschitz gradient, strong convexity, and the tractability of its proximal operator.
+For instance,
+(
+the proximal operator of f , i.e., proxf pxq :“ arg minz f pzq ` p1{2q}z ´ x}2 , is key in handling
+non-smooth f while obtaining the convergence rates as if it had Lipschitz gradient.
+When the set Ax´b P K is absent in (1), other methods can be preferable to primal-dual algorithms.
+For instance, if f has Lipschitz gradient, then we can use the accelerated proximal gradient methods
+by applying the proximal operator for the indicator function of the set X [10, 11]. However, as the
+problem dimensions become increasingly larger, the proximal tractability assumption can be restrictive. This fact increased the popularity of the generalized conditional gradient (GCG) methods (or
+Frank-Wolfe-type algorithms), which instead leverage the following Fenchel-type oracles [1, 12, 13]
+rxs7X ,g :“ arg max txx, sy ´ gpsqu ,
+sPX
+
+(2)
+
+where g is a convex function. When g “ 0, we obtain the so-called linear minimization oracle [12].
+When X ” Rp , then the (sub)gradient of the Fenchel conjugate of g, ∇g ˚ , is in the set rxs7g .
+1
+
+The sharp-operator in (2) is often much cheaper to process as compared to the prox operator [1,
+12]. While the GCG-type algorithms require O p1{q-iterations to guarantee an  -primal objective
+residual/duality gap, they cannot converge when their objective is nonsmooth [14].
+To this end, we propose a new primal-dual algorithmic framework that can exploit the sharp-operator
+of f in lieu of its proximal operator. Our aim is to combine the flexibility of proximal primal-dual
+methods in addressing the general template (1) while leveraging the computational advantages of
+the GCG-type methods. As a result, we trade off the computational difficulty per iteration with the
+overall rate of convergence. While`we obtain
+optimal rates based on the sharp-operator oracles,
+˘
+we note that the rates reduce to O 1{2 with the sharp operator vs. O p1{q with the proximal
+operator when f is completely non-smooth (cf. Definition 1.1). Intriguingly, the convergence rates
+are the same when f is strongly convex. Unlike GCG-type methods, our approach can now handle
+nonsmooth objectives in addition to complex constraint structures as in (1).
+Our primal-dual framework is universal in the sense the convergence of our algorithms can optimally
+adapt to the Hölder continuity of the dual objective g (cf., (6) in Section 3) without having to know
+its parameters. By Hölder continuity, we mean the (sub)gradient ∇g of a convex function g satisfies
+}∇gpλq ´ ∇gpλ̃q} ď Mν }λ ´ λ̃}ν with parameters Mν ă 8 and ν P r0, 1s for all λ, λ̃ P Rn .
+The case ν “ 0 models the bounded subgradient, whereas ν “ 1 captures the Lipschitz gradient.
+The Hölder continuity has recently resurfaced in unconstrained optimization by [15] with universal
+gradient methods that obtain optimal rates without having to know Mν and ν. Unfortunately, these
+methods cannot directly handle the general constrained template (1). After our initial draft appeared,
+[14] presented new GCG-type methods for composite minimization, i.e., minxPRp f pxq ` ψpxq,
+relying on Hölder smoothness of f (i.e., ν P p0, 1s) and the sharp-operator of ψ. The methods
+in [14] do not apply when f is non-smooth. In addition, they cannot process the additional inclusion
+Ax ´ b P K in (1), which is a major drawback for machine learning applications.
+Our algorithmic framework features a gradient method and its accelerated variant that operates on
+the dual formulation of (1). For the accelerated variant, we study an alternative to the universal
+accelerated method of [15] based on FISTA [10] since it requires less proximal operators in the
+dual. While the FISTA scheme is classical, our analysis of it with the Hölder continuous assumption
+is new. Given the dual iterates, we then use a new averaging scheme to construct the primal-iterates
+for the constrained template (1). In contrast to the non-adaptive weighting schemes of GCG-type
+algorithms, our weights explicitly depend on the local estimates of the Hölder constants Mν at each
+iteration. Finally, we derive the worst-case complexity results. Our results are optimal since they
+match the computational lowerbounds in the sense of first-order black-box methods [16].
+Paper organization: Section 2 briefly recalls primal-dual formulation of problem (1) with some
+standard assumptions. Section 3 defines the universal gradient mapping and its properties. Section 4
+presents the primal-dual universal gradient methods (both the standard and accelerated variants), and
+analyzes their convergence. Section 5 provides numerical illustrations, followed by our conclusions.
+The supplementary material includes the technical proofs and additional implementation details.
+Notation and terminology: For notational simplicity, we work on the Rp {Rn spaces with the
+Euclidean norms. We denote the Euclidean distance of the vector u to a closed convex set X by
+dist pu, X q. Throughout the paper, } ¨ } represents the Euclidean norm for vectors and the spectral
+norm for the matrices. For a convex function f , we use ∇f both for its subgradient and gradient, and
+f ˚ for its Fenchel’s conjugate. Our goal is to approximately solve (1) to obtain x in the following
+sense:
+Definition 1.1. Given an accuracy level  ą 0, a point x P X is said to be an -solution of (1) if
+|f px q ´ f ‹ | ď , and dist pAx ´ b, Kq ď .
+Here, we call |f px q ´ f ‹ | the primal objective residual and dist pAx ´ b, Kq the feasibility gap.
+
+2
+
+Primal-dual preliminaries
+
+In this section, we briefly summarize the primal-dual formulation with some standard assumptions.
+For the ease of presentation, we reformulate (1) by introducing a slack variable r as follows:
+f‹ “
+
+min tf pxq : Ax ´ r “ bu , px‹ : f px‹ q “ f ‹ q.
+
+xPX ,rPK
+
+(3)
+
+Let z :“ rx, rs and Z :“ X ˆK. Then, we have D :“ tz P Z : Ax´r “ bu as the feasible set of (3).
+2
+
+The dual problem: The Lagrange function associated with the linear constraint Ax ´ r “ b is
+defined as Lpx, r, λq :“ f pxq ` xλ, Ax ´ r ´ by, and the dual function d of (3) can be defined and
+decomposed as follows:
+dpλq :“ min tf pxq ` xλ, Ax ´ r ´ byu “ min tf pxq ` xλ, Ax ´ byu ` min xλ, ´ry,
+xPX
+xPX
+rPK
+loooooooooooooooomoooooooooooooooon
+loooooomoooooon
+rPK
+dx pλq
+
+dr pλq
+
+n
+
+where λ P R is the dual variable. Then, we define the dual problem of (3) as follows:
+!
+)
+d‹ :“ maxn dpλq “ maxn dx pλq ` dr pλq .
+λPR
+
+λPR
+
+(4)
+
+Fundamental assumptions: To characterize the primal-dual relation between (1) and (4), we require the following assumptions [17]:
+Assumption A. 1. The function f is proper, closed, and convex, but not necessarily smooth. The
+constraint sets X and K are nonempty, closed, and convex. The solution set X ‹ of (1) is nonempty.
+Either Z is polyhedral or the Slater’s condition holds. By the Slater’s condition, we mean ripZq X
+tpx, rq : Ax ´ r “ bu ‰ H, where ripZq stands for the relative interior of Z.
+Strong duality: Under Assumption A.1, the solution set Λ‹ of the dual problem (4) is also
+nonempty and bounded. Moreover, the strong duality holds, i.e., f ‹ “ d‹ .
+
+3
+
+Universal gradient mappings
+
+This section defines the universal gradient mapping and its properties.
+3.1
+
+Dual reformulation
+
+We first adopt the composite convex minimization formulation of (4) for better interpretability as
+G‹ :“ minn tGpλq :“ gpλq ` hpλqu ,
+λPR
+
+(5)
+
+where G‹ “ ´d‹ , and the correspondence between pg, hq and pdx , dr q is as follows:
+#
+gpλq :“ max txλ, b ´ Axy ´ f pxqu “ ´dx pλq,
+xPX
+
+hpλq :“ max xλ, ry “ ´dr pλq.
+
+(6)
+
+rPK
+
+Since g and h are generally non-smooth, FISTA and its proximal-based analysis [10] are not directly
+applicable. Recall the sharp operator defined in (2), then g can be expressed as
+(
+gpλq “ max x´AT λ, xy ´ f pxq ` xλ, by,
+xPX
+
+and we define the optimal solution to the g subproblem above as follows:
+(
+x˚ pλq P arg max x´AT λ, xy ´ f pxq ” r´AT λs7X ,f .
+xPX
+
+(7)
+
+The second term, h, depends on the structure of K. We consider three special cases:
+paq Sparsity/low-rankness: If K :“ tr P Rn : }r} ď κu for a given κ ě 0 and a given norm } ¨ },
+then hpλq “ κ}λ}˚ , the scaled dual norm of } ¨ }. For instance, if K :“ tr P Rn : }r}1 ď κu,
+then hpλq “ κ}λ}8 . While the `1 -norm induces the sparsity of x, computing h requires the max
+absolute elements of λ. If K :“ tr P Rq1 ˆq2 : }r}˚ ď κu (the nuclear norm), then hpλq “ κ}λ},
+the spectral norm. The nuclear norm induces the low-rankness of x. Computing h in this case leads
+to finding the top-eigenvalue of λ, which is efficient.
+pbq Cone constraints: If K is a cone, then h becomes the indicator function δK˚ of its dual cone
+K˚ . Hence, we can handle the inequality constraints and positive semidefinite constraints in (1). For
+instance, if K ” Rn` , then hpλq “ δRn´ pλq, the indicator function of Rn´ :“ tλ P Rn : λ ď 0u. If
+p
+K ” S`
+, then hpλq :“ δS´p pλq, the indicator function of the negative semidefinite matrix cone.
+śp
+řp
+pcq Separable structures: If X and f are separable, i.e., X :“ i“1 Xi and f pxq :“ i“1 fi pxi q,
+then the evaluation of g and its derivatives can be decomposed into p subproblems.
+3
+
+3.2
+
+Hölder continuity of the dual universal gradient
+
+Let ∇gp¨q be a subgradient of g, which can be computed as ∇gpλq “ b ´ Ax˚ pλq. Next, we define
+#
++
+}∇gpλq´∇gpλ̃q}
+Mν “ Mν pgq :“ sup
+,
+(8)
+}λ ´ λ̃}ν
+λ,λ̃PRn ,λ‰λ̃
+where ν ě 0 is the Hölder smoothness order. Note that the parameter Mν explicitly depends on
+ν [15]. We are interested in the case ν P r0, 1s, and especially the two extremal cases, where
+we either have the Lipschitz gradient that corresponds to ν “ 1, or the bounded subgradient that
+corresponds to ν “ 0.
+We require the following condition in the sequel:
+Assumption A. 2. M̂ pgq :“ inf Mν pgq ă `8.
+0ďνď1
+
+Assumption A.2 is reasonable. We explain this claim with the following two examples. First, if g is
+subdifferentiable and X is bounded, then ∇gp¨q is also bounded. Indeed, we have
+A
+}∇gpλq} “ }b ´ Ax˚ pλq} ď DX
+:“ supt}b ´ Ax} : x P X u.
+A
+ă 8.
+Hence, we can choose ν “ 0 and M̂ν pgq “ 2DX
+
+Second, if f is uniformly convex with the convexity parameter µf ą 0 and the degree q ě 2, i.e.,
+x∇f pxq ´ ∇f px̃q, x ´ x̃y ě µf }x ´ x̃}q for all x, x̃ P Rp , then g defined by (6) satisfies (8) with
+`
+˘ 1
+1
+2 q´1
+ν “ q´1
+and M̂ν pgq “ µ´1
+ă `8, as shown in [15]. In particular, if q “ 2, i.e., f
+f }A}
+2
+is µf -strongly convex, then ν “ 1 and Mν pgq “ µ´1
+f }A} , which is the Lipschitz constant of the
+gradient ∇g.
+3.3
+
+The proximal-gradient step for the dual problem
+
+Given λ̂k P Rn and Mk ą 0, we define
+Mk
+}λ ´ λ̂k }2
+2
+as an approximate quadratic surrogate of g. Then, we consider the following update rule:
+´
+¯
+(
+λk`1 :“ arg minn QMk pλ; λ̂k q ` hpλq ” proxM ´1 h λ̂k ´ Mk´1 ∇gpλ̂k q .
+QMk pλ; λ̂k q :“ gpλ̂k q ` x∇gpλ̂k q, λ ´ λ̂k y `
+
+λPR
+
+k
+
+(9)
+
+For a given accuracy  ą 0, we define
+ 1´ν
+„
+2
+1 ´ ν 1 1`ν
+Ď
+Mν1`ν .
+M :“
+1`ν 
+
+(10)
+
+We need to choose the parameter Mk ą 0 such that QMk is an approximate upper surrogate of g,
+i.e., gpλq ď QMk pλ; λk q ` δk for some λ P Rn and δk ě 0. If ν and Mν are known, then we can
+Ď defined by (10). In this case, QM
+set Mk “ M
+Ď is an upper surrogate of g. In general, we do not
+know ν and Mν . Hence, Mk can be determined via a backtracking line-search procedure.
+
+4
+
+Universal primal-dual gradient methods
+
+We apply the universal gradient mappings to the dual problem (5), and propose an averaging scheme
+to construct tx̄k u for approximating x‹ . Then, we develop an accelerated variant based on the FISTA
+¯ k u for approximating x‹ .
+scheme [10], and construct another primal sequence tx̄
+4.1
+
+Universal primal-dual gradient algorithm
+
+Our algorithm is shown in Algorithm 1. The dual steps are simply the universal gradient method
+in [15], while the new primal step allows to approximate the solution of (1).
+Complexity-per-iteration: First, computing x˚ pλk q at Step 1 requires the solution x˚ pλk q P
+r´AT λk s7X ,f . For many X and f , we can compute x˚ pλk q efficiently and often in a closed form.
+4
+
+Algorithm 1 (Universal Primal-Dual Gradient Method pUniPDGradq)
+Initialization: Choose an initial point λ0 P Rn and a desired accuracy level  ą 0.
+Ď . Set S´1 “ 0 and x̄´1 “ 0p .
+Estimate a value M´1 such that 0 ă M´1 ď M
+for k “ 0 to kmax
+1. Compute a primal solution x˚ pλk q P r´AT λk s7X ,f .
+2. Form ∇gpλk q “ b ´ Ax˚ pλk q.
+3. Line-search: Set Mk,0 “ 0.5Mk´1 . For i “ ´0 to imax , perform the
+¯ following steps:
+´1
+3.a. Compute the trial point λk,i “ proxM ´1 h λk ´ Mk,i
+∇gpλk q .
+k,i
+3.b. If the following line-search condition holds:
+
+gpλk,i q ď QMk,i pλk,i ; λk q ` {2,
+then set ik “ i and terminate the line-search loop. Otherwise, set Mk,i`1 “ 2Mk,i .
+End of line-search
+k
+4. Set λk`1 “ λk,ik and Mk “ Mk,ik . Compute wk “ M1k , Sk “ Sk´1 `wk , and γk “ w
+Sk .
+˚
+5. Compute x̄k “ p1 ´ γk qx̄k´1 ` γk x pλk q.
+end for
+Output: Return the primal approximation x̄k for x‹ .
+
+Second, in the line-search procedure, we require the solution λk,i at Step 3.a, and the evaluation of
+gpλk,i q. The total computational cost depends on the proximal operator of h and the evaluations of
+g. We prove below that our algorithm requires two oracle queries of g on average.
+Theorem 4.1. The primal sequence tx̄k u generated by the Algorithm 1 satisfies
+´}λ‹ }dist pAx̄k ´ b, Kq ď f px̄k q ´ f ‹ ď
+
+Ď }λ0 }2
+M
+
+` ,
+k`1
+2
+
+(11)
+d
+
+dist pAx̄k ´ b, Kq ď
+
+Ď
+4M
+}λ0 ´ λ‹ } `
+k`1
+
+Ď 
+2M
+,
+k`1
+
+(12)
+
+Ď is defined by (10), λ‹ P Λ‹ is an arbitrary dual solution, and  is the desired accuracy.
+where M
+The worst-case analytical complexity: We establish the total number of iterations kmax to achieve
+an -solution x̄k of (1). The supplementary material proves that
+—»
+ffi
+fi2
+—
+ffi
+?
+2
+ˆ
+˙ 1`ν
+—
+ffi
+‹
+M
+4 2}λ }
+—–
+ffi
+ν
+fl inf
+b
+kmax “ –
+(13)
+fl ,
+}λ‹ }
+0ďνď1
+
+´1 ` 1 ` 8 ‹
+}λ }r1s
+
+‹
+
+‹
+
+where }λ }r1s “ max t}λ }, 1u. This complexity is optimal for ν “ 0, but not for ν ą 0 [16].
+At each iteration k, the linesearch procedure at Step 3 requires the evaluations of g. The supplementary material bounds the total number N1 pkq of oracle queries, including the function G and its
+gradient evaluations, up to the kth iteration as follows:
+ˆ
+˙
+*
+"
+p1´νq
+2
+1´ν
+N1 pkq ď 2pk ` 1q ` 1 ´ log2 pM´1 q` inf
+log2
+`
+log2 Mν . (14)
+0ďνď1 1`ν
+p1`νq
+1`ν
+Hence, we have N1 pkq « 2pk`1q, i.e., we require approximately two oracle queries at each iteration
+on the average.
+4.2
+
+Accelerated universal primal-dual gradient method
+
+We now develop an accelerated scheme for solving (5). Our scheme is different from [15] in two
+key aspects. First, we adopt the FISTA [10] scheme to obtain the dual sequence since it requires
+less prox operators compared to the fast scheme in [15]. Second, we perform the line-search after
+computing ∇gpλ̂k q, which can reduce the number of the sharp-operator computations of f and X .
+Note that the application of FISTA to the dual function is not novel per se. However, we claim that
+our theoretical characterization of this classical scheme based on the Hölder continuity assumption
+in the composite minimization setting is new.
+5
+
+Algorithm 2 (Accelerated Universal Primal-Dual Gradient Method pAccUniPDGradq)
+Initialization: Choose an initial point λ0 “ λ̂0 P Rn and an accuracy level  ą 0.
+Ď . Set Ŝ´1 “ 0, t0 “ 1 and x̄
+¯ ´1 “ 0p .
+Estimate a value M´1 such that 0 ă M´1 ď M
+for k “ 0 to kmax
+1. Compute a primal solution x˚ pλ̂k q P r´AT λ̂s7X ,f .
+2. Form ∇gpλ̂k q “ b ´ Ax˚ pλ̂k q.
+3. Line-search: Set Mk,0 “ Mk´1 . For i “ 0 to imax , perform the following steps:
+`
+˘
+´1
+3.a. Compute the trial point λk,i “ proxM ´1 h λ̂k ´ Mk,i
+∇gpλ̂k q .
+k,i
+3.b. If the following line-search condition holds:
+gpλk,i q ď QMk,i pλk,i ; λ̂k q ` {p2tk q,
+then ik “ i, and terminate the line-search loop. Otherwise, set Mk,i`1 “ 2Mk,i .
+End of line-search
+tk
+4. Set λk`1 “ λk,ik and Mk “ Mk,ik . Compute wk “ M
+, Ŝk “ Ŝk´1 `wk , and γk “ wk {Ŝk .
+k
+a
+“
+`
+˘
+‰
+´1
+2
+5. Compute tk`1 “ 0.5 1 ` 1 ` 4tk and update λ̂k`1 “ λk`1 ` ttkk`1
+λk`1 ´ λk .
+¯ k “ p1 ´ γk qx̄
+¯ k´1 ` γk x˚ pλ̂k q.
+6. Compute x̄
+end for
+¯ k for x‹ .
+Output: Return the primal approximation x̄
+
+Complexity per-iteration: The per-iteration complexity of Algorithm 2 remains essentially the same
+as that of Algorithm 1.
+¯ k u generated by the Algorithm 2 satisfies
+Theorem 4.2. The primal sequence tx̄
+Ď }λ0 }2 ,
+4M
+
+`
+2 pk`2q 1`3ν
+1`ν
+d
+Ď
+Ď 
+16M
+8M
+‹
+¯ k ´b, Kq ď
+dist pAx̄
+1`3ν }λ0 ´λ } `
+1`3ν ,
+pk`2q 1`ν
+pk`2q 1`ν
+
+¯ k´b, Kq ď f px̄
+¯ k q´f ‹ ď
+´}λ‹ }dist pAx̄
+
+(15)
+(16)
+
+Ď is defined by (10), λ‹ P Λ‹ is an arbitrary dual solution, and  is the desired accuracy.
+where M
+The worst-case analytical complexity: The supplementary material proves the following worst-case
+¯k:
+complexity of Algorithm 2 to achieve an -solution x̄
+ffi
+—»
+fi 2`2ν
+ffi
+—
+1`3ν
+?
+2
+ˆ
+˙ 1`3ν
+—
+ffi
+‹
+M
+8 2}λ }
+ffi
+—–
+ν
+fl
+b
+(17)
+inf
+kmax “ –
+fl .
+}λ}
+0ďνď1
+
+´1 ` 1 ` 8 }λ}r1s
+This worst-case complexity is optimal in the sense of first-order black box models [16].
+The line-search procedure at Step 3 of Algorithm 2 also terminates after a finite number of iterations.
+Similar to Algorithm 1, Algorithm 2 requires 1 gradient query and ik function evaluations of g at
+each iteration. The supplementary material proves that the number of oracle queries in Algorithm 2
+is upperbounded as follows:
+N2 pkq ď 2pk ` 1q ` 1 `
+
+1´ν
+2
+rlog2 pk ` 1q ´ log2 pqs `
+log2 pMν q ´ log2 pM´1 q. (18)
+1`ν
+1`ν
+
+Roughly speaking, Algorithm 2 requires approximately two oracle query per iteration on average.
+
+5
+
+Numerical experiments
+
+This section illustrates the scalability and the flexibility of our primal-dual framework using some
+applications in the quantum tomography (QT) and the matrix completion (MC).
+6
+
+5.1
+
+Quantum tomography with Pauli operators
+
+We consider the QT problem which aims to extract information from a physical quantum system. A
+q-qubit quantum system is mathematically characterized by its density matrix, which is a complex
+p
+p ˆ p positive semidefinite Hermitian matrix X6 P S`
+, where p “ 2q . Surprisingly, we can provably
+deduce the state from performing compressive linear measurements b “ ApXq P C n based on Pauli
+operators A [18]. While the size of the density matrix grows exponentially in q, a significantly fewer
+compressive measurements (i.e., n “ Opp log pq) suffices to recover a pure state q-qubit density
+matrix as a result of the following convex optimization problem:
+"
+*
+1
+ϕ‹ “ minp ϕpXq :“ }ApXq´b}22 : trpXq “ 1 , pX‹ : ϕpX‹ q “ ϕ‹ q,
+(19)
+2
+XPS`
+where the constraint ensures that X‹ is a density matrix. The recovery is also robust to noise [18].
+Since the objective function has Lipschitz gradient and the constraint (i.e., the Spectrahedron) is
+tuning-free, the QT problem provides an ideal scalability test for both our framework and GCG-type
+algorithms. To verify the performance of the algorithms with respect to the optimal solution in largescale, we remain within the noiseless setting. However, the timing and the convergence behavior of
+the algorithms remain qualitatively the same under polarization and additive Gaussian noise.
+∥Xk −X⋆ ∥F
+∥X⋆ ∥F
+
+10 0
+
+10 0
+
+10
+
+-1
+
+Relative solution error:
+
+10
+
+10
+
+0
+
+-1
+
+10 -2
+
+10 -2
+
+10 -3
+
+10 -3
+
+10 -4
+
+10 -4
+10 0
+
+10 1
+
+# iteration
+
+10 2
+
+10 0
+
+∥Xk −X⋆ ∥F
+∥X⋆ ∥F
+
+10 1
+
+10 1
+
+Relative solution error:
+
+UniPDGrad
+AccUniPDGrad
+FrankWolfe
+
+Objective residual: |ϕ(Xk ) − ϕ⋆ |
+
+Objective residual: |ϕ(Xk ) − ϕ⋆ |
+
+10 2
+
+10
+
+2
+
+10
+
+3
+
+10
+
+4
+
+10 -1
+
+10 -2
+
+10
+
+computational time (s)
+
+0
+
+10
+
+1
+
+# iteration
+
+10
+
+2
+
+10 -1
+
+10
+
+-2
+
+10 2
+
+10 3
+
+10 4
+
+computational time (s)
+
+Figure 1: The convergence behavior of algorithms for the q “ 14 qubits QT problem. The solid lines
+correspond to the theoretical weighting scheme, and the dashed lines correspond to the line-search
+(in the weighting step) variants.
+To this end, we generate a random pure quantum state (e.g., rank-1 X6 ), and we take n “ 2p log p
+random Pauli measurements. For q “ 14 qubits system, this corresponds to a 2681 4351 456 dimensional problem with n “ 3171 983 measurements. We recast (19) into (1) by introducing the slack
+variable r “ ApXq ´ b.
+We compare our algorithms vs. the Frank-Wolfe method, which has optimal convergence rate guarantees for this problem, and its line-search variant. Computing the sharp-operator rxs7 requires a
+top-eigenvector e1 of A˚ pλq, while evaluating g corresponds to just computing the top-eigenvalue
+σ1 of A˚ pλq via a power method. All methods use the same subroutine to compute the sharpoperator, which is based on MATLAB’s eigs function. We set  “ 2 ˆ 10´4 for our methods and
+have a wall-time 2 ˆ 104 s in order to stop the algorithms. However, our algorithms seems insensitive
+to the choice of  for the QT problem.
+Figure 1 illustrates the iteration and the timing complexities of the algorithms. UniPDGrad algorithm, with an average of 1.978 line-search steps per iteration, has similar iteration and timing
+performance as compared to the standard Frank-Wolfe scheme with step-size γk “ 2{pk ` 2q. The
+line-search variant of Frank-Wolfe improves over the standard one; however, our accelerated variant,
+with an average of 1.057 line-search steps, is the clear winner in terms of both iterations and time.
+We can empirically improve the performance of our algorithms even further by adapting a similar
+line-search strategy in the weighting step as Frank-Wolfe, i.e., by choosing the weights wk in a
+greedy fashion to minimize the objective function. The practical improvements due to line-search
+appear quite significant.
+5.2
+
+Matrix completion with MovieLens dataset
+
+To demonstrate the flexibility of our framework, we consider the popular matrix completion (MC)
+application. In MC, we seek to estimate a low-rank matrix X P Rpˆl from its subsampled entries
+b P Rn , where Ap¨q is the sampling operator, i.e., ApXq “ b.
+7
+
+10 0
+
+10 -1
+
+10 -2
+10 0
+
+UniPDGrad
+AccUniPDGrad
+FrankWolfe
+10 1
+
+10 2
+
+# iteration
+
+10 3
+
+10 0
+
+1.13
+
+1.13
+
+1.11
+
+1.11
+
+RMSE
+
+10 1
+
+10 1
+
+RMSE
+
+(RMSE - RMSE⋆ ) / RMSE⋆
+
+(ϕ(X) − ϕ⋆ )/ϕ⋆
+
+10 2
+
+1.09
+
+10 -1
+
+1.07
+
+1.07
+
+10 -2
+10 0
+
+1.05
+
+1.05
+10 1
+
+10 2
+
+10 3
+
+# iteration
+
+1.09
+
+0
+
+1000 2000 3000 4000 5000
+
+# iteration
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+computational time (min)
+
+Figure 2: The performance of the algorithms for the MC problems. The dashed lines correspond to
+the line-search (in the weighting step) variants, and the empty and the filled markers correspond to
+the formulation (20) and (21), respectively.
+Convex formulations involving the nuclear norm have been shown to be quite effective in estimating
+low-rank matrices from limited number of measurements [19]. For instance, we can solve
+"
+*
+1
+2
+min ϕpXq “ }ApXq ´ b} : }X}˚ ď κ ,
+(20)
+n
+XPRpˆl
+with Frank-Wolfe-type methods, where κ is a tuning parameter, which may not be available a priori.
+We can also solve the following parameter-free version
+"
+*
+1
+min ψpXq “ }X}2˚ : ApXq “ b .
+(21)
+n
+XPRpˆl
+While the nonsmooth objective of (21) prevents the tuning parameter, it clearly burdens the computational efficiency of the convex optimization algorithms.
+We apply our algorithms to (20) and (21) using the MovieLens 100K dataset. Frank-Wolfe algorithms cannot handle (21) and only solve (20). For this experiment, we did not pre-process the data
+and took the default ub test and training data partition. We start out algorithms form λ0 “ 0n , we
+set the target accuracy  “ 10´3 , and we choose the tuning parameter κ “ 9975{2 as in [20]. We
+use lansvd function (MATLAB version) from PROPACK [21] to compute the top singular vectors,
+and a simple implementation of the power method to find the top singular value in the line-search,
+both with 10´5 relative error tolerance.
+The first two plots in Figure 2 show the performance of the algorithms for (20). Our metrics are
+the normalized objective residual and the root mean squared error (RMSE) calculated for the test
+data. Since we do not have access to the optimal solutions, we approximated the optimal values,
+ϕ‹ and RMSE‹ , by 5000 iterations of AccUniPDGrad. Other two plots in Figure 2 compare the
+performance of the formulations (20) and (21) which are represented by the empty and the filled
+markers, respectively. Note that, the dashed line for AccUniPDGrad corresponds to the line-search
+variant, where the weights wk are chosen to minimize the feasibility gap. Additional details about
+the numerical experiments can be found in the supplementary material.
+
+6
+
+Conclusions
+
+This paper proposes a new primal-dual algorithmic framework that combines the flexibility of proximal primal-dual methods in addressing the general template (1) while leveraging the computational
+advantages of the GCG-type methods. The algorithmic instances of our framework are universal
+since they can automatically adapt to the unknown Hölder continuity properties implied by the template. Our analysis technique unifies Nesterov’s universal gradient methods and GCG-type methods
+to address the more broadly applicable primal-dual setting. The hallmarks of our approach includes
+the optimal worst-case complexity and its flexibility to handle nonsmooth objectives and complex
+constraints, compared to existing primal-dual algorithm as well as GCG-type algorithms, while essentially preserving their low cost iteration complexity.
+Acknowledgments
+This work was supported in part by ERC Future Proof, SNF 200021-146750 and SNF CRSII2147633. We would like to thank Dr. Stephen Becker of University of Colorado at Boulder for his
+support in preparing the numerical experiments.
+8
+
+References
+[1] M. Jaggi, Revisiting Frank-Wolfe: Projection-free sparse convex optimization. J. Mach. Learn.
+Res. Workshop & Conf. Proc., vol. 28, pp. 427–435, 2013.
+[2] V. Cevher, S. Becker, and M. Schmidt.
+Convex optimization for big data: Scalable, randomized, and parallel algorithms for big data analytics. IEEE Signal Process.
+Mag., vol. 31, pp. 32–43, Sept. 2014.
+[3] M. J. Wainwright, Structured regularizers for high-dimensional problems: Statistical and
+computational issues. Annu. Review Stat. and Applicat., vol. 1, pp. 233–253, Jan. 2014.
+[4] G. Lan and R. D. C. Monteiro, Iteration-complexity of first-order augmented Lagrangian
+methods for convex programming. Math. Program., pp. 1–37, Jan. 2015, doi:10.1007/s10107015-0861-x.
+[5] S. Boyd, N. Parikh, E. Chu, B. Peleato, and J. Eckstein, Distributed optimization and statistical
+learning via the alternating direction method of multipliers. Found. and Trends in Machine
+Learning, vol. 3, pp. 1–122, Jan. 2011.
+[6] P. L. Combettes and J.-C. Pesquet, A proximal decomposition method for solving convex variational inverse problems. Inverse Problems, vol. 24, Nov. 2008, doi:10.1088/02665611/24/6/065014.
+[7] T. Goldstein, E. Esser, and R. Baraniuk, Adaptive primal-dual hybrid gradient methods for
+saddle point problems. 2013, http://arxiv.org/pdf/1305.0546.
+[8] R. Shefi and M. Teboulle, Rate of convergence analysis of decomposition methods based on
+the proximal method of multipliers for convex minimization. SIAM J. Optim., vol. 24, pp. 269–
+297, Feb. 2014.
+[9] Q. Tran-Dinh and V. Cevher, Constrained convex minimization via model-based excessive gap.
+In Advances Neural Inform. Process. Syst. 27 (NIPS2014), Montreal, Canada, 2014.
+[10] A. Beck and M. Teboulle, A fast iterative shrinkage-thresholding algorithm for linear inverse
+problems. SIAM J. Imaging Sci., vol. 2, pp. 183–202, Mar. 2009.
+[11] Y. Nesterov, Smooth minimization of non-smooth functions. Math. Program., vol. 103, pp. 127–
+152, May 2005.
+[12] A. Juditsky and A. Nemirovski, Solving variational inequalities with monotone operators
+on domains given by Linear Minimization Oracles. Math. Program., pp. 1–36, Mar. 2015,
+doi:10.1007/s10107-015-0876-3.
+[13] Y. Yu, Fast gradient algorithms for structured sparsity. PhD dissertation, Univ. Alberta,
+Edmonton, Canada, 2014.
+[14] Y. Nesterov, Complexity bounds for primal-dual methods minimizing the model of objective
+function. CORE, Univ. Catholique Louvain, Belgium, Tech. Rep., 2015.
+[15] Y. Nesterov, Universal gradient methods for convex optimization problems. Math. Program.,
+vol. 152, pp. 381–404, Aug. 2015.
+[16] A. Nemirovskii and D. Yudin, Problem complexity and method efficiency in optimization.
+Hoboken, NJ: Wiley Interscience, 1983.
+[17] R. T. Rockafellar, Convex analysis (Princeton Math. Series), Princeton, NJ: Princeton Univ.
+Press, 1970.
+[18] D. Gross, Y.-K. Liu, S. T. Flammia, S. Becker, and J. Eisert,
+Quantum state
+tomography via compressed sensing.
+Phys. Rev. Lett., vol. 105, pp. Oct. 2010,
+doi:10.1103/PhysRevLett.105.150401.
+[19] E. Candès and B. Recht, Exact matrix completion via convex optimization. Commun. ACM,
+vol. 55, pp. 111–119, June 2012.
+[20] M. Jaggi and M. Sulovský, A simple algorithm for nuclear norm regularized problems. In
+Proc. 27th Int. Conf. Machine Learning (ICML2010), Haifa, Israel, 2010, pp. 471–478.
+[21] R. M. Larsen, PROPACK - Software for large and sparse SVD calculations. Available: http:
+//sun.stanford.edu/„rmunk/PROPACK/.
+
+9
+
+

@@ -1,0 +1,2410 @@
+Copyright 1999 by the American Psychological Association, Inc.
+0021-9010/99/$3.00
+
+Journal of Applied Psychology
+1999, Vol. 84, No. 1, 107-122
+
+Managerial Coping With Organizational Change:
+A Dispositional Perspective
+Vladimir Pucik and Theresa M. Welbourne
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+Timothy A. Judge and Carl J. Thoresen
+University of Iowa
+
+Cornell University
+
+In a departure from the organizational development literature, this study hypothesized that
+managerial responses to organizational change are influenced by 7 dispositional traits (locus
+of control, generalized self-efficacy, self-esteem, positive affectivity, openness to experience,
+tolerance for ambiguity, and risk aversion). Data were collected from 6 organizations (N =
+514) to test the hypotheses. The 7 traits were reduced to 2 factors: Positive Self-Concept and
+Risk Tolerance. Both of these trait factors significantly predicted self-reports and independent
+assessments of coping with change. Results also indicated that coping with organizational
+change was related to extrinsic (salary, job level, plateauing, job performance) and intrinsic
+(organizational commitment, job satisfaction) career outcomes and that coping mediated
+roughly half of the relationships between the dispositional factors and these career outcomes.
+
+In a recent review of the literature, Quinn, Kahn, and
+Mandl (1994) noted that research in the field of organizational change and development has evolved from four major
+paradigms: organizational development, strategic choice,
+resource dependence-institutional theory, and population
+ecology. That all four of these paradigms consider change at
+the organizational level is a telling depiction of the organizational change literature. Research dealing with organizational change has been largely dominated by a macro,
+systems-oriented focus. Some researchers have called for a
+more micro, person-oriented focus pertaining to issues important in change (Bray, 1994), yet micro-level research on
+organizational change remains limited. Studies of individual
+behavior in relation to organizational change typically have
+
+involved areas such as charismatic or transformational leadership, or the upper echelons perspective—focusing on the
+role of top management in instituting change (Bantel &
+Jackson, 1989; Hambrick & Mason, 1984; Wiersema &
+Bantel, 1992). These studies aside, very little research has
+taken a psychological focus in investigating the process of
+organizational change. Neglected is the possibility that successful coping with change lies within the psychological
+predispositions of individuals experiencing the change.
+Accordingly, the goal of this study is to examine how
+personality characteristics influence managerial coping with
+organizational change. In this study, we focus on managers
+from various levels of the organization who are most likely to
+be affected by the change efforts. Of primary interest is the
+prediction of managerial reactions to change as a function of
+personality characteristics of the individuals experiencing the
+changes. However, before the possible dispositional bases of
+coping with change can be examined, the nature of coping with
+organizational change needs to be understood. This process is
+described in the following section.
+
+Timothy A. Judge and Carl J. Thoresen, Department of Management and Organizations, College of Business Administration,
+University of Iowa; Vladimir Pucik and Theresa M. Welbourne,
+Department of Human Resource Studies, School of Industrial and
+Labor Relations, Cornell University.
+The International Consortium for Executive Development Research and Center for Advanced Human Resource Studies, Cornell
+University, provided funding for this study. The authors thank Jill
+Judge and David Kennedy for assisting with data collection and
+preparation. An earlier version of this article was presented at the
+meetings of the Academy of Management, Cincinnati, Ohio, in
+August 1996.
+Correspondence concerning this article should be addressed to
+Timothy A. Judge, Department of Management and Organizations, College of Business Administration, University of Iowa,
+Iowa City, Iowa 52242-1000. Electronic mail may be sent to
+tim-judge@uiowa.edu.
+
+Coping With Organizational Change
+One central reaction to organizational change involves
+the extent to which individual managers cope with the
+uncertainties that radical change introduces into their work
+lives. Folkman, Lazarus, Gruen, and DeLongis (1986) define coping as "the person's cognitive and behavioral efforts
+to manage (reduce, minimize, or tolerate) the internal and
+external demands of the person-environment transaction
+that is appraised as taxing or exceeding the person's resources" (p. 572). Generally, research has shown problem107
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+108
+
+JUDGE, THORESEN, PUCIK, AND WELBOURNE
+
+focused coping strategies (dealing directly with the stressor)
+to be more effective than emotion-focused strategies (focusing on the emotional changes brought on by the stressor;
+Callan, 1993; Folkman et al., 1986).
+It is well established that major organizational change is
+viewed as a formidable stressor in organizational life, associated with negative outcomes such as job loss, reduced
+status, conflict at work and home, and threats to the psychological well-being of the individual employee (Ashford,
+1988; Schweiger & DeNisi, 1991). Lau and Woodman
+(1995) argued that reactions to organizational change are
+affected by the individual's change schemata, which they
+defined as "mental map[s] representing knowledge structures of change attributes, and relationships among different
+change events" (p. 538). Through qualitative and quantitative methods, these researchers noted significant relationships between such schemata and the reactions of individuals to change, and further found such schemata to be
+significantly affected by personality.
+Following this dispositional emphasis, we reviewed the
+personality literature in search of the dispositional variables
+most likely to be related to coping with change. On the basis
+of this review, we identified seven personality variables:
+locus of control, generalized self-efficacy, self-esteem, positive affectivity (PA), openness to experience, tolerance for
+ambiguity, and risk aversion. These particular traits were
+chosen on the basis of three criteria: (a) well-validated
+measures of the traits existed; (b) construct validity evidence existed for these traits, and they had been used
+successfully in previous research; and (c) there appeared to
+be a theoretical relationship between the trait and coping
+with change. These criteria led to the exclusion of some
+potentially relevant constructs, such as hardiness and dispositional optimism, because of ongoing questions about
+their construct validity (Hull, Van Treuren, & Virnelli,
+1987; Smith, Pope, Rhodewalt, & Poulton, 1989). Through
+our review was comprehensive, it is not intended to be
+exhaustive, as there may be traits that met our three conditions that nevertheless were excluded from the study. Each
+of the seven characteristics is discussed in turn, and hypothesized linkages between these traits and coping with change
+are developed.
+Dispositional Mechanisms Associated Coping With
+Organizational Change
+Locus of Control
+Rotter (1966) proposed the concept of locus of control as
+the perception by the individual of his or her ability to
+exercise control over the environment. Those characterized
+by an internal locus of control believe they have control
+over their environment and their personal successes,
+whereas those with an external locus of control view their
+
+lives as controlled by external factors such as chance or
+powerful others. Research is suggestive of a link between
+locus of control and coping with organizational change.
+Several studies have shown that internal locus of control is
+associated with problem-focused coping strategies (Anderson, 1977; Callan, Terry, & Schweitzer, 1994), and individuals with an internal locus of control are less likely to suffer
+the ill effects of stressors (Kobasa, 1979). Similarly, Newton and Keenan (1990) found that locus of control beliefs
+significantly moderated the relationship between changes in
+job demands and psychological strain over time. Two studies involving change support the trend of these findings.
+Nelson, Cooper, and Jackson (1995) and Lau and Woodman
+(1995) found that employees with internal loci of control
+reported more positive attitudes in their organizations experiencing changes than employees with external loci of
+control. Given the general pattern of associations between
+locus of control and major life and work-related events, one
+would except similar relationships between this construct
+and individual differences in coping with organizational
+change. Indeed, there is evidence for a robust relationship
+between internal locus of control and individual adaptation
+to change within work organizations (Callan et al., 1994;
+Holahan & Moos, 1987; Kobasa, 1982).
+Hypothesis 1: Internal locus of control positively relates to
+coping with organizational change.
+
+Generalized
+
+Self-Efficacy
+
+Bandura (1997) defined self-efficacy as "beliefs in one's
+capabilities to organize and execute the courses of action
+required to produce given attainments" (p. 3). According to
+Bandura, self-efficacy is a generative capability in that it
+enables individuals to integrate cognitive, social, emotional,
+and behavioral subskills to accomplish a particular objective. Although self-efficacy was originally conceived of as
+a task-specific variable, some researchers have shown support for the existence of a generalized self-efficacy disposition that predicts individual behavior across various situations and circumstances (Lennings, 1994; Sherer et al.,
+1982; Tipton & Worthington, 1984). Generalized selfefficacy is often confused with locus of control. Selfefficacy differs from locus of control in that the former
+involves the individual's perception that he or she possesses
+the skills necessary to execute the required response set to
+ensure a desired outcome, whereas the latter refers to
+whether the consequences of such efforts are within the
+person's control (Bandura, 1997). As noted by Judge,
+Locke, and Durham (1997), this distinction is similar to the
+one made in expectancy theory between expectancy (the
+probability of being able to perform, which should correspond to self-efficacy) and instrumentality (the probability
+of outcomes being linked to one's performance, which
+should correspond to locus of control).
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+COPING WITH ORGANIZATIONAL CHANGE
+
+There are several mechanisms by which generalized selfefficacy may affect coping with change. First, the selfefficacy construct involves a generative "mobilization component" that allows for the adaptation of performance to
+compliment the circumstances under which task execution
+occurs (Gist & Mitchell, 1992). In addition, some researchers (Schunk, 1983) have noted that self-efficacy is particularly salient in situations that an individual may regard as
+novel, unpredictable, or stressful. Several studies have revealed that self-efficacy is an important resource in dealing
+with major career events such as career changes and job loss
+(Chwalisz, Altmaier, & Russell, 1992; Holmes & Werbel,
+1992; Stumpf, Brief, & Hartman, 1987). Finally, low efficacy levels have correlated with job withdrawal (McDonald
+& Siegall, 1992) as well as "defensive behaviors," such as
+resistance to change and protecting one's turf (Ashforth &
+Lee, 1990). Results from all of these studies suggest that
+high self-efficacy is a precursor for positive attitudes toward
+critical career-oriented events, specifically those involving
+major job and organizational changes.
+Hypothesis 2: Self-efficacy positively relates to coping
+with organizational change.
+
+Self-Esteem
+Coopersmith (1967) defined self-esteem as "the evaluation which the individual makes and customarily maintains
+with regard to himself [expressing an attitude of] approval
+or disapproval" and "the extent to which an individual
+believes himself to be capable, significant, successful, and
+worthy" (pp. 4-5). Self-esteem typically denotes a dispositional, global characteristic relevant to a holistic conception
+of personal competence and worthiness. It also has been
+described as a general approval of the self (Pierce, Gardner,
+Cummings, & Dunham, 1989).
+Research generally has found self-esteem to be a relevant
+variable in the measurement of workplace attitudes and
+behaviors. High self-esteem correlates positively with job
+satisfaction (Adler, 1980), reemployment after involuntary
+job loss (Kinicki, 1989), and successful job search outcomes
+(Jalajas, 1994). In addition, several studies have focused
+specifically on the relationship between self-esteem and
+organizational change. Folkman et al. (1986) noted a direct
+effect of self-esteem on adaptation to change on the part of
+employees. Ashford (1988) studied the reactions of employees after the transformation of the Bell Telephone system,
+and discovered a negative correlation between self-esteem
+and stress levels. In the same study, self-esteem also predicted positive scores on a measure of perceived change
+efficacy of individual employees. Similarly, Callan et al.
+(1994) recently found significant, negative associations between self-esteem and levels of stress, anxiety, and depression among a sample of attorneys who had perceived a high
+degree of change within their respective firms. General
+
+109
+
+trends in the findings relating self-esteem to work behaviors
+and attitudes suggest a positive relationship between selfesteem and coping with organizational change.
+Hypothesis 3: Self-esteem positively relates to coping with
+organizational change.
+
+Positive Affectivity
+PA represents an underlying personality disposition typically manifested in characteristics such as well-being, confidence, energy, gregariousness, and affiliation. In general,
+it is associated with a positive worldview. Though scant
+research has focused on associations between PA and coping reactions to organizational change, several aspects of the
+PA construct suggest that individuals high in PA should be
+amenable to organizational change. Holahan and Moos
+(1987) found confidence and an easygoing manner to be
+predictive of effective coping with life events. As selfconfidence and calmness represent major facets of the PA
+construct, it is expected that high-PA managers would exhibit more positive coping strategies in the face of an
+organizational change as well. In fact, Bowman and Stern
+(1995) discovered a significant positive correlation between
+PA and the utilization of problem-focused coping during
+stressful occupational episodes. In addition, the aspect of
+PA dealing with gregariousness and affiliation should aid
+individuals in forming positive relationships with coworkers
+and others. These relationships could function as a buffering
+mechanism to aid in coping with the adverse effects of
+stress associated with such a change (Cohen & Wills, 1985).
+Empirical research supports this effect, insofar as the availability of work-related support from a supervisor has been
+found to ameliorate the impact of stresses associated with
+role conflict and role overload (Terry, Nielsen, & Perchard,
+1994). Finally, Watson and Clark (1997) have noted that the
+PA construct reflects individual differences in boldness and
+adventurousness, whereby "high scorers desire change and
+variety in their lives, and become bored or dissatisfied when
+[change] is absent" and tend to "seek out intense, stimulating environments" (p. 776). Thus, high-PA managers
+should be more likely to cope with changes from which they
+derive a sense of satisfaction.
+Hypothesis 4: PA positively relates to coping with organizational change.
+
+Openness to Experience
+Openness to experience represents the fifth of the Big
+Five personality dimensions. Although there has been some
+disagreement as to the exact definition of openness (Peabody & Goldberg, 1989), it is generally associated with
+intelligence, perceptiveness, creativity, imagination, tolerance, culturedness, and inquisitiveness (Goldberg, 1992).
+Several studies have related openness to experience to ef-
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+110
+
+JUDGE, THORESEN, PUCIK, AND WELBOURNE
+
+fective coping and adjustment. McCrae and Costa (1986)
+found that openness (measured by both self- and peer report) was positively related to the utilization of effective
+coping strategies in dealing with stressful life events. In
+turn, these coping strategies positively affected overall life
+satisfaction. Whitbourne (1986) extended these findings to
+the specific realm of the workplace, noting that openness to
+experience was positively associated with identity flexibility in work as well as family roles. Given the tendencies of
+individuals high on openness to be tolerant and inquisitive
+when confronted with novel situations (as well as to actively
+seek out such situations), they should be less likely to
+perceive change as stressful, and cope more effectively with
+organizational change.
+Hypothesis 5: Openness to experience positively relates to
+coping with organizational change.
+
+Tolerance for Ambiguity
+Budner (1962) defined tolerance for ambiguity as "the
+tendency to perceive ambiguous situations as desirable,"
+whereas the intolerance of ambiguity refers to "the tendency
+to perceive (i.e., interpret) ambiguous situations as sources
+of threat" (p. 29). One of the first empirical investigations of
+the construct found tolerance for ambiguity to be associated
+with the willingness of persons to change their opinions on
+matters, as well as tolerate and cope with new experiences
+(Rydell, 1966). Much of the research on tolerance for ambiguity has focused on the relationship between tolerance
+for ambiguity and work-related anxiety and strain. For example, Keenan and McBain (1979) found a positive relationship between role ambiguity and psychological strain
+among midlevel managers who were low in tolerance for
+ambiguity. Similarly, a study investigating the effects of
+ambiguity tolerance on anxiety levels prior to a job interview found a negative correlation between tolerance for
+ambiguity and anxiety levels (Keenan, 1978). Given the
+uncertainty typically involved in organizational change efforts, as well as the stress typically associated with such
+changes, the tolerance for ambiguity construct should be
+useful in describing coping reactions to such changes. Several studies support this inference. In a sample of Bell
+Telephone system employees, Ashford (1988) found that
+tolerance for ambiguity was related to several aspects of
+coping with the changes induced by AT&T's divestiture.
+Rush, Schoel, and Barnard (1995) found that items assessing tolerance for ambiguity were correlated with several
+aspects of coping with change among state government
+employees. Finally, a study involving organizational development consultants in the U.S. Navy identified comfort with
+ambiguity as a characteristic of successful change agents
+(Hamilton, 1988).
+Hypothesis 6: Tolerance for ambiguity positively relates to
+coping with organizational change.
+
+Risk Aversion
+The propensity of individuals to seek out or avoid risky
+scenarios has typically been seen as entirely situational
+(Kahneman & Tversky, 1979), and little research has entertained the hypothesis that predisposition toward risk-taking
+is an individual difference variable. The closest approximation to a dispositional theory of risk aversion stems from the
+research of Lopes (1994). Lopes has theorized that risk
+aversion is a function of differential attention to various
+stimuli in risky situations. Specifically, risk aversion is
+associated with a security orientation on the part of the
+decision maker, as opposed to seeing risk in terms of
+potential gains. Other research has identified a positive
+correlation between the perception of risk and various measures of anxiety (Schaninger, 1976). However, little research has considered risk aversion as an individual difference. Maehr and Videbeck (1968) measured risk aversion
+across subjects and reported that individuals who were
+averse to risk avoided taking chances and tended to be
+unhappy in situations where risk was salient. Because organizational change efforts often involve increased risk,
+managers who are averse to such risk should cope less well
+with these changes. In fact, several studies considering risk
+aversion as an individual difference have found that individuals who are averse to risk view novel and risk-oriented
+situations negatively and seek to withdraw from such situations (Cable & Judge, 1994; Gomez-Mejia & Balkin,
+1989). Thus, although no research has considered how a risk
+aversion predisposition may pose difficulties in dealing with
+organizational change, several studies are suggestive of
+such a linkage.
+Hypothesis 7: Risk aversion negatively relates to coping
+with organizational change.
+
+Links Between Coping With Change and
+Career Outcomes
+In order to be practically important, coping with change
+must be related to variables that are psychologically meaningful and important to individuals and organizations.
+Given the degree of change experienced in the organizations
+under study (see Method section), we believed successful
+coping with change was likely to be manifested in a number
+of ways. First, individuals who can successfully cope in an
+organization undergoing high degrees of change should be
+more satisfied and committed to the organization. Recent
+work by Wanberg and Banas (1997) found that general
+attitudes toward change, change acceptance, and positive
+views of organizational change were positively related to
+job satisfaction. Negative attitudes toward change have also
+been associated with lower job satisfaction and commitment
+(Schweiger & DeNisi, 1991), and stress-job dissatisfaction
+relationships following organizational change have been
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+COPING WITH ORGANIZATIONAL CHANGE
+
+found to be higher for employees lower in organizational
+commitment (Begley & Czajka, 1993). Thus, we believed
+that coping with change would be positively related to job
+satisfaction and organizational commitment.
+Second, successful coping with change is likely to be
+perceived as important to transforming organizations. As a
+result, those who cope well with change should receive
+higher performance ratings and achieve higher levels of
+extrinsic career success. Judge, Cable, Boudreau, and Bretz
+(1995) considered extrinsic success in terms of salary and
+ascendancy. Ascendancy consists not only of previous
+movement up the organizational hierarchy (job level) but
+also of prospective movement, such as is not the case when
+executives perceive that they are plateaued in their organization (Chao, 1990). Although no research that we are
+aware of has investigated the relationship between coping
+with change and extrinsic success directly, Callan et al.
+(1994) found that ineffective (emotion-focused) copers
+were more anxiety prone following organizational change,
+suggesting that they would most likely be less effective in
+their jobs as well. Further, the hypothesized relationships
+between the dispositional traits and coping with change, and
+between coping with change and career outcomes, lead to
+the expectation that coping will mediate (at least in part) the
+relationship between the traits and career outcomes.
+Hypothesis 8: Coping successfully with organizational
+change is positively related to the following career outcomes:
+(a) job satisfaction, (b) organizational commitment, (c) extrinsic career outcomes (salary, ascendancy), and (d) job
+performance.
+Hypothesis 9: Coping successfully with organizational
+change partly mediates the relationship between personality
+and the following career outcomes: (a) job satisfaction, (b)
+organizational commitment, (c) extrinsic career outcomes
+(salary, ascendancy), and (d) job performance.
+Method
+Setting, Participants, and Procedure
+Participants in the current study were employed by six organizations headquartered in four different continents (North America,
+Europe, Asia, and Australia). The organizations included two large
+European companies (a shipping company headquartered in Scandinavia and an oil company headquartered in the United Kingdom); two Australian banks (of which one was among the largest
+banks in Australia and another was a medium-sized bank); a large
+American university; and a large, private Korean manufacturing
+company. Upper management confirmed that each of these organizations had experienced recent large-scale changes, including
+major reorganization efforts and downsizing, changes in top management, mergers and acquisitions, and business divestments.
+Across all organizations, 73% of the managers agreed with the
+statement, "The changes that are being made will impact all parts
+of our work" (standard deviation across organizations = 5%),
+whereas 78% disagreed with the statement, "The changes that are
+being made are fairly limited" (standard deviation across organi-
+
+111
+
+zations = 7%). Thus, although we are confident that managers in
+these organizations were experiencing a high degree of change, the
+specific types of changes occurring in each organization were not
+essential to our study (i.e., we were not attempting to predict how
+managerial responses to change vary as a function of the type of
+change). Rather, that high degrees of change were occurring in
+these organizations merely provides a useful context for studying
+the predictors and outcomes of coping with change.
+Surveys were sent via internal mail to middle- and upper-level
+management personnel in various business functions in each of the
+six organizations. Each company was asked to identify a random
+sample of managers who would serve as participants. A cover
+letter that accompanied the survey explained the purpose of the
+study and promised respondents that their responses were completely confidential. All surveys were written in English, with the
+exception of those completed by participants in the Korean company. Because of within-company differences in English proficiency, an individual from the company translated the survey into
+Korean. The survey was then back-translated into English by a
+translator affiliated with the University of Iowa. In order to obtain
+an independent assessment of how well respondents coped with
+change, a one-page assessment of the respondents' coping ability
+and job performance was sent to each respondent's boss, subordinate, or peer. The company determined who would serve as the
+independent assessor. The independent assessor was instructed to
+complete the survey away from the person being assessed and to
+return the assessment to an organizational contact in an enclosed
+envelope. This contact person then forwarded the assessments
+unopened to the authors.
+In total, 720 surveys were distributed, which included 305 at the
+Korean company, 115 at the British company, 100 each at the
+Scandinavian company and the American university, and 50 each
+at the large and small Australian banks. A total of 514 matched sets
+of surveys were returned (self-report surveys that could be
+matched to independent assessments), for an overall response rate
+of 71%. The number of respondents in each of the organizations
+was as follows: Korean company (n = 276), British company (n =
+58), large Australian bank (n = 32), small Australian bank (n =
+37), Scandinavian company (n = 72), and American university
+(n = 39). The average age of respondents was 41.8 years. A total
+of 91% of the respondents were male, and 92% were married.
+Although no formal comparisons of respondents and nonrespondents were made, it appeared from the descriptive statistics (see
+Results section) that those who returned surveys were representative of the larger population. Approximately 76% of the independent assessments (n = 392) were returned by immediate supervisors of the participants, whereas 18% (n = 91) and 6% (n = 31)
+were returned by peers and subordinates, respectively.
+Measures
+The scales described below were originally developed using
+various response formats. For example, one measure was developed with a 7-point scale ranging from 1 (strongly disagree) to 7
+(strongly agree), another measure used a 4-point scale ranging
+from 1 (strongly agree) to 4 (strongly disagree), and one measure
+used a 6-point scale ranging from —3 (strongly disagree) to +3
+(strongly agree) with no middle anchor. In order to avoid confusing the respondents, all measures (unless otherwise noted) used a
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+112
+
+JUDGE, THORESEN, PUCIK, AND WELBOURNE
+
+5-point scale ranging from 1 (strongly disagree) to 5' (strongly
+agree). Research has suggested that these sorts of relatively minor
+alterations to questionnaire response formats do not affect their
+validity (Matell & Jacoby, 1971).
+Locus of control. Levenson's (1981) Internality scale, like
+Rotter's (1966) original scale, assesses the degree to which people
+believe they have control over their own lives (internal locus of
+control). However, Levenson's measure avoids some of the problems of Rotter's scale (e.g., inherent social desirability bias,
+forced-choice response format; Lefcourt, 1991). Levenson's internality measure exhibits moderate reliabilities and has been used in
+a wide variety of samples (see Levenson, 1981). Example items
+from the Internality scale include, "Whether or not I get to be a
+leader depends mostly on my ability," "I can pretty much determine what will happen in my life," and "My life is determined by
+my own actions." In the present study, the reliability (a) of the
+10-item scale was .66.
+Generalized self-efficacy.
+Generalized self-efficacy was measured by a 10-item scale that combined items from Jones (1986)
+and Sherer et al. (1982). Example statements include, "When I
+make plans, I am certain to make them work" and "I can learn
+almost anything if I set my mind to it." The reliability of this scale
+was .75.
+Self-esteem. Self-esteem was measured with Rosenberg's
+(1965) 10-item scale. This scale is the most common measure of
+self-esteem, and considerable empirical data support its validity
+(Blascovich & Tomaka, 1991). Example items include, "On the
+whole, I am satisfied with myself and "I feel that I am a person
+of importance, at least on an equal basis with others." In the
+present study, the reliability of this scale was .78.
+Positive affectivity.
+We measured PA with the PA portion of the
+Positive and Negative Affect Schedule (PANAS; Watson, Clark, &
+Tellegen, 1988), a 10-item measure of an individual's tendency to
+experience positive emotional states. As recommended by Watson et
+al. (1988), we measured trait-PA by using long-term instructions.
+Watson et al. reported that the PANAS displayed high degrees of
+reliability and convergent and discriminant validity. Furthermore,
+Watson et al. reported that the PA Schedule was very stable over time.
+For the PA Schedule in the present study, a = .82.
+Openness to experience. Openness to experience was measured with the 12-item Openness to Experience subscale from the
+NEO—Five-Factor Inventory (NEO-FFI) (Costa & McCrae,
+1992).' The NEO is the most widely used measure of the Big Five
+personality characteristics, and substantial evidence exists for the
+stability and validity of the NEO. Example items include, "I have
+little interest in speculating on the nature of the universe of the
+human condition," and "Sometimes when I am reading poetry or
+looking at a work of art, I feel a chill or wave of excitement." In
+the present study, the reliability of the openness scale was .68.
+Tolerance for ambiguity. The present study used three scales
+to measure tolerance for ambiguity. First, the seven-item Tolerance for Ambiguity Scale developed by Lorsch and Morse (1974)
+and adapted by Gupta and Govindarajan (1984) was used. Second,
+consistent with other research (Ashford, & Cummings 1985),
+Norton's (1975) Ambiguity Tolerance Scale also was used. Finally, McLain's (1993) Tolerance for Ambiguity Scale was used.
+Example items from these scales include, "I do not like to get
+started in group projects unless I feel assured that the project will
+
+be successful," "I function poorly whenever there is a serious lack
+of communication in a job situation," and "When planning a
+vacation, a person should have a schedule to follow if he or she is
+really going to enjoy it." The reliability of this composite 18-item
+scale was .73.
+Risk aversion. Risk aversion was measured using the scale
+developed by Cable and Judge (1994), based on original scales
+developed by Slovic (1972) and Gomez-Mejia and Balkin (1989).
+Example items include, "I am not willing to take risks when
+choosing a job or a company to work for" and "I view risk of a job
+as a situation to be avoided at all costs." The reliability of this
+eight-item scale was .76.
+Coping with organizational change. Because no measure of
+managerial coping with change could be found in the literature,
+coping was measured by a scale originally developed by the
+authors. A large pool of items was generated from a review of the
+change literature. These items were then administered to several
+samples of managers in the United States and Singapore. The
+larger pool of items was reduced on the basis of results from a
+principal-components analysis and examination of item-total correlations. The resulting 12-item scale, labeled the Coping With
+Organizational Change Scale (developed in 1998 by Timothy A.
+Judge and Vladimir Pucik) measures coping with change by considering both reactance to change and leading change. Because the
+original principal-components analysis suggested that the 12-items
+loaded on a single dimension, we estimated a confirmatory factor
+analysis to assess goodness of fit. Using confirmatory factor analysis, we constrained the 12 items to load on a single factor.
+LISREL results indicated that the single factor solution fit the data
+well, both for self-reports, ^(54, N = 514) = 158.64, p < .01;
+goodness-of-fit index = .93; comparative fit index = .94, and for
+the independent assessments, x*(54, N = 514) = 196.65, p < .01;
+goodness-of-fit index = .94; comparative fit index = .91. The
+scale items and factor loadings for each item are provided in the
+Appendix. To form an overall measure of coping with change, we
+summed the 12 items to form a single scale for the self-report and
+independent assessment data sources. The reliability (a) of this
+scale was .77 for self-reports and .79 for the independent
+assessment.
+Extrinsic career outcomes. Consistent with past research (e.g.,
+Judge et al., 1995), extrinsic career outcomes were conceptualized
+as consisting of pay (i.e., salary) and ascendancy (i.e., job level).
+Respondents were asked to report their annual salary and, consistent with Judge et al. (1995), the number of levels their job was
+below the CEO in their organization. Because respondents were
+employed in various countries, all salaries were converted to U.S.
+dollars using 90-day forward exchange rates from May 1995. A
+one-way analysis of variance (Salary X Currency) indicated large
+differences in salary (expressed in U.S. dollars) as a function of
+currency, F(5, 508) = 34.54; if = .25; p < .001. To control for
+
+1
+
+The Openness to Experience measure from the NEO-FFI Personality Inventory is used by special permission of the publisher,
+Psychological Assessment Resources, Inc., 16204 North Florida
+Avenue, Lutz, Florida 33549, from the NEO Five Factor Inventory, by Paul Costa and Robert McCrae, copyright 1978, 1985,
+1989 by PAR, Inc. Further use or reproduction of the NEO-FFI is
+prohibited without permission of PAR, Inc.
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+COPING WITH ORGANIZATIONAL CHANGE
+salary differences as a function of differing price levels across
+countries where participants were employed, we converted salaries
+to z scores (by currency). Finally, Chao's (1990) two-item measure
+of plateauing ("I do not feel like I am getting ahead anymore in my
+company"; a = .61) was used.
+Organizational commitment. Organizational commitment was
+measured with the nine-item Organizational Commitment Questionnaire, the most widely used measure of commitment (Mathieu
+& Zajac, 1990). In the questionnaire respondents are asked to
+indicate their agreement with nine items that are a mix of attitudes
+("I really care about the fate of this organization") and behavioral
+intentions ("I would accept almost any type of job assignment in
+order to keep working for this organization"). The reliability of this
+scale was .79.
+Job satisfaction. Job satisfaction was measured with the Overall Job Satisfaction Scale used by Judge, Boudreau, and Bretz
+(1994). This three-item measure was partly based on Scarpello and
+Campbell's (1983) review and consists of the Gallup poll measure
+of job satisfaction, the nongraphic version of the G. M. Faces
+Scale, and an adapted version of the Fordyce Percent Time Happy
+Item. Because the items were measured with different scales, they
+were standardized prior to computation of the composite measure.
+The standardized coefficient alpha reliability of the three-item
+composite was .78.
+Performance rating. Overall job performance was assessed
+with a single-item measure completed by the independent assessor
+(as was noted earlier, in 76% of the cases this was the supervisor).
+The independent assessor was asked to respond to the statement,
+"This person's overall level of job performance is above average
+for his/her work group." Although perhaps not ideal given the
+nature of the statement, to preserve consistency in response scales,
+the assessor responded with the same 5-point scale (1 = strongly
+disagree to 5 = strongly agree) as with the coping items.
+
+Results
+Descriptive Information Regarding Study Variables
+Table 1 shows mean comparisons across all six organizations on variables of interest to the current study.
+One-way analyses of variance (ANOVAs) with pairedcomparison contrasts were conducted to examine possible
+differences in these variables across the organizations studied. Because of the large sample size of the study, many of
+these comparisons reached statistical significance. However, the absolute magnitude of these differences (particularly for the dispositional variables) was typically not large.
+One exception was locus of control, where the means
+ranged from 3.14 (British company) to 3.85 (Korean company)—roughly a 14% difference. Several of the career
+outcome variables displayed considerably more variability.
+Salary (converted to z scores by currency in subsequent
+analyses) displayed substantial variability, ranging from
+$43,218 (Korean company) to $118,650 (Scandinavian
+company). These differences were likely a function of differences in price levels between countries and, perhaps,
+national living standards and organizational differences.
+
+113
+
+Number of levels below the chief executive officer of the
+organization (ranging from 2.40 in the Scandinavian company to 4.88 in the large Australian bank) and career plateauing (varying from 2.20 in the Scandinavian company
+to 3.23 in the American university) also varied widely.
+Because the jobs held by respondents were generally quite
+similar across organizations, these differences were likely
+due to differences in company size and structure. That these
+outcomes are so variable made it important to investigate
+the generalizability of the variables across countries.
+Though not reported in Table 1, we also analyzed
+whether there were significant differences in the independent assessment of coping as a function of rating source
+(supervisor, peer, or subordinate ratings). A one-way
+ANOVA revealed that assessments of coping with change
+differed as a function of source, F(2, 511) = 9.44, -r/2 = .04,
+p < .001. Pairwise comparisons revealed that peers supplied
+significantly more severe ratings than supervisors of subordinates. However, the absolute magnitude of these differences was not large (72% of the maximum possible score
+for peer ratings; 76% for both supervisory and subordinate
+ratings). In addition, there was no evidence of leniency bias
+when self-assessments of coping were compared to independent assessments, paired samples ?(513) = —0.14, ns.
+Because there was some evidence of mean differences in
+ratings by rating source, we discuss the implications of
+controlling for rating source in a subsequent section of this
+article.
+
+Correlations Among Study Variables
+Correlations among the study variables are provided in
+Table 2. Two sets of correlations are provided. Uncorrected
+correlations are provided above the diagonal, and metaanalyzed correlations, corrected for sampling and measurement error, are provided below the diagonal. We included
+meta-analytic estimates of the relationships among the variables for several reasons. First, meta-analysis allowed us to
+determine whether correlations between dispositional variables and career outcome measures were situationally specific (in other words, whether correlations between dispositions and outcome variables truly differed across
+organizations). Given that six organizations, located in four
+different continents, were represented in this study, this was
+an important advantage. Second, it was desirable to analyze
+the data using the best possible estimates of true score
+relationships. We used meta-analysis to estimate the true
+score relationships among constructs by correcting estimates for sampling and measurement error. Accordingly,
+the correlation matrix of dispositional and career outcome
+variables was meta-analyzed following the procedures outlined by Hunter and Schmidt (1990).
+The meta-analytic results are presented in the lower diagonal in Table 2. In order to address the issue of situational
+
+114
+
+JUDGE, THORESEN, PUCIK, AND WELBOURNE
+
+Table 1
+Means and Standard Deviations of Study Variables by Sample (N = 514)
+
+Variable
+
+British
+company
+(n = 58)
+
+Locus of Control
+
+M
+SD
+Generalized self-efficacy
+M
+
+SD
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+SD
+Positive affectivity
+M
+SD
+Openness to experience
+M
+
+SD
+Tolerance for ambiguity
+M
+SD
+Risk aversion
+
+M
+SD
+Coping with change, self-report
+M
+SD
+Coping with change, independent
+M
+SD
+Salary (U.S. dollars)
+M
+SD
+Job levels below CEO
+
+M
+SD
+Career plateau
+M
+
+SD
+Organizational commitment
+M
+
+SD
+Job satisfaction
+M
+SD
+Job performance
+M
+SD
+a
+
+Small
+Australian bank
+(n = 37)
+
+Korean
+company
+(n = 276)
+
+Scandinavian
+company
+(n = 72)
+
+American
+university
+(n = 39)
+
+3.53a'w
+0.36
+
+3.33b'c'f
+0.47
+
+3.85a-c-d-c
+0.32
+
+0.46
+
+0.43
+
+3.61a-e-f
+0.35
+
+3.94b-c
+0.45
+
+4.20a-f
+0.38
+
+4.17a-r
+0.46
+
+4.12
+0.32
+
+4.10
+0.37
+
+0.38
+
+397 b.c,d
+
+0.57
+
+4.39"-f
+0.36
+
+4.25a-f
+0.51
+
+4.26a-f
+0.36
+
+4.18f
+0.53
+
+0.43
+
+3.86"
+0.53
+
+4.05f
+0.48
+
+3.94
+0.46
+
+4.16a-f
+0.38
+
+4.00
+0.44
+
+3.81b-d
+0.37
+
+3.62b
+0.46
+
+3.31a-f-e
+0.46
+
+3.43e-f
+0.40
+
+3.49c'f
+0.42
+
+3?4 b.c,d
+
+367 b,c.d
+
+0.41
+
+0.36
+
+3.48f
+0.47
+
+3.39
+0.43
+
+3.47
+0.41
+
+3.59'
+0.38
+
+3.49
+0.36
+
+3.32a-d
+
+3 J4.b,c,d,f
+
+Self-esteem
+
+M
+
+Large
+Australian bank
+(n = 32)
+• 3.78aAe
+
+399 b,c
+
+381 b.c.d.e
+
+0.34
+
+2.42
+0.53
+
+2.53
+0.57
+
+2.38
+0.53
+
+2.24
+0.53
+
+2.24
+
+2 ,9a.b
+
+0.61
+
+0.44
+
+3.33c-d-f
+0.57
+
+3.5 l f
+0.46
+
+3.64a-f
+0.36
+
+3.75a-e-f
+0.35
+
+3.47d-f
+0.46
+
+0.33
+
+3.61f
+0.41
+
+3.76
+0.41
+
+3.68f
+0.43
+
+3.60f
+0.42
+
+3.66f
+0.40
+
+3.90a-c-d'e
+0.43
+
+91j982b.d,f
+
+82,332
+
+61,310a'd
+20,632
+
+68,087d-f
+30,459
+
+118,650a'b-c-e-f
+54,114
+
+68,767d-f
+70,848
+
+43,258a-c-d-e
+17,185
+
+4.43c'd
+2.21
+
+4.88c-d
+3.52
+
+27 ga,b,e,f
+
+240 a,b,c.f
+
+1.16
+
+1.65
+
+4.85c-d
+4.13
+
+4.64c-d
+2.05
+
+2.78d'f
+1.01
+
+3.08d-f
+1.02
+
+2.62e
+
+2 20"'b'e
+0.69
+
+3.23°'d'r
+1.10
+
+2.36a'b-e
+0.66
+
+3.49d'f
+0.63
+
+392a.b.c.e
+
+0.57
+
+0.38
+
+3.54d-f
+0.71
+
+0.44
+
+3.74C
+1.01
+
+3.65C
+1.16
+
+4 17a,b,f
+
+0.61
+
+4.02
+0.93
+
+3.90
+1.07
+
+3.88C
+0.67
+
+3.88e'f
+0.65
+
+4.00
+0.72
+
+3.73e-f
+0.71
+
+3.88e-f
+0.77
+
+42 ga.c,d
+
+4 lg a,c,d
+
+0.83
+
+0.55
+
+f
+
+f
+
+339 d.f
+
+b
+
+0.90
+3.46d-f
+0.42
+
+3 97a,b,c,d,e
+
+397 a,b.c,e
+
+c
+
+significantly different from British company.
+significantly different from large Australian bank.
+significantly different from small Australian
+bank. d significantly different from Scandinavian company. e significantly different from American university. f significantly different from Korean
+company.
+p £ .05 for all pairwise comparisons.
+
+specificity, we conducted a second-order sampling error
+analysis (Hunter & Schmidt, 1990) of all bivariate relationships. In order to refute the situational specificity hypothesis, the mean percent variance accounted for by statistical
+artifacts averaged across all possible bivariate relationships
+should equal or exceed 100% (for a more thorough explanation of second-order sampling error analysis, see Hunter
+& Schmidt, 1990, pp. 421-422). Results indicated that the
+mean percent variance accounted for exceeded 100% when
+
+all bivariate correlations were considered, as well as when
+only relationships between dispositions and outcome variables were examined. These results supported the conclusion that situational specificity did not affect true score
+estimates of correlations in these data. Relationships between variables of interest in this study did not truly differ
+and were generalizable across the six organizations.
+The pattern of correlations reported in Table 2 merits
+some discussion. First, it is necessary to note the variable,
+
+COPING WITH ORGANIZATIONAL CHANGE
+
+115
+
+Table 2
+Intercorrelations Among Study Variables (N = 514)
+10
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+Variable
+1 . Locus of control
+57
+2. Generalized self-efficacy
+3. Self-esteem
+59
+4. Positive affectivity
+56
+33
+5. Openness to experience
+34
+6. Tolerance for ambiguity
+7. Risk aversion
+-38
+8. Positive Self-Concept factor
+66
+27
+9. Risk Tolerance factor
+64
+10. Coping with change (self)
+1 1 . Coping (independent)
+23
+12
+12. Salary
+13. Job levels below CEO
+-09
+14. Career plateau
+-56
+15. Organizational commitment
+64
+16. Job satisfaction
+43
+04
+17. Job performance
+
+31
+—
+87
+71
+45
+57
+-51
+83
+46
+65
+22
+09
+-01
+-27
+53
+32
+11
+
+37
+
+65
+—
+57
+30
+42
+-31
+82
+32
+50
+25
+04
+-01
+-39
+42
+41
+18
+
+35
+55
+46
+—
+48
+56
+-56
+76
+50
+69
+32
+15
+
+-06
+-47
+62
+40
+16
+
+17
+29
+20
+34
+—
+65
+-57
+34
+75
+53
+26
+07
+-10
+-26
+29
+09
+13
+
+20
+42
+32
+43
+46
+—
+-76
+45
+81
+69
+34
+
+08
+-04
+-33
+29
+20
+16
+
+-2166
+-37
+77
+84
+-25
+-44
+62
+-40
+08
+-57
+23
+—
+-19
+-44 —
+-83
+50
+-55
+56
+-24
+26
+-10
+10
+05 -04
+24 -32
+-22
+52
+-14
+37
+-17
+10
+
+04
+32
+12
+46
+76
+80
+-79
+00
+—
+51
+42
+
+09
+-06
+-21
+25
+
+13
+10
+
+11
+
+12
+
+37
+
+15
+
+43
+36
+52
+35
+
+17
+20
+26
+19
+26
+-19
+
+50
+-38
+43
+44
+—
+44
+22
+-14
+-54
+65
+41
+16
+
+19
+23
+33
+—
+17
+-11
+-31
+32
+26
+76
+
+09
+07
+04
+13
+05
+06
+
+-09
+09
+07
+18
+14
+—
+
+-35
+-21
+22
+14
+
+13
+
+14
+
+15
+
+-07
+01
+00
+
+-31
+-16
+
+41
+37
+32
+47
+18
+19
+-14
+48
+
+-03
+-10
+-03
+01
+-01
+-05
+-08
+-08
+-31
+—
+
+-24
+-30
+-16
+-20
+14
+-29
+-15
+-33
+-21
+-14
+
+-07
+
+-64
+
+17
+
+32
+22
+31
+32
+05
+14
+
+01
+08
+11
+
+-09
+38
+
+13 -04
+47
+24
+19
+
+06 -09
+08 — -37
+-11 -59 —
+
+06 -16 -11
+
+16
+
+54
+14
+
+32
+20
+12
+-07
+-42
+44
+—
+23
+
+12
+06
+11
+-07
+08
+09
+12
+47
+04
+-12
+-07
+09
+15
+—
+
+Note. Meta-analyzed correlations, corrected for sampling and measurement error, appear below the diagonal. Uncorrected correlations appear above the
+diagonal. Decimals are omitted from correlations.
+p = .05 at r = .09; p = .01 at r = .12.
+
+yet generally moderate to high, intercorrelations among the
+dispositional variables. (Also included in Table 2 are two
+factors—Positive Self-Concept and Risk Tolerance—which
+were composed of a combination of the seven dispositional
+traits. These are discussed below.) For both the uncorrected
+and meta-analyzed correlations, all of the personality traits
+displayed significant correlations with both self-reports and
+independent assessments of coping with change. In addition, the rank ordering of dispositions as predictors of coping was quite similar across both sources of assessments (in
+particular, PA and tolerance for ambiguity were the strongest correlates of coping for both data sources). The significant correlations between the seven dispositional traits and
+both measures of coping provided support for Hypotheses
+1-7. In terms of relationships with career outcomes, coping
+with change was most strongly associated with career plateauing, organizational commitment, and job satisfaction.
+The correlation between independent assessments of coping
+with change and ratings of job performance was relatively
+strong, perhaps reflecting halo effects on the part of the
+rater. In general, coping was significantly correlated with
+career outcomes, regardless of rating source.
+
+Principal-Components Analysis of Dispositional
+Traits
+Because of the high intercorrelations among dispositional
+variables shown in Table 2, we conducted a principalcomponents analysis (varimax rotation) of the seven primary dispositions to determine whether these dispositions
+could be explained by a smaller number of common factors.
+Results of the principal-components analysis are shown in
+Table 3. A two-factor solution emerged from this analysis.
+
+Factor 1 (comprised of locus of control, generalized selfefficacy, self-esteem, and PA) explained 60% of the shared
+variance in the dispositional constructs. Openness to experience, tolerance for ambiguity, and risk aversion loaded
+primarily on Factor 2 (which explained 17% of the shared
+variance). PA loaded on both factors, but because it loaded
+most highly on Factor 1, we treated it as a manifestation of
+that factor. Factor 1 was labeled Positive Self-Concept in a
+manner consistent with Judge et al. (1997), who argued that
+individual success in organizations is largely determined by
+a person's "core evaluations" of the self along dimensions
+such as those captured by these four dispositional variables.
+Because the dispositions that loaded highly on the second
+factor pertained to the ability to deal with uncertainty, novel
+situations, and risk, this factor was labeled Risk Tolerance
+
+Table 3
+Principal-Components Analysis of Dispositional Traits
+(N = 514)
+Factor 1
+
+Factor 2
+
+Dispositional trait
+
+Positive Self-Concept
+
+Risk Tolerance
+
+Locus of control
+Generalized self-efficacy
+Self-esteem
+Positive affectivity
+Openness to experience
+Tolerance for ambiguity
+Risk aversion
+
+.77a
+.85a
+.92a
+.67"
+.18
+.28
+-.24
+
+.19
+.37
+.13
+.50"
+.81"
+.86°
+-.85a
+
+Eigenvalue
+Variance accounted for
+
+4.19
+60%
+
+1.16
+17%
+
+* Factor loading is greater than .40.
+
+116
+
+JUDGE, THORESEN, PUCIK, AND WELBOURNE
+
+(risk aversion was negatively coded in subsequent analyses,
+reflecting a low level of risk aversion). These two factors
+explained 76% of the shared variance in the personality
+constructs of interest. Factor scores were saved from this
+analysis and used in subsequent analyses.
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+Regression of Coping With Change on
+Personality Dispositions
+On the basis of the results of the principal-components
+analysis, self- and independent assessments of coping with
+change were regressed on the two dispositional factor scores
+resulting from the principal-components analysis described
+above. These regressions were performed using the multiple
+regression program REGRESS (Hunter, 1992) to avoid
+some of the problems associated with unreliability of predictors and outcome variables described earlier. Results for
+these regressions are shown in Table 4. The two trait factors
+explained a statistically significant amount of variance in
+coping with change, regardless of which coping source was
+considered. Not surprisingly, the percent variance accounted for was higher for predictions of self-reports of
+coping (R2 = .69, p < .01) than for independent assessments (R2 = .16, p < .01). These results suggested that the
+two traits were significantly related to coping with organizational change, regardless of the source of the coping
+assessment.
+Impact of Rating Source
+As was noted earlier, the three sources of the independent
+assessment of coping differed in their mean evaluation, with
+peers being less favorable in their ratings than supervisors
+or subordinates. To investigate the degree to which these
+differences may have influenced the results, we included
+two dummy variables representing supervisors and peers as
+the source of data (subordinates served as the excluded
+group) in the regression predicting the independent assess-
+
+ment of coping from the personality factors. Though the
+peer variable was statistically significant, indicating that
+peers were more severe in their evaluations, including these
+variables had a trivial effect on the effect of the personality
+variables on coping (the )3 coefficients changed .000 and
+.002 from the regressions in Table 4). Furthermore, when
+interaction terms were formed between the rating source
+dummy variables and the personality factors, the interactions were not significant. Thus, it did not appear that source
+of the independent assessment moderated the effect of the
+personality factors on coping.
+Relationships of Traits and Coping to
+Career Outcomes
+To test Hypothesis 8 (coping is related to career outcomes) and Hypothesis 9 (coping partly mediates the relationship between coping and career outcomes), we estimated a series of hierarchical regressions. To test
+Hypothesis 8, we regressed the career outcomes on the
+coping measures. To test Hypothesis 9, we performed a
+mediated regression analysis as described by Cohen and
+Cohen (1983). There are three requirements that must be
+satisfied for mediation to be present. First, the dispositional
+factors must be related to the career outcome variables (i.e.,
+there must be an effect to mediate). Second, coping with
+change must be related to the career outcomes. Finally, the
+relationship between the dispositional traits and the career
+outcome variables must be reduced after adjusting for the
+effects of coping with change. The percent effect mediated
+was calculated by dividing (a) the incremental variance
+explained by the traits after controlling for coping by (b) the
+total variance explained by the traits when entered into the
+regressions alone, and then subtracting this proportion
+from 1.0.
+Tables 5 and 6 provide results of regressions linking
+coping, traits, and coping and traits combined to the career
+
+Table 4
+Principal-Components Regression of Coping With Organizational Change
+on Dispositional Factors (N = 514)
+Self-report
+of coping
+
+Independent assessment
+of coping
+
+Independent variable
+
+(8
+
+J3
+
+Factor 1: Positive Self-Concept
+Locus of control, generalized self-efficacy, self-esteem,
+positive affectivity
+Factor 2: Risk Tolerance
+Openness to experience, tolerance for ambiguity, low
+risk aversion
+2
+R
+
+.58**
+
+.26**
+
+.60**
+
+.31**
+
+.69**
+
+.16*
+
+Note. Regression coefficients are standardized and corrected for measurement error.
+** p < .01.
+
+117
+
+COPING WITH ORGANIZATIONAL CHANGE
+Table 5
+Self-Reports of Coping as Mediator of the Relationship Between Dispositional Factors and Career Outcomes (N = 514)
+Predictor
+Coping only"
+
+0
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+Traits only"
+Positive Self-Concept (/3)
+Risk Tolerance (|3)
+Coping and traits"
+Coping (j3)
+Positive Self-Concept (|3)
+Risk Tolerance (/3)
+2
+
+Atf (traits)"
+% mediated"
+
+Salary
+
+Job levels
+below CEO
+
+Career
+plateau
+
+Organizational
+commitment
+
+Job
+satisfaction
+
+Job
+performance
+
+4%**
+.21**
+2%**
+
+1%*
+-.09*
+
+36%**
+.60**
+43%**
+.64**
+.18**
+49%**
+.42**
+.39**
+-.07
+
+17%**
+.41**
+27%**
+.51**
+
+3%**
+.18**
+4%**
+.14*
+.15*
+7%**
+.23**
+-.03
+
+-.07
+
+23%**
+-.48**
+24%**
+-.44**
+-.22**
+37%**
+-.65**
+-.02
+.10
+
+0%
+0%
+
+14%**
+
+13%**
+
+43%
+
+71%
+
+0%
+
+.10*
+.09
+
+-.01
+-.06
+
+5%**
+
+1%*
+
+.31**
+-.08
+-.10
+
+-.02
+
+.00
+
+1%*
+72%
+
+.05
+26%**
+.37**
+.32**
+-.15
+9%**
+
+65%
+
+.05
+3%**
+
+20%
+
+Note. Estimates are corrected for measurement error.
+" R2 values.
+*p<.05. **p<.01.
+
+outcomes. With respect to the relationship between coping
+and career outcomes (Hypothesis 8), the regression results
+revealed that both assessments of coping with change explained significant variance in all career outcomes. With
+respect to coping mediating the relationship between the
+traits and outcomes (Hypothesis 9), the first two requirements of mediation were clearly satisfied. Specifically,
+when entered into the regression equations alone, the dispositional traits explained significant variance in the career
+outcomes, with the exception of job level. Similarly, as was
+noted above, when entered into the regressions alone, coping with organizational change explained significant variance in the career outcomes. Although the first two requirements for mediation were generally satisfied, the last
+requirement supported the hypothesis of partial mediation.
+Specifically, in most cases when the traits alone explained
+significance variance in career outcomes, they also explained significant incremental variance when controlling
+
+for coping. In two cases (job level and job performance with
+the independent assessment) suppressor effects were observed, indicating that the traits explained more variance
+controlling for coping. When one looks at the |3 coefficients
+in Tables 5 and 6, there are a number of cases in which
+significant trait coefficients became nonsignificant when
+coping was controlled. On average, coping mediated 50% of
+the relationship between the traits and career outcomes.
+Thus, Hypothesis 8 appeared to be supported by the results.
+Discussion
+The present study represents a departure from the literature on organizational change that has generally taken a
+systems or structural approach to effecting organizational
+change. Because the success of change efforts lies in the
+abilities and motivation of individuals within the organization, an individual-level approach to managing change
+
+Table 6
+Independent Assessments of Coping as Mediator of the Relationship Between Dispositional Factors and Career Outcomes (N = 514)
+Predictor
+
+Salary
+
+Coping only"
+J3
+Traits only"
+Positive Self-Concept O)
+Risk Tolerance (j3)
+Coping and traits"
+Coping ()3)
+Positive Self-Concept ()3)
+Risk Tolerance ()3)
+
+2%**
+.15**
+2%**
+.10*
+
+AR2 (traits)3
+% mediated"
+
+.09
+3%**
+.11*
+
+.07
+.06
+0%
+
+89%
+
+Job levels
+below CEO
+
+Career
+Plateau
+
+Organizational
+commitment
+
+Job
+satisfaction
+
+Job
+performance
+
+1%*
+
+9%**
+-.30**
+24%**
+-44**
+-.22**
+20%**
+-.20**
+-.22**
+-.25**
+
+9%**
+.31**
+43%**
+.64**
+.18**
+29%**
+.24**
+.33**
+.25**
+
+7%**
+.26**
+27%**
+.51**
+
+53%**
+.73**
+4%**
+.14*
+.15*
+59%**
+.80**
+-.06
+-.08
+
+-.09*
+
+0%
+-.01
+
+-.06
+1%**
+-.08
+
+.00
+-.06
+
+1%*
+—
+
+.05
+22%**
+.17**
+.42**
+.02
+
+11%**
+
+19%**
+
+16%**
+
+55%
+
+55%
+
+40%
+
+Note, Estimates are corrected for measurement error. Dashes indicate suppressor effects.
+" R2 values.
+* p < .05. ** p < .01.
+
+7%**
+' —
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+118
+
+JUDGE, THORESEN, PUCIK, AND WELBOURNE
+
+seems appropriate. Indeed, the results supported this
+individual-level effort in identifying seven dispositional
+constructs that were, to varying degrees, related to successful coping with organizational change. The strongest and
+most consistent dispositional variables, in terms of their
+relationship to coping with change, were tolerance for ambiguity and PA. The other traits were strongly correlated
+with self-reports of coping with change but displayed appreciably weaker (though still statistically significant) associations with the independent assessments of coping. Because all seven traits showed significant correlations with
+the independent assessment, common method variance does
+not seem to be a viable alternative explanation of the results.
+The results also revealed that the dispositional constructs
+included in this study were related and, in fact, comprised
+two independent factors. These factors were labeled Positive Self-Concept and Risk Tolerance. The Positive SelfConcept factor was composed of locus of control, PA,
+self-esteem, and self-efficacy. The Risk Tolerance factor
+was composed of openness to experience, low risk aversion,
+and tolerance for ambiguity. Both factors were positively
+related to coping with change for self-reports, as well as
+independent assessments of coping with change.
+Results further revealed that the dispositional factors
+were related to both intrinsic (job satisfaction, organizational commitment) and extrinsic (salary, career plateau,
+and job performance) dimensions of career success. Coping
+with change, through its relationship to the traits and career
+outcomes, mediated some of the relationships between the
+traits and career outcomes. The tendency of mediation effects to be stronger when self-reports were considered could
+be a function of common method variance, as, for this
+analysis, the traits, coping, and outcomes were measured
+with the same survey. Although the degree of mediation
+varied depending on whether the self- or independent assessment of coping was used, but sets of results suggested
+that Positive Self-Concept and Risk Tolerance are related to
+career success. This finding is partially explained by the
+tendency of managers scoring high on the traits and measures of career success to be viewed as more effective at
+coping with organizational change.
+The results of this study fit well with the emerging body
+of research indicating that many behaviors and attitudes are
+dispositionally based (at least in part). In the past decade of
+organizational behavior research, personality characteristics
+have been linked to leadership, job attitudes, job stress, and
+work performance (House, Shane, & Herold, 1996). One
+continuing area for development, however, is to link dispositional variables to important work behaviors. Because
+successful coping with change is one such behavior, one of
+the potential contributions of this study is to the dispositional perspective in organizations.
+Several implications for research and for practice are
+apparent from the results. Although the predominant macro
+
+approach to organizational change is not inappropriate, it is
+important to remember that most change interventions fail
+(Porras & Robertson, 1992). Thus, there is considerable
+room for improving the effectiveness of change efforts. The
+results of this study suggest that one source of making
+change efforts more successful lies in the characteristics of
+the individual manager. Further research is required to demonstrate how organizations could implement these findings
+to facilitate change management efforts. A potential application, however, lies in the assessment and selection of
+managers. As with the literature on expatriate assignments,
+selecting managers on the basis of their dispositional
+make-up may be warranted. Thus, in considering managers
+for change-oriented assignments, this study suggests that
+organizations might want to consider managers who have a
+positive self-concept and are risk tolerant. Supporting the
+selection implications of the dispositional concepts is the
+finding that both constructs were significant predictors of
+job performance (see Table 5). Of course, no trait is universally desirable. For example, an organization that hires
+no risk-adverse employees may soon gamble away its fortune. Positive Self-Concept and Risk Tolerance are only
+two of many factors that organizations may wish to
+consider.
+Furthermore, before organizations actually begin selecting managers on the basis of these characteristics, more
+research is required in several areas. First, although there is
+an extensive body of literature supporting the reliability and
+validity of the dispositions included in this study, few of
+these characteristics have been studied in a selection context. Thus, although the results of the present study are
+suggestive, they do not directly demonstrate the validity of
+these dispositions in managerial selection. Second, responses to personality inventories are subject to social desirability biases because most questions are relatively transparent (i.e., it is often apparent what qualifies as a "good"
+answer). Although it is far from clear that faking is a
+problem with the use of personality measures in selection
+(Barrick & Mount, 1996), the falsifying potential of measures of positive self-concept and risk tolerance should be
+investigated in actual selection settings.
+Another important practical concern in considering the
+selection implications of our results is the issue of whether
+the traits that predict job performance during periods of high
+change would also predict job performance during periods
+of less change. Although there is little evidence that the
+traits making up the Risk Tolerance factor predict typical
+job performance, the major element of Positive Self-Concept—self-esteem—does appear to display nonzero correlations with job performance (Pierce et al., 1989). Thus, at
+least with respect to one of the dispositional factors included
+in this study, selection with the goal of enhancing coping
+during high change periods may also lead to higher job
+performance levels during periods of lesser change.
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+COPING WITH ORGANIZATIONAL CHANGE
+
+Although the selection implications of these results are
+intriguing, organizations often have limited flexibility in
+selecting or placing managers in change-oriented assignments. Because organizations facing major changes must
+deal with the managers who are already in place, it would be
+preferable for organizations to be able to develop managers
+to cope with change more effectively. Does the efficacy of
+the dispositions considered in this study preclude successful
+developmental change management programs? Not necessarily. Although core personality traits such as the Big Five
+are quite stable over time and appear to have a genetic basis
+(Costa & McCrae, 1992; Goldberg, 1992; Jang, Vesley, &
+Vernon, 1996), other dispositional characteristics may be
+more malleable. Research indicates that whereas there is
+substantial stability in core personality characteristics such
+as the Big Five, intrapsychic dispositional characteristics
+that relate to coping styles seem to be more subject to
+change (Lachman, 1989). In fact, Caspi and Bern (1990)
+noted that some traits, such as the Big Five, tend to show
+high stability over time whereas other traits, such as selfesteem, show less stability, with correlations' between .20
+and .40 over 5- to 10-year intervals. Thus, it appears that
+some traits included in our study, for example, self-esteem,
+are more malleable than others, such as openness to experience. This suggests that positive self-concept may be
+easier to change than risk tolerance. But how might this be
+brought about? Bandura (1997) discussed four ways in
+which task-specific self-efficacy can be enhanced: enactive
+mastery experiences, vicarious experience, verbal persuasion, and feedback. Whether organizations should be concerned with using such techniques toward the goal of changing employees' self-concept and whether such efforts would
+be successful are worthy topics for future researchers to
+consider.
+A limitation of the present study is that only a subset of
+all possible dispositions that may affect coping with organizational change were included in this study. For example,
+hardiness has been related to coping with change among
+public sector employees (Rush et al., 1995), and constructive thinking has been found to lead to more productive
+strategies in coping with stressful life events (Epstein,
+1992). Future research should expand the dispositions studied to determine whether they add incremental variance
+beyond those included in the present study.
+
+References
+Adler, S. (1980). Self-esteem and causal attributions for job satisfaction and dissatisfaction. Journal of Applied Psychology, 65,
+327-332.
+Anderson, C. R. (1977). Locus of control, coping behaviors, and
+performance in a stress setting: A longitudinal study. Journal of
+Applied Psychology, 62, 446-451.
+Ashford, S. J. (1988). Individual strategies for coping with stress
+
+119
+
+during organizational transitions. Journal of Applied Behavioral
+Science, 24, 19-36.
+Ashford, S. J., & Cummings, L. L. (1985). Proactive feedback
+seeking: The instrumental use of the information environment.
+Journal of Occupational Psychology, 58, 67-97.
+Ashforth, B. E., & Lee, R. T. (1990). Defensive behavior in
+organizations: A preliminary model. Human Relations, 43, 621648.
+Bandura, A. (1997). Self-efficacy: The exercise of control. New
+York: Freeman.
+Bantel, K. A., & Jackson, S. E. (1989). Top management and
+innovations in banking: Does the composition of the top team
+make a difference? Strategic Management Journal, 10, 107—
+124.
+Bar-rick, M. R., & Mount, M. K. (1996). Effects of impression
+management and self-deception on the predictive validity of
+personality constructs. Journal of Applied Psychology, 81, 261272.
+Begley, T. M., & Czajka, J. M. (1993). Panel analysis of the
+moderating effects of commitment on job satisfaction, intent to
+quit, and health following organizational change. Journal of
+Applied Psychology, 78, 552-556.
+Blascovich, J., & Tomaka, J. (1991). Measures of self-esteem. In
+J. P. Robinson, P. R. Shaver, & L. S. Wrightsman (Eds.),
+Measures of personality and social psychological attitudes (pp.
+115-160). San Diego: Academic Press.
+Bowman, G. D., & Stern, M. (1995). Adjustment to occupational
+stress: The relationship of perceived control to effectiveness of
+coping strategies. Journal of Counseling Psychology, 42, 294303.
+Bray, D. W. (1994). Personnel-centered organizational diagnosis.
+In A. Howard et al. (Eds.), Diagnosis for organizational change
+(pp. 152-171). New York: Guilford Press.
+Budner, S. (1962). Intolerance of ambiguity as a personality variable. Journal of Personality, 30, 29-50.
+Cable, D. M., & Judge, T. A. (1994). Pay preferences and job
+search decisions: A person-organization fit perspective. Personnel Psychology, 47, 317-348.
+Callan, V. J. (1993). Individual and organizational strategies for
+coping with organizational change. Work and Stress, 7, 63-75.
+Callan, V. J., Terry, D. J., & Schweitzer, R. (1994). Coping
+resources, coping strategies and adjustment to organizational
+change: Direct of buffering effects? Work and Stress, 8, 372383.
+Caspi, A., & Bern, D. J. (1990). Personality continuity and change
+across the life course. In L. A. Pervin (Ed.), Handbook of
+personality: Theory and research (pp. 549-575). New York:
+Guilford Press.
+Chao, G. T. (1990). Exploration of the conceptualization and
+measurement of career plateau: A comparative analysis. Journal
+of Management, 16, 181-193.
+Chwalisz, K., Altmaier, E. M., & Russell, D. W. (1992). Causal
+attributions, self-efficacy cognitions, and coping with stress.
+Journal of Social and Clinical Psychology, 11, 377-400.
+Cohen, J., & Cohen, P. (1983). Applied multiple regression/correlation for the behavioral sciences. Hillsdale, NJ: Erlbaum.
+Cohen, S., & Wills, T. A. (1985). Stress, social support, and the
+buffering hypothesis. Psychological Bulletin, 98, 310-357.
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+120
+
+JUDGE, THORESEN, PUCIK, AND WELBOURNE
+
+Coopersmith, S. (1967). Antecedents of self-esteem. San Francisco:
+Freeman.
+Costa, P. T., & McCrae, R. R. (1992). Revised NEO Personality
+Inventory and NEO Five-Factor Inventory. Odessa, FL: Psychological Assessment Resources.
+Epstein, S. (1992). Coping ability, negative self-evaluation, and
+overgeneralization: Experiment and theory. Journal of Personality and Social Psychology, 62, 826-836.
+Folkman, S., Lazarus, R. S., Gruen, R. J., & DeLongis, A. (1986).
+Appraisal, coping, health status, and psychological symptoms.
+Journal of Personality and Social Psychology, 50, 571-579.
+Gist, M. E., & Mitchell, T. E. (1992). Self-efficacy: A theoretical
+analysis of its determinants and malleability. Academy of Management Review, 17, 183-211.
+Goldberg, L. R. (1992). The development of markers for the
+big-five factor structure. Psychological Assessment, 4, 26-42.
+Gomez-Mejia, L. R., & Balkin, D. B. (1989). Effectiveness of
+individual and aggregate compensation strategies. Industrial
+Relations, 28, 431-445.
+Gupta, A. K., & Govindarajan, V. (1984). Business unit strategy,
+managerial characteristics, and business unit effectiveness at
+strategy implementation. Academy of Management Journal, 27,
+25-41.
+Hambrick, D. C., & Mason, P. A. (1984). Upper echelons: The
+organization as a reflection of its top managers. Academy of
+Management Review, 9, 193—206.
+Hamilton, E. E. (1988). The facilitation of organizational change:
+An empirical study of factors predicting change agents' effectiveness. Journal of Applied Behavioral Science, 24, 37-59.
+Holahan, C. J., & Moos, R. H. (1987). Personal and contextual
+determinants of coping strategies. Journal of Personality and
+Social Psychology, 52, 946-955.
+Holmes, B. H., & Werbel, J. D. (1992). Finding work following
+job loss: The role of coping resources. Journal of Employment
+Counseling, 29, 22-29.
+House, R. J., Shane, S. A., & Herold, D. M. (1996). Rumors of the
+death of dispositional research are vastly exaggerated. Academy
+of Management Review, 21, 203—224.
+Hull, J. G., Van Treuren, R. R., & Virnelli, S. (1987). Hardiness
+and health: A critique and alternative approach. Journal of
+Personality and Social Psychology, 53, 518-530.
+Hunter, J. E. (1992). REGRESS: A multiple regression program in
+BASICA (User's manual). East Lansing: Michigan State University, Department of Psychology.
+Hunter, J. E., & Schmidt, F. L. (1990). Methods of'meta-analysis.
+Newbury Park, CA: Sage.
+Jalajas, D. S. (1994). The role of self-esteem in the stress process:
+Empirical results from job hunting. Journal of Applied Social
+Psychology, 24, 1984-2001.
+Jang, K. L., Vesley, W. J., & Vernon, P. A. (1996). Heritability of
+the big five personality dimensions and their facets: A twin
+study. Journal of Personality, 64, 577-591.
+Jones, G. R. (1986). Socialization tactics, self-efficacy, and newcomers' adjustments to organizations. Academy of Management
+Journal, 29, 262-219.
+Judge, T. A., Boudreau, J. W., & Bretz, R. D. (1994). Job and life
+attitudes of male executives. Journal of Applied Psychology, 79,
+767-782.
+
+Judge, T. A., Cable, D. M., Boudreau, J. W., & Bretz, R. D.
+(1995). An empirical investigation of the predictors of executive
+career success. Personnel Psychology, 48, 485-519.
+Judge, T. A., Locke, E. A., & Durham, C. C. (1997). The dispositional causes of job satisfaction: A core evaluations approach.
+Research in Organizational Behavior, 19, 151-188.
+Kahneman, D., & Tversky, A. (1979). Judgment under uncertainty: Heuristics and biases. New York: Cambridge University
+Press.
+Keenan, A. (1978). Selection interview performance and intolerance of ambiguity. Psychological Reports, 42, 353-354.
+Keenan, A., & McBain, G. D. M. (1979). Effects of Type A
+behavior, intolerance of ambiguity, and locus of control on the
+relationship between role stress and work-related outcomes.
+Journal of Occupational Psychology, 52, 277-285.
+Kinicki, A. J. (1989). Predicting occupational role choices after
+involuntary job loss. Journal of Vocational Behavior, 35, 204218.
+Kobasa, S. C. (1979). Stressful life events, personality, and health:
+An inquiry into hardiness. Journal of Personality and Social
+Psychology, 37, 1-11.
+Kobasa, S. C. (1982). Commitment and coping in stress resistance
+among lawyers. Journal of Personality and Social Psychology, 42, 707-717.
+Lachman, M. E. (1989). Personality and aging at the crossroads:
+Beyond stability versus change. In K. W. Schaie & C. Schooler
+(Eds.), Social structure and aging: Psychological processes (pp.
+167-190). Hillsdale, NJ: Erlbaum.
+Lau, C. M., & Woodman, R. W. (1995). Understanding organizational change: A schematic perspective. Academy of Management Journal, 38, 537-554.
+Lefcourt, H. M. (1991). Locus of control. In J. P. Robinson, P. R.
+Shaver, & L. S. Wrightsman (Eds.), Measures of personality
+and social psychological attitudes (pp. 413-499). San Diego:
+Academic Press.
+Lennings, C. J. (1994). An evaluation of a generalized selfefficacy scale. Personality and Individual Differences, 16, 745750.
+Levenson, H. (1981). Differentiating between internality, powerful
+others, and chance. In H. M. Lefcourt (Ed.), Research with the
+locus of control construct (Vol. 1, pp. 15-63). New York:
+Academic Press.
+Lopes, L. L. (1994). Psychology and economics: Perspectives on
+risk, cooperation, and the marketplace. Advances in Psychology, 45, 197-227.
+Lorsch, J. W., & Morse, J. J. (1974). Organizations and their
+members: A contingency approach. New York: Harper & Row.
+Maehr, M. L., & Videbeck, R. (1968). Predisposition to risk and
+persistence under varying reinforcement-success schedules.
+Journal of Personality and Social Psychology, 9, 96-100.
+Matell, M. S., & Jacoby, J. (1971). Is there an optimal number of
+alternatives for Likert scale items? Educational and Psychological Measurement, 31, 657-674.
+Mathieu, J. E., & Zajac, D. M. (1990). A review and meta-analysis
+of the antecedents, correlates, and consequences of organizational commitment. Psychological Bulletin, 108, 171-194.
+McCrae, R. R., & Costa, P. T., Jr. (1986). Personality, coping, and
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+COPING WITH ORGANIZATIONAL CHANGE
+coping effectiveness in an adult sample. Journal of Personality, 54, 385-405.
+McDonald, T., & Siegall, M. (1992). The effects of technological
+self-efficacy and job focus on job performance, attitudes, and
+withdrawal behaviors. Journal of Psychology, 126, 465-475.
+McLain, D. L. (1993). The MSTAT-I: A new measure of an
+individual's tolerance for ambiguity. Educational and Psychological Measurement, 53, 183-189.
+Nelson, A., Cooper, C. L., & Jackson, P. R. (1995). Uncertainty
+amidst change: The impact of privatization on employee job
+satisfaction and well-being. Journal of Occupational and Organizational Psychology, 68, 57-71.
+Newton, T. J., & Keenan, A. (1990). The moderating effect of the
+Type A behavior pattern and locus of control upon the relationship between change in job demands and change in psychological strain. Human Relations, 43, 1229-1255.
+Norton, R. W. (1975). Measurement of ambiguity tolerance. Journal of Personality Assessment, 39, 607-619.
+Peabody, D., & Goldberg, L. R. (1989). Some determinants of
+factor structures from personality-trait descriptors. Journal of
+Personality and Social Psychology, 57, 552-567.
+Pierce, J. L., Gardner, D. G., Cummings, L. L., & Dunham, R. B.
+(1989). Organization-based self-esteem: Construct definition,
+measurement, and validation. Academy of Management Journal, 32, 622-648.
+Porras, J. L, & Robertson, P. (1992). Organization development:
+Theory, practice, and research. In M. D. Dunnette & L. M.
+Hough (Eds.), Handbook of industrial and organizational psychology, (2nd ed., pp. 719-822). Palo Alto, CA: Consulting
+Psychological Press.
+Quinn, R. E., Kahn, J. A., & Mandl, M. J. (1994). Perspectives on
+organizational change: Exploring movement at the interface. In
+J. Greenberg (Ed.), Organizational behavior: The state of the
+science (pp. 109-133). Hillsdale, NJ: Erlbaum.
+Rosenberg, M. (1965). Society and the adolescent self-image.
+Princeton, NJ: Princeton University Press.
+Rotter, J. B. (1966). Generalized expectancies for internal versus
+external control of reinforcement. Psychological Monographs,
+80(1, Whole No. 609).
+Rush, M. C., Schoel, W. A., & Barnard, S. M. (1995). Psychological resiliency in the public sector: "Hardiness" and pressure for
+change. Journal of Vocational Behavior, 46, 17-39.
+Rydell, S. T. (1966). Tolerance of ambiguity and semantic differential ratings. Psychological Reports, 19, 1303-1312.
+Scarpello, V., & Campbell, J. P. (1983). Job satisfaction: Are all
+the parts there? Personnel Psychology, 36, 577-600.
+
+121
+
+Schaninger, C. M. (1976). Perceived risk and personality. Journal
+of Consumer Research, 3, 95-100.
+Schunk, D. H. (1983). Progress self-monitoring: Effects on children's self-efficacy and achievement. Journal of Experimental
+Education, 51, 89-93.
+Schweiger, D. M., & DeNisi, A. S. (1991). Communication with
+employees following a merger: A longitudinal field experiment.
+Academy of Management Journal, 34, 110-135.
+Sherer, M., Maddux, J. E., Mercandante, B., Prentice-Dunn, S.,
+Jacobs, B., & Rogers, R. W. (1982). The self-efficacy scale:
+Construction and validation. Psychological Reports, 51, 663671.
+Slovic, P. (1972). Information processing, situation specificity, and
+the generality of risk taking behavior. Journal of Personality
+and Social Psychology, 22, 128-134.
+Smith, T. W., Pope, M. K., Rhodewalt, F., & Poulton, J. L. (1989).
+Optimism, neuroticism, coping, and symptom reports: An alternative interpretation of the Life Orientation Test. Journal of
+Personality and Social Psychology, 56, 640-648.
+Stumpf, S. A., Brief, A. P., & Hartman, K. (1987). Self-efficacy
+expectations and coping with career-related events. Journal of
+Vocational Behavior, 31, 91-108.
+Terry, D. J., Nielsen, M., & Perchard, L. (1994). The effect of job
+stress on well-being: A test of the buffering effects of social
+support. Australian Journal of Psychology, 45, 168-175.
+Tipton, R. M., & Worthington, E. L., Jr. (1984). The measurement
+of generalized self-efficacy: A study of construct validity. Journal of Personality Assessment, 48, 545-548.
+Wanberg, C. R., & Banas, J. T. (1997). A model of the predictors
+and outcomes of individual attitudes toward change. Manuscript
+submitted for publication.
+Watson, D., & Clark, L. A. (1997). Extraversion and its positive
+emotional core. In S. Briggs, W. Jones, & R. Hogan (Eds.),
+Handbook of personality psychology (pp. 767-793). New York:
+Academic Press.
+Watson, D., Clark, L. A., & Tellegen, A. (1988). Development and
+validation of brief measures of positive and negative affect: The
+PANAS scales. Journal of Personality and Social Psychology, 54, 1063-1070.
+Whitboume, S. K. (1986). Openness to experience, identity flexibility, and life change in adults. Journal of Personality and
+Social Psychology, 50, 163-168.
+Wiersema, M. F., & Bantel, K. A. (1992). Top management team
+demography and corporate strategic change. Academy of Management Journal, 35, 91-121.
+
+(Appendix follows)
+
+122
+
+JUDGE, THORESEN, PUCIK, AND WELBOURNE
+
+Appendix
+
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+
+Items and Factor Loadings for Coping With Change Scale
+Item
+
+Loading
+
+t value
+
+1. When dramatic changes happen in this company, I feel I handle them with ease.
+2. I have been a leader of transformation efforts within this company.
+3. The rapid changes that have been occurring in this company are sometimes
+beyond the abilities of those within the company to manage.
+4. Rapid change is something to adapt to, but not to embrace.
+5. When changes happen in this company, I react by trying to manage the change
+rather than complain about it.
+6. The changes occurring in this company cause me stress.
+7. I see the rapid changes that are occurring in this company as opening up new
+career opportunities for me.
+8. Deep changes ultimately better the company.
+9. Environmental turbulence presents opportunities to make overdue changes in
+this company.
+10. When changes are announced, I try to react in a problem-solving, rather than an
+emotional, mode.
+11. I often find myself leading change efforts in this company.
+12. I think I cope with change better than most of those with whom I work.
+
+.51
+.46
+
+10.81
+9.53
+
+.27
+.52
+
+5.35
+10.84
+
+.38
+.43
+
+7.82
+8.85
+
+.59
+.58
+
+12.61
+12.32
+
+.35
+
+7.04
+
+.38
+.57
+.51
+
+7.83
+12.43
+10.71
+
+Note. Items 3,4, and 6 are reverse scored. The Coping With Change Scale is copyrighted by Timothy A. Judge
+and Vladimir Pucik and may not be used without permission. All factor loadings are significant at the .001 level.
+
+Received September 19, 1997
+Revision received June 11, 1998
+Accepted June 16, 1998
+
+Low Publication Prices for APA Members and Affiliates
+Keeping you up-to-date. All APA Fellows, Members, Associates, and Student Affiliates
+receive—as part of their annual dues—subscriptions to the American Psychologist and
+APA Monitor. High School Teacher and International Affiliates receive subscriptions to
+the APA Monitor, and they may subscribe to the American Psychologist at a significantly
+reduced rate. In addition, all Members and Student Affiliates are eligible for savings of up
+to 60% (plus a journal credit) on all other APA journals, as well as significant discounts on
+subscriptions from cooperating societies and publishers (e.g., the American Association for
+Counseling and Development, Academic Press, and Human Sciences Press).
+Essential resources. APA members and affiliates receive special rates for purchases of
+APA books, including the Publication Manual of the American Psychological Association,
+and on dozens of new topical books each year.
+Other benefits of membership. Membership in APA also provides eligibility for
+competitive insurance plans, continuing education programs, reduced APA convention fees,
+and specialty divisions.
+More information. Write to American Psychological Association, Membership Services,
+750 First Street, NE, Washington, DC 20002-4242.
+
+

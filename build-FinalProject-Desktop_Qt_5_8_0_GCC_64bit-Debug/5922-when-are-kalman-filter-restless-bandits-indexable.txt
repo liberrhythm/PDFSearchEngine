@@ -1,0 +1,952 @@
+When are Kalman-Filter Restless Bandits Indexable?
+Christopher Dance and Tomi Silander
+Xerox Research Centre Europe
+6 chemin de Maupertuis, Meylan, Isère, France
+{dance,silander}@xrce.xerox.com
+
+Abstract
+We study the restless bandit associated with an extremely simple scalar Kalman
+filter model in discrete time. Under certain assumptions, we prove that the problem is indexable in the sense that the Whittle index is a non-decreasing function of
+the relevant belief state. In spite of the long history of this problem, this appears
+to be the first such proof. We use results about Schur-convexity and mechanical
+words, which are particular binary strings intimately related to palindromes.
+
+1
+
+Introduction
+
+We study the problem of monitoring several time series so as to maintain a precise belief while minimising the cost of sensing. Such problems can be viewed as POMDPs with belief-dependent rewards [3] and their applications include active sensing [7], attention mechanisms for multiple-object
+tracking [22], as well as online summarisation of massive data from time-series [4]. Specifically, we
+discuss the restless bandit [24] associated with the discrete-time Kalman filter [19]. Restless bandits
+generalise bandit problems [6, 8] to situations where the state of each arm (project, site or target)
+continues to change even if the arm is not played. As with bandit problems, the states of the arms
+evolve independently given the actions taken, suggesting that there might be efficient algorithms for
+large-scale settings, based on calculating an index for each arm, which is a real number associated
+with the (belief-)state of that arm alone. However, while bandits always have an optimal index policy (select the arm with the largest index), it is known that no index policy can be optimal for some
+discrete-state restless bandits [17] and such problems are in general PSPACE-hard even to approximate to any non-trivial factor [10]. Further, in this paper we address restless bandits with real-valued
+rather than discrete states. On the other hand, Whittle proposed a natural index policy for restless
+bandits [24], but this policy only makes sense when the restless bandit is indexable (Section 2).
+Briefly, a restless bandit is said to be indexable when an optimal solution to a relaxed version of the
+problem consists in playing all arms whose indices exceed a given threshold. (The relaxed version
+of the problem relaxes the constraint on the number of arms pulled per turn to a constraint on the
+average number of arms pulled per turn). Under certain conditions, indexability implies a form of
+asymptotic optimality of Whittle’s policy for the original problem [23, 20].
+Restless bandits associated with scalar Kalman(-Bucy) filters in continuous time were recently
+shown to be indexable [12] and the corresponding discrete-time problem has attracted considerable
+attention over a long period [15, 11, 16, 21]. However, that attention has produced no satisfactory
+proof of indexability – even for scalar time-series and even if we assume that there is a monotone
+optimal policy for the single-arm problem, which is a policy that plays the arm if and only if the
+relevant belief-state exceeds some threshold (here the relevant belief-state is a posterior variance).
+Theorem 1 of this paper addresses that gap. After formalising the problem (Section 2), we describe the concepts and intuition (Section 3) behind the main result (Section 4). The main tools
+are mechanical words (which are not sufficiently well-known) and Schur convexity. As these tools
+are associated with rather general theorems, we believe that future work (Section 5) should enable
+substantial generalisation of our results.
+1
+
+2
+
+Problem and Index
+
+We consider the problem of tracking N time-series, which we call arms, in discrete time. The state
+Zi,t ∈ R of arm i at time t ∈ Z+ evolves as a standard-normal random walk independent of everything but its immediate past (Z+ , R− and R+ all include zero). The action space is U := {1, . . . , N }.
+Action ut = i makes an expensive observation Yi,t of arm i which is normally-distributed about Zi,t
+with precision bi ∈ R+ and we receive cheap observations Yj,t of each other arm j with precision
+aj ∈ R+ where aj < bj and aj = 0 means no observation at all.
+Let Zt , Yt , Ht , Ft be the state, observation, history and observed history, so that Zt :=
+(Z1,t , . . . , ZN,t ), Yt := (Y1,t , . . . , YN,t ), Ht := ((Z0 , u0 , Y0 ), . . . , (Zt , ut , Yt )) and Ft :=
+((u0 , Y0 ), . . . , (ut , Yt )). Then we formalise the above as (1· is the indicator function)
+
+
+1ut 6=i
+1ut =i
+Zi,0 ∼ N (0, 1), Zi,t+1 | Ht ∼ N (Zi,t , 1), Yi,t | Ht−1 , Zt , ut ∼ N Zi,t ,
++
+.
+ai
+bi
+Note that this setting is readily generalised to E[(Zi,t+1 − Zi,t )2 ] 6= 1 by a change of variables.
+Thus the posterior belief is given by the Kalman filter as Zi,t | Ft ∼ N (Ẑi,t , xi,t ) where the
+posterior mean is Ẑi,t ∈ R and the error variance xi,t ∈ R+ satisfies
+x+1
+x+1
+and φi,1 (x) :=
+. (1)
+xi,t+1 = φi,1ut+1 =i (xi,t ) where φi,0 (x) :=
+ai x + ai + 1
+bi x + bi + 1
+Problem KF1. Let π be a policy so that ut = π(Ft−1 ). Let xπi,t be the error variance under π. The
+problem is to choose π so as to minimise the following objective for discount factor β ∈ [0, 1). The
+objective consists of a weighted sum of error variances xπi,t with weights wi ∈ R+ plus observation
+costs hi ∈ R+ for i = 1, . . . , N :
+"∞ N
+#
+∞ X
+N
+XX 
+X
+	
+
+	
+t
+π
+E
+β hi 1ut =i + wi xi,t =
+β t hi 1ut =i + wi xπi,t
+t=0 i=1
+
+t=0 i=1
+
+where the equality follows as (1) is a deterministic mapping (and assuming π is deterministic).
+Single-Arm Problem and Whittle Index. Now fix an arm i and write xπt , φ0 (·), . . . instead of
+xπt,i , φi,0 (·), . . . . Say there are now two actions ut = 0, 1 corresponding to cheap and expensive
+observations respectively and the expensive observation now costs h + ν where ν ∈ R. The singlearm problem is to choose a policy, which here is an action sequence, π := (u0 , u1 , . . . )
+∞
+X
+so as to minimise V π (x|ν) :=
+β t {(h + ν)ut + wxπt } where x0 = x.
+(2)
+t=0
+
+Let Q(x, α|ν) be the optimal cost-to-go in this problem if the first action must be α and let π ∗ be an
+optimal policy, so that
+∗
+
+Q(x, α|ν) := (h + ν)α + wx + βV π (φα (x)|ν).
+For any fixed x ∈ R+ , the value of ν for which actions u0 = 0 and u0 = 1 are both optimal is
+known as the Whittle index λW (x) assuming it exists and is unique. In other words
+The Whittle index λW (x) is the solution to Q(x, 0|λW (x)) = Q(x, 1|λW (x)).
+(3)
+α∗
+Let us consider a policy which takes action u0 = α then acts optimally producing actions ut (x)
+and error variances xα∗
+t (x). Then (3) gives
+∞
+∞
+X 
+	 X
+
+	
+0∗
+1∗
+β t (h + λW (x))u0∗
++
+wx
+(x)
+=
+β t (h + λW (x))u1∗
+t
+t
+t + wxt (x) .
+t=0
+
+t=0
+
+Solving this linear equation for the index λW (x) gives
+P∞ t 0∗
+1∗
+W
+t=1 β (xt (x) − xt (x))
+P
+λ (x) = w ∞
+− h.
+1∗
+0∗
+t
+t=0 β (ut (x) − ut (x))
+
+(4)
+
+Whittle [24] recognised that for his index policy (play the arm with the largest λW (x)) to make
+sense, any arm which receives an expensive observation for added cost ν, must also receive an
+expensive observation for added cost ν 0 < ν. Such problems are said to be indexable. The question
+resolved by this paper is whether Problem KF1 is indexable. Equivalently, is λW (x) non-decreasing
+in x ∈ R+ ?
+2
+
+x0*
+t
+
+x1*
+t
+
+A
+I
+
+? 0(x)
+
+D
+
+? 0(x)
+x t+1
+
+x t+1
+
+G
+B
+
+J
+E
+
+? (x)
+
+? (x)
+
+1
+
+H
+
+1
+
+C
+F
+
+xt
+
+xt
+
+1∗
+Figure 1: Orbit x0∗
+t (x) traces the path ABCDE . . . for the word 01w = 01101. Orbit xt (x) traces
+the path F GHIJ . . . for the word 10w = 10101. Word w = 101 is a palindrome.
+
+3
+
+Main Result, Key Concepts and Intuition
+
+We make the following intuitive assumption about threshold (monotone) policies.
+A1. For some x ∈ R+ depending on ν ∈ R, the policy ut = 1xt ≥x is optimal for problem (2).
+Note that under A1, definition (3) means the policy ut = 1xt >x is also optimal, so we can choose
+
+
+
+0∗
+0 if x0∗
+φ0 (x0∗
+
+0∗
+t−1 (x) ≤ x
+t−1 (x)) if xt−1 (x) ≤ x
+
+u0∗
+(x)
+:=
+and
+x
+(x)
+:=
+
+t
+t
+
+1 otherwise
+φ1 (x0∗
+(x))
+otherwise
+t−1
+(5)
+
+
+1∗
+
+0 if x1∗
+φ0 (x1∗
+
+1∗
+1∗
+t−1 (x) < x
+t−1 (x)) if xt−1 (x) < x
+
+ut (x) :=
+and xt (x) :=
+
+1 otherwise
+φ1 (x1∗
+t−1 (x)) otherwise
+1∗
+0∗
+1∗
+where x0∗
+0 (x) = x0 (x) = x. We refer to xt (x), xt (x) as the x-threshold orbits (Figure 1).
+
+We are now ready to state our main result.
+Theorem 1. Suppose a threshold policy (A1) is optimal for the single-arm problem (2). Then
+Problem KF1 is indexable. Specifically, for any b > a ≥ 0 let
+x+1
+x+1
+φ0 (x) :=
+,
+φ1 (x) :=
+ax + a + 1
+bx + b + 1
+and for any w ∈ R+ , h ∈ R and 0 < β < 1, let
+P∞ t 0∗
+1∗
+W
+t=1 β (xt (x) − xt (x))
+λ (x) := w P∞
+−h
+(6)
+0∗
+t 1∗
+t=0 β (ut (x) − ut (x))
+1∗
+0∗
+1∗
+in which action sequences u0∗
+t (x), ut (x) and error variance sequences xt (x), xt (x) are given
+W
+in terms of φ0 , φ1 by (5). Then λ (x) is a continuous and non-decreasing function of x ∈ R+ .
+
+We are now ready to describe the key concepts underlying this result.
+Words. In this paper, a word w is a string on {0, 1}∗ with k th letter wk and wi:j := wi wi+1 . . . wj .
+The empty word is , the concatenation of words u, v is uv, the word that is the n-fold repetition
+of w is wn , the infinite repetition of w is wω and w̃ is the reverse of w, so w = w̃ means w is
+a palindrome. The length of w is |w| and |w|u is the number of times that word u appears in w,
+overlaps included.
+Christoffel, Sturmian and Mechanical Words. It turns out that the action sequences in (5) are
+given by such words, so the following definitions are central to this paper.
+3
+
+(0,1)
+(0,01)
+
+(01,1)
+
+(0,001)
+(0,0001)
+(0,00001)
+
+(00001,0001)
+
+(001,01)
+
+(0001,001)
+(0001,0001001)
+
+(001,00101)
+
+(0001001,001)
+
+(001,00100101)
+
+(01,011)
+
+(00101,01)
+
+(00100101,00101)
+
+(00101,0010101)
+
+(01,01011)
+
+(0010101,01)
+
+(01,0101011)
+
+(011,1)
+
+(01011,011)
+
+(0101011,01011) (01011,01011011)
+
+(01011011,011)
+
+(011,0111)
+(011,0110111)
+
+(0110111,0111)
+
+(0111,1)
+(0111,01111)
+
+(01111,1)
+
+Figure 2: Part of the Christoffel tree.
+The Christoffel tree (Figure 2) is an infinite complete binary tree [5] in which each node is labelled
+with a pair (u, v) of words. The root is (0, 1) and the children of (u, v) are (u, uv) and (uv, v).
+The Christoffel words are the words 0, 1 and the concatenations uv for all (u, v) in that tree. The
+fractions |uv|1 /|uv|0 form the Stern-Brocot tree [9] which contains each positive rational number
+exactly once. Also, infinite paths in the Stern-Brocot tree converge to the positive irrational numbers.
+Analogously, Sturmian words could be thought of as infinitely-long Christoffel words.
+Alternatively, among many known characterisations, the Christoffel words can be defined as the
+words 0, 1 and the words 0w1 where a := |0w1|1 /|0w1| and
+(01w)n := b(n + 1)ac − bnac
+for any relatively prime natural numbers |0w1|0 and |0w1|1 and for n = 1, 2, . . . , |0w1|. The
+Sturmian words are then the infinite words 0w1 w2 · · · where, for n = 1, 2, . . . and a ∈ (0, 1)\Q,
+(01w1 w2 · · · )n := b(n + 1)ac − bnac.
+We use the notation 0w1 for Sturmian words although they are infinite.
+The set of mechanical words is the union of the Christoffel and Sturmian words [13]. (Note that the
+mechanical words are sometimes defined in terms of infinite repetitions of the Christoffel words.)
+Majorisation. As in [14], let x, y ∈ Rm and let x(i) and y(i) be their elements sorted in ascending
+order. We say x is weakly supermajorised by y and write x ≺w y if
+j
+X
+
+x(k) ≥
+
+k=1
+
+j
+X
+
+y(k)
+
+for all j = 1, . . . , m.
+
+k=1
+
+If this is an equality for j = m we say x is majorised by y and write x ≺ y. It turns out that
+x≺y
+
+⇔
+
+j
+X
+k=1
+
+x[k] ≤
+
+j
+X
+
+y[k]
+
+for j = 1, . . . , m − 1 with equality for j = m
+
+k=1
+
+where x[k] , y[k] are the sequences sorted in descending order. For x, y ∈ Rm we have [14]
+x≺y
+
+⇔
+
+m
+X
+i=1
+
+f (xi ) ≤
+
+m
+X
+
+f (yi ) for all convex functions f : R → R.
+
+i=1
+
+More generally, a real-valued function φ defined on a subset A of Rm is said to be Schur-convex on
+A if x ≺ y implies that φ(x) ≤ φ(y).
+A11 x+A12
+Möbius Transformations. Let µA (x) denote the Möbius transformation µA (x) := A
+21 x+A22
+where A ∈ R2×2 . Möbius transformations such as φ0 (·), φ1 (·) are closed under composition, so
+for any word w we define φw (x) := φw|w| ◦ · · · ◦ φw2 ◦ φw1 (x) and φ (x) := x.
+
+Intuition. Here is the intuition behind our main result.
+For any x ∈ R+ , the orbits in (5) correspond to a particular mechanical word 0, 1 or 0w1 depending
+on the value of x (Figure 1). Specifically, for any word u, let yu be the fixed point of the mapping φu
+on R+ so that φu (yu ) = yu and yu ∈ R+ . Then the word corresponding to x is 1 for 0 ≤ x ≤ y1 ,
+0w1 for x ∈ [y01w , y10w ] and 0 for y0 ≤ x < ∞. In passing we note that these fixed points
+are sorted in ascending order by the ratio ρ := |01w|0 /|01w|1 of counts of 0s to counts of 1s, as
+4
+
+100
+
+y 01w and ?w(0)
+
+80
+
+60
+
+40
+
+20
+
+0
+0.1
+
+0.2
+
+0.3
+
+0.4
+
+0.5
+
+0.6
+
+0.7
+
+0.8
+
+0.9
+
+|01w| 0 / |01w|1
+
+Figure 3: Lower fixed points y01w of Christoffel words (black dots), majorisation points for those
+words (black circles) and the tree of φw (0) (blue).
+illustrated by Figure 3. Interestingly, it turns out that ratio ρ is a piecewise-constant yet continuous
+function of x, reminiscent of the Cantor function.
+Also, composition of Möbius transformations is homeomorphic to matrix multiplication so that
+for any A, B ∈ R2×2 .
+
+µA ◦ µB (x) = µAB (x)
+
+Thus, the index (6) can be written in terms of the orbits of a linear system (11) given by 0, 1 or 0w1.
+Further, if A ∈ R2×2 and det(A) = 1 then the gradient of the corresponding Möbius transformation
+is the convex function
+1
+dµA (x)
+=
+.
+dx
+(A21 x + A22 )2
+So the gradient of the index is the difference of the sums of a convex function of the linear-system
+orbits. However, such sums are Schur-convex functions and it follows that the index is increasing
+because one orbit weakly supermajorises the other, as we now show for the case 0w1 (noting that
+the proof is easier for words 0, 1). As 0w1 is a mechanical word, w is a palindrome. Further, if w is
+a palindrome, it turns out that the difference between the linear-system orbits increases with x. So,
+we might define the majorisation point for w as the x for which one orbit majorises the other. Quite
+remarkably, if w is a palindrome then the majorisation point is φw (0) (Proposition 7). Indeed the
+black circles and blue dots of Figure 3 coincide. Finally, φw (0) is less than or equal to y01w which
+is the least x for which the orbits correspond to the word 0w1. Indeed, the blue dots of Figure 3 are
+below the corresponding black dots. Thus one orbit does indeed supermajorise the other.
+
+4
+4.1
+
+Proof of Main Result
+Mechanical Words
+
+The Möbius transformations of (1) satisfy the following assumption for I := R+ . We prove that the
+fixed point yw of word w (the solution to φw (x) = x on I) is unique in the supplementary material.
+Assumption A2. Functions φ0 : I → I, φ1 : I → I, where I is an interval of R, are increasing
+and non-expansive, so for all x, y ∈ I : x < y and for k ∈ {0, 1} we have
+φk (x) < φk (y)
+{z
+}
+|
+
+φk (y) − φk (x) < y − x .
+{z
+}
+|
+
+and
+
+increasing
+
+non-expansive
+
+Furthermore, the fixed points y0 , y1 of φ0 , φ1 on I satisfy y1 < y0 .
+Hence the following two propositions (supplementary material) apply to φ0 , φ1 of (1) on I = R+ .
+5
+
+Proposition 1. Suppose A2 holds, x ∈ I and w is a non-empty word. Then
+x < φw (x) ⇔ φw (x) < yw ⇔ x < yw
+
+and
+
+x > φw (x) ⇔ φw (x) > yw ⇔ x > yw .
+
+1∗
+ω
+For a given x, in the notation of (5), we call the shortest word u such that (u1∗
+1 , u2 , . . . ) = u
+the x-threshold word. Proposition 2 generalises a recent result about x-threshold words in a setting
+where φ0 , φ1 are linear [18].
+Proposition 2. Suppose A2 holds and 0w1 is a mechanical word. Then
+
+0w1 is the x-threshold word ⇔ x ∈ [y01w , y10w ].
+Also, if x0 , x1 ∈ I with x0 ≥ y0 and x1 ≤ y1 then the x0 - and x1 -threshold words are 0 and 1.
+We also use the following very interesting fact (Proposition 4.2 on p.28 of [5]).
+Proposition 3. Suppose 0w1 is a mechanical word. Then w is a palindrome.
+4.2
+
+Properties of the Linear-System Orbits M (w) and Prefix Sums S(w)
+
+Definition. Assume that a, b ∈ R+ and a < b. Consider the matrices
+
+
+
+
+
+1
+1
+1
+1
+−1
+F :=
+,
+G :=
+and K :=
+a 1+a
+b 1+b
+0
+
+
+−1
+1
+
+so that the Möbius transformations µF , µG are the functions φ0 , φ1 of (1) and GF −F G = (b−a)K.
+Given any word w ∈ {0, 1}∗ , we define the matrix product M (w)
+M (w) := M (w|w| ) · · · M (w1 ),
+
+where M () := I, M (0) := F and M (1) := G
+
+where I ∈ R2×2 is the identity and the prefix sum S(w) as the matrix polynomial
+S(w) :=
+
+|w|
+X
+
+M (w1:k ),
+
+where S() := 0 (the all-zero matrix).
+
+(7)
+
+k=1
+
+For any A ∈ R2×2 , let tr(A) be the trace of A, let Aij = [A]ij be the entries of A and let A ≥ 0
+indicate that all entries of A are non-negative.
+Remark. Clearly, det(F ) = det(G) = 1 so that det(M (w)) = 1 for any word w. Also, S(w)
+corresponds to the partial sums of the linear-system orbits, as hinted in the previous section.
+The following proposition captures the role of palindromes (proof in the supplementary material).
+Proposition 4. Suppose w is a word, p is a palindrome and n ∈ Z+ . Then
+!
+f h+1
+f
+1. M (p) = hh+f
+for some f, h ∈ R,
+2
+−1
+h
+h+f
+2. tr(M (10p)) = tr(M (01p)),
+3. If u ∈ {p(10p)n , (10p)n 10} then M (u) − M (ũ) = λK for some λ ∈ R− ,
+4. If w is a prefix of p then [M (p(10p)n 10w)]22 ≤ [M (p(01p)n 01w)]22 ,
+5. [M ((10p)n 10w)]21 ≥ [M ((01p)n 01w)]21 ,
+6. [M ((10p)n 1)]21 ≥ [M ((01p)n 0)]21 .
+We now demonstrate a surprisingly simple relation between S(w) and M (w).
+Proposition 5. Suppose w is a palindrome. Then
+S21 (w) = M22 (w) − 1
+
+S22 (w) = M12 (w) + S21 (w).
+
+and
+
+(8)
+
+Furthermore, if ∆k := [S(10w)M (w(10w)k ) − S(01w)M (w(01w)k )]22 then
+∆k = 0
+
+for all k ∈ Z+ .
+6
+
+(9)
+
+Proof. Let us write M := M (w), S := S(w). We prove (8) by induction on |w|. In the base
+case w ∈ {, 0, 1}. For w = , M22 − 1 = 0 = S21 , M12 + S21 = 0 = S22 . For w ∈ {0, 1},
+M22 − 1 = c = S21 , M12 + S21 = 1 + c = S22 for some c ∈ {a, b}. For the inductive step, in
+accordance with Claim 1 of Proposition 4, assume w ∈ {0v0, 1v1} for some word v satisfying
+!
+
+
+f h+1
+f
+c
+d
+h+f
+M (v) = h2 −1
+,
+S(v) =
+for some c, d, f, h ∈ R.
+h−1 f +h−1
+h
+h+f
+For w = 1v1, M := M (1v1) = GM (v)G and S := S(1v1) = GM (v)G+S(v)G+G. Calculating
+the corresponding matrix products and sums gives
+S21 = (bh + h + bf − 1)(bh + 2h + bf + f + 1)(h + f )−1 = M22 − 1
+S22 − S21 = bh + 2h + bf + f = M12
+as claimed. For w = 0u0 the claim also holds as F = G|b=a . This completes the proof of (8).
+Furthermore Part. Let A := S(w)F G + F G + G and B := S(w)GF + GF + F . Then
+∆k = [(A(M (w)F G)k − B(M (w)GF )k )M (w)]22
+(10)
+by definition of S(·). By Claim 1 of Proposition 4 and (8) we know that
+!
+
+
+f h+1
+f
+c
+d
+h+f
+M (w) = h2 −1
+,
+S(w) =
+for some c, d, f, h ∈ R.
+h−1 f +h−1
+h
+h+f
+Substituting these expressions and the definitions of F, G into the definitions of A, B and then
+into (10) for k ∈ {0, 1} directly gives ∆0 = ∆1 = 0 (although this calculation is long).
+Now consider the case k ≥ 2. Claim 2 of Proposition 4 says tr(M (10w)) = tr(M (01w)) and clearly
+det(M (10w)) = det(M (01w)) = 1. Thus we can diagonalise as
+M (w)F G =: U DU −1 ,
+
+D := diag(λ, 1/λ) for some λ ≥ 1
+
+so that ∆k = [AU D U M (w) − e BV D V M (w)]22 =: γ1 λk + γ2 λ−k . So, if λ = 1 then
+∆k = γ1 + γ2 = ∆0 and we already showed that ∆0 = 0. Otherwise λ 6= 1, so ∆0 = ∆1 = 0
+implies γ1 + γ2 = γ1 λ + γ2 λ−1 = 0 which gives γ1 = γ2 = 0. Thus for any k ∈ Z+ we have
+∆k = γ1 λk + γ2 λ−k = 0.
+k
+
+4.3
+
+−1
+
+M (w)GF =: V DV −1 ,
+T
+
+k
+
+−1
+
+Majorisation
+
+The following is a straightforward consequence of results in [14] proved in the supplementary material. We emphasize that the notation ≺w has nothing to do with the notion of w as a word.
+a symmetric function that is convex and
+Proposition 6. Suppose x, y ∈ Rm
++ and f : R → R is
+Pm i
+Pm i
+decreasing on R+ . Then x ≺w y and β ∈ [0, 1] ⇒
+i=1 β f (x(i) ) ≥
+i=1 β f (y(i) ).
+For any x ∈ R and any fixed word w, define the sequences for n ∈ Z+ and k = 1, . . . , m
+)
+xnm+k (x) := [M ((10w)n (10w)1:k )v(x)]2 , σx(n) := (xnm+1 (x), . . . , xnm+m (x))
+ynm+k (x) := [M ((01w)n (01w)1:k )v(x)]2 ,
+
+σy(n) := (ynm+1 (x), . . . , ynm+m (x))
+
+(11)
+
+where m := |10w| and v(x) := (x, 1)T .
+(n)
+
+Proposition 7. Suppose w is a palindrome and x ≥ φw (0). Then σx
+(n)
+(n)
+sequences on R+ and σx ≺w σy for any n ∈ Z+ .
+
+(n)
+
+and σy
+
+are ascending
+
+Proof. Clearly φw (0) ≥ 0 so x ≥ 0 and hence v(x) ≥ 0. So for any word u and letter c ∈ {0, 1} we
+have M (uc)v(x) = M (c)M (u)v(x) ≥ M (u)v(x) ≥ 0 as M (c) ≥ I. Thus xk+1 (x) ≥ xk (x) ≥ 0
+(n)
+(n)
+and yk+1 (x) ≥ yk (x) ≥ 0. In conclusion, σx and σy are ascending sequences on R+ .
+Now φw (0) =
+
+[M (w)]12
+[M (w)]22 .
+
+Thus [Av(φw (0))]2 :=
+
+[AM (w)]22
+[M (w)]22
+
+for any A ∈ R2×2 . So
+
+xnm+k (φw (0)) − ynm+k (φw (0))
+1
+=
+[(M ((10w)n (10w)1:k ) − M ((01w)n (01w)1:k ))M (w)]22 ≤ 0
+[M (w)]22
+7
+
+for k = 2, . . . , m by Claim 4 of Proposition 4. So all but the first term of the sum Tm (φw (0)) is
+non-positive where
+Tj (x) :=
+
+j
+X
+
+(xnm+k (x) − ynm+k (x)).
+
+k=1
+
+Thus T1 (φw (0)) ≥ T2 (φw (0)) ≥ . . . Tm (φw (0)). But
+m
+X
+1
+Tm (φw (0)) =
+[(M ((10w)n (10w)1:k ) − M ((01w)n (01w)1:k ))M (w)]22
+[M (w)]22
+k=1
+
+1
+[S(10w)M (w(10w)n ) − S(01w)M (w(01w)n )]22 = 0
+=
+[M (w)]22
+where the last step follows from (9). So Tj (φw (0)) ≥ 0 for j = 1, . . . , m. Yet Claims 5 and 6 of
+Pj
+d
+Tj (x) = k=1 [M ((10w)n (10w)1:k ) − M ((01w)n (01w)1:k )]21 ≥ 0. So for
+Proposition 4 give dx
+(n)
+(n)
+x ≥ φw (0) we have Tj (x) ≥ 0 for j = 1, . . . , m which means that σx ≺w σy .
+4.4
+
+Indexability
+
+Theorem 1. The index λW (x) of (6) is continuous and non-decreasing for x ∈ R+ .
+Proof. As weight w is non-negative and cost h is a constant we only need to prove the result for
+λ(x) := λW (x)w=1,h=0 and we can use w to denote a word. By Proposition 2, x ∈ [y01w , y10w ]
+for some mechanical word 0w1. (Cases x ∈
+/ (y1 , y0 ) are clarified in the supplementary material.)
+Let us show that the hypotheses of Proposition 7 are satisfied by w and x. Firstly, w is a palindrome
+by Proposition 3. Secondly, φw01 (0) ≥ 0 and as φw (·) is monotonically increasing, it follows that
+φw ◦φw01 (0) ≥ φw (0). Equivalently, φ01w ◦φw (0) ≥ φw (0) so that φw (0) ≤ y01w by Proposition 1.
+Hence x ≥ y01w ≥ φw (0).
+(n)
+
+(n)
+
+Thus Proposition 7 applies, showing that the sequences σx and σy , with elements xnm+k (x) and
+(n)
+(n)
+ynm+k (x) as defined in (11), are non-decreasing sequences on R+ with σx ≺w σy . Also, 1/x2
+is a symmetric function that is convex and decreasing on R+ . Therefore Proposition 6 applies giving
+
+m 
+X
+β nm+k−1
+β nm+k−1
+−
+≥0
+for any n ∈ Z+ where m := |01w|.
+(12)
+(xnm+k (x))2
+(ynm+k (x))2
+k=1
+
+Also Proposition 2 shows that the x-threshold orbits are (φu1 (x), . . . , φu1:k (x), . . . ) and
+(φl1 (x), . . . , φl1:k (x), . . . ) where u := (01w)ω and l := (10w)ω . So the denominator of (6) is
+∞
+∞
+∞
+X
+X
+1 − β m X k−1
+β k (1lk+1 =1 − 1uk+1 =1 ) =
+β mk (1 − β) ⇒ λ(x) =
+β
+(φu1:k (x) − φl1:k (x)).
+1−β
+k=0
+
+k=0
+
+Note that
+
+d ex+f
+dx gx+h
+
+k=1
+
+1
+(gx+h)2
+
+for any eh − f g = 1. Then (12) gives
+
+∞ m 
+dλ(x)
+1 − βm X X
+β nm+k−1
+β nm+k−1
+=
+−
+≥ 0.
+dx
+1 − β n=0
+(xnm+k (x))2
+(ynm+k (x))2
+=
+
+k=1
+
+But λ(x) is continuous for x ∈ R+ (as shown in the supplementary material). Therefore we conclude that λ(x) is non-decreasing for x ∈ R+ .
+
+5
+
+Further Work
+
+One might attempt to prove that assumption A1 holds using general results about monotone optimal
+policies for two-action MDPs based on submodularity [2] or multimodularity [1]. However, we find
+counter-examples to the required submodularity condition. Rather, we are optimistic that the ideas
+of this paper themselves offer an alternative approach to proving A1. It would then be natural to
+extend our results to settings where the underlying state evolves as Zt+1 | Ht ∼ N (mZt , 1) for
+some multiplier m 6= 1 and to cost functions other than the variance. Finally, the question of the
+indexability of the discrete-time Kalman filter in multiple dimensions remains open.
+8
+
+References
+[1] E. Altman, B. Gaujal, and A. Hordijk. Multimodularity, convexity, and optimization properties. Mathematics of Operations Research, 25(2):324–347, 2000.
+[2] E. Altman and S. Stidham Jr. Optimality of monotonic policies for two-action Markovian decision processes, with applications to control of queues with delayed information. Queueing Systems, 21(3-4):267–
+291, 1995.
+[3] M. Araya, O. Buffet, V. Thomas, and F. Charpillet. A POMDP extension with belief-dependent rewards.
+In Neural Information Processing Systems, pages 64–72, 2010.
+[4] A. Badanidiyuru, B. Mirzasoleiman, A. Karbasi, and A. Krause. Streaming submodular maximization:
+Massive data summarization on the fly. In Proceedings of the 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pages 671–680, 2014.
+[5] J. Berstel, A. Lauve, C. Reutenauer, and F. Saliola. Combinatorics on Words: Christoffel Words and
+Repetitions in Words. CRM Monograph Series, 2008.
+[6] S. Bubeck and N. Cesa-Bianchi. Regret Analysis of Stochastic and Nonstochastic Multi-armed Bandit
+Problems, Foundation and Trends in Machine Learning, Vol. 5. NOW, 2012.
+[7] Y. Chen, H. Shioi, C. Montesinos, L. P. Koh, S. Wich, and A. Krause. Active detection via adaptive
+submodularity. In Proceedings of The 31st International Conference on Machine Learning, pages 55–63,
+2014.
+[8] J. Gittins, K. Glazebrook, and R. Weber. Multi-armed bandit allocation indices. John Wiley & Sons,
+2011.
+[9] R. Graham, D. Knuth, and O. Patashnik. Concrete Mathematics: A Foundation for Computer Science.
+Addison-Wesley, 1994.
+[10] S. Guha, K. Munagala, and P. Shi. Approximation algorithms for restless bandit problems. Journal of the
+ACM, 58(1):3, 2010.
+[11] B. La Scala and B. Moran. Optimal target tracking with restless bandits. Digital Signal Processing,
+16(5):479–487, 2006.
+[12] J. Le Ny, E. Feron, and M. Dahleh. Scheduling continuous-time Kalman filters. IEEE Trans. Automatic
+Control, 56(6):1381–1394, 2011.
+[13] M. Lothaire. Algebraic combinatorics on words. Cambridge University Press, 2002.
+[14] A. Marshall, I. Olkin, and B. Arnold. Inequalities: Theory of majorization and its applications. Springer
+Science & Business Media, 2010.
+[15] L. Meier, J. Peschon, and R. Dressler. Optimal control of measurement subsystems. IEEE Trans. Automatic Control, 12(5):528–536, 1967.
+[16] J. Niño-Mora and S. Villar. Multitarget tracking via restless bandit marginal productivity indices and
+Kalman filter in discrete time. In Proceedings of the 48th IEEE Conference on Decision and Control,
+pages 2905–2910, 2009.
+[17] R. Ortner, D. Ryabko, P. Auer, and R. Munos. Regret bounds for restless Markov bandits. In Algorithmic
+Learning Theory, pages 214–228. Springer, 2012.
+[18] B. Rajpathak, H. Pillai, and S. Bandyopadhyay. Analysis of stable periodic orbits in the one dimensional
+linear piecewise-smooth discontinuous map. Chaos, 22(3):033126, 2012.
+[19] T. Thiele. Sur la compensation de quelques erreurs quasi-systématiques par la méthode des moindres
+carrés. CA Reitzel, 1880.
+[20] I. Verloop. Asymptotic optimal control of multi-class restless bandits. CNRS Technical Report, hal00743781, 2014.
+[21] S. Villar. Restless bandit index policies for dynamic sensor scheduling optimization. PhD thesis, Statistics
+Department, Universidad Carlos III de Madrid, 2012.
+[22] E. Vul, G. Alvarez, J. B. Tenenbaum, and M. J. Black. Explaining human multiple object tracking as
+resource-constrained approximate inference in a dynamic probabilistic model. In Neural Information
+Processing Systems, pages 1955–1963, 2009.
+[23] R. R. Weber and G. Weiss. On an index policy for restless bandits. Journal of Applied Probability, pages
+637–648, 1990.
+[24] P. Whittle. Restless bandits: Activity allocation in a changing world. Journal of Applied Probability,
+pages 287–298, 1988.
+
+9
+
+

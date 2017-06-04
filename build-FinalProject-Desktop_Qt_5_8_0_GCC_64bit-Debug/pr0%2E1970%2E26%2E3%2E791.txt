@@ -1,0 +1,437 @@
+Psychological Reports, 1970, 26, 791-798. @ Psychological Reports 1970
+
+REVISED SCALE FOR AMBIGUITY TOLERANCE:
+RELIABILITY AND VALIDITY
+A. P. MAC DONALD, JR.
+Rehabilitation Research G. Training Center, West Virginia Universiby
+Summary.-Increasing the 16-item Rydell-Rosen Ambiguity Tolerance Scale
+to 20 items raised the reliability from .64 to .86 (split-half, corrected by Spearman-Brown). The 20-item scale (AT-20) was cross-validated on a sample of
+789 undergraduate students. Retest reliability was estimated at .63 ( p
+.01)
+for a 6-mo. interval. As predicted, AT-20 related to (a) performance in a complex task, ( b ) the F Scale, (c) dogmatism, ( d ) rigidity, and ( e ) church attendance. The AT-20 was not affected by social desirability response bias as measured by the Marlowe-Crowne.
+
+<
+
+Interest in the concept of tolerance of ambiguity derives chiefly from the
+work of Adorno, Frenkel-Brunswik, Levinson, and Sanford ( 1950). FrenkelBrunswik contributed the greater part of this research, which attempted to relate
+intolerance of ambiguity to the authoritarian syndrome ( 1949, 195 1 ) . Similar
+efforts were made by Rokeach ( 1948) who later developed the related concept
+of dogmatism ( 1960).
+Apart from the interest in the relationship between ambiguity tolerance and
+authoritarianism and ethnocentrism, there has been some interest in the variable
+of ambiguity tolerance in its own right. It is to that more general interest that
+this paper is addressed.
+Intolerance of ambiguity may be viewed as a general tendency to perceive
+ambiguous material or situarions as threatening (Budner, 1962). Conversely,
+tolerance of ambiguicy implies that contact with ambiguity is desirable. Though
+definitions overlap considerably, no common definition has been accepted. For
+example, English and English (1958) define ambiguity tolerance as a ". . . willingness to accept a state of affairs capable of alternate interpretations, or of
+alternate outcomes: e.g., feeling comfortable (or at least not feeling uncomfortable) when faced by a complex social issue in which opposed principles ate
+intermingled. Low ambiguity tolerance is shown by the desire to have everything reduced to black and white . . ." (p. 24).
+It is the impression of the author that persons having high tolerance of
+ambiguity ( a ) seek out ambiguity, ( b ) enjoy ambiguity, and ( c ) excel in the
+performance of ambiguous tasks. "An ambiguous situation may be defined as
+one which cannot be adequately suucnued or categorized by the individual because of lack of sufficient cues" (Budner, 1962, p. 30).
+Historically, the concepts of "intolerance of ambiguity" and "rigidity" have
+been somewhat confounded. Frenkel-Brunswik used the term "rigidity" to refer
+to intolerance of ambiguity and also to refer to resistance to change (1951).
+The author, among others (e.g., Brown, 1965; Budner, 1962), maintains that,
+although related, the two concepts are theoretically and empirically separate.
+
+792
+
+A. P. MAC DONALD, JR.
+
+Whereas ambiguity tolerance implies tendencies to relate to and interact in differing ways with certain classes of phenomena, rigidity refers to a more generally
+pervasive singular response mode. A rigid person may be viewed as one who
+perseverates in a given response (despite empirical evidence to the contrary)
+whereas an intolerant person may be more likely to replace one response with
+another. For example, a rigid person and an intolerant person may be equally
+anxious for closure, and therefore each may seize upon immediately available
+answers to various questions. Once having accepted an answer, the former will
+tenaciously (i.e., rigidly) hold on to it, even in the face of new contradictory
+evidence. The latter, on the other hand, may easily exchange the held belief for
+a better one. Consequently, one may be intolerant of ambiguity and yet be flexible, though the two characteristics are often found together. Empirical support
+for the notion that rigidity and ambiguity tolerance are separate is offered by
+Eysenck who reports over-all low correlations between measures of intolerance
+of ambiguity and perceptual and conceptual rigidity (Eysenck, 1954).
+The confusion concerning the definitions of the terms "rigidity" and "intolerance of ambiguity" has been paralleled by confusion in the measurement of
+these concepts. For example, Frenkel-Brunswik (1949) tested for intolerance
+of ambiguity by measuring the extent to which Ss maintained an original response (i.e., a "set") despite empirical evidence to the contrary (which is the
+definition of rigidity offered above). A picture of a dog was shown and then
+followed by a number of pictures representing a gradual ttansformation of the
+dog into a cat. Those who held on to the original interpretation (i.e., dog) for
+the longest time were considered to have lower tolerance for ambiguity.
+Recently, attempts have been made to develop paper-and-pencil tests of
+ambiguity tolerance. By and large, such efforts have not shown a great deal of
+promise. For example, Ehrlich (1965) discredited Walk's A Scale when she
+reported that the scale had virtually no internal consistency (i.e., a Kuder-Richardson Formula 20 of .08) and that one-third of the items correlated negatively
+in an inter-item correlational matrix. The remaining correlations were consistently low and predominantly nonsignificant. Another example of the lack of
+internal consistency found in such scales is reported by Child (1965). Child
+reports an s of .16 (alpha coefficient) for his tolerance of ambiguity scale.
+O n the more positive side, the Budner Scale of Tolerance-Intolerance of
+Ambiguity has shown fairly good internal consistency (Budner, 1962). Reliabilities (alpha coefficients) reported for 13 of his 17 samples ranged from .39
+to .62, with a mean of approximately .49. However, the reported association
+between the Budner and Walk scales (i.e., r = .54, p < .05; Budner, 1962) is
+difficult to evaluate in light of Ehrlich's criticism of Walk's A Scale, presented
+above.
+Recently another measure of ambiguity tolerance was introduced into the
+research literature (Rydell 8: Rosen, 1966). It consists of 16 true-false items.
+
+SCALE: TOLERANCE OF AhfBIGUITY
+
+793
+
+NO internal consistency coefficients are reported for this scale; however, stability
+escimates based upon retest intervals of 1 and 2 mo. are .71 and .57 respectively.
+Each estimate attained significance beyond the .001 level of confidence. Additionally, Rydell (1966) reports information regarding the validity of the
+scale. Ss of high and low tolerance differed significantly on mean semantic
+differential ratings of contradictory and noncontradictory adjective-noun concept-combinations. The following is a report of a series of studies done in order
+to furnish additional data on the properties of this inscrumenc and a minor revision thereof.
+
+METHOD
+Reliability
+The Rydell-Rosen test (Items 1 to 16, Table 1) was administered to 74
+TABLE 1
+
+THE AT-20 SOILE*
+Please do not spend too much time on the following items. There are no right or
+wrong answers and therefore your first response is important. Mark T for true and F for
+false. Be sure to answer every question.
+1. A problem has little amaccion for me if I don't think it has a solution. (F)
+2. I am just a little uncomfortable with people unless I feel that I can understand
+their behavior. (F)
+3. There's a right way and a wrong way to do almost everything. (F).
+4. I would rather bet 1 to 6 on a long shot than 3 to 1 on a probable wlnner. ( T )
+5. The way to understand complex problems is to be concerned with their larger
+aspects instead of braking them into smaller pieces. ( T )
+6. I get pretty anxious when I'm in a social situation over which I have no control.
+IF)
+\ - I
+7. Practically every problem has a solution. ( F )
+8. It bothers me when P am unable to follow another person's train of thought
+IF\
+
+\r)
+
+9. I have always felt that there is a clear difference between right and wrong.
+10. It bothers me when I don't know how other people react to me. ( F )
+
+(F)
+
+11. Nothing gets accomplished in this world unless you stick to some basic rules.
+IF)
+\- I
+
+12. If I were a doctor, I would prefer the uncertainties of a psychiatrist to the clear
+and definite work of someone like a surgeon or X-ray specialist. ( T )
+13. Vague and impressionistic piccures really have lictle appeal for me. (F)
+14. If I were a scientist, i t would bother me that my work would never be completed
+(because science will always make new discoveries). ( F )
+15. Before an examination, I feel much less anxious if I know how many questions
+there will be. ( F )
+16. The best part of working a jigsaw puzzle is putting in that last piece. (P)
+17. Sometimes I rather enjoy going against the rules and doing things I'm not supposed to do. ( T )
+18. I don't like to work on a problem unless there is a possibility of coming out with
+a clear-cut and unambiguous answer. (F)
+19. I like to fool around with new ideas, even if they turn out later to be a total
+waste of time. ( T )
+20. Perfect balance is. the essence of all eood comwsition. (F)
+Note.-Items
+1-16 are taken from Rydell and Rosen (1966) and are reproduced by permission from Prychologicd report^. Items 17 and 18 are taken from the California Personality Inventory (Items 275 and 363; Gough, 1957) and are reproduced by special
+permission from the Consulting Psychologists Press. Items 19 and 20 are taken from
+Barton's Conformicy Scale (ltems 15 and -18: Barton. 1953) and are re~roducedby. .
+wrmission from the ~ u k Univeaity
+e
+Press.
+*Test is scored for high ambiguity tolerance.
+
+A. P. MAC DONALD, JR.
+
+794
+
+female undergraduate students at Cornell University. Also included were two
+items (275 and 363) taken from the California Personality Inventory (Items
+17 and 18, Table I ) , and two items (15 and 18) from Barron's (1953) conformity scale (Items 19 and 20, Table 1 ) . Item analysis of the Rydell-Rosen
+test showed that all items correlated well with the total test score. Table 2 shows
+that the biserial correlations ranged from .21 to .70. The coefficient of internal
+consistency (split-half corrected by Spearman-Brown) was computed as .64.
+TABLE 2
+BISERIAL
+CORRELATIONS
+OF ITEMS TO TOTALSCORES AND RELIABILITY
+ESTIMATES
+FOR THE RYDELL-ROSEN16-ITEMAMBIGUITY
+TOLERANCE
+SCALE
+AND THE 20-ITEMREVISION (AT-20)
+Items*
+
+Item Correlation
+Total Scores
+Rydell-Rosen 20-itern
+16-item
+Revision
+Scale
+(AT-20)
+
+Items*
+
+with
+
+.53
+10
+.50
+11
+.50
+.4 5
+*Item content is specified in Table 1.
+tsplit-half corrected by Spearman-Brown.
+SKuder-Richardson Formula 20.
+
+Reliability
+
+Item Correlation
+with Total Scores
+Rydell-Rosen 20-item
+16-item
+Revision
+Scale
+( AT-20)
+
+.64*
+
+.86t
+.73$
+
+In an effort to increase the reliability of the test, the two CPI and two Barron conformity items were added to the scores based upon the 16-item test, thus
+producing a 20-item test. Table 2 shows that the correlations of these items
+with the total score ranged from .36 to .73. The internal consistency estimate
+for the 20-item test was computed at .86, which represented a sizable increase
+above the .64 obtained for the 16-item test. Reliability for the 20-item scale
+was also computed using the more conservative estimate provided by the KuderRichardson Formula 20. The K-R 20 yielded an 7 of .73.
+The 20-item ambiguity tolerance test (AT-20) was subsequently administered (primarily for cross-validational purposes) to 789 undergraduate students
+(in class) at Ithaca College. An r of .63 (K-R 20) was obtained on this group.
+The mean and standard deviation for the total group were 10.51 and 3.32
+(males: 10.04, 3.38,
+= 341, and females: 10.87, 3.23, N = 448).
+To obtain a stability estimate, the AT-20 was administered to 24 male un-
+
+SCALE: TOLERANCE OF AMBIGUITY
+
+795
+
+dergraduate students. The interval between tests was 6 mo. The correlation
+between administrations was .63 ( p < .01) . The stability coefficient exceeded
+those obtained on the Rokeach Dogmatism Scale (Form E ) (.45, p < .05) and
+the Gough-Sanford Rigidity Scale (.57,p < .Ol), which were also administered.
+
+Vdidity
+The hypothesis that ambiguity tolerance would be associated with level of
+performance in ambiguous tasks was tested on 50 (19 males and 31 females)
+advanced placement high school students at Cornell Universi7.l Within a
+larger package of materials, Ss were administered the AT-20 and an anagram
+test (developed by the author). The Scrambled Words Test consists of a list
+of 20 common words whose letters have been scrambled. The words range from
+three to seven letters in length. Ss were assigned the task of unscrambling as
+many words as possible within a 3-min. time period. A significant correlation
+( I = -33, p < .01) was obtained between the scores on the AT-20 and the
+scores on the Scrambled Words Test.
+In an effort to establish construct validity, the AT-20 was administered,
+along with measures of related concepts, to 789 (341 males and 448 females)
+undergraduates at Ithaca College. The forms were administered in class."igidity (Gough-Sanford Rigidity Scale; Rokeach, 1960, p. 418) and Dogmatism
+(Form E; Rokeach, 1960) were measured along with ambiguity tolerance. T o
+provide information on the extent to which these measures might be affected by
+social desirability response tendencies, the Marlowe-Crowne Social Desirability
+Scale (Crowne & Marlowe, 1960) was also administered to a sub-sample of 341
+students (121 males and 220 females). In addition to these tests, information
+concerning frequency of church attendance was collected. Ss were asked to indicate how often they attended church services. Responses were placed upon a
+six-point scale (i.e., "once a week" through "rarely or never") with high scores
+being associated with frequent attendance. It was hypothesized that frequent
+church attendance would be associated with intolerance of ambiguity, dogmatism,
+and rigidity.
+Data reported in Table 3 indicate that the AT-20, Rokeach Dogmatism
+Scale, and the Gough-Sanford Rigidity Scale are tapping a common dimension.
+AT-20 accounts for approximately 18% of the variance in the Dogmatism scores
+and about 17% of the variance in the Rigidity scores.
+The hypothesized relationship between ambiguity tolerance, rigidity, and
+dogmatism was supported by the data. Significant correlations obtained among
+all measures. It is of some interest that the correlations between church attend'The author would like to express his appreciation to Steve Berg for his assistance throughout all phases of this study.
+T h e author would like to thank the faculty and students of Ithaca College for their cooperation in this study. A note of special thanks is due Drs. Margaret Feldman and Lawrence 0.Grant, who took especially active parts,
+
+A. P. MAC DONALD, JR.
+
+796
+
+ance and AT-20 and the Gough-Sanford are approximately twice as large as that
+obtained between Dogm;ltism and church attendance. Also, the correlation between dogmatism and church attendance was significant for females but not for
+males.
+Additional evidence of the relational fertility of the AT-20 was obtained
+from a sample of 90 male physical education majors at Ithaca College. A correlation of -30 ( p < .01) was found between Ss' scores on the 29-item F scale
+(Rokeach, 1960, p. 416) and the AT-20.
+Inspection of the data presented in Table 3 shows that the AT-20 is free
+from social desirability. response
+bias (as measured by the Marlowe-Crowne SDS)
+whereas small but significant correlations were found between the MarloweCrowne and the measures of dogmatism ( r = -.23, p < .01) and rigidity ( r
+= .18, p < .01) . Incidentally, Becker and Dileo ( 1967) hypothesized that the
+Dogmatism and Marlowe-Crowne Scales would be correlated. Their hypothesis
+was not supported in their sn~dyof 216 undergraduate students. These data indicate that a small, but negative, correlation obtains between the two variables.
+TABLE 3
+INTERCORRELATIONS AMONGMEASURESO F AMBIGUITY TOLERANCE,
+DOGMATISM,
+RIGIDITY,SOCIALDESIRABILITY
+RESPONSE
+BIAS, AND CHURCHATTENDANCE
+Dogmatism
+(Rokeach,
+Form E ) t
+
+Rigidity
+(GoughSanford) $
+
+Church
+Attendanceff
+
+Ambiguity Tolerance (AT-20) [
+-.4 11:"
+-,24:~'
+- 424:::
+
+Total
+Males
+Females
+
+-,39::*
+-,42:; *
+
+Total
+Males
+Females
+
+-,42::4:
+-. 39 :R :I:
+Dogmatism
+.3GCC
+37'1:
+,35:::'
+
+-,23::*
+-.-78c*
+
+Social
+Desirability
+Response Bias
+(MarloweCrowne) 5
+
+.02
+.03
+.01
+
+13*"
+.08
+201:~
+
+-,23**
+-.25*
+-,19::
+
+.26W
+16~4:
+35*4
+
+183'
+.08
+,24"
+
+Rigidity
+Total
+Males
+Females
+Church Attendance
+
+t~
+
+==
+
+Total
+Males
+Females
+
+.
+
+698 (361 males and 397 females).
+$N
+787 (341 males and 446 females). Church attendance was indicated on a s i x - ~ o i n t
+scale ("once a week" through "rarely or never"). The higher the score the more frequent
+the church attendance.
+EN = 784 (337 males and 447 females).
+$N = 341 (121 males and 220 females).
+t N = 789 (341 males and 448 females).
+
+SCALE : TOLERANCE OF AMBIGUITY
+
+DISCUSSION
+This series of studies undertaken to investigate the properties of the RydellRosen 16-item Ambiguity Tolerance Scale has led to revision of char scale. The
+inclusion of four add~tlonalitems raised the split-half reliability coefficient from
+.64 to .86 (or .73, by K-R 20). Cross-validation of the 20-item scale (AT-20)
+yielded an r of .63 (by K-R 20) on a sample of 789 undergraduate students.
+Compared wich other tests of ambiguity tolerance, this scale has shown reasonably good internal consistency.
+The AT-20 demonstrated rather high retest reliability for a test interval of
+6 mo. The stability coefficient of .63, obtained with a sample of 24 male physlcal education majors, is consistent wich the .71 and .57 (1- and 2-mo. intervals,
+respectively) reported by Rydell and Rosen (1966) for their 16-item scale.
+The possible contribution of the artifact of social desirability response
+tendency was explored by computing the correlation between the AT-20 and the
+Marlowe-Crowne SDS. The obtained coefficient of .02 indicates that the AT-20
+is free of such response bias. The corresponding issue of response set was not
+explored and perhaps should be, in light of the fact that the numbers of items
+scored true and false are not balanced.
+Evidence for construct validity is indicated by the support obtained for the
+hypotheses that ( a ) ambiguiry tolerance is related to performance of ambiguous
+tasks (i.e., people with high tolerance tend to excel in such tasks) and ( b ) that
+intolerance of ambiguity is associated with frequent church attendance. Additional validational evidence was reflected in the significant correlations between
+the AT-20 and the Rokeach Dogmatism Scale (Form E ) , the Gough-Sanford
+Rigidity Scale, and the F Scale.
+In view of the obtained findings it is concluded that the AT-20 shows
+promise of being a useful instrument for the measurement and further investigation of ambiguity tolerance.
+REFERENCES
+ADORNO,T. W., FRENKEL-BRUNSWIK,
+E., LEVINSON,D. J., & SANFORD,R. N. The
+authoritarian personality. New York: Harper, 1950.
+BARRON,F. Some personality correlates of independence of judgment. Journal of Personality, 1953, 21, 287-277.
+BECKER,G., & DILEO,D. T. Scores on Rokeach's Dogmatism Scale and the response set
+to r o t a positive social and personal image. Journal of Social Psychology,
+19 7, 7 1 , 287-293.
+BROWN,R. Social psychology. New York: Free Press, 1965.
+BUDNER,S. Intolerance of ambiguity as a personality variable. Joulnlll of Personali~y,
+1962, 30, 29-50.
+CHILD,I. L. Personality correlates of esthetic judgment in college students. Journal of
+Penonality, 1965, 3 3 , 476-511.
+CROWNE,D. P., & MARLOWE,
+D. A new scale of social desirability independent of psychopathology. JourmI of Consulting Psychology, 1960, 24, 349-354.
+EHRLICH,D. "Intolerance of ambiguity," Walk's A Scale: historical comment. Psychological Reports, 1965, 17, 571-594.
+
+798
+
+A. P. MAC DONALD, JR.
+
+ENGLISH, H. B., & ENGLISH,A. C. A comprehensive dictionary of psychological and
+psychoanalytical terms. New York: McKay, 1958.
+EYSENM, H. J. The psychology of politics. New York: Praeger, 1954.
+FRENKEL-BRUNSWIK,
+E. Intolerance of ambiguity as an emotional and perceptual personality variable. Journal of Personality, 1949, 18, 108-143.
+FRENKEL-BRUNSWIK,
+E. Personality theory and perception. In R. R. Blake & G. V.
+Ramsey (Eds.) , P ~ c e p t i o n an
+: approach to personality. New York: Ronald, 195 1.
+Pp. 356-419.
+GOUGH, H. CalifornM Psychological Inventory, manual. Palo Alto, Calif.: Consulting
+Psychologists Press, 1957.
+ROKEAUI, M. Generalized mental rigidity as a factor in ethnocentrism. Journal of Abnormal and Social Psychology, 1948,43, 259-278.
+ROKEACH,M. The ofien and closed mind. New York: Basic Books, 1960.
+RYDELL,S. T. Tolerance of ambiguity and semantic differential ratings. Psychological
+Reports, 1966, 19, 1303-1312.
+RYDELL,S. T., & ROSEN, E. Measurement and some correlates of need-cognition. Psychological Reports, 1966,19,139-165. (Monogr. Suppl. 1-V19)
+
+Accepted March 10, 1970.
+
+

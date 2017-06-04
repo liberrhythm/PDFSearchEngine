@@ -1,0 +1,938 @@
+Learning with Symmetric Label Noise: The
+Importance of Being Unhinged
+
+Brendan van Rooyen∗,†
+∗
+
+Aditya Krishna Menon†,∗
+
+The Australian National University
+
+†
+
+Robert C. Williamson∗,†
+
+National ICT Australia
+
+{ brendan.vanrooyen, aditya.menon, bob.williamson }@nicta.com.au
+
+Abstract
+Convex potential minimisation is the de facto approach to binary classification.
+However, Long and Servedio [2010] proved that under symmetric label noise
+(SLN), minimisation of any convex potential over a linear function class can result in classification performance equivalent to random guessing. This ostensibly
+shows that convex losses are not SLN-robust. In this paper, we propose a convex,
+classification-calibrated loss and prove that it is SLN-robust. The loss avoids the
+Long and Servedio [2010] result by virtue of being negatively unbounded. The
+loss is a modification of the hinge loss, where one does not clamp at zero; hence,
+we call it the unhinged loss. We show that the optimal unhinged solution is equivalent to that of a strongly regularised SVM, and is the limiting solution for any
+convex potential; this implies that strong `2 regularisation makes most standard
+learners SLN-robust. Experiments confirm the unhinged loss’ SLN-robustness is
+borne out in practice. So, with apologies to Wilde [1895], while the truth is rarely
+pure, it can be simple.
+
+1
+
+Learning with symmetric label noise
+
+Binary classification is the canonical supervised learning problem. Given an instance space X, and
+samples from some distribution D over X × {±1}, the goal is to learn a scorer s : X → R with low
+misclassification error on future samples drawn from D. Our interest is in the more realistic scenario
+where the learner observes samples from some corruption D of D, where labels have some constant
+probability of being flipped, and the goal is still to perform well with respect to D. This problem is
+known as learning from symmetric label noise (SLN learning) [Angluin and Laird, 1988].
+Long and Servedio [2010] showed that there exist linearly separable D where, when the learner
+observes some corruption D with symmetric label noise of any nonzero rate, minimisation of any
+convex potential over a linear function class results in classification performance on D that is equivalent to random guessing. Ostensibly, this establishes that convex losses are not “SLN-robust” and
+motivates the use of non-convex losses [Stempfel and Ralaivola, 2009, Masnadi-Shirazi et al., 2010,
+Ding and Vishwanathan, 2010, Denchev et al., 2012, Manwani and Sastry, 2013].
+In this paper, we propose a convex loss and prove that it is SLN-robust. The loss avoids the result
+of Long and Servedio [2010] by virtue of being negatively unbounded. The loss is a modification of the hinge loss where one does not clamp at zero; thus, we call it the unhinged loss. This
+loss has several appealing properties, such as being the unique convex loss satisfying a notion of
+“strong” SLN-robustness (Proposition 5), being classification-calibrated (Proposition 6), consistent
+when minimised on D (Proposition 7), and having an simple optimal solution that is the difference
+of two kernel means (Equation 8). Finally, we show that this optimal solution is equivalent to that of
+a strongly regularised SVM (Proposition 8), and any twice-differentiable convex potential (Proposition 9), implying that strong `2 regularisation endows most standard learners with SLN-robustness.
+1
+
+The classifier resulting from minimising the unhinged loss is not new [Devroye et al., 1996, Chapter 10], [Schölkopf and Smola, 2002, Section 1.2], [Shawe-Taylor and Cristianini, 2004, Section
+5.1]. However, establishing this classifier’s (strong) SLN-robustness, uniqueness thereof, and its
+equivalence to a highly regularised SVM solution, to our knowledge is novel.
+
+2
+
+Background and problem setup
+
+Fix an instance space X. We denote by D a distribution over X × {±1}, with random variables
+(X, Y) ∼ D. Any D may be expressed via the class-conditionals (P, Q) = (P(X | Y = 1), P(X |
+Y = −1)) and base rate π = P(Y = 1), or via the marginal M = P(X) and class-probability
+function η : x 7→ P(Y = 1 | X = x). We interchangeably write D as DP,Q,π or DM,η .
+2.1
+
+Classifiers, scorers, and risks
+
+A scorer is any function s : X → R. A loss is any function ` : {±1} × R → R. We use `−1 , `1 to
+refer to `(−1, ·) and `(1, ·). The `-conditional risk L` : [0, 1] × R → R is defined as L` : (η, v) 7→
+η · `1 (v) + (1 − η) · `−1 (v). Given a distribution D, the `-risk of a scorer s is defined as
+.
+
+LD
+` (s) =
+
+[`(Y, s(X))] ,
+
+E
+
+(X,Y)∼D
+
+(1)
+
+D
+so that LD
+` (s) = E [L` (η(X), s(X))]. For a set S, L` (S) is the set of `-risks for all scorers in S.
+X∼M
+
+A function class is any F ⊆ RX . Given some F, the set of restricted Bayes-optimal scorers for a
+loss ` are those scorers in F that minimise the `-risk:
+.
+
+SD,F,∗
+= Argmin LD
+` (s).
+`
+s∈F
+
+The set of (unrestricted) Bayes-optimal scorers is SD,∗
+= SD,F,∗
+for F = RX . The restricted
+`
+`
+`-regret of a scorer is its excess risk over that of any restricted Bayes-optimal scorer:
+.
+
+D
+regretD,F
+(s) = LD
+` (s) − inf L` (t).
+`
+t∈F
+
+Binary classification is concerned with the zero-one loss, `01 : (y, v) 7→ Jyv < 0K + 21 Jv = 0K.
+A loss ` is classification-calibrated if all its Bayes-optimal scorers are also optimal for zero-one
+loss: (∀D) SD,∗
+⊆ SD,∗
+01 . A convex potential is any loss ` : (y, v) 7→ φ(yv), where φ : R → R+ is
+`
+convex, non-increasing, differentiable with φ0 (0) < 0, and φ(+∞) = 0 [Long and Servedio, 2010,
+Definition 1]. All convex potentials are classification-calibrated [Bartlett et al., 2006, Theorem 2.1].
+2.2
+
+Learning with symmetric label noise (SLN learning)
+
+The problem of learning with symmetric label noise (SLN learning) is the following [Angluin and
+Laird, 1988, Kearns, 1998, Blum and Mitchell, 1998, Natarajan et al., 2013]. For some notional
+“clean” distribution D, which we would like to observe, we instead observe samples from some
+corrupted distribution SLN(D, ρ), for some ρ ∈ [0, 1/2). The distribution SLN(D, ρ) is such that
+the marginal distribution of instances is unchanged, but each label is independently flipped with
+probability ρ. The goal is to learn a scorer from these corrupted samples such that LD
+01 (s) is small.
+For any quantity in D, we denote its corrupted counterparts in SLN(D, ρ) with a bar, e.g. M for
+the corrupted marginal distribution, and η for the corrupted class-probability function; additionally,
+when ρ is clear from context, we will occasionally refer to SLN(D, ρ) by D. It is easy to check that
+the corrupted marginal distribution M = M , and [Natarajan et al., 2013, Lemma 7]
+(∀x ∈ X) η(x) = (1 − 2ρ) · η(x) + ρ.
+
+3
+
+(2)
+
+SLN-robustness: formalisation
+
+We consider learners (`, F) for a loss ` and a function class F, with learning being the search for
+some s ∈ F that minimises the `-risk. Informally, (`, F) is “robust” to symmetric label noise (SLNrobust) if minimising ` over F gives the same classifier on both the clean distribution D, which
+2
+
+the learner would like to observe, and SLN(D, ρ) for any ρ ∈ [0, 1/2), which the learner actually
+observes. We now formalise this notion, and review what is known about SLN-robust learners.
+3.1
+
+SLN-robust learners: a formal definition
+
+For some fixed instance space X, let ∆ denote the set of distributions on X × {±1}. Given a notional
+“clean” distribution D, Nsln : ∆ → 2∆ returns the set of possible corrupted versions of D the learner
+may observe, where labels are flipped with unknown probability ρ:
+
+
+
+1
+Nsln : D 7→ SLN(D, ρ) | ρ ∈ 0,
+.
+2
+Equipped with this, we define our notion of SLN-robustness.
+Definition 1 (SLN-robustness). We say that a learner (`, F) is SLN-robust if
+D,F,∗
+D,F,∗
+(∀D ∈ ∆) (∀D ∈ Nsln (D)) LD
+) = LD
+).
+01 (S`
+01 (S`
+
+(3)
+
+That is, SLN-robustness requires that for any level of label noise in the observed distribution D, the
+classification performance (wrt D) of the learner is the same as if the learner directly observes D.
+Unfortunately, a widely adopted class of learners is not SLN-robust, as we will now see.
+3.2
+
+Convex potentials with linear function classes are not SLN-robust
+
+Fix X = Rd , and consider learners with a convex potential `, and a function class of linear scorers
+Flin = {x 7→ hw, xi | w ∈ Rd }.
+This captures e.g. the linear SVM and logistic regression, which are widely studied in theory and
+applied in practice. Disappointingly, these learners are not SLN-robust: Long and Servedio [2010,
+Theorem 2] give an example where, when learning under symmetric label noise, for any convex
+potential `, the corrupted `-risk minimiser over Flin has classification performance equivalent to
+random guessing on D. This implies that (`, Flin ) is not SLN-robust1 as per Definition 1.
+Proposition 1 (Long and Servedio [2010, Theorem 2]). Let X = Rd for any d ≥ 2. Pick any convex
+potential `. Then, (`, Flin ) is not SLN-robust.
+3.3
+
+The fallout: what learners are SLN-robust?
+
+In light of Proposition 1, there are two ways to proceed in order to obtain SLN-robust learners: either
+we change the class of losses `, or we change the function class F.
+The first approach has been pursued in a large body of work that embraces non-convex losses
+[Stempfel and Ralaivola, 2009, Masnadi-Shirazi et al., 2010, Ding and Vishwanathan, 2010,
+Denchev et al., 2012, Manwani and Sastry, 2013]. While such losses avoid the conditions of Proposition 1, this does not automatically imply that they are SLN-robust when used with Flin . In Appendix
+B, we present evidence that some of these losses are in fact not SLN-robust when used with Flin .
+The second approach is to consider suitably rich F that contains the Bayes-optimal scorer for D,
+e.g. by employing a universal kernel. With this choice, one can still use a convex potential loss, and
+in fact, owing to Equation 2, any classification-calibrated loss.
+Proposition 2. Pick any classification-calibrated `. Then, (`, RX ) is SLN-robust.
+Both approaches have drawbacks. The first approach has a computational penalty, as it requires
+optimising a non-convex loss. The second approach has a statistical penalty, as estimation rates
+with a rich F will require a larger sample size. Thus, it appears that SLN-robustness involves a
+computational-statistical tradeoff. However, there is a variant of the first option: pick a loss that is
+convex, but not a convex potential. Such a loss would afford the computational and statistical advantages of minimising convex risks with linear scorers. Manwani and Sastry [2013] demonstrated
+that square loss, `(y, v) = (1 − yv)2 , is one such loss. We will show that there is a simpler loss that
+is convex and SLN-robust, but is not in the class of convex potentials by virtue of being negatively
+unbounded. To derive this loss, we first re-interpret robustness via a noise-correction procedure.
+1
+Even if we were content with a difference of  ∈ [0, 1/2] between the clean and corrupted minimisers’
+performance, Long and Servedio [2010, Theorem 2] implies that in the worst case  = 1/2.
+
+3
+
+4
+
+A noise-corrected loss perspective on SLN-robustness
+
+We now re-express SLN-robustness to reason about optimal scorers on the same distribution, but
+with two different losses. This will help characterise a set of “strongly SLN-robust” losses.
+4.1
+
+Reformulating SLN-robustness via noise-corrected losses
+
+Given any ρ ∈ [0, 1/2), Natarajan et al. [2013, Lemma 1] showed how to associate with a loss ` a
+D
+noise-corrected counterpart ` such that LD
+` (s) = L` (s). The loss ` is defined as follows.
+Definition 2 (Noise-corrected loss). Given any loss ` and ρ ∈ [0, 1/2), the noise-corrected loss ` is
+(∀y ∈ {±1}) (∀v ∈ R) `(y, v) =
+
+(1 − ρ) · `(y, v) − ρ · `(−y, v)
+.
+1 − 2ρ
+
+(4)
+
+Since ` depends on the unknown parameter ρ, it is not directly usable to design an SLN-robust
+learner. Nonetheless, it is a useful theoretical device, since, by construction, for any F, SD,F,∗
+=
+`
+SD,F,∗
+= SD,F,∗
+. This means that a sufficient condition for (`, F) to be SLN-robust is for SD,F,∗
+.
+`
+`
+`
+Ghosh et al. [2015, Theorem 1] proved a sufficient condition on ` such that this holds, namely,
+(∃C ∈ R)(∀v ∈ R) `1 (v) + `−1 (v) = C.
+(5)
+Interestingly, Equation 5 is necessary for a stronger notion of robustness, which we now explore.
+4.2
+
+Characterising a stronger notion of SLN-robustness
+
+As the first step towards a stronger notion of robustness, we rewrite (with a slight abuse of notation)
+LD
+` (s) =
+
+E
+
+(X,Y)∼D
+
+[`(Y, s(X))] =
+
+E
+
+(Y,S)∼R(D,s)
+
+.
+
+[`(Y, S)] = L` (R(D, s)),
+
+where R(D, s) is a distribution over labels and scores. Standard SLN-robustness requires that label
+noise does not change the `-risk minimisers, i.e. that if s is such that L` (R(D, s)) ≤ L` (R(D, s0 ))
+for all s0 , the same relation holds with D in place of D. Strong SLN-robustness strengthens this
+notion by requiring that label noise does not affect the ordering of all pairs of joint distributions over
+labels and scores. (This of course trivially implies SLN-robustness.) As with the definition of D,
+given a distribution R over labels and scores, let R be the corresponding distribution where labels
+are flipped with probability ρ. Strong SLN-robustness can then be made precise as follows.
+Definition 3 (Strong SLN-robustness). Call a loss ` strongly SLN-robust if for every ρ ∈ [0, 1/2),
+(∀R, R0 ) L` (R) ≤ L` (R0 ) ⇐⇒ L` (R) ≤ L` (R0 ).
+We now re-express strong SLN-robustness using a notion of order equivalence of loss pairs, which
+simply requires that two losses order all distributions over labels and scores identically.
+˜ order equivalent if
+Definition 4 (Order equivalent loss pairs). Call a pair of losses (`, `)
+(∀R, R0 ) L` (R) ≤ L` (R0 ) ⇐⇒ L`˜(R) ≤ L`˜(R0 ).
+Clearly, order equivalence of (`, `) implies SD,F,∗
+= SD,F,∗
+, which in turn implies SLN-robustness.
+`
+`
+It is thus not surprising that we can relate order equivalence to strong SLN-robustness of `.
+Proposition 3. A loss ` is strongly SLN-robust iff for every ρ ∈ [0, 1/2), (`, `) are order equivalent.
+This connection now lets us exploit a classical result in decision theory about order equivalent losses
+being affine transformations of each other. Combined with the definition of `, this lets us conclude
+that the sufficient condition of Equation 5 is also necessary for strong SLN-robustness of `.
+Proposition 4. A loss ` is strongly SLN-robust if and only if it satisfies Equation 5.
+We now return to our original goal, which was to find a convex ` that is SLN-robust for Flin (and
+ideally more general function classes). The above suggests that to do so, it is reasonable to consider
+those losses that satisfy Equation 5. Unfortunately, it is evident that if ` is convex, non-constant, and
+bounded below by zero, then it cannot possibly be admissible in this sense. But we now show that
+removing the boundedness restriction allows for the existence of a convex admissible loss.
+4
+
+5
+
+The unhinged loss: a convex, strongly SLN-robust loss
+
+Consider the following simple, but non-standard convex loss:
+unh
+`unh
+1 (v) = 1 − v and `−1 (v) = 1 + v.
+
+Compared to the hinge loss, the loss does not clamp at zero, i.e. it does not have a hinge. (Thus, peculiarly, it is negatively unbounded, an issue we discuss in §5.3.) Thus, we call this the unhinged loss2 .
+The loss has a number of attractive properties, the most immediate being is its SLN-robustness.
+5.1
+
+The unhinged loss is strongly SLN-robust
+
+unh
+unh
+Since `unh
+is strongly SLN-robust, and thus that
+1 (v) + `−1 (v) = 2, Proposition 4 implies that `
+unh
+(` , F) is SLN-robust for any F. Further, the following uniqueness property is not hard to show.
+Proposition 5. Pick any convex loss `. Then,
+
+(∃C ∈ R) `1 (v) + `−1 (v) = C ⇐⇒ (∃A, B, D ∈ R) `1 (v) = −A · v + B, `−1 (v) = A · v + D.
+That is, up to scaling and translation, `unh is the only convex loss that is strongly SLN-robust.
+Returning to the case of linear scorers, the above implies that (`unh , Flin ) is SLN-robust. This does
+not contradict Proposition 1, since `unh is not a convex potential as it is negatively unbounded. Intuitively, this property allows the loss to offset the penalty incurred by instances that are misclassified
+with high margin by awarding a “gain” for instances that correctly classified with high margin.
+5.2
+
+The unhinged loss is classification calibrated
+
+SLN-robustness is by itself insufficient for a learner to be useful. For example, a loss that is uniformly zero is strongly SLN-robust, but is useless as it is not classification-calibrated. Fortunately,
+the unhinged loss is classification-calibrated, as we now establish. For technical reasons (see §5.3),
+we operate with FB = [−B, +B]X , the set of scorers with range bounded by B ∈ [0, ∞).
+Proposition 6. Fix ` = `unh . For any DM,η , B ∈ [0, ∞), S`D,FB ,∗ = {x 7→ B · sign(2η(x) − 1)}.
+Thus, for every B ∈ [0, ∞), the restricted Bayes-optimal scorer over FB has the same sign as the
+Bayes-optimal classifier for 0-1 loss. In the limiting case where F = RX , the optimal scorer is
+attainable if we operate over the extended reals R ∪ {±∞}, so that `unh is classification-calibrated.
+5.3
+
+Enforcing boundedness of the loss
+
+While the classification-calibration of `unh is encouraging, Proposition 6 implies that its (unrestricted) Bayes-risk is −∞. Thus, the regret of every non-optimal scorer s is identically +∞, which
+hampers analysis of consistency. In orthodox decision theory, analogous theoretical issues arise
+when attempting to establish basic theorems with unbounded losses [Ferguson, 1967, pg. 78].
+We can side-step this issue by restricting attention to bounded scorers, so that `unh is effectively
+bounded. By Proposition 6, this does not affect the classification-calibration of the loss. In the context of linear scorers, boundedness of scorers can be achieved by regularisation:
+instead of work√
+ing with Flin , one can instead use Flin,λ = {x 7→ hw, xi | ||w||2 ≤ 1/ λ}, where λ > 0, so
+that Flin,λ ⊆ FR/√λ for R = supx∈X ||x||2 . Observe that as (`unh , F) is SLN-robust for any F,
+(`unh , Flin,λ ) is SLN-robust for any λ > 0. As we shall see in §6.3, working with Flin,λ also lets us
+establish SLN-robustness of the hinge loss when λ is large.
+5.4
+
+Unhinged loss minimisation on corrupted distribution is consistent
+
+Using bounded scorers makes it possible to establish a surrogate regret bound for the unhinged loss.
+This shows classification consistency of unhinged loss minimisation on the corrupted distribution.
+2
+This loss has been considered in Sriperumbudur et al. [2009], Reid and Williamson [2011] in the context
+of maximum mean discrepancy; see the Appendix. The analysis of its SLN-robustness is to our knowledge
+novel.
+
+5
+
+Proposition 7. Fix ` = `unh . Then, for any D, ρ ∈ [0, 1/2), B ∈ [1, ∞), and scorer s ∈ FB ,
+1
+D,FB
+regretD
+(s) =
+· regret`D,FB (s).
+01 (s) ≤ regret`
+1 − 2ρ
+Standard rates of convergence via generalisation bounds are also trivial to derive; see the Appendix.
+
+6
+
+Learning with the unhinged loss and kernels
+
+We now show that the optimal solution for the unhinged loss when employing regularisation and
+kernelised scorers has a simple form. This sheds further light on SLN-robustness and regularisation.
+6.1
+
+The centroid classifier optimises the unhinged loss
+
+Consider minimising the unhinged
+risk over the class of kernelised scorers FH,λ = {s : x 7→
+√
+hw, Φ(x)iH | ||w||H ≤ 1/ λ} for some λ > 0, where Φ : X → H is a feature mapping into a
+reproducing kernel Hilbert space H with kernel k. Equivalently, given a distribution3 D, we want
+λ
+∗
+wunh,λ
+= argmin E [1 − Y · hw, Φ(X)i] + hw, wiH .
+(6)
+2
+(X,Y)∼D
+w∈H
+The first-order optimality condition implies that
+1
+∗
+(7)
+wunh,λ
+= · E [Y · Φ(X)] ,
+λ (X,Y)∼D
+which is the kernel mean map of D [Smola et al., 2007], and thus the optimal unhinged scorer is
+
+
+1
+1
+s∗unh,λ : x 7→ · E [Y · k(X, x)] = x 7→ · π · E [k(X, x)] − (1 − π) · E [k(X, x)] .
+X∼P
+X∼Q
+λ (X,Y)∼D
+λ
+(8)
+From Equation 8, the unhinged solution is equivalent to a nearest centroid classifier [Manning et al.,
+2008, pg. 181] [Tibshirani et al., 2002] [Shawe-Taylor and Cristianini, 2004, Section 5.1]. Equation
+8 gives a simple way to understand the SLN-robustness of (`unh , FH,λ ), as the optimal scorers on
+the clean and corrupted distributions only differ by a scaling (see the Appendix):
+
+
+1
+· E
+Y · k(X, x) .
+(9)
+(∀x ∈ X) E [Y · k(X, x)] =
+1 − 2ρ (X,Y)∼D
+(X,Y)∼D
+Interestingly, Servedio [1999, Theorem 4] established that a nearest centroid classifier (which they
+termed “AVERAGE ”) is robust to a general class of label noise, but required the assumption that
+M is uniform over the unit sphere. Our result establishes that SLN robustness of the classifier
+holds without any assumptions on M . In fact, Ghosh et al. [2015, Theorem 1] lets one quantify the
+unhinged loss’ performance under a more general noise model; see the Appendix for discussion.
+6.2
+
+Practical considerations
+
+We note several points relating to practical usage of the unhinged loss with kernelised scorers. First,
+cross-validation is not required to select λ, since changing λ only changes the magnitude of scores,
+not their sign. Thus, for the purposes of classification, one can simply use λ = 1.
+Second, we can easily extend the scorers to use a bias regularised with strength 0 < λb 6= λ. Tuning
+λb is equivalent to computing s∗unh,λ as per Equation 8, and tuning a threshold on a holdout set.
+∗
+Third, when H = Rd for d small, we can store wunh,λ
+explicitly, and use this to make predictions.
+For high (or infinite) dimensional H, we can either make predictions directly via Equation 8, or
+use random Fourier features [Rahimi and Recht, 2007] to (approximately) embed H into some low∗
+dimensional Rd , and then store wunh,λ
+as usual. (The latter requires a translation-invariant kernel.)
+∗
+We now show that under some assumptions, wunh,λ
+coincides with the solution of two established
+methods; the Appendix discusses some further relationships, e.g. to the maximum mean discrepancy.
+3
+
+Given a training sample S ∼ Dn , we can use plugin estimates as appropriate.
+
+6
+
+6.3
+
+Equivalence to a highly regularised SVM and other convex potentials
+
+There is an interesting equivalence between the unhinged solution and that of a highly regularised
+SVM. This has been noted in e.g. Hastie et al. [2004, Section 6], which showed how SVMs approach
+a nearest centroid classifier, which is of course the optimal unhinged solution.
+Proposition 8. Pick any D and Φ : X → H with R = supx∈X ||Φ(x)||H < ∞. For any λ > 0, let
+∗
+whinge,λ
+= argmin
+w∈H
+
+E
+
+(X,Y)∼D
+
+[max(0, 1 − Y · hw, Φ(x)iH )] +
+
+λ
+hw, wiH
+2
+
+∗
+∗
+be the soft-margin SVM solution. Then, if λ ≥ R2 , whinge,λ
+= wunh,λ
+.
+
+Since (`unh , FH,λ ) is SLN-robust, it follows that for `hinge : (y, v) 7→ max(0, 1−yv), (`hinge , FH,λ )
+is similarly SLN-robust provided λ is sufficiently large. That is, strong `2 regularisation (and a
+bounded feature map) endows the hinge loss with SLN-robustness4 . Proposition 8 can be generalised
+∗
+to show that wunh,λ
+is the limiting solution of any twice differentiable convex potential. This shows
+that strong `2 regularisation endows most learners with SLN-robustness. Intuitively, with strong
+regularisation, one only considers the behaviour of a loss near zero; since a convex potential φ has
+φ0 (0) < 0, it will behave similarly to its linear approximation around zero, viz. the unhinged loss.
+Proposition 9. Pick any D, bounded feature mapping Φ : X → H, and twice differentiable convex
+∗
+potential φ with φ00 ([−1, 1]) bounded. Let wφ,λ
+be the minimiser of the regularised φ risk. Then,
+
+2
+∗
+ w ∗
+
+wunh,λ
+
+
+φ,λ
+lim  ∗
+−
+ = 0.
+∗
+λ→∞  ||wφ,λ ||H
+||wunh,λ
+||H 
+H
+
+6.4
+
+Equivalence to Fisher Linear Discriminant with whitened data
+
+For binary classification on DM,η , the Fisher Linear Discriminant (FLD) finds a weight vector proportional to the minimiser of square loss `sq : (y, v) 7→ (1 − yv)2 [Bishop, 2006, Section 4.1.5],
+∗
+wsq,λ
+= (EX∼M [XXT ] + λI)−1 · E(X,Y)∼D [Y · X].
+
+(10)
+
+∗
+wsq,λ
+
+is only changed by a scaling
+By Equation 9, and the fact that the corrupted marginal M = M ,
+factor under label noise. This provides an alternate proof of the fact that (`sq , Flin ) is SLN-robust5
+∗
+[Manwani and Sastry, 2013, Theorem 2]. Clearly, the unhinged loss solution wunh,λ
+is equivalent to
+ T
+∗
+the FLD and square loss solution wsq,λ when the input data is whitened i.e. E XX = I. With
+X∼M
+
+a well-specified F, e.g. with a universal kernel, both the unhinged and square loss asymptotically
+recover the optimal classifier, but the unhinged loss does not require a matrix inversion. With a
+misspecified F, one cannot in general argue for the superiority of the unhinged loss over square loss,
+or vice-versa, as there is no universally good surrogate to the 0-1 loss [Reid and Williamson, 2010,
+Appendix A]; the Appendix illustrate examples where both losses may underperform.
+
+7
+
+SLN-robustness of unhinged loss: empirical illustration
+
+We now illustrate that the unhinged loss’ SLN-robustness is empirically manifest. We reiterate
+that with high regularisation, the unhinged solution is equivalent to an SVM (and in the limit any
+classification-calibrated loss) solution. Thus, we do not aim to assert that the unhinged loss is
+“better” than other losses, but rather, to demonstrate that its SLN-robustness is not purely theoretical.
+We first show that the unhinged risk minimiser performs well on the example of Long
+and Servedio [2010] (henceforth LS10). Figure 1 shows the distribution D, where X =
+{(1, 0), (γ, 5γ), (γ, −γ)} ⊂ R2 , with marginal distribution M = { 14 , 14 , 12 } and all three instances
+are deterministically positive. We pick γ = 1/2. The unhinged minimiser perfectly classifies all
+three points, regardless of the level of label noise (Figure 1). The hinge minimiser is perfect when
+there is no noise, but with even a small amount of noise, achieves a 50% error rate.
+4
+5
+
+Long and Servedio [2010, Section 6] show that `1 regularisation does not endow SLN-robustness.
+Square loss escapes the result of Long and Servedio [2010] since it is not monotone decreasing.
+
+7
+
+1
+
+Unhinged
+Hinge 0% noise
+Hinge 1% noise
+
+0.5
+
+0.5
+
+ρ
+ρ
+ρ
+ρ
+ρ
+ρ
+
+1
+
+−0.5
+
+=
+=
+=
+=
+=
+=
+
+0
+0.1
+0.2
+0.3
+0.4
+0.49
+
+Hinge
+
+t-logistic
+
+Unhinged
+
+0.00 ± 0.00
+0.15 ± 0.27
+0.21 ± 0.30
+0.38 ± 0.37
+0.42 ± 0.36
+0.47 ± 0.38
+
+0.00 ± 0.00
+0.00 ± 0.00
+0.00 ± 0.00
+0.22 ± 0.08
+0.22 ± 0.08
+0.39 ± 0.23
+
+0.00 ± 0.00
+0.00 ± 0.00
+0.00 ± 0.00
+0.00 ± 0.00
+0.00 ± 0.00
+0.34 ± 0.48
+
+Table 1: Mean and standard deviation of the 01 error over 125 trials on LS10. Grayed cells
+denote the best performer at that noise rate.
+
+−1
+
+Figure 1: LS10 dataset.
+
+We next consider empirical risk minimisers from a random training sample: we construct a training
+set of 800 instances, injected with varying levels of label noise, and evaluate classification performance on a test set of 1000 instances. We compare the hinge, t-logistic (for t = 2) [Ding and
+Vishwanathan, 2010] and unhinged minimisers using a linear scorer without a bias term, and regularisation strength λ = 10−16 . From Table 1, even at 40% label noise, the unhinged classifier is able
+to find a perfect solution. By contrast, both other losses suffer at even moderate noise rates.
+We next report results on some UCI datasets, where we additionally tune a threshold so as to ensure
+the best training set 0-1 accuracy. Table 2 summarises results on a sample of four datasets. (The
+Appendix contains results with more datasets, performance metrics, and losses.) Even at noise close
+to 50%, the unhinged loss is often able to learn a classifier with some discriminative power.
+
+ρ
+ρ
+ρ
+ρ
+ρ
+ρ
+
+=
+=
+=
+=
+=
+=
+
+0
+0.1
+0.2
+0.3
+0.4
+0.49
+
+Hinge
+
+t-Logistic
+
+Unhinged
+
+0.00 ± 0.00
+0.01 ± 0.03
+0.06 ± 0.12
+0.17 ± 0.20
+0.35 ± 0.24
+0.60 ± 0.20
+
+0.00 ± 0.00
+0.01 ± 0.03
+0.04 ± 0.05
+0.09 ± 0.11
+0.24 ± 0.16
+0.49 ± 0.20
+
+0.00 ± 0.00
+0.00 ± 0.00
+0.00 ± 0.01
+0.02 ± 0.07
+0.13 ± 0.22
+0.45 ± 0.33
+
+ρ
+ρ
+ρ
+ρ
+ρ
+ρ
+
+=
+=
+=
+=
+=
+=
+
+0
+0.1
+0.2
+0.3
+0.4
+0.49
+
+Hinge
+
+t-Logistic
+
+Unhinged
+
+0.05 ± 0.00
+0.06 ± 0.01
+0.06 ± 0.01
+0.08 ± 0.04
+0.14 ± 0.10
+0.45 ± 0.26
+
+0.05 ± 0.00
+0.07 ± 0.02
+0.08 ± 0.03
+0.11 ± 0.05
+0.24 ± 0.13
+0.49 ± 0.16
+
+0.05 ± 0.00
+0.05 ± 0.00
+0.05 ± 0.00
+0.05 ± 0.01
+0.09 ± 0.10
+0.46 ± 0.30
+
+(a) iris.
+
+ρ
+ρ
+ρ
+ρ
+ρ
+ρ
+
+=
+=
+=
+=
+=
+=
+
+0
+0.1
+0.2
+0.3
+0.4
+0.49
+
+(b) housing.
+
+Hinge
+
+t-Logistic
+
+Unhinged
+
+0.00 ± 0.00
+0.10 ± 0.08
+0.19 ± 0.11
+0.31 ± 0.13
+0.39 ± 0.13
+0.50 ± 0.16
+
+0.00 ± 0.00
+0.11 ± 0.02
+0.15 ± 0.02
+0.22 ± 0.03
+0.33 ± 0.04
+0.48 ± 0.04
+
+0.00 ± 0.00
+0.00 ± 0.00
+0.00 ± 0.00
+0.01 ± 0.00
+0.02 ± 0.02
+0.34 ± 0.21
+
+ρ
+ρ
+ρ
+ρ
+ρ
+ρ
+
+(c) usps0v7.
+
+=
+=
+=
+=
+=
+=
+
+0
+0.1
+0.2
+0.3
+0.4
+0.49
+
+Hinge
+
+t-Logistic
+
+Unhinged
+
+0.05 ± 0.00
+0.15 ± 0.03
+0.21 ± 0.03
+0.25 ± 0.03
+0.31 ± 0.05
+0.48 ± 0.09
+
+0.04 ± 0.00
+0.24 ± 0.00
+0.24 ± 0.00
+0.24 ± 0.00
+0.24 ± 0.00
+0.40 ± 0.24
+
+0.19 ± 0.00
+0.19 ± 0.01
+0.19 ± 0.01
+0.19 ± 0.03
+0.22 ± 0.05
+0.45 ± 0.08
+
+(d) splice.
+
+Table 2: Mean and standard deviation of the 0-1 error over 125 trials on UCI datasets.
+
+8
+
+Conclusion and future work
+
+We proposed a convex, classification-calibrated loss, proved that is robust to symmetric label noise
+(SLN-robust), showed it is the unique loss that satisfies a notion of strong SLN-robustness, established that it is optimised by the nearest centroid classifier, and showed that most convex potentials,
+such as the SVM, are also SLN-robust when highly regularised. So, with apologies to Wilde [1895]:
+While the truth is rarely pure, it can be simple.
+Acknowledgments
+NICTA is funded by the Australian Government through the Department of Communications and
+the Australian Research Council through the ICT Centre of Excellence Program. The authors thank
+Cheng Soon Ong for valuable comments on a draft of this paper.
+8
+
+References
+Dana Angluin and Philip Laird. Learning from noisy examples. Machine Learning, 2(4):343–370, 1988.
+Peter L. Bartlett, Michael I. Jordan, and Jon D. McAuliffe. Convexity, classification, and risk bounds. Journal
+of the American Statistical Association, 101(473):138 – 156, 2006.
+Christopher M Bishop. Pattern Recognition and Machine Learning. Springer-Verlag New York, Inc., 2006.
+Avrim Blum and Tom Mitchell. Combining labeled and unlabeled data with co-training. In Conference on
+Computational Learning Theory (COLT), pages 92–100, 1998.
+Vasil Denchev, Nan Ding, Hartmut Neven, and S.V.N. Vishwanathan. Robust classification with adiabatic
+quantum optimization. In International Conference on Machine Learning (ICML), pages 863–870, 2012.
+Luc Devroye, László Györfi, and Gábor Lugosi. A Probabilistic Theory of Pattern Recognition. Springer, 1996.
+Nan Ding and S.V.N. Vishwanathan. t-logistic regression. In Advances in Neural Information Processing
+Systems (NIPS), pages 514–522. Curran Associates, Inc., 2010.
+Thomas S. Ferguson. Mathematical Statistics: A Decision Theoretic Approach. Academic Press, 1967.
+Aritra Ghosh, Naresh Manwani, and P. S. Sastry. Making risk minimization tolerant to label noise. Neurocomputing, 160:93 – 107, 2015.
+Trevor Hastie, Saharon Rosset, Robert Tibshirani, and Ji Zhu. The entire regularization path for the support
+vector machine. Journal of Machine Learning Research, 5:1391–1415, December 2004. ISSN 1532-4435.
+Michael Kearns. Efficient noise-tolerant learning from statistical queries. Journal of the ACM, 5(6):392–401,
+November 1998.
+Philip M. Long and Rocco A. Servedio. Random classification noise defeats all convex potential boosters.
+Machine Learning, 78(3):287–304, 2010. ISSN 0885-6125.
+Christopher D. Manning, Prabhakar Raghavan, and Hinrich Schütze. Introduction to Information Retrieval.
+Cambridge University Press, New York, NY, USA, 2008. ISBN 0521865719, 9780521865715.
+Naresh Manwani and P. S. Sastry. Noise tolerance under risk minimization. IEEE Transactions on Cybernetics,
+43(3):1146–1151, June 2013.
+Hamed Masnadi-Shirazi, Vijay Mahadevan, and Nuno Vasconcelos. On the design of robust classifiers for
+computer vision. In IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2010.
+Nagarajan Natarajan, Inderjit S. Dhillon, Pradeep D. Ravikumar, and Ambuj Tewari. Learning with noisy
+labels. In Advances in Neural Information Processing Systems (NIPS), pages 1196–1204, 2013.
+Ali Rahimi and Benjamin Recht. Random features for large-scale kernel machines. In Advances in Neural
+Information Processing Systems (NIPS), pages 1177–1184, 2007.
+Mark D. Reid and Robert C. Williamson. Composite binary losses. Journal of Machine Learning Research,
+11:2387–2422, December 2010.
+Mark D Reid and Robert C Williamson. Information, divergence and risk for binary experiments. Journal of
+Machine Learning Research, 12:731–817, Mar 2011.
+Bernhard Schölkopf and Alexander J Smola. Learning with kernels, volume 129. MIT Press, 2002.
+Rocco A. Servedio. On PAC learning using Winnow, Perceptron, and a Perceptron-like algorithm. In Conference on Computational Learning Theory (COLT), 1999.
+John Shawe-Taylor and Nello Cristianini. Kernel Methods for Pattern Analysis. Cambridge Uni. Press, 2004.
+Alex Smola, Arthur Gretton, Le Song, and Bernhard Schölkopf. A Hilbert space embedding for distributions.
+In Algorithmic Learning Theory (ALT), 2007.
+Bharath K. Sriperumbudur, Kenji Fukumizu, Arthur Gretton, Gert R. G. Lanckriet, and Bernhard Schölkopf.
+Kernel choice and classifiability for RKHS embeddings of probability distributions. In Advances in Neural
+Information Processing Systems (NIPS), 2009.
+Guillaume Stempfel and Liva Ralaivola. Learning SVMs from sloppily labeled data. In Artificial Neural
+Networks (ICANN), volume 5768, pages 884–893. Springer Berlin Heidelberg, 2009.
+Robert Tibshirani, Trevor Hastie, Balasubramanian Narasimhan, and Gilbert Chu. Diagnosis of multiple cancer
+types by shrunken centroids of gene expression. Proceedings of the National Academy of Sciences, 99(10):
+6567–6572, 2002.
+Oscar Wilde. The Importance of Being Earnest, 1895.
+
+9
+
+

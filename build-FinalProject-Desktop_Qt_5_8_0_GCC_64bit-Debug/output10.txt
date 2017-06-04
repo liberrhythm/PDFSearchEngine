@@ -1,0 +1,1650 @@
+Describing the creative design process by
+the integration of engineering design and
+cognitive psychology literature
+T. J. Howard, S. J. Culley and E. Dekoninck, Innovative Manufacturing
+Research Centre, Department of Mechanical Engineering, University of
+Bath, Bath BA2 7AY, United Kingdom
+In this paper a ‘creative design process’ is proposed, based on an integration
+between a modernised consensus view of both the design process from
+engineering design and the creative process from cognitive psychology. In
+addition, a composite deﬁnition of a creative design output is also formed, taking
+elements from the diﬀerent design types proposed in engineering design and the
+creative outputs proposed in psychology. This integrated process and the
+composite deﬁnition are further linked, thus providing a descriptive model the
+diﬀerent design operations are linked to the types of design output produced.
+Ó 2008 Elsevier Ltd. All rights reserved.
+Keywords: design process, creative process, engineering design, psychology
+
+C
+
+reativity is an integral and essential part of the engineering design
+process. Without creativity in design there is no potential for innovation, which is where creative ideas are actually implemented (Mumford and Gustafson, 1988; Amabile, 1996) and transformed into commercial
+value (Thompson and Lordan, 1999; Culley, 2002). To emphasise this importance, recent ﬁgures were released from the UK treasury concluding that the
+top innovating companies produce 75% of revenue from products or services
+that did not exist 5 years ago (Cox, 2005). Within industry, creativity does not
+necessarily equate to success; however, without it, based on the above observation (Cox, 2005), long-term failure is a near certainty.
+
+Corresponding author:
+T. J. Howard
+t.j.howard@bath.ac.
+uk
+
+Having a full understanding of the processes that lead to creative designs over
+routine designs is of great interest to both individuals and organisations. There
+has been work (Chapman, 2006) to establish design processes to enable more
+creativity; these process models are often termed ‘innovation processes’. However, to date there are no descriptive innovation process models able to make
+clear and consistent distinction between a design path leading to a routine
+product from a path leading to a creative product. By comparing literature
+from engineering design with creativity literature from cognitive psychology,
+this paper highlights some key areas for design researchers to consider. The integration, in some manner, of a creative process with the overall design process
+www.elsevier.com/locate/destud
+0142-694X $ - see front matter Design Studies 29 (2008) 160e180
+doi:10.1016/j.destud.2008.01.001
+Ó 2008 Elsevier Ltd. All rights reserved. Printed in Great Britain
+
+160
+
+may also help engineers to better utilise creativity tools, methods and techniques from both engineering and psychology.
+
+1
+
+Scope of review
+
+In order to conduct this cross disciplinary research, the authors ﬁrst aimed to
+identify areas in both engineering design and cognitive psychology literature
+that are directly comparable, thus making the knowledge transferable. During
+this initial scoping, it was realised that in psychology it is common to refer
+to creativity in reference to the four main areas by which it is researched,
+namely the creative ‘process’, the creative ‘product (output)’, the creative
+‘person’ and the creative ‘environment’ (Rhodes, 1961; Murdock and Puccio,
+1993; Basadur et al., 2000). In the domain of engineering design it would appear that leading authors categorise design into broadly similar sections using
+the terms, the design ‘problem’, the design ‘process’, the design ‘types (output)’, the design ‘activity’ and the design ‘organisation/team/personnel’
+(Pahl and Beitz, 1984; Ulrich and Eppinger, 1995; Ullman, 1997; Cross, 2000).
+The authors previously observed that the engineering design process had many
+similarities to the creative processes (Howard et al., 2007). In addition, it was
+seen that the characterised ‘design outputs’ commonly referred to in engineering design literature, show many similarities with the creative product
+described in psychology research literature. It was therefore decided that the
+scope of this paper would attempt to assess and integrate the diﬀerent perspectives of the two domains with respect to ‘process’ related research (Section 2)
+and ‘product’ or ‘output’ related research (Section 3). The last two issues considered by the researchers in the psychology area of ‘person’ and ‘environment’
+are clearly important areas for understanding and supporting creativity, however, they are considered outside the scope of this paper. In Section 4 the ﬁndings from the previous sections are brought together to link the design process
+to the design outputs.
+
+2
+
+The process of creative design
+
+The process by which innovation takes place can be thought of as some form
+of black box processing large amounts of design related information in order
+to produce a variety of design outputs, some of which will be ‘creative’.
+Scholars have made attempts to describe and formalise both the engineering
+design process (Section 2.1) and the creative process (Section 2.2), producing
+generic models that have been broadly accepted as good representations by
+both research communities. This paper suggests a descriptive, creative design
+process that is an integration of the engineering design process and the creative
+process.
+The following sections summarise the key elements of the diﬀerent engineering
+design process models and creative process models. Though several forms of
+
+Describing the creative design process
+
+161
+
+process representation have been published from each domain, what can be
+thought of as the ‘linear style’ is by far the most dominant in both domains
+and therefore has been the focus of the work on which this paper has been
+based. The section concludes with a comparison between the perspectives
+from each domain (Section 2.3) and a proposed descriptive model of integrating the two perspectives (Section 2.4).
+
+2.1
+
+The engineering design process
+
+The understanding of the design process is important both to manage the design activity and to aid the improvement of products and the overall eﬃciency
+of engineering based companies; it is also the foundation on which a lot of
+design research is based. It is suggested that understanding this process relative
+to the creative process will give insight into where and when resources should
+be focused in order to enhance creative performance and also the resulting
+‘quality’ of the product designed. Thus this section introduces a framework
+(Table 1) which has been generated to deﬁne the boundaries of the design process, highlighting the commonalities and diﬀerences between the phases it contains. It is based on a detailed analysisof many existing engineering design
+process models of which 23 are shown in Table 1.
+There are a number of notable diﬀerences between the models, of particular
+interest are the divergenteconvergent models, which include controlled convergence (Pugh, 1991) and the double diamond (Design Council, 2006) in
+Table 1. These divergenteconvergent models diﬀer from the traditional linear
+style by assuming some form of integrated evaluation and selection of ideas
+and concepts. This is potentially a useful outlook on design from a creativity
+perspective, as separating the generation and evaluation periods is considered
+good practice for both lateral thinking and brainstorming (Osborn, 1953).
+Another slightly atypical form of representation can be described as a ‘knowledge space model’. Here it is assumed that a certain quantity of knowledge
+must be gained for each phase of the process in order to complete a design. These
+spaces can be ﬁlled in random order or sequence, though there are certain dependencies inbuilt within each design project, i.e. one space cannot gain anymore
+relevant information until knowledge is gained in another space. A prime example of this type of representation is the CeK theory (Hatchuel and Weil, 2003)
+which describes design as a process of movement between a concept space and
+a knowledge space. These types of model are probably valid and representative
+of actual design activities, though it is clear that their high level description
+makes them less useful to designers. Interestingly, this type of representation
+did not correspond to the boundaries set by the framework in Table 1.
+The column headings used in Table 1 demonstrate the general agreement of
+design authors on common e often synonymously named e stages. The six
+headings comprise the four major design phases: ‘analysis of task, ‘conceptual
+
+162
+
+Design Studies Vol 29 No. 2 March 2008
+
+Describing the creative design process
+
+Table 1 A comparison of engineering design process models
+Models
+
+Establishing a need phase
+
+Analysis of task phase
+
+Conceptual design phase
+
+X
+
+New product strategy
+development
+
+Idea
+Screening &
+Business analysis
+generation evaluation
+
+Programming data collection
+
+Booz et al. (1967)
+Archer (1968)
+
+X
+
+Svensson (1974)
+
+Need
+
+Wilson (1980)
+
+Societal need
+
+X
+Recognize &
+formalize
+
+Analysis
+
+Verification
+
+Development
+
+Testing
+
+Implementation phase
+Commercialisation
+
+Communication
+
+X
+
+X
+
+Manufacture
+
+Decisions
+
+Analyze and/or test
+
+Ideate and create
+
+Detailed design phase
+
+Development
+
+Synthesis
+
+Concepts
+FR's &
+constraints
+
+Embodiment design phase
+
+Product, prototype, process
+
+X
+Introduction Life cycle
+(launch) management
+
+Urban and Hauser
+(1980)
+
+Opportunity identification
+
+VDI-2222 (1982)
+
+X
+
+Planning
+
+Conceptual design
+
+Embodiment design
+
+Detail design
+
+X
+
+Hubka and Eder (1982)
+
+X
+
+X
+
+Conceptual design
+
+Lay-out design
+
+Detail design
+
+X
+Commercialisation
+
+Testing
+
+Design
+
+Crawford (1984)
+
+X
+
+Strategic planning
+
+Concept generation
+
+Pre-technical evaluation
+
+Technical development
+
+Pahl and Beitz (1984)
+
+Task
+
+Clarification of task
+
+Conceptual design
+
+Embodiment design
+
+Detailed design
+
+X
+
+French (1985)
+
+Need
+
+Detailing
+
+X
+
+Recognise problem
+
+Conceptual design
+Search for alternative
+proposals
+
+Embodiment of schemes
+
+Ray (1985)
+
+Analysis of problem
+Exploration of
+Define
+problem
+problem
+
+Cooper (1986)
+
+Ideation
+
+Preliminary investigation
+
+Detailed investigation
+
+Andreasen and Hein
+(1987)
+Pugh (1991)
+
+Recognition of need
+
+Investigation of need
+
+Product principle
+
+Market
+
+Specification
+
+Hales (1993)
+
+Idea, need, proposal, brief
+
+Baxter (1995)
+
+Assess innovation
+opportunity
+
+Ulrich and Eppinger
+(1995)
+Ullman (1997)
+
+Identify
+needs
+
+Product design
+
+Judge feasible
+alternatives
+
+Specify
+solution
+
+X
+Production preparation
+
+Concept design
+
+Detail design
+
+Task clarification
+
+Embodiment design
+
+Detail design
+
+Possible products
+
+Possible concepts
+
+Possible embodiments
+
+Possible details
+
+Strategic planning
+
+Plan for the
+design process
+
+Develop engineering
+specifications
+
+Concept
+
+Test for feasible
+alternatives
+Testing &
+Development
+Validation
+
+Conceptual design
+
+X
+
+BS7000 (1997)
+
+Predict
+outcome
+
+Concept development
+
+System-level design
+
+Detail design
+
+Implement
+Full production & market
+launch
+Execution
+Manufacture
+
+New product
+
+X
+
+Implementation (or realisation)
+
+Black (1999)
+
+Brief/concept
+
+Review of ‘state of the art’
+
+Synthesis Inspiration
+
+Cross (2000)
+
+X
+
+Exploration
+
+Generation
+
+Design Council (2006)
+
+Discover
+
+Define
+
+Industrial Innovation
+Process 2006
+
+Mission statement
+
+Market research
+
+Experimentation
+
+Analysis /
+reflect
+
+Develop
+Ideas phase
+
+Synthesis
+
+Evaluation
+
+Termination
+Decisions to constraints Output
+
+Communication
+
+X
+X
+X
+
+Deliver
+Concept phase
+
+Production
+ramp-up
+
+Testing &
+refinement
+
+Develop product
+
+Develop concept
+
+Feasibility
+
+Sell
+
+X
+
+Feasibility Phase
+
+Pre production
+
+163
+
+design’, ‘embodiment design’ and ‘detailed design’. Preceding these four
+phases is the ‘Establishing a Need’ phase, where the driver for the design is recognised. With just few exceptions (Urban and Hauser, 1980; Baxter, 1995), it is
+noticeable that nearly all processes assume a market driven process as opposed
+to a technology driven process. Following the four major phases is the ‘implementation phase’, which is included by several authors, explaining what happens when the ﬁnal engineering ‘drawings’ and instructions are completed. The
+implementation phase contains only post-design activities and is therefore not
+the focus of this paper.
+It would appear, due to frequent use and reference, that these traditional,
+linear models (Table 1) of the design process are eﬀective for teaching novice
+designers and for managing the design process, i.e. for building stage gates
+upon. However, it is evident that the engineering design process models are
+poor with regards to representing creative processes. In Table 1 there is one
+exception in the Fashion and Textile design process proposed by Black
+(1999), which includes two phases of ‘synthesis’ and a phase for ‘inspiration’
+both commonly used to describe the creative process (see Table 2). It was
+also recognised that these linear representations are poor for research purposes
+particularly for mounting creative tools and processes, partly due to the ‘idealistic’ way by which they are depicted (Parnes and Clements, 1986).
+In order to address this gap, the authors have related this traditional linear
+view, to a more complex or sophisticated outlook of the design process as proposed by Gero (2004), relating design to function, behaviour and structure
+(FBS). It is possible to link the FBS framework (Gero, 2004) to three of the
+four major design phases of the standard engineering design process as illustrated in Figure 1. Here it is suggested that the functions are set within or
+are analogous to the analysis of task phase, the behaviour of the design is
+formed in the conceptual design phase and the structure is established during
+the embodiment phase.
+It will be seen that this framework, with its strong links to the usual representations of the design process, can be extremely useful in integrating the engineering design process and the creative process, Section 2.4.
+
+2.2
+
+The creative process
+
+Psychologists can be split into two categories as described by Boden (1990),
+namely the romantics and non-romantics. The romantics take a more spiritual
+view of creativity where it is viewed as a mysterious, subconscious process
+(Barron and Harrington, 1981; Plsek, 1997). This is still quite a common
+view of the creative process, however, this outlook provides little help to research in engineering design. Conversely, the non-romantic view has a number
+of very interesting aspects which will be used in this work. Thus the following
+subsection will take the reader through the diﬀerent descriptions of several
+
+164
+
+Design Studies Vol 29 No. 2 March 2008
+
+Describing the creative design process
+
+Table 2 A comparison of creative process models
+Models
+
+Analysis phase
+
+Helmholtz (1826)
+
+Saturation
+
+Dewey (1910)
+
+Kris (1952)
+Polya (1957)
+
+Jones (1970)
+
+Devising a plan
+
+Recognition Definition
+
+Amabile (1983)
+
+Couger et al. (1993)
+Shneiderman (2000)
+Basadur et al. (2000)
+Kryssanov et al. (2001)
+
+X
+
+Inspiration
+
+Elaboration
+
+Communication
+
+Carrying out the plan
+
+Looking Back
+
+X
+
+Divergence
+
+Convergence
+
+X
+
+Synthesis
+
+Evaluation
+
+Presentation
+
+Idea-finding
+
+Solution-finding
+
+X
+
+Idea-finding
+
+Solution-finding
+
+Analysis
+
+Fact-finding
+Fact-finding
+
+Search for data
+
+Divergent
+Understand the problem
+Fact-finding
+X
+
+Problemfinding
+
+Problem or task
+presentation
+X
+
+Acceptance-finding
+X
+
+Hypothesis formulation
+
+Hypothesis testing
+
+Communication of results
+
+Idea-finding
+
+Solution-finding
+
+Acceptance-finding
+
+Response generation
+
+Response validation
+
+Outcome
+
+Conception
+Framing
+problem
+Compiling
+information
+
+Gestation
+
+Parturition
+
+X
+
+Generating ideas
+
+Developing solutions
+
+Generating ideas
+
+Evaluating,
+prioritising ideas
+
+Bring up the baby
+Building
+acceptance
+
+Functional
+requirements
+
+Fact finding
+
+Problem defn.
+Structural
+requirements
+
+Idea finding
+Diverge – converge at each stage
+Analogies,
+Functional solutions
+metaphors
+
+Appraising
+tasks
+
+Designing
+process
+
+Developing an implementation plan
+
+Create
+
+Donate (communicate)
+
+Relate
+Problem finding
+
+Action
+
+Convergent
+Judgement
+
+Preparation
+
+Exploring
+Constructing
+data
+opportunities
+Opportunity, delineation,
+problem definition
+Collect
+
+Illumination
+
+Transformation
+Flashes of insight
+Pattern finding
+
+Problemfinding
+
+Mess finding
+
+Barron and Harrington
+(1981)
+Isaksen et al. (1994)
+
+Preparation
+
+Problem,
+challenge,
+opportunity
+
+Stein (1974)
+Parnes (1981)
+
+Verification
+
+Develop some possible solutions
+
+X
+
+Osborn (1963)
+Parnes (1967)
+
+X
+Experience collaboration of conjectural
+solution
+
+X
+Understanding the
+problem
+
+Guilford (1957)
+Buhl (1960)
+
+X
+
+Incubation
+
+Preparation
+
+Wallas (1926)
+
+Communication / implementation phase
+
+Implications of solutions
+through reasoning
+
+Illumination
+
+Incubation
+
+Definition and location
+of difficulty
+
+A felt difficulty
+
+Evaluation phase
+
+Generation phase
+
+Evaluate and select
+Reinterpretation
+
+Plan
+
+Acceptance
+X
+
+Action
+
+165
+
+Figure 1 Relationship between
+FBS (Gero, 2004) and the
+design process
+
+non-romantic views on creativity. A comparative summary of the process
+models can be found in Table 2, from which conclusions will be drawn.
+Similar to the design process the representation of the creative process takes
+several forms within the literature. But interestingly, even in the psychology
+domain, the form is predominantly described as a linear sequence of steps
+or stages. Earlier descriptions of the creative process, coined by Shneiderman
+(2000) as ‘inspirationalist’ views, are perhaps the most valuable to engineering
+design. One of the older process models is the four-stage process oﬀered by
+Wallas (1926) which although it remains the most well recognised of all creative process models, through his stages of preparation, incubation, illumination and veriﬁcation, has some critics. This model suggests the sudden
+emergence of an idea, which is now often deemed somewhat outdated. More
+recent descriptions, coined by Shneiderman (2000) as ‘structuralist’, attempt
+to oﬀer an explanation to emergence, describing conscious idea generation
+as the deliberate connection of matrices of thought (Koestler, 1964). This process is likened to belief by Amabile (1983), where new ideas are generated
+through the combination of two or more old, existing ideas and is typical of
+a structuralist view. Both of these views on idea generation stem from Aristotle’s rules of association, though it is noted that neither can distinguish
+between a process leading to a creative idea and one producing a routine idea.
+As with the engineering design process, there are instances of the divergente
+convergent style representations of the creative process from psychology literature. It was possible to position some of these processes within Table 2 as
+they were deemed to be hybrids incorporating divergenteconvergent stages
+into the more common linear process (Guilford, 1957; Jones, 1970;
+Basadur et al., 2000). Nevertheless, this paper will concentrate on the linear
+style processes which dominate the representations in Table 2. In constructing this table the 19 process models from the literature were analysed in detail
+and the various phases were compared and then grouped. It was then
+
+166
+
+Design Studies Vol 29 No. 2 March 2008
+
+possible to create four major groupings, which arguably represent the major
+phases of a creative process as seen by the researchers in the psychology
+domain. Broadly put, these phases are analysis, generation, evaluation and
+communication/implementation.
+Analysis of the table shows that over time, there has been a general shift from
+describing the creative process as subconscious cognitive phases (Helmholtz,
+1826; Wallas, 1926; Kris, 1952) to activity-based stages (Jones, 1970; Parnes,
+1981; Amabile, 1983). It therefore must be noted that due to this shift,
+phases e particularly in the generation column e are not precisely synonymous.
+For the purpose of this paper the authors argue that the creative process ends
+with the evaluation stage, as the communication/implementation phase should
+be deemed a design activity. Thus the generic creative process model used for
+this research contains the three stages of analysis, generation and evaluation.
+
+2.3
+
+Comparison between the ‘processes’
+of design and creativity
+
+The previous subsections have created the summary Tables 1 and 2 which contain the major elements identiﬁed by authors within the engineering design
+process (23 in total) and the work on the creative process from the psychology
+perspective (19 in total). In this section the various views are compared to understand the basis for the integrated model that is presented in Section 2.4. One
+notable similarity between the processes is the need for information, its analysis and understanding during the initial phases (‘analysis of task phase’ and
+‘analysis phase’). This phase is almost identical in both processes and is therefore a central component of the proposed integrated process.
+The main diﬀerences arise when assessing the conceptual design phase and the
+embodiment design phase. It would appear that both of these phases contain
+all three phases of the creative process, namely analysis, generation and evaluation. This emphasises the ﬁner level of granularity of the creative process,
+where it is seen to repeat continually throughout the ﬁrst three stages of the
+design process.
+Following the embodiment stage is the detailed design phase when engineering designers produce formal communication documents for manufacture/
+implementation. In descriptions of the creative process this stage involves
+the less formal externalising or sharing of the idea and is judged by many
+to be in addition to the creative process.
+In more recent research (Basadur et al., 2000; Kryssanov et al., 2001) psychologists have moved from thinking of the creative process as a cognitive process
+to a more activity-based one, more analogous to the design process. In doing
+this, many recent creative process models could, interestingly, be interpreted as
+extremely generic design process models. This is an interesting convergence of
+
+Describing the creative design process
+
+167
+
+ideas for engineering design authors who have promoted similar ideas for
+some time (Archer, 1968; Booz et al., 1968). Conversely, the linear engineering
+design process has remained relatively unchanged, the major developments really only being the inclusion of more feedback loops and the acknowledgment
+that the design process is more erratic than most representations suggest
+(Parnes and Clements, 1986; Bucciarelli, 1994).
+
+2.4
+
+Integrated model of the ‘process’ of creative design
+
+In this subsection the authors will attempt to map the consensus of creative
+processes (analysis, generation and evaluation) onto a view of the design process. In doing this speciﬁc creativity tools can be created and or positioned for
+their eﬀective use in the design process. For reasons discussed in Section 2.1
+the authors have adopted the function, behaviour and structure (FBS) model
+of design (Gero, 2004).
+Figure 2 shows an enhanced version of the FBS model. In grey are the eight
+diﬀerent design operations proposed by Gero (2004) (described in Table 3).
+This splits the behaviour components into expected behaviour (Be) for generative steps and the behaviour derived from the structure (Bs) for evaluative
+steps. The solid lines represent the diﬀerent design operations (transformations
+and comparisons) of the FBS approach which can be found listed in Table 3.
+Mapped onto this FBS model are the three creative process elements, shown in
+black, with the important information transfers shown as dotted lines. Table 3
+is also then extended to show how each design operation relates to the stages of
+the creative process. This gives a view of the creative process from the domain
+of psychology compared to the view of the design process from the domain of
+engineering design. The analysis phase is considered central to this model representing the continual interpretation and use of information which is seen as
+essential to the creative process. It is believed by the authors that the addition
+of this ‘analysis’ component is an important addition to the model. The previous FBS framework (Gero, 2004) did not take into account the continual
+
+Figure 2 Integrated creative design process model
+
+168
+
+Design Studies Vol 29 No. 2 March 2008
+
+Table 3 The FBS framework key (Gero, 2004)
+
+Design operation
+from (Figure 2)
+
+Descriptions of the activities that make
+up design (Gero, 2004)
+
+Nature of the activities
+in creative process terms
+
+Formulation
+(process 1)
+
+Transforms the design requirements, expressed in
+function (F), into behaviour (Be) that is expected
+to enable this function.
+Transforms the expected behaviour (Be) into a solution
+structure (S) that is intended to exhibit this desired behaviour.
+Derives the ‘actual’ behaviour (Bs) from the synthesized
+structure (S).
+Compares the behaviour derived from structure (Bs) with
+the expected behaviour to prepare the decision if the design
+solution is to be accepted.
+Produces the design description (D) for constructing or
+manufacturing the product.
+Addresses changes in the design state space in terms
+of structure variables or ranges of values for them if
+the actual behaviour is evaluated to be unsatisfactory.
+Addresses changes in the design state space in terms
+of behaviour variables or ranges of values for them if
+the actual behaviour is evaluated to be unsatisfactory.
+Addresses changes in the design state space in terms of
+function variables or ranges of values for them if
+the actual behaviour is evaluated to be unsatisfactory.
+
+Generation
+
+Synthesis
+(process 2)
+Analysis
+(process 3)
+Evaluation
+(process 4)
+Documentation
+(process 5)
+Reformulation
+type 1 (process 6)
+Reformulation
+type 2 (process 7)
+Reformulation
+type 3 (process 8)
+
+Generation
+Evaluation
+Evaluation
+
+N/A
+Generation
+
+Generation
+
+Generation
+
+growth and manipulation of design information throughout the design process, which was previously encapsulated by the ‘analysis of task’ phase and
+the feedback loops.
+Figure 2 along with Table 3 shows that transformations 1, 2, 6, 7 and 8 are directly related to the generation stage of the creative process. Operations 3 and
+4 are directly linked to the evaluation phase of the creative process. Transformation 5 is deemed as routine design and therefore does not feature in the
+creative process.
+The above model (Figure 2) is a representation linking both the creative
+process and the engineering design process in a novel and useful manner. In
+particular it shows the separate ways by which it is possible to assess the generation phases of the creative process in terms of engineering design. This will
+enable researchers to categorise and focus creative idea generation tools to suit
+the particular stage or activity that the designer is actually undertaking.
+Although considered good representation by the authors, this model, along
+with all the other processes reviewed in both domains, shows no link to
+what is referred to as the creative design output (Section 3). It therefore
+does not make any diﬀerentiation between a process leading to a creative design over one leading to a routine design. Thus the creative design output will
+be discussed and developed in Section 3 with its concluding links to the creative design process being presented in Section 4.
+
+Describing the creative design process
+
+169
+
+3
+
+The creative design output
+
+A clear deﬁnition of, or a metric for assessing creative design outputs consisting of measurable elements, would enable researchers to gauge the eﬀectiveness of any new creativity tools or methods proposed. In this section it will
+be shown that the classiﬁcation of ‘design outputs’ (Section 3.1) in the domain
+of engineering design e often referred to as design types e closely relates to the
+research performed by psychologists involving ‘creative outputs’ (Section 3.2).
+A comparison between the two diﬀerent views is produced (Section 3.3)
+followed by a tabulated model (Table 6) describing how they intersect with
+respect to the design process. This will help to produce a composite deﬁnition
+of a creative design output in Section 3.4.
+
+3.1
+
+Engineering design outputs
+
+Throughout design research, categorising the diﬀerent outputs of design has
+proven to be useful for both analysis and the construction of tools, methods
+and techniques. The diﬀerent output types are generally related to a design
+output’s distance from the current paradigm, and are often independent of
+the discipline or domain. Numerous researchers from the ﬁeld of engineering
+design have identiﬁed diﬀerent design outputs, for example the well referenced
+and simple classiﬁcation system oﬀered by Pahl and Beitz (1984) detailing
+three primary classes of design.
+Original design: An original solution principle for a system with the same,
+a similar or a new task.
+Adaptive design: Adapting a known solution principle to satisfy a new or
+changed task.
+Variant design: Varying the certain aspects of the system leaving the function
+and solution principle unchanged.
+As with the above scheme, many of the output categories proposed by the
+various authors clearly diﬀer in the levels of creativity, or at least the novelty,
+expected to be produced. Table 4 shows how the various authors categorise the
+diﬀerent design outputs, where the columns are organised to exhibit the
+Table 4 Design output categories
+
+Level of eﬀect
+
+Matousek (1963)
+Gasson (1973)
+Pahl and Beitz (1984)
+Black (1989)
+Henderson (1990)
+Culverhouse (1993)
+Ullman (1997)
+Gero (2001)
+
+170
+
+Most original
+
+Least original
+
+Behavioural
+
+Functional
+
+Structural
+
+Incremental
+
+New
+Original
+Original
+Innovative
+Radical
+Innovative
+Original
+Creative
+
+Adaptive
+Extensional
+Adaptive
+Adaptive
+X
+Strategic
+Redesign
+Innovative
+
+X
+Transitional
+Variant
+Variant
+Modular/architectural
+Variant
+Conﬁguration
+X
+
+Development
+X
+X
+Order
+Incremental
+Repeat order
+Selection
+Routine
+
+Design Studies Vol 29 No. 2 March 2008
+
+synonymous or closely related design types. The columns are ordered from left
+to right, decreasing in the levels creativity expected for each design type. Headings were chosen to describe the level at which each design type has the most
+noticeable eﬀect.
+It would appear that by Pahl and Beitz’s (1984) deﬁnition, the diﬀering design
+types are clearly related to the design process and thus to the FBS model
+(Gero, 2004), where ‘original’ design is assigned to an original ‘behaviour’
+and ‘adaptive’ design to original ‘function’. The authors consider these design
+type classiﬁcations to work over the spectrum of systems’ levels, for example
+on a ‘system’ level a product may be of type ‘variant’, however, it may be adaptive and original at ‘component’ and ‘sub-component’ levels. The knowledge
+of this relationship will add to the composite deﬁnition described at the end
+of this Section 3.4.
+It was observed that several of the authors also view these design outputs from
+the initial problem or activity perspective (Ullman, 1997). In which case, it is
+thought that the designers begin their design work with a notion that the eventual product will be either innovative, adaptive, variant or to order (Table 4)
+and thus perform the appropriate activity (design type).
+While these diﬀerent design types have the essence of varying levels of creativity, within their deﬁnitions they do not explicitly distinguish what is a creative/
+inventive design from what is a routine design. Ottosson (2001) states that for
+a product to be new, technically it must have 60% of new or redesigned parts
+and from a marketing point of view, it needs to be considered new to the market.
+In engineering design there is one accepted judgment of inventiveness, and it relates to the designs’ patentability. In order to become an invention or be granted
+a patent a design must fulﬁl the following criteria (The Patent Oﬃce, 2007):
+ Be new e the invention must never have been made public in any way, anywhere in the world, before the date on which an application for a patent is
+ﬁled.
+ Be capable of industrial application e an invention must be capable of being made or used in some kind of industry. This means that the invention
+must take the practical form of an apparatus or device, a product such as
+some new material or substance or an industrial process or method of
+operation.
+ Involve an inventive step e an invention involves an inventive step if, when
+compared with what is already known, it would not be obvious to someone
+with a good knowledge and experience of the subject.
+Interestingly the ﬁrst two criteria resemble elements that are used by psychologists to characterise a creative output (i.e. novelty and appropriateness, see
+Section 3.2). The term unobvious as the third criteria provides a revised
+
+Describing the creative design process
+
+171
+
+deﬁnition of a creative output presented previously (Howard et al., 2006), see
+Table 5.
+
+3.2
+
+Creative output
+
+When deﬁning the creative output it is important to note that an output is considered to be a single idea (Howard et al., 2006). Though this is often termed as
+the creative product in psychology literature it can cause confusion between
+the domains, as engineers think of a product as a ﬁnished artefact, usually
+of commercial value.
+In the romantic view, the creative output is considered something magical,
+astonishing (Boden, 1990) or godlike (Goldenberg and Mazursky, 2002), however, most scientiﬁc literature describes a creative output as something both
+original and appropriate. Table 5 displays the various deﬁnitions of the
+non-romantic views of the creative output. It can be seen that the two main
+elements of originality and appropriateness or their synonyms are present in
+all deﬁnitions. Due to the broad nature of this deﬁnition it is common for authors to add some form of third element to their deﬁnitions in order to focus
+on the aspect of creativity their particular research deals with (see Table 5).
+It is often easy to gauge how appropriate an idea is through simple testing and
+evaluation, if it works or ﬁts the speciﬁcation, it is appropriate. Though researchers from other domains emphasise, there is no right or wrong answer:
+‘good’ rather than ‘correct’; ‘poor’, rather than ‘wrong’ (Warr, 2007). Other
+elements such as originality are less robust in deﬁnition. Boden (1990) distinguishes between an idea that is original to the beholder (P-Creative) and an
+idea that is original historically (H-Creative). A good example of this diﬀerentiation in reality is in the gyroscope patent. In 1898 an original patent for
+the gyroscope was ﬁnalised, unbeknown that its details could be found in
+Leonardo da Vinci’s notebook dating back to the sixteenth century. It could
+therefore be argued that the gyroscope patent was P-Creative but not H-Creative.
+These two types of originality really divide the domains of engineering and
+cognitive psychology. Engineers are far more concerned with H type originality as it enables intellectual property rights such as a patent (see Section 3.1);
+psychologists are much more concerned with P type originality, to analyse the
+creative processes of individuals.
+
+With regards to assessing what is creative in a speciﬁc case (i.e. original and
+appropriate) there are few people who can make this judgment. Amabile
+(1983) states that there are few objective methods of evaluating the creativity
+of a product, and for the most part, evaluation is done by applying subjective
+judgments. This is complemented by Shalley and Gilson (2004) who believe
+that only a ﬁeld expert or line manager can judge whether these elements exist
+in a particular idea, thus determining whether it is creative or not.
+
+172
+
+Design Studies Vol 29 No. 2 March 2008
+
+Describing the creative design process
+
+Table 5 Creative output definition
+Deﬁnitions
+
+Originality
+
+Appropriateness
+
+Third Element
+
+Novel Original New Appro- Useful Purpose- Value Meaning- Tenable Satis- UnAdaptive Leap Change Unexpected Communi- Transfor- Comparisons Resourcepriate
+ful
+ful
+fying obvious
+cated
+mation
+ful
+Jackson and
+Messick
+(1965)
+Stein (1974)
+MacKinnon
+(1975)
+Rothenberg
+and
+Hausman
+(1976)
+Simon (1979)
+Amabile
+(1983)
+Sternberg
+(1988)
+Lumsdaine
+and
+Lumsdaine
+(1995)
+Gero (1996)
+Marakas
+and Elam
+(1997)
+Thompson
+and Lordan
+(1999)
+Warr and
+O’Neill
+(2005)
+Chakrabarti
+(2006)
+Howard
+et al. (2006)
+Lopez and
+Vidal (2006)
+
+X
+
+X
+
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+
+X
+X
+
+X
+
+X
+
+X
+X
+
+X
+
+X
+
+173
+
+3.3
+
+Comparison between the ‘outputs’ of design and creativity
+
+The most noticeable diﬀerence between the output related deﬁnitions from the
+two domains is in the size and complexity of the output being deﬁned. In
+engineering design the outputs being deﬁned (the diﬀerent design types) are
+complete products, components and solutions, often produced by complete
+teams of designers. In the case of psychology research the outputs to be deﬁned
+tend to be ‘single ideas’ produced by individuals.
+In terms of the characteristics that deﬁne what is creative from what is routine,
+psychologists deﬁne the creative output with markedly similar criteria to that
+required for an invention or a patentable design. However, the engineering design community appears to go a step further, breaking these designs further
+into diﬀerent design types relating to how creative or original particular aspects of each design are. A common theme emerged from the literature deﬁning the diﬀerent design types. This tended to distinguish between the levels of
+creativity exhibited at functional, behavioural and structural levels. This trend
+is built-in to the composite deﬁnition in the following subsection.
+
+3.4
+
+Composite deﬁnition of the ‘output’ of creative design
+
+In order to form a composite deﬁnition of the creative design output and thus
+gain better understanding of the diﬀerent deﬁnitions, it is useful to consider
+both views alongside the stages of the design process. Table 6 has been generated using the standardised headings of the design process from Section 2.1
+along with its relationship to function, behaviour and structure (described
+by Figure 1). Then taking Pahl and Beitz’s (1984) deﬁnitions of design types
+as a standard example it is possible to see how the diﬀerent design outputs relate to the design process by the relative position of the creative output, within
+the overall process.
+Table 6 indicates that if no creative output is produced the design will be routine at best. The three main design types all contain creative outputs, and can
+be diﬀerentiated between by the FBS relative position in which this creative
+output occurs. It is obvious from Table 6 that the diﬀerent design outputs
+are deﬁned from an engineering/technology perspective, deﬁning an original
+Table 6 Design process stage of creative output occurrence for each design type
+
+Stage of design process
+Analysis of task
+(function)
+Design outputs
+
+174
+
+Original
+Adaptive
+Variant
+Routine
+
+Conceptual design
+(behaviour)
+
+Embodiment design
+(structure)
+
+Detailed design
+
+Creative output
+Creative output
+Creative output
+
+Design Studies Vol 29 No. 2 March 2008
+
+output to be related to behaviour and thus the conceptual design phase. A user
+orientated classiﬁcation may see original design being related to function and
+thus the analysis of task phase (more marketing than engineering) and an architectural orientated classiﬁcation may see original design being related to its
+structure.
+The following deﬁnitions are constructed in reﬂection of both the deﬁnitions of
+design outputs (Section 3.1) and of creative outputs (Section 3.2).
+A creative output: An idea that is both original and appropriate.
+A creative design output: A design output containing at least one creative output at the systems’ level under study.
+A routine design output: A design output containing no creative output at
+that particular systems’ level.
+In addition consider the following deﬁnitions of the three types of creative
+design outputs.
+Original design output: A design output in which there is a creative output at
+the behavioural level.
+Adaptive design output: A design output in which there is a creative output
+at the functional level.
+Variant design output: A design output in which there is a creative output at
+the structural level.
+The above deﬁnitions could be useful for categorising products and product
+features for research purposes and intellectual property issues. These deﬁnitions are now used within the next section to link the creative design process
+to the creative design output.
+
+4
+
+Link between the creative design process and product
+
+Though fundamental to design research, the process and output of creative
+design has yet to be linked theoretically or empirically. The following section
+will propose a simple model consolidating at least half a centuries worth of
+work from both cognitive psychology and engineering design. The model links
+the consensus view of the creative design process (Section 2) to the composite
+deﬁnition of the creative design output (Section 3).
+It became evident that the generation phase of the creative process has the
+greatest bearing on the diﬀerent design outputs (Sections 2 and 3). If any
+design operation involves a creative generation phase (an original and appropriate idea) then one of the three creative design outputs will be produced. In
+the case where several creative generation phases occur at one of the systems’
+levels of the design, then it is a hybrid of the design types. It is important to
+realise that a routine design has no creative generation phases. Table 7
+
+Describing the creative design process
+
+175
+
+Table 7 Link between creative design process steps and the creative output
+
+Design operations (Figure 2)
+
+Nature of the activities in
+creative process terms
+
+Resultant creative
+design output
+
+Formulation (process 1)
+Synthesis (process 2)
+Analysis (process 3)
+Evaluation (process 4)
+Documentation (process 5)
+Reformulation type 1 (process 6)
+Reformulation type 2 (process 7)
+Reformulation type 3 (process 8)
+
+Generation
+Generation
+Evaluation
+Evaluation
+N/A
+Generation
+Generation
+Generation
+
+Original
+Variant
+N/A
+N/A
+N/A
+Variant
+Original
+Adaptive
+
+identiﬁes ﬁve design operations that if performed creatively will lead to the
+various creative design outputs. The implications of this link between the creative design process and the outputs allow us to position creative design tools
+respective to the design operation being performed.
+With these mechanisms now realised, research must be conducted at lower
+levels of granularity to understand what detailed mechanisms lead to original
+and appropriate ideas being produced during the generation phases. In some
+preliminary theoretical work (Howard et al., 2006) the authors propose that
+whether an idea is creative or routine is dependent on the information inputs
+into the process. It is suggested that the ‘obviousness’ and the ‘source’ of the
+information is key to this creative generation process and will be investigated
+in the following articles.
+
+5
+
+Conclusions
+
+Having reviewed literature from the domains of engineering design and psychology, a creative design process (Figure 2) is proposed as an integration between the engineering design process and the creative process established from
+cognitive psychology. Whilst acknowledging that design processes observed in
+practice are more erratic than most representations suggest, it is argued that
+understanding the linkages in the overall process will help engineers to better
+utilise creativity tools, methods and techniques. Insight into this process may
+also reveal where and when resources should be focused in order to enhance
+creative performance and the quality of the product designed.
+A composite deﬁnition of a creative design output is also presented, taking elements from the diﬀerent design types proposed in engineering design and the
+creative outputs proposed in psychology. A clear deﬁnition of a creative design
+output consisting of measurable elements (originality and appropriateness) will
+enable researchers to gauge the eﬀectiveness of any new creativity tools and
+methods proposed. The integrated process and composite deﬁnition are linked
+within Table 7 stating the process routes leading to the diﬀerent design outputs.
+
+176
+
+Design Studies Vol 29 No. 2 March 2008
+
+This deeper understanding will enable more eﬀective tools to be created and
+utilised, helping the engineering designer to produce more original ideas or
+to reach them more quickly. As it has been shown that information has an important, but not fully understood role, to further the support of creative activities it is clear that studies must be conducted with engineering designers to
+audit existing information types and sources used as design inputs. In addition,
+prescriptive studies should be conducted with engineering designers to test the
+impact of the diﬀerent types of information on creative inspiration at diﬀerent
+stages of the design process.
+
+References
+Amabile, T (1983) The social psychology of creativity Springer-Verlag, New York
+Amabile, T (1996) Creativity in context Westview Press, Boulder, Colorado
+Andreasen, M M and Hein, L (1987) Integrated product development IFS
+Publications, Bedford
+Archer, L B (1968) The structure of design processes Royal College of Art, London
+Barron, F and Harrington, D M (1981) Creativity, intelligence and personality
+Annual Review of Psychology Vol 32 pp 439e476
+Basadur, M, Pringle, P, Speranzini, G and Bacot, M (2000) Collaborative problem
+solving through creativity in problem deﬁnition: expanding the pie Creativity and
+Innovation Mangement Vol 9 No 1 pp 54e76
+Baxter, M (1995) Product design: a practical guide to systematic methods of new
+product development Chapman & Hall, New York
+Black, I (1989) Product innovation and mechanical CAD: a strategic proposal for
+engineering manufacture Computer-aided Engineering Journal Vol 6 No 5 pp 153
+Black, S (1999) The fashion and textile design process London College of Fashion,
+University of the Arts, London
+Boden, M (1990) The creative mind George Weidenfeld and Nicolson Ltd, Great
+Britain
+Booz, E, Allen, J and Hamilton, C (1968) Management of new products Booz, Allen &
+Hamilton Inc., New York
+BS7000 (1997) Design management systems. Part 2. Guide to managing the design
+of manufactured products BSI, London
+Bucciarelli, L L (1994) Designing engineers MIT Press, Mass
+Buhl, H (1960) Creative engineering design Iowa State University, Iowa
+Chakrabarti, A (2006) Deﬁning and supporting design creativity, in Ninth International Design Conference Design 06, Dubrovnik
+Chapman, A (2006) Design process and design management tips Available from:
+www.businessballs.com
+Cooper, R G (1986) Winning at new products Addison-Wesley Publishing Co.,
+Reading, Mass
+Couger, J D, Higgins, L F and McIntyre, S C (1993) (Un)Structured creativity in
+information systems organizations MIS Quarterly Vol 17 No 4 pp 375e398
+Cox, G (2005) Cox review of creativity in business: building on the UK’s strengths
+Available from: http://www.hm-treasury.gov.uk/independent_reviews/cox_review/
+coxreview_index.cfm
+Crawford, C M (1984) Protocol: new tool for product innovation Journal of
+Product Innovation Management Vol 1 No 2 pp 85
+Cross, N (2000) Engineering design methods strategies for product design Wiley,
+Chichester
+
+Describing the creative design process
+
+177
+
+Culley, S J (2002) The innovation debate University of Bath, Bath
+Culverhouse, P F (1993) Four design routes in electronics engineering product
+development International Journal of Design & Manufacturing Vol 3 No 2 pp
+147e158
+Design Council (2006) Double diamond design process Available from: http://
+www.designcouncil.org.uk/webdav/harmonise?Page/@id¼53&Session/@id¼D_4
+jaHtwk0Hj7ve5elIToe&Document/@id¼10149
+Dewey, J (1910) How we think D. C. Heath & Co., Boston, Mass
+French, M (1985) Conceptual design for engineers The Design Council, London
+Gasson, P (1973) Theory of design B T Batsford, London
+Gero, J (2001) Mass customisation of creative designs, in International Conference
+on Engineering Design, Glasgow
+Gero, J S (1996) Creativity, emergence and evolution in design Knowledge-Based
+Systems Vol 9 No 7 pp 435e448
+Gero, J S (2004) The situated functionebehaviourestructure framework Design
+studies Vol 25 No 4 pp 373e391
+Goldenberg, J and Mazursky, D (2002) Creativity in product innovation University
+Press, Cambridge
+Guilford, J P (1957) A revised structure of intellect studies of aptitudes of high-level
+personnel University of Southern California, California
+Hales, C (1993) Managing engineering design Longman Scientiﬁc and Technical,
+England, Harlow
+Hatchuel, A and Weil, B (2003) A new approach of innovative design: an
+introduction to CeK theory, in International Conference on Engineering Design,
+ICED 03, Stockholm
+Helmholtz, H (1826) Vortrage and reden in H Eysenck (ed) Genius University
+Press, Cambridge
+Henderson, R M (1990) Architectural innovation: the reconﬁguration of existing
+product technologies and the failure of established ﬁrms Administrative Science
+Quarterly Vol 35 No 1 pp 9e30
+Howard, T J, Culley, S J and Dekoninck, E (2006) Information as an input into
+the creative process, in Ninth International Design Conference Design 06,
+Dubrovnik
+Howard, T J, Culley, S J and Dekoninck, E (2007) Creativity in the engineering design process, in 16th International Conference on Engineering Design, ICED 07, Paris
+Hubka, V and Eder, W E (1982) Principles of engineering design Butterworth
+Scientiﬁc, London
+Isaksen, S G, Dorval, K B and Treﬃnger, D J (1994) Creative approaches to
+problem solving Kendall/Hunt Publishing Co., Dubuque, Iowa
+Jackson, P W and Messick, S (1965) The person, the product, and the response:
+conceptual problems in the assessment of creativity Journal of Personality Vol 33
+No 3 pp 309e329
+Jones, J C (1970) Design methods: seeds of human futures Wiley-Interscience, New
+York
+Koestler, A (1964) The act of creation Macmillan, New York
+Kris, E (1952) Psychoanalytic explorations in art International Universities Press,
+New York
+Kryssanov, V V, Tamaki, H and Kitamura, S (2001) Understanding design
+fundamentals: how synthesis and analysis drive creativity, resulting in emergence
+Artiﬁcial Intelligence in Engineering Vol 15 No 4 pp 329e342
+Lopez, B and Vidal, R (2006) Novelty matrics in engineering design experiments,
+in Ninth International Design Conference Design 06, Dubrovnik
+
+178
+
+Design Studies Vol 29 No. 2 March 2008
+
+Lumsdaine, E and Lumsdaine, M (1995) Creative problem solving e thinking skills
+for a changing world McGraw-Hill International, New York
+MacKinnon, D (1975) An overview of assessment centres Centre for Creative
+Leadership, Greensboro, N.C.
+Marakas, G M and Elam, J J (1997) Creativity enhancement in problem solving:
+through software or process? Management Science Vol 43 No 8 pp 1136e1146
+Matousek, R (1963) Engineering design e a systematic approach Blackie & Son,
+London
+Mumford, M D and Gustafson, S B (1988) Creativity syndrome e integration,
+application, and innovation Psychological Bulletin Vol 103 No 1 pp 27e43
+Murdock, M C and Puccio, G J (1993) A contextual organizer for conducting
+creativity research in Nurturing and developing creativity: the emergence of
+a discipline, Ablex, Norwood, NJ pp 249e280
+Osborn, A F (1953) Applied imagination: principles and procedures of creative
+thinking Scribner, New York
+Osborn, A F (1963) Applied imagination: principles and procedures of creative
+problem-solving Scribner, New York
+Ottosson, S (2001) Dynamic concept development, a key for future proﬁtable
+innovations and new product variants, in International Conference on Engineering
+Design, Glasgow
+Pahl, G and Beitz, W (1984) Engineering design The Design Council, London
+Parnes, D and Clements, P (1986) A rational design process: How and why to fake
+it IEEE Transactions on Software Engineering Vol 12 No 2 pp 251e257
+Parnes, S J (1967) Creative behavior guidebook Scribner, New York
+Parnes, S J (1981) The magic of your mind Bearly Limited, New York
+Plsek, P E (1997) Creativity, innovation, and quality ASQ Quality Press,
+Milwaukee, Wisconsin
+Polya, G (1957) How to solve it Doubleday Anchor Books, New York
+Pugh, S (1991) Total design e integrated methods for successful product engineering
+Addison-Wesley Publishers Ltd, Strathclyde
+Ray, M (1985) Elements of design engineering Prentice-Hall International, UK
+Rhodes, M (1961) An analysis of creativity Phi Delta Kappa Vol 42 pp 305e310
+Rothenberg, A and Hausman, C R (1976) The creativity question Duke University
+Press, Durham, N.C.
+Shalley, C E and Gilson, L L (2004) What leaders need to know: a review of social
+and contextual factors that can foster or hinder creativity Leadership Quarterly
+Vol 15 No 1 pp 33e53
+Shneiderman, B (2000) Creating creativity: user interfaces for supporting innovation
+ACM Transactions on ComputereHuman Interaction Vol 7 No 1 pp 114e138
+Simon, H A (1979) Models of thought Yale University Press, New Haven
+Stein, M I (1974) Stimulating creativity Academic Press, New York
+Sternberg, R J (1988) The nature of creativity: contemporary psychological
+perspectives University Press, Cambridge
+Svensson, N (1974) Introduction to engineering design Pitman, Bath
+UK Intellectual Property Oﬃce (The Patent Oﬃce) (2007) What is a patent?
+Available from: http://www.ipo.gov.uk/whatis/whatis-patent.htm
+Thompson, G and Lordan, M (1999) A review of creativity principles applied to
+engineering design Proceedings of the Institution of Mechanical Engineers, Part
+E, Journal of Process Mechanical Engineering Vol 213 No E1 pp 17e31
+Ullman, D (1997) The mechanical design process McGraw-Hill International, New
+York
+Ulrich, K T and Eppinger, S D (1995) Product design and development McGrawHill, New York
+
+Describing the creative design process
+
+179
+
+Urban, G L and Hauser, J R (1980) Design and marketing of new products PrenticeHall Englewood Cliﬀs, NJ
+VDI-2222 (1982) Design engineering methodics; setting up and use of design of
+catalogues VDI Society
+Wallas, G (1926) The art of thought Jonathan Cape, London
+Warr, A (2007) Understanding and supporting creativity in design University of
+Bath, Bath
+Warr, A, and O’Neill, E (2005). Understanding design as a social creative process,
+in Proceedings of the Fifth Conference on Creativity & Cognition, London
+Wilson, D R (1980) An exploratory study of complexity in axiomatic design
+Massachusetts Institute of Technology, Mass
+
+180
+
+Design Studies Vol 29 No. 2 March 2008
+
+The author has requested enhancement of the downloaded file. All in-text references underlined in blue are linked to publications on Resear
+
+

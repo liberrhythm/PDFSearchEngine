@@ -1,0 +1,780 @@
+Local Smoothness in Variance Reduced Optimization
+Daniel Vainsencher, Han Liu
+Dept. of Operations Research & Financial Engineering
+Princeton University
+Princeton, NJ 08544
+{daniel.vainsencher,han.liu}@princeton.edu
+
+Tong Zhang
+Dept. of Statistics
+Rutgers University
+Piscataway, NJ, 08854
+
+tzhang@stat.rutgers.edu
+
+Abstract
+We propose a family of non-uniform sampling strategies to provably speed up
+a class of stochastic optimization algorithms with linear convergence including
+Stochastic Variance Reduced Gradient (SVRG) and Stochastic Dual Coordinate
+Ascent (SDCA). For a large family of penalized empirical risk minimization problems, our methods exploit data dependent local smoothness of the loss functions
+near the optimum, while maintaining convergence guarantees. Our bounds are the
+first to quantify the advantage gained from local smoothness which are significant
+for some problems significantly better. Empirically, we provide thorough numerical results to back up our theory. Additionally we present algorithms exploiting
+local smoothness in more aggressive ways, which perform even better in practice.
+
+1 Introduction
+We consider minimization of functions of form
+n
+X
+
+−1
+φi x⊤
+P (w) = n
+i w + R (w)
+i=1
+
+where the convex φi corresponds to a loss of w on some data xi , R is a convex regularizer and P
+is µ strongly convex, so that P (w′ ) ≥ P (w) + hw′ − w, ▽P (w)i + µ2 kw′ − wk2 . In addition,
+we assume each φi is smooth in general and near flat in some region; examples include SVM,
+regression with the absolute error or ε insensitive loss, smooth approximations of those, and also
+logistic regression.
+Stochastic optimization algorithms consider one loss φi at a time, chosen at random according to
+a distribution pt which may change over time. Recent algorithms combine φi with information
+about previously seen losses to accelerate the process, achieving linear convergence rate, including
+Stochastic Variance Reduced Gradient (SVRG) [2], Stochastic Averaged Gradient (SAG) [4], and
+Stochastic Dual Coordinate Ascent (SDCA) [6].
+ The expected number of iterations required by these
+algorithms is of form O (n + L/µ) log ε−1 where L is a Lipschitz constant of all loss gradients
+▽φi , measuring their smoothness. Difficult problems, having a condition number L/µ much larger
+than n, are called ill conditioned, and have motivated the development of accelerated algorithms
+[5, 8, 3]. Some of these algorithms have been adapted to allow importance sampling where pt is non
+uniform; the effect on convergence bounds is to replace the uniform bound L described above by
+Lavg , the average over Li , loss specific Lipschitz bounds.
+In practice, for an important class of problems, a large proportion of φi need to be sampled only
+very few times, and others indefinitely. As an example we take an instance of smooth SVM, with
+µ = n−1 and L ≈ 30, solved via standard SDCA. In Figure 1 we observe the decay of an upper
+bound on the updates possible for different samples, where choosing a sample that is white produces
+no update. The large majority of the figure is white, indicating wasted effort. For 95% of losses,
+the algorithm captured all relevant information after just 3 visits. Since the non white zone is nearly
+constant over time, detecting and focusing on the few important losses should be possible. This
+1
+
+represents both a success of SDCA and a significant room for improvement, as focusing just half the
+effort on the active losses would increase effectiveness by a factor of 10.
+Similar phenomena occur under the SVRG and SAG algorithms as well. But is the phenomenon
+specific to a single problem, or general? for what problems can we expect the set of useful losses to
+be small and near constant?
+
+Figure 1: SDCA on smoothed SVM. Dual residuals upper bound the SDCA update size; white
+indicates zero hence wasted effort. The dual residuals quickly become sparse; the support is stable.
+Allowing pt to change over time, the phenomenon described indeed can be exploited; Figure 2
+shows significant speedups obtained by our variants of SVRG and SDCA. Comparisons on other
+datasets are given in Section 4. The mechanism by which speed up is obtained is specific to each algorithm, but the underlying phenomenon we exploit is the same: many problems are much smoother
+locally than globally. First consider a single smoothed hinge loss φi , as used in smoothed SVM with
+smoothing parameter γ. The non-smoothness of the hinge loss is spread in φi over an interval of
+length γ, as illustrated in Figure 3 and given by
+
+a>1
+0
+a<1−γ .
+φi (a) = 1 − a − γ/2
+
+2
+(a − 1) / (2γ) otherwise
+
+SVRG solving smoothed hinge loss SVM on MNIST 0/1.
+Loss0 gradient is 3.33e+01 Lip. smooth. 6.77e-05 strong convexity.
+10
+-1
+Uniform sampling ([2])
+10
+10-2
+Global smoothness sampling ([7])
+10-3
+Local SVRG (Alg. 1)
+10-4
+Empirical Affinity SVRG (Alg. 4)
+10-5
+10-6
+10-7
+10-8
+10-9
+10-10
+10-11
+10-12
+10-13
+0
+500 1000 1500 2000 2500 3000 3500 4000
+Effective passes over data
+
+Duality gap/suboptimality
+
+Duality gap/suboptimality
+
+d
+The Lipschitz constant of da
+φi (a) is γ −1 , hence it enters into the global estimate of condition number Lavg as Li = kxi k /γ; hence approximating the hinge loss more precisely, with a smaller γ,
+makes the problems strictly more ill conditioned. But outside that interval of length γ, φi can be
+locally approximated as affine, having a constant gradient; into a correct expression of local conditioning, say on interval B in the figure, it should contribute nothing. So smaller γ can sometimes
+make the problem (locally) better conditioned. A set I of losses having constant gradients over a
+subset of the hypothesis space can be summarized for purposes of optimization by a single affine
+
+SDCA solving smoothed hinge loss SVM on MNIST 0/1.
+Loss0 gradient is 3.33e+01 Lip. smooth. 6.77e-05 strong convexity.
+10
+-1
+Uniform sampling ([6])
+10
+10-2
+Global smoothness sampling ([10])
+10-3
+Affine-SDCA (Alg. 2)
+10-4
+Empirical ¢ SDCA (Alg. 3)
+10-5
+10-6
+10-7
+10-8
+10-9
+10-10
+10-11
+10-12
+10-13
+0
+50
+100 150 200 250 300 350
+Effective passes over data
+
+Figure 2: On the left we see variants of SVRG with η = 1/ (8L), on the right variants of SDCA.
+2
+
+Figure 3: A loss φi that is near flat (Hessian vanishes, near constant gradient) on a “ball” B ⊂ R.
+B with radius 2r kxi k is induced by the (Euclidean) ball of hypotheses B (wt , r), that we prove
+includes w∗ . Then the loss φi does not contribute to curvature in the region of interest, and an affine
+model of the sum of such φi on B can replace sampling from them. We find r in algorithms by
+combining strong convexity with quantities such as duality gap or gradient norm.
+function, so sampling from I should not be necessary. It so happens that SAG, SVRG and SDCA
+naturally do such modeling, hence need only light modifications to realize significant gains. We
+provide the details for SVRG in Section 2 (the SAG case is similar) and for SDCA in Section 3.
+Other losses, while nowhere affine, are locally smooth: the logistic regression loss has gradients
+with local Lipschitz constants that decay exponentially with distance from a hyperplane dependent
+on xi . For such losses we cannot forgo sampling any φi permanently, but we can still obtain bounds
+benefitting from local smoothness for an SVRG variant.
+Next we define formally the relevant geometric properties of the optimization problem and relate
+them to provable convergence improvements over existing generic bounds; we give detailed bounds
+in the sequel. Throughout B (c, r) is a Euclidean ball of radius r around c.
+
+
+
+Definition 1. We shall denote Li,r = maxw∈B(w∗ ,r) ▽2 φi x⊤
+i · 2 which is also the uniform
+∗
+Lipschitz coefficient of ▽φi that hold at distance at most r from w .
+
+Remark 2. Algorithms will use similar quantities not dependent on knowing w∗ such as L̃i,r around
+a known w̃.
+Definition 3. We define the average ball smoothness function S : R → R of a problem by:
+n
+n
+X
+X
+Li,r .
+Li,∞ /
+S (r) =
+i=1
+
+i=1
+
+In Theorem 5 we see that Algorithm 1 requires fewer stochastic gradient samples to reduce loss suboptimality by a constant factor than SVRG with importance sampling according to global smoothness. Once it has certified that the optimum w∗ is within r of the current iterate w0 it uses S (2r)
+times less stochastic gradient steps. The next measure similarly increases when many losses are
+affine on a ball around the optimum.
+Definition 4. We define the ball affinity function S : R → [0, n] of a problem by:
+!−1
+n
+X
+−1
+1{Li,r >0}
+.
+A (r) = n
+i=1
+
+In Theorem 10 we see similarly that Algorithm 2 requires fewer accesses of φi to reduce the duality
+gap to any ε > 0 than SDCA with importance sampling according to global smoothness. Once it has
+certified that the optimum is within distance r of the current primal iterate w = w α0 it accesses
+A (2r) times fewer φi .
+
+In both cases, local smoothness and affinity enable us to focus a constant portion of sampling effort
+on the fewer losses still challenging near the optimum; when these are few, the ratios (and hence
+3
+
+algorithmic advantage) are large. We obtain these provable speedups over already fast algorithms
+by using that local smoothness which we can certify. For non smooth losses such as SVM and and
+absolute loss regression, we can similarly ignore irrelevant losses, leading to significant practical
+improvements; the current theory for such losses is insufficient to quantify the speed ups as we do
+for smooth losses.
+We obtain algorithms that are simpler and sometimes much faster by using the more qualitative
+observation that as iterates tend to an optimum, the set of relevant losses is generally stable and
+shrinking. Then algorithms can estimate the set of relevant losses directly from quantities observed in
+performing stochastic iterations, sidestepping the looseness of estimating r. There are two previous
+works in this general direction. The first paper work combining non-uniform sampling and empirical
+estimation of loss smoothness is [4]. They note excellent empirical performance on a variant of
+SAG, but without theory ensuring convergence. We provide similarly fast (and bound free) variants
+of SDCA (Section 3.2) and SVRG (Section 2.2). A dynamic importance sampling variant of SDCA
+was reported in [1] without relation to local smoothness; we discuss the connection in Section 3.
+
+2 Local smoothness and gradient descent algorithms
+In this section we describe how SVRG, in contrast to the classical stochastic gradient descent (SGD),
+naturally exposes local smoothness in losses. Then we present two variants of SVRG that realize
+these gains. We begin by considering a single loss when close to the optimum and for simplicity
+assume R ≡ 0. Assume a small ball B = B (w, r) around our current estimate w includes around
+the optimum w∗ , and B is contained in a flat region of φi , and this holds for a large proportion of
+the n losses.
+SGD and its descendent SVRG (with importance sampling) use updates of form wt+1 = wt −
+t
+ηvit / (pi n), where EP
+i∼p vi / (pi n) =
+ ▽F (wt ) is an unbiased estimator of the full gradient of the loss
+n
+⊤
+−1
+term F (w) = n
+i=1 φi xi w . SVRG uses
+
+
+t
+/ (pi n) + ▽F (w̃)
+− ▽φi x⊤
+vit = ▽φi x⊤
+i w̃
+i w
+
+where w̃ is some reference point, with the advantage that vit has variance
+that vanishes as wt , w̃ →
+
+⊤
+∗
+t
+w . We point out in addition that when w̃, w ∈ B and ▽φi xi · is constant on B the effects of
+sampling φi cancels out and vit = ▽F (w̃). In particular, we can set pti = 0 with no loss of information. More generally when ▽φi x⊤
+i · is near constant on B (small Li,r ) the difference between
+the sampled values of ▽φi in vit is very small and pti can be similarly small. We formalize this in the
+next section, where we localize existing theory that applied importance sampling to adapt SVRG
+statically to losses with varied global smoothness.
+2.1 The Local SVRG algorithm
+Halving the suboptimality of a solution using SVRG has two parts: computing an exact gradient at a
+reference point, and performing many stochastic gradient descent steps. The sampling distribution,
+step size and number of iterations in the latter are determined by smoothness of the losses. Algorithm
+1, Local-SVRG, replaces the global bounds on gradient change Li with local ones Li,r , made valid
+by restricting iterations to a small ball certified to contain the optimum. This allows us to leverage
+previous algorithms and analysis, maintaining previous guarantees and improving on them when
+S (r) is large.
+
+For this section we assume P = F ; as in the initial version of SVRG [2], we may incorporate
+a smooth regularizer (though in a different way, explained later). This allows us to apply the existing Prox-SVRG algorithm [7] and its theory; instead of using the proximal operator for fixed
+regularization, we use it to localize (by projections) the stochastic descent to a ball B around the reference point w̃ see Algorithm 1. Then the theory developed around importance sampling and global
+smoothness applies to sharper local smoothness estimates that hold on B (ignoring φi which are
+affine on B is a special case). This allows for fewer stochastic iterations and using a larger stepsize,
+obtaining speedups that are problem dependent but often large in late stages; see Figure 2. This is
+formalized in the following theorem.
+4
+
+Algorithm 1 Local SVRG is an application of ProxSVRG with w̃ dependent regularization. This
+portion reduces suboptimality by a constant factor, apply iteratively to minimize loss.
+1. Compute ṽ = ▽F (w̃)
+
+0 w ∈ B (w̃, r)
+2. Define r = µ2 kṽk, R (w) = iB(w̃,r) =
+(by µ strong convexity, w∗ ∈
+∞ otherwise
+B (w̃, r))
+
+3. For each i, compute L̃i,r = maxw∈B(w̃,r) ▽2 φi x⊤
+i w
+4. Define a probability distribution: pi ∝ L̃i,r , weighted Lipschitz constant L̃p =
+maxi L̃i,r / (npi ) and step size η = 161L̃ .
+p
+
+5. Apply the inner loop of Prox-SVRG:
+(a) Set w0 = w̃
+(b) For t ∈ {1, . . . , m}:
+i. Choose it ∼ p
+
+
+ii. Compute v t = ▽φit wt−1 − ▽φit (x̃) / (npit ) + ṽ
+
+iii. wt = proxηR wt−1 − ηv t
+P
+(c) Return ŵ = m−1 t∈[m] wt
+Theorem 5. Let w̃ be an initial solution such that ▽F (w̃) certifies that w∗ ∈ B = B (w̃, r).
+Algorithm 1 finds ŵ with
+EF (ŵ) − F (w∗ ) ≤ (F (w̃) − F (w∗ )) /2
+Pn
+−1
+using O (d (n + m)) time, where m = 128
+i=1 Li,2r + 3.
+µ n
+
+P
+Remark 6. In the difficult case that is ill conditioned even locally so that 128n−1 ni=1 Li,2r ≫ nµ,
+the term n is negligible and the ratio between complexities of Algorithm 1 and an SVRG using
+global smoothness approaches S (2r).
+Proof. In the initial pass on the data, compute ▽F (w̃) , r and L̃i,r ≤ Li,2r . We then apply a single
+round of Algorithm Prox-SVRG of [7], with the regularizer R (x) = χB(w̃,r) localizing around
+the reference point. Then we may apply Theorem 1 of [7] with local L̃i,r instead of the global Li
+required there for general proximal operators. This allows us to use the corresponding larger stepsize
+1
+η = 16L
+= 16n−1 P1n L̃ .
+p
+i=1
+
+i,r
+
+Remark 7. The use of projections (hence the restriction to smooth regularization) is necessary because the local smoothness is restricted to B, and venturing outside B with a large step size may
+compromise convergence entirely. While excursions outside B are difficult to control in theory, in
+practice skipping the projection entirely does not seem to hurt convergence. Informally, stepping far
+from B requires moving consistently against ▽F , which is an unlikely event.
+Remark 8. The theory requires m stochastic steps per exact gradient to guarantee any improvement
+at all, but for ill conditioned problems this is often very pessimistic. In practice, the first O (n)
+stochastic steps after an exact gradient provide most of the benefit. In this heuristic scenario, the
+computational benefit of Theorem 5 is through the sampling distribution and the larger step size.
+Enlarging the step size without accompanying theory often gains a corresponding speed up to a
+certain precision but the risk of non convergence materializes frequently.
+
+While [2] incorporated a smooth R by adding it to every loss function, this could reduce the smoothness (increase L̃i,r ) inherent in the losses hence reducing the benefits of our approach.
+ We instead
+w
+poses no real
+propose to add a single loss function defined as nR; that this is not of form φi x⊤
+i
+difficulty because Local-SVRG depends on losses only through their gradients and smoothness.
+
+The main difficulty with the approach of this section is that in early stages r is large, in part because
+µ is often very small (µ = n−α for α ∈ {0.5, 1} are common choices), leading to loose bounds
+5
+
+on L̃i,r . In some cases the speed up is only obtained when the precision is already satisfactory; we
+consider a less conservative scheme in the next section.
+2.2 The Empirical Affinity SVRG algorithm
+
+
+
+t
+
+Local-SVRG relies on local smoothness to certify that some ∆ti = ▽φi x⊤
+− ▽φi x⊤
+i w
+i w̃
+t
+are small. In contrast, Empirical Affinity SVRG (Algorithm 4) takes ∆i > t to be evidence that
+a loss is active; when ∆ti = 0 several times, that is evidence of local affinity of the loss, hence it
+can be sampled less often. This strategy deemphasizes locally affine losses even when r is too large
+to certify it, thereby focuses work on the relevant losses much earlier. Half of the time we sample
+proportional to the global bounds Li which keeps estimates of ∆ti current, and also bounds the
+variance when some ∆ti increases from zero to positive. A benefit of using ∆ti is that it is observed
+at every sample of i without additional work. Pseudo code for the slightly long Algorithm 4 is in the
+supplementary material for space reasons.
+
+3 Stochastic Dual Coordinate Ascent (SDCA)
+The SDCA algorithm solves P through the dual problem
+D (α) = −n−1
+
+n
+X
+
+φ∗i (−αi ) + R∗ (w (α))
+
+i=1
+
+
+1
+where w (α) = ▽R∗ λn
+i=1 xi αi . At each iteration, SDCA chooses i at random according to
+pt , and updates the αi corresponding to the loss φi to increase D. This scheme has been used for
+particular losses before, and was analyzed in [6] obtaining linear rates for general smooth losses,
+uniform sampling and l2 regularization, and recently generalized in [10] to other regularizers and
+general sampling distributions. In particular, [10] show improved bounds and performance by stati−1
+cally adapting to the global
+of losses;
+ properties
+
+ using
+ a distribution pi ∝ 1+Li (nµ) ,
+ smoothness
+Pn
+
+L
+
+L
+
+log n + avg
+ε−1
+iterations to obtain an expected duit suffices to perform O n + avg
+µ
+µ
+ality gap of at most ε. While SDCA is very different from gradient descent methods, it shares the
+property that when the current state of the algorithm (in the form of αi ) already matches the derivative information for φi , the update does not require φi and can be skipped. As we’ve seen in Figure
+1, many losses converge αi → α∗i very quickly; we will show that local affinity is a sufficient
+condition.
+3.1 The Affine-SDCA algorithm
+The algorithmic approach for exploiting locally affine losses in SDCA is very different from that
+for gradient descent style algorithms; for some affine losses we certify early that some αi are in
+their final form (see Lemma 9) and henceforth ignore them. This applies only to locally affine (not
+just smooth) losses, but unlike Local-SVRG, does not require modifying the algorithm for explicit
+localization. We use a reduction to obtain improved rates while reusing the theory of [9] for the
+remaining points. These results are stated for squared Euclidean regularization, but hold for strongly
+convex R as in [10].
+
+S
+Lemma 9. Let wt = w (αt ) ∈ B (w∗ , r), and let {gi } = w∈B(wt ,r) φ′i x⊤
+i w ; in other words,
+
+t
+∗
+∗
+φi x⊤
+i · is affine on B (w , r) which includes w . Then we can compute the optimal value αi =
+−gi .
+
+
+⊤
+∗
+′
+Proof. As stated in Section 7 of [6], for each i, we have −α∗i = φ′i x⊤
+i w . Then if φi xi w is a
+constant singleton on B (wt , r) containing w∗ , then in particular that is −α∗i .
+The lemma enables Algorithm 2 to ignore a growing proportion of losses. The overall convergence
+this enables is given by the following.
+6
+
+Algorithm 2 Affine-SDCA: adapting to locally affine φi , with speedup approximately A (r).
+1. α0 = 0 ∈ Rn , I 0 = ∅.
+2. For τ ∈ {1, . . . }:
+
+q
+
+
+(a) w̃τ = w α(τ −1)m ; Compute rτ = 2 P (w̃τ ) − D α(τ −1)m /µ
+o
+n S
+
+
+τ 
+w̃
+(b) Compute I τ = i :  w∈B(wτ ,r) φ′i x⊤
+=1
+i
+
+(τ −1)n
+τ
+= −φ′i x⊤
+(c) For i ∈ I τ \I τ −1 : αi
+i w̃
+(
+
+0
+i ∈ Iτ
+0
+i ∈ Iτ
+τ
+,
+s
+=
+(d) pi ∝
+i
+−1
+τ
+s/pi otherwise
+1 + Li (nµ)
+otherwise
+(e) For t ∈ [(τ − 1) m + 1, τ m]:
+i. Choose it ∼ pτ
+
+
+t−1
+t
+ii. Compute ∆αtit = sit · φ′it x⊤
+t w (α ) − αit
+i
+(
+αt−1
++ ∆αtj j = it
+j
+t
+iii. αj =
+t−1
+αj
+otherwise
+
+τ
+Theorem 10.
+epoch τ Algorithm
+duality gap
+
+ 2 is at −1
+ ετ ,it will achieve expected duality gap ε
+ If at −1
+A (2r)L′avg
+A (2r)L′avg
+ε
+′
+′
+log n +
+iterations, where n′ = n − |I τ | and
+in at most n +
+µ
+µ
+ε
+
+L′avg =
+
+n′−1
+
+P
+
+i∈[n]\I τ
+
+µ
+
+Li
+
+.
+
+Remark 11. Assuming Li = L for simplicity, and recalling A (2r) ≤ n/n′ , we find the number
+−1
+of iterations is reduced by a factor of at least A (2r), compared to using pi ∝ 1 + Li (nµ) . In
+contrast, the cost of the steps 2a to 2d added by Algorithm 2 is at most a factor of O ((m + n) /m),
+which may be driven towards one by the choice of m.
+Recent work [1] modified SDCA for dynamic importance sampling dependent on the so called dual
+residual:
+
+κi = αi + φ′i x⊤
+i w (α)
+
+(where by φ′i (w) we refer to the derivative of φi at w) which is 0 at α∗ . They exhibit practical
+improvement in convergence, especially for smooth SVM, and theoretical speed ups when κ is
+sparse (for an impractical version of the algorithm), but [1] does not tell us when this pre-condition
+holds, nor the magnitude of the expected benefit in terms of properties of the problem (as opposed
+to algorithm state such as κ). In the context of locally flat losses such as smooth SVM, we answer
+these questions through local smoothness: Lemma 9 shows κi tends to zero for losses that are locally
+affine on a ball around the optimum, and the practical Algorithm 2 realizes the benefit when this
+certification comes into play, as quantified in terms of A (r).
+
+3.2 The Empirical ∆ SDCA algorithm
+Algorithm 2 uses local affinity and a small duality gap to certify the optimality of some αi , avoiding
+calculating ∆αi that are zero or useless; naturally r is small enough only late in the process. Algorithm 3 instead dedicates half of samples in proportion to the magnitude of recent ∆αi (the other
+half chosen uniformly). As Figure 2 illustrates, this approach leads to significant speed up much
+earlier than the approach based on duality gap certification of local affinity. While we it is not clear
+that we can prove for Algorithm 3 a bound that strictly improves on Algorithm 2, it is worth noting
+that except for (probably rare) updates to i ∈ I τ , and a factor of 2, the empirical algorithm should
+quickly detect all locally affine losses hence obtain at least the speed up of the certifying algorithm.
+In addition, it naturally adapts to the expected small updates of locally smooth losses. Note that ∆αi
+is closely related to (and might be replacable by) κ, but the current algorithm differs significantly
+from those in [1] in how these quantities are used to guide sampling.
+7
+
+Algorithm 3 Empirical ∆ SDCA
+1. α0 = 0 ∈ Rn , Ati = 0.
+2. For τ ∈ {1, . . . }:
+
+(τ −1)m
+
+and p2i = n−1
+(a) pτ = 0.5pτ,1 + 0.5p2 where pτ,1
+∝ Ai
+i
+(b) For t ∈ [(τ − 1) m + 1, τ m]:
+i. Choose it ∼ pτ
+
+
+t−1
+t
+ii. Compute ∆αtit = sit · φ′it x⊤
+t w (α ) − αit
+i
+(
+
+
+0.5At−1
++ 0.5 ∆αtj  j = it
+j
+t
+iii. Aj =
+At−1
+otherwise
+j
+(
+αt−1
++ ∆αtj j = it
+j
+iv. αtj =
+t−1
+αj
+otherwise
+
+4 Empirical evaluation
+
+Duality gap/suboptimality
+
+SDCA solving smoothed hinge loss SVM on Dorothea.
+Loss0 gradient is 3.33e+01 Lip. smooth. 1.25e-03 strong convexity.
+10
+-1
+Uniform sampling ([6])
+10
+10-2
+Global smoothness sampling ([10])
+10-3
+Affine-SDCA (Alg. 2)
+-4
+10
+Empirical ¢ SDCA (Alg. 3)
+10-5
+10-6
+10-7
+10-8
+10-9
+10-10
+10-11
+10-12
+10-13
+0
+5
+10
+15
+20
+25
+30
+Effective passes over data
+
+SDCA solving smoothed hinge loss SVM on w8a.
+Loss0 gradient is 3.33e+01 Lip. smooth. 2.01e-05 strong convexity.
+10
+-1
+Uniform sampling ([6])
+10
+10-2
+Global smoothness sampling ([10])
+10-3
+Affine-SDCA (Alg. 2)
+10-4
+Empirical ¢ SDCA (Alg. 3)
+10-5
+10-6
+10-7
+10-8
+10-9
+10-10
+10-11
+10-12
+10-13
+0
+20
+40
+60
+80
+Effective passes over data
+
+Duality gap/suboptimality
+
+Duality gap/suboptimality
+
+SDCA solving smoothed hinge loss SVM on Mushroom.
+Loss0 gradient is 3.33e+01 Lip. smooth. 1.23e-04 strong convexity.
+10
+-1
+Uniform sampling ([6])
+10
+10-2
+Global smoothness sampling ([10])
+10-3
+Affine-SDCA (Alg. 2)
+10-4
+Empirical ¢ SDCA (Alg. 3)
+10-5
+10-6
+10-7
+10-8
+10-9
+10-10
+10-11
+10-12
+10-13
+0
+100
+200
+300
+400
+Effective passes over data
+
+Duality gap/suboptimality
+
+We applied the same algorithms with almost1 the same parameters to 4 additional classification
+datasets to demonstrate the impact of our algorithm variants more widely. The results for SDCA are
+in Figure 4, those for SVRG in Figure 5 in Section 7 in the supplementary material for lack of space.
+
+SDCA solving smoothed hinge loss SVM on ijcnn1.
+Loss0 gradient is 3.33e+01 Lip. smooth. 5.22e-06 strong convexity.
+10
+-1
+Uniform sampling ([6])
+10
+10-2
+Global smoothness sampling ([10])
+10-3
+Affine-SDCA (Alg. 2)
+-4
+10
+Empirical ¢ SDCA (Alg. 3)
+10-5
+10-6
+10-7
+10-8
+10-9
+10-10
+10-11
+10-12
+10-13
+0
+100
+200
+300
+400
+500
+Effective passes over data
+
+Figure 4: SDCA variant results on four additional datasets. The advantages of using local smoothness
+are significant on the harder datasets.
+
+References
+[1] Dominik Csiba, Zheng Qu, and Peter Richtárik. Stochastic dual coordinate ascent with adaptive
+probabilities. arXiv preprint arXiv:1502.08053, 2015.
+[2] Rie Johnson and Tong Zhang. Accelerating stochastic gradient descent using predictive variance reduction. In Advances in Neural Information Processing Systems, pages 315–323, 2013.
+1
+
+On one of the new datasets, SVRG with a ratio of step-size to Lavg more aggressive than theory suggests
+stopped converging; hence we changed all runs to use the permissible 1/8. No other parameters were changed
+adapted to the dataset.
+
+8
+
+[3] Qihang Lin, Zhaosong Lu, and Lin Xiao. An accelerated proximal coordinate gradient method
+and its application to regularized empirical risk minimization. arXiv preprint arXiv:1407.1296,
+2014.
+[4] Mark Schmidt, Nicolas Le Roux, and Francis Bach. Minimizing finite sums with the stochastic
+average gradient. arXiv preprint arXiv:1309.2388, 2013.
+[5] Shai Shalev-Shwartz and Tong Zhang. Accelerated proximal stochastic dual coordinate ascent
+for regularized loss minimization. Mathematical Programming, pages 1–41, 2013.
+[6] Shai Shalev-Shwartz and Tong Zhang. Stochastic dual coordinate ascent methods for regularized loss. The Journal of Machine Learning Research, 14(1):567–599, 2013.
+[7] Lin Xiao and Tong Zhang. A proximal stochastic gradient method with progressive variance
+reduction. SIAM Journal on Optimization, 24(4):2057–2075, 2014.
+[8] Yuchen Zhang and Lin Xiao. Stochastic primal-dual coordinate method for regularized empirical risk minimization. arXiv preprint arXiv:1409.3257, 2014.
+[9] Peilin Zhao and Tong Zhang. Stochastic optimization with importance sampling. arXiv
+preprint arXiv:1401.2753, 2014.
+[10] Peilin Zhao and Tong Zhang. Stochastic optimization with importance sampling for regularized
+loss minimization. Proceedings of The 32nd International Conference on Machine Learning,
+2015.
+
+9
+
+

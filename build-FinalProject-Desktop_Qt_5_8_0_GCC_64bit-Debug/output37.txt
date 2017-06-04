@@ -1,0 +1,691 @@
+Team thinking
+that measures
+
+up to the task
+at hand.
+
+The Image @anklNishi
+
+0278-6648/94/$4.00 01994 IEEE
+Authorized licensed use limited to: IEEE Xplore. Downloaded on October 20, 2008 at 15:41 from IEEE Xplore. Restrictions apply.
+
+IEEE POTENTIALS
+
+Creative problem solving
+Spending more time in quadrant C will help your career
+
+Problem solving, as commonly
+taught in schools, is an analytical or procedural approach. This approach almost
+exclusively employs left-brain thinking
+modes, is competitive, and relies on
+individual effort. However, creative
+problem solving is a framework that
+encourages whole-brain, iterative thinking in the most effective sequence; it is
+cooperative in nature and is most productive when done as a team effort.
+
+The process and mindsets
+Problem definition: Detective and
+Explorer
+Idea generation (many ideas): Artist
+Idea synthesis (better ideas): Engineer
+Idea evaluation (best idea): Judge
+Solution implementation: Producer
+Fig. 1 is a graphic which illustrates
+the cyclic, iterative nature of the creative
+problem solving process and associated
+mindsets. Each mindset incorporates
+distinct thinking skills defined by the
+four-quadrant brain model of thinking
+modes or “ways of knowing” developed
+by Ned Herrmann, the father of brain
+dominance technology.
+Ned Herrmann worked for many
+years at General Electric, first as a
+physicist, then in the area of human
+resource development. He became very
+interested in the relationship of creativity to the brain and over two decades
+developed and validated a model of
+brain dominance. Although based on
+the physical brain, it is now a very useful metaphorical model that can give
+insight into how different people think
+and communicate.
+Each person’s thinking profile is
+developed from responses to a 120question survey form, the Herrmann
+Brain Dominance Instrument (HBDI)
+which was developed by Ned Herrmann. The resulting profile denotes a
+
+coalition of four distinct modes of thinking and processing information. Fig. 2 is
+a schematic of the Herrmann model of
+thinking preferences.
+In the Herrmann model, the four
+quadrants of the brain are labeled A, B,
+C, D, counterclockwise beginning with
+the left cerebral quadrant. The thinking
+modes clustered within each quadrant
+have similarities; the modes in different
+quadrants identify distinctly different
+characteristics or ways of thinking.
+Each mode has value and is suited for
+particular tasks.
+Quiidrant A (the upper left cerebral
+quadrant) is andyticd, rational, mathematical, judgmental thinking concerned
+with hardware, data analysis, financial
+budgets, and calculations.
+Quadmrzt B (the lower limbic left
+quadrant) is sequential, controlled, routine, persistent thinking concerned with
+administration, safekeeping, maintaining the status quo, detail, tactical planning, and organization.
+Quudrarzf C (the lower limbic right
+quadrant) i s interpersonal, empathetic, peopleintuitive,
+symbolic,
+value-based thinking
+concerned with communications, body sencations, music, nurturing,
+teaching, and training.
+Quadrant D (the
+upper right cerebral
+quadrant) is imaginative,
+spacial, metaphorical,
+flexible, idea-intuitive,
+playful, creative thinking
+concerned with possibilities, dreams, visions, synthesis, strategic planning,
+change, innovation, and
+entrepreneurship.
+Each quadrant has its
+own vocabulary and way
+
+Edward Lumsdaine and Monika Lumsdaine
+
++*.
+
+*i
+
+of solving problems. Often, people with
+similar thinking preferences form tribes
+that tend to exclude those who are “different.” Our thinking preferences determine how well we communicate with
+others; when we understand the fourquadrant model and work in whole-brain
+teams, we learn to understand people
+who have thinking preferences that differ from our own.
+Ned Herrmann, from his extensive
+work with industry, found that the
+thinking profile needed to succeed in
+the 1960s was a profile that had its
+strongest preference in short-range,
+conventional wisdom thinking (quadrant B). The 1970s called for dominance in quadrant A thinking, since the
+focus was on technical and financial
+concerns. The profile for the 1980s
+was more whole-brained, with almost
+equal preferences in quadrants A, B,
+and C , and a slightly stronger tilt
+toward quadrant D, since strategic
+thinking and hi-tech development was
+needed. For the 1990s and beyond,
+
+Fig, 1. Mindsets and thinking modes used in
+creative problem solving.
+
+DECEMBER ‘SWJANUARY ’95
+Authorized licensed use limited to: IEEE Xplore. Downloaded on October 20, 2008 at 15:41 from IEEE Xplore. Restrictions apply.
+
+5
+
+-
+
+appropriate problem solving
+approach for a particular
+problem
+since they have a
+Visual
+broader arsenal of thinking
+Holistic
+strategies available to them.
+Intuitive
+Creative problem solving
+Innovative
+imaginative
+begins by asking: What is the
+r e d problem? We can picture
+a
+detective looking for clues
+Interpersonal
+and asking many questions to
+Kinesthetic
+Emotional
+identify the causes of a probSpiritual
+lem. Engineers use analytical
+Sensory
+techniques such as KepnerTregoe, SPC, customer surveys, experiments, FMEA,
+Limbic
+ITA, and QFD to collect data
+0 1986 Ned Herrmann Reprintedwith permission 01 the author
+to define the problem. For
+complete problem definition,
+Fig. 2. The Herrmann 4-quadrant model of
+we must then use the explorbruin dominance.
+er’s mindset: we must look
+for trends and the broader context of the
+quadrant D (as well as quadrant C)
+problem. This requires right-brain thinkpreferences have strengthened considing modes and involves looking to other
+erably with the new emphasis on globdisciplines, not just in one’s field of
+al, long-range thinking. These profiles
+expertise. The problem is then defined in
+are shown in Fig. 3.
+terms of a positive goal to prepare the
+mind for the next step: brainstorming.
+The process
+Idea generation is represented by the
+We can use the HBDI to identify the
+artist’s mindset. The team is prepared
+thinking profiles of individuals. This
+for generating wild and crazy ideas with
+allows us to form homogeneous and
+a creative thinking warm-up (if possiheterogeneous teams. The whole-brain
+ble) and then employs a brainstorming
+team usually comes up with a more
+technique appropriate to the size and
+complete solution to an assignment; the
+composition of the team, the time conmembers are able to identify the most
+Cerebral
+
+straints, the environment, and the problem being solved. A key rule to follow
+is to defer judgment; quantity counts,
+and “idea pinching” is allowed. All
+ideas that are generated are collected for
+further processing.
+We have identified the next stage in
+creative problem solving with the engineer’s mindset, because here we “engineer” ideas to make them better and
+more practical. Negative judgment continues to be deferred, but now we look
+for quality, and we use wild ideas as
+stepping stones to generate additional
+creative as well as practical ideas. Ideas
+are written on notecards and then sorted
+into categories. Categories are assigned
+to different teams-within each category, ideas are synthesized down to fewer,
+but better ideas. Finally, the teams try to
+forcefit or synthesize ideas between different categories.
+The engineered ideas are now ready
+to be evaluated by the judge. Analytical
+and critical thinking skills are used to
+identify shortcomings. However, when
+flaws are found, the ideas are not discarded; instead, another round of creative
+thinking seeks to overcome the negative
+aspects of the ideas. The team employs
+the Pugh method of creative concept
+evaluation, an iterative matrix technique
+which leads the teams to develop a superior, compound solution based on brainstormed criteria derived from
+customer needs and team consensus.
+As a final step, the judging team
+then makes the decision to implement the optimal solution.
+Solution implementation is a
+new problem that requires creative
+problem solving. We use the
+metaphor of the producer for this
+step. Structured thinking for planning the implementation and interpersonal thinking for working with
+people to accept change are now
+required. However, the producer
+team must repeat the entire creative
+problem solving process to obtain
+optimum results. Here again, established techniques for making work
+plans, monitoring plans, budgets,
+time schedules, risk analysis, and
+project evaluations can be
+employed, depending on the complexity of the implementation.
+
+--lD
+
+Table 1
+Two ways of teaching heat transfer
+
+Analytical approach
+
+’ 1
+~
+
+Students must know the fundamentals.
+Minimal computer use.
+Artificial, neat problems.
+Problems are fully defined.
+Students spend much time substituting
+in equations (plug-and-chug).
+Only one “correct” solution expected.
+Right-or-wronganswers.
+Narrow focus on course or discipline.
+Pure analysis-no design content.
+Students work alone.
+Learning is teacher-centered.
+Students fear risk; failure is punished.
+Learning from failure does not occur.
+Quick idea judgment.
+Isolated, disconnected learning; no
+communications skills are taught.
+Left-brain thinking only; the creative
+
+Contextual approach
+Students must know the fundamentals.
+Extensive computer use.
+Real-life, “messy” problems.
+Problems are open-ended.
+Students spend much time in critical
+thinking and in asking “what if” questions.
+Multiple solutions/alternatives expected.
+Contextual problem solving.
+Multidisciplinary focus.
+Application to design is central.
+Students work alone and in teams.
+Learning is student-centered.
+Students examine causes of failure for
+continuous improvement.
+Deferred idea judgment.
+Students are required to make a verbal
+presentation and a written project report.
+*The creative problem solving approach and
+
+The course
+We developed this method over
+a number of years. Our work started when we were asked by indus-
+
+IEEE POTENTIALS
+Authorized licensed use limited to: IEEE Xplore. Downloaded on October 20, 2008 at 15:41 from IEEE Xplore. Restrictions apply.
+
+-
+
+try to write a manual and teach workshops to engineering teams on how to
+think more creatively. It dawned on us
+that we were doing “remedial” work
+because something was missing in the
+way engineers were educated. Thus we
+developed a freshman course and textbook for engineering students.
+Although creative problem solving
+forms the central part of our threecredit hour course, we have introduced
+related topics. We emphasize visualization and memory techniques to
+practice right-brain modes of processing information. We have incorporated
+a sketching lab as well as a computer
+lab using MathematicaTM.We have a
+unit on how to o v e r c o m e mental
+blocks to creative thinking. And we
+assess student thinking preferences
+with the Herrmann Brain Dominance
+Instrument (HBDI). The creative problem solving process is applied to a
+class exercise problem-a design project. The students are required to do a
+customer survey and Pareto analysis of
+the collected data. They must also do a
+
+I
+
+1960s
+
+1970s
+
+1980s
+
+1990s
+
+B-dominant
+
+A-dominant
+
+Balanced
+
+D-dominant
+
+I
+
+Profiles 01986 Ned Herrmann. Reprinted with permission
+
+Fig. 3. Paradigm shin in thinking preferences needed for success.
+
+literature search and a patent search.
+Just-in-time teaching about environmental and social considerations is
+provided depending on the particular
+design project. Ethics is discussed as
+related to the judge’s mindset. Each
+team of five students is made up of different thinkers based on the results of
+the HBDI. We have found that wholebrain teams usually c o m e up with
+superior solutions once the members
+learn how to work together. Communication skills are emphasized. Students
+
+learn to communicate with people that
+have different thinking preferences.
+They have to write a creative “thinking” report and are required to give a
+30-second individual “speech” on the
+topic of their report.
+For the midterm review, the students
+have a choice of completing an individual essay on five creative questions or
+doing a small team design project. The
+final exam is a team presentation on the
+results of the design project. Students
+also have to do a careful class evalua-
+
+What kind of thinkers does industry want
+The founder of IBM, Thomas Watson, made the word
+“think” his company’s slogan. The word was plastered everywhere and employees were expected to at least act like they
+were thinking. And it apparently worked. IBM became a
+leader in the computer-notwithstanding its recent slowdown-by thinking up ways to stay on top.
+So how does industry want you to think? What types of
+engineers are they recruiting? In 1992, Motorola listed these
+items as highly desirable in a quality briefing:
+Knowing how to learn,
+Listening and speaking well,
+Creative thinking and problem solving,
+Interpersonal relations and teaming,
+Self-esteem and motivation,
+Organizational effectiveness and leadership.
+In a speech (at the 1994 Regional Meeting of the American Society of Engineering Education), Dr. Arlington W.
+Carter, Jr., Vice President of Continuous Quality Improvement at Boeing, mentioned that his company was looking for
+engineers who can work in teams, who can think creatively,
+who have a global view, who understand management and
+leadership, and who have the ability to cope with change. Dr.
+Mark A. Stumpf, Director of Corporate Plant Engineering
+Operations for Abbott Laboratories, emphasized that his
+company is looking for teamwork skills, leadership, creativity, and experience with diversity.
+These companies take it for granted that graduates will
+have good analytical problem solving skills and solid knowledge of engineering fundamentals. They are looking for “value
+added.” In other words, engineers for the 2 1st century have to
+
+be innovators capable of creating new products and new
+processes that generate jobs.
+Dr. William M. Spurgeon, who has years of experience as
+vice president at Bendix, with NSF in Washington, and most
+recently as Director of Manufacturing Systems Engineering
+at the University of Michigan-Dearborn, reasons that innovation takes too long, costs too much, and often does not succeed in the marketplace because most universities are not
+preparing engineers adequately. He has developed an interesting function tree (to borrow a term from value engineering) for different types of engineering graduates.
+Level 1: Degreed engineers are either assistants who are
+good at “plug and chug” problem solving or creators who
+produce most of the worthwhile ideas.
+Level 2: Creators are either problem solvers who must be
+shown the significant problems or initiators who can find
+and identify the worthwhile problems.
+Level 3: The initiators are either the discoverers who try to
+understand phenomena (the fundamental, curious researchers)
+or the inventors and entrepreneurs who try to utilize phenomena to some advantage. It is these entrepreneurs who are job
+generators.
+One charge against our colleges of engineering is that
+they turn out far too few creators-initiators-inventors: the
+people who can operate the innovation process and thus generate jobs. Also, our graduates can no longer count on being
+hired by a large corporation; many need to have the broad
+skills useful to smaller companies or the skills required to
+start their own companies and make them succeed. In addition to engineering knowledge, they need political, legal, and
+financial know-how. -EL & M L
+
+DECEMBER ‘9WJANUARY ‘95
+Authorized licensed use limited to: IEEE Xplore. Downloaded on October 20, 2008 at 15:41 from IEEE Xplore. Restrictions apply.
+
+Glossary
+Kepner-Tregoe is an analytical method which employs long lists of questions
+to investigate a problem. The problem is defined as the extent of change from a
+former satisfactory state to the present unsatisfactory state. Finding the causes of
+the deviation should help solve the problem. This requires specific, quantitative
+data about the entire problem area.
+SPC or Statistical Process Control is a collection of seven tools that use
+statistical data and comparisons to monitor processes. The goal is to keep variations and the resulting decrease in quality to a minimum. The tools of SPC are used
+to make graphs of the data; when these results are analyzed, the causes of problems
+can be identified. The seven tools are: checksheets, histograms, cause-and-effect
+(fishbone)diagrams, Pareto diagrams, scatter diagrams, control charts, and whatever additional documentation is needed to prevent problems.
+FMEA or Failure Mode and Effects Analysis is used, for example by the
+Ford Motor Company, to explore all possible failure modes for a product or a
+process. Engineers look at the probability of a failure as well as the effect of the
+failure (and how easy or difficult it is to detect) in order to be able to prevent
+defects and develop test programs.
+FTA or Fault Tree Analysis focuses on identifying a system’s parts and
+events that could lead to or have led to a single, particular failure. The method
+graphically represents Boolean logic and directs problem-solving activities toward
+eliminating the failure from occurring by controlling all factors that could possibly
+contribute to the failure.
+
+QFD or Quality Function Deployment is a very structured procedure
+invented in Japan and in recent years adopted by many organizations in the U.S. It
+employs benchmarking and the “voice of the customer” in a series of evaluation
+matrices, with the purpose of improving the quality of components of a product (or
+service) above the level of the best competing product, for those items most critical
+to customer satisfaction.
+The Pugh Method of Creative Design Concept Evaluation is a technique where a team employs creative thinking to overcome the negative features
+and shortcomings of proposed designs. The ideas and concepts are placed together
+on a matrix and evaluated against a list of criteria. Through repeated cycles of discussion and comparing the improving designs against the top concept of the preceding round, the team converges on an optimum, synthesized design concept (or
+idea), where all flaws have been eliminated. True consensus and understanding
+develops on why this synthesized concept is best and the team members want to
+see it succeed.
+Pareto Analysis employs a specialized bar graph to identify and separate the
+vital, most important causes of trouble from the more trivial items. Its first use was
+in economics. It is based on the 20180 principle: by concentrating resources on the
+top 20 percent of the causes, 80 percent of the problems can be cured. It is useful
+for assigning priorities for continuous improvement efforts
+
+tion. Imagine students choosing the final
+exam as the best part of the course-this
+is what has happened! Or students saying that they would have liked to have
+had more homework. The grading philosophy is “zero defect” or “hitting the
+target.” Since there are alternate ways of
+achieving the goal, the focus is no
+longer on grades (and the resultant
+stress) but on individual and group
+excellence and learning. Students thrive
+on the interactive, hands-on, team-centered environment of this course.
+
+From faculty’s viewpoint
+As engineering faculty, we can use
+the creative problem solving process
+together with the Pugh method to
+change the courses we teach so they
+fall more in line with industry requirements. The resulting contextual problem solving goes beyond engineering
+analysis and considers such aspects as
+the people/society interface, the environment, v a l u e d e t h i c s , long-term
+effects, resource management, and
+costs (production costs as well as the
+
+cost to society of poor quality). Table 1
+shows a comparison of analytical and
+contextual problem solving for a heat
+transfer course. This course was taught
+to juniors in electrical engineering.
+The results have been surprising: the
+students learn much more; they can
+apply their skills in many new situations.
+They learn flexibility, leadership, and
+critical thinking. Even though the exams
+are longer and much more difficult, the
+class grade is now B-centered. In the
+past, as much as a third of the class
+dropped out or failed (and student performance centered on a grade of C t n o w
+only a rare student drops out, and none
+have failed so far. Students have selected
+some very interesting design projects.
+Two students even received job offers
+because of their contact with industry as
+part of their project investigation.
+How was it possible to incorporate
+these new activities into a course that
+already had a very tight syllabus? This
+is a legitimate question-we all know
+that the engineering curriculum is
+already overburdened. One thing is certain-without
+making some radical
+changes, we cannot add new materials,
+no matter how desirable they might be.
+First of all, making extensive use of
+computers for problem solving and
+optimization (and report writing) saves
+time, and students are able to do more
+realistic, more complicated problems.
+But computers alone do not solve the
+problem: we had to sit down and actually look at each item we were teaching
+to decide its relevance. Is this topic useful? Is it teachable? Is it a duplicationis it covered in a preceding course, or
+will it be covered in a follow-on
+course? Does it fit into the context?
+Does it meet a need-in industry, in
+subsequent courses, in design? Is it
+integrated with other courses? We used
+the Fugh method for this evaluation. As
+a result, we were able to eliminate elegant topics dear to our hearts that took
+weeks to teach, yet were of no practical
+use to students today.
+
+like teacher, like student
+Thinking preferences are strong filters in the learning process, especially if
+the instructor’s preferences are “foreign” to the student’s preferred way of
+thinking. Engineering faculty on the
+average have a distinct profile, with a
+strong preference in analytical thinking,
+lesser preferences in quadrant B and
+
+IEEE POTENTIALS
+
+8
+-
+
+Authorized licensed use limited to: IEEE Xplore. Downloaded on October 20, 2008 at 15:41 from IEEE Xplore. Restrictions apply.
+
+quadrant D thinking, and least preference in quadrant C thinking-their profile strongly resembles the 1970s profile
+identified by Ned Herrmann.
+From 1990 to 1994, we collected
+HBDI data for freshmen and senior
+engineering students at the University
+of Toledo. We have found that the average profile for seniors closely resembles
+that of the faculty, except that students
+have somewhat higher scores in quadrant B, the “plug and chug” mode of
+thinking. Are we educating excellent
+engineers for the 1970s?
+Our longitudinal research project
+with the HBDI shows that many students become more left-brain dominant
+as they go through the engineering curriculum, since the curriculum itself is
+extremely skewed toward quadrant A
+thinking. Students who have the rightbrain-dominant “ 1990s profile” have
+had retention rates at least three to four
+times worse than the more traditional
+students. We have been losing the talented, creative students needed by industry!
+When we analyzed the profiles of
+1994 seniors who had taken the HBDI
+survey as freshmen, we discovered that
+6 0 percent of these students have
+become more left-brained, with some
+making a complete switch from right to
+left. We found that 20 percent of the students developed their own ways of practicing right-brain thinking (such as
+seeking out group activities); these students remained “different” despite the
+curriculum pressures. The creative problem solving course gave them the affirmation that it was okay to be different.
+Another twenty percent of the students made a noticeable shift to rightbrain or whole-brain thinking-these
+were students who without exception
+received additional practice in creativity by being assistants in creative probl e m solving c l a s s e s o r helping in
+Saturday Academy. These students
+were the only group who increased in
+preference for quadrant C thinking.
+We note with grave concern this
+considerable drop in quadrant C thinking by the left-brain students, even as
+industry demands engineers with interpersonal and leadership skills. Low
+quadrant C thinking also creates a
+classroom climate that is uncomfortable for some students. The only difference we have found between the
+average thinking preference profile for
+men and women students is in quadrant C. Here women, on the average,
+
+have a noticeably stronger preference.
+Based on early data from University of
+Toledo students, quadrant C thinking is
+a mode that many male students tend
+to avoid, particularly in computer science and mechanical engineering.
+
+Conclusion
+and implications
+We believe our results confirm that
+quadrant C and D activities must be part
+of the engineering curriculum so individuals can develop their potential in all
+four thinking quadrants. This also will
+reduce the probability that those with
+right-brain thinking preferences opt out
+of engineering. Creative problem solving can be used to strengthen the productivity, quality of teamwork, thinking
+and communication skills of students
+and faculty in all four quadrants.
+Traditionally, engineering faculty
+expected their students to have thinking
+preferences much like their own. All
+others would be “weeded out” during
+the freshman or sophomore year, since
+creative thinking is often covertly or
+actively discouraged.
+Today, we are seeing incoming
+freshmen classes with roughly forty
+percent of the students right-brain dominant. Society cannot afford to lose the
+valuable thinking preferences of these
+individuals- because these are our
+future innovators and entrepreneurs.
+Change is not easy; it requires
+patience, effort, and persistence. Whether
+you are still a student or already out in
+industry, seek out any and all opportunities for learning and practicing new
+thinking skills and teamwork. Thinking
+in a quadrant that is not a preferred mode
+requires more energy initially; thus we
+tend to avoid those modes. However, we
+can develop preferences if we make the
+effort, because the brain is “plastic” and
+undergoes changes in structure each time
+it is used. You can prepare yourself to
+take advantage of the opportunities
+ahead in the 2 1st century.
+
+Read more about it
+Edward Lumsdaine and Monika
+Lumsdaine, “Full Implementation of a
+Freshman Course in Creativity and
+Problem Solving,” Proceedings, ASEE
+Annual Corference, New Orleans, June
+1991, Vol. 2, pp. 1 572-1 577.
+Edward Lumsdaine and Monika
+Lumsdaine, Creative Problem Solving:
+Thinking Skills f o r a Changing World,
+
+McGraw-Hill, New York, 1995 (available now). The third edition should be
+available by mid-1994.
+Ned Herrmann, The Creative
+Brain, Brain Books, Lake Lure, North
+Carolina, 1990.
+Edward Lumsdaine and Jennifer
+Voitle, “Contextual Problem Solving
+in Heat Transfer and Fluid Mechanics,” AlChE Symposium Series, Heat
+Transfer-Atlanta 1993, Volume 89,
+pp. 540-548.
+Edward Lumsdaine and Jennifer
+Voitle, “Introducing Creativity and
+Design into Traditional Engineering
+Analysis Courses,” Proceedings, ASEE
+Annuul Conference, Urbana, Illinois,
+June 1993, pp. 843-847.
+Monika Lumsdaine and Edward
+Lumsdaine, “Thinking Preferences of
+Engineering Students: Implications for
+Cumculum Restructuring,” accepted for
+publication to the Journal of Etzgineering Education, in 1995.
+
+About the authors
+Dr. Edward Lumsdaine was a
+research engineer at Boeing, taught at
+South Dakota State University and the
+University of Tennessee, directed the
+New Mexico Solar Energy Institute and
+became Dean of Engineering at the
+University of Michigan-Dearborn, the
+University of Toledo, and most recently
+at Michigan Technological University.
+His research in heat transfer, fluid
+mechanics, aeroacoustics, solar energy.
+product quality, and innovative teaching is published in over 100 papers. He
+frequently conducts math review courses in industry with software he and his
+colleagues have developed. He
+received the 1994 Chester S. Carlson
+Award from the American Society for
+Engineering Education for designing
+and implementing significant innovation in a changing sociological and
+technological environment.
+Monika Lumsdaine is a technical
+writer and award-winning passive solar
+home designer with a degree in math.
+She and her husband have developed
+and team-teach creative problem solving
+courses and workshops to engineering
+students and faculty, people in industry,
+as well as teachers, students, and parents. She is president of her own consulting firm, holds an appointment as
+visiting scholar at Michigan Tech, and is
+certified in the administration of the
+Herrmann Brain Dominance Instrument.
+
+DECEMBER ’94/JANUARY ‘95
+Authorized licensed use limited to: IEEE Xplore. Downloaded on October 20, 2008 at 15:41 from IEEE Xplore. Restrictions apply.
+
+9
+
+

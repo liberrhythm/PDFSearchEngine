@@ -1,0 +1,707 @@
+126
+
+Part One
+
+InitialConsiderations
+
+Social Cognitive Theory and Self.efficacy:
+Implications for Motivation Theory and Practice
+Alexander D. Stajkovic
+Fred Luthans
+The purposeof this articleis to show how socialcognitivetheory (SCT) and its main conandpracticeof work motistructof self-efficacycancontributeto the betterunderstanding
+relate
+human
+the
+five
+basic
+capabilitiesidentified by
+vation. We first summarizeand
+generally
+recognized
+as the core of SCT:
+that
+are
+StanfordpsychologistAlbert Bandura
+(1) symbolizing,(2) forethought,(3) vicarious learning,(4) self-regulation,and (5) selfreflection.The balanceof the articleis concernedwith self-efficacy.Closelyrelatedto selfregulationand reflection,self-efficacyis definedas an individual's belief (or confidence)
+abouthis or her abilitiesto mobilize motivation,cognitiveresources,and coursesof action
+neededto successfullyexecutea specifictask within a given context (Bandura,L997;
+Stajkovic& Luthans,1998a,1998b).We suggestthat self-efficacymakesan importantcontribution to work motivation.
+
+PARADOXAT WORK
+MOTIVATIONAL
+THECURRENT
+Now in the uncertain economy of the 21st century, more than ever, organizations face the
+dilemma of becoming more effective by improving performance, but without increasing
+costs. Since this is the era of artificial intelligence-computer-aided designs,computer-aided
+manufacturing, and e-business-the typical responsein recent years has been downsizing, eengineering and the extensive use of product, process,and information technology. However,
+largely overlooked and even degradedby downsizing, e-engineering,and the spur for the use
+of information technology have been human resourcesand the role they can play in meeting
+competitive demands. There is a strange paradox in these recent developments. As Pfeffer
+(1995) points out, if intelligence is so helpful to organizational successin its artificial form,
+then why do the potential benefits of real, human intelligence continue to be so neglected.
+One possible answer to this paradox is that we have tended to take a negative rather than
+a proactive positive approach to both the academic and practice sides of managing work performance (Luthans, 2002, in press). We have concentratedtoo much on what is wrong with
+employees and managers,their dysfunctions and weaknesses(e.g., how to motivate inept
+employees,overcome resistanceto change,cope with stress)rather than emphasizeand build
+on their strengths.We would argue that self-efficacy (or self-confidence), drawn from social
+cognitive theory, is the pervading psychological mechanism for positively motivating human
+resources.As Bandura (1986) suggests,"unless people believe that they can produce desired
+effects and forestall undesired ones by their actions, they have little incentive to act. Whatever other factors may operate as motivators, they are rooted in the core belief that one has
+the power to produce the desired results" (p.228). Thus, we offer social cognitive theory and
+its main construct of self-efficacy (Bandura, 1986, 1997) as a needed positive approach to
+motivation theory and practice.
+
+Chapter 2
+
+Conceptual ApproachestoMotivation atWork
+
+127
+
+A SOCIALCOGNITIVE
+THEORYFOUNDATION
+Social cognitive theory is based upon but more comprehensive than social learning and/or
+the behavioral approach to human action. For example, SCT includes motivational and selfregulatory mechanisms, which extend beyond learning and/or modifying behavior through
+reinforcing consequences.Moreover, in SC! learning is viewed as knowledge acquisition
+through cognitive processes of information. In other words, in SCT, the "social" part acknowledges the environmental origins of much of human thought and action, whereas the
+"cognitive" portion recognizes the influential contribution of cognitive processesto human
+motivation and action. For example, on the one hand, much of employees' knowledge and
+behaviors are generated from the organizational environment in which they operate. On the
+other hand, organizational participants still process and act upon available information differently depending on their unique personal characteristics.
+Drawing from a considerable stream of basic researchand SCT, Bandura and others have
+advanced the concept of self-efficacy. This increasingly recognized psychological construct
+deals specifically with the control of human action through people's beliefs in their capabilities to affect the environment and produce desired outcomes by their actions. For instance,
+unless employees believe that they can gather up the necessarybehavioral, cognitive, and
+motivational resources to successfully execute the task in question (whether working on a
+product/service or developing a strategic plan), they will most likely dwell on the formidable aspectsof the required performance, exert insufficient effort, and, as a result, not do well
+or even fail on the task. This personal confidence, or more precisely self-efficacy, plays a
+pivotal role in SCT. In his recent, comprehensivebook on self-efficacy and personal control,
+Bandura (1991) provides an in-depth conceptual analysis and empirical support of how selfefficacy operatesin concert with sociocognitive determinants representedby SCT in determining human motivation, adaptation,and change. We believe that the conceptual richness
+of SCT and the implications that self-efficacy seemsto have for human performance in organizations can make a value-added contribution to work motivation theory and practice.
+
+The Explanatory Power of SCT
+The widely recognized cognitively based work motivation theories closely associatedwith
+needs, equity, or expectancies concentrate on a process-oriented analysis of the factors influencing the relationship between human action and environmental outcomes. However,
+they generally do not specify the underlying mechanisms that mediate or can affect the
+strength of the proposed relationships. SCT, on the other hand, specifies factors by which human action is determined, and defines several basic human capabilities through which the
+cognitive motivational processesoperate to initiate, execute, and maintain work behavior.
+In particular, according to SCI people are neither spontaneouspersonal self-agents nor,
+as reinforcement theory would suggest,automatic transmitters of environmental influences.
+SCT explains behavior in organizations in terms of the reciprocal causation among the person (unique personal characteristics such as ability), the environment (consequencesfrom
+the organizational environment such as pay for performance), and the behavior itself (previous successful or unsuccessful performances). As shown in F'igure 1, because of these
+combined, reciprocal influences, under SCT organizational participants would at the same
+
+128
+
+Part One
+
+FIGURE 1
+
+InitialConsideretions
+
+Triadic Influence in Social Cognitive Theory
+
+time be both products and producers of their motivation, their respective environments, and
+their behaviors.
+In SCT, the triangular influences among the person, environment, and behavior do not
+necessarily imply symmetry in the strength of the bidirectional influences. For example, although all three factors may be present at apafiicular time in a particular organizational environment, that does not mean that they all exert equal and simultaneous influence on the
+employee. This implies that the strength of mutual influences between any of the two factors
+is not fixed in reciprocal causation.Thus, it is critically important to recognize that the relative influences exerted by one, two, or three interacting factors on motivated behavior will
+vary depending on different activities, different individuals, and different circumstances.
+Bandura (1986) provides the following simple, yet illustrative example:
+If peopleare droppedinto deepwater,they will all promptly swim howeveruniquely varied
+they might be in their cognitive or behavioralrepertoires.. . . On the other hand,if a person
+plays piano for his/herown enjoyment,suchbehavioris self-regulatedover a long period of
+time by its sensoryeffects,and cognitive and environmentalinfluencesare involved in this
+processby a lesserextent.. . . Finally,in decidingwhatbook to checkfrom the library,personal
+preferences
+hold the sway.(p.24)
+
+The BasicHuman CapabilitiesAccordingto SCT
+SCT explainsthe natureof bidirectionalreciprocalinfluencesthroughfive basichumancaand(5)
+pabilities:(1) symbolizing,(2) forethought,(3) vicariouslearning,(4) self-regulation,
+to
+in
+order
+themselves
+to
+self-influence
+these
+basic
+capabilities
+use
+Employees
+self-reflection.
+initiate,regulate,and sustaintheir own behavior.Figure 2 providesa descriptivesummary.
+Thesefive capabilitieshave strongexplanatorypowersparticularlyin helping us understand
+circumstances.
+why employeesmay be motivateddifferently in the sameorganizatronal
+
+Chapter 2
+
+FIGURE 2
+
+ConcepnurlApproaches
+toMotiuationatWork
+
+129
+
+Basic Human CapabilitiesAccording to Social Cognitive Theory
+
+Employees
+self-control
+theiractionsby
+settinginternal
+standards
+(aspired
+performance
+level)and by
+evaluating
+the
+discrepancy
+betweenthe
+standardand
+the
+performance
+(wheredo I
+stand)in order
+to improveit.
+
+Sy mb olizin g Cap ab ility
+SCT posits that humans have an extraordinary symbolizing capability that allows them to
+adapt successfully to their respective environments. By using symbols (e.g., aflag), people
+process and transform visual experiencesinto internal cognitive models that in turn serve as
+guides for future actions (e.g., patriotic behaviors). Through the symbolizing activity, people
+also ascribe meaning, form, and duration to their past experiences.
+F ore tho ught Capabilrty
+Bandura argues that people not only react to their environments but also self-regulate their
+behaviors by forethought. In particular, people plan coursesof action for the near future, anticipate the likely consequencesof their future actions, and set goals for themselves. Thus,
+through forethought, employees initiate and guide their actions in an anticipatory fashion. In
+other words, the future acquires causal properties by being representedcognitively by forethought exercised in the present.
+Vic arious Le arning Capability
+According to SCT, almost all forms of learning can occur vicariously by observing the behavior of others and the subsequentconsequencesof their behaviors. Employees' capacity to
+leam by observation enables them to obtain and accumulate rules for initiating and controlling
+different behavioral patterns without having to acquire them gradually by risky trial and elror.
+The acquisition of knowledge vicariously is critical for both learning and human performance.
+Since behavioral trials and errors can (and often do) result in costly consequences,chancesfor
+effective performance would be seriously diminished if employees were able to learn only
+from the consequencesof their actions. The more complex the action, and the more costly and
+
+130
+
+Part One
+
+Initial Considerations
+
+hazardous(in both the safety and political sense)the possible mistakes, the stronger must be
+the reliance on vicarious learning from competent models.
+Self- r egulat ory Capab ility
+Human self-regulatory capability plays the central role in SCT, as it does in other prominent
+theories of self-regulation and motivation (Hollenbeck, 1989; Locke & Latham, 1990). According to the principle of self-regulation, people do not behave to suit the preferences or
+demandsof others. Much of work behavior is initiated and regulatedby internal self-set standards and self-evaluativereactions to exerted behaviors. After personal standardshave been
+set, incongruity between a behavior and the standard against which it is measured activates
+self-evaluative reactions, which, in turn, serve to further influence subsequentaction. Even
+if there is no incongruity between self-standardsand presentperformance, according to SCT
+people may set higher standardsfor themselves and activate future behaviors to satisfy the
+new standards (Bandura, 1997). For example, the successof empowerment programs depends on such self-regulation capabilities.
+Self- r efle ctiv e Cap ability
+The self-reflective capability in SCT can be defined as human self-reflective consciousness.
+Self-reflective consciousness enables people to think and analyze thet experiences and
+thought processes.By reflecting on their different personal experiences,managers and employees can generate specific knowledge about their environment and about themselves.
+Among the types of knowledge that people can derive from self-reflection, according to
+SCT, none is more central to human agency than people's judgment of their capabilities to
+deal effectively with specific environmental realities. These types of perceptions are referred
+to as self-efficacy beliefs. We would argue that self-efficacy has formidable predictive powers and thus carries a number of important implications for motivating human performance
+in today' s organrzations.
+
+COMPONENT
+OF SCT
+THESELF.EFFICACY
+Self-efficacy refers to an individual's belief (confidence) about his or her capabilities to execute a specific task within a given context. As a work motivation process, self-efficacy operates as follows. Before organizational participants select their choices and initiate their
+effort, they tend to evaluate and integrate information about their perceived capabilities.
+Self-efficacy determines whether an employee's work behavior will be initiated, how much
+effort will be expended, and how long that effort will be sustained,especially in light of disconfirming evidence. Critical to work performance is that employees with high self-efficacy
+will activate sufficient effort that, if well executed, produces successful outcomes. On the
+other hand, employees with low self-efficacy are likely to ceasetheir efforts prematurely and
+fail on the task.
+
+Self-efficacyand Work Performance
+Self-efficacy has a relatively establishedbody of research showing its positive impact on
+work-related performance.For example, our 1998 meta-analysisincluded 114 studies and
+
+Chapter 2
+
+ConceptualApproaches
+toMotiwationatWork
+
+131
+
+2I,616 subjects.The resultsindicateda significant .38 weighted averagecoruelationbetween
+self-efficacy and work-related performance. This averagecoffelation explains 14.447oof the
+variance,but when converted to the commonly used effect size statistic used in meta-analysis,
+the transformed value representsa287o averageincreasein performance due to self-efficacy.
+Put into Grissom's (1994) index of practical utility, there ts J27o probability that employees
+with high self-efficacy for a specific task will have better performance than those with low
+self-efficacy. By comparison, these results for self-efficacy represent a greater average gain
+in performance than the results from meta-analysesof popular work motivation techniques
+such as goal setting (13.6Vo,see Wood, Mento, & Locke, l98l), feedback (13.6%, see
+Kluger & DeNisi , 7996), or our own O.B. Mod. approach (177a,see Stajkovic & Luthans,
+1997). Based on meta-analytic researchto date, self-efficacy also appearsto be a better predictor of work performancethan eitherjob satisfaction(e.g.,Judge,Thoresen,Bono, & Patton, 2001), or Big Five personalitytraits (e.g.,Barrick & Mount, 1991).
+
+Self-efficacyand Work Motivation
+Besidesits positive impact on work performance,self-efficacy also makes a contribution to
+work motivation. SCT acknowledgesthat employeesbasetheir actionson both intrinsic (desires) and extrinsic (contingent consequencesfrom the environment) motivation. However,
+in addition, SCT posits that employees also act on their self-efficacy beliefs of how well they
+can perform the behaviorsnecessaryto succeed.Thus, under SCI employee behavior cannot be fully predicted without considering his/her self-efficacy. For example, employees
+with low self-efficacy doubt that they can do what is necessaryto succeed.By the same token, a senseof high personalefficacy may help sustainmotivated efforts, even in light of adverse conditions and uncertain outcomes.At the same time, it is unlikely that employees
+would act basedon high self-efficacy beliefs if they didn't expect certain incentive motivators, such as recognition or extra pay, from those behaviors.In other words, employee selfefficacy can be predictive, but it does not negatethe importance of motivation to pursue the
+initial course of action.
+
+Self-efficacyDimensions
+As shown in Figure 3, three dimensions of self-efficacy seem to have particular importance
+for human performance in organizations.First is the magnitude of self-efficacy beliefs. This
+FIGURE 3
+
+Dimensionsof Self-efficacv
+
+Magnitude
+
+Strength
+
+Generality
+
+What levelof taskdifficultyand
+(e.9.,low, moderate,
+complexity
+h i g h )a n e mp l o y ebee l i eves
+he or
+s h ec a na c c o mp l i s L
+h evel
+.
+s
+of
+taskdifficultyand complexity
+represent
+differentdegreesof
+c h a l l e n gfo
+e r s u c c e s sful
+task
+p e rfo rma n c e .
+
+H ow certai nan empl oyee
+is
+aboutperformingat the levelof
+taskdifficultyand complexity
+i ndi cated
+by magni tude
+of sel fefficacy.
+Thehigherthe strength
+of self-efficacy,
+the greaterthe
+l i kel i hood
+of successful
+performance.
+
+Self-efficacy
+is generalized
+across
+similaractivitydomains.Theycan
+varyon modalities
+on which
+(behavioral,
+abilityis expressed
+cognitive),characteristics
+of the
+situations,
+or peoplereceiving
+the behavi ors.
+
+132 Part One
+
+Initial Considerations
+
+refers to the level of task difficulty that a person believes he or she is capable of executing.
+Second is the strength of self-efficacy. This refers to whether the judgment about magnitude
+is strong (perseverancein coping efforts despite disconfirming experiences),or weak (easily
+questioned in the face of difficulty). Third, self-efficacy may vary in generality. Some experiences create efficacy beliefs specific to a particular task (e.g., computer programming).
+Other experiences may influence more generahzableself-efficacy beliefs potentially spanning
+acrossdomain-related tasks and/or situations (e.g., in-house and external sales;being able to
+get things organized).Although the generality dimension was introduced by Bandura at the
+same time as self-efficacy strength and magnitude, to date this self-efficacy dimension has not
+generatedmuch theory development and/or empirical research.
+
+IS DISTINCTIVE
+FROMOTHER
+HOW SELF.EFFICACY
+BEHAVIORCONCEPTS
+ORGANIZATIONAL
+At first glance, self-efficacy appearssimilar to self-esteem,expectancy,and locus of control
+concepts of personality and motivation. However, to understand conceptual independence
+and apply self-efficacy effectively, we need to understand the sometimes subtle, but important, differences.
+
+Self-esteem
+One of the traditional constructs most commonly equated with self-efficacy is self-esteem.
+Although conceptually similar, self-esteemand self-efficacy are quite different. The first difference is the domain that self-esteem and self-efficacy cover. Self-esteem is conceptually
+portrayed as a global constructthat representsa person's self-evaluations across a wide variety of different situations. In contrast, self-efficacy is the individual's belief about a taskand-context-specific capability. Second, self-esteemtends to be more stable, almost traitlike,
+whereas self-efficacy is statelike, a dynamic construct which changes over time as new information and task experiences are obtained. Finally, self-esteem is based on an introspective reflective evaluation of self (e.g., feelings of self-worth) that is usually derived from
+perceptions about several personal characteristics (intelligence, integrity, etc.). By contrast,
+some people might have high self-efficacy for some tasks (e.g., technically based problem
+solving) and, at the same time, very low self-efficacy about other tasks (e.g.,writing technical reports). However, neither of these self-efficacy beliefs is necessarily likely to produce
+any changesin one's overall self-esteem.
+
+Motivational Expectancies
+Self-efficacy may also appear similar to both effort-performance expectancy (called E1 in the
+motivational literature) and the performance-outcome expectancy (82).Both El and selfefficacy concepts would posit that successful perfonnance depends on employee effort. Selfefficacy beliefs are similar to the employee El perceptions of the relationship between the
+degree of effort put forth and the level of performance. However, there are also several differences.First, compared to El, self-efficacy beliefs are based on a broader domain of perceptions such as personal ability, skills, knowledge, previous task experience,and complexity of
+the task to be performed, as well as on the states of psychomotor reactions (e.9., positive/
+
+Chapter 2
+
+ConceptualApproaches
+toMotiuationatWork
+
+133
+
+negative emotions, stress,fatigue). Second, self-efficacy includes generative capability (e.g.,
+a salespersonmay generalrzeself-efficacy for selling to a closely related activity such as training new staff in effective salestechniques).Third, self-efficacy distinguishesbetween several
+construct and measurementdimensions (e.g., strength,magnitude, generality, composite).
+There is also a difference between self-efficacy and E2. Specifically, self-efficacy andE2
+(performance-outcome expectancy) refer to different parts and sequencing of the motivational continuum. For example, Bandura distinguished self-efficacy andB2 by arguing that
+an efficacy pertains to a belief of one's ability to execute a certain behavior pattern (e.g., I
+believe I can do this task), whereas an outcome expectation (E2) tends to be a judgment of
+the likely consequencessuch behavior will produce (e.g., I believe what I do will produce
+desired outcomes). Thus, the employee's assessmentof self-efficacy usually comes first before any behavior-outcome expectations (E2) are made.
+
+Locusof Control
+Locus of control, as a widely recognized variable in the theory of personality and motivation, is also similar, but importantly different from self-efficacy. The locus of control framework is traditionally used to explain whether outcomes of an individual's behaviors are
+controlled internally or externally. According to this conceptual framework, people learn
+generalizedexpectanciesto view events either as being directly determined by their own behavior (e.g., ability or effort) or as being beyond their control (e.g., luck or task difficulty).
+In other words, individuals develop expectanciesabout the locus of control.
+People with an internal locus of control believe they are in control of their own fate, feel that
+their actions have an impact on the environment, and assign personal responsibilities for the
+consequencesof their own behavior. In contrast, individuals with an external locus of control
+take the consequencesof their lives as the result of destiny, luck, chance, or any other random
+factor. According to externals, little can be done to affect their own surroundings. Bandura has
+argued that LOC is primarily concerned with causal beliefs about action-outcome contingencies. Self-efficacy, on the other hand, refers to an individual's beliefs about his or her abilities
+to successfullyexecute a specific task.
+
+Self-efficacyvs. GeneralSelf-efficacy
+Self-efficacy viewed as a traitlike, dispositional personal characteristic is labeled general selfefficacy. This generalized conception has recently been used as another form of self-efficacy
+in empirical researchon work motivation (e.g., Eden &Zuk, 1995). At first glance, the two
+views of efficacy may appearsimilar and equivalent. However, according to Bandura's theory building and considerableempirical research,self-efficacy and general self-efficacy representvery different constructs,both conceptually and psychometrically (e.g., measurement).
+In particular, Bandura portrays self-efficacy as a task- and situation- (domain) specific
+cognition (specific self-efficacy). In contrast, general self-efficacy is detined as a generalized trait representing one's overall estimate of his/her ability to perform a wide variety of
+jobs under different conditions. Thus, whereas self-efficacy represents a dynamic motivational belief system that may vary depending on unique properties of each task and work situation, general self-efficacy represents an "enduring" personal trait that (supposedly)
+generalizesand successfully applies to a wide range of different situations.
+
+134
+
+Part One
+
+InitialConsiderations
+
+Differences in the measurementof the two variables include questionablerelevanceof general self-efficacy scalesto a specific task or job typically explored by specific self-efficacy.For
+example, whereas measuresof self-efficacy relate to specific task demands (see detailed description in the next section and Figure 4), atypical general self-efficacy item is exemplified
+by a global statementsuch as "I do not seemcapableof dealing with most problems that come
+up irrlife." Obviously, these types of general self-efficacy items/measuresfall short in terms of
+specifying what exactly they relate to, which brings up the question of their construct validity.
+However, researchon developing generalefficacy scalescontinues(e.g., Chen, Gully, & Eden,
+2001), and in the future may make a relatively stronger contribution to work motivation.
+
+ENT
+M EASUREM
+FFICACY
+SELF-E
+Like any psychological construct, self-efficacy must be validly and reliably measuredto make
+a meaningful contribution to work motivation theory and research.In this regard, Bandura's
+conceptualization of the magnitude and strength of perceived self-efficacy provides a psychometrically sound measure.Magnitude of self-efficacy measuresthe level of task difficulty
+that aperson believes he or she is capable of executing. Strength of self-efficacy indicates
+whether the individual's belief about magnitude is strong and likely to produce perseverance
+in coping efforts, or weak and easily questioned in the face of difficulty. As shown in Figure
+4, the design of the self-efficacy scale usually consists of two columns. Column A measures
+the magnitude of self-efficacy; the total number of Yes's, each colresponding to the particular
+level of task difficulty. Column B measures self-efficacy strength; the total summary of
+certainty ratings for each magnitude level indicated by a Yes. This definition of self-efficacy
+
+FIGURE 4 Self-efficacyScale
+Please
+usethe scalebelowto indicate:
+
+(a) Whetheryou belieuethatyou are capableor not(yes,no) of performingthis taskat eachof the levels
+usecolumnA for theseresponses.
+outlinedin thisscale.Please
+0% would indicateno
+Forexample,
+you are (0-100%)abouteachyes/noresponse.
+(b) How certain
+B for theseresponses'
+use
+column
+Please
+certainty.
+absolute
+indicate
+would
+100%
+whereas
+chance,
+
+Number of tasks in a given amount of time
+F o r e xamP l e:
+befieve c a nd o 2 . . . i n,say,1 mi nute
+believe c a nd o 4 . . . i n 1 mi nute
+believe c a n d o 6 ... i n1mi nute
+beti€ve c a n d o 8 ... i n1mi nute
+believe c a nd o 1 0 . . , i n 1 mi nute
+believe c a nd o 1 2 . . . i n 1 mi nute
+believe c a n d o 1 4 ... i n1mi nute
+.believeI c a nd o 1 6 . . . i n 1 mi nute
+belieVeI c a nd o 1 8 . . , i n 1 mi nute
+believeI c a nd o 2 0 . . . i n 1 mi nute
+
+ColumnA
+CAN DO
+(Y : yes)
+(N : no)
+
+Column B
+CERTAINTY
+(o- 100%)
+
+Ch a pte r 2
+
+Concepuml Approachesto Motiuation at Work
+
+13 5
+
+strength coincides with what is labeled as the Composite 1 measureof self-efficacy (i.e., the
+strengthpercentagesfor each "Yes" are summed to get the self-efficacy score).Empirical researchhas generally validated this measureof self-efficacy and demonstratedit to be more reliable than other measurementapproaches(e.g.,Lee & Bobko, 1994).
+
+DETERMINANTS
+OF SELF-EFFICACY
+Besides the theoretical underpinnings and measurement of self-efficacy, Bandura has identified (see Figure 5) the four major categoriesof experiencesand sourcesof information that
+determine self-efficacy beliefs. Although all of these determinants may influence efficacy
+expectations, it is critically important to recognize that the actual impact of any relevant information on self-efficacy beliefs will depend on how it is cognitively processed.Thus, selfefficacy expectations are, in fact, formed on the basis of subjective perceptions of personal
+and situational factors, rather than on the direct impact of "objective" reality.
+
+EnactiveMastery Experience
+Researchhas indicated that succeedingon a challenging task (e.9., successfulenactive mastery experience) provides the strongestinformation for the development of self-efficacy beliefs. This is becauseenactive mastery is the only antecedentof self-efficacy that provides
+direct performance information for the formation of stable and accurate efficacy beliefs. This
+does not mean, however, that changesin self-efficacy will occur as a direct result of performance accomplishment.Rather, self-efficacy formation will depend on how employeespsychologically process the information that the previous performance generated. In other words, it
+is not performance per se that causeschangesin self-efficacy but rather what the individual
+personally makes of diagnostic information resulting from that perfonnance (including weighing of both ability and nonability factors relative to performance success).As a result, the same
+performance attainment can produce varying changes in the level of subsequentself-efficacy.
+
+FIGURE 5
+
+Determinants of Self-efficacy
+
+Physiological
+and
+psychological
+arousal
+
+Chapter 2
+
+Concepnnl ApproachestoMotiuation atWork
+
+137
+
+able in an organizational context, self-efficacy assessmentsare also influenced by vicarious
+learning, or more commonly called modeling, which occurs by observing competent and relevant others perform a similar task and be reinforced for it. The greater the perceived similarity between the model and the observer in terms of personal characteristicsrelevant to the
+task performance, the greater the model's influence on the observer's learning and subsequent self-efficacy. Employees may turn to competent colleagues or mentors for knowledge
+of the task, needed skills, or effective strategies for successful task performance. Learning
+from modeled accomplishments is especially important when employees have little prior
+enactive experiences (e.g., undertaking a novel task) on which to base their assessmentsof
+self-efficacy.
+Modeling can also be practically used as a training approach to enhanceemployees' selfefficacy. In this mode of influence, managerscan develop effective strategiesfor coping with
+cognitive and behavioral intricacies of a particular job, then convey these strategiesto employees and, ultimately, use them in an efficacy-enhancing training program (see also Bandura, 2000). This modeling program for developing employee self-efficacy would include
+clear specification of the following components:
+1. The task product (what is expected as a result of this task).
+2. Number and nature of behavioral acts (what activities are involved, and how many activities are needed).
+3. Sourcesof information cues (where necessaryinformation for the performance of the task
+could be found, e.g., price list for selling products).
+4. Optimal sequencingrequirements among behavioral activities (in what sequencethe acts
+need to be performed for optimal performance, e.g., greeting the customer first and then
+asking what they need).
+5. Nature and frequency of temporal changes in the sequencing requirements among behavioral activities (determining whether sequencingamong behavioral acts changes,and
+if it does, how it changesfor different circumstances,e.g., changesin performance acts of
+an air-traffic controller for different weather conditions).
+6. Necessary performance means (e.g., what technology is needed for successful
+performance).
+7. Applicable utility of the available performance means (determining whether available
+means are appropriate for successfulperformance).
+8. Developing and evaluating alternative courses of action and information processing.
+Each of these stepsis first explained and enactedby the model (trainer, coach, colleague,
+or mentor), whose performance is then replicated by the traineesin a gradual fashion step by
+step. The model follows the perfonnance of the trainees and provides positive feedback.
+Mastering a modeled performance in terms of skills and task strategiesenhancesemployees'
+beliefs about their capabilities to successfully execute the job in the future. In essence,the
+training provides an enacted mastery experience, which positively influences subsequent
+self-efficacy.
+
+138 Part One
+
+Initial Consideratrons
+
+Verbal Persuasion
+Verbal persuasion by someone the employee trusts and views as competent (as it relates to
+the job to be performed) serves as another means of strengthening self-efficacy. The purpose
+of self-efficacy enhancement by verbal persuasion does not necessarily involve increasing
+the level of skill and ability, but rather focusing on the cognitive appraisal of an individual's
+self-efficacy in terms of enhancing the beliefs as to what employees can do with what they
+already have. However, for this mode of increasing self-efficacy to work, employees should
+already have some reasonto believe that they have (or can develop) the ability to accomplish
+the task. Expressing a faith in one's ability is particularly relevant in times when employees
+have performance difficulties and may question their personal efficaciousness.
+
+Arousal
+Physiologicaland Psychological
+The fourth major source of self-efficacy is the state of physiological and/or psychological/
+emotional arousal. This source of efficacy information is important becausepeople tend to
+perceive physiological and/or psychologicaU emotional activations as signs of vulnerability
+and dysfunction. Since, for example, high levels of stress at work are likely to impair performance, employees may be more inclined to feel efficacious for the successful performance when not preoccupied by fatigue andlor emotional agitation. However, employees
+differ in their pronenessto get inhibited by physical or emotional distractions. For example,
+the more employees are involved in a certain activity, the less they focus on and notice aversive stressful distractions. In contrast, self-directed rather than task-directed attention brings
+to the fore physical and/or psychological agitation. Finally, employees with already high efficacy beliefs may view psychological arousal as an energizing factor whereas low-efficacy
+people tend to view it as a performance debilitator. Moreover, while being physically fit and
+healthy may not contribute much to one's self-efficacy, being exhaustedor ill can be devastating to self-efficacy.
+
+TO COLLECTIVE
+EFFICACY
+FROMSELF.EFFICACY
+To reflect the increasing importance of work teams in today's organizations, attention has recently been given to determining how to effectively motivate employees working in groups.
+As a part of this trend, Bandura has extended social cognitive theory from the focus on individual level of analysis and self-efficacy to the group level of analysis and corresponding
+construct of collective efficacy. Collective efficacy is defined as a group's sharedbelief in its
+joint capabilities to perform coursesof action required to successfully achieve a certain level
+of performance(Bandura, 1997; Stajkovic &Leq2001).
+
+ConceptualNature of CollectiveEfficacy
+According to SCT, collective efficacy has the same antecedentsas self-efficacy, operates
+through similar processes,and has basically the same correlates and consequences.In fact,
+collective efficacy is rooted in self-efficacy since, as Bandura(1982) puts it, "inveterate selfdoubters are not easily forged into a collectively efficacious force" (p. 143). This is because
+efficacy beliefs of individuals are not detachedfrom the group in which they function, nor is
+the group's efficacy independent of the efficacy of the individuals comprising the group. In
+other words, it is as hard to individually estimate collective efficacy without considering
+
+Chapter 2
+
+ConceptualApproaches
+to MotiuationatWork
+
+139
+
+relevant group processes(e.9., how well do we get along) as it is to provide an assessment
+of collective efficacy without considering how well each member can execute hisftrer roles.
+SCT proposes collective efficacy as a critical factor in determining group motivation and
+performance. This is because,on the one hand, group successfulperformance is largely the
+product of the cooperative and coordinative dynamics of group members, as well as of their
+sharedknowledge, skills, and abilities. On the other hand, according to SCT, collective efficacy determines what groups choose to do, how much effort they put into it, and how long
+they sustain their effort in the face of adversecircumstances.Thus, regardlessof how skilled
+group members may be as individuals, if they do not believe that they can work well together as a unit, they are likely to expend insufficient effort, give up easily in the face of obstacles,and ultimately, perform poorly in a collective endeavor.
+
+Motivational Power of CollectiveEfficacy
+Research over the years has sent mixed signals regarding the effectiveness of groups and
+teams. While group-level research has largely supported the positive relationship between
+groups and employee affect, only mixed results have been found for the impact of groups on
+work performance. In contrast, research on collective efficacy has importantly shown its
+strong relationship to work performance. In particular, a just completed meta-analysis(2,687
+groups) by Stajkovic and Lee (2001) found an averagecorrelation of .45 between collective
+efficacy and group performance. This averagecorrelations accountsfor 20Voof the variance,
+but when transformed to the effect size statistic, it represents a 34Voimprovement in performance. Using the same probability of successas we showed for self-efficacy, this practically suggests there is a 76Vo probability that a high collective efficacy group will
+outperform a low collective efficacy group. These findings, in addition to previous empirical evidence (e.g., Gibson, 1999), suggestthat collective efficacy may indeed be a critically
+important motivational construct in predicting group performance.
+
+C O N C L USION
+We have offered social cognitive theory and primarily self-efficacy, but also collective efficacy, as a value-added contribution to understanding work motivation and its effective application. Specifically, SCT and both self-efficacy and collective efficacy were shown to
+have both explanatory and predictive powers and to be quite different from related psychological constructs such as self-esteem,expectancies(both El and E2), and locus of control.
+Most importantly, not only can SCT provide comprehensive understanding of work motivation, but self-efficacy and collective efficacy, with their clearly demonstrated strong relationships (at different levels of analysis) with work-related task performance, seem to have
+considerable implications for improving human performance in organizations.
+In particular, the ayeragecorrelations between self-efticacy and performance of .38 and
+the relationship of .45 between collective efficacy and performance are based on considerable evidence. In particular, over two decades, 32,236 (21,616 + 10,620) participants,
+2,687 groups, and two meta-analyses,we have cumulative evidence indicating that efficacy
+beliefs are an effective predictor of performance at both the individual and group levels.
+These findings for both self and collective efficacy-what could be called "the efficacy
+fs1ss"-add empirical support for the important implications that social cognitive theory
+and efficacy have for the theory and practice of work motivation.
+
+t4O
+
+PartOne
+
+InicialConsiderations
+
+References
+Bandura,A. (19S6).Sacialfoundations of thought and action:
+
+Klugeq A. N., & DeNisi, A. (1996). The effects of feedback
+
+A. (1997). Self-efficacy: The exercise of control. New
+l:"jy,
+York: Freeman& Company.
+
+psychotogical BLiltetin, lig, ZS+-Z'+.
+
+Bandura, A. (2000). Cultivate self-efficacy for personal and
+crganizational effectiveness. In Locke, E. A. {Ed.), The
+Btockwell handbook of principles of organizarionalbehavion
+pp. 120-136. Oxford, U.K.: Blackwell.
+
+iilf .T,
+ffil"::i
+illi?l;f,lllJ
+J:
+
+Lee, C., & Bobko, F. (1q94). Self-efficacy beliefs: Comparison
+of five measures.Journal ofApptied Psychology, 79, 364-369.
+Luthans, F. (2002, in press). Positive organizationalbehavior
+(POB), Academy of Monagement Execu{ive.
+
+Barrick, M. R., & Mount. M. K. (1991).The big five
+personalitydimensionsand job performance:A meta-analysis.
+Personnel Psychology, 44, l-26.
+
+Pfeffer, J. (1995). Competitiveadvanragethroughpeople:
+Unleashingthe power of the workforce. Boston: Harvard
+B usi nessS choolP ress.
+
+Chen, G., Gully, S. M., & Eden, D. (2001). Validation of a New
+General Self-efficacy Scale.Organizational Research
+Methodotagy,4,62-83.
+
+Stajkovic, A. D,, & Luthans, F. (1998a).Self-efficacy and
+work-related performance: A meta-analysis. Psycfrological
+Bulletin, 124,24A-261.
+
+Eden, D., &Zuk,Y. (1995). Seasicknessas a self-fulfilling
+prophecy:Raisingself-efficacyto boostperformanceat sea.
+Joumal of Apptied Psychology.S0. 628-635.
+
+Stajkovic, A. D., & Luthans,F. (1998b). Social cognitive
+theory and self-efficacy: Going beyond traditional motivational
+and trehavioral approaches.O rgani zati onal Dy nami cs, 76(4),
+62-74.
+
+Gibson, C. B. (1999). Do they do what they believe they can?
+Group efficacy and group effectiveness across tasks and
+culnrres. Academy of Management Journal, 42, 138-152.
+Srisscm, R. J. (1994). Probabiliry oj tlrl sugelol oulclme ol^
+one treatment over another. Journal of Applied Psychology, 79,
+314*315.
+Judge,T. A., Thoresen,C. J., Bono, J. E., & Patton,G. K.
+(2ml). The job satisfaction-job performance relationship: A
+qualitative and quantitative review, Psychological Bulletin,
+1 2 7 ,3 7 F ;0 7 .
+
+Wood, R. 8., Mento, A. J., & Locke, E. A. (1987). Task
+complexity as a moderator of goal effects: A meta-analysis.
+Journal of AppLiedPsychotogy.
+72.416425.
+of
+Wood.R . E ., & B andura.A . (1989).Impac tof c onc epti ons
+ability on self-regulatory mechanisms and complex decision
+making. Journal of Personality und SocialPsychology, 56,
+407415.
+
+The author has requested enhancement of the downloaded file. All in-text references underlined in blue are linked to publications on ResearchGate.
+
+

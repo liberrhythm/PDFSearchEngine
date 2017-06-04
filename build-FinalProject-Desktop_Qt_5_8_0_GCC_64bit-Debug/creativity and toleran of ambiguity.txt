@@ -1,0 +1,440 @@
+Creativity and tolerance of ambiguity: an empirical
+study
+Franck Zenasni, Maud Besançon, Todd Lubart
+
+To cite this version:
+Franck Zenasni, Maud Besançon, Todd Lubart. Creativity and tolerance of ambiguity: an
+empirical study. Journal of Creative Behavior, Creative Education Foundation, 2008, 42 (1),
+pp.61-72.
+
+HAL Id: hal-01392571
+https://hal-univ-paris10.archives-ouvertes.fr/hal-01392571
+Submitted on 9 Nov 2016
+
+HAL is a multi-disciplinary open access
+archive for the deposit and dissemination of scientific research documents, whether they are published or not. The documents may come from
+teaching and research institutions in France or
+abroad, or from public or private research centers.
+
+L’archive ouverte pluridisciplinaire HAL, est
+destinée au dépôt et à la diffusion de documents
+scientifiques de niveau recherche, publiés ou non,
+émanant des établissements d’enseignement et de
+recherche français ou étrangers, des laboratoires
+publics ou privés.
+
+A relation between tolerance of ambiguity and creativity has often been
+proposed but empirical studies are rare. Tolerance/intolerance of ambiguity is
+generally considered to be a personality trait that corresponds to the way in which
+an individual tends to perceive and deal with ambiguous situations or stimuli
+(Furnham, 1994; Furnham & Avison, 1997; Furnham & Ribchester, 1995;
+Stoycheva, 1998, 2003). Individuals who are tolerant of ambiguity like ambiguous situations, or at least can live with them for some time (MacDonald, 1970).
+People who are intolerant of ambiguity feel constrained, anxious or tense in
+ambiguous situations. Vernon (1970) considered tolerance of ambiguity to be a
+sine qua non factor of creativity. Vernon (1970) explained that tolerance of
+ambiguity favors creative thinking and behaviors because it enables individuals
+to not be satisfied by partial or non-optimal solutions to complex problems. People
+who tolerate ambiguity may be able to work effectively on a larger set of stimuli
+or situations, including ambiguous ones, whereas intolerant individuals willavoid
+or quickly stop treating such information. In fact, tolerance of ambiguity allows
+individuals to optimize creative potential, which is not blocked due to unsolved
+ambiguity.
+Other authors have suggested that the more individuals tolerate ambiguity,
+the more they are creative (Barron & Harrington, 1981; Golann, 1963; Sternberg
+& Lubart, 1995; Urban, 2003). This hypothesis is based on the idea that situations requiring creative thinking often involve ambiguity. The more a person can
+tolerate ambiguous objects, the more the person can deal with them. Thus, tolerance of ambiguity willallow individuals to continue to grapple with complex problems, to remain open, and increase the probability of finding a novel solution. For
+Stoycheva (1998, 2003), tolerance of ambiguity is linked to creativity because
+ambiguity-tolerant individuals are able to accept feelings of anxiety and psychological discomfort naturally provoked by ambiguity associated with new, difficult
+situations. Additionally based on Urban's (2003) components model of creativity, tolerance of ambiguity is believed to contribute to the creative process
+because it empowers the intrinsically motivated exploration of novel, unusual or
+complex stimuli.
+In spite of these theoretical proposals, empirical research has rarely tested the
+relations between tolerance for ambiguity and creativity. In 1990, Tegano, using
+the Tolerance of Ambiguity Scale (AT-20,Mac Donald, 1970) observed a positive
+correlation (r = .31, p < .05) between early educators' tolerance of ambiguity and
+their MBTI creative style score. Furnham and Avison (1997) observed a significant link between tolerance of ambiguity and preference for surrealistic paintings. These results suggest a positive relation between tolerance of ambiguity
+and some aspects of creative behaviors: the Myers-Briggs Inventory evaluates
+some characteristics linked to creativity but not creative production itself, and the
+preference for surrealistic paintings is only a partial aspect of creative attitudes.
+These studies are demonstrative but include specific measurements more related
+
+EMPIRICAL STUDY
+METHOD
+Participants
+
+Sixty-eight French volunteer participants consisting of 34 pairs of adolescents
+and their parents, took part in this study. Adolescents ranged in age from 11to 17
+(mean age = 15,85; SD = 1.61). There were 14 girls and 20 boys. Parents ranged
+in age from 39 to 61 (mean age = 48,31; SD = 4.71). There were 28 mothers and
+6 fathers. All participants were volunteers, recruited by announcements made by
+university students to families with secondary school students. Adolescents had
+to indicate which parent spent the most time and knew him or her best. Then, this
+parent was requested to participate. Among these 34 dyads, 17 were mixed (14
+mother/son and 3 father/daughter) and 17were non mixed (14 mother/daughter
+and 3 father/son).
+The study was described as focusing on relations between personality and
+problem solving. Participants provided informed consent, did not receive any
+payment and were debriefed fully after completing the session.
+
+Measures of creativity
+
+In order to examine distinct facets of creativity we used three independent
+measures of creativity: a divergent thinking task, a story-writing task and selfevaluation of creative attitudes and behavior. Because these tasks already vary in
+terms of type of measurements, we decided to focus on the same type of production (Le. verbal) in order to limit differences between tasks.
+The divergent thinking task was based on the generation of ideas concerning
+an ambiguous stimulus. This stimulus was selected during a pre-test in which
+68 adults judged the ambiguity of a large set (n = 89) of stimuli (both imagesand verbal material). Participants used a five-point Likert scale (from 1 "not
+ambiguous" to 5 "very ambiguous") to evaluate the degree of ambiguity of each
+stimulus. There was good inter-judge agreement (a = .93 and mean r between
+judges = .29). The selected stimulus - an ambiguous text - showed a high level
+of ambiguity (mean = 4.06) and a relatively good degree of consensus between
+judges' ratings (SD = 1.09).
+For the divergent thinking task, participants had to "write as many titles as
+possible for the ambiguous text". They had to generate original titles different
+from those that others may produce. To measure performance, three scores were
+examined for each participant: (1) fluency (raw number of relevant responses),
+(2) originality, and (3) unicity (number of unique ideas generated). The evaluation of the originality score was based on the frequency of the occurrence of
+ideas in the whole sample. We used the additive method proposed by Runco,
+Okuda and Thurston (1987). In this technique, the relative frequency of each
+idea in a sample is computed, so that each response can be attributed a
+score between 1/N (unique ideas in a sample of N participants) and N/N = 1
+
+Stoycheva (1998, 2003), in order to evaluate adolescents' and parents'
+responses to uncertainty in life, constructed the Behaviour Scale of Tolerance/
+Intolerance of Ambiguity (BSTIA). To create this measure, a large sample of behavioral characteristics indicative or contraindicative of AT was compiled from
+the research literature. Fourteen items (7 referring to intolerance-of-ambiguity
+behaviors and 7 items referring to tolerance-of-ambiguity behaviors) which
+are thematically related were retained based on experts' evaluations and social
+desirability (Stoycheva, 1998, 2003). For this final questionnaire, subjects used
+a five-point Ukert scale (from 1 "behavior usually encouraged" to 5 "behavior
+rarely encouraged") for each iteml. Three scores are calculated: a tolerance score,
+an intolerance score and a global score. A high global score indicates that an
+individual is intolerant of ambiguity. Original data concerning this scale (Stoycheva
+1998) indicate that coefficients of internal consistency of these scales range from
+.62 to .74. Internal reliabilities of these scales for the present study will be presented in the results section.
+Procedure
+
+Participants provided informed written consent. Then, the divergent thinking
+task was completed during 10 minutes. After a 5-minute break, each participant
+completed the story-writing task. Fifteen minutes was allowed to write the story.
+Finally, participants completed the Adjective Check Ust, the Measurement of
+Ambiguity Tolerance, and then the Behavior Scale of Tolerance/Intolerance for
+Ambiguity. Note that for all participants a list of definitions for difficult words
+from the Adjective Check-Ust was available during completion of the task. Moreover, the investigators were available to answer questions during the testing procedure. Participants were allowed to complete the last questionnaires at their own
+pace. Debriefing information was provided
+RESULTS
+First, we provide analyses concerning the creativity measures. Descriptive
+analyses, links between distinct measures of creativity, and relations of between
+parents' and children's creativity are presented. Next, the same kinds of analyses
+are presented for tolerance of ambiguity measures. In a third section,
+relations between creativity and tolerance of ambiguity are examined. Because
+of multi testing, we may consider for all the statistical tests a stricter p value than
+usual (p = .01). For correlational analyses all effect sizes will be discussed
+according to Cohen's criteria (Cohen, 1988): r <10.1/: no relationship;
+[10.11- < 10.31]: weak relationship; [10.31- < 10.51]: moderate relationship;
+[ I 0.51- < 10.71]: strong relationship; [> 10.71]: very strong relationship.
+ANALYSIS OF CREATIVITY MEASURES
+Descriptive analyses of the different creativity scores are presented in Table 1.
+1
+
+Note that the ACL and BSTIA's scales have in common the term "original". Potential correlation between
+these two measurements
+could be particularly influenced by this one common term.
+
+Creative profile measured by the ACL does not correlate with divergent
+thinking and story writing scores (all p value> .05). As expected, the number of
+unique ideas is linked to fluency and originality (r = .75 and r = .56, p '" .001
+respectively). Principal Component Factor analysis indicates a 2 factor solution
+(Kaiser criterion) explaining 63.8% of the variance. After a Varimax rotation,
+the two factors accounted for 34.9% and 31% of variance respectively. Fluency
+and the ACL creative score loaded on the first factor. Mean originality and story
+writing creativity ratings loaded on the second factor. The number of unique ideas
+loaded on both factors. These results suggest that divergent thinking, ACL
+creative score and story writing represents partially distinct facets of creativity.
+To examine relations between creativity of parents and creativity of their children, we conducted correlational analyses. Results indicate that mean originality
+of parents is moderately linked to mean originality of their children (r = .46, p =
+.008)). Moreover, results indicate that the more the parents have a higher ACL
+creative score, the more their children also report one (r = .50, p = .004). The
+fluency, uniqueness of ideas, and story creativity of parents are not correlated
+with that of adolescents (r = .16, r = .06, r = .06 respectively). Also we calculated
+a canonical correlation to examine the overall relation between all creativity measures for parents and for adolescents. Results indicate a significant canonical
+correlation between the two sets of variables (Rc = .74, Chj2 (25) = 41.44 p '" .05).
+The more parents are creative, the more their children tend to be as well. The
+results of this canonical correlation should be considered tentative, however,
+because our sample is relatively small for this kind of analysis (reliable estimates
+require N = 20* the number of variables; Stevens, 1986).
+ANALYSIS OF TOLERANCE OF AMBIGUITY SCALES
+Descriptive analyses of the different tolerance of ambiguity scales are summarized in Table 3.
+Including all participants, analyses indicate that the 27-item version of the MAT
+presents a satisfactory internal consistency (a = .71). For adults, the tolerance
+and the intolerance of ambiguity scales of the BSTIA also present satisfactory
+internal consistencies (a = .75 and .81 respectively). Internal consistency of the
+total scale is good (a = .86). For adolescents, all the scales of the BSTIA present
+low internal reliabilities (a = .56 and .57 for the tolerance and the intolerance
+scale, and a = .61 for the total scale.)
+Correlational analyses (see table 4) indicate that intolerance of ambiguity evaluated by the MATis moderately and significantly linked to intolerance of ambiguity and tolerance of ambiguity measured by the BSTIA (r = .33 and r = -.44,
+p'" .01 respectively). It is also moderately linked to the global score of intolerance
+of ambiguity of the BSTIA (r = .46, p '" .001). Note that tolerance and intolerance
+for ambiguity scores from the BSTIA are correlated (r = -.42, p '" .001). Factor
+analysis yields a one-factor solution (56.55% of variance), in which intolerance of
+ambiguity measured by the MATand the BSTIA are opposed to the dimension
+tolerance of ambiguity measured by the BSTIA.
+
+RELATION BETWEEN TOLERANCE OF AMBIGUITY AND CREATIVITY
+First we analyze relationships between tolerance of ambiguity and creativity
+for the total sample (parents and adolescents). Correlations are presented in
+table 5.
+
+Intolerance
+of
+Ambiguity
+(MAT)
+
+Tolerance
+of
+Ambiguity
+(BSTlA)
+
+Intolerance
+Total
+Intolerance
+of
+Ambiguity of Ambiguity
+(BSTlA)
+(BSTIA)
+
+Fluency
+
+-.38*
+
+.36*
+
+-.36*
+
+-.42**
+
+Originality
+
+-.25
+
+.12
+
+.20
+
+.04
+
+Uniqueness
+
+-.36*
+
+.28
+
+-.16
+
+-.26
+
+Story creativity
+
+-.26
+
+.14
+
+-.10
+
+-.20
+
+Creative personality
+
+-.38*
+
+.08
+
+-.25
+
+-.14
+
+The results indicate that fluency is moderately and significantly linked to all
+scores of tolerance/intolerance of ambiguity (p < .01). The more individuals
+tolerate ambiguity, the more they generated ideas in a divergent thinking task
+involving an ambiguous stimulus. The number of unique ideas is also significantly linked to intolerance of ambiguity measured by the MAT. Relations of
+tolerance of ambiguity and other creativity facets are less obvious and do not
+reach a p < .01. However, we may note that all these correlations present the
+same tendency: it appears that the more individuals are intolerant of ambiguity
+(measured by the MAT), the less they generated original and unique ideas, the
+less they produced creative stories and the lower they scored on the adjective
+checklist measure.
+Canonical analyses indicate that the set of creativity scores shared a significant part of variance with tolerance of ambiguity variables (MAT and BSTIA
+total scores) (Rc = .57, F(8,116) = 4.20, P < .001).
+These results support our first hypothesis that the more individuals tolerate
+ambiguity, the more they tend to be creative.
+To complete the examination of relations between tolerance of ambiguity
+and creativity, we calculated correlations between parents' tolerance of ambiguity and adolescent's creativity. There were no significant relations. Even though
+creativity of adolescents may be related to the creativity of their parents, it is
+not significantly related to parents' tolerance of ambiguity.
+
+ALBERT,
+
+R. (1992).
+
+Genius and Eminence. New York: Pergamon.
+
+BARRON, E, & HARRINGTON,
+Psychology, 32, 439-476.
+COHEN, J. (1988).
+
+D. M. (1981). Creativity, intelligence,
+
+Annual Review of
+
+and personality.
+
+Statistical power analysis for the behavioral sciences. Hillsdale, Erlbaum
+
+COMADENA, M. E. (1984). Brainstorming
+groups: Ambiguity tolerance, communication,
+task attraction, and individual productivity. Small Group Behavior, 15, 251-264.
+
+apprehension,
+
+CSIKSENTMIHALYI, M. (1996). Creativity: Flow and the psychology of discovery and invention. New
+York: Harper Collins.
+FURNHAM, A. (1994). A content correlational
+and factor analytic study of four tolerance
+questionnaires.
+Personality and Individual Differences, 16(3),403-410.
+FURNHAM, A. & AVISON, M. (1997). Personality
+Individual Differences, 1997; 23, 923-935.
+FURNHAM, A., & RIBCHESTER,
+measurement
+and applications.
+GOLANN, S. E. (1963).
+
+Psychological
+
+GOUGH, H., & GENDRE, F. (1982).
+Psychologie Appliquee, Paris
+
+and preference
+
+for surreal
+
+T. (1995). Tolerance
+of ambiguity:
+Current Psychology, 14, 179-199.
+study of creativity.
+
+paintings.
+
+A review
+
+of ambiguity
+
+Personality and
+
+of the concept,
+
+its
+
+Psychological Bulletin, 60, 548-565.
+
+Manuel de la Liste d'Adjectifs ACL. Les Editions
+
+du Centre
+
+de
+
+KERR, B. & CHOPP, C. (1999). Families and creativity. In M.A. Runco, & S.R. Pritzker (Eds.), Encyclopedia
+of creativity (pp.709-715).
+New York: Academic Press.
+(Ed.), Thinking and problem solving (pp. 289-332).
+
+LUBART, T.!. (1994). Creativity. In R. J. Sternberg
+New York: Academic Press.
+LUBART, T.I, MOUCHIROUD,
+[Psychology of creativity].
+MAcDONALD A. P. (1970).
+Reports, 26, 791-798.
+
+c., TORDJMAN,
+Paris: Armand
+
+S., & ZENASNI, E (2003). La Psychologie de la Creativite
+Colin.
+
+Revised scale for ambiguity
+
+tolerance:
+
+reliability and validity. Psychological
+
+MOUCHIROUD, c., & LUBART, T. (2001). Children's original thinking: An empirical examination
+of
+alternative measures derived from divergent thinking tasks. Journal of Genetic Psychology, 162,
+382-401.
+NORTON R. W. (1975). Measurement
+607-612.
+
+of ambiguity
+
+Journal of Personality Assessment, 39,
+
+tolerance.
+
+RUNCO, M. A., OKUDA, S. M., & THURSTON, B. J. (1987). The psychometric
+properties of four systems
+for scoring divergent thinking tests. Journal of Psychoeducational Assessment, 5(2), 149-156.
+RUNCO, M. A. (1991). Divergent thinking. Westport,
+
+CT, US: Ablex Publishing.
+
+RUNCO, M. A., & ALBERT S. R., (2005). Parent's personality
+gifted boys. Creative Research Journal, 17(4), 355-367.
+
+and creative
+
+potential
+
+of exceptionally
+
+STERNBERG, R. J., & LUBART, T.!. (1995). Defying the'crowd: Cultivating creativity in a culture of
+conformity. New York: Free Press.
+STEVENS,
+
+J. (1986). Applied multivariate statistics for the social sciences. Hillsdale, NJ: Erlbaum.
+
+STOYCHEVA, K. (1998). Ambiguity Tolerance: Adolescents'Responses
+report (ERIC) Document Reproduction
+Service No. ED 422 547).
+STOYTCHEVA,
+
+K. (2003).
+
+Tolerance of ambiguity.
+
+TEGANO, D. W. (1990). Relationship
+Reports, 66, 1047-1056.
+
+oftolerance
+
+to Uncertainty
+
+in Life. Research
+
+Pleven: Lege Artis (in Bulgaria)
+
+of ambiguity
+
+and playfulness
+
+to creativity. Psychological
+
+URBAN, K. K. (2003). Toward a Componential
+Model of Creativity. In D. Ambrose,
+Tannenbaum
+(Eds.). Creative Intelligence: Toward Theoretic Integration.
+Cresskill, NJ.
+
+L. M. Cohen, & A.J.
+Hampton Press Inc:
+
+

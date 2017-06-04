@@ -1,0 +1,112 @@
+\hypertarget{classHashtable}{}\section{Hashtable$<$ K, V $>$ Class Template Reference}
+\label{classHashtable}\index{Hashtable$<$ K, V $>$@{Hashtable$<$ K, V $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classHashtable_a2f77d0c6d61286bf8d66552b5ade3f27}{Hashtable} ()
+\item 
+\hyperlink{classHashtable_ac49d1754f24b9c611c3f2e01ca3ab502}{Hashtable} (int)
+\item 
+\hyperlink{classHashtable_afe8a9c3e1f2bd6ec37427a4dfeae93b9}{Hashtable} (\hyperlink{classHashtable}{Hashtable} \&rhs)
+\item 
+\hyperlink{classHashtable}{Hashtable} \& \hyperlink{classHashtable_a8b6f0408333c913886be2be72d453368}{operator=} (\hyperlink{classHashtable}{Hashtable} \&rhs)
+\item 
+\hyperlink{classHashtable_a3f4057afda4ad0f6b805f900e43b53f6}{$\sim$\+Hashtable} ()
+\item 
+void \hyperlink{classHashtable_a1c028479d0908b9f3e400084042fe3c2}{insert} (K, V)
+\item 
+V \& \hyperlink{classHashtable_ad4794ef44984493bcb7f40ffd1da9854}{find} (K)
+\item 
+bool \hyperlink{classHashtable_a999043d381b8323acc2067f6d9cdc417}{contains} (K)
+\item 
+int {\bfseries get\+Size} ()\hypertarget{classHashtable_af36d5460e4fd8ff3e52583cc8640480d}{}\label{classHashtable_af36d5460e4fd8ff3e52583cc8640480d}
+
+\item 
+bool \hyperlink{classHashtable_a6c264c9819287f9441732ae2b7ef0984}{is\+Hashtable\+Empty} ()
+\item 
+void \hyperlink{classHashtable_a6674997d6f8c06f0be64552df7a6ed9f}{print} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Hashtable@{Hashtable}!Hashtable@{Hashtable}}
+\index{Hashtable@{Hashtable}!Hashtable@{Hashtable}}
+\subsubsection[{\texorpdfstring{Hashtable()}{Hashtable()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class K , class V $>$ {\bf Hashtable}$<$ K, V $>$\+::{\bf Hashtable} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classHashtable_a2f77d0c6d61286bf8d66552b5ade3f27}{}\label{classHashtable_a2f77d0c6d61286bf8d66552b5ade3f27}
+functions
+
+constructor initalizes the size to a predetermed number \index{Hashtable@{Hashtable}!Hashtable@{Hashtable}}
+\index{Hashtable@{Hashtable}!Hashtable@{Hashtable}}
+\subsubsection[{\texorpdfstring{Hashtable(int)}{Hashtable(int)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class K , class V $>$ {\bf Hashtable}$<$ K, V $>$\+::{\bf Hashtable} (
+\begin{DoxyParamCaption}
+\item[{int}]{newsize}
+\end{DoxyParamCaption}
+)}\hypertarget{classHashtable_ac49d1754f24b9c611c3f2e01ca3ab502}{}\label{classHashtable_ac49d1754f24b9c611c3f2e01ca3ab502}
+construcor recives an int for intializing the size \index{Hashtable@{Hashtable}!Hashtable@{Hashtable}}
+\index{Hashtable@{Hashtable}!Hashtable@{Hashtable}}
+\subsubsection[{\texorpdfstring{Hashtable(\+Hashtable \&rhs)}{Hashtable(Hashtable &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class K , class V $>$ {\bf Hashtable}$<$ K, V $>$\+::{\bf Hashtable} (
+\begin{DoxyParamCaption}
+\item[{{\bf Hashtable}$<$ K, V $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{classHashtable_afe8a9c3e1f2bd6ec37427a4dfeae93b9}{}\label{classHashtable_afe8a9c3e1f2bd6ec37427a4dfeae93b9}
+constructor implements a forloop to deep copy every elements \index{Hashtable@{Hashtable}!````~Hashtable@{$\sim$\+Hashtable}}
+\index{````~Hashtable@{$\sim$\+Hashtable}!Hashtable@{Hashtable}}
+\subsubsection[{\texorpdfstring{$\sim$\+Hashtable()}{~Hashtable()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class K , class V $>$ {\bf Hashtable}$<$ K, V $>$\+::$\sim${\bf Hashtable} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classHashtable_a3f4057afda4ad0f6b805f900e43b53f6}{}\label{classHashtable_a3f4057afda4ad0f6b805f900e43b53f6}
+for deleteing elements when program closes 
+
+\subsection{Member Function Documentation}
+\index{Hashtable@{Hashtable}!contains@{contains}}
+\index{contains@{contains}!Hashtable@{Hashtable}}
+\subsubsection[{\texorpdfstring{contains(\+K)}{contains(K)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class K, class V $>$ bool {\bf Hashtable}$<$ K, V $>$\+::contains (
+\begin{DoxyParamCaption}
+\item[{K}]{new\+Key}
+\end{DoxyParamCaption}
+)}\hypertarget{classHashtable_a999043d381b8323acc2067f6d9cdc417}{}\label{classHashtable_a999043d381b8323acc2067f6d9cdc417}
+uses key, to hash it and go to the index of the hash value to look for the data and confirm \index{Hashtable@{Hashtable}!find@{find}}
+\index{find@{find}!Hashtable@{Hashtable}}
+\subsubsection[{\texorpdfstring{find(\+K)}{find(K)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class K, class V $>$ V \& {\bf Hashtable}$<$ K, V $>$\+::find (
+\begin{DoxyParamCaption}
+\item[{K}]{new\+Key}
+\end{DoxyParamCaption}
+)}\hypertarget{classHashtable_ad4794ef44984493bcb7f40ffd1da9854}{}\label{classHashtable_ad4794ef44984493bcb7f40ffd1da9854}
+uses key, to hash it and go to the index of the hash value to look for the data \index{Hashtable@{Hashtable}!insert@{insert}}
+\index{insert@{insert}!Hashtable@{Hashtable}}
+\subsubsection[{\texorpdfstring{insert(\+K, V)}{insert(K, V)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class K, class V$>$ void {\bf Hashtable}$<$ K, V $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{K}]{key, }
+\item[{V}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classHashtable_a1c028479d0908b9f3e400084042fe3c2}{}\label{classHashtable_a1c028479d0908b9f3e400084042fe3c2}
+function recives a key vaue pair and uses the key to hash and determine where to put the value in the text \index{Hashtable@{Hashtable}!is\+Hashtable\+Empty@{is\+Hashtable\+Empty}}
+\index{is\+Hashtable\+Empty@{is\+Hashtable\+Empty}!Hashtable@{Hashtable}}
+\subsubsection[{\texorpdfstring{is\+Hashtable\+Empty()}{isHashtableEmpty()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class K , class V $>$ bool {\bf Hashtable}$<$ K, V $>$\+::is\+Hashtable\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classHashtable_a6c264c9819287f9441732ae2b7ef0984}{}\label{classHashtable_a6c264c9819287f9441732ae2b7ef0984}
+used to detmine if the table is empty \index{Hashtable@{Hashtable}!operator=@{operator=}}
+\index{operator=@{operator=}!Hashtable@{Hashtable}}
+\subsubsection[{\texorpdfstring{operator=(\+Hashtable \&rhs)}{operator=(Hashtable &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class K , class V $>$ {\bf Hashtable}$<$ K, V $>$ \& {\bf Hashtable}$<$ K, V $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Hashtable}$<$ K, V $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{classHashtable_a8b6f0408333c913886be2be72d453368}{}\label{classHashtable_a8b6f0408333c913886be2be72d453368}
+\textbackslash{} operator implements a forloop to deep copy every elements \index{Hashtable@{Hashtable}!print@{print}}
+\index{print@{print}!Hashtable@{Hashtable}}
+\subsubsection[{\texorpdfstring{print()}{print()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class K , class V $>$ void {\bf Hashtable}$<$ K, V $>$\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classHashtable_a6674997d6f8c06f0be64552df7a6ed9f}{}\label{classHashtable_a6674997d6f8c06f0be64552df7a6ed9f}
+for prinitng the contents of the table 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+hashtable.\+h\end{DoxyCompactItemize}

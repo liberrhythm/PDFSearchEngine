@@ -1,0 +1,773 @@
+Information-theoretic lower bounds for convex
+optimization with erroneous oracles
+
+Jan Vondrák
+IBM Almaden Research Center
+San Jose, CA 95120
+jvondrak@us.ibm.com
+
+Yaron Singer
+Harvard University
+Cambridge, MA 02138
+yaron@seas.harvard.edu
+
+Abstract
+We consider the problem of optimizing convex and concave functions with access
+to an erroneous zeroth-order oracle. In particular, for a given function x → f (x)
+we consider optimization when one is given access to absolute error oracles that
+return values in [f (x) − , f (x) + ] or relative error oracles that return value in
+[(1 − )f (x), (1 + )f (x)], for some  > 0. We show stark information theoretic
+impossibility results for minimizing convex functions and maximizing concave
+functions over polytopes in this model.
+
+1
+
+Introduction
+
+Consider the problem of minimizing a convex function over some convex domain. It is well known
+that this problem is solvable in the sense that there are algorithms which make polynomially-many
+calls to an oracle that evaluates the function at every given point, and return a point which is arbitrarily close to the true minimum of the function. But suppose that instead of the true value of
+the function, the oracle has some small error. Would it still be possible to optimize the function
+efficiently? To formalize the notion of error, we can consider two types of erroneous oracles:
+• For a given function f : [0, 1]n → [0, 1] we say that fe : [0, 1]n → [0, 1] is an absolute
+-erroneous oracle if ∀x ∈ [0, 1]n we have that: fe(x) = f (x) + ξx where ξx ∈ [−, ].
+• For a given function f : [0, 1]n → R we say that fe : [0, 1]n → R is a relative -erroneous
+oracle if ∀x ∈ [0, 1]n we have that: fe(x) = ξx f (x) where ξx ∈ [1 − , 1 + ].
+Note that we intentionally do not make distributional assumptions about the errors. This is in contrast to noise, where the errors are assumed to be random and independently generated from some
+distribution. In such cases, under reasonable conditions on the distribution, one can obtain arbitrarily good approximations of the true function value by averaging polynomially many points in some
+-ball around the point of interest. Stated in terms of noise, in this paper we consider oracles that
+have some small adversarial noise, and wish to understand whether desirable optimization guarantees are obtainable. To avoid ambiguity, we refrain from using the term noise altogether, and refer
+to such as inaccuracies in evaluation as error.
+While distributional i.i.d. assumptions are often reasonable models, evaluating our dependency on
+these assumptions seems necessary. From a practical perspective, there are cases in which noise
+can be correlated, or where the data we use to estimate the function is corrupted in some arbitrary
+way. Furthermore, since we often optimize over functions that we learn from data, the process of
+fitting a model to a function may also introduce some bias that does not necessarily vanish, or may
+vanish. But more generally, it seems like we should morally know the consequences that modest
+inaccuracies may have.
+1
+
+f(x)
+
+x
+Figure 1: An illustration of an erroneous oracle to a convex function that fools a gradient descent algorithm.
+Benign cases. In the special case of a linear function f (x) = c| x, for some c ∈ Rn , a relative -error has little effect on the optimization. By querying f (ei ), for every i ∈ [n] we can extract
+e
+ci ∈ [(1−)ci , (1+)ci ] and then optimize over f 0 (x) = e
+c| x. This results in a (1±)-multiplicative
+approximation. Alternatively, if the erroneous oracle fe happens to be a convex function, optimizing f˜(x) directly retains desirable optimization guarantees, up to either additive and multiplicative
+errors. We are therefore interested in scenarios where the error does not necessarily have nice properties.
+Gradient descent fails with error. For a simple example, consider the function illustrated in
+Figure 1. The figure illustrates a convex function (depicted in blue) and an erroneous version of
+it (dotted red), s.t. on every point, the oracle is at most some additive  > 0 away from the true
+function value (the  margins of the function are depicted in grey). If we assume that a gradient
+descent algorithm is given access to the erroneous version (dotted red) instead of the true function
+(blue), the algorithm will be trapped in a local minimum that can be arbitrarily far from the true
+minimum. But the fact that a naive gradient descent algorithm fails does not necessarily mean that
+there isn’t an algorithm that can overcome small errors. This narrates the main question in this paper.
+Is convex optimization robust to error?
+Main Results. Our results are largely spoilers. We present stark information-theoretic lower
+bounds for both relative and absolute -erroneous oracles, for any constant and even sub-constant
+ > 0. In particular, we show that:
+• For minimizing a convex function (or maximizing a concave function) f : [0, 1]n → [0, 1]
+over [0, 1]n : we show that for any fixed δ > 0, no algorithm can achieve an additive
+approximation within 1/2 − δ of the optimum, using a subexponential number of calls to
+an absolute n−1/2+δ -erroneous oracle.
+• For minimizing a convex function f : [0, 1]n → [0, 1] over a polytope P ⊂ [0, 1]n : for any
+fixed  > 0, no algorithm can achieve a finite multiplicative factor using a subexponential
+number of calls to a relative -erroneous oracle.
+• For maximizing a concave function f : [0, 1]n → [0, 1] over a polytope P ⊂ [0, 1]n : for
+any fixed  > 0, no algorithm can achieve a multiplicative factor better than Θ(n−1/2+ )
+using a subexponential number of calls to a relative -erroneous oracle;
+• For maximizing a concave function f : [0, 1]n → [0, 1] over [0, 1]n : for any fixed  > 0,
+no algorithm can obtain a multiplicative factor better than 1/2 +  using a subexponential
+number of calls to a relative -erroneous oracle. (And there is a trivial 1/2-approximation
+without asking any queries.)
+Somewhat surprisingly, many of the impossibility results listed above are shown for a class of extremely simple convex and concave functions, namely, affine functions: f (x) = c| x + b. This is
+2
+
+in sharp contrast to the case of linear functions (without the constant term b) with relative erroneous
+oracles as discussed above. In addition, we note that our results extend to strongly convex functions.
+1.1
+
+Related work
+
+The oracle models we study here fall in the category of zeroth-order or derivative free. Derivativefree methods have a rich history in convex optimization and were among the earliest to numerically
+solve unconstrained optimization problems. Recently these approaches have enjoyed increasing
+interest, as they are useful in scenarios where black-box access is given to the function or cases in
+which gradient information is difficult to compute or does not exist [9, 8, 11, 15, 14, 6]
+There has been a rich line of work for noisy oracles, where the oracles return some erroneous version
+of the function value which is random. In a stochastic framework, these settings correspond to
+repeatedly choosing points in some convex domain, obtaining noisy realizations of some underlying
+convex function’s value. Most frequently, the assumption is that one is given a first-order noisy
+oracle with some assumptions about the distribution that generates the error [13, 12]. In the learning
+theory community, optimization with stochastic noisy oracles is often motivated by multi-armed
+bandits settings [4, 1], and regret minimization with zeroth-order feedback [2]. All these models
+consider the case in which the error is drawn from a distribution.
+The model of adversarial noise in zeroth order oracles has been mentioned in [10] which considers
+a related model of erroneous oracles and informally argues that exponentially many queries are
+required to approximately minimize a convex function in this model (under an `2 -ball constraint).
+In recent work, Belloni et al. [3] study convex optimization with erroneous oracles. Interestingly,
+Belloni et al. show positive results. In their work they develop a novel algorithm that is based on
+sampling from an approximately log-concave distribution using the Hit-and-Run method and show
+that their method has polynomial query complexity. In contrast to the negative results we show in
+this work, the work of Belloni et al. assumes the (absolute) erroneous oracle returns f (x) + ξx
+with ξx ∈ [− n , n ]. That is, the error is not a constant term, but rather is inversely proportional
+to the dimension. Our lower bounds for additive approximation hold when the oracle error is not
+1
+1
+necessarily a constant but ξx ∈ [ n1/2−δ
+, n1/2−δ
+] for a constant 0 < δ < 1/2.
+
+2
+
+Preliminaries
+
+Optimization and convexity. For a minimization problem, given a nonnegative objective function
+f and a polytope P we will say that an algorithm provides a (multiplicative) α-approximation (α >
+1) if it finds a point x̄ ∈ P s.t. f (x̄) ≤ α minx∈P f (x). For a maximization problem, an algorithm
+provides an α-approximation (α < 1) if it finds a point x̄ s.t. f (x̄) ≥ α maxx∈P f (x).
+For absolute erroneous oracles, given an objective function f and a polytope P we will aim to find
+a point x̄ ∈ P which is within an additive error of δ from the optimum, with δ as small as possible.
+That is, for a δ > 0 we aim to find a point x̄ s.t. |f (x̄)−minx f (x)| < δ in the case of minimization.
+A function f : P → R is convex on P if f (tx + (1 − t)y) ≤ tf (x) + (1 − t)f (y) (or concave if
+f (tx + (1 − t)y) ≥ tf (x) + (1 − t)f (y)) for every x, y ∈ P and t ∈ [0, 1].
+Chernoff bounds. Throughout the paper we appeal to the Chernoff bounds. We note that while
+typically stated for independent random variables X1 , . . . , Xm , Chernoff bounds also hold for negatively associated random variables.
+Definition 2.1 ([5], Definition 1). Random variables X1 , . . . , Xn are negatively associated, if for
+¯
+every I ⊆ [n] and every non-decreasing f : RI → R, g : RI → R,
+¯ ≤ E[f (Xi , i ∈ I)]E[g(Xj , j ∈ I)].
+¯
+E[f (Xi , i ∈ I)g(Xj , j ∈ I)]
+Claim 2.2 ([5], Theorem 14).
+Pn Let X1 , . . . , Xn be negatively associated random variables that take
+values in [0, 1] and µ = E[ i=1 Xi ]. Then, for any δ ∈ [0, 1] we have that:
+n
+X
+2
+Pr[
+Xi > (1 + δ)µ] ≤ e−δ µ/3 ,
+i=1
+
+3
+
+n
+X
+2
+Pr[
+Xi < (1 − δ)µ] ≤ e−δ µ/2 .
+i=1
+
+We apply this to random variables that are formed by selecting a random subset of a fixed size. In
+particular, we use the following.
+Claim 2.3. Let x1 , . . . , xn ≥ 0 be fixed. For 1 ≤ k ≤ n, let R be a uniformly random subset of k
+elements out of [n]. Let Xi = xi if i ∈ R and Xi = 0 otherwise. Then X1 , . . . , Xn are negatively
+associated.
+Proof. For x1 = x2 = . . . = xn = 1, the statement holds by Corollary 11 of [5] (which refers
+to this distribution as the Fermi-Dirac model). The generalization to arbitrary xi ≥ 0 follows from
+Proposition 4 of [5] with Ij = {j} and hj (t) = xj t.
+
+3
+
+Optimization over the unit cube
+
+We start with optimization over [0, 1]n , arguably the simplest possible polytope. We show that
+already in this setting, the presence of adversarial noise prevents us from achieving much more than
+trivial results.
+3.1
+
+Convex minimization
+
+First let us consider convex minimization over [0, 1]n . In this setting, we show that errors as small
+as n−(1−δ)/2 prevent us from optimizing within a constant additive error.
+Theorem 3.1. Let δ > 0 be a constant. There are instances of a convex function f : [0, 1]n →
+[0, 1] accessible through an absolute n−(1−δ)/2 -erroneous oracle, such that a (possibly randomized)
+δ
+algorithm that makes eO(n ) queries cannot find a solution of value better than within additive
+δ
+1/2 − o(1) of the optimum with probability more than e−Ω(n ) .
+We remark that the proof of this theorem is inspired by the proof of hardness of ( 21 + )approximation for unconstrained submodular maximization [7]; in particular it can be viewed as
+a simple application of the “symmetry gap” argument (see [16] for a more general exposition).
+Proof. Let  = n−(1−δ)/2 ; we can assume that  < 12 , otherwise n is constant and the statement
+is trivial. We will construct an -erroneous oracle (both in the relative and absolute sense) for a
+convex function f : [0, 1]n → [0, 1]. Consider a partition of [n] into two subsets A, B of size
+|A| = |B| = n/2 (which will be eventually chosen randomly). We define the following function:
+• f (x) =
+
+1
+2
+
+P
+P
++ n1 ( i∈A xi − j∈B xj ).
+
+This is a convex (in fact linear) function. Next, we define the following modification of f , which
+could be the function returned by an -erroneous oracle.
+• If |
+
+P
+
+xi −
+
+P
+
+xj | > 12 n, then f˜(x) = f (x) =
+
+• If |
+
+P
+
+xi −
+
+P
+
+xj | ≤ 12 n, then f˜(x) = 12 .
+
+i∈A
+i∈A
+
+j∈B
+j∈B
+
+1
+2
+
+P
+P
++ n1 ( i∈A xi − j∈B xj ).
+
+P
+P
+Note that f (x) and f˜(x) differ only in the region where | i∈A xi − j∈B xj | ≤ 12 n. In particular,
+1+
+1
+˜
+the value of f (x) in this region is within [ 1−
+2 , 2 ], while f (x) = 2 , so an -erroneous oracle for
+f (x) (both in the relative and absolute sense) could very well return f˜(x) instead.
+Now assume that (A, B) is a random partition, unknown to the algorithm. We argue
+Pthat with
+high probability, a fixed query x issued by the algorithm will have the property that | i∈A xi −
+P
+1
+j∈B xj | ≤ 2 n. More precisely, since (A, B) is chosen at random subject to |A| = |B| = n/2,
+4
+
+P
+we have that i∈A xi is a sum of negatively associated random variables in [0, 1] (by Claim 2.3).
+P
+Pn
+The expectation of this quantity is µ = E[ i∈A xi ] = 12 i=1 xi ≤ 21 n. By Claim 2.2, we have
+X
+X
+2
+2
+1
+n
+Pr[
+xi > µ + n] = Pr[
+xi > (1 +
+)µ] < e−(n/(4µ)) µ/3 ≤ e− n/24 .
+4
+4µ
+i∈A
+i∈A
+P
+P
+P
+n
+Since 12 i∈A xi + 12 i∈B xi = 12 i=1 xi = µ, we get
+X
+X
+X
+2
+1
+1
+Pr[
+xi −
+xi > n] = Pr[
+xi − µ > n] < e− n/24 .
+2
+4
+i∈A
+
+i∈B
+
+i∈A
+
+By symmetry,
+Pr[|
+
+X
+i∈B
+
+xi −
+
+X
+
+xj | >
+
+j∈A
+
+2
+1
+n] < 2e− n/24 .
+2
+
+We emphasize that this holds for a fixed query x.
+Recall that we assumed the algorithm to be deterministic. Hence, as long as its queries satisfy the
+property above, the answers will be f˜(x) = 1/2, and the algorithm will follow the same path of
+computation, no matter what the choice of (A, B) is. (Effectively we will not learn anything about
+A and B.) Considering the sequence of queries on this computation path, if the number of queries is
+2
+t then with probability at least 1−2te− n/24 the queries will indeed fall in the region where f˜(x) =
+2
+1/2 and the algorithm will follow this path. If t ≤ e n/48 , this happens with probability at least
+2
+1 − 2e− n/48 . In this case, all the points queried by the algorithm as well as the returned solution
+xout (by the same argument) satisfies f˜(xout ) = 1/2, and hence f (xout ) ≥ 1−
+2 . In contrast, the
+−(1−δ)/2
+actual optimum is f (1B ) = 0. Recall that  = n
+; hence, f (xout ) ≥ 12 (1 − n−(1−δ)/2 )
+and the bounds on the number of queries and probability of success are as in the statement of the
+theorem.
+Finally, consider a randomized algorithm. Denote by (R1 , R2 , . . . , ...) the random variables used
+by the algorithm in its decisions. We can condition on a fixed choice of (R1 = r1 , R2 = r2 , . . .)
+which makes the algorithm deterministic. By our proof, the algorithm conditioned on this choice
+δ
+cannot succeed with probability more than e−Ω(n ) . Since this is true for each particular choice of
+(r1 , r2 , . . .), by averaging it is also true for a random choice of (R1 , R2 , . . .). Hence, we obtain the
+same result for randomized algorithms as well.
+3.2
+
+Concave maximization
+
+Here we consider the problem of maximizing a concave function f : [0, 1]n → [0, 1]. One can
+obtain a result for concave maximization analogous to Theorem 3.1, which we do not state; in
+terms of additive errors, there is really no difference between convex minimization and concave
+maximization. However, in the case of concave maximization we can also formulate the following
+hardness result for multiplicative approximation.
+Theorem 3.2. If a concave function f : [0, 1]n → [0, 1] is accessible through a relative-δ-erroneous
+2
+oracle, then for any  ∈ [0, δ], an algorithm that makes less than e n/48 queries cannot find a
+−2 n/48
+solution of value greater than 1+
+.
+2 OP T with probability more than 2e
+Proof. This result follows from the same construction as Theorem 3.1. Recall that f (x) is a linear
+function, hence also concave. As we mentioned in the proof of Theorem 3.1, f˜(x) could be the
+values returned by a relative -erroneous oracle. Now we consider an arbitrary  > 0; note that for
+δ ≥  it still holds that f˜(x) is a relative δ-erroneous oracle.
+n
+
+By the same proof, an algorithm querying less than e n/48 points cannot find a solution of value
+−2 n/48
+. In contrast, the optimum of the maximization
+better than 1+
+2 with probability more than 2e
+problem is supx∈[0,1]n f (x) = 1. Therefore, the algorithm cannot achieve multiplicative approximation better than 1+
+2 .
+We note that this hardness result is optimal due to the following easy observation.
+5
+
+Theorem 3.3. For any concave function f : [0, 1]n → R+ , let OP T = supx∈[0,1]n f (x). Then
+
+
+1 1
+1
+1
+f
+, ,...,
+≥ OP T.
+2 2
+2
+2
+Proof. By compactness, the optimum is attained at a point: let OP T = f (x∗ ). Let also x0 =
+(1, 1, . . . , 1) − x∗ . We have x0 ∈ [0, 1]n and hence f (x0 ) ≥ 0. By concavity, we obtain
+
+
+ ∗
+
+1
+x + x0
+f (x∗ ) + f (x0 )
+1
+1
+1 1
+f
+, ,...,
+=f
+≥
+≥ f (x∗ ) = OP T.
+2 2
+2
+2
+2
+2
+2
+
+In other words, a multiplicative 12 -approximation for this problem is trivial to obtain — even without
+asking any queries about f . We just return the point ( 12 , 12 , . . . , 12 ). Thus we can conclude that for
+concave maximization, a relative -erroneous oracle is not useful at all.
+
+4
+
+Optimization over polytopes
+
+In this section we consider optimization of convex and concave functions over a polytope
+P = {x ≥ 0 : Ax = b}. We will show inappoximability results for the relative error model. Note
+that for the absolute error case, the lower bound on convex minimization from the previous section
+holds, and can be applied to show a lower bound for concave maximization with absolute errors.
+Theorem 4.1. Let , δ ∈ (0, 1/2) be some constants. There are convex functions for which no
+δ
+algorithm can obtain a finite approximation ratio to minx∈P f (x) using Ω(en ) queries to a relative
+-erroneous oracle of the function.
+P
+1/2+δ
+Proof. We will prove our theorem for the case in which P = {x ≥ 0 :
+}. Let
+i xi ≤ n
+H be a subset of indices chosen uniformly at random from all subsets of size exactly n1/2+δ . We
+construct two functions:
+X
+f (x) = n1+δ − n1/2
+xi
+i∈H
+
+g(x) = n
+
+1+δ
+
+−n
+
+δ
+
+X
+
+xi
+
+i
+
+Observe that both these functions are convex and non-negative. Also, observe that
+P the minimizer
+1/2+δ
+of f is x∗ = 1H and f (x∗ ) = 0, while the minimizer of g is any vector x0 :
+i xi = n
+0
+1+δ
+1/2+2δ
+1+δ
+and g(x ) = n
+−n
+= Θ(n ). Therefore, the ratio between these two functions is
+unbounded. We will now construct the erroneous oracle in the following manner:
+
+g(x), if (1 − )f (x) ≤ g(x) ≤ (1 + )f (x)
+e
+f (x) =
+f (x) otherwise
+By definition, fe is an -erroneous oracle to f . The claim will follow from the fact that given access
+to fe one cannot distinguish between f and g using a subexponential number of queries. This implies
+the inapproximability result since an approximation algorithm which guarantees a finite approximation ratio using a subexponential number of queries could be used to distinguish between the two
+functions: if the algorithm returns an answer strictly greater than 0 then we know the underlying
+function is g and otherwise it is f.
+Given a query x ∈ [0, 1]n to the oracle, we will consider two cases.
+• In case the query x is such that
+
+P
+
+i
+
+xi ≤ n1/2 then we have that:
+
+n1+δ − n ≤ f (x) ≤ n1+δ
+n1+δ − nδ+1/2 ≤ g(x) ≤ n1+δ
+6
+
+Since for any , δ > P
+0 there is a large enough n s.t. nδ > (1 + )/, this implies that for
+any query for which i xi ≤ n1/2 then we have that g(x) ∈ [(1 − )f (x), (1 + )f (x)]
+and thus the oracle returns g(x).
+P
+1/2
+• In
+then we can interpret the value of
+i xi > n
+P case the query is such that
+x
+which
+determines
+value
+of
+f
+as
+a
+sum
+of
+negatively
+associated random variables
+i
+i∈H
+X1 , . . . , Xn where Xi realizes with probability n−1/2+δ and takes value xi if realized
+(see Claim 2.3). WePcan then apply the Chernoff bound (Claim 2.2), using the fact that
+E[f (x)] = n1/2−δ i xi , and get that for any constant 0 < β < 1 we have that with
+δ
+probability 1 − e−Ω(n ) :
+
+P x
+
+P x
+X
+i i
+i i
+1 − β 1/2−δ
+≤
+xi ≤ 1 + β 1/2−δ
+n
+n
+i∈H
+δ
+
+By using β ≤ /(1 + ), this implies that with probability at least 1 − e−Ω(n ) we get that:
+(1 − )f (x) ≤ g(x) ≤ (1 + )f (x)
+Since the likelihood of distinguishing between f and g on a single query is exponentially
+small in nδ , the same arguments used throughout the paper imply that it takes an exponential number of queries to distinguish between f and g.
+δ
+
+To conclude, for any query x ∈ [0, 1]n it takes Ω(en ) queries to distinguish between f and g.
+As discussed above, due to the fact that the ratio between the optima of these two functions is
+unbounded, this concludes the proof.
+Theorem 4.2. ∀ constants , δ ∈ (0, 1/2) there is a concave function f : [0, 1]n → R+ for which
+no algorithm can obtain an approximation strictly better than O(n−1/2+δ ) to maxx∈P f (x) using
+δ
+Ω(en ) queries to a relative -erroneous oracle of the function.
+Proof. We follow a similar methodology as in the proof of Theorem 4.1. We again we select a
+P
+1/2+δ
+set H of size n1/2+δ u.a.r. and construct two functions: f (x) = n1/2 i∈H xi + n 
+and
+P
+n1/2+δ
+δ
+e
+. As in the proof of Theorem 4.1 the noisy oracle f (x) = g(x) when
+g(x) = n
+i xi +
+
+(1 − )f (x) ≤ g(x) ≤ (1 + )f (x) and otherwise fe(x) = f (x). Note that both functions are concave
+and non-negative, and by its definition the oracle is -erroneous for the function f . For b = n1/2+δ
+it is easy to see that the optimal value when the objective is f is n1+δ while the optimal value is
+O(n1/2+δ ) when the objective is g, which implies that one cannot obtain an approximation better
+−1/2+δ
+than Ω(n
+) with a subexponential number of queries. In case the query to the oracle is a point
+P
+1/2
+x s.t.
+x
+≤
+n
+, then by Chernoff bound arguments, similar to the ones we used above, with
+i i
+δ
+probability
+1 − e−Ω(n ) we get (1 − )f (x) ≤ g(x) ≤ (1 + )f (x). Thus, for any query in
+P at least1/2
+which i xi ≤ n , the likelihood of the oracle returning f is exponentially small in nδ .
+P
+In case the query is a point x s.t. i xi > n1/2 standard concentration bound arguments as before,
+δ
+imply that with probability at least 1 − e−Ω(n ) we get (1 − )f (x) ≤ g(x) ≤ (1 + )f (x). Since
+the likelihood of distinguishing between f and g on a single query is exponentially small in nδ , we
+can conclude that it takes an exponential number of queries to distinguish between f and g.
+
+5
+
+Optimization over assignments
+
+In this section, we consider the concave maximization problem over a more specific polytope,
+
+
+k
+
+
+X
+Pn,k = x ∈ Rn×k
+:
+xij = 1 ∀i ∈ [n] .
++
+
+
+j=1
+
+This can be viewed as the matroid polytope for a partition matroid on n blocks of k elements, or
+alternatively the convex hull of assignments of n items to k agents. In this case, there is a trivial
+1
+1
+k -approximation, similar to the 2 -approximation in the case of a unit cube.
+7
+
+Theorem 5.1. For any k ≥ 2 and a concave function f : Pn,k → R+ , let OP T = supx∈Pn,k f (x).
+Then
+
+
+1 1
+1
+1
+f
+, ,...,
+≥ OP T.
+k k
+k
+k
+(`)
+
+Proof. By compactness, the optimum is attained at a point: let OP T = f (x∗ ). Let xij =
+x∗i,(j+` mod k) ; i.e., x(`) is a cyclic shift of the coordinates of x∗ by ` in each block. We have
+Pk−1 (`)
+Pk
+x(`) ∈ Pn,k and k1 `=0 xij = k1 j=1 x∗ij = k1 . By concavity and nonnegativity of f , we obtain
+!
+
+
+k−1
+1
+1 1
+1 X (`)
+1
+1
+, ,...,
+=f
+x
+f
+≥ f (x(0) ) = OP T.
+k k
+k
+k
+k
+k
+`=0
+
+We show that this approximation is best possible, if we have access only to a δ-erroneous oracle.
+Theorem 5.2. If k ≥ 2 and a concave function f : Pn,k → [0, 1] is accessible through a relative-δ2
+erroneous oracle, then for any  ∈ [0, δ], an algorithm that makes less than e n/6k queries cannot
+−2 n/6k
+find a solution of value greater than 1+
+.
+k OP T with probability more than 2e
+Note that this result is nontrivial only for n  k. In other words, the hardness factor of k is never
+worse than a square root of the dimension of the problem. Therefore, this result can be viewed as
+interpolating between the hardness of 1+
+2 -approximation over the unit cube (Theorem 3.2), and the
+hardness of nδ−1/2 -approximation over a general polytope (Theorem 4.2).
+Proof. Given π : [n] → [k], we construct a function f π : Pn,k → [0, 1] (where π describes the
+intended optimal solution):
+• f π (x) =
+
+1
+n
+
+Pn
+
+i=1
+
+xi,π(i) .
+
+Next we define a modified function f˜π as follows:
+• If |f π (x) − k1 | >
+
+
+k
+
+then f˜π (x) = f π (x)
+
+• If |f π (x) − k1 | ≤
+
+
+k
+
+then f˜π (x) = k1 .
+
+1+
+By definition, f π (x) and f˜π (x) differ only if |f π (x) − k1 | ≤ k , and then f π (x) ∈ [ 1−
+k , k ] while
+f˜π (x) = k1 . Therefore, f˜π (x) is a valid relative -erroneous oracle for f π .
+
+Similarly to the proofs above, we argue that if π is chosen uniformly at random, then with high
+probability f˜π (x) = k1 for any fixed query x ∈ Pn,k . This holds again by a Chernoff bound: For a
+Pk
+Pn
+fixed xij such that j=1 xij = 1, we have that f π (x) = n1 i=1 xi,π(i) = n1 Z where Z is a sum of
+P
+independent random variables with expectation k1 i,j xij = nk . The random variables attain values
+2
+
+in [0, 1]. By the Chernoff bound, Pr[|Z − nk | >  nk ] < 2e− n/3k . This gives
+
+
+2
+1
+
+Pr |f π (x) − | >
+< 2e− n/3k .
+k
+k
+2
+
+By the same arguments as before, if the algorithm asks less than e n/6k queries, then it will not
+2
+detect a point such that |f π (x) − k1 | > k with probability more than 2e− n/6k . Then the query answers will all be f˜π (x) = k1 and the value of the returned solution will be at most 1+
+k . Meanwhile,
+the optimum solution is x∗i,π(i) = 1 for all i, which gives f (x∗ ) = 1.
+Acknowledgements. YS was supported by NSF grant CCF-1301976, CAREER CCF-1452961 and a Google
+Faculty Research Award.
+
+8
+
+References
+[1] Alekh Agarwal, Ofer Dekel, and Lin Xiao. Optimal algorithms for online convex optimization with
+multi-point bandit feedback. In COLT 2010 - The 23rd Conference on Learning Theory, Haifa, Israel,
+June 27-29, 2010, pages 28–40, 2010.
+[2] Alekh Agarwal, Dean P. Foster, Daniel Hsu, Sham M. Kakade, and Alexander Rakhlin. Stochastic convex
+optimization with bandit feedback. SIAM Journal on Optimization, 23(1):213–240, 2013.
+[3] Alexandre Belloni, Tengyuan Liang, Hariharan Narayanan, and Alexander Rakhlin. Escaping the local
+minima via simulated annealing: Optimization of approximately convex functions. COLT 2015.
+[4] Sébastien Bubeck and Nicolò Cesa-Bianchi. Regret analysis of stochastic and nonstochastic multi-armed
+bandit problems. Foundations and Trends in Machine Learning, 5(1):1–122, 2012.
+[5] Devdatt Dubhashi, Volker Priebe, and Desh Ranjan. Negative dependence through the FKG inequality.
+In Research report MPI-I-96-1-020, Max-Planck Institut für Informatik, Saarbrücken, 1996.
+[6] John C. Duchi, Michael I. Jordan, Martin J. Wainwright, and Andre Wibisono. Optimal rates for zeroorder convex optimization: The power of two function evaluations. IEEE Transactions on Information
+Theory, 61(5):2788–2806, 2015.
+[7] Uriel Feige, Vahab S. Mirrokni, and Jan Vondrák. Maximizing non-monotone submodular functions.
+SIAM J. Comput., 40(4):1133–1153, 2011.
+[8] Abraham Flaxman, Adam Tauman Kalai, and H. Brendan McMahan. Online convex optimization in the
+bandit setting: gradient descent without a gradient. In Proceedings of the Sixteenth Annual ACM-SIAM
+Symposium on Discrete Algorithms, SODA 2005, Vancouver, British Columbia, Canada, January 23-25,
+2005, pages 385–394, 2005.
+[9] Kevin G. Jamieson, Robert D. Nowak, and Benjamin Recht. Query complexity of derivative-free optimization. In Advances in Neural Information Processing Systems 25: 26th Annual Conference on Neural
+Information Processing Systems 2012. Proceedings of a meeting held December 3-6, 2012, Lake Tahoe,
+Nevada, United States., pages 2681–2689, 2012.
+[10] A.S. Nemirovsky and D.B. Yudin. Problem Complexity and Method Efficiency in Optimization. J. Wiley
+& Sons, New York, 1983.
+[11] Yurii Nesterov. Random gradient-free minimization of convex functions. CORE Discussion Papers
+2011001, Université catholique de Louvain, Center for Operations Research and Econometrics (CORE),
+2011.
+[12] Aaditya Ramdas, Barnabás Póczos, Aarti Singh, and Larry A. Wasserman. An analysis of active learning
+with uniform feature noise. In Proceedings of the Seventeenth International Conference on Artificial
+Intelligence and Statistics, AISTATS 2014, Reykjavik, Iceland, April 22-25, 2014, pages 805–813, 2014.
+[13] Aaditya Ramdas and Aarti Singh. Optimal rates for stochastic convex optimization under tsybakov noise
+condition. In Proceedings of the 30th International Conference on Machine Learning, ICML 2013, Atlanta, GA, USA, 16-21 June 2013, pages 365–373, 2013.
+[14] Ohad Shamir. On the complexity of bandit and derivative-free stochastic convex optimization. In COLT
+2013 - The 26th Annual Conference on Learning Theory, June 12-14, 2013, Princeton University, NJ,
+USA, pages 3–24, 2013.
+[15] Sebastian U. Stich, Christian L. Müller, and Bernd Gärtner. Optimization of convex functions with random
+pursuit. CoRR, abs/1111.0194, 2011.
+[16] Jan Vondrák. Symmetry and approximability of submodular maximization problems. SIAM J. Comput.,
+42(1):265–304, 2013.
+
+9
+
+

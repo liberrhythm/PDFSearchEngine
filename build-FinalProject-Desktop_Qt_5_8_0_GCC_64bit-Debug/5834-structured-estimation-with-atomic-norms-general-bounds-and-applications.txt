@@ -1,0 +1,1085 @@
+Structured Estimation with Atomic Norms:
+General Bounds and Applications
+
+Sheng Chen
+Arindam Banerjee
+Dept. of Computer Science & Engg., University of Minnesota, Twin Cities
+{shengc,banerjee}@cs.umn.edu
+
+Abstract
+For structured estimation problems with atomic norms, recent advances in the literature express sample complexity and estimation error bounds in terms of certain
+geometric measures, in particular Gaussian width of the unit norm ball, Gaussian
+width of a spherical cap induced by a tangent cone, and a restricted norm compatibility constant. However, given an atomic norm, bounding these geometric
+measures can be difficult. In this paper, we present general upper bounds for such
+geometric measures, which only require simple information of the atomic norm under consideration, and we establish tightness of these bounds by providing
+the corresponding lower bounds. We show applications of our analysis to certain
+atomic norms, especially k-support norm, for which existing result is incomplete.
+
+1
+
+Introduction
+
+Accurate recovery of structured sparse signal/parameter vectors from noisy linear measurements has
+been extensively studied in the field of compressed sensing, statistics, etc. The goal is to recover
+a high-dimensional signal (parameter) θ ∗ ∈ Rp which is sparse (only has a few nonzero entries),
+possibly with additional structure such as group sparsity. Typically one assume linear models, y =
+Xθ ∗ + ω, in which X ∈ Rn×p is the design matrix consisting of n samples, y ∈ Rn is the observed
+response vector, and ω ∈ Rn is an unknown noise vector. By leveraging the sparsity of θ ∗ , previous
+work has shown that certain L1 -norm based estimators [22, 7, 8] can find a good approximation of
+θ ∗ using sample size n  p. Recent work has extended the notion of unstructured sparsity to other
+structures in θ ∗ which can be captured or approximated by some norm R(·) [10, 18, 3, 11, 6, 19]
+other than L1 , e.g., (non)overlapping group sparsity with L1 /L2 norm [24, 15], etc. In general, two
+broad classes of estimators are considered in recovery analysis: (i) Lasso-type estimators [22, 18, 3],
+which solve the regularized optimization problem
+θ̂λn = argmin
+θ∈Rp
+
+1
+kXθ − yk22 + λn R(θ) ,
+2n
+
+(1)
+
+and (ii) Dantzig-type estimators [7, 11, 6], which solve the constrained problem
+θ̂λn = argmin R(θ) s.t. R∗ (XT (Xθ − y)) ≤ λn ,
+
+(2)
+
+θ∈Rp
+
+where R∗ (·) is the dual norm of R(·). Variants of these estimators exist [10, 19, 23], but the recovery
+analysis proceeds along similar lines as these two classes of estimators.
+To establish recovery guarantees, [18] focused on Lasso-type estimators and R(·) from the class of
+decomposable norm, e.g., L1 , non-overlapping L1 /L2 norm. The upper bound for the estimation
+error kθ̂λn −θ ∗ k2 for any decomposable norm is characterized in terms of three geometric measures:
+(i) a dual norm bound, as an upper bound for R∗ (XT ω), (ii) sample complexity, the minimal sample
+size needed for a certain restricted eigenvalue (RE) condition to be true [4, 18], and (iii) a restricted
+1
+
+norm compatibility constant between R(·) and L2 norms [18, 3]. The non-asymptotic estimation
+√
+error bound typically has the form kθ̂λn − θ ∗ ||2 ≤ c/ n, where c depends on a product of dual
+norm bound and restricted norm compatibility, whereas the sample complexity characterizes the
+minimum number of samples after which the error bound starts to be valid. In recent work, [3]
+extended the analysis of Lasso-type estimator for decomposable norm to any norm, and gave a more
+succinct characterization of the dual norm bound for R∗ (XT ω) and the sample complexity for the
+RE condition in terms of Gaussian widths [14, 10, 20, 1] of suitable sets where, for any set A ∈ Rp ,
+the Gaussian width is defined as
+w(A) = E sup hu, gi ,
+(3)
+u∈A
+
+where g is a standard Gaussian random vector. For Dantzig-type estimators, [11, 6] obtained similar
+extensions. To be specific, assume entries in X and ω are i.i.d. normal, and define the tangent cone,
+TR (θ ∗ ) = cone {u ∈ Rp | R(θ ∗ + u) ≤ R(θ ∗ )} .
+(4)
+√
+Then one can get (high-probability) upper bound for R∗ (XT ω) as O( nw(ΩR )) where ΩR = {u ∈
+Rp |R(u) ≤ 1} is the unit norm ball, and the RE condition is satisfied with O(w2 (TR (θ ∗ ) ∩ Sp−1 ))
+samples, in which Sp−1 is the unit sphere. For convenience, we denote by CR (θ ∗ ) the spherical
+cap TR (θ ∗ ) ∩ Sp−1 throughout the paper. Further, the restricted norm compatibility is given by
+ΨR (θ ∗ ) = supu∈TR (θ∗ ) R(u)
+kuk2 (see Section 2 for details).
+Thus, for any given norm, it suffices to get a characterization of (i) w(ΩR ), the width of the unit norm ball, (ii) w(CR (θ ∗ )), the width of the spherical cap induced by the tangent cone TR (θ ∗ ),
+and (iii) ΨR (θ ∗ ), the restricted norm compatibility in the tangent cone. For the special case of L1
+norm, accurate characterization of all three measures exist [10, 18]. However, for more general
+norms, the literature is rather limited. For w(ΩR ), the characterization is often reduced to comparison with either w(CR (θ ∗ )) [3] or known results on other norm balls [13]. While w(CR (θ ∗ ))
+has been investigated for certain decomposable norms [10, 9, 1], little is known about general nondecomposable norms. One general approach for upper bounding w(CR (θ ∗ )) is via the statistical
+dimension [10, 19, 1], which computes the expected squared distance between a Gaussian random
+vector and the polar cone of TR (θ ∗ ). To specify the polar, one need full information of the subdifferential ∂R(θ ∗ ), which could be difficult to obtain for non-decomposable norms. A notable
+bound for (overlapping) L1 /L2 norms is presented in [21], which yields tight bounds for mildly
+non-overlapping cases, but is loose for highly overlapping ones. For ΨR (θ ∗ ), the restricted norm
+compatibility, results are only available for decomposable norms [18, 3].
+In this paper, we present a general set of bounds for the width w(ΩR ) of the norm ball, the width
+w(CR (θ ∗ )) of the spherical cap, and the restricted norm compatibility ΨR (θ ∗ ). For the analysis,
+we consider the class of atomic norms that are invariant under sign-changes, i.e., the norm of a
+vector stays unchanged if any entry changes only by flipping its sign. The class is quite general, and
+covers most of the popular norms used in practical applications, e.g., L1 norm, ordered weighted
+L1 (OWL) norm [5] and k-support norm [2]. Specifically we show that sharp bounds on w(ΩR )
+can be obtained using simple calculation based on a decomposition inequality from [16]. To upper
+bound w(CR (θ ∗ )) and ΨR (θ ∗ ), instead of a full specification of TR (θ ∗ ), we only require some
+information regarding the subgradient of R(θ ∗ ), which is often readily accessible. The key insight
+is that bounding statistical dimension often ends up computing the expected distance from Gaussian
+vector to a single point rather than to the whole polar cone, thus the full information on ∂R(θ ∗ ) is
+unnecessary. In addition, we derive the corresponding lower bounds to show the tightness of our
+results. As examples, we illustrate the bounds for L1 and OWL norms [5]. Finally, we give sharp
+bounds for the recently proposed k-support norm [2], for which existing analysis is incomplete.
+The rest of the paper is organized as follows: we first review the relevant background for Dantzigtype estimator and atomic norm in Section 2. In Section 3, we introduce the general bounds for the
+geometric measures. In Section 4, we discuss the tightness of our bounds. Section 5 is dedicated to
+the example of k-support norm, and we conclude in Section 6.
+
+2
+
+Background
+
+In this section, we briefly review the recovery guarantee for the generalized Dantzig selector in (2)
+and the basics on atomic norms. The following lemma, originally [11, Theorem 1], provides an error
+bound for kθ̂λn − θ ∗ k2 . Related results have appeared for other estimators [18, 10, 19, 3, 23].
+2
+
+Lemma 1 Assume that y = Xθ ∗ + ω,
+√ where entries of X and ω are i.i.d. copies of standard
+Gaussian random variable. If λn ≥ c1 nw(ΩR ) and n > c2 w2 (TR (θ ∗ ) ∩ Sp−1 ) = w2 (CR (θ ∗ ))
+for some constant c1 , c2 > 1, with high probability, the estimate θ̂λn given by (2) satisfies
+
+
+∗
+∗ w(ΩR )
+kθ̂λn − θ k2 ≤ O ΨR (θ ) √
+.
+(5)
+n
+In this Lemma, there are three geometric measures—w(ΩR ), w(CR (θ ∗ )) and ΨR (θ ∗ )—which need
+to be determined for specific R(·) and θ ∗ . In this work, we focus on general atomic norms R(·).
+Given a set of atomic vectors A ⊂ Rp , the corresponding atomic norm of any θ ∈ Rp is given by
+(
+)
+X
+X
+kθkA = inf
+ca : θ =
+ca a, ca ≥ 0 ∀ a ∈ A
+(6)
+a∈A
+
+a∈A
+
+In order for k · kA to be a valid norm, atomic vectors in A has to span Rp , and a ∈ A iff −a ∈ A.
+The unit ball of atomic norm k · kA is given by ΩA = conv(A). In addition, we assume that the
+atomic set A contains v  a for any v ∈ {±1}p if a belongs to A, where  denotes the elementwise
+(Hadamard) product for vectors. This assumption guarantees that both k · kA and its dual norm
+are invariant under sign-changes, which is satisfied by many widely used norms, such as L1 norm,
+OWL norm [5] and k-support norm [2]. For the rest of the paper, we will use ΩA , TA (θ ∗ ), CA (θ ∗ )
+and ΨA (θ ∗ ) with A replaced by appropriate subscript for specific norms. For any vector u and
+coordinate set S, we define uS by zeroing out all the coordinates outside S.
+
+3
+
+General Analysis for Atomic Norms
+
+In this section, we present detailed analysis of the general bounds for the geometric measures,
+w(ΩA ), w(CA (θ ∗ )) and ΨA (θ ∗ ). In general, knowing the atomic set A is sufficient for bounding w(ΩA ). For w(CA (θ ∗ )) and ΨA (θ ∗ ), we only need a single subgradient of kθ ∗ kA and some
+simple additional calculations.
+3.1
+
+Gaussian width of unit norm ball
+
+Although the atomic set A may contain uncountably many vectors, we assume that A can be decomposed as a union of M “simple” sets, A = A1 ∪ A2 ∪ . . . ∪ AM . By “simple,” we mean the
+Gaussian width of each Ai is easy to compute/bound. Such a decomposition assumption is often
+satisfied by commonly used atomic norms, e.g., L1 , L1 /L2 , OWL, k-support norm. The Gaussian
+width of the unit norm ball of k · kA can be easily obtained using the following lemma, which is
+essentially the Lemma 2 in [16]. Related results appear in [16].
+Lemma 2 Let M > 4, A1 , · · · , AM ⊂ Rp , and A = ∪m Am . The Gaussian width of unit norm
+ball of k · kA satisfies
+p
+w(ΩA ) = w(conv(A)) = w(A) ≤ max w(Am ) + 2 sup kzk2 log M
+(7)
+1≤m≤M
+
+z∈A
+
+Next we illustrate application of this result to bounding the width of the unit norm ball of L1 and
+OWL norm.
+Example 1.1 (L1 norm): Recall that the L1 norm can be viewed as the atomic norm induced by the
+set AL1 = {±ei : 1 ≤ i ≤ p}, where {ei }pi=1 is the canonical basis of Rp . Since the Gaussian
+width of a singleton is 0, if we treat A as the union of individual {+ei } and {−ei }, we have
+p
+p
+(8)
+w(ΩL1 ) ≤ 0 + 2 log 2p = O( log p) .
+Example 1.2 (OWL norm): A recent variant of L1 norm is the so-called ordered weighted L1
+Pp
+(OWL) norm [13, 25, 5] defined as kθkowl = i=1 wi |θ|↓i , where w1 ≥ w2 ≥ . . . ≥ wp ≥ 0 are
+pre-specified ordered weights, and |θ|↓ is the permutation of |θ| with entries sorted in decreasing
+order. In [25], the OWL norm is proved to be an atomic norm with atomic set
+(
+)
+[
+[
+[
+vS
+p
+p
+Aowl =
+Ai =
+u ∈ R : uS c = 0, uS = Pi
+, v ∈ {±1}
+. (9)
+j=1 wj
+1≤i≤p
+1≤i≤p | supp(S)|=i
+3
+
+
+We first apply Lemma 2 to each set Ai , and note that each Ai contains 2i pi atomic vectors.
+s
+s
+r
+r
+ 
+p
+p
+i
+p
+2i
+2
+i
+w(Ai ) ≤ 0 + 2
+log 2
+≤ Pi
+2 + log
+≤
+2 + log
+,
+Pi
+i
+i
+w̄
+i
+( j=1 wj )2
+j=1 wj
+where w̄ is the average of w1 , . . . , wp . Then we apply the lemma again to Aowl and obtain
+√
+
+2p
+2p
+log p
+w(Ωowl ) = w(Aowl ) ≤
+2 + log p +
+log p = O
+,
+w̄
+w̄
+w̄
+
+(10)
+
+which matches the result in [13].
+3.2
+
+Gaussian width of the intersection of tangent cone and unit sphere
+
+In this subsection, we consider the computation of general w(CA (θ ∗ )). Using the definition of dual
+norm, we can write kθ ∗ kA as kθ ∗ kA = supkuk∗A ≤1 hu, θ ∗ i, where k · k∗A denotes the dual norm of
+k · kA . The u∗ for which hu∗ , θ ∗ i = kθ ∗ kA , is a subgradient of kθ ∗ kA . One can obtain u∗ by
+simply solving the so-called polar operator [26] for the dual norm k · k∗A ,
+u∗ ∈ argmax hu, θ ∗ i .
+
+(11)
+
+kuk∗
+A ≤1
+
+Based on polar operator, we start with the Lemma 3, which plays a key role in our analysis.
+Lemma 3 Let u∗ bePa solution to the polar operator (11), and define the weighted L1 semi-norm
+p
+k · ku∗ as kvku∗ = i=1 |u∗i | · |vi |. Then the following relation holds
+TA (θ ∗ ) ⊆ Tu∗ (θ ∗ ) ,
+where Tu∗ (θ ∗ ) = cone{v ∈ Rp | kθ ∗ + vku∗ ≤ kθ ∗ ku∗ }.
+The proof of this lemma is in supplementary material. Note that the solution to (11) may not be
+unique. A good criterion for choosing u∗ is to avoid zeros in u∗ , as any u∗i = 0 will lead to the
+unboundedness of unit ball of k · ku∗ , which could potentially increase the size of Tu∗ (θ ∗ ). Next we
+present the upper bound for w(CA (θ ∗ )).
+Theorem 4 Suppose that u∗ is one of the solutions to (11), and define the following sets,
+Q = {i | u∗i = 0},
+
+S = {i | u∗i 6= 0, θi∗ 6= 0},
+
+R = {i | u∗i 6= 0, θi∗ = 0} .
+
+The Gaussian width w(CA (θ ∗ )) is upper bounded by
+ √
+
+ p , if R is empty
+w(CA (θ ∗ )) ≤
+
+
+
+
+q
+
+m + 23 s +
+
+2κ2max
+s log
+κ2min
+
+,
+p−m
+s
+
+
+
+(12)
+
+, if R is nonempty
+
+where m = |Q|, s = |S|, κmin = mini∈R |u∗i | and κmax = maxi∈S |u∗i |.
+Proof: By Lemma 3, we have w(CA (θ ∗ )) ≤ w(Tu∗ (θ ∗ ) ∩ Sp−1 ) , w(Cu∗ (θ ∗ )). Hence we can
+focus on bounding w(Cu∗ (θ ∗ )). We first analyze the structure of v that satisfies kθ ∗ + vku∗ ≤
+kθ ∗ ku∗ . For the coordinates Q = {i | u∗i = 0}, the corresponding entries vi ’s can be arbitrary since
+it does not affect the value of kθ ∗ + vku∗ . Thus all possible vQ form a m-dimensional subspace,
+∗
+where m = |Q|. For S ∪ R = {i | u∗i 6= 0}, we define θ̃ = θS∪R
+and ṽ = vS∪R , and ṽ needs to
+satisfy
+kṽ + θ̃ku∗ ≤ kθ̃ku∗ ,
+which is similar to the L1 -norm tangent cone except that coordinates are weighted by |u∗ |. Therefore
+we use the techniques for proving the Proposition 3.10 in [10]. Based on the structure of v, The
+normal cone at θ ∗ for Tu∗ (θ ∗ ) is given by
+N (θ ∗ ) = {z : hz, vi ≤ 0 ∀v s.t. kv + θ ∗ ku∗ ≤ kθ ∗ ku∗ }
+= {z : zi = 0 for i ∈ Q, zi = |u∗i |sign(θ̃i )t for i ∈ S, |zi | ≤ |u∗i |t for i ∈ R, for any t ≥ 0} .
+4
+
+Given a standard Gaussian random vector g, using the relation between Gaussian width and statistical dimension (Proposition 2.4 and 10.2 in [1]), we have
+X
+X
+X
+w2 (Cu∗ (θ ∗ )) ≤ E[ inf ∗ kz − gk22 ] = E[ inf ∗
+gi2 +
+(zj − gj )2 +
+(zk − gk )2 ]
+z∈N (θ )
+
+= |Q| + E[
+2
+
+≤ |Q| + t
+
+z∈N (θ )
+
+X
+
+inf
+
+zS∪R ∈N (θ ∗ )
+
+X
+
+|u∗j |2
+
+i∈Q
+
+j∈S
+
+(|u∗j |sign(θ̃j )t − gj )2 +
+
+j∈S
+
+(zk − gk )2 ]
+
+k∈R
+
++ |S| + E[
+
+j∈S
+
+k∈R
+
+X
+
+X
+k∈R
+
+inf
+
+(zk − gk )2 ]
+
+|zk |≤|u∗
+k |t
+
++∞
+
+−g 2
+(gk − |u∗k |t)2 exp( k )dgk
+2
+|u∗
+k |t
+
+
+X
+X 2
+1
+|u∗k |2 t2
+√
+≤ |Q| + t2
+|u∗j |2 + |S| +
+exp
+−
+(∗) .
+2
+2π |u∗k |t
+
+2
+√
+≤ |Q| + t2
+|u∗j |2 + |S| +
+2π
+j∈S
+k∈R
+X
+
+X
+
+j∈S
+
+k∈R
+
+Z
+
+!
+
+The details for the derivation above can be found in Appendix C of [10]. If R is empty, by taking
+t = 0, we have
+X
+(∗) ≤ |Q| + t2
+|u∗j |2 + |S| = |Q| + |S| = p .
+j∈S
+
+If Rris nonempty, we denote κmin = mini∈R |u∗i | and κmax = maxi∈S |u∗i |. Taking t =
+
+
+|S∪R|
+1
+2
+log
+, we obtain
+κmin
+|S|
+ 2 2
+κ
+t
+
+ 2
+
+
+2|R| exp − min
+2
+|S ∪ R|
+2κmax
+2
+2
+√
+log
+(∗) ≤ |Q| + |S|(κmax t + 1) +
+= |Q| + |S|
++1
+κ2min
+|S|
+2πκmin t
+
+
+|R||S|
+2κ2max
+|S ∪ R|
+3
+r
++
+≤
+|Q|
++
+|S|
+log
++ |S| .
+
+
+2
+κmin
+|S|
+2
+|S ∪ R| π log |S∪R|
+|S|
+Substituting |Q| = m, |S| = s and |S ∪ R| = p − m into the last inequality completes the proof.
+Suppose that θ ∗ is a s-sparse vector. We illustrate the above bound on the Gaussian width of the
+spherical cap using L1 norm and OWL norm as examples.
+Example 2.1 (L1 norm): The dual norm of L1 is L∞ norm, and its easy to verify that u∗ =
+[1, 1, . . . , 1]T ∈ Rp is a solution to (11). Applying Theorem 4 to u∗ , we have
+r
+r
+p
+ p 
+3
+∗
+w(CL1 (θ )) ≤
+s + 2s log
+=O
+s + s log
+.
+2
+s
+s
+Example 2.2 (OWL norm): For OWL, its dual norm is given by kuk∗owl = maxb∈Aowl hb, ui.
+W.l.o.g. we assume θ ∗ = |θ ∗ |↓ , and a solution to (11) is given by u∗ = [w1 , . . . , ws , w̃, w̃, . . . , w̃]T ,
+in which w̃ is the average of ws+1 , . . . , wp . If all wi ’s are nonzero, the Gaussian width satisfies
+r
+p
+3
+2w2
+∗
+w(Cowl (θ )) ≤
+s + 21 s log
+.
+2
+w̃
+s
+3.3
+
+Restricted norm compatibility
+
+The next theorem gives general upper bounds for the restricted norm compatibility ΨA (θ ∗ ).
+Theorem 5 Assume that kukA ≤ max{β1 kuk1 , β2 kuk2 } for all u ∈ Rp . Under the setting of
+Theorem 4, the restricted norm compatibility ΨA (θ ∗ ) is upper bounded by
+(
+Φ , if R isnempty 
+√ o
+∗
+ΨA (θ ) ≤
+,
+(13)
+ΦQ + max β2 , β1 1 + κκmax
+s , if R is nonempty
+min
+where Φ = supu∈Rp
+
+kukA
+kuk2
+
+and ΦQ = supsupp(u)⊆Q
+5
+
+kukA
+kuk2 .
+
+Proof: As analyzed in the proof of Theorem 4, vQ for v ∈ Tu∗ (θ ∗ ) can be arbitrary, and the
+vS∪R = vQc satisfies
+X
+X
+X
+∗
+∗
+kvQc + θQ
+=⇒
+|θi∗ + vi ||u∗i | +
+|vj ||u∗j | ≤
+|θi∗ ||u∗i |
+c ku∗ ≤ kθQc ku∗
+i∈S
+
+=⇒
+
+X
+
+(|θi∗ | − |vi |) |u∗i | +
+
+i∈S
+
+X
+
+|vj ||u∗j | ≤
+
+j∈R
+
+j∈R
+
+X
+
+|θi∗ ||u∗i |
+
+=⇒
+
+i∈S
+
+κmin kvR k1 ≤ κmax kvS k1
+
+i∈S
+
+If R is empty, by Lemma 3, we obtain
+ΨA (θ ∗ ) ≤ Ψu∗ (θ ∗ ) ,
+
+kvkA
+kvkA
+≤ sup
+=Φ.
+v∈Rp kvk2
+v∈Tu∗ (θ ∗ ) kvk2
+sup
+
+If R is nonempty, we have
+ΨA (θ ∗ ) ≤ Ψu∗ (θ ∗ ) ≤
+
+kvQ kA + kvQc kA
+kvkA + kv0 kA
+≤
+sup
+kvk2
+kv + v0 k2
+v∈Tu∗ (θ ∗ )
+supp(v)⊆Q, supp(v0 )⊆Qc
+sup
+
+0
+0
+κmin kvR
+k1 ≤κmax kvS
+k1
+
+≤
+
+kvkA
++
+supp(v)⊆Q kvk2
+sup
+
+≤ ΦQ +
+
+max{β1 kv0 k1 , β2 kv0 k2 }
+kv0 k2
+
+sup
+
+supp(v0 )⊆Qc
+0
+0
+κmin kvR
+k1 ≤κmax kvS
+k1
+κmax
+β(1 + κmin )kv0 k1
+max{β2 ,
+sup
+}
+kv0 k2
+supp(v0 )⊆S
+
+
+≤ ΦQ + max{β2 , β1
+
+κmax
+1+
+κmin
+
+
+
+√
+
+s} ,
+
+in which the last inequality in the first line uses the property of Tu∗ (θ ∗ ).
+Remark: We call Φ the unrestricted norm compatibility, and ΦQ the subspace norm compatibility,
+both of which are often easier to compute than ΨA (θ ∗ ). The β1 and β2 in the assumption of k · kA
+can have multiple choices, and one has the flexibility to choose the one that yields the tightest bound.
+Example 3.1 (L1 norm): To apply the Theorem 5 to L1 norm, we can choose β1 = 1 and β2 = 0.
+We recall the u∗ for L1 norm, whose Q is empty while R is nonempty. So we have for s-sparse θ ∗
+ 
+ 
+√
+1 √
+s =2 s.
+ΨL1 (θ ∗ ) ≤ 0 + max 0, 1 +
+1
+Example 3.2 (OWL norm): For OWL, note that k · kowl ≤ w1 k · k1 . Hence we choose β1 = w1
+and β2 = 0. As a result, we similarly have for s-sparse θ ∗
+n
+
+w1  √ o 2w12 √
+Ψowl (θ ∗ ) ≤ 0 + max 0, w1 1 +
+s ≤
+s.
+w̃
+w̃
+
+4
+
+Tightness of the General Bounds
+
+So far we have shown that the geometric measures can be upper bounded for general atomic norms.
+One might wonder how tight the bounds in Section 3 are for these measures. For w(ΩA ), as the
+result from [16] depends on the decomposition of A for the ease of computation, it might be tricky
+to discuss its tightness in general. Hence we will focus on the other two, w(CA (θ ∗ )) and ΨA (θ ∗ ).
+To characterize the tightness, we need to compare the lower bounds of w(CA (θ ∗ )) and ΨA (θ ∗ ),
+with their upper bounds determined by u∗ . While there can be multiple u∗ , it is easy to see that any
+convex combination of them is also a solution to (11). Therefore we can always find a u∗ that has
+the largest support, i.e., supp(u0 ) ⊆ supp(u∗ ) for any other solution u0 . We will use such u∗ to
+generate the lower bounds. First we need the following lemma for the cone TA (θ ∗ ).
+Lemma 6 Consider a solution u∗ to (11), which satisfies supp(u0 ) ⊆ supp(u∗ ) for any other
+solution u0 . Under the setting of notations in Theorem 4, we define an additional set of coordinates
+P = {i | u∗i = 0, θi∗ = 0}. Then the tangent cone TA (θ ∗ ) satisfies
+T1 ⊕ T2 ⊆ cl(TA (θ ∗ )) ,
+(14)
+where ⊕ denotes the direct (Minkowski) sum operation, cl(·) denotes the closure, T1 = {v ∈
+Rp | vi = 0 for i ∈
+/ P} is a |P|-dimensional subspace, and T2 = {v ∈ Rp | sign(vi ) =
+∗
+−sign(θi ) for i ∈ supp(θ ∗ ), vi = 0 for i ∈
+/ supp(θ ∗ )} is a | supp(θ ∗ )|-dimensional orthant.
+6
+
+The proof of Lemma 6 is given in supplementary material. The following theorem gives us the lower
+bound for w(CA (θ ∗ )) and ΨA (θ ∗ ).
+Theorem 7 Under the setting of Theorem 4 and Lemma 6, the following lower bounds hold,
+√
+w(CA (θ ∗ )) ≥ O( m + s) ,
+ΨA (θ ∗ ) ≥ ΦQ∪S .
+
+(15)
+(16)
+
+Proof: To lower bound w(CA (θ ∗ )), we use Lemma 6 and the relation between Gaussian width and
+statistical dimension (Proposition 10.2 in [1]),
+r
+w(TA (θ ∗ )) ≥ w(T1 ⊕ T2 ∩ Sp−1 ) ≥ E[
+inf ∗ kz − gk22 ] − 1 (∗) ,
+z∈NT1 ⊕T2 (θ )
+
+∗
+
+where the normal cone NT1 ⊕T2 (θ ) of T1 ⊕ T2 is given by NT1 ⊕T2 (θ ∗ ) = {z : zi = 0 for i ∈
+P, sign(zi ) = sign(θi∗ ) for i ∈ supp(θ ∗ )}. Hence we have
+r
+s X
+X
+√
+| supp(θ ∗ )|
+2
+2
+gj I{gj θj∗ <0} ] − 1 = |P| +
+gi +
+− 1 = O( m + s) ,
+(∗) = E[
+2
+∗
+i∈P
+
+j∈supp(θ )
+
+where the last equality follows the fact that P ∪ supp(θ ∗ ) = Q ∪ S. This completes proof of (15).
+To prove (16), we again use Lemma 6 and the fact P ∪ supp(θ ∗ ) = Q ∪ S. Noting that k · kA is
+invariant under sign-changes, we get
+kvkA
+kvkA
+kvkA
+ΨA (θ ∗ ) = sup
+≥ sup
+=
+sup
+= ΦQ∪S .
+kvk
+kvk
+∗
+∗
+2
+2
+v∈T
+⊕T
+v∈TA (θ )
+supp(v)⊆P∪supp(θ ) kvk2
+1
+2
+Remark: We compare the lower bounds (15) (16) with the upper bounds (12) (13). If R is empty,
+m + s = p, and the lower bounds actually match the upper bounds up to a constant factor for both
+w(CA (θ ∗ )) and ΨA (θ ∗ ). If R is nonempty, the lower and upper bounds of w(CA (θ ∗ )) differ by a
+2κ2
+∗
+multiplicative factor κ2max log( p−m
+s ), which can be small in practice. For ΨA (θ ), as ΦQ∪S ≥ ΦQ ,
+min
+√
+we usually have at most an additive O( s) term in upper bound, since the assumption on k · kA
+often holds with a constant β1 and β2 = 0 for most norms.
+
+5
+
+Application to the k-Support Norm
+
+In this section, we apply our general results on geometric measures to a non-trivial example, ksupport norm [2], which has been proved effective for sparse recovery [11, 17, 12]. The k-support
+norm can be viewed as an atomic norm, for which A = {a ∈ Rp | kak0 ≤ k, kak2 ≤ 1}. The
+k-support norm can be explicitly expressed as an infimum convolution given by
+
+nX
+o
+
+kθksp
+kui k2  kui k0 ≤ k ,
+(17)
+k = P inf
+i
+
+ui =θ
+
+i
+
+and its dual norm is the so-called 2-k symmetric gauge norm defined as
+∗
+
+kθksp
+= kθk(k) = k|θ|↓1:k k2 ,
+k
+
+(18)
+
+It is straightforward to see that the dual norm is simply the L2 norm of the largest k entries in |θ|.
+Suppose that all the sets of coordinates with cardinality k can be listed as S1 , S2 , . . . , S(p) . Then A
+k
+
+can be written as A = A1 ∪ . . . ∪ A(p) , where each Ai = {a ∈ Rp | supp(a) ⊆ Si , kak2 ≤ 1}.
+k
+p
+√
+
+
+It is not difficult to see that w(Ai ) = E supa∈Ai ha, gi = EkgSi k2 ≤ EkgSi k22 ≤ k. Using
+Lemma 2, we know the Gaussian width of the unit ball of k-support norm
+s  
+r
+r
+
+p
+p
+√
+√
+p
+sp
+w(Ωk ) ≤ k + 2 log
+≤ k + 2 k log
++k =O
+k log
++k ,
+(19)
+k
+k
+k
+∗
+which matches that in [11]. Now we turn to the calculation of w(Cksp (θ ∗ )) and Ψsp
+k (θ ). As we have
+∗
+seen in the general analysis, the solution u to the polar operator (11) is important in characterizing
+the two quantities. We first present a simple procedure in Algorithm 1 for solving the polar operator
+∗
+for k · ksp
+procedure can be utilized to compute
+k . The time complexity is only O(p log p + k). This
+∗
+the k-support norm, or be applied to estimation with k · ksp
+using
+generalized conditional gradient
+k
+method [26], which requires solving the polar operator in each iteration.
+
+7
+
+∗
+
+Algorithm 1 Solving polar operator for k · ksp
+k
+Input: θ ∗ ∈ Rp , positive integer k
+Output: solution u∗ to the polar operator (11)
+1: z = |θ ∗ |↓ , t = 0
+2: for i = 1 to k do
+3:
+γ1 = kz1:i−1 k2 , γ2 = kzi:p k1 , d = k − i + 1, β = √
+4:
+
+if
+
+γ12
+2α
+
+γ2
+,
+γ22 d+γ12 d2
+
+α = √ γ1
+2
+
+1−β 2 d
+
+,w=
+
+z1:i−1
+2α
+
++ βγ2 > t and β < wi−1 then
+γ2
+
+5:
+t = 2α1 + βγ2 , u∗ = [w, β1]T (1 is (p − i + 1)-dimensional vector with all ones)
+6:
+end if
+7: end for
+8: change the sign and order of u∗ to conform with θ ∗
+9: return u∗
+∗
+
+Theorem 8 For a given θ ∗ , Algorithm 1 returns a solution to polar operator (11) for k · ksp
+k .
+The proof of this theorem is provided in supplementary material. Now we consider w(Cksp (θ ∗ ))
+∗
+∗
+∗
+∗
+and Ψsp
+k (θ ) for s-sparse θ (here s-sparse θ means | supp(θ )| = s) in three scenarios: (i) overspecified k, where s < k, (ii) exactly specified k, where s = k, and (iii) under-specified k, where
+s > k. The bounds are given in Theorem 9, and the proof is also in supplementary material.
+Theorem 9 For given s-sparse θ ∗ ∈ Rp , the Gaussian width w(Cksp (θ ∗ )) and the restricted norm
+∗
+compatibility Ψsp
+k (θ ) for a specified k are given by
+ q
+ √
+p , if s < k
+2p
+
+
+
+
+k , if s < k
+
+
+
+
+r
+
+
+
+
+ √
+
+
+∗2
+2θmax
+p
+3
+θ∗
+sp ∗
+2(1 + θmax
+) , if s = k
+,
+w(Cksp (θ ∗ )) ≤
+2 s + θ ∗2 s log s , if s = k , Ψk (θ ) ≤
+∗
+min
+min
+
+
+
+
+
+
+
+ q
+q
+
+
+
+
+
+2κ2
+ (1 + κmax ) 2s , if s > k
+
+3
+s + max s log p , if s > k
+2
+
+κ2min
+
+κmin
+
+s
+
+∗
+∗
+= maxi∈supp(θ∗ ) |θi∗ | and θmin
+= mini∈supp(θ∗ ) |θi∗ |.
+where θmax
+
+k
+
+(20)
+
+sp ∗
+∗
+Remark: Previously Ψsp
+k (θ ) is unknown and the bound on w(Ck (θ )) given in [11] is loose, as
+it used the result in [21]. Based on Theorem 9, we note that the choice of k can affect the recovery
+guarantees. Over-specified k leads to a direct dependence on the dimensionality p for w(Cksp (θ ∗ ))
+∗
+and Ψsp
+k (θ ), resulting in a weak error bound. The bounds are sharp for exactly specified or underspecified k. Thus, it is better to under-specify k in practice. where the estimation error satifies
+!
+r
+s + s log (p/k)
+∗
+(21)
+kθ̂λn − θ k2 ≤ O
+n
+
+6
+
+Conclusions
+
+In this work, we study the problem of structured estimation with general atomic norms that are
+invariant under sign-changes. Based on Dantzig-type estimators, we provide the general bounds
+for the geometric measures. In terms of w(ΩA ), instead of comparison with other results or direct
+calculation, we demonstrate a third way to compute it based on decomposition of atomic set A.
+For w(CA (θ ∗ )) and ΨA (θ ∗ ), we derive general upper bounds, which only require the knowledge
+of a single subgradient of kθ ∗ kA . We also show that these upper bounds are close to the lower
+bounds, which makes them practical in general. To illustrate our results, we discuss the application
+to k-support norm in details and shed light on the choice of k in practice.
+
+Acknowledgements
+The research was supported by NSF grants IIS-1447566, IIS-1422557, CCF-1451986, CNS1314560, IIS-0953274, IIS-1029711, and by NASA grant NNX12AQ39A.
+8
+
+References
+[1] D. Amelunxen, M. Lotz, M. B. McCoy, and J. A. Tropp. Living on the edge: Phase transitions in convex
+programs with random data. Inform. Inference, 3(3):224–294, 2014.
+[2] A. Argyriou, R. Foygel, and N. Srebro. Sparse prediction with the k-support norm. In Advances in Neural
+Information Processing Systems (NIPS), 2012.
+[3] A. Banerjee, S. Chen, F. Fazayeli, and V. Sivakumar. Estimation with norm regularization. In Advances
+in Neural Information Processing Systems (NIPS), 2014.
+[4] P. J. Bickel, Y. Ritov, and A. B. Tsybakov. Simultaneous analysis of Lasso and Dantzig selector. The
+Annals of Statistics, 37(4):1705–1732, 2009.
+[5] M. Bogdan, E. van den Berg, W. Su, and E. Candes. Statistical estimation and testing via the sorted L1
+norm. arXiv:1310.1969, 2013.
+[6] T. T. Cai, T. Liang, and A. Rakhlin. Geometrizing Local Rates of Convergence for High-Dimensional
+Linear Inverse Problems. arXiv:1404.4408, 2014.
+[7] E. Candes and T Tao. The Dantzig selector: statistical estimation when p is much larger than n. The
+Annals of Statistics, 35(6):2313–2351, 2007.
+[8] E. J. Candès, J. K. Romberg, and T. Tao. Stable signal recovery from incomplete and inaccurate measurements. Communications on Pure and Applied Mathematics, 59(8):1207–1223, 2006.
+[9] E. J. Cands and B. Recht. Simple bounds for recovering low-complexity models. Math. Program., 141(12):577–589, 2013.
+[10] V. Chandrasekaran, B. Recht, P. A. Parrilo, and A. S. Willsky. The convex geometry of linear inverse
+problems. Foundations of Computational Mathematics, 12(6):805–849, 2012.
+[11] S. Chatterjee, S. Chen, and A. Banerjee. Generalized dantzig selector: Application to the k-support norm.
+In Advances in Neural Information Processing Systems (NIPS), 2014.
+[12] S. Chen and A. Banerjee. One-bit compressed sensing with the k-support norm. In International Conference on Artificial Intelligence and Statistics (AISTATS), 2015.
+[13] M. A. T. Figueiredo and R. D. Nowak. Sparse estimation with strongly correlated variables using ordered
+weighted l1 regularization. arXiv:1409.4005, 2014.
+[14] Y. Gordon. Some inequalities for gaussian processes and applications. Israel Journal of Mathematics,
+50(4):265–289, 1985.
+[15] L. Jacob, G. Obozinski, and J.-P. Vert. Group lasso with overlap and graph lasso. In International
+Conference on Machine Learning (ICML), 2009.
+[16] A. Maurer, M. Pontil, and B. Romera-Paredes. An Inequality with Applications to Structured Sparsity
+and Multitask Dictionary Learning. In Conference on Learning Theory (COLT), 2014.
+[17] A. M. McDonald, M. Pontil, and D. Stamos. Spectral k-support norm regularization. In Advances in
+Neural Information Processing Systems (NIPS), 2014.
+[18] S. Negahban, P. Ravikumar, M. J. Wainwright, and B. Yu. A unified framework for the analysis of
+regularized M -estimators. Statistical Science, 27(4):538–557, 2012.
+[19] S. Oymak, C. Thrampoulidis, and B. Hassibi. The Squared-Error of Generalized Lasso: A Precise Analysis. arXiv:1311.0830, 2013.
+[20] Y. Plan and R. Vershynin. Robust 1-bit compressed sensing and sparse logistic regression: A convex
+programming approach. IEEE Transactions on Information Theory, 59(1):482–494, 2013.
+[21] N. Rao, B. Recht, and R. Nowak. Universal Measurement Bounds for Structured Sparse Signal Recovery.
+In International Conference on Artificial Intelligence and Statistics (AISTATS), 2012.
+[22] R. Tibshirani. Regression shrinkage and selection via the Lasso. Journal of the Royal Statistical Society,
+Series B, 58(1):267–288, 1996.
+[23] J. A. Tropp. Convex recovery of a structured signal from independent random linear measurements. In
+Sampling Theory, a Renaissance. 2015.
+[24] M. Yuan and Y. Lin. Model selection and estimation in regression with grouped variables. Journal of the
+Royal Statistical Society, Series B, 68:49–67, 2006.
+[25] X. Zeng and M. A. T. Figueiredo. The Ordered Weighted `1 Norm: Atomic Formulation, Projections, and
+Algorithms. arXiv:1409.4271, 2014.
+[26] X. Zhang, Y. Yu, and D. Schuurmans. Polar operators for structured sparse estimation. In Advances in
+Neural Information Processing Systems (NIPS), 2013.
+
+9
+
+

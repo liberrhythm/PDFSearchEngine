@@ -1,0 +1,983 @@
+Running Head: OPENNESS AND AMBIGUITY INTOLERANCE
+
+Openness and Ambiguity Intolerance: Their Differential Relations
+to Well-Being in the Context of an Academic Life Transition
+
+Anat Bardi a,*, Valeschka M. Guerra b, G. Sharadeh D. Ramdeny b
+a Department of Psychology, Royal Holloway University of London, Egham, Surrey TW20
+0EX, United Kingdom
+b Department of Psychology, University of Kent, Canterbury, Kent, CT2 7NP, United Kingdom
+
+Openness and Ambiguity Intolerance
+
+Abstract
+Despite previous suggestions that ambiguity intolerance is part of openness, the current study
+demonstrates important differences between these traits in the context of an academic life
+transition. Openness was expected to be related to well-being through challenge and threat
+appraisals in the beginning of the university studies due to its relevance to novelty and intellect.
+It was expected to be related to well-being later in the university studies due to its relevance to
+intellect. In contrast, ambiguity intolerance was expected to be related to well-being through
+challenge and threat appraisals only in the beginning of the university studies. Multigroup path
+analyses supported the hypotheses, comparing students in the beginning of the first year of
+university with advanced students. In the beginning of the university studies, the relations of
+openness and ambiguity intolerance to well-being were mediated by challenge and threat
+appraisals. The relationship of openness to well-being remained the same for advanced students,
+whereas the relationship of ambiguity intolerance to well-being, challenge and threat appraisals
+was reduced to non-significance. The findings contribute to our understanding of contextspecific functions of traits, and more broadly to knowledge on person-environment fit and to
+understanding person-situation interactions.
+
+KEYWORDS: Well-being; personality traits; openness; ambiguity intolerance; challenge and
+threat appraisals; life transitions; adjustment.
+
+2
+
+Openness and Ambiguity Intolerance
+
+First copyedit complete.
+
+Introduction
+
+The trait ambiguity intolerance (also termed ambiguity tolerance or uncertainty
+tolerance/intolerance) is defined as “The tendency to perceive ambiguous situations as sources of
+threat.” (Budner, 1962, p.39; see also Furnham, 1994; Furnham & Ribchester, 1995). The trait
+openness may be defined as a broad, deep, original, and complex mental and experiential life
+(John & Srivastava, 1999). McCrae (1996) suggested that ambiguity intolerance represents a
+motivational aspect of openness. Indeed, the two traits have clear similarities to one another. In
+particular, both contrast preference for the familiar with openness to novelty. However, unlike
+ambiguity intolerance, openness is also related to intellectual interest (see McCrae & Costa,
+1997; Ostendorf & Angleitner, 1994). Therefore, they may have similar implications in
+situations that encompass novelty and change, but different implications in situations that focus
+on academic activities.
+Drawing on person-environment fit theories, Emmons, Diener, and Larsen (1986)
+suggested that people would experience temporary positive affect in situations that are congruent
+with their traits. They indeed found that some traits were related to better mood in situations that
+were congruent with these traits. This pattern of findings may be extended to more stable life
+situations and their relation to well-being. Therefore, we suggest that openness and ambiguity
+intolerance would be related to well-being in life situations that are congruent with these traits.
+Yet before addressing the expected relations between these traits and well-being in
+certain contexts, it is important to take into consideration the base-line relations of these traits to
+well-being. Recent meta analyses have found that openness to experience is typically not related
+
+3
+
+Openness and Ambiguity Intolerance
+to life satisfaction (DeNeve & Cooper, 1998; Heller, Watson, & Ilies, 2004; Steel, Schmidt, &
+Shultz, 2008). Furthermore, openness was not related to reactions to stressful situations (e.g.,
+Suls, Martin, & David, 1998), and it showed complex relations to changes in well-being in the
+adjustment to a life transition (see Bardi & Ryff, 2007). Similarly to openness, ambiguity
+intolerance was found to be unrelated to well-being (as measured by depression) during mundane
+everyday life (Andersen & Schwartz, 1992). Yet in the context of adjustment to new life
+situations, ambiguity intolerance had maladaptive effects in the adjustment of teachers who were
+transferred to a new school (Friedel, & Dalbert, 2003). Because openness and ambiguity
+intolerance are not inherently related to well-being they are particularly interesting traits for
+examining context-specific relations to well-being.
+What situations are likely to be congruent with openness and thus conducive to high
+subjective well-being? McCrae (1996) has argued that individuals high on openness are
+characterized by a need for variety, and may be motivated to actively seek out the unfamiliar. He
+indeed found evidence suggesting that individuals high on openness are more likely to welcome
+challenge and change (McCrae & Costa, 1985). This is in contrast to individuals low on
+openness, who are more conservative and prefer the familiar over the novel. Therefore, the
+beginning of a life transition with the novelty and unfamiliarity that it entails may be enjoyable
+for individuals high on openness in comparison with individuals low on openness. As a result,
+during the beginning of a life transition, individuals high on openness may experience high
+subjective well-being compared with those who are low on openness. Later on in the life
+transition openness might not be relevant to well-being anymore, unless other aspects of
+openness are relevant to the new life situation. In the context of the transition to university
+studies openness may continue to be relevant to well-being because of its relevance to intellect.
+
+4
+
+Openness and Ambiguity Intolerance
+Specifically, individuals high on openness are interested in intellectual activities and as
+university studies provide such activities, this is likely to be an environment congruent with the
+trait of openness. Therefore, we expect that openness would be important for well-being also for
+more advanced students.
+How is ambiguity tolerance likely to relate to well-being in the context of an academic
+life transition? The beginning of a life transition is a novel and thus ambiguous situation, as it is
+not clear yet how one ought to behave. Therefore, it should be a particularly difficult situation for
+individuals high on ambiguity intolerance, and it is likely to result with poor well-being. Indeed,
+several studies have found that ambiguity intolerance was associated with difficulties in coping
+with change (e.g., Judge, Thoresen, Pucik, & Wellbourne, 1999; Rush, Schoel, & Barnard,
+1995). However, when the novelty wears off ambiguity intolerance might not be important for
+well-being anymore. Therefore we expect that ambiguity intolerance would be related to wellbeing in the beginning of university studies but not later on.
+What might be the process that links openness and ambiguity intolerance to subjective
+well-being in the beginning of a life transition? Research shows that interpretations can mediate
+the ways in which stressful life events are experienced (e.g., Bauer & Bonanno, 2001; Davis,
+Lehman, Wortman, Silver, & Thompson, 1995; Peterson & Seligman, 1987). Indeed, appraisals
+mediated the relation between neuroticism and perceived stress (Hemenover & Dienstbier,
+1996). Because openness and ambiguity intolerance are likely to be related to subjective wellbeing only in particular life situations, we propose that these relations may be due to appraisals
+of this situation. Suitable appraisals can be found in the literature on coping with stressful
+situations.
+
+5
+
+Openness and Ambiguity Intolerance
+The beginning of a life transition is a stressful situation even when it is a largely positive
+transition (Cantor, Norem, Niendenthal, Langston, & Brower, 1987). Lazarus and Folkman
+(1984) suggested that when people are in a stressful situation they tend to appraise the situation
+as a threat or a challenge. Appraising a situation as exerting potential threat reflects a lack of
+confidence in one’s ability to cope with this situation, and a concern that this situation might
+cause harm to the individual. In contrast, appraising a situation as challenging reflects confidence
+in one’s ability to cope with the situation as well as anticipation for the future rewards that
+successful coping may bring. As a result, threat appraisals co-occur with negative psychological
+outcomes, and in particular with experiencing anxiety, whereas challenge appraisals co-occur
+with positive psychological outcomes, and in particular with positive affect (Folkman & Lazarus,
+1985; Skinner & Brewer, 2002). Therefore, we expect that openness and ambiguity intolerance
+would be related to subjective well-being in the beginning of a life transition through threat and
+challenge appraisals of the new life situation. Indeed, as openness is typically unrelated to life
+satisfaction we may find that it is related to life satisfaction in this context only through
+appraisals.
+Later on in the university studies challenge and threat appraisals are not likely to be
+related to the trait ambiguity intolerance because by then they are likely to loose their relevance
+to this trait. However, because openness is still likely to be relevant to well-being later in the
+university studies due to its component of intellect it may continue to be related to well-being
+through challenge and threat appraisals.
+The current study took place at the beginning of the academic year. First year students
+were compared with more advanced students. We measured the traits openness and ambiguity
+intolerance, challenge and threat appraisals of this life situation, and well-being. Based on the
+
+6
+
+Openness and Ambiguity Intolerance
+relationships proposed on the literature, a model was developed (see Figure 1). We expected
+ambiguity intolerance to be related to subjective well-being through perceptions of challenge or
+threat only in the beginning of the life transition. In contrast, we expected openness to be related
+to subjective well-being through perceptions of challenge and threat at the beginning of the life
+transition as well as later on.
+
+Method
+Participants and procedure. 510 students participated in the study for extra course credit
+or for a chance of winning approximately £50 in a lottery. They completed the questionnaires
+online at the beginning of the academic year. Of these, 298 were first year students (235 females;
+mean age was 19, SD = 4) and 212 were advanced students (152 females; mean age was 21, SD
+= 4).
+Measures
+Unless stated otherwise, all of the measures were rated on a scale ranging from 1 (disagree
+strongly) to 7 (agree strongly). In addition, all scores were computed by averaging the ratings of
+the items that comprise the relevant index.
+Ambiguity intolerance. We used the 8-item Uncertainty Tolerance Scale (UTS; Dalbert,
+1999; an example item is “I like to know what to expect“) due to its good statistical properties.
+Indeed, the scale had good internal reliability in the current study (Cronbach α = .71).
+Openness. We used the 10 items measuring openness (e.g., “curious about many different
+things”) from the Big Five Inventory (John, Donahue, & Kentle, 1991). This measure has good
+reliability and validity (see John & Srivastava, 1999; in this sample α = .81).
+
+7
+
+Openness and Ambiguity Intolerance
+Threat and challenge appraisals. We comprised a questionnaire to measure stress
+appraisal based on the Cognitive Appraisal Scale (Skinner & Brewer, 1999) with some
+modifications. Many of the items measuring threat in the original scale of Skinner and Brewer
+(1999) tapped directly on anxiety. Yet, we aimed to use anxiety as an outcome indicator.
+Therefore, it was important to clearly differentiate these concepts. We therefore developed new
+items that measure threat but not anxiety (e.g., “I feel that difficulties could pile up so much that
+I might not be able to overcome them”). In addition, some of the challenge items were adapted to
+the context of university studies (e.g., “This challenging situation as a student in the university
+motivates me to increase my efforts”). Some items were added in order to increase reliability
+(e.g., “I view the university studies as a challenge.”). The questionnaire included 18 items, 9
+items measuring challenge appraisal and 9 items measuring threat appraisal. The internal
+reliabilities of the challenge and threat indexes were 0.77 and 0.83, respectively.
+Well-being indicators. The term ‘subjective well-being’ typically includes three
+components: positive affect, negative affect, and satisfaction with life (see, e.g., DeNeve &
+Cooper, 1998). Therefore, we measured these three components. In addition, we measured
+anxiety as we anticipated that it would be particularly relevant in the beginning of a life
+transition, due to the stress that is likely to occur in a new life situation (e.g., Holmes & Rahe,
+1967). All of the well-being indicators have been used vastly in research. These included: (1)
+The satisfaction with life scale (Diener, Emmons, Larsen & Griffin, 1985). This instrument
+includes five items (e.g., “I am satisfied with my life”, in this study α = .82). (2) Anxiety
+measured with Spielberger (1983)’s State-Trait Anxiety Inventory. Participants rated how they
+felt during the past week on a scale ranging from 1 (not at all) to 4 (very much) (e.g., “During the
+past week, I felt worried about possible misfortune.”). The internal reliability (5 items) was 0.83
+
+8
+
+Openness and Ambiguity Intolerance
+in this study. (3) Positive and negative affect were measured with the 20-item PANAS (Watson,
+Clark, & Tellegen, 1988), asking about participants’ feelings in the past week on a scale ranging
+from 1 (not at all) to 4 (very much). The PANAS had good internal reliabilities (α = .86 for
+negative affect, and α = .87 for positive affect).
+Results
+Statistical information on the variables in both samples is presented in Table 1.
+Significant differences were found between first- and advanced year students only on openness, t
+(508) = 2.45, p < .05 and anxiety, t (508) = 2.25, p < .05, with advanced-year students scoring
+higher on both variables.
+The patterns of correlations among the variables are presented in Table 2. The correlation
+between openness and ambiguity intolerance was much stronger in first year students compared
+with more advanced students (r = -.42 and -.25, respectively), suggesting that these traits may be
+more functionally similar in the beginning of a life transition. In a test of differences between
+independent correlations, these two correlations were significantly different from one another, z
+= 2.13, p < .05. Yet, even in first year students this correlation is not strong enough to suggest
+that ambiguity intolerance and openness are the same, pointing to the merit of studying both.
+Similarly, the correlations among the subjective well-being indicators suggest that they differ
+from one another; hence they should be examined separately. Although a few of these
+correlations can be considered very high (.72 for negative affect and anxiety for advanced
+students), they cannot be considered multicollinear according to Tabachnick and Fidell (2007).
+Finally, the correlations between challenge and threat appraisal, (r = -.31 and -.40 in first year
+students and advanced students, respectively, both p’s < .01), suggest that one is not the
+complete opposite of the other. Therefore, these concepts should also be examined separately
+
+9
+
+Openness and Ambiguity Intolerance
+and they might produce different results. These correlations were not significantly different from
+each other, z = 1.27, p = .20.
+To examine the relations between the traits and the well-being indicators simultaneously
+and to examine the mediating roles of appraisals the data were subjected to multigroup path
+analyses, using the software AMOS. The model assessed the direct relations of openness and
+ambiguity intolerance to the four indicators of well being, as well as the mediation of challenge
+and threat appraisals of these relations. All of the subjective well-being indicators were allowed
+to correlate with one another. Because of the gender imbalance in this sample, we entered gender
+into the model as a predictor of openness and ambiguity intolerance, thereby ensuring that the
+findings would be controlled for gender. The final empirical models with their standard
+coefficients are presented in Figure 2. To facilitate focusing on the relations of interest in this
+paper, only significant paths are presented in the figures, and gender and covariance are not
+presented.
+Each model was tested twice: first, all parameters were free to vary across groups. This
+analysis was followed by another test with all parameters fixed to be invariant across groups
+(Byrne, 2004). The initial test of the multigroup model for openness had a good fit to the data
+(χ2/df = 4.025; CFI = .96; NNFI = .95. RMSEA = .077). Openness was positively related to
+positive affect both directly and indirectly through challenge appraisals, and it was related to
+satisfaction with life indirectly through challenge appraisals. Yet in this study, openness was also
+related indirectly to anxiety and negative affect, through threat appraisals. Testing for the
+invariance of the model across groups suggested a good fit to the data (χ2/df = 2.814; CFI = .96;
+NNFI = .94. RMSEA = .060). A test of difference between the two models showed no significant
+difference between free and fixed models [∆χ2 (14) = 22.45, p > .05] suggesting that the
+
+10
+
+Openness and Ambiguity Intolerance
+proposed model is adequate to both first- and advanced-year students. Therefore, with regard to
+openness, it appears that it is related to subjective well-being through challenge and threat
+appraisals both in the beginning of the university studies and later on.
+The same procedure was used to test the model proposed regarding ambiguity intolerance
+in both groups. The first multigroup test for ambiguity intolerance had an acceptable fit to the
+data (χ2/df = 4.632; CFI = .96; NNFI = .94. RMSEA = .083). For first-year students, intolerance
+was positively related to negative affect and to anxiety both directly and indirectly through threat
+appraisals. It was also indirectly related to positive affect and life satisfaction through challenge
+appraisals. For advanced-year students, however, all direct paths from ambiguity intolerance to
+challenge, threat, negative affect, and anxiety were reduced to non-significance, whereas all
+other associations remain. Testing for the invariance of the model across groups suggested a
+poorer, but still acceptable fit to the data (χ2/df = 3.271; CFI = .94; NNFI = .92. RMSEA = .067).
+A test of difference between the two models found a significant difference between free and
+fixed models [∆χ2 (14) = 28.18, p < .05]. These results suggest that the model is not adequate for
+both groups. Thus, the suggested relationships between ambiguity intolerance and subjective
+well-being are clearly specific to the beginning of the university studies.
+
+Discussion
+As we suggested, in the beginning of university studies, ambiguity intolerance and
+openness were both related to challenge and threat appraisals and these appraisals mediated the
+relations of these traits to well-being. However, after the novelty of the situation has faded,
+ambiguity intolerance and openness differed in their pattern of associations. Later in this life
+situation, openness was still related to both challenge and threat appraisals, whereas ambiguity
+
+11
+
+Openness and Ambiguity Intolerance
+intolerance was not related to any of the proposed appraisals or to well-being. We next discuss
+this differential pattern of results in the beginning of this life transition vs. later on.
+Ambiguity intolerance was related to challenge and threat appraisals only in first year
+students, and it was only related to subjective well-being in first year students compared with
+advanced students. Thus, it is clearly relevant mainly in the beginning of a life transition.
+Openness, however, was similarly related to well-being and to challenge and threat appraisals in
+beginning of this life transition as well as later on. Openness is a broader trait than ambiguity
+intolerance and therefore has multiple aspects including a component of novelty and a
+component of intellect. The aspect of novelty in the trait openness may have been relevant to
+well-being at the beginning of university studies, whereas the aspect of intellect may have been
+relevant both in the beginning of university studies and later on. This possibility should be tested
+directly in future research using facets of openness of the NEO-PI-R (Costa & McCrae, 1992)
+predicting that the actions facet would be particularly relevant to subjective well-being at the
+beginning of university studies whereas the ideas facet would be particularly relevant to
+subjective well-being later on at university. In addition, future research should examine the
+proposed relations on a transition to a life situation that does not require intellect or any other
+aspect of openness, such as the transition to a new job that does not require intellectual or
+emotional openness.
+The current findings add to our understanding of person-environment fit and well-being.
+It suggests that people have higher well-being when they are in a life situation that matches their
+traits. This was evident in the finding that compared with individuals low on ambiguity
+intolerance, those high on this trait had higher levels of well-being in the beginning of a life
+transition, but not later on.
+
+12
+
+Openness and Ambiguity Intolerance
+More broadly, the current set of findings contributes to our understanding of personsituation interactions, particularly in the area of well-being, thereby supporting calls for more
+research that considers contexts, in order to achieve a more sophisticated understanding of how
+personality manifests itself (e.g., Borkenau, Riemann, Spinath, & Angleitner, 2006; Cervone,
+2005; Shoda , Lee Tiernan, & Mischel, 2002).
+Our study demonstrates that the relations between personality and well-being can be
+dependent on context, and that such contextual relations are mediated by appraisals of the
+situation. It suggests that the field could benefit from more research that examines contextual
+relations between personality and well-being in order to progress toward better integration of the
+person and the situation.
+
+13
+
+Openness and Ambiguity Intolerance
+References
+Andersen, S. M. & Schwartz, A. H. (1992). Intolerance of ambiguity and depression:
+A cognitive vulnerability factor linked to hopelessness. Social Cognition, 10,
+271-298.
+Bardi, A., & Ryff, C. D. (2007). Interactive effects of traits on adjustment to a life
+transition. Journal of Personality, 75, 955–984.
+Bauer, J. J., & Bonanno, G. A. (2001). I can, I do, I am: The narrative differentiation
+of self-efficacy and other self-evaluations while adapting to bereavement.
+Journal of Research in Personality, 35, 424-448.
+Borkenau, P., Riemann, R., Spinath, F. M., & Angleitner, A. (2006). Genetic and
+Environmental Influences on Person x Situation Profiles. Journal of
+Personality, 74, 1451-1479.
+Budner, S. (1962). Intolerance of ambiguity as a personality variable. Journal of
+Personality, 30, 29-59.
+Byrne, B. (2004). Testing for multigroup invariance using AMOS Graphics: A road
+less travelled. Structural Equation Modeling, 11, 272-300.
+Cantor, N., Norem, J. K., Niendenthal, P. M., Langston, C. A., & Brower, A. M.
+(1987). Life tasks, self-concept ideals, and cognitive strategies in a life
+transition. Journal of Personality and Social Psychology, 53, 1178-1191.
+Cervone, D. (2005). Personality architecture: Within-person structures and processes.
+Annual Review of Psychology, 56, 423-452.
+Costa, P. T., Jr., & McCrae, R. R. (1992). NEO PI-R professional manual. Odessa,
+FL: Psychological Assessment Resources, Inc.
+
+14
+
+Openness and Ambiguity Intolerance
+Dalbert, C. (1999). Die Ungewißheitstoleranzskala: Skaleneigenschaften und
+Validierungsbefunde. [The Ambiguity intolerance Scale: Scale properties and
+validation results]. Hallesche Berichte zur Pädagogischen Psychologie Nr. 1.
+Davis, C. G., Lehman, D. R., Wortman, C. B., Silver, R. C, & Thompson, S. C.
+(1995). The undoing of traumatic life events. Personality and Social
+Psychology Bulletin, 2, 109-124.
+DeNeve, K. M., & Cooper, H. (1998). The happy personality: A meta-analysis of 137
+personality traits and subjective well-being. Psychological Bulletin, 124, 197229.
+Diener, E, Emmons, R. A, Larsen, R. J, & Griffin, S. (1985). The satisfaction with life
+scale. Journal of Personality and Social Psychology, 47, 1105-1117.
+Emmons, R., Diener, E., & Larsen, R., (1986). Person × situation interactions: Choice
+of situations and congruence: Two models of reciprocal interactionism. Journal
+of Personality and Social Psychology, 51, 815–826.
+Folkman, S., & Lazarus, R. S. (1985). If it changes it must be a process: Study of
+emotion and coping during three stages of a college examination. Journal of
+Personality and Social Psychology, 48, 150-170.
+Friedel, A., & Dalbert, C. (2003). Belastung und Bewältigung bei
+Grundschullehrerinnen: Die Auswirkungen einer Versetzung an die Förderstufe
+und der Einfluss der Ungewissheitstoleranz [Burdening and coping of primary
+school teachers: The consequences of being transferred to a secondary school
+and the impact of uncertainty tolerance]. Zeitschrift für Pädagogische
+Psychologie, 17, 55-68.
+
+15
+
+Openness and Ambiguity Intolerance
+Furnham, A. (1994). A content, correlational and factor analytic study of four
+tolerance of ambiguity questionnaires. Personality and Individual Differences,
+16, 403-410.
+Furnham, A., & Ribchester, T. (1995) Tolerance of ambiguity: A review of the
+concept, its measurement and applications. Current Psychology, 14, 179-199.
+Heller, D., Watson, D., & Ilies, R. (2004). The role of person versus situation in life
+satisfaction: A critical examination. Psychological Bulletin, 130, 574-600.
+Hemenover, S. H., & Dienstbier, R. A. (1996). Prediction of stress appraisals from
+mastery, extraversion, neuroticism, and general appraisal tendencies.
+Motivation and Emotion, 20, 299–317.
+Holmes, T. H., & Rahe, R. H. (1967). The Social Readjustment Rating scale. Journal
+of Psychosomatic Research, 11, 213-218.
+John, O. P., Donahue, E. M., & Kentle, R. L. (1991). The Big Five Inventory.
+Berkeley, CA: University of California, Berkeley, Institute of Personality and
+Social Research.
+John, O. P., & Srivastava, S. (1999). The big five trait taxonomy: History,
+measurement, and theoretical perspectives. In L. A. Pervin and O. P. John
+(Eds.), Handbook of personality: Theory and research (2nd ed., pp. 102-138).
+New York: The Guilford Press.
+
+Judge, T. A., Thoresen, C. J., Pucik, V., & Wellbourne, T. M. (1999). Managerial
+coping with organizational change: A dispositional perspective. Journal of
+Applied Psychology, 75, 640-647.
+
+Lazarus, R. S., & Folkman, S. (1984). Stress, appraisal and coping. New York:
+Springer.
+
+16
+
+Openness and Ambiguity Intolerance
+McCrae, R. R. (1996). Social consequences of experiential openness. Psychological
+Bulletin, 120, 323-337.
+McCrae, R. R., & Costa, P. T. Jr. (1985). Openness to Experience. In R. Hogan and
+W. H. Jones (Eds.), Perspectives in personality. (Vol 1, pp. 145-172).
+Greenwich, CT: JAI Press.
+McCrae, R. R., & Costa, P. T. Jr. (1997). Conceptions and correlates of Openness to
+Experience. In R. Hogan, J. A. Johnson, & S. R. Briggs (Eds.), Handbook of
+personality psychology (pp. 826-848). San Diego, CA: Academic Press.
+Ostendorf, F., & Angleitner, A. (1994). Reflections on different labels for Factor V.
+European Journal of Personality, 8, 341-349.
+Peterson, C., & Seligman, M. E. P. (1987). Explanatory style and illness. Journal of
+Personality, 55, 237-266.
+Rush, M. C., Schoel, W. A., & Barnard, S. M. (1995). Psychological resiliency in the
+public sector: "Hardiness" and pressure for change. Journal of Vocational
+Behavior, 46, 17-39.
+Shoda. Y., Lee Tiernan, S. J., & Mischel, W. (2002). Personality as a dynamical
+system: Emergence of stability and consistency in intra- and interpersonal
+interactions. Personality and Social Psychology Review, 6, 316–325.
+Skinner, N. & Brewer, N. (1999). Temporal characteristics of evaluation anxiety.
+Journal of Anxiety Disorders, 13, 293-314.
+Skinner, N., & Brewer N. (2002). The dynamics of threat and challenge appraisals
+prior to stressful achievement events. Journal of Personality and Social
+Psychology, 83, 678-692.
+Spielberger, C. D. (1983). Manual for the State-Trait Anxiety Inventory STAI Form Y.
+Palo Alto, CA: Psychologists Press.
+
+17
+
+Openness and Ambiguity Intolerance
+Steel, P., Schmidt, J., & Shultz, J. (2008). Refining the relationship between
+personality and subjective well-being. Psychological Bulletin, 134, 138-161.
+Suls, J., Martin, R., & David, J. (1998). Person-environment fit and its limits:
+Agreeableness, neuroticism and emotional reactivity to interpersonal conflict.
+Personality and Social Psychology Bulletin, 24, 88–98.
+Tabachnick, B. & Fidell, L. (2007). Using multivariate statistics. New York: Pearson
+International.
+Watson, D., Clark, L. A., & Tellegen, A. (1988). Development and validation of brief
+measures of Positive and Negative Affect: The PANAS Scales. Journal of
+Personality and Social Psychology, 54, 1063-1070.
+
+18
+
+Openness and Ambiguity Intolerance
+
+Table 1
+Descriptive statistics for first- and advanced year samples
+First-year students
+
+Advanced-year students
+
+M
+
+SD
+
+Skewness
+
+SE
+
+Kurtosis
+
+SE
+
+M
+
+SD
+
+Skewness
+
+SE
+
+Kurtosis
+
+SE
+
+1. Ambiguity intolerance
+
+4.04
+
+.81
+
+.04
+
+.14
+
+-.11
+
+.28
+
+4.01
+
+.74
+
+-.02
+
+.17
+
+.66
+
+.33
+
+2. Openness
+
+4.30
+
+.84
+
+-.02
+
+.14
+
+.24
+
+.28
+
+4.49
+
+.84
+
+-.03
+
+.17
+
+-.65
+
+.33
+
+3. Challenge
+
+5.69
+
+.60
+
+-.73
+
+.14
+
+.96
+
+.28
+
+5.71
+
+.64
+
+-.53
+
+.17
+
+.27
+
+.33
+
+4. Threat
+
+4.28
+
+.97
+
+-.07
+
+.14
+
+-.22
+
+.28
+
+4.22
+
+.99
+
+-.21
+
+.17
+
+-.28
+
+.33
+
+5. Life Satisfaction
+
+4.75
+
+1.20
+
+-.44
+
+.14
+
+-.14
+
+.28
+
+4.59
+
+1.30
+
+-.53
+
+.17
+
+-.37
+
+.33
+
+6. Positive Affect
+
+2.91
+
+.57
+
+-.53
+
+.14
+
+-.28
+
+.28
+
+2.82
+
+.61
+
+-.31
+
+.17
+
+-.36
+
+.33
+
+7. Negative Affect
+
+1.92
+
+.62
+
+.74
+
+.14
+
+-.16
+
+.28
+
+1.96
+
+.63
+
+.69
+
+.17
+
+.17
+
+.33
+
+8. Anxiety
+
+2.40
+
+.72
+
+.14
+
+.14
+
+-.57
+
+.28
+
+2.55
+
+.71
+
+.16
+
+.17
+
+-.64
+
+.33
+
+19
+
+Openness and Ambiguity Intolerance
+
+Table 2
+Correlations among all Variables
+
+1
+
+2
+
+3
+
+4
+
+-.25** -.06
+
+.13
+
+5
+
+6
+
+7
+
+8
+
+-.18**
+
+.03
+
+.08
+
+-.21** -.04
+
+.33**
+
+.01
+
+-.06
+
+-.40** .33**
+
+.39**
+
+1. Ambiguity
+1.00
+
+-.15*
+
+intolerance
+2. Openness
+
+-.42** 1.00
+
+.29**
+
+3. Challenge
+
+-.12*
+
+4. Threat
+
+.30** -.23** -.31** 1.00
+
+5. Life Satisfaction
+
+-.14*
+
+.10
+
+6. Positive Affect
+
+-.24**
+
+.38** .54** -.38**
+
+7. Negative Affect
+
+.33**
+
+-.09
+
+-.26**
+
+.61** -.30** -.20**
+
+1.00
+
+8. Anxiety
+
+.38** -.18** -.29**
+
+.67** -.35** -.44**
+
+.72** 1.00
+
+.26** 1.00
+
+-.41** -.35**
+
+.36** -.26** 1.00
+
+.40**
+
+.37** 1.00
+
+Note. Correlations for first year students are under the diagonal; correlations for
+advanced students are above the diagonal
+* p < .05. ** p < .01.
+
+20
+
+-.33** -.29**
+.52**
+
+.58**
+
+-.43** -.44**
+-.26** -.47**
+.70**
+
+Openness and Ambiguity Intolerance
+
+Figure Captions
+
+Figure 1. Model of the expected relationships between traits and well-being as
+mediated by appraisals.
+Figure 2. Path analyses of the relationships between traits and well-being as mediated
+by appraisals.
+
+21
+
+Openness and Ambiguity Intolerance
+
++(+)
++(+)
+
+Challenge
+
++(+)
+
+Life
+Satisfaction
+Positive
+Affect
+
+Openness
+
+-(-)
+
++(+)
+
+Negative
+Affect
+
+Threat
+
++(+)
+Anxiety
+
++(+)
+- (n.s.)
+
+Challenge
+
+Ambiguity
+Intolerance
+
+Life
+Satisfaction
+
++(+)
+
+Positive
+Affect
+
++(+)
+
+Negative
+Affect
+
++ (n.s.)
+Threat
+
++(+)
+Anxiety
+
+Figure 1
+Note. Expected direction of relationships presented out of parentheses are for firstyear students and estimates presented in parentheses are for advanced-year students.
+
+22
+
+Openness and Ambiguity Intolerance
+
+Openness
+
+2 7)
+.
+(
+8
+.2
+.21(.20)
+-.22(
+
+Challenge
+
+.35(.33)
+
+-.2
+5(
+-.2
+5)
+
+29)
+. 28(.
+
+0)
+2
+.
+2(
+-.2
+56)
+.59(.
+
+-.22)
+
+Life
+Satisfaction
+Positive
+Affect
+Negative
+Affect
+
+Threat
+
+.63(.63
+
+)
+Anxiety
+
+20)
+.31 (.
+
+3)
+
+.16(n.s.)
+.30(n.
+s.)
+
+.17(n.s
+
+.45(.30)
+
+-.1
+7
+
+Ambiguity
+Intolerance
+
+Challenge
+
+3)
+2
+.
+5(
+-.2
+
+(-.
+3
+
+n.s.)
+(
+2
+1
+-.
+
+Threat
+
+.)
+
+Life
+Satisfaction
+
+.57(.53)
+.61(
+.58)
+
+Positive
+Affect
+Negative
+Affect
+
+Anxiety
+
+Figure 2
+Note. Standardized estimates presented out of parentheses are for first-year students,
+and estimates presented in parentheses are for advanced-year students; n.s. = p > .05.
+
+23
+The author has requested enhancement of the downloaded file. All in-text references underlined in blue are linked to publications on ResearchGate.
+
+
